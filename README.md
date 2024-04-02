@@ -92,7 +92,21 @@ If you use HEPSYCODE in your research, please cite:
   doi = {https://doi.org/10.1016/j.compeleceng.2023.108803},
   url = {https://www.sciencedirect.com/science/article/pii/S0045790623002276},
   author = {Vittoriano Muttillo and Luigi Pomante and Marco Santic and Giacomo Valente},
-  keywords = {Electronic system-level design, HW/SW co-design, Embedded systems, Parallel systems, Heterogeneous systems},
-  abstract = {Heterogeneous parallel devices are becoming increasingly common in the embedded systems field. This is primarily due to their ability to improve timing performance, while simultaneously reducing costs and energy. In this context, this study addresses the role of a hardware/software (HW/SW) co-simulation and analysis tool for embedded systems designed on heterogeneous parallel architectures. In particular, it presents an extended System C-based tool for functional and timing HW/SW co-simulation/analysis within a reference Electronic System-Level HW/SW co-design flow. The description of the main features of the tool, and the main design and integration issues represent the core of the paper. Furthermore, the paper presents two case studies that demonstrate the enhanced effectiveness and efficiency of the extended tool. This is achieved through reduced simulation. Thanks to all this, the paper contributes to fully motivate the industrial and research communities to adopt and further investigate system-level approaches.}
+  keywords = {Electronic system-level design, HW/SW co-design, Embedded systems,
+              Parallel systems, Heterogeneous systems},
+  abstract = {Heterogeneous parallel devices are becoming increasingly common in the
+              embedded systems field. This is primarily due to their ability to improve
+              timing performance, while simultaneously reducing costs and energy.
+              In this context, this study addresses the role of a hardware/software (HW/SW)
+              co-simulation and analysis tool for embedded systems designed on heterogeneous
+              parallel architectures. In particular, it presents an extended System C-based
+              tool for functional and timing HW/SW co-simulation/analysis within a reference
+              Electronic System-Level HW/SW co-design flow. The description of the main features
+              of the tool, and the main design and integration issues represent the
+              core of the paper. Furthermore, the paper presents two case studies that
+              demonstrate the enhanced effectiveness and efficiency of the extended tool.
+              This is achieved through reduced simulation. Thanks to all this, the paper
+              contributes to fully motivate the industrial and research communities to
+              adopt and further investigate system-level approaches.}
 }
 ```
