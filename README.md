@@ -26,22 +26,21 @@ www.hepsycode.com
 Official git repository: https://github.com/hepsycode/HEPSYCODE-AIDOaRt
  
 ### INSTALLATION
- 1. Download Eclipse Modelling Tool: https://www.eclipse.org/downloads/eclipse-packages/
- 2. Installing from its Update Site (Modeling Package Updates for Eclipse Oxygen - http://www.eclipse.org/modeling/amalgam/downloads/package/modeling/oxygen/) in Eclipse the Modeling OXYGEN plugins
- 3. Cloning Hepsycode from https://github.com/hepsycode/HEPSYCODE-AIDOaRt
- 4. Import in eclipse Hepsycode projects present in folder "eclipse-plugin" and run a separate Eclipse application to run and debug Hepsycode plug-in
- 5. Install systemc library (it is recommended version 2.3.3)
- 6. Go to /home/.bashrc and insert the path of systemc (folder lib-linux and include) the names of variable must be SYSTEMCPATHLIB and SYSTEMCPATHINCLUDE for example:
+ 1. Download Eclipse Modelling Tool: [https://www.eclipse.org/downloads/eclipse-packages/](https://www.eclipse.org/downloads/packages/)
+ 2. Cloning Hepsycode from https://github.com/hepsycode/HEPSYCODE-AIDOaRt
+ 3. Import in Eclipse Hepsycode projects present in the folder and run a separate Eclipse application to run and debug Hepsycode plug-in
+ 4. Install Systemc library (it is recommended version 2.3.3)
+ 5. Go to /home/.bashrc and insert the path of Systemc (folder lib-linux and include) the names of the variable must be SYSTEMCPATHLIB and SYSTEMCPATHINCLUDE for example:
     - export SYSTEMCPATHLIB=/usr/local/systemc-2.3.3/lib-linux64
     - export SYSTEMCPATHINCLUDE=/usr/local/systemc-2.3.3/include
     - Alternative: launch settings.sh script
- 7. Try and enjoy Hepsycode Tool!!!
+ 6. Try and enjoy the Hepsycode Tool!!!
 
 ### SYSTEM REQUIREMENTS
  - Linux OS or Windows;
  - SystemC Libraries version 2.3.3;
  - Eclipse Modelling Tools with the following plugins in place: 
-   - Eclipse sirius
+   - Eclipse Sirius
    - Eclipse Xtext
 
 ### RELEASE NOTES
@@ -57,7 +56,7 @@ Source Repositories: https://github.com/hepsycode/HEPSYCODE-AIDOaRt
     - ssh: git@github.com:hepsycode/HEPSYCODE-AIDOaRt.git
     - https: https://github.com/hepsycode/HEPSYCODE-AIDOaRt.git
  
-You can use the code from these repositories to experiment, test, build, and create patches, issue pull requests (only by request).
+You can use the code from these repositories to experiment, test, build, and create patches, and issue pull requests (only by request).
  
 ### SUPPORT
 We currently support:
@@ -69,11 +68,11 @@ We currently support:
     - (please take care to use \[HEPSYCODE SUPPORT\] as object
  2. Issues on bitbucket.org
  
-## Getting started guidelines
+## Getting Started Guidelines
 You can find getting start guidelines at the link: www.hepsycode.com   
   
 ### EXAMPLES
-We provide an example Hepsycode project, called FirFirGCD, a synthetic application that takes in input two values (triggered by some stimulus), makes two filtering actions (Fir8 and Fir16) and then makes the greatest common divisor (GCD) and displays the result.
+We provide an example Hepsycode project, called FirFirGCD, a synthetic application that takes in input two values (triggered by some stimulus), makes two filtering actions (Fir8 and Fir16), and then makes the greatest common divisor (GCD) and displays the result.
 More details details can be found at the link: www.hepsycode.com 
 
 ## Additional information
