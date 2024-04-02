@@ -15,7 +15,7 @@ More details can be found at the link: www.hepsycode.com.
 
  2. TEK_UCS_01: This is the TEKNE AIDOaRt UC application that uses the HEPSYCODE framework to implement a diagnostic and prognostic system for industrial electric/electronic motors. TEKNE develops the demonstrator of a Prognostics and Health Management (PHM) system, for anomalies detection and classification and for condition-based maintenance of the on-board power electronics. The demonstrator considers the inverter and is experimented in an electric minivan prototype. 
 
-![picture](TEK_UCS_01/HepsycodeModel/Tekne AIDOaRt Use Case_0_0.png)
+![picture](TEK_UCS_01/HepsycodeModel/Tekne_AIDOaRt_Use_Case_0_0.png)
 
 ### RELEASE NOTES
 Latest Release: 2.0.0
