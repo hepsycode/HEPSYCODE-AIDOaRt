@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structfir8s__results" kind="struct" language="C++" prot="public">
+    <compoundname>fir8s_results</compoundname>
+    <includes refid="datatype_8h" local="yes">src/datatype.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structfir8s__results_1af1e0155634694c6f2479e8c69ce72dc5" prot="public" static="no" mutable="no">
+        <type>sc_uint&lt; 8 &gt;</type>
+        <definition>sc_uint&lt;8&gt; fir8s_results::shift[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>shift</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/datatype.h" line="136" column="9" bodyfile="HepsycodeDesign/src/datatype.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>struct <ref refid="structfir8s__results" kindref="compound">fir8s_results</ref> </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Some details about the <ref refid="structfir8s__results" kindref="compound">fir8s_results</ref> struct. <linebreak/>
+Message from fir8s to fir8m </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>sc_uint&lt; 8 &gt;</label>
+      </node>
+      <node id="1">
+        <label>fir8s_results</label>
+        <link refid="structfir8s__results"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+shift</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HepsycodeDesign/src/datatype.h" line="135" column="1" bodyfile="HepsycodeDesign/src/datatype.h" bodystart="134" bodyend="137"/>
+    <listofallmembers>
+      <member refid="structfir8s__results_1af1e0155634694c6f2479e8c69ce72dc5" prot="public" virt="non-virtual"><scope>fir8s_results</scope><name>shift</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

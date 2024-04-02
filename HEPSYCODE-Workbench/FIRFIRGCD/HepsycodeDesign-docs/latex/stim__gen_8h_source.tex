@@ -1,0 +1,99 @@
+\hypertarget{stim__gen_8h_source}{}\doxysection{stim\+\_\+gen.\+h}
+\label{stim__gen_8h_source}\index{HepsycodeDesign/src/stim\_gen.h@{HepsycodeDesign/src/stim\_gen.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * University of L'Aquila -\/ HEPSYCODE Source Code License                       *}}
+\DoxyCodeLine{00003 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00004 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00005 \textcolor{comment}{ * (c) 2018-\/2019 Centre of Excellence DEWS All rights reserved                  *}}
+\DoxyCodeLine{00006 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00007 \textcolor{comment}{ * <one line to give the program's name and a brief idea of what it does.>      *}}
+\DoxyCodeLine{00008 \textcolor{comment}{ * Copyright (C) 2022  Vittoriano Muttillo, Luigi Pomante                       *                                    *}}
+\DoxyCodeLine{00009 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00010 \textcolor{comment}{ * This program is free software: you can redistribute it and/or modify         *}}
+\DoxyCodeLine{00011 \textcolor{comment}{ * it under the terms of the GNU General Public License as published by         *}}
+\DoxyCodeLine{00012 \textcolor{comment}{ * the Free Software Foundation, either version 3 of the License, or            *}}
+\DoxyCodeLine{00013 \textcolor{comment}{ * (at your option) any later version.                                          *}}
+\DoxyCodeLine{00014 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00015 \textcolor{comment}{ * This program is distributed in the hope that it will be useful,              *}}
+\DoxyCodeLine{00016 \textcolor{comment}{ * but WITHOUT ANY WARRANTY; without even the implied warranty of               *}}
+\DoxyCodeLine{00017 \textcolor{comment}{ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the                *}}
+\DoxyCodeLine{00018 \textcolor{comment}{ * GNU General Public License for more details.                                 *}}
+\DoxyCodeLine{00019 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00020 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00021 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00022 \textcolor{comment}{ * Created on: 09/May/2022                                                      *}}
+\DoxyCodeLine{00023 \textcolor{comment}{ * Authors: Vittoriano Muttillo, Luigi Pomante                                  *}}
+\DoxyCodeLine{00024 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00025 \textcolor{comment}{ * email: vittoriano.muttillo@guest.univaq.it                                   *}}
+\DoxyCodeLine{00026 \textcolor{comment}{ *        luigi.pomante@univaq.it                                               *}}
+\DoxyCodeLine{00027 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00028 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00029 \textcolor{comment}{ * This code has been developed from an HEPSYCODE model used as demonstrator by *}}
+\DoxyCodeLine{00030 \textcolor{comment}{ * University of L'Aquila.                                                      *}}
+\DoxyCodeLine{00031 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00032 \textcolor{comment}{ * The code is used as a working example in the 'Embedded Systems' course of    *}}
+\DoxyCodeLine{00033 \textcolor{comment}{ * the Master in Conputer Science Engineering offered by the                    *}}
+\DoxyCodeLine{00034 \textcolor{comment}{ * University of L'Aquila                                                       *}}
+\DoxyCodeLine{00035 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{00037 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00038 \textcolor{comment}{ * mainsystem.h : FirFirGCD mainsystem.}}
+\DoxyCodeLine{00039 \textcolor{comment}{ *}}
+\DoxyCodeLine{00040 \textcolor{comment}{ * Mainsystem: Main SystemC HEPSIM2 header file}}
+\DoxyCodeLine{00041 \textcolor{comment}{ *}}
+\DoxyCodeLine{00042 \textcolor{comment}{********************************************************************************/}}
+\DoxyCodeLine{00043  \textcolor{comment}{// start firfirgcd\_stim\_gen\_group}}
+\DoxyCodeLine{00058 }
+\DoxyCodeLine{00059 \textcolor{preprocessor}{\#ifndef \_\_STIMGEN\_H\_\_}}
+\DoxyCodeLine{00060 \textcolor{preprocessor}{\#define \_\_STIMGEN\_H\_\_}}
+\DoxyCodeLine{00061 }
+\DoxyCodeLine{00062 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00063 \textcolor{comment}{ ***                                Includes                                  ***}}
+\DoxyCodeLine{00064 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00065 }
+\DoxyCodeLine{00066 \textcolor{preprocessor}{\#include <systemc.h>}}
+\DoxyCodeLine{00067 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{sc__csp__channel__ifs_8h}{sc\_csp\_channel\_ifs.h}}"}}
+\DoxyCodeLine{00068 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{define_8h}{define.h}}"}}
+\DoxyCodeLine{00069 }
+\DoxyCodeLine{00070 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00071 \textcolor{comment}{ ***                                Functions                                 ***}}
+\DoxyCodeLine{00072 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00073 }
+\DoxyCodeLine{00075 }
+\DoxyCodeLine{00076 \textcolor{comment}{// STIMULUS: GENERATES INPUTS FOR THE SYSTEM (SBM DEPENDENT)}}
+\DoxyCodeLine{00077 }
+\DoxyCodeLine{00079 }
+\DoxyCodeLine{\Hypertarget{stim__gen_8h_source_l00080}\mbox{\hyperlink{group__firfirgcd__stim__gen__group_gac842ee10b82b5739821c3f7f39468620}{00080}} \mbox{\hyperlink{group__firfirgcd__stim__gen__group_gac842ee10b82b5739821c3f7f39468620}{SC\_MODULE}}(stim\_gen)}
+\DoxyCodeLine{00081 \{}
+\DoxyCodeLine{00082     \textcolor{comment}{// Port for outputs to the channels}}
+\DoxyCodeLine{00083     sc\_port < sc\_csp\_channel\_out\_if < sc\_uint<8> > > stim1\_channel\_port;        }
+\DoxyCodeLine{00084     sc\_port < sc\_csp\_channel\_out\_if < sc\_uint<8> > > stim2\_channel\_port;        }
+\DoxyCodeLine{00085 }
+\DoxyCodeLine{00086     \textcolor{comment}{// Used to stop concurrency sampling (to allow the simulation to finish), if needed}}
+\DoxyCodeLine{00087     \textcolor{keywordtype}{bool} stop\_sampling1, stop\_sampling2;}
+\DoxyCodeLine{00088 }
+\DoxyCodeLine{00089     SC\_CTOR(stim\_gen)}
+\DoxyCodeLine{00090     \{}
+\DoxyCodeLine{00091         SC\_THREAD(stimulus1);}
+\DoxyCodeLine{00092         SC\_THREAD(stimulus2);}
+\DoxyCodeLine{00093 }
+\DoxyCodeLine{00094         \textcolor{comment}{// Used to stop concurrency sampling (to allow the simulation to finish), if needed}}
+\DoxyCodeLine{00095         stop\_sampling1=\textcolor{keyword}{false};}
+\DoxyCodeLine{00096         stop\_sampling2=\textcolor{keyword}{false};}
+\DoxyCodeLine{00097     \}  }
+\DoxyCodeLine{00098 }
+\DoxyCodeLine{00099     \textcolor{comment}{// Main methods}}
+\DoxyCodeLine{00100     \textcolor{keywordtype}{void} stimulus1();}
+\DoxyCodeLine{00101     \textcolor{keywordtype}{void} stimulus2();}
+\DoxyCodeLine{00102 \};}
+\DoxyCodeLine{00103  \textcolor{comment}{// end of firfirgcd\_stim\_gen\_group}}
+\DoxyCodeLine{00105 }
+\DoxyCodeLine{00106 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00107 }
+\DoxyCodeLine{00108 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00109 \textcolor{comment}{ ***                                  EOF                                     ***}}
+\DoxyCodeLine{00110 \textcolor{comment}{ ********************************************************************************/}}
+
+\end{DoxyCode}

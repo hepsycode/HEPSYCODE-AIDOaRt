@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__system_manager_8cpp">
+<title>HepsycodeDesign/src/SystemManager.cpp File Reference</title>
+<indexterm><primary>HepsycodeDesign/src/SystemManager.cpp</primary></indexterm>
+<para>
+
+<para>System Manager Documented file. </para>
+ 
+</para>
+<programlisting>#include &lt;systemc.h&gt;
+#include &lt;iostream&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;vector&gt;
+#include &lt;string.h&gt;
+#include &quot;tl.h&quot;
+#include &quot;pugixml.hpp&quot;
+#include &quot;SystemManager.h&quot;
+</programlisting>Include dependency graph for SystemManager.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_system_manager_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<section>
+<title>Detailed Description</title>
+
+<para>System Manager Documented file. </para>
+
+<para>System Manager: HEPSIM System Manager. </para>
+</section>
+</section>

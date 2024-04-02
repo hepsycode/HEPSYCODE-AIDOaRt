@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group__firfirgcd__csp__channel__ifs__group">
+<title>FirFirGCD CSP Channel Interfaces.</title>
+<indexterm><primary>FirFirGCD CSP Channel Interfaces.</primary></indexterm>
+<para>
+
+<para>CSP <link linkend="_class_channel">Channel</link> Interfaces. </para>
+ 
+</para>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para> <link linkend="_namespacesc__core">sc_core</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>CSP <link linkend="_class_channel">Channel</link> Interfaces. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>V. Muttillo, L. Pomante </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>Apr. 2022 </para>
+</formalpara>
+</para>
+</section>
+</section>

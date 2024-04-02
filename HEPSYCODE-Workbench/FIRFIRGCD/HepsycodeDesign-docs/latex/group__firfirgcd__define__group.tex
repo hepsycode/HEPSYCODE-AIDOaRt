@@ -1,0 +1,390 @@
+\hypertarget{group__firfirgcd__define__group}{}\doxysection{Fir\+Fir\+G\+CD define.}
+\label{group__firfirgcd__define__group}\index{FirFirGCD define.@{FirFirGCD define.}}
+
+
+D\+E\+F\+I\+NE U\+S\+ED BY H\+E\+P\+S\+I\+M2.  
+
+
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{N\+PS}}~10
+\begin{DoxyCompactList}\small\item\em S\+BM D\+E\+P\+E\+N\+D\+E\+NT. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__firfirgcd__define__group_ga967ca22c6c7be038e1092147ce04f258}{N\+CH}}~15
+\item 
+\#define \mbox{\hyperlink{group__firfirgcd__define__group_ga67e7d9a59126e595e10a78e11df73b39}{T\+A\+P8}}~8
+\item 
+\#define \mbox{\hyperlink{group__firfirgcd__define__group_gaf2addfbdf98c5e76c823edde9336370f}{T\+A\+P16}}~16
+\item 
+\#define \mbox{\hyperlink{group__firfirgcd__define__group_ga41078393655c31f01ef880a0492a776f}{N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+I\+N\+P\+U\+TS}}~10
+\item 
+\#define \mbox{\hyperlink{group__firfirgcd__define__group_ga498a2c2b57c15e562e939cccf28db094}{N\+BB}}~5
+\begin{DoxyCompactList}\small\item\em Fir\+Fir\+G\+CD\+: constants related to the HW architecture. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__firfirgcd__define__group_ga76cc414b5d33950d0cb6ceea199d93de}{N\+PL}}~3
+\begin{DoxyCompactList}\small\item\em B\+Bs I\+Ds (\#id in the tag is starting from 0 to be aligned with istances\+TL) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__firfirgcd__define__group_ga796bd7c6ba2e59281760fb155c6287e8}{A\+P\+P\+L\+I\+C\+A\+T\+I\+ON}}~\char`\"{}./X\+ML/application.\+xml\char`\"{}
+\begin{DoxyCompactList}\small\item\em S\+BM I\+N\+D\+E\+P\+E\+N\+D\+E\+NT\+: DO N\+OT C\+H\+A\+N\+GE. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__firfirgcd__define__group_ga2398f91d2717d5cbd17f9f16c22d08ca}{M\+A\+P\+P\+I\+N\+G\+\_\+\+P\+S\+\_\+\+BB}}~\char`\"{}./X\+ML/mapping\+P\+S.\+xml\char`\"{}
+\item 
+\#define \mbox{\hyperlink{group__firfirgcd__define__group_ga91657813bcfecb4c86e83b46e338364c}{M\+A\+P\+P\+I\+N\+G\+\_\+\+L\+C\+\_\+\+PL}}~\char`\"{}./X\+ML/mapping\+C\+H.\+xml\char`\"{}
+\item 
+\#define \mbox{\hyperlink{group__firfirgcd__define__group_gacf471d2e884ab94235db48a5fd3ce252}{energy\+Computation}}~\char`\"{}E\+PC\char`\"{}
+\begin{DoxyCompactList}\small\item\em Costants related to energy consumption estimation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__firfirgcd__define__group_ga8cfe71cc954d3c9e38dec20b50392b8d}{p\+\_\+id}} \{ \newline
+\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6a6acb823daa9d2547901e1e253f1a92}{stimulus\+\_\+id}}, 
+\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8dab8bd51b016c7432eb1d0071f9677defe}{display\+\_\+id}}, 
+\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8dada3380943e162c7dd92aee66f5d435ba}{fir8m\+\_\+id}}, 
+\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da183d4292fa4f5b3de92414e6f8c25157}{fir8e\+\_\+id}}, 
+\newline
+\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8daa1ce57908cd201f98c47ce27d9b6525c}{fir8s\+\_\+id}}, 
+\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\+\_\+id}}, 
+\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8dab5eeffe958b1dca772bc9e6938f8e136}{fir16e\+\_\+id}}, 
+\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da4748eb52ab89dc23136a3e13b8e34d43}{fir16s\+\_\+id}}, 
+\newline
+\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8daa65866ff68063f414a6009f2bb6b5373}{gcdm\+\_\+id}}, 
+\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8dadf90e6465f134074619ec58b5467394d}{gcde\+\_\+id}}, 
+\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8daeb10f3005217e64d69d70e771e681c66}{s\+\_\+fir8m\+\_\+fir8e\+\_\+id}}
+ \}
+\item 
+enum \mbox{\hyperlink{group__firfirgcd__define__group_gaaa53553033df32820178982628a60cae}{bb\+\_\+id}} \{ \newline
+\mbox{\hyperlink{group__firfirgcd__define__group_ggaaa53553033df32820178982628a60caea2112514dc02bed6a625e425c0487a6ab}{B\+B8051\+\_\+0\+\_\+id}}, 
+\mbox{\hyperlink{group__firfirgcd__define__group_ggaaa53553033df32820178982628a60caea5487dd1d1d140792e1f0e2204299454c}{B\+B8051\+\_\+1\+\_\+id}}, 
+\mbox{\hyperlink{group__firfirgcd__define__group_ggaaa53553033df32820178982628a60caeaa5912815fd96df44c5a5862aabfee096}{B\+Bleon3\+\_\+0\+\_\+id}}, 
+\mbox{\hyperlink{group__firfirgcd__define__group_ggaaa53553033df32820178982628a60caea375dd2456383ea5d0e048f3674a44671}{B\+Bleon3\+\_\+1\+\_\+id}}, 
+\newline
+\mbox{\hyperlink{group__firfirgcd__define__group_ggaaa53553033df32820178982628a60caeabc53b9d75ec1bb7143ccae00479642a8}{B\+B\+Artix7\+\_\+0\+\_\+id}}
+ \}
+\item 
+enum \mbox{\hyperlink{group__firfirgcd__define__group_gadc6e5733fc3c22f0a7b2914188c49c90}{state}} \{ \mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90af35387cab0e820dcf7df1ed4702043e1}{undefined}}, 
+\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a4c97ffbad296d4a6b84b1c508fc5d32a}{waiting}}, 
+\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473}{ready}}, 
+\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c}{running}}
+ \}
+\begin{DoxyCompactList}\small\item\em Costants related to processes/schedulers states and B\+B/modes. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__firfirgcd__define__group_ga1a6b6fb557d8d37d59700faf4e4c9167}{mode}} \{ \mbox{\hyperlink{group__firfirgcd__define__group_gga1a6b6fb557d8d37d59700faf4e4c9167a53ace14c115e45153a1c9105accceb4c}{off}}, 
+\mbox{\hyperlink{group__firfirgcd__define__group_gga1a6b6fb557d8d37d59700faf4e4c9167a66e84e235b9e03b6fdfc7ffe7e775de8}{suspended}}, 
+\mbox{\hyperlink{group__firfirgcd__define__group_gga1a6b6fb557d8d37d59700faf4e4c9167a5d178ae2be9d93ea4cbf1a9f0a2d9cbe}{active}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+D\+E\+F\+I\+NE U\+S\+ED BY H\+E\+P\+S\+I\+M2. 
+
+All the Fir\+Fir\+G\+CD related define \begin{DoxyAuthor}{Author}
+V. Muttillo, L. Pomante 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Apr. 2022 
+\end{DoxyDate}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__firfirgcd__define__group_ga796bd7c6ba2e59281760fb155c6287e8}\label{group__firfirgcd__define__group_ga796bd7c6ba2e59281760fb155c6287e8}} 
+\index{FirFirGCD define.@{FirFirGCD define.}!APPLICATION@{APPLICATION}}
+\index{APPLICATION@{APPLICATION}!FirFirGCD define.@{FirFirGCD define.}}
+\doxysubsubsection{\texorpdfstring{APPLICATION}{APPLICATION}}
+{\footnotesize\ttfamily \#define A\+P\+P\+L\+I\+C\+A\+T\+I\+ON~\char`\"{}./X\+ML/application.\+xml\char`\"{}}
+
+
+
+S\+BM I\+N\+D\+E\+P\+E\+N\+D\+E\+NT\+: DO N\+OT C\+H\+A\+N\+GE. 
+
+Tags for conditionl compilation (LP\+: To be provided as flag to compiler) Possible options\+:
+\begin{DoxyItemize}
+\item NO T\+A\+GS (Add only functional behavioral simulation?) or F\+U\+N\+C\+T\+I\+O\+N\+AL?
+\item NO T\+A\+GS (function alanalyzer = functional simulatoin + communications analysis + functional concurrency analysis)
+\item T\+I\+M\+I\+N\+G\+\_\+\+E\+N\+E\+R\+GY (timing\&energy simulation)
+\item T\+I\+M\+I\+N\+G\+\_\+\+E\+N\+E\+R\+G\+Y+\+C\+O\+N\+C\+U\+R\+R\+E\+N\+CY (timing\&energy simulation + timing concurrency analysis)
+\item T\+I\+M\+I\+N\+G\+\_\+\+E\+N\+E\+R\+G\+Y+\+L\+O\+AD (timing\&energy simulation + load estimation)
+\item T\+I\+M\+I\+N\+G\+\_\+\+E\+N\+E\+R\+G\+Y+\+L\+O\+A\+D+\+C\+O\+N\+C\+U\+R\+R\+E\+N\+CY (timing\&energy simulation + load estimation + timing concurrency analysis) -\/ W\+A\+R\+N\+I\+NG\+: scheduler O\+VH is 0! \#define {\itshape T\+I\+M\+I\+N\+G\+\_\+\+E\+N\+E\+R\+GY} \#define {\itshape L\+O\+AD} \#define {\itshape C\+O\+N\+C\+U\+R\+R\+E\+N\+CY} Tags for debug and log (LP\+: To be provided as flag to compiler) \#define {\itshape D\+E\+B\+UG} \#define {\itshape S\+A\+V\+E\+\_\+\+C\+SV} Costants related to mapping files 
+\end{DoxyItemize}
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00120}{120}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{group__firfirgcd__define__group_gacf471d2e884ab94235db48a5fd3ce252}\label{group__firfirgcd__define__group_gacf471d2e884ab94235db48a5fd3ce252}} 
+\index{FirFirGCD define.@{FirFirGCD define.}!energyComputation@{energyComputation}}
+\index{energyComputation@{energyComputation}!FirFirGCD define.@{FirFirGCD define.}}
+\doxysubsubsection{\texorpdfstring{energyComputation}{energyComputation}}
+{\footnotesize\ttfamily \#define energy\+Computation~\char`\"{}E\+PC\char`\"{}}
+
+
+
+Costants related to energy consumption estimation. 
+
+Method used to compute energy consumption (possible values\+: E\+P\+I/\+E\+PC) //\+LP\+: check formule \#define energy\+Computation \char`\"{}\+E\+P\+I\char`\"{} 
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00135}{135}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{group__firfirgcd__define__group_ga91657813bcfecb4c86e83b46e338364c}\label{group__firfirgcd__define__group_ga91657813bcfecb4c86e83b46e338364c}} 
+\index{FirFirGCD define.@{FirFirGCD define.}!MAPPING\_LC\_PL@{MAPPING\_LC\_PL}}
+\index{MAPPING\_LC\_PL@{MAPPING\_LC\_PL}!FirFirGCD define.@{FirFirGCD define.}}
+\doxysubsubsection{\texorpdfstring{MAPPING\_LC\_PL}{MAPPING\_LC\_PL}}
+{\footnotesize\ttfamily \#define M\+A\+P\+P\+I\+N\+G\+\_\+\+L\+C\+\_\+\+PL~\char`\"{}./X\+ML/mapping\+C\+H.\+xml\char`\"{}}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00122}{122}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{group__firfirgcd__define__group_ga2398f91d2717d5cbd17f9f16c22d08ca}\label{group__firfirgcd__define__group_ga2398f91d2717d5cbd17f9f16c22d08ca}} 
+\index{FirFirGCD define.@{FirFirGCD define.}!MAPPING\_PS\_BB@{MAPPING\_PS\_BB}}
+\index{MAPPING\_PS\_BB@{MAPPING\_PS\_BB}!FirFirGCD define.@{FirFirGCD define.}}
+\doxysubsubsection{\texorpdfstring{MAPPING\_PS\_BB}{MAPPING\_PS\_BB}}
+{\footnotesize\ttfamily \#define M\+A\+P\+P\+I\+N\+G\+\_\+\+P\+S\+\_\+\+BB~\char`\"{}./X\+ML/mapping\+P\+S.\+xml\char`\"{}}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00121}{121}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{group__firfirgcd__define__group_ga498a2c2b57c15e562e939cccf28db094}\label{group__firfirgcd__define__group_ga498a2c2b57c15e562e939cccf28db094}} 
+\index{FirFirGCD define.@{FirFirGCD define.}!NBB@{NBB}}
+\index{NBB@{NBB}!FirFirGCD define.@{FirFirGCD define.}}
+\doxysubsubsection{\texorpdfstring{NBB}{NBB}}
+{\footnotesize\ttfamily \#define N\+BB~5}
+
+
+
+Fir\+Fir\+G\+CD\+: constants related to the HW architecture. 
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00087}{87}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{group__firfirgcd__define__group_ga967ca22c6c7be038e1092147ce04f258}\label{group__firfirgcd__define__group_ga967ca22c6c7be038e1092147ce04f258}} 
+\index{FirFirGCD define.@{FirFirGCD define.}!NCH@{NCH}}
+\index{NCH@{NCH}!FirFirGCD define.@{FirFirGCD define.}}
+\doxysubsubsection{\texorpdfstring{NCH}{NCH}}
+{\footnotesize\ttfamily \#define N\+CH~15}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00079}{79}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{group__firfirgcd__define__group_ga76cc414b5d33950d0cb6ceea199d93de}\label{group__firfirgcd__define__group_ga76cc414b5d33950d0cb6ceea199d93de}} 
+\index{FirFirGCD define.@{FirFirGCD define.}!NPL@{NPL}}
+\index{NPL@{NPL}!FirFirGCD define.@{FirFirGCD define.}}
+\doxysubsubsection{\texorpdfstring{NPL}{NPL}}
+{\footnotesize\ttfamily \#define N\+PL~3}
+
+
+
+B\+Bs I\+Ds (\#id in the tag is starting from 0 to be aligned with istances\+TL) 
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00089}{89}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}\label{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}} 
+\index{FirFirGCD define.@{FirFirGCD define.}!NPS@{NPS}}
+\index{NPS@{NPS}!FirFirGCD define.@{FirFirGCD define.}}
+\doxysubsubsection{\texorpdfstring{NPS}{NPS}}
+{\footnotesize\ttfamily \#define N\+PS~10}
+
+
+
+S\+BM D\+E\+P\+E\+N\+D\+E\+NT. 
+
+Fir\+Fir\+G\+CD\+: constants related to the S\+BM 
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00077}{77}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{group__firfirgcd__define__group_ga41078393655c31f01ef880a0492a776f}\label{group__firfirgcd__define__group_ga41078393655c31f01ef880a0492a776f}} 
+\index{FirFirGCD define.@{FirFirGCD define.}!NUMBER\_OF\_INPUTS@{NUMBER\_OF\_INPUTS}}
+\index{NUMBER\_OF\_INPUTS@{NUMBER\_OF\_INPUTS}!FirFirGCD define.@{FirFirGCD define.}}
+\doxysubsubsection{\texorpdfstring{NUMBER\_OF\_INPUTS}{NUMBER\_OF\_INPUTS}}
+{\footnotesize\ttfamily \#define N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+I\+N\+P\+U\+TS~10}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00083}{83}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{group__firfirgcd__define__group_gaf2addfbdf98c5e76c823edde9336370f}\label{group__firfirgcd__define__group_gaf2addfbdf98c5e76c823edde9336370f}} 
+\index{FirFirGCD define.@{FirFirGCD define.}!TAP16@{TAP16}}
+\index{TAP16@{TAP16}!FirFirGCD define.@{FirFirGCD define.}}
+\doxysubsubsection{\texorpdfstring{TAP16}{TAP16}}
+{\footnotesize\ttfamily \#define T\+A\+P16~16}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00082}{82}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+\mbox{\Hypertarget{group__firfirgcd__define__group_ga67e7d9a59126e595e10a78e11df73b39}\label{group__firfirgcd__define__group_ga67e7d9a59126e595e10a78e11df73b39}} 
+\index{FirFirGCD define.@{FirFirGCD define.}!TAP8@{TAP8}}
+\index{TAP8@{TAP8}!FirFirGCD define.@{FirFirGCD define.}}
+\doxysubsubsection{\texorpdfstring{TAP8}{TAP8}}
+{\footnotesize\ttfamily \#define T\+A\+P8~8}
+
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00081}{81}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__firfirgcd__define__group_gaaa53553033df32820178982628a60cae}\label{group__firfirgcd__define__group_gaaa53553033df32820178982628a60cae}} 
+\index{FirFirGCD define.@{FirFirGCD define.}!bb\_id@{bb\_id}}
+\index{bb\_id@{bb\_id}!FirFirGCD define.@{FirFirGCD define.}}
+\doxysubsubsection{\texorpdfstring{bb\_id}{bb\_id}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__firfirgcd__define__group_gaaa53553033df32820178982628a60cae}{bb\+\_\+id}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BB8051\_0\_id@{BB8051\_0\_id}!FirFirGCD define.@{FirFirGCD define.}}\index{FirFirGCD define.@{FirFirGCD define.}!BB8051\_0\_id@{BB8051\_0\_id}}}\mbox{\Hypertarget{group__firfirgcd__define__group_ggaaa53553033df32820178982628a60caea2112514dc02bed6a625e425c0487a6ab}\label{group__firfirgcd__define__group_ggaaa53553033df32820178982628a60caea2112514dc02bed6a625e425c0487a6ab}} 
+B\+B8051\+\_\+0\+\_\+id&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BB8051\_1\_id@{BB8051\_1\_id}!FirFirGCD define.@{FirFirGCD define.}}\index{FirFirGCD define.@{FirFirGCD define.}!BB8051\_1\_id@{BB8051\_1\_id}}}\mbox{\Hypertarget{group__firfirgcd__define__group_ggaaa53553033df32820178982628a60caea5487dd1d1d140792e1f0e2204299454c}\label{group__firfirgcd__define__group_ggaaa53553033df32820178982628a60caea5487dd1d1d140792e1f0e2204299454c}} 
+B\+B8051\+\_\+1\+\_\+id&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BBleon3\_0\_id@{BBleon3\_0\_id}!FirFirGCD define.@{FirFirGCD define.}}\index{FirFirGCD define.@{FirFirGCD define.}!BBleon3\_0\_id@{BBleon3\_0\_id}}}\mbox{\Hypertarget{group__firfirgcd__define__group_ggaaa53553033df32820178982628a60caeaa5912815fd96df44c5a5862aabfee096}\label{group__firfirgcd__define__group_ggaaa53553033df32820178982628a60caeaa5912815fd96df44c5a5862aabfee096}} 
+B\+Bleon3\+\_\+0\+\_\+id&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BBleon3\_1\_id@{BBleon3\_1\_id}!FirFirGCD define.@{FirFirGCD define.}}\index{FirFirGCD define.@{FirFirGCD define.}!BBleon3\_1\_id@{BBleon3\_1\_id}}}\mbox{\Hypertarget{group__firfirgcd__define__group_ggaaa53553033df32820178982628a60caea375dd2456383ea5d0e048f3674a44671}\label{group__firfirgcd__define__group_ggaaa53553033df32820178982628a60caea375dd2456383ea5d0e048f3674a44671}} 
+B\+Bleon3\+\_\+1\+\_\+id&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BBArtix7\_0\_id@{BBArtix7\_0\_id}!FirFirGCD define.@{FirFirGCD define.}}\index{FirFirGCD define.@{FirFirGCD define.}!BBArtix7\_0\_id@{BBArtix7\_0\_id}}}\mbox{\Hypertarget{group__firfirgcd__define__group_ggaaa53553033df32820178982628a60caeabc53b9d75ec1bb7143ccae00479642a8}\label{group__firfirgcd__define__group_ggaaa53553033df32820178982628a60caeabc53b9d75ec1bb7143ccae00479642a8}} 
+B\+B\+Artix7\+\_\+0\+\_\+id&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00088}{88}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00088 \{\mbox{\hyperlink{group__firfirgcd__define__group_ggaaa53553033df32820178982628a60caea2112514dc02bed6a625e425c0487a6ab}{BB8051\_0\_id}}, \mbox{\hyperlink{group__firfirgcd__define__group_ggaaa53553033df32820178982628a60caea5487dd1d1d140792e1f0e2204299454c}{BB8051\_1\_id}}, \mbox{\hyperlink{group__firfirgcd__define__group_ggaaa53553033df32820178982628a60caeaa5912815fd96df44c5a5862aabfee096}{BBleon3\_0\_id}}, \mbox{\hyperlink{group__firfirgcd__define__group_ggaaa53553033df32820178982628a60caea375dd2456383ea5d0e048f3674a44671}{BBleon3\_1\_id}}, \mbox{\hyperlink{group__firfirgcd__define__group_ggaaa53553033df32820178982628a60caeabc53b9d75ec1bb7143ccae00479642a8}{BBArtix7\_0\_id}}\}; }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group__firfirgcd__define__group_ga1a6b6fb557d8d37d59700faf4e4c9167}\label{group__firfirgcd__define__group_ga1a6b6fb557d8d37d59700faf4e4c9167}} 
+\index{FirFirGCD define.@{FirFirGCD define.}!mode@{mode}}
+\index{mode@{mode}!FirFirGCD define.@{FirFirGCD define.}}
+\doxysubsubsection{\texorpdfstring{mode}{mode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__firfirgcd__define__group_ga1a6b6fb557d8d37d59700faf4e4c9167}{mode}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{off@{off}!FirFirGCD define.@{FirFirGCD define.}}\index{FirFirGCD define.@{FirFirGCD define.}!off@{off}}}\mbox{\Hypertarget{group__firfirgcd__define__group_gga1a6b6fb557d8d37d59700faf4e4c9167a53ace14c115e45153a1c9105accceb4c}\label{group__firfirgcd__define__group_gga1a6b6fb557d8d37d59700faf4e4c9167a53ace14c115e45153a1c9105accceb4c}} 
+off&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{suspended@{suspended}!FirFirGCD define.@{FirFirGCD define.}}\index{FirFirGCD define.@{FirFirGCD define.}!suspended@{suspended}}}\mbox{\Hypertarget{group__firfirgcd__define__group_gga1a6b6fb557d8d37d59700faf4e4c9167a66e84e235b9e03b6fdfc7ffe7e775de8}\label{group__firfirgcd__define__group_gga1a6b6fb557d8d37d59700faf4e4c9167a66e84e235b9e03b6fdfc7ffe7e775de8}} 
+suspended&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{active@{active}!FirFirGCD define.@{FirFirGCD define.}}\index{FirFirGCD define.@{FirFirGCD define.}!active@{active}}}\mbox{\Hypertarget{group__firfirgcd__define__group_gga1a6b6fb557d8d37d59700faf4e4c9167a5d178ae2be9d93ea4cbf1a9f0a2d9cbe}\label{group__firfirgcd__define__group_gga1a6b6fb557d8d37d59700faf4e4c9167a5d178ae2be9d93ea4cbf1a9f0a2d9cbe}} 
+active&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00127}{127}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00127 \{ \mbox{\hyperlink{group__firfirgcd__define__group_gga1a6b6fb557d8d37d59700faf4e4c9167a53ace14c115e45153a1c9105accceb4c}{off}}, \mbox{\hyperlink{group__firfirgcd__define__group_gga1a6b6fb557d8d37d59700faf4e4c9167a66e84e235b9e03b6fdfc7ffe7e775de8}{suspended}}, \mbox{\hyperlink{group__firfirgcd__define__group_gga1a6b6fb557d8d37d59700faf4e4c9167a5d178ae2be9d93ea4cbf1a9f0a2d9cbe}{active}} \};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group__firfirgcd__define__group_ga8cfe71cc954d3c9e38dec20b50392b8d}\label{group__firfirgcd__define__group_ga8cfe71cc954d3c9e38dec20b50392b8d}} 
+\index{FirFirGCD define.@{FirFirGCD define.}!p\_id@{p\_id}}
+\index{p\_id@{p\_id}!FirFirGCD define.@{FirFirGCD define.}}
+\doxysubsubsection{\texorpdfstring{p\_id}{p\_id}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__firfirgcd__define__group_ga8cfe71cc954d3c9e38dec20b50392b8d}{p\+\_\+id}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{stimulus\_id@{stimulus\_id}!FirFirGCD define.@{FirFirGCD define.}}\index{FirFirGCD define.@{FirFirGCD define.}!stimulus\_id@{stimulus\_id}}}\mbox{\Hypertarget{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6a6acb823daa9d2547901e1e253f1a92}\label{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6a6acb823daa9d2547901e1e253f1a92}} 
+stimulus\+\_\+id&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{display\_id@{display\_id}!FirFirGCD define.@{FirFirGCD define.}}\index{FirFirGCD define.@{FirFirGCD define.}!display\_id@{display\_id}}}\mbox{\Hypertarget{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8dab8bd51b016c7432eb1d0071f9677defe}\label{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8dab8bd51b016c7432eb1d0071f9677defe}} 
+display\+\_\+id&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{fir8m\_id@{fir8m\_id}!FirFirGCD define.@{FirFirGCD define.}}\index{FirFirGCD define.@{FirFirGCD define.}!fir8m\_id@{fir8m\_id}}}\mbox{\Hypertarget{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8dada3380943e162c7dd92aee66f5d435ba}\label{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8dada3380943e162c7dd92aee66f5d435ba}} 
+fir8m\+\_\+id&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{fir8e\_id@{fir8e\_id}!FirFirGCD define.@{FirFirGCD define.}}\index{FirFirGCD define.@{FirFirGCD define.}!fir8e\_id@{fir8e\_id}}}\mbox{\Hypertarget{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da183d4292fa4f5b3de92414e6f8c25157}\label{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da183d4292fa4f5b3de92414e6f8c25157}} 
+fir8e\+\_\+id&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{fir8s\_id@{fir8s\_id}!FirFirGCD define.@{FirFirGCD define.}}\index{FirFirGCD define.@{FirFirGCD define.}!fir8s\_id@{fir8s\_id}}}\mbox{\Hypertarget{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8daa1ce57908cd201f98c47ce27d9b6525c}\label{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8daa1ce57908cd201f98c47ce27d9b6525c}} 
+fir8s\+\_\+id&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{fir16m\_id@{fir16m\_id}!FirFirGCD define.@{FirFirGCD define.}}\index{FirFirGCD define.@{FirFirGCD define.}!fir16m\_id@{fir16m\_id}}}\mbox{\Hypertarget{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}\label{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}} 
+fir16m\+\_\+id&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{fir16e\_id@{fir16e\_id}!FirFirGCD define.@{FirFirGCD define.}}\index{FirFirGCD define.@{FirFirGCD define.}!fir16e\_id@{fir16e\_id}}}\mbox{\Hypertarget{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8dab5eeffe958b1dca772bc9e6938f8e136}\label{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8dab5eeffe958b1dca772bc9e6938f8e136}} 
+fir16e\+\_\+id&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{fir16s\_id@{fir16s\_id}!FirFirGCD define.@{FirFirGCD define.}}\index{FirFirGCD define.@{FirFirGCD define.}!fir16s\_id@{fir16s\_id}}}\mbox{\Hypertarget{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da4748eb52ab89dc23136a3e13b8e34d43}\label{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da4748eb52ab89dc23136a3e13b8e34d43}} 
+fir16s\+\_\+id&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{gcdm\_id@{gcdm\_id}!FirFirGCD define.@{FirFirGCD define.}}\index{FirFirGCD define.@{FirFirGCD define.}!gcdm\_id@{gcdm\_id}}}\mbox{\Hypertarget{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8daa65866ff68063f414a6009f2bb6b5373}\label{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8daa65866ff68063f414a6009f2bb6b5373}} 
+gcdm\+\_\+id&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{gcde\_id@{gcde\_id}!FirFirGCD define.@{FirFirGCD define.}}\index{FirFirGCD define.@{FirFirGCD define.}!gcde\_id@{gcde\_id}}}\mbox{\Hypertarget{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8dadf90e6465f134074619ec58b5467394d}\label{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8dadf90e6465f134074619ec58b5467394d}} 
+gcde\+\_\+id&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{s\_fir8m\_fir8e\_id@{s\_fir8m\_fir8e\_id}!FirFirGCD define.@{FirFirGCD define.}}\index{FirFirGCD define.@{FirFirGCD define.}!s\_fir8m\_fir8e\_id@{s\_fir8m\_fir8e\_id}}}\mbox{\Hypertarget{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8daeb10f3005217e64d69d70e771e681c66}\label{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8daeb10f3005217e64d69d70e771e681c66}} 
+s\+\_\+fir8m\+\_\+fir8e\+\_\+id&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00078}{78}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00078 \{\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6a6acb823daa9d2547901e1e253f1a92}{stimulus\_id}}, \mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8dab8bd51b016c7432eb1d0071f9677defe}{display\_id}}, \mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8dada3380943e162c7dd92aee66f5d435ba}{fir8m\_id}}, \mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da183d4292fa4f5b3de92414e6f8c25157}{fir8e\_id}}, \mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8daa1ce57908cd201f98c47ce27d9b6525c}{fir8s\_id}}, \mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}}, \mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8dab5eeffe958b1dca772bc9e6938f8e136}{fir16e\_id}}, \mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da4748eb52ab89dc23136a3e13b8e34d43}{fir16s\_id}}, \mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8daa65866ff68063f414a6009f2bb6b5373}{gcdm\_id}}, \mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8dadf90e6465f134074619ec58b5467394d}{gcde\_id}}, \mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8daeb10f3005217e64d69d70e771e681c66}{s\_fir8m\_fir8e\_id}}\}; \textcolor{comment}{// Processes IDs}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group__firfirgcd__define__group_gadc6e5733fc3c22f0a7b2914188c49c90}\label{group__firfirgcd__define__group_gadc6e5733fc3c22f0a7b2914188c49c90}} 
+\index{FirFirGCD define.@{FirFirGCD define.}!state@{state}}
+\index{state@{state}!FirFirGCD define.@{FirFirGCD define.}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__firfirgcd__define__group_gadc6e5733fc3c22f0a7b2914188c49c90}{state}}}
+
+
+
+Costants related to processes/schedulers states and B\+B/modes. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{undefined@{undefined}!FirFirGCD define.@{FirFirGCD define.}}\index{FirFirGCD define.@{FirFirGCD define.}!undefined@{undefined}}}\mbox{\Hypertarget{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90af35387cab0e820dcf7df1ed4702043e1}\label{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90af35387cab0e820dcf7df1ed4702043e1}} 
+undefined&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{waiting@{waiting}!FirFirGCD define.@{FirFirGCD define.}}\index{FirFirGCD define.@{FirFirGCD define.}!waiting@{waiting}}}\mbox{\Hypertarget{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a4c97ffbad296d4a6b84b1c508fc5d32a}\label{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a4c97ffbad296d4a6b84b1c508fc5d32a}} 
+waiting&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ready@{ready}!FirFirGCD define.@{FirFirGCD define.}}\index{FirFirGCD define.@{FirFirGCD define.}!ready@{ready}}}\mbox{\Hypertarget{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473}\label{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473}} 
+ready&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{running@{running}!FirFirGCD define.@{FirFirGCD define.}}\index{FirFirGCD define.@{FirFirGCD define.}!running@{running}}}\mbox{\Hypertarget{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c}\label{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c}} 
+running&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{define_8h_source_l00126}{126}} of file \mbox{\hyperlink{define_8h_source}{define.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00126 \{ \mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90af35387cab0e820dcf7df1ed4702043e1}{undefined}}, \mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a4c97ffbad296d4a6b84b1c508fc5d32a}{waiting}}, \mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473}{ready}}, \mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c}{running}} \};}
+
+\end{DoxyCode}

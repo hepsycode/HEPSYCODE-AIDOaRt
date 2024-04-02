@@ -1,0 +1,110 @@
+\hypertarget{fir8__shifting_8cpp_source}{}\doxysection{fir8\+\_\+shifting.\+cpp}
+\label{fir8__shifting_8cpp_source}\index{HepsycodeDesign/src/processesInstr/fir8\_shifting.cpp@{HepsycodeDesign/src/processesInstr/fir8\_shifting.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{ /********************************************************************************}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * University of L'Aquila -\/ HEPSYCODE Source Code License                       *}}
+\DoxyCodeLine{00003 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00004 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00005 \textcolor{comment}{ * (c) 2018-\/2019 Centre of Excellence DEWS All rights reserved                  *}}
+\DoxyCodeLine{00006 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00007 \textcolor{comment}{ * <one line to give the program's name and a brief idea of what it does.>      *}}
+\DoxyCodeLine{00008 \textcolor{comment}{ * Copyright (C) 2022  Vittoriano Muttillo, Luigi Pomante                       *                                    *}}
+\DoxyCodeLine{00009 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00010 \textcolor{comment}{ * This program is free software: you can redistribute it and/or modify         *}}
+\DoxyCodeLine{00011 \textcolor{comment}{ * it under the terms of the GNU General Public License as published by         *}}
+\DoxyCodeLine{00012 \textcolor{comment}{ * the Free Software Foundation, either version 3 of the License, or            *}}
+\DoxyCodeLine{00013 \textcolor{comment}{ * (at your option) any later version.                                          *}}
+\DoxyCodeLine{00014 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00015 \textcolor{comment}{ * This program is distributed in the hope that it will be useful,              *}}
+\DoxyCodeLine{00016 \textcolor{comment}{ * but WITHOUT ANY WARRANTY; without even the implied warranty of               *}}
+\DoxyCodeLine{00017 \textcolor{comment}{ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the                *}}
+\DoxyCodeLine{00018 \textcolor{comment}{ * GNU General Public License for more details.                                 *}}
+\DoxyCodeLine{00019 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00020 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00021 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00022 \textcolor{comment}{ * Created on: 09/May/2022                                                      *}}
+\DoxyCodeLine{00023 \textcolor{comment}{ * Authors: Vittoriano Muttillo, Luigi Pomante                                  *}}
+\DoxyCodeLine{00024 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00025 \textcolor{comment}{ * email: vittoriano.muttillo@guest.univaq.it                                   *}}
+\DoxyCodeLine{00026 \textcolor{comment}{ *        luigi.pomante@univaq.it                                               *}}
+\DoxyCodeLine{00027 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00028 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00029 \textcolor{comment}{ * This code has been developed from an HEPSYCODE model used as demonstrator by *}}
+\DoxyCodeLine{00030 \textcolor{comment}{ * University of L'Aquila.                                                      *}}
+\DoxyCodeLine{00031 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00032 \textcolor{comment}{ * The code is used as a working example in the 'Embedded Systems' course of    *}}
+\DoxyCodeLine{00033 \textcolor{comment}{ * the Master in Conputer Science Engineering offered by the                    *}}
+\DoxyCodeLine{00034 \textcolor{comment}{ * University of L'Aquila                                                       *}}
+\DoxyCodeLine{00035 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{00037 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00038 \textcolor{comment}{ * fir8\_shifting : FirFirGCD FIR8 Shifting process.}}
+\DoxyCodeLine{00039 \textcolor{comment}{ *}}
+\DoxyCodeLine{00040 \textcolor{comment}{ * FIR\_8 Shifting process: CSP Process specifying the functionality of}}
+\DoxyCodeLine{00041 \textcolor{comment}{ * the FIR8 Shifting component}}
+\DoxyCodeLine{00042 \textcolor{comment}{ *}}
+\DoxyCodeLine{00043 \textcolor{comment}{********************************************************************************/}}
+\DoxyCodeLine{00044 }
+\DoxyCodeLine{00052 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00053 \textcolor{comment}{ ***                                Includes                                  ***}}
+\DoxyCodeLine{00054 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00055 }
+\DoxyCodeLine{00056 \textcolor{preprocessor}{\#include "../mainsystem.h"}}
+\DoxyCodeLine{00057 }
+\DoxyCodeLine{00058 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00059 \textcolor{comment}{ ***                                Functions                                 ***}}
+\DoxyCodeLine{00060 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00061 }
+\DoxyCodeLine{00063 \textcolor{comment}{// SBM DEPENDENT}}
+\DoxyCodeLine{00065 \textcolor{comment}{}}
+\DoxyCodeLine{00066 \textcolor{comment}{//f8s}}
+\DoxyCodeLine{00067 \textcolor{keywordtype}{void} mainsystem::fir8\_shifting()}
+\DoxyCodeLine{00068 \{}
+\DoxyCodeLine{00069     \textcolor{comment}{// datatype for channels}}
+\DoxyCodeLine{00070     \mbox{\hyperlink{structfir8s__parameters}{fir8s\_parameters}} fir8s\_p;}
+\DoxyCodeLine{00071     \mbox{\hyperlink{structfir8s__results}{fir8s\_results}} fir8s\_r;}
+\DoxyCodeLine{00072 }
+\DoxyCodeLine{00073     \textcolor{comment}{// local variables}}
+\DoxyCodeLine{00074     sc\_uint<8> sample\_tmp;}
+\DoxyCodeLine{00075     sc\_uint<8> shift[8];}
+\DoxyCodeLine{00076 }
+\DoxyCodeLine{00077     \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8daa1ce57908cd201f98c47ce27d9b6525c}{fir8s\_id}}) \textcolor{keywordflow}{while}(1)}
+\DoxyCodeLine{00078     \{\mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8daa1ce57908cd201f98c47ce27d9b6525c}{fir8s\_id}})}
+\DoxyCodeLine{00079 }
+\DoxyCodeLine{00080         \textcolor{comment}{// read parameters from channel}}
+\DoxyCodeLine{00081         \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8daa1ce57908cd201f98c47ce27d9b6525c}{fir8s\_id}}) fir8s\_p=fir8s\_parameters\_channel-\/>read();}
+\DoxyCodeLine{00082 }
+\DoxyCodeLine{00083         \textcolor{comment}{// fill local variables}}
+\DoxyCodeLine{00084         \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8daa1ce57908cd201f98c47ce27d9b6525c}{fir8s\_id}}) sample\_tmp=fir8s\_p.\mbox{\hyperlink{structfir8s__parameters_a2e7beba5c105fe0936012d1b0b0d0fee}{sample\_tmp}};}
+\DoxyCodeLine{00085 }
+\DoxyCodeLine{00086         \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8daa1ce57908cd201f98c47ce27d9b6525c}{fir8s\_id}}) \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} j = 0; j < \mbox{\hyperlink{group__firfirgcd__define__group_ga67e7d9a59126e595e10a78e11df73b39}{TAP8}}; j++)}
+\DoxyCodeLine{00087         \{\mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8daa1ce57908cd201f98c47ce27d9b6525c}{fir8s\_id}})}
+\DoxyCodeLine{00088             \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8daa1ce57908cd201f98c47ce27d9b6525c}{fir8s\_id}}) shift[j] = fir8s\_p.\mbox{\hyperlink{structfir8s__parameters_ac70dfc7970a004671d8e93000a3a1a8b}{shift}}[j];}
+\DoxyCodeLine{00089         \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8daa1ce57908cd201f98c47ce27d9b6525c}{fir8s\_id}})\}}
+\DoxyCodeLine{00090 }
+\DoxyCodeLine{00091         \textcolor{comment}{// process}}
+\DoxyCodeLine{00092 }
+\DoxyCodeLine{00093         \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8daa1ce57908cd201f98c47ce27d9b6525c}{fir8s\_id}}) \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=\mbox{\hyperlink{group__firfirgcd__define__group_ga67e7d9a59126e595e10a78e11df73b39}{TAP8}}-\/2; i>=0; i-\/-\/)}
+\DoxyCodeLine{00094         \{\mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8daa1ce57908cd201f98c47ce27d9b6525c}{fir8s\_id}})}
+\DoxyCodeLine{00095             \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8daa1ce57908cd201f98c47ce27d9b6525c}{fir8s\_id}}) shift[i+1] = shift[i];}
+\DoxyCodeLine{00096         \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8daa1ce57908cd201f98c47ce27d9b6525c}{fir8s\_id}})\}}
+\DoxyCodeLine{00097 }
+\DoxyCodeLine{00098         \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8daa1ce57908cd201f98c47ce27d9b6525c}{fir8s\_id}}) shift[0]=sample\_tmp;}
+\DoxyCodeLine{00099 }
+\DoxyCodeLine{00100         \textcolor{comment}{// fill datatype}}
+\DoxyCodeLine{00101         \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8daa1ce57908cd201f98c47ce27d9b6525c}{fir8s\_id}}) \textcolor{keywordflow}{for}( \textcolor{keywordtype}{unsigned} j=0; j<\mbox{\hyperlink{group__firfirgcd__define__group_ga67e7d9a59126e595e10a78e11df73b39}{TAP8}}; j++) fir8s\_p.\mbox{\hyperlink{structfir8s__parameters_ac70dfc7970a004671d8e93000a3a1a8b}{shift}}[j]=shift[j];}
+\DoxyCodeLine{00102 }
+\DoxyCodeLine{00103         \textcolor{comment}{// send results by channel}}
+\DoxyCodeLine{00104         \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8daa1ce57908cd201f98c47ce27d9b6525c}{fir8s\_id}}) fir8s\_results\_channel-\/>write(fir8s\_r);}
+\DoxyCodeLine{00105 }
+\DoxyCodeLine{00106         \textcolor{comment}{// Profiling}}
+\DoxyCodeLine{00107         \mbox{\hyperlink{group__firfirgcd__macros__group_ga652f3387e2319f751a6459f9db47cc3a}{HEPSY\_P}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8daa1ce57908cd201f98c47ce27d9b6525c}{fir8s\_id}})}
+\DoxyCodeLine{00108     \}}
+\DoxyCodeLine{00109 \}}
+\DoxyCodeLine{00110 }
+\DoxyCodeLine{00111 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00112 \textcolor{comment}{ ***                                  EOF                                     ***}}
+\DoxyCodeLine{00113 \textcolor{comment}{ ********************************************************************************/}}
+
+\end{DoxyCode}

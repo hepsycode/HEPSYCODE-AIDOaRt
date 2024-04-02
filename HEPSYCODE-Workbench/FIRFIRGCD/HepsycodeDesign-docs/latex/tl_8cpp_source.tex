@@ -1,0 +1,617 @@
+\hypertarget{tl_8cpp_source}{}\doxysection{tl.\+cpp}
+\label{tl_8cpp_source}\index{HepsycodeDesign/src/tl.cpp@{HepsycodeDesign/src/tl.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * University of L'Aquila -\/ HEPSYCODE Source Code License                       *}}
+\DoxyCodeLine{00003 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00004 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00005 \textcolor{comment}{ * (c) 2018-\/2019 Centre of Excellence DEWS All rights reserved                  *}}
+\DoxyCodeLine{00006 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00007 \textcolor{comment}{ * <one line to give the program's name and a brief idea of what it does.>      *}}
+\DoxyCodeLine{00008 \textcolor{comment}{ * Copyright (C) 2022  Vittoriano Muttillo, Luigi Pomante                       *                                    *}}
+\DoxyCodeLine{00009 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00010 \textcolor{comment}{ * This program is free software: you can redistribute it and/or modify         *}}
+\DoxyCodeLine{00011 \textcolor{comment}{ * it under the terms of the GNU General Public License as published by         *}}
+\DoxyCodeLine{00012 \textcolor{comment}{ * the Free Software Foundation, either version 3 of the License, or            *}}
+\DoxyCodeLine{00013 \textcolor{comment}{ * (at your option) any later version.                                          *}}
+\DoxyCodeLine{00014 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00015 \textcolor{comment}{ * This program is distributed in the hope that it will be useful,              *}}
+\DoxyCodeLine{00016 \textcolor{comment}{ * but WITHOUT ANY WARRANTY; without even the implied warranty of               *}}
+\DoxyCodeLine{00017 \textcolor{comment}{ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the                *}}
+\DoxyCodeLine{00018 \textcolor{comment}{ * GNU General Public License for more details.                                 *}}
+\DoxyCodeLine{00019 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00020 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00021 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00022 \textcolor{comment}{ * Created on: 09/May/2022                                                      *}}
+\DoxyCodeLine{00023 \textcolor{comment}{ * Authors: Vittoriano Muttillo, Luigi Pomante                                  *}}
+\DoxyCodeLine{00024 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00025 \textcolor{comment}{ * email: vittoriano.muttillo@guest.univaq.it                                   *}}
+\DoxyCodeLine{00026 \textcolor{comment}{ *        luigi.pomante@univaq.it                                               *}}
+\DoxyCodeLine{00027 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00028 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00029 \textcolor{comment}{ * This code has been developed from an HEPSYCODE model used as demonstrator by *}}
+\DoxyCodeLine{00030 \textcolor{comment}{ * University of L'Aquila.                                                      *}}
+\DoxyCodeLine{00031 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00032 \textcolor{comment}{ * The code is used as a working example in the 'Embedded Systems' course of    *}}
+\DoxyCodeLine{00033 \textcolor{comment}{ * the Master in Conputer Science Engineering offered by the                    *}}
+\DoxyCodeLine{00034 \textcolor{comment}{ * University of L'Aquila                                                       *}}
+\DoxyCodeLine{00035 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{00037 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00038 \textcolor{comment}{ * Technologies Library : Technologies library file.}}
+\DoxyCodeLine{00039 \textcolor{comment}{ *}}
+\DoxyCodeLine{00040 \textcolor{comment}{ * Technologies Library: HEPSIM Technologies library}}
+\DoxyCodeLine{00041 \textcolor{comment}{ *}}
+\DoxyCodeLine{00042 \textcolor{comment}{********************************************************************************/}}
+\DoxyCodeLine{00043 }
+\DoxyCodeLine{00050 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00051 \textcolor{comment}{ ***                                Includes                                  ***}}
+\DoxyCodeLine{00052 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00053 }
+\DoxyCodeLine{00054 \textcolor{preprocessor}{\#include <systemc.h>}}
+\DoxyCodeLine{00055 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{tl_8h}{tl.h}}"}}
+\DoxyCodeLine{00056 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{00057 \textcolor{preprocessor}{\#include <stdlib.h>}}
+\DoxyCodeLine{00058 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{00059 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{00060 }
+\DoxyCodeLine{00061 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{00062 }
+\DoxyCodeLine{00063 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00064 \textcolor{comment}{ ***                                Functions                                 ***}}
+\DoxyCodeLine{00065 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00066 }
+\DoxyCodeLine{00067 \textcolor{comment}{/*}}
+\DoxyCodeLine{00068 \textcolor{comment}{ *  Processors methods}}
+\DoxyCodeLine{00069 \textcolor{comment}{ */}}
+\DoxyCodeLine{00070 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00071}\mbox{\hyperlink{class_processing_unit_a367aa0751e97e2562b64a50b4e4142dd}{00071}} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_processing_unit_a367aa0751e97e2562b64a50b4e4142dd}{ProcessingUnit::getId}}()\{}
+\DoxyCodeLine{00072     \textcolor{keywordflow}{return} this-\/>id;}
+\DoxyCodeLine{00073 \}}
+\DoxyCodeLine{00074 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00075}\mbox{\hyperlink{class_processing_unit_a95737a4e4a2bd424cb4455f0c4a84cf5}{00075}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_processing_unit_a95737a4e4a2bd424cb4455f0c4a84cf5}{ProcessingUnit::setId}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} c)\{}
+\DoxyCodeLine{00076     this-\/>\textcolor{keywordtype}{id} = c;}
+\DoxyCodeLine{00077 \}}
+\DoxyCodeLine{00078 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00079}\mbox{\hyperlink{class_processing_unit_a9d6d56e08d110b9a12c45f12ebff1d97}{00079}} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_processing_unit_a9d6d56e08d110b9a12c45f12ebff1d97}{ProcessingUnit:: getName}}()}
+\DoxyCodeLine{00080 \{}
+\DoxyCodeLine{00081     \textcolor{keywordflow}{return} this-\/>name;}
+\DoxyCodeLine{00082 \}}
+\DoxyCodeLine{00083 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00084}\mbox{\hyperlink{class_processing_unit_a24c691bffdbf8b79fa8301ba6493e0e5}{00084}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_processing_unit_a24c691bffdbf8b79fa8301ba6493e0e5}{ProcessingUnit:: setName}}(\textcolor{keywordtype}{string} x)}
+\DoxyCodeLine{00085 \{}
+\DoxyCodeLine{00086     name = x;}
+\DoxyCodeLine{00087 \}}
+\DoxyCodeLine{00088 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00089}\mbox{\hyperlink{class_processing_unit_ab0655a56bb59cad8ece761abbbc65cdc}{00089}} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_processing_unit_ab0655a56bb59cad8ece761abbbc65cdc}{ProcessingUnit:: getProcessorType}}()}
+\DoxyCodeLine{00090 \{}
+\DoxyCodeLine{00091     \textcolor{keywordflow}{return} this-\/>processorType;}
+\DoxyCodeLine{00092 \}}
+\DoxyCodeLine{00093 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00094}\mbox{\hyperlink{class_processing_unit_a11749a7a862ab46b771844fddc373ed6}{00094}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_processing_unit_a11749a7a862ab46b771844fddc373ed6}{ProcessingUnit:: setProcessorType}}(\textcolor{keywordtype}{string} x)}
+\DoxyCodeLine{00095 \{}
+\DoxyCodeLine{00096     processorType = x;}
+\DoxyCodeLine{00097 \}}
+\DoxyCodeLine{00098 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00099}\mbox{\hyperlink{class_processing_unit_a165cc1bf37c9a782333ede90806442d5}{00099}} \textcolor{keywordtype}{float} \mbox{\hyperlink{class_processing_unit_a165cc1bf37c9a782333ede90806442d5}{ProcessingUnit:: getCost}}()}
+\DoxyCodeLine{00100 \{}
+\DoxyCodeLine{00101     \textcolor{keywordflow}{return} this-\/>cost;}
+\DoxyCodeLine{00102 \}}
+\DoxyCodeLine{00103 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00104}\mbox{\hyperlink{class_processing_unit_aa3dae99a84415455a6db52ce06268ee6}{00104}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_processing_unit_aa3dae99a84415455a6db52ce06268ee6}{ProcessingUnit:: setCost}}(\textcolor{keywordtype}{float} x)}
+\DoxyCodeLine{00105 \{}
+\DoxyCodeLine{00106     cost = x;}
+\DoxyCodeLine{00107 \}}
+\DoxyCodeLine{00108 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00109}\mbox{\hyperlink{class_processing_unit_a05972e9632c4beca6a20454d06a07aef}{00109}} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_processing_unit_a05972e9632c4beca6a20454d06a07aef}{ProcessingUnit:: getISA}}()}
+\DoxyCodeLine{00110 \{}
+\DoxyCodeLine{00111     \textcolor{keywordflow}{return} this-\/>ISA;}
+\DoxyCodeLine{00112 \}}
+\DoxyCodeLine{00113 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00114}\mbox{\hyperlink{class_processing_unit_a32aac7fd512cb23a8cc629d87ce317d8}{00114}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_processing_unit_a32aac7fd512cb23a8cc629d87ce317d8}{ProcessingUnit:: setISA}}(\textcolor{keywordtype}{string} x)}
+\DoxyCodeLine{00115 \{}
+\DoxyCodeLine{00116     ISA = x;}
+\DoxyCodeLine{00117 \}}
+\DoxyCodeLine{00118 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00119}\mbox{\hyperlink{class_processing_unit_a050cc3064600765a2c5b28f6a4034875}{00119}} \textcolor{keywordtype}{float} \mbox{\hyperlink{class_processing_unit_a050cc3064600765a2c5b28f6a4034875}{ProcessingUnit:: getFrequency}}()}
+\DoxyCodeLine{00120 \{}
+\DoxyCodeLine{00121     \textcolor{keywordflow}{return} this-\/>frequency;}
+\DoxyCodeLine{00122 \}}
+\DoxyCodeLine{00123 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00124}\mbox{\hyperlink{class_processing_unit_a48a63b09d626c9563d36404b5f95a04a}{00124}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_processing_unit_a48a63b09d626c9563d36404b5f95a04a}{ProcessingUnit:: setFrequency}}(\textcolor{keywordtype}{float} x)}
+\DoxyCodeLine{00125 \{}
+\DoxyCodeLine{00126     frequency = x;}
+\DoxyCodeLine{00127 \}}
+\DoxyCodeLine{00128 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00129}\mbox{\hyperlink{class_processing_unit_a01cb30925eeacbecd284554bef40f1e2}{00129}} \textcolor{keywordtype}{float}** \mbox{\hyperlink{class_processing_unit_a01cb30925eeacbecd284554bef40f1e2}{ProcessingUnit:: getCC4S}}()}
+\DoxyCodeLine{00130 \{}
+\DoxyCodeLine{00131     \textcolor{keywordflow}{return} this-\/>CC4CS;}
+\DoxyCodeLine{00132 \}}
+\DoxyCodeLine{00133 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00134}\mbox{\hyperlink{class_processing_unit_a0878e37abdc168f31758d4df208c6663}{00134}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_processing_unit_a0878e37abdc168f31758d4df208c6663}{ProcessingUnit:: setCC4S}}(\textcolor{keywordtype}{float}** x)}
+\DoxyCodeLine{00135 \{}
+\DoxyCodeLine{00136     CC4CS = x;}
+\DoxyCodeLine{00137 \}}
+\DoxyCodeLine{00138 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00139}\mbox{\hyperlink{class_processing_unit_abd0118180953341e203b988f6430c72c}{00139}} \textcolor{keywordtype}{float} \mbox{\hyperlink{class_processing_unit_abd0118180953341e203b988f6430c72c}{ProcessingUnit:: getPower}}()}
+\DoxyCodeLine{00140 \{}
+\DoxyCodeLine{00141     \textcolor{keywordflow}{return} this-\/>Power;}
+\DoxyCodeLine{00142 \}}
+\DoxyCodeLine{00143 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00144}\mbox{\hyperlink{class_processing_unit_a4994085fb506708d4c0f1c27565ffe2b}{00144}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_processing_unit_a4994085fb506708d4c0f1c27565ffe2b}{ProcessingUnit:: setPower}}(\textcolor{keywordtype}{float} x)}
+\DoxyCodeLine{00145 \{}
+\DoxyCodeLine{00146     Power = x;}
+\DoxyCodeLine{00147 \}}
+\DoxyCodeLine{00148 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00149}\mbox{\hyperlink{class_processing_unit_afe2c892fcd7e24ced8de933eb7078265}{00149}} \textcolor{keywordtype}{float} \mbox{\hyperlink{class_processing_unit_afe2c892fcd7e24ced8de933eb7078265}{ProcessingUnit:: getMIPS}}()}
+\DoxyCodeLine{00150 \{}
+\DoxyCodeLine{00151     \textcolor{keywordflow}{return} this-\/>MIPS;}
+\DoxyCodeLine{00152 \}}
+\DoxyCodeLine{00153 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00154}\mbox{\hyperlink{class_processing_unit_af91c01d3a84acf6f310949e80906e824}{00154}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_processing_unit_af91c01d3a84acf6f310949e80906e824}{ProcessingUnit:: setMIPS}}(\textcolor{keywordtype}{float} x)}
+\DoxyCodeLine{00155 \{}
+\DoxyCodeLine{00156     MIPS = x;}
+\DoxyCodeLine{00157 \}}
+\DoxyCodeLine{00158 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00159}\mbox{\hyperlink{class_processing_unit_a0d5c74b4ca7b117ec84b7ed1cd897840}{00159}} \textcolor{keywordtype}{float} \mbox{\hyperlink{class_processing_unit_a0d5c74b4ca7b117ec84b7ed1cd897840}{ProcessingUnit:: getI4CSmin}}()}
+\DoxyCodeLine{00160 \{}
+\DoxyCodeLine{00161     \textcolor{keywordflow}{return} this-\/>I4CSmin;}
+\DoxyCodeLine{00162 \}}
+\DoxyCodeLine{00163 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00164}\mbox{\hyperlink{class_processing_unit_afb3bb2c3b1421dfabf867ff1bd084968}{00164}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_processing_unit_afb3bb2c3b1421dfabf867ff1bd084968}{ProcessingUnit:: setI4CSmin}}(\textcolor{keywordtype}{float} x)}
+\DoxyCodeLine{00165 \{}
+\DoxyCodeLine{00166     I4CSmin = x;}
+\DoxyCodeLine{00167 \}}
+\DoxyCodeLine{00168 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00169}\mbox{\hyperlink{class_processing_unit_a6ce43383c58fd2c1ef0b0320c0936543}{00169}} \textcolor{keywordtype}{float} \mbox{\hyperlink{class_processing_unit_a6ce43383c58fd2c1ef0b0320c0936543}{ProcessingUnit:: getI4CSmax}}()}
+\DoxyCodeLine{00170 \{}
+\DoxyCodeLine{00171     \textcolor{keywordflow}{return} this-\/>I4CSmax;}
+\DoxyCodeLine{00172 \}}
+\DoxyCodeLine{00173 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00174}\mbox{\hyperlink{class_processing_unit_a9995278db81888144089791e7eef8b71}{00174}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_processing_unit_a9995278db81888144089791e7eef8b71}{ProcessingUnit:: setI4CSmax}}(\textcolor{keywordtype}{float} x)}
+\DoxyCodeLine{00175 \{}
+\DoxyCodeLine{00176     I4CSmax = x;}
+\DoxyCodeLine{00177 \}}
+\DoxyCodeLine{00178 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00179}\mbox{\hyperlink{class_processing_unit_a22cde43de69c7d230446ea3a45ad2107}{00179}} \textcolor{keywordtype}{float} \mbox{\hyperlink{class_processing_unit_a22cde43de69c7d230446ea3a45ad2107}{ProcessingUnit:: getVdd}}()}
+\DoxyCodeLine{00180 \{}
+\DoxyCodeLine{00181     \textcolor{keywordflow}{return} this-\/>Vdd;}
+\DoxyCodeLine{00182 \}}
+\DoxyCodeLine{00183 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00184}\mbox{\hyperlink{class_processing_unit_ac4ef8b2cafc7e379b4cb05e463840128}{00184}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_processing_unit_ac4ef8b2cafc7e379b4cb05e463840128}{ProcessingUnit:: setVdd}}(\textcolor{keywordtype}{float} x)}
+\DoxyCodeLine{00185 \{}
+\DoxyCodeLine{00186     Vdd = x;}
+\DoxyCodeLine{00187 \}}
+\DoxyCodeLine{00188 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00189}\mbox{\hyperlink{class_processing_unit_aff68b527f86f27ea0b373c27406f6281}{00189}} \textcolor{keywordtype}{float} \mbox{\hyperlink{class_processing_unit_aff68b527f86f27ea0b373c27406f6281}{ProcessingUnit:: getIdd}}()}
+\DoxyCodeLine{00190 \{}
+\DoxyCodeLine{00191     \textcolor{keywordflow}{return} this-\/>Idd;}
+\DoxyCodeLine{00192 \}}
+\DoxyCodeLine{00193 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00194}\mbox{\hyperlink{class_processing_unit_a12212762fb57a5b582782c66861443fc}{00194}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_processing_unit_a12212762fb57a5b582782c66861443fc}{ProcessingUnit:: setIdd}}(\textcolor{keywordtype}{float} x)}
+\DoxyCodeLine{00195 \{}
+\DoxyCodeLine{00196     Idd = x;}
+\DoxyCodeLine{00197 \}}
+\DoxyCodeLine{00198 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00199}\mbox{\hyperlink{class_processing_unit_aac8677c23e3d151d9994c863c817327a}{00199}} sc\_time \mbox{\hyperlink{class_processing_unit_aac8677c23e3d151d9994c863c817327a}{ProcessingUnit:: getOverheadCS}}()}
+\DoxyCodeLine{00200 \{}
+\DoxyCodeLine{00201     \textcolor{keywordflow}{return} this-\/>overheadCS;}
+\DoxyCodeLine{00202 \}}
+\DoxyCodeLine{00203 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00204}\mbox{\hyperlink{class_processing_unit_a4c38556d47f2cd40adc4092b09dba992}{00204}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_processing_unit_a4c38556d47f2cd40adc4092b09dba992}{ProcessingUnit:: setOverheadCS}}(sc\_time x)}
+\DoxyCodeLine{00205 \{}
+\DoxyCodeLine{00206     overheadCS = x;}
+\DoxyCodeLine{00207 \}}
+\DoxyCodeLine{00208 }
+\DoxyCodeLine{00209 }
+\DoxyCodeLine{00210 \textcolor{comment}{// BasicBlock methods}}
+\DoxyCodeLine{00211 }
+\DoxyCodeLine{00212 \textcolor{comment}{/*BasicBlock::BasicBlock(unsigned int id, string type, ProcessingUnit pu, float frt)\{}}
+\DoxyCodeLine{00213 \textcolor{comment}{    this-\/>id = id;}}
+\DoxyCodeLine{00214 \textcolor{comment}{    this-\/>type = type;}}
+\DoxyCodeLine{00215 \textcolor{comment}{    this-\/>processingUnit = pu;}}
+\DoxyCodeLine{00216 \textcolor{comment}{    this-\/>FRT = frt;}}
+\DoxyCodeLine{00217 \textcolor{comment}{\}*/}}
+\DoxyCodeLine{00218 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00219}\mbox{\hyperlink{class_basic_block_ae1dead3b6fbfaaf11aa596013d9c3615}{00219}} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_basic_block_ae1dead3b6fbfaaf11aa596013d9c3615}{BasicBlock:: getName}}()}
+\DoxyCodeLine{00220 \{}
+\DoxyCodeLine{00221     \textcolor{keywordflow}{return} this-\/>name;}
+\DoxyCodeLine{00222 \}}
+\DoxyCodeLine{00223 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00224}\mbox{\hyperlink{class_basic_block_a2be928b15c8a74a0f171f97c285791f2}{00224}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_basic_block_a2be928b15c8a74a0f171f97c285791f2}{BasicBlock:: setName}}(\textcolor{keywordtype}{string} x)}
+\DoxyCodeLine{00225 \{}
+\DoxyCodeLine{00226     name = x;}
+\DoxyCodeLine{00227 \}}
+\DoxyCodeLine{00228 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00229}\mbox{\hyperlink{class_basic_block_af7b05902e57ffd9e21fd582b3e49f29c}{00229}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_basic_block_af7b05902e57ffd9e21fd582b3e49f29c}{BasicBlock:: getId}}()}
+\DoxyCodeLine{00230 \{}
+\DoxyCodeLine{00231     \textcolor{keywordflow}{return} this-\/>id;}
+\DoxyCodeLine{00232 \}}
+\DoxyCodeLine{00233 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00234}\mbox{\hyperlink{class_basic_block_a1abdc5c467f903b3bb6f51fb68283b21}{00234}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_basic_block_a1abdc5c467f903b3bb6f51fb68283b21}{BasicBlock:: setId}}(\textcolor{keywordtype}{int} x)}
+\DoxyCodeLine{00235 \{}
+\DoxyCodeLine{00236     \textcolor{keywordtype}{id} = x;}
+\DoxyCodeLine{00237 \}}
+\DoxyCodeLine{00238 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00239}\mbox{\hyperlink{class_basic_block_a42cf1d9e35e3f2ded6510a2f3f9d2c74}{00239}} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_basic_block_a42cf1d9e35e3f2ded6510a2f3f9d2c74}{BasicBlock:: getType}}()}
+\DoxyCodeLine{00240 \{}
+\DoxyCodeLine{00241     \textcolor{keywordflow}{return} type;}
+\DoxyCodeLine{00242 \}}
+\DoxyCodeLine{00243 }
+\DoxyCodeLine{00244 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00245}\mbox{\hyperlink{class_basic_block_ae33921bd8c15b268aba6f5b1526f893b}{00245}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_basic_block_ae33921bd8c15b268aba6f5b1526f893b}{BasicBlock:: setType}}(\textcolor{keywordtype}{string} x)}
+\DoxyCodeLine{00246 \{}
+\DoxyCodeLine{00247     type = x;}
+\DoxyCodeLine{00248 \}}
+\DoxyCodeLine{00249 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00250}\mbox{\hyperlink{class_basic_block_a23d2e5aa36d0b173d7e662493dee7db0}{00250}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_basic_block_a23d2e5aa36d0b173d7e662493dee7db0}{BasicBlock:: getIdPU}}()}
+\DoxyCodeLine{00251 \{}
+\DoxyCodeLine{00252     \textcolor{keywordflow}{return} this-\/>idPU;}
+\DoxyCodeLine{00253 \}}
+\DoxyCodeLine{00254 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00255}\mbox{\hyperlink{class_basic_block_aae5e45d56ddfdd6c791f14fed105b544}{00255}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_basic_block_aae5e45d56ddfdd6c791f14fed105b544}{BasicBlock:: setIdPU}}(\textcolor{keywordtype}{int} x)}
+\DoxyCodeLine{00256 \{}
+\DoxyCodeLine{00257     idPU = x;}
+\DoxyCodeLine{00258 \}}
+\DoxyCodeLine{00259 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00260}\mbox{\hyperlink{class_basic_block_a4cbb966d0ce3b7364877cf6e46e33672}{00260}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_basic_block_a4cbb966d0ce3b7364877cf6e46e33672}{BasicBlock:: setProcessor}}(vector<ProcessingUnit> p)}
+\DoxyCodeLine{00261 \{}
+\DoxyCodeLine{00262     vpu= p;}
+\DoxyCodeLine{00263 \}}
+\DoxyCodeLine{00264 }
+\DoxyCodeLine{00265 }
+\DoxyCodeLine{00266 \textcolor{comment}{/*void BasicBlock:: setMem(Memory m)}}
+\DoxyCodeLine{00267 \textcolor{comment}{\{}}
+\DoxyCodeLine{00268 \textcolor{comment}{    memSize = m;}}
+\DoxyCodeLine{00269 \textcolor{comment}{\}*/}}
+\DoxyCodeLine{00270 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00271}\mbox{\hyperlink{class_basic_block_a5c247400a7e86e54f98bc5ea3a8b34d1}{00271}} vector<ProcessingUnit> \mbox{\hyperlink{class_basic_block_a5c247400a7e86e54f98bc5ea3a8b34d1}{BasicBlock::getProcessors}}()}
+\DoxyCodeLine{00272 \{}
+\DoxyCodeLine{00273     \textcolor{keywordflow}{return} vpu;}
+\DoxyCodeLine{00274 \}}
+\DoxyCodeLine{00275 }
+\DoxyCodeLine{00276 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00277}\mbox{\hyperlink{class_basic_block_a201f977359d366099f7e63708fc1db80}{00277}} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_basic_block_a201f977359d366099f7e63708fc1db80}{BasicBlock::getCodeSize}}()\{}
+\DoxyCodeLine{00278     \textcolor{keywordflow}{return} this-\/>codeSize;}
+\DoxyCodeLine{00279 \}}
+\DoxyCodeLine{00280 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00281}\mbox{\hyperlink{class_basic_block_a14bbb26476609a17b226400d2fd8ec05}{00281}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_basic_block_a14bbb26476609a17b226400d2fd8ec05}{BasicBlock::setCodeSize}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} c)\{}
+\DoxyCodeLine{00282     this-\/>codeSize = c;}
+\DoxyCodeLine{00283 \}}
+\DoxyCodeLine{00284 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00285}\mbox{\hyperlink{class_basic_block_a2e49d14597098dee219b8b628ec332e2}{00285}} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_basic_block_a2e49d14597098dee219b8b628ec332e2}{BasicBlock::getDataSize}}()\{}
+\DoxyCodeLine{00286     \textcolor{keywordflow}{return} this-\/>dataSize;}
+\DoxyCodeLine{00287 \}}
+\DoxyCodeLine{00288 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00289}\mbox{\hyperlink{class_basic_block_a9f71209e93288e8eb82311fe5961e2ff}{00289}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_basic_block_a9f71209e93288e8eb82311fe5961e2ff}{BasicBlock::setDataSize}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} d)\{}
+\DoxyCodeLine{00290     this-\/>dataSize = d;}
+\DoxyCodeLine{00291 \}}
+\DoxyCodeLine{00292 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00293}\mbox{\hyperlink{class_basic_block_ab4ae1a868abfaeb6a4003a9332b357cc}{00293}} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_basic_block_ab4ae1a868abfaeb6a4003a9332b357cc}{BasicBlock::getEqG}}()\{}
+\DoxyCodeLine{00294     \textcolor{keywordflow}{return} this-\/>eqG;}
+\DoxyCodeLine{00295 \}}
+\DoxyCodeLine{00296 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00297}\mbox{\hyperlink{class_basic_block_aa3a9be4f5f76e76b91e5a3a009f95f44}{00297}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_basic_block_aa3a9be4f5f76e76b91e5a3a009f95f44}{BasicBlock::setEqG}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} e)\{}
+\DoxyCodeLine{00298     this-\/>eqG = e;}
+\DoxyCodeLine{00299 \}}
+\DoxyCodeLine{00300 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00301}\mbox{\hyperlink{class_basic_block_aee9fb07de76f430ec78e48e85c3d5fd9}{00301}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_basic_block_aee9fb07de76f430ec78e48e85c3d5fd9}{BasicBlock:: setFRT}}(\textcolor{keywordtype}{float} x)\{}
+\DoxyCodeLine{00302     FRT = x;}
+\DoxyCodeLine{00303 \}}
+\DoxyCodeLine{00304 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00305}\mbox{\hyperlink{class_basic_block_aa7ce9d2bdf5d92bf86b3e1290134af93}{00305}} \textcolor{keywordtype}{float} \mbox{\hyperlink{class_basic_block_aa7ce9d2bdf5d92bf86b3e1290134af93}{BasicBlock:: getFRT}}()\{}
+\DoxyCodeLine{00306     \textcolor{keywordflow}{return} FRT;}
+\DoxyCodeLine{00307 \}}
+\DoxyCodeLine{00308 }
+\DoxyCodeLine{00309 \textcolor{comment}{// process methods}}
+\DoxyCodeLine{00310 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00311}\mbox{\hyperlink{class_process_a9f4553eac74c657bb451f390c17d6bea}{00311}} \mbox{\hyperlink{class_process_a9f4553eac74c657bb451f390c17d6bea}{Process::Process}}()\{}
+\DoxyCodeLine{00312     \textcolor{keywordtype}{id} = 0;}
+\DoxyCodeLine{00313     eqGate = 0;}
+\DoxyCodeLine{00314     dataType = 0;}
+\DoxyCodeLine{00315     criticality = 0;}
+\DoxyCodeLine{00316     profiling = 0;}
+\DoxyCodeLine{00317     processTime = sc\_time(0, SC\_MS);}
+\DoxyCodeLine{00318     priority = 0;}
+\DoxyCodeLine{00319     energy = 0;}
+\DoxyCodeLine{00320 \}}
+\DoxyCodeLine{00321 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00322}\mbox{\hyperlink{class_process_aae530d36427cb0c1fe817cb339bd7691}{00322}} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_process_aae530d36427cb0c1fe817cb339bd7691}{Process:: getName}}()}
+\DoxyCodeLine{00323 \{}
+\DoxyCodeLine{00324     \textcolor{keywordflow}{return} this-\/>name;}
+\DoxyCodeLine{00325 \}}
+\DoxyCodeLine{00326 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00327}\mbox{\hyperlink{class_process_ad1d3a2fd1af703ff1b986512d675660b}{00327}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_process_ad1d3a2fd1af703ff1b986512d675660b}{Process:: setName}}(\textcolor{keywordtype}{string} x)}
+\DoxyCodeLine{00328 \{}
+\DoxyCodeLine{00329     name = x;}
+\DoxyCodeLine{00330 \}}
+\DoxyCodeLine{00331 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00332}\mbox{\hyperlink{class_process_a4a5b2f6a945300fd6ecd243bc14e8073}{00332}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_process_a4a5b2f6a945300fd6ecd243bc14e8073}{Process:: getId}}()}
+\DoxyCodeLine{00333 \{}
+\DoxyCodeLine{00334     \textcolor{keywordflow}{return} this-\/>id;}
+\DoxyCodeLine{00335 \}}
+\DoxyCodeLine{00336 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00337}\mbox{\hyperlink{class_process_ac2d4d655dc9fe6317889938783ec2848}{00337}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_process_ac2d4d655dc9fe6317889938783ec2848}{Process:: setId}}(\textcolor{keywordtype}{int} x)}
+\DoxyCodeLine{00338 \{}
+\DoxyCodeLine{00339     \textcolor{keywordtype}{id} = x;}
+\DoxyCodeLine{00340 \}}
+\DoxyCodeLine{00341 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00342}\mbox{\hyperlink{class_process_ad854bd9c327eff4b2f0a06cf184081b5}{00342}} \textcolor{keywordtype}{float} \mbox{\hyperlink{class_process_ad854bd9c327eff4b2f0a06cf184081b5}{Process::getEnergy}}()\{}
+\DoxyCodeLine{00343     \textcolor{keywordflow}{return} this-\/>energy;}
+\DoxyCodeLine{00344 \}}
+\DoxyCodeLine{00345 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00346}\mbox{\hyperlink{class_process_a2991ac041e868df69f3f394ee91791cb}{00346}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_process_a2991ac041e868df69f3f394ee91791cb}{Process::setEnergy}}(\textcolor{keywordtype}{float} en)\{}
+\DoxyCodeLine{00347     energy = en;}
+\DoxyCodeLine{00348 \}}
+\DoxyCodeLine{00349 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00350}\mbox{\hyperlink{class_process_af5103e08c032d9247110f0a7655bf37c}{00350}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_process_af5103e08c032d9247110f0a7655bf37c}{Process:: getPriority}}()}
+\DoxyCodeLine{00351 \{}
+\DoxyCodeLine{00352     \textcolor{keywordflow}{return} this-\/>priority;}
+\DoxyCodeLine{00353 \}}
+\DoxyCodeLine{00354 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00355}\mbox{\hyperlink{class_process_a011879a0a11d6bacd3a6d768293ab0d2}{00355}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_process_a011879a0a11d6bacd3a6d768293ab0d2}{Process:: setPriority}}(\textcolor{keywordtype}{int} x)}
+\DoxyCodeLine{00356 \{}
+\DoxyCodeLine{00357     priority = x;}
+\DoxyCodeLine{00358 \}}
+\DoxyCodeLine{00359 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00360}\mbox{\hyperlink{class_process_a8eaeeedaf35ee19fcadf52b99e957aac}{00360}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_process_a8eaeeedaf35ee19fcadf52b99e957aac}{Process:: getCriticality}}()}
+\DoxyCodeLine{00361 \{}
+\DoxyCodeLine{00362     \textcolor{keywordflow}{return} this-\/>criticality;}
+\DoxyCodeLine{00363 \}}
+\DoxyCodeLine{00364 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00365}\mbox{\hyperlink{class_process_a43c73ef0483b869e4231830eeff46d48}{00365}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_process_a43c73ef0483b869e4231830eeff46d48}{Process:: setCriticality}}(\textcolor{keywordtype}{int} x)}
+\DoxyCodeLine{00366 \{}
+\DoxyCodeLine{00367     criticality = x;}
+\DoxyCodeLine{00368 \}}
+\DoxyCodeLine{00369 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00370}\mbox{\hyperlink{class_process_a7653e5156ed113e2a030ba0188350363}{00370}} \textcolor{keywordtype}{float} \mbox{\hyperlink{class_process_a7653e5156ed113e2a030ba0188350363}{Process:: getEqGate}}()}
+\DoxyCodeLine{00371 \{}
+\DoxyCodeLine{00372     \textcolor{keywordflow}{return} this-\/>eqGate;}
+\DoxyCodeLine{00373 \}}
+\DoxyCodeLine{00374 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00375}\mbox{\hyperlink{class_process_a74caf223f4391e3145eee5899b30a09b}{00375}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_process_a74caf223f4391e3145eee5899b30a09b}{Process:: setEqGate}}(\textcolor{keywordtype}{float} g)}
+\DoxyCodeLine{00376 \{}
+\DoxyCodeLine{00377     eqGate = g;}
+\DoxyCodeLine{00378 \}}
+\DoxyCodeLine{00379 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00380}\mbox{\hyperlink{class_process_a1a52596c85f381905b97b858cbc8c145}{00380}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_process_a1a52596c85f381905b97b858cbc8c145}{Process:: getDataType}}()}
+\DoxyCodeLine{00381 \{}
+\DoxyCodeLine{00382     \textcolor{keywordflow}{return} this-\/>dataType;}
+\DoxyCodeLine{00383 \}}
+\DoxyCodeLine{00384 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00385}\mbox{\hyperlink{class_process_a3aaefcd2768bd481e22228851b161546}{00385}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_process_a3aaefcd2768bd481e22228851b161546}{Process:: setDataType}}(\textcolor{keywordtype}{int} x)}
+\DoxyCodeLine{00386 \{}
+\DoxyCodeLine{00387     dataType = x;}
+\DoxyCodeLine{00388 \}}
+\DoxyCodeLine{00389 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00390}\mbox{\hyperlink{class_process_af55a4774a1519b84988e4e3ec3fcc7a2}{00390}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_process_af55a4774a1519b84988e4e3ec3fcc7a2}{Process::setCodeSize}}(\textcolor{keywordtype}{string} p, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} mem)\{}
+\DoxyCodeLine{00391     map <string, unsigned int>::iterator end = this-\/>codeSizeMap.end();}
+\DoxyCodeLine{00392     pair<string, unsigned int> item (p, mem);}
+\DoxyCodeLine{00393     this-\/>codeSizeMap.insert(end, item);}
+\DoxyCodeLine{00394 \}}
+\DoxyCodeLine{00395 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00396}\mbox{\hyperlink{class_process_a268bc20c1c875e94e50c5d6d1ad9ec06}{00396}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_process_a268bc20c1c875e94e50c5d6d1ad9ec06}{Process::setDataSize}}(\textcolor{keywordtype}{string} p, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} mem)\{}
+\DoxyCodeLine{00397     map <string, unsigned int>::iterator end = this-\/>dataSizeMap.end();}
+\DoxyCodeLine{00398     pair<string, unsigned int> item (p, mem);}
+\DoxyCodeLine{00399     this-\/>dataSizeMap.insert(end, item);}
+\DoxyCodeLine{00400 \}}
+\DoxyCodeLine{00401 }
+\DoxyCodeLine{00402 \textcolor{comment}{/*void Process::setMemSize(Memory m)\{}}
+\DoxyCodeLine{00403 \textcolor{comment}{    this-\/>mem = m;}}
+\DoxyCodeLine{00404 \textcolor{comment}{\}*/}}
+\DoxyCodeLine{00405 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00406}\mbox{\hyperlink{class_process_a5dffdfeba3879c5e032db1c168d898be}{00406}} \textcolor{keywordtype}{float} \mbox{\hyperlink{class_process_a5dffdfeba3879c5e032db1c168d898be}{Process::getAffinityByName}} (\textcolor{keywordtype}{string} processorName)\{}
+\DoxyCodeLine{00407     map<string, float>::iterator it = this-\/>affinity.find(processorName);}
+\DoxyCodeLine{00408     \textcolor{keywordflow}{if} ( it != this-\/>affinity.end() )}
+\DoxyCodeLine{00409         \textcolor{keywordflow}{return} it-\/>second;}
+\DoxyCodeLine{00410     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00411         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00412 \}}
+\DoxyCodeLine{00413 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00414}\mbox{\hyperlink{class_process_a6f1fdb3ef348ebe19f1fd44671edfed8}{00414}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_process_a6f1fdb3ef348ebe19f1fd44671edfed8}{Process:: setAffinity}}(\textcolor{keywordtype}{string} x, \textcolor{keywordtype}{float} y)}
+\DoxyCodeLine{00415 \{}
+\DoxyCodeLine{00416     map <string, float>::iterator end = this-\/>affinity.end();}
+\DoxyCodeLine{00417     pair<string, float> item (x, y);}
+\DoxyCodeLine{00418     this-\/>affinity.insert(end, item);}
+\DoxyCodeLine{00419 \}}
+\DoxyCodeLine{00420 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00421}\mbox{\hyperlink{class_process_a8fb82ba026f5530a9f9724fbf1142aba}{00421}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_process_a8fb82ba026f5530a9f9724fbf1142aba}{Process:: setConcurrency}}(\textcolor{keywordtype}{int} p, \textcolor{keywordtype}{float} c)}
+\DoxyCodeLine{00422 \{}
+\DoxyCodeLine{00423     map <int, float>::iterator end = this-\/>concurrency.end();}
+\DoxyCodeLine{00424     pair<int, float> item (p, c);}
+\DoxyCodeLine{00425     this-\/>concurrency.insert(end, item);}
+\DoxyCodeLine{00426 \}}
+\DoxyCodeLine{00427 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00428}\mbox{\hyperlink{class_process_a9d9cfc179387b12e2bb1cdc214b6a9d8}{00428}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_process_a9d9cfc179387b12e2bb1cdc214b6a9d8}{Process::setLoad}}(\textcolor{keywordtype}{int} p, \textcolor{keywordtype}{float} value)\{}
+\DoxyCodeLine{00429     map <int, float>::iterator end = this-\/>load.end();}
+\DoxyCodeLine{00430     pair<int, float> item (p, value);}
+\DoxyCodeLine{00431     this-\/>load.insert(end, item);}
+\DoxyCodeLine{00432 \}}
+\DoxyCodeLine{00433 }
+\DoxyCodeLine{00434 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00435}\mbox{\hyperlink{class_process_a73a66495ca1da4ba176cf2d04104acef}{00435}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_process_a73a66495ca1da4ba176cf2d04104acef}{Process:: getPS\_Profiling}}()}
+\DoxyCodeLine{00436 \{}
+\DoxyCodeLine{00437     \textcolor{keywordflow}{return} this-\/>profiling;}
+\DoxyCodeLine{00438 \}}
+\DoxyCodeLine{00439 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00440}\mbox{\hyperlink{class_process_ad766d35cd91ef755abdc5df596980923}{00440}} sc\_time \mbox{\hyperlink{class_process_ad766d35cd91ef755abdc5df596980923}{Process:: getProcessTime}}()}
+\DoxyCodeLine{00441 \{}
+\DoxyCodeLine{00442     \textcolor{keywordflow}{return} this-\/>processTime;}
+\DoxyCodeLine{00443 \}}
+\DoxyCodeLine{00444 }
+\DoxyCodeLine{00445 }
+\DoxyCodeLine{00446 \textcolor{comment}{// memory methods}}
+\DoxyCodeLine{00447 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00448}\mbox{\hyperlink{class_memory_a9f8f1bf0bd47994bf6e2d64ddcdf9302}{00448}} \mbox{\hyperlink{class_memory_a9f8f1bf0bd47994bf6e2d64ddcdf9302}{Memory::Memory}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} c, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} d)\{}
+\DoxyCodeLine{00449     this-\/>codeSize = c;}
+\DoxyCodeLine{00450     this-\/>dataSize = d;}
+\DoxyCodeLine{00451 \}}
+\DoxyCodeLine{00452 }
+\DoxyCodeLine{00453 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00454}\mbox{\hyperlink{class_memory_a6c9d8edd683dbae1f59f0a9aa3ef2424}{00454}} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_memory_a6c9d8edd683dbae1f59f0a9aa3ef2424}{Memory::getCodeSize}}()\{}
+\DoxyCodeLine{00455     \textcolor{keywordflow}{return} this-\/>codeSize;}
+\DoxyCodeLine{00456 \}}
+\DoxyCodeLine{00457 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00458}\mbox{\hyperlink{class_memory_a1f00ca41f42ada4525f9bae30e1bced4}{00458}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_memory_a1f00ca41f42ada4525f9bae30e1bced4}{Memory::setCodeSize}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} c)\{}
+\DoxyCodeLine{00459     this-\/>codeSize = c;}
+\DoxyCodeLine{00460 \}}
+\DoxyCodeLine{00461 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00462}\mbox{\hyperlink{class_memory_ab361eff2cef17729f170bb94e431efbb}{00462}} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_memory_ab361eff2cef17729f170bb94e431efbb}{Memory::getDataSize}}()\{}
+\DoxyCodeLine{00463     \textcolor{keywordflow}{return} this-\/>dataSize;}
+\DoxyCodeLine{00464 \}}
+\DoxyCodeLine{00465 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00466}\mbox{\hyperlink{class_memory_a50da769112b9a636b5fd0b8194bbb1cc}{00466}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_memory_a50da769112b9a636b5fd0b8194bbb1cc}{Memory::setDataSize}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} d)\{}
+\DoxyCodeLine{00467     this-\/>dataSize = d;}
+\DoxyCodeLine{00468 \}}
+\DoxyCodeLine{00469 }
+\DoxyCodeLine{00470 \textcolor{comment}{// link methods}}
+\DoxyCodeLine{00471 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00472}\mbox{\hyperlink{class_physical_link_a6b1247a6652918c90b4ae99b9f2f5b88}{00472}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_physical_link_a6b1247a6652918c90b4ae99b9f2f5b88}{PhysicalLink:: getId}}()}
+\DoxyCodeLine{00473 \{}
+\DoxyCodeLine{00474     \textcolor{keywordflow}{return} this-\/>id;}
+\DoxyCodeLine{00475 \}}
+\DoxyCodeLine{00476 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00477}\mbox{\hyperlink{class_physical_link_a38870d04d7877b9ebe3a3a9252745fa4}{00477}} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_physical_link_a38870d04d7877b9ebe3a3a9252745fa4}{PhysicalLink::getName}}()}
+\DoxyCodeLine{00478 \{}
+\DoxyCodeLine{00479     \textcolor{keywordflow}{return} this-\/>name;}
+\DoxyCodeLine{00480 \}}
+\DoxyCodeLine{00481 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00482}\mbox{\hyperlink{class_physical_link_a5bd500fa155893a361f0884a3edefec7}{00482}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_physical_link_a5bd500fa155893a361f0884a3edefec7}{PhysicalLink::getPhysicalWidth}}()}
+\DoxyCodeLine{00483 \{}
+\DoxyCodeLine{00484     \textcolor{keywordflow}{return} this-\/>physical\_width;}
+\DoxyCodeLine{00485 \}}
+\DoxyCodeLine{00486 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00487}\mbox{\hyperlink{class_physical_link_ae83d2eca88f0999b1ea7c6ee72a788a8}{00487}} sc\_time \mbox{\hyperlink{class_physical_link_ae83d2eca88f0999b1ea7c6ee72a788a8}{PhysicalLink::getTcomm}}()}
+\DoxyCodeLine{00488 \{}
+\DoxyCodeLine{00489     \textcolor{keywordflow}{return} this-\/>tcomm;}
+\DoxyCodeLine{00490 \}}
+\DoxyCodeLine{00491 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00492}\mbox{\hyperlink{class_physical_link_acf0976c043aeef0e82b8482abf3bf4ec}{00492}} sc\_time \mbox{\hyperlink{class_physical_link_acf0976c043aeef0e82b8482abf3bf4ec}{PhysicalLink::getTAcomm}}()}
+\DoxyCodeLine{00493 \{}
+\DoxyCodeLine{00494     \textcolor{keywordflow}{return} this-\/>tacomm;}
+\DoxyCodeLine{00495 \}}
+\DoxyCodeLine{00496 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00497}\mbox{\hyperlink{class_physical_link_add09ffe313fb274e4ab886d87f5bef9d}{00497}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_physical_link_add09ffe313fb274e4ab886d87f5bef9d}{PhysicalLink::getBandwidth}}()}
+\DoxyCodeLine{00498 \{}
+\DoxyCodeLine{00499     \textcolor{keywordflow}{return} this-\/>bandwidth;}
+\DoxyCodeLine{00500 \}}
+\DoxyCodeLine{00501 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00502}\mbox{\hyperlink{class_physical_link_a4c1ca22f348862858653c4f02496218f}{00502}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_physical_link_a4c1ca22f348862858653c4f02496218f}{PhysicalLink::setId}}(\textcolor{keywordtype}{int} x)}
+\DoxyCodeLine{00503 \{}
+\DoxyCodeLine{00504     \textcolor{keywordtype}{id} = x;}
+\DoxyCodeLine{00505 \}}
+\DoxyCodeLine{00506 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00507}\mbox{\hyperlink{class_physical_link_a720451548bfac94a60eca8c8f47d343b}{00507}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_physical_link_a720451548bfac94a60eca8c8f47d343b}{PhysicalLink::setName}}(\textcolor{keywordtype}{string} x)}
+\DoxyCodeLine{00508 \{}
+\DoxyCodeLine{00509     name = x;}
+\DoxyCodeLine{00510 \}}
+\DoxyCodeLine{00511 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00512}\mbox{\hyperlink{class_physical_link_aaed942eff035eb7f0a45e5cadc0200ab}{00512}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_physical_link_aaed942eff035eb7f0a45e5cadc0200ab}{PhysicalLink::setPhysicalWidth}}(\textcolor{keywordtype}{int} x)}
+\DoxyCodeLine{00513 \{}
+\DoxyCodeLine{00514     physical\_width = x;}
+\DoxyCodeLine{00515 \}}
+\DoxyCodeLine{00516 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00517}\mbox{\hyperlink{class_physical_link_a5b75831c5c40358e35dac40e95abdd71}{00517}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_physical_link_a5b75831c5c40358e35dac40e95abdd71}{PhysicalLink::setTcomm}}(sc\_time x)}
+\DoxyCodeLine{00518 \{}
+\DoxyCodeLine{00519     tcomm = x;}
+\DoxyCodeLine{00520 \}}
+\DoxyCodeLine{00521 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00522}\mbox{\hyperlink{class_physical_link_a9f72f16b0f7fa6b4976ab10c4988721c}{00522}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_physical_link_a9f72f16b0f7fa6b4976ab10c4988721c}{PhysicalLink::setTAcomm}}(sc\_time x)}
+\DoxyCodeLine{00523 \{}
+\DoxyCodeLine{00524     tacomm = x;}
+\DoxyCodeLine{00525 \}}
+\DoxyCodeLine{00526 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00527}\mbox{\hyperlink{class_physical_link_a8fcfa235def47bf09f6d3ae892dbb2c3}{00527}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_physical_link_a8fcfa235def47bf09f6d3ae892dbb2c3}{PhysicalLink::setBandwidth}}(\textcolor{keywordtype}{int} x)}
+\DoxyCodeLine{00528 \{}
+\DoxyCodeLine{00529     bandwidth = x;}
+\DoxyCodeLine{00530 \}}
+\DoxyCodeLine{00531 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00532}\mbox{\hyperlink{class_physical_link_a162bd0bc2daadc05c98bf10844be6b36}{00532}} \textcolor{keywordtype}{float} \mbox{\hyperlink{class_physical_link_a162bd0bc2daadc05c98bf10844be6b36}{PhysicalLink::geta2}}()}
+\DoxyCodeLine{00533 \{}
+\DoxyCodeLine{00534     \textcolor{keywordflow}{return} this-\/>a2;}
+\DoxyCodeLine{00535 \}}
+\DoxyCodeLine{00536 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00537}\mbox{\hyperlink{class_physical_link_ab4e2b4917f65eb53ae125b6adf0f30b9}{00537}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_physical_link_ab4e2b4917f65eb53ae125b6adf0f30b9}{PhysicalLink::seta2}}(\textcolor{keywordtype}{float} x)}
+\DoxyCodeLine{00538 \{}
+\DoxyCodeLine{00539     a2 = x;}
+\DoxyCodeLine{00540 \}}
+\DoxyCodeLine{00541 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00542}\mbox{\hyperlink{class_physical_link_aa7897d3d8c11c58b493388604fc4a07b}{00542}} \textcolor{keywordtype}{float} \mbox{\hyperlink{class_physical_link_aa7897d3d8c11c58b493388604fc4a07b}{PhysicalLink::geta1}}()}
+\DoxyCodeLine{00543 \{}
+\DoxyCodeLine{00544     \textcolor{keywordflow}{return} this-\/>a1;}
+\DoxyCodeLine{00545 \}}
+\DoxyCodeLine{00546 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00547}\mbox{\hyperlink{class_physical_link_a3a4bc3e300cf94a0105798d28ff7b8f2}{00547}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_physical_link_a3a4bc3e300cf94a0105798d28ff7b8f2}{PhysicalLink::seta1}}(\textcolor{keywordtype}{float} x)}
+\DoxyCodeLine{00548 \{}
+\DoxyCodeLine{00549     a1 = x;}
+\DoxyCodeLine{00550 \}}
+\DoxyCodeLine{00551 }
+\DoxyCodeLine{00552 \textcolor{comment}{// channel methods}}
+\DoxyCodeLine{00553 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00554}\mbox{\hyperlink{class_channel_a53361b01056aea15c93053feb470b715}{00554}} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_channel_a53361b01056aea15c93053feb470b715}{Channel:: getName}}()}
+\DoxyCodeLine{00555 \{}
+\DoxyCodeLine{00556     \textcolor{keywordflow}{return} this-\/>name;}
+\DoxyCodeLine{00557 \}}
+\DoxyCodeLine{00558 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00559}\mbox{\hyperlink{class_channel_a88e3cbfff29cf57b724e3bbd83f01a86}{00559}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_channel_a88e3cbfff29cf57b724e3bbd83f01a86}{Channel:: getId}}()}
+\DoxyCodeLine{00560 \{}
+\DoxyCodeLine{00561     \textcolor{keywordflow}{return} this-\/>id;}
+\DoxyCodeLine{00562 \}}
+\DoxyCodeLine{00563 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00564}\mbox{\hyperlink{class_channel_ab1496219d9f8b32b49b8df0ab86c4e9d}{00564}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_channel_ab1496219d9f8b32b49b8df0ab86c4e9d}{Channel:: getWidth}}()}
+\DoxyCodeLine{00565 \{}
+\DoxyCodeLine{00566     \textcolor{keywordflow}{return} this-\/>width;}
+\DoxyCodeLine{00567 \}}
+\DoxyCodeLine{00568 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00569}\mbox{\hyperlink{class_channel_a6cc16d8f4b627251f9de609a62fa4d22}{00569}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_channel_a6cc16d8f4b627251f9de609a62fa4d22}{Channel:: getW\_id}}()}
+\DoxyCodeLine{00570 \{}
+\DoxyCodeLine{00571     \textcolor{keywordflow}{return} this-\/>w\_id;}
+\DoxyCodeLine{00572 \}}
+\DoxyCodeLine{00573 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00574}\mbox{\hyperlink{class_channel_a30a7fcde287743584d466cf092143bac}{00574}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_channel_a30a7fcde287743584d466cf092143bac}{Channel:: getR\_id}}()}
+\DoxyCodeLine{00575 \{}
+\DoxyCodeLine{00576     \textcolor{keywordflow}{return} this-\/>r\_id;}
+\DoxyCodeLine{00577 \}}
+\DoxyCodeLine{00578 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00579}\mbox{\hyperlink{class_channel_a39aa69b49124b74185a3408af6ccfc43}{00579}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_channel_a39aa69b49124b74185a3408af6ccfc43}{Channel:: getNum}}()}
+\DoxyCodeLine{00580 \{}
+\DoxyCodeLine{00581     \textcolor{keywordflow}{return} this-\/>num;}
+\DoxyCodeLine{00582 \}}
+\DoxyCodeLine{00583 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00584}\mbox{\hyperlink{class_channel_a0a74f31ad2fd5c1bb1af019313e510c6}{00584}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_channel_a0a74f31ad2fd5c1bb1af019313e510c6}{Channel:: setName}}(\textcolor{keywordtype}{string} x)}
+\DoxyCodeLine{00585 \{}
+\DoxyCodeLine{00586     name = x;}
+\DoxyCodeLine{00587 \}}
+\DoxyCodeLine{00588 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00589}\mbox{\hyperlink{class_channel_a12e1cdd1b9887f1ed483d778772bfc53}{00589}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_channel_a12e1cdd1b9887f1ed483d778772bfc53}{Channel:: setId}}(\textcolor{keywordtype}{int} x)}
+\DoxyCodeLine{00590 \{}
+\DoxyCodeLine{00591     \textcolor{keywordtype}{id} = x;}
+\DoxyCodeLine{00592 \}}
+\DoxyCodeLine{00593 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00594}\mbox{\hyperlink{class_channel_a448e2f0beb2b7ce2a02a19e2eaf17d55}{00594}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_channel_a448e2f0beb2b7ce2a02a19e2eaf17d55}{Channel:: setWidth}}(\textcolor{keywordtype}{int} x)}
+\DoxyCodeLine{00595 \{}
+\DoxyCodeLine{00596     width = x;}
+\DoxyCodeLine{00597 \}}
+\DoxyCodeLine{00598 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00599}\mbox{\hyperlink{class_channel_af9e34fe60361f6e0c234e691d9d2824d}{00599}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_channel_af9e34fe60361f6e0c234e691d9d2824d}{Channel:: setW\_id}}(\textcolor{keywordtype}{int} x)}
+\DoxyCodeLine{00600 \{}
+\DoxyCodeLine{00601     w\_id = x;}
+\DoxyCodeLine{00602 \}}
+\DoxyCodeLine{00603 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00604}\mbox{\hyperlink{class_channel_a87fe96b999c9503c2a8839ee6498f256}{00604}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_channel_a87fe96b999c9503c2a8839ee6498f256}{Channel:: setR\_id}}(\textcolor{keywordtype}{int} x)}
+\DoxyCodeLine{00605 \{}
+\DoxyCodeLine{00606     r\_id = x;}
+\DoxyCodeLine{00607 \}}
+\DoxyCodeLine{00608 }
+\DoxyCodeLine{\Hypertarget{tl_8cpp_source_l00609}\mbox{\hyperlink{class_channel_adb8356f7bba44722ed6923684b8fdd7f}{00609}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_channel_adb8356f7bba44722ed6923684b8fdd7f}{Channel:: setNum}}(\textcolor{keywordtype}{int} x)}
+\DoxyCodeLine{00610 \{}
+\DoxyCodeLine{00611     num = x;}
+\DoxyCodeLine{00612 \}}
+\DoxyCodeLine{00613 }
+\DoxyCodeLine{00614 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00615 \textcolor{comment}{ ***                                  EOF                                     ***}}
+\DoxyCodeLine{00616 \textcolor{comment}{ ********************************************************************************/}}
+\DoxyCodeLine{00617 }
+
+\end{DoxyCode}

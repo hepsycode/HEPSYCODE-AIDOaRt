@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_index">
+    <info>
+    <title>FirFirGCD Application</title>
+    </info>
+<chapter>
+    <title>HEPSYCODE FirFirGCD Application</title>
+    <xi:include href="mainpage.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>Module Documentation</title>
+    <xi:include href="group__firfirgcd__datatypes__group.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group__firfirgcd__define__group.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group__firfirgcd__display__group.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group__firfirgcd__macros__group.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group__firfirgcd__main__group.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group__firfirgcd__mainsystem__group.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group__firfirgcd__csp__channel__group.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group__firfirgcd__csp__channel__ifs__group.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group__scheduling__manager__group.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group__firfirgcd__stim__gen__group.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group__system__manager__group.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group__tl__group.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>Namespace Documentation</title>
+<xi:include href="namespacesc__core.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>Data Structure Documentation</title>
+    <xi:include href="class_basic_block.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_channel.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="structfir16e__parameters.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="structfir16e__results.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="structfir16s__parameters.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="structfir16s__results.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="structfir8e__parameters.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="structfir8e__results.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="structfir8s__parameters.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="structfir8s__results.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="structgcde__parameters.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="structgcde__results.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_memory.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_physical_link.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_process.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_processing_unit.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classsc__csp__channel.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classsc__core_1_1sc__csp__channel__in__if.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classsc__core_1_1sc__csp__channel__out__if.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classsc__interface.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classsc__prim__channel.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_system_manager.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>File Documentation</title>
+    <xi:include href="datatype_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="define_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="display_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="display_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="macros_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="main_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="mainsystem_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="fir16__evaluation_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="fir16__main_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="fir16__shifting_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="fir8__evaluation_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="fir8__main_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="fir8__shifting_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="gcd__evaluation_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="gcd__main_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="sc__csp__channel_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="sc__csp__channel__ifs_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_scheduling_manager_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_scheduling_manager_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="stim__gen_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="stim__gen_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_system_manager_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_system_manager_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="tl_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="tl_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<index/>
+</book>

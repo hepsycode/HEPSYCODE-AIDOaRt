@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__scheduling_manager_8cpp">
+<title>HepsycodeDesign/src/SchedulingManager.cpp File Reference</title>
+<indexterm><primary>HepsycodeDesign/src/SchedulingManager.cpp</primary></indexterm>
+<para>
+
+<para>Scheduling Manager Documented file. </para>
+ 
+</para>
+<programlisting>#include &lt;iostream&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;vector&gt;
+#include &quot;SchedulingManager.h&quot;
+#include &quot;SystemManager.h&quot;
+</programlisting>Include dependency graph for SchedulingManager.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_scheduling_manager_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_system_manager">SystemManager</link> * <link linkend="_group__firfirgcd__main__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_group__firfirgcd__main__group_1gaa8fde88a1a4ceac81a26274e6f38c4a4">stop_concurrency_sampling</link></para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_group__firfirgcd__main__group_1gae8f25bd55b4a9f4801e99450be7d7423">sampling_period</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Scheduling Manager Documented file. </para>
+
+<para>Scheduling Manager: HEPSIM Scheduling Manager. </para>
+</section>
+</section>

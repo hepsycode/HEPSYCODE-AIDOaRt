@@ -1,0 +1,333 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group__firfirgcd__define__group">
+<title>FirFirGCD define.</title>
+<indexterm><primary>FirFirGCD define.</primary></indexterm>
+<para>
+
+<para>DEFINE USED BY HEPSIM2. </para>
+ 
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group__firfirgcd__define__group_1gad258142492454320138f79a00101f1f8">NPS</link>   10</para>
+
+<para>SBM DEPENDENT. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group__firfirgcd__define__group_1ga967ca22c6c7be038e1092147ce04f258">NCH</link>   15</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group__firfirgcd__define__group_1ga67e7d9a59126e595e10a78e11df73b39">TAP8</link>   8</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group__firfirgcd__define__group_1gaf2addfbdf98c5e76c823edde9336370f">TAP16</link>   16</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group__firfirgcd__define__group_1ga41078393655c31f01ef880a0492a776f">NUMBER_OF_INPUTS</link>   10</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group__firfirgcd__define__group_1ga498a2c2b57c15e562e939cccf28db094">NBB</link>   5</para>
+
+<para>FirFirGCD: constants related to the HW architecture. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group__firfirgcd__define__group_1ga76cc414b5d33950d0cb6ceea199d93de">NPL</link>   3</para>
+
+<para>BBs IDs (#id in the tag is starting from 0 to be aligned with istancesTL) </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group__firfirgcd__define__group_1ga796bd7c6ba2e59281760fb155c6287e8">APPLICATION</link>   &quot;./XML/application.xml&quot;</para>
+
+<para>SBM INDEPENDENT: DO NOT CHANGE. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_group__firfirgcd__define__group_1ga2398f91d2717d5cbd17f9f16c22d08ca">MAPPING_PS_BB</link>   &quot;./XML/mappingPS.xml&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group__firfirgcd__define__group_1ga91657813bcfecb4c86e83b46e338364c">MAPPING_LC_PL</link>   &quot;./XML/mappingCH.xml&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group__firfirgcd__define__group_1gacf471d2e884ab94235db48a5fd3ce252">energyComputation</link>   &quot;EPC&quot;</para>
+
+<para>Costants related to energy consumption estimation. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_group__firfirgcd__define__group_1ga8cfe71cc954d3c9e38dec20b50392b8d">p_id</link> { 
+<link linkend="_group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8da6a6acb823daa9d2547901e1e253f1a92">stimulus_id</link>, 
+<link linkend="_group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8dab8bd51b016c7432eb1d0071f9677defe">display_id</link>, 
+<link linkend="_group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8dada3380943e162c7dd92aee66f5d435ba">fir8m_id</link>, 
+<link linkend="_group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8da183d4292fa4f5b3de92414e6f8c25157">fir8e_id</link>, 
+
+<link linkend="_group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8daa1ce57908cd201f98c47ce27d9b6525c">fir8s_id</link>, 
+<link linkend="_group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a">fir16m_id</link>, 
+<link linkend="_group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8dab5eeffe958b1dca772bc9e6938f8e136">fir16e_id</link>, 
+<link linkend="_group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8da4748eb52ab89dc23136a3e13b8e34d43">fir16s_id</link>, 
+
+<link linkend="_group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8daa65866ff68063f414a6009f2bb6b5373">gcdm_id</link>, 
+<link linkend="_group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8dadf90e6465f134074619ec58b5467394d">gcde_id</link>, 
+<link linkend="_group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8daeb10f3005217e64d69d70e771e681c66">s_fir8m_fir8e_id</link>
+ }</para>
+</listitem>
+            <listitem><para>enum <link linkend="_group__firfirgcd__define__group_1gaaa53553033df32820178982628a60cae">bb_id</link> { 
+<link linkend="_group__firfirgcd__define__group_1ggaaa53553033df32820178982628a60caea2112514dc02bed6a625e425c0487a6ab">BB8051_0_id</link>, 
+<link linkend="_group__firfirgcd__define__group_1ggaaa53553033df32820178982628a60caea5487dd1d1d140792e1f0e2204299454c">BB8051_1_id</link>, 
+<link linkend="_group__firfirgcd__define__group_1ggaaa53553033df32820178982628a60caeaa5912815fd96df44c5a5862aabfee096">BBleon3_0_id</link>, 
+<link linkend="_group__firfirgcd__define__group_1ggaaa53553033df32820178982628a60caea375dd2456383ea5d0e048f3674a44671">BBleon3_1_id</link>, 
+
+<link linkend="_group__firfirgcd__define__group_1ggaaa53553033df32820178982628a60caeabc53b9d75ec1bb7143ccae00479642a8">BBArtix7_0_id</link>
+ }</para>
+</listitem>
+            <listitem><para>enum <link linkend="_group__firfirgcd__define__group_1gadc6e5733fc3c22f0a7b2914188c49c90">state</link> { <link linkend="_group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90af35387cab0e820dcf7df1ed4702043e1">undefined</link>, 
+<link linkend="_group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a4c97ffbad296d4a6b84b1c508fc5d32a">waiting</link>, 
+<link linkend="_group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473">ready</link>, 
+<link linkend="_group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c">running</link>
+ }</para>
+
+<para>Costants related to processes/schedulers states and BB/modes. </para>
+</listitem>
+            <listitem><para>enum <link linkend="_group__firfirgcd__define__group_1ga1a6b6fb557d8d37d59700faf4e4c9167">mode</link> { <link linkend="_group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a53ace14c115e45153a1c9105accceb4c">off</link>, 
+<link linkend="_group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a66e84e235b9e03b6fdfc7ffe7e775de8">suspended</link>, 
+<link linkend="_group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a5d178ae2be9d93ea4cbf1a9f0a2d9cbe">active</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>DEFINE USED BY HEPSIM2. </para>
+
+<para>All the FirFirGCD related define <formalpara><title>Author</title>
+
+<para>V. Muttillo, L. Pomante </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>Apr. 2022 </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group__firfirgcd__define__group_1ga796bd7c6ba2e59281760fb155c6287e8"/>    <section>
+    <title>APPLICATION</title>
+<indexterm><primary>APPLICATION</primary><secondary>FirFirGCD define.</secondary></indexterm>
+<indexterm><primary>FirFirGCD define.</primary><secondary>APPLICATION</secondary></indexterm>
+<para><computeroutput>#define APPLICATION   &quot;./XML/application.xml&quot;</computeroutput></para><para>
+
+<para>SBM INDEPENDENT: DO NOT CHANGE. </para>
+</para>
+
+<para>Tags for conditionl compilation (LP: To be provided as flag to compiler) Possible options:<itemizedlist>
+<listitem>
+<para>NO TAGS (Add only functional behavioral simulation?) or FUNCTIONAL?</para>
+</listitem><listitem>
+<para>NO TAGS (function alanalyzer = functional simulatoin + communications analysis + functional concurrency analysis)</para>
+</listitem><listitem>
+<para>TIMING_ENERGY (timing&amp;energy simulation)</para>
+</listitem><listitem>
+<para>TIMING_ENERGY+CONCURRENCY (timing&amp;energy simulation + timing concurrency analysis)</para>
+</listitem><listitem>
+<para>TIMING_ENERGY+LOAD (timing&amp;energy simulation + load estimation)</para>
+</listitem><listitem>
+<para>TIMING_ENERGY+LOAD+CONCURRENCY (timing&amp;energy simulation + load estimation + timing concurrency analysis) - WARNING: scheduler OVH is 0! #define <emphasis>TIMING_ENERGY</emphasis> #define <emphasis>LOAD</emphasis> #define <emphasis>CONCURRENCY</emphasis> Tags for debug and log (LP: To be provided as flag to compiler) #define <emphasis>DEBUG</emphasis> #define <emphasis>SAVE_CSV</emphasis> Costants related to mapping files </para>
+</listitem></itemizedlist>
+</para>
+<para>
+Definition at line 120 of file define.h.</para>
+    </section><anchor xml:id="_group__firfirgcd__define__group_1gacf471d2e884ab94235db48a5fd3ce252"/>    <section>
+    <title>energyComputation</title>
+<indexterm><primary>energyComputation</primary><secondary>FirFirGCD define.</secondary></indexterm>
+<indexterm><primary>FirFirGCD define.</primary><secondary>energyComputation</secondary></indexterm>
+<para><computeroutput>#define energyComputation   &quot;EPC&quot;</computeroutput></para><para>
+
+<para>Costants related to energy consumption estimation. </para>
+</para>
+
+<para>Method used to compute energy consumption (possible values: EPI/EPC) //LP: check formule #define energyComputation &quot;EPI&quot; </para>
+<para>
+Definition at line 135 of file define.h.</para>
+    </section><anchor xml:id="_group__firfirgcd__define__group_1ga91657813bcfecb4c86e83b46e338364c"/>    <section>
+    <title>MAPPING_LC_PL</title>
+<indexterm><primary>MAPPING_LC_PL</primary><secondary>FirFirGCD define.</secondary></indexterm>
+<indexterm><primary>FirFirGCD define.</primary><secondary>MAPPING_LC_PL</secondary></indexterm>
+<para><computeroutput>#define MAPPING_LC_PL   &quot;./XML/mappingCH.xml&quot;</computeroutput></para><para>
+Definition at line 122 of file define.h.</para>
+    </section><anchor xml:id="_group__firfirgcd__define__group_1ga2398f91d2717d5cbd17f9f16c22d08ca"/>    <section>
+    <title>MAPPING_PS_BB</title>
+<indexterm><primary>MAPPING_PS_BB</primary><secondary>FirFirGCD define.</secondary></indexterm>
+<indexterm><primary>FirFirGCD define.</primary><secondary>MAPPING_PS_BB</secondary></indexterm>
+<para><computeroutput>#define MAPPING_PS_BB   &quot;./XML/mappingPS.xml&quot;</computeroutput></para><para>
+Definition at line 121 of file define.h.</para>
+    </section><anchor xml:id="_group__firfirgcd__define__group_1ga498a2c2b57c15e562e939cccf28db094"/>    <section>
+    <title>NBB</title>
+<indexterm><primary>NBB</primary><secondary>FirFirGCD define.</secondary></indexterm>
+<indexterm><primary>FirFirGCD define.</primary><secondary>NBB</secondary></indexterm>
+<para><computeroutput>#define NBB   5</computeroutput></para><para>
+
+<para>FirFirGCD: constants related to the HW architecture. </para>
+</para>
+<para>
+Definition at line 87 of file define.h.</para>
+    </section><anchor xml:id="_group__firfirgcd__define__group_1ga967ca22c6c7be038e1092147ce04f258"/>    <section>
+    <title>NCH</title>
+<indexterm><primary>NCH</primary><secondary>FirFirGCD define.</secondary></indexterm>
+<indexterm><primary>FirFirGCD define.</primary><secondary>NCH</secondary></indexterm>
+<para><computeroutput>#define NCH   15</computeroutput></para><para>
+Definition at line 79 of file define.h.</para>
+    </section><anchor xml:id="_group__firfirgcd__define__group_1ga76cc414b5d33950d0cb6ceea199d93de"/>    <section>
+    <title>NPL</title>
+<indexterm><primary>NPL</primary><secondary>FirFirGCD define.</secondary></indexterm>
+<indexterm><primary>FirFirGCD define.</primary><secondary>NPL</secondary></indexterm>
+<para><computeroutput>#define NPL   3</computeroutput></para><para>
+
+<para>BBs IDs (#id in the tag is starting from 0 to be aligned with istancesTL) </para>
+</para>
+<para>
+Definition at line 89 of file define.h.</para>
+    </section><anchor xml:id="_group__firfirgcd__define__group_1gad258142492454320138f79a00101f1f8"/>    <section>
+    <title>NPS</title>
+<indexterm><primary>NPS</primary><secondary>FirFirGCD define.</secondary></indexterm>
+<indexterm><primary>FirFirGCD define.</primary><secondary>NPS</secondary></indexterm>
+<para><computeroutput>#define NPS   10</computeroutput></para><para>
+
+<para>SBM DEPENDENT. </para>
+</para>
+
+<para>FirFirGCD: constants related to the SBM </para>
+<para>
+Definition at line 77 of file define.h.</para>
+    </section><anchor xml:id="_group__firfirgcd__define__group_1ga41078393655c31f01ef880a0492a776f"/>    <section>
+    <title>NUMBER_OF_INPUTS</title>
+<indexterm><primary>NUMBER_OF_INPUTS</primary><secondary>FirFirGCD define.</secondary></indexterm>
+<indexterm><primary>FirFirGCD define.</primary><secondary>NUMBER_OF_INPUTS</secondary></indexterm>
+<para><computeroutput>#define NUMBER_OF_INPUTS   10</computeroutput></para><para>
+Definition at line 83 of file define.h.</para>
+    </section><anchor xml:id="_group__firfirgcd__define__group_1gaf2addfbdf98c5e76c823edde9336370f"/>    <section>
+    <title>TAP16</title>
+<indexterm><primary>TAP16</primary><secondary>FirFirGCD define.</secondary></indexterm>
+<indexterm><primary>FirFirGCD define.</primary><secondary>TAP16</secondary></indexterm>
+<para><computeroutput>#define TAP16   16</computeroutput></para><para>
+Definition at line 82 of file define.h.</para>
+    </section><anchor xml:id="_group__firfirgcd__define__group_1ga67e7d9a59126e595e10a78e11df73b39"/>    <section>
+    <title>TAP8</title>
+<indexterm><primary>TAP8</primary><secondary>FirFirGCD define.</secondary></indexterm>
+<indexterm><primary>FirFirGCD define.</primary><secondary>TAP8</secondary></indexterm>
+<para><computeroutput>#define TAP8   8</computeroutput></para><para>
+Definition at line 81 of file define.h.</para>
+</section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_group__firfirgcd__define__group_1gaaa53553033df32820178982628a60cae"/>    <section>
+    <title>bb_id</title>
+<indexterm><primary>bb_id</primary><secondary>FirFirGCD define.</secondary></indexterm>
+<indexterm><primary>FirFirGCD define.</primary><secondary>bb_id</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_group__firfirgcd__define__group_1gaaa53553033df32820178982628a60cae">bb_id</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>BB8051_0_id</primary><secondary>FirFirGCD define.</secondary></indexterm>
+<indexterm><primary>FirFirGCD define.</primary><secondary>BB8051_0_id</secondary></indexterm>
+<anchor xml:id="_group__firfirgcd__define__group_1ggaaa53553033df32820178982628a60caea2112514dc02bed6a625e425c0487a6ab"/>BB8051_0_id</entry><entry></entry></row><row><entry><indexterm><primary>BB8051_1_id</primary><secondary>FirFirGCD define.</secondary></indexterm>
+<indexterm><primary>FirFirGCD define.</primary><secondary>BB8051_1_id</secondary></indexterm>
+<anchor xml:id="_group__firfirgcd__define__group_1ggaaa53553033df32820178982628a60caea5487dd1d1d140792e1f0e2204299454c"/>BB8051_1_id</entry><entry></entry></row><row><entry><indexterm><primary>BBleon3_0_id</primary><secondary>FirFirGCD define.</secondary></indexterm>
+<indexterm><primary>FirFirGCD define.</primary><secondary>BBleon3_0_id</secondary></indexterm>
+<anchor xml:id="_group__firfirgcd__define__group_1ggaaa53553033df32820178982628a60caeaa5912815fd96df44c5a5862aabfee096"/>BBleon3_0_id</entry><entry></entry></row><row><entry><indexterm><primary>BBleon3_1_id</primary><secondary>FirFirGCD define.</secondary></indexterm>
+<indexterm><primary>FirFirGCD define.</primary><secondary>BBleon3_1_id</secondary></indexterm>
+<anchor xml:id="_group__firfirgcd__define__group_1ggaaa53553033df32820178982628a60caea375dd2456383ea5d0e048f3674a44671"/>BBleon3_1_id</entry><entry></entry></row><row><entry><indexterm><primary>BBArtix7_0_id</primary><secondary>FirFirGCD define.</secondary></indexterm>
+<indexterm><primary>FirFirGCD define.</primary><secondary>BBArtix7_0_id</secondary></indexterm>
+<anchor xml:id="_group__firfirgcd__define__group_1ggaaa53553033df32820178982628a60caeabc53b9d75ec1bb7143ccae00479642a8"/>BBArtix7_0_id</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line 88 of file define.h.</para>
+<programlisting>88 {<link linkend="_group__firfirgcd__define__group_1ggaaa53553033df32820178982628a60caea2112514dc02bed6a625e425c0487a6ab">BB8051_0_id</link>,&#32;<link linkend="_group__firfirgcd__define__group_1ggaaa53553033df32820178982628a60caea5487dd1d1d140792e1f0e2204299454c">BB8051_1_id</link>,&#32;<link linkend="_group__firfirgcd__define__group_1ggaaa53553033df32820178982628a60caeaa5912815fd96df44c5a5862aabfee096">BBleon3_0_id</link>,&#32;<link linkend="_group__firfirgcd__define__group_1ggaaa53553033df32820178982628a60caea375dd2456383ea5d0e048f3674a44671">BBleon3_1_id</link>,&#32;<link linkend="_group__firfirgcd__define__group_1ggaaa53553033df32820178982628a60caeabc53b9d75ec1bb7143ccae00479642a8">BBArtix7_0_id</link>};&#32;
+</programlisting>    </section><anchor xml:id="_group__firfirgcd__define__group_1ga1a6b6fb557d8d37d59700faf4e4c9167"/>    <section>
+    <title>mode</title>
+<indexterm><primary>mode</primary><secondary>FirFirGCD define.</secondary></indexterm>
+<indexterm><primary>FirFirGCD define.</primary><secondary>mode</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_group__firfirgcd__define__group_1ga1a6b6fb557d8d37d59700faf4e4c9167">mode</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>off</primary><secondary>FirFirGCD define.</secondary></indexterm>
+<indexterm><primary>FirFirGCD define.</primary><secondary>off</secondary></indexterm>
+<anchor xml:id="_group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a53ace14c115e45153a1c9105accceb4c"/>off</entry><entry></entry></row><row><entry><indexterm><primary>suspended</primary><secondary>FirFirGCD define.</secondary></indexterm>
+<indexterm><primary>FirFirGCD define.</primary><secondary>suspended</secondary></indexterm>
+<anchor xml:id="_group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a66e84e235b9e03b6fdfc7ffe7e775de8"/>suspended</entry><entry></entry></row><row><entry><indexterm><primary>active</primary><secondary>FirFirGCD define.</secondary></indexterm>
+<indexterm><primary>FirFirGCD define.</primary><secondary>active</secondary></indexterm>
+<anchor xml:id="_group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a5d178ae2be9d93ea4cbf1a9f0a2d9cbe"/>active</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line 127 of file define.h.</para>
+<programlisting>127 {&#32;<link linkend="_group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a53ace14c115e45153a1c9105accceb4c">off</link>,&#32;<link linkend="_group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a66e84e235b9e03b6fdfc7ffe7e775de8">suspended</link>,&#32;<link linkend="_group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a5d178ae2be9d93ea4cbf1a9f0a2d9cbe">active</link>&#32;};
+</programlisting>    </section><anchor xml:id="_group__firfirgcd__define__group_1ga8cfe71cc954d3c9e38dec20b50392b8d"/>    <section>
+    <title>p_id</title>
+<indexterm><primary>p_id</primary><secondary>FirFirGCD define.</secondary></indexterm>
+<indexterm><primary>FirFirGCD define.</primary><secondary>p_id</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_group__firfirgcd__define__group_1ga8cfe71cc954d3c9e38dec20b50392b8d">p_id</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>stimulus_id</primary><secondary>FirFirGCD define.</secondary></indexterm>
+<indexterm><primary>FirFirGCD define.</primary><secondary>stimulus_id</secondary></indexterm>
+<anchor xml:id="_group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8da6a6acb823daa9d2547901e1e253f1a92"/>stimulus_id</entry><entry></entry></row><row><entry><indexterm><primary>display_id</primary><secondary>FirFirGCD define.</secondary></indexterm>
+<indexterm><primary>FirFirGCD define.</primary><secondary>display_id</secondary></indexterm>
+<anchor xml:id="_group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8dab8bd51b016c7432eb1d0071f9677defe"/>display_id</entry><entry></entry></row><row><entry><indexterm><primary>fir8m_id</primary><secondary>FirFirGCD define.</secondary></indexterm>
+<indexterm><primary>FirFirGCD define.</primary><secondary>fir8m_id</secondary></indexterm>
+<anchor xml:id="_group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8dada3380943e162c7dd92aee66f5d435ba"/>fir8m_id</entry><entry></entry></row><row><entry><indexterm><primary>fir8e_id</primary><secondary>FirFirGCD define.</secondary></indexterm>
+<indexterm><primary>FirFirGCD define.</primary><secondary>fir8e_id</secondary></indexterm>
+<anchor xml:id="_group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8da183d4292fa4f5b3de92414e6f8c25157"/>fir8e_id</entry><entry></entry></row><row><entry><indexterm><primary>fir8s_id</primary><secondary>FirFirGCD define.</secondary></indexterm>
+<indexterm><primary>FirFirGCD define.</primary><secondary>fir8s_id</secondary></indexterm>
+<anchor xml:id="_group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8daa1ce57908cd201f98c47ce27d9b6525c"/>fir8s_id</entry><entry></entry></row><row><entry><indexterm><primary>fir16m_id</primary><secondary>FirFirGCD define.</secondary></indexterm>
+<indexterm><primary>FirFirGCD define.</primary><secondary>fir16m_id</secondary></indexterm>
+<anchor xml:id="_group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a"/>fir16m_id</entry><entry></entry></row><row><entry><indexterm><primary>fir16e_id</primary><secondary>FirFirGCD define.</secondary></indexterm>
+<indexterm><primary>FirFirGCD define.</primary><secondary>fir16e_id</secondary></indexterm>
+<anchor xml:id="_group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8dab5eeffe958b1dca772bc9e6938f8e136"/>fir16e_id</entry><entry></entry></row><row><entry><indexterm><primary>fir16s_id</primary><secondary>FirFirGCD define.</secondary></indexterm>
+<indexterm><primary>FirFirGCD define.</primary><secondary>fir16s_id</secondary></indexterm>
+<anchor xml:id="_group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8da4748eb52ab89dc23136a3e13b8e34d43"/>fir16s_id</entry><entry></entry></row><row><entry><indexterm><primary>gcdm_id</primary><secondary>FirFirGCD define.</secondary></indexterm>
+<indexterm><primary>FirFirGCD define.</primary><secondary>gcdm_id</secondary></indexterm>
+<anchor xml:id="_group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8daa65866ff68063f414a6009f2bb6b5373"/>gcdm_id</entry><entry></entry></row><row><entry><indexterm><primary>gcde_id</primary><secondary>FirFirGCD define.</secondary></indexterm>
+<indexterm><primary>FirFirGCD define.</primary><secondary>gcde_id</secondary></indexterm>
+<anchor xml:id="_group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8dadf90e6465f134074619ec58b5467394d"/>gcde_id</entry><entry></entry></row><row><entry><indexterm><primary>s_fir8m_fir8e_id</primary><secondary>FirFirGCD define.</secondary></indexterm>
+<indexterm><primary>FirFirGCD define.</primary><secondary>s_fir8m_fir8e_id</secondary></indexterm>
+<anchor xml:id="_group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8daeb10f3005217e64d69d70e771e681c66"/>s_fir8m_fir8e_id</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line 78 of file define.h.</para>
+<programlisting>78 {<link linkend="_group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8da6a6acb823daa9d2547901e1e253f1a92">stimulus_id</link>,&#32;<link linkend="_group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8dab8bd51b016c7432eb1d0071f9677defe">display_id</link>,&#32;<link linkend="_group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8dada3380943e162c7dd92aee66f5d435ba">fir8m_id</link>,&#32;<link linkend="_group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8da183d4292fa4f5b3de92414e6f8c25157">fir8e_id</link>,&#32;<link linkend="_group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8daa1ce57908cd201f98c47ce27d9b6525c">fir8s_id</link>,&#32;<link linkend="_group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a">fir16m_id</link>,&#32;<link linkend="_group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8dab5eeffe958b1dca772bc9e6938f8e136">fir16e_id</link>,&#32;<link linkend="_group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8da4748eb52ab89dc23136a3e13b8e34d43">fir16s_id</link>,&#32;<link linkend="_group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8daa65866ff68063f414a6009f2bb6b5373">gcdm_id</link>,&#32;<link linkend="_group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8dadf90e6465f134074619ec58b5467394d">gcde_id</link>,&#32;<link linkend="_group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8daeb10f3005217e64d69d70e771e681c66">s_fir8m_fir8e_id</link>};&#32;<emphasis role="comment">//&#32;Processes&#32;IDs</emphasis>
+</programlisting>    </section><anchor xml:id="_group__firfirgcd__define__group_1gadc6e5733fc3c22f0a7b2914188c49c90"/>    <section>
+    <title>state</title>
+<indexterm><primary>state</primary><secondary>FirFirGCD define.</secondary></indexterm>
+<indexterm><primary>FirFirGCD define.</primary><secondary>state</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_group__firfirgcd__define__group_1gadc6e5733fc3c22f0a7b2914188c49c90">state</link></computeroutput></para><para>
+
+<para>Costants related to processes/schedulers states and BB/modes. </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>undefined</primary><secondary>FirFirGCD define.</secondary></indexterm>
+<indexterm><primary>FirFirGCD define.</primary><secondary>undefined</secondary></indexterm>
+<anchor xml:id="_group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90af35387cab0e820dcf7df1ed4702043e1"/>undefined</entry><entry></entry></row><row><entry><indexterm><primary>waiting</primary><secondary>FirFirGCD define.</secondary></indexterm>
+<indexterm><primary>FirFirGCD define.</primary><secondary>waiting</secondary></indexterm>
+<anchor xml:id="_group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a4c97ffbad296d4a6b84b1c508fc5d32a"/>waiting</entry><entry></entry></row><row><entry><indexterm><primary>ready</primary><secondary>FirFirGCD define.</secondary></indexterm>
+<indexterm><primary>FirFirGCD define.</primary><secondary>ready</secondary></indexterm>
+<anchor xml:id="_group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473"/>ready</entry><entry></entry></row><row><entry><indexterm><primary>running</primary><secondary>FirFirGCD define.</secondary></indexterm>
+<indexterm><primary>FirFirGCD define.</primary><secondary>running</secondary></indexterm>
+<anchor xml:id="_group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c"/>running</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line 126 of file define.h.</para>
+<programlisting>126 {&#32;<link linkend="_group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90af35387cab0e820dcf7df1ed4702043e1">undefined</link>,&#32;<link linkend="_group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a4c97ffbad296d4a6b84b1c508fc5d32a">waiting</link>,&#32;<link linkend="_group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473">ready</link>,&#32;<link linkend="_group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c">running</link>&#32;};
+</programlisting></section>
+</section>
+</section>

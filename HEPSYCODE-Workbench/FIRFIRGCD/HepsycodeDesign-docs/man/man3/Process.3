@@ -1,0 +1,480 @@
+.TH "Process" 3 "Mon Mar 20 2023" "FirFirGCD Application" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Process
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <tl\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBProcess\fP ()"
+.br
+.ti -1c
+.RI "string \fBgetName\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetName\fP (string x)"
+.br
+.ti -1c
+.RI "int \fBgetId\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetId\fP (int x)"
+.br
+.ti -1c
+.RI "int \fBgetPriority\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetPriority\fP (int x)"
+.br
+.ti -1c
+.RI "int \fBgetCriticality\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetCriticality\fP (int x)"
+.br
+.ti -1c
+.RI "float \fBgetEqGate\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetEqGate\fP (float g)"
+.br
+.ti -1c
+.RI "int \fBgetDataType\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetDataType\fP (int x)"
+.br
+.ti -1c
+.RI "void \fBsetMemSize\fP (\fBMemory\fP m)"
+.br
+.ti -1c
+.RI "void \fBsetCodeSize\fP (string procName, unsigned int value)"
+.br
+.ti -1c
+.RI "void \fBsetDataSize\fP (string procName, unsigned int value)"
+.br
+.ti -1c
+.RI "float \fBgetAffinityByName\fP (string processorName)"
+.br
+.ti -1c
+.RI "void \fBsetAffinity\fP (string processorName, float \fBaffinity\fP)"
+.br
+.ti -1c
+.RI "void \fBsetConcurrency\fP (int procId, float conc)"
+.br
+.ti -1c
+.RI "void \fBsetLoad\fP (int procId, float value)"
+.br
+.ti -1c
+.RI "int \fBgetPS_Profiling\fP ()"
+.br
+.ti -1c
+.RI "sc_time \fBgetProcessTime\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetEnergy\fP (float \fBenergy\fP)"
+.br
+.ti -1c
+.RI "float \fBgetEnergy\fP ()"
+.br
+.in -1c
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "string \fBname\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBid\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBpriority\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBcriticality\fP"
+.br
+.ti -1c
+.RI "float \fBeqGate\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBdataType\fP"
+.br
+.ti -1c
+.RI "map< string, unsigned int > \fBcodeSizeMap\fP"
+.br
+.ti -1c
+.RI "map< string, unsigned int > \fBdataSizeMap\fP"
+.br
+.ti -1c
+.RI "map< string, float > \fBaffinity\fP"
+.br
+.ti -1c
+.RI "map< int, float > \fBconcurrency\fP"
+.br
+.ti -1c
+.RI "map< int, float > \fBload\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBprofiling\fP"
+.br
+.ti -1c
+.RI "sc_time \fBprocessTime\fP"
+.br
+.ti -1c
+.RI "float \fBenergy\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 161 of file tl\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Process::Process ()"
+
+.PP
+Definition at line 311 of file tl\&.cpp\&.
+.PP
+.nf
+311                 {
+312     id = 0;
+313     eqGate = 0;
+314     dataType = 0;
+315     criticality = 0;
+316     profiling = 0;
+317     processTime = sc_time(0, SC_MS);
+318     priority = 0;
+319     energy = 0;
+320 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "float Process::getAffinityByName (string processorName)"
+
+.PP
+Definition at line 406 of file tl\&.cpp\&.
+.PP
+.nf
+406                                                      {
+407     map<string, float>::iterator it = this->affinity\&.find(processorName);
+408     if ( it != this->affinity\&.end() )
+409         return it->second;
+410     else
+411         return 0;
+412 }
+.fi
+.SS "int Process::getCriticality ()"
+
+.PP
+Definition at line 360 of file tl\&.cpp\&.
+.PP
+.nf
+361 {
+362     return this->criticality;
+363 }
+.fi
+.SS "int Process::getDataType ()"
+
+.PP
+Definition at line 380 of file tl\&.cpp\&.
+.PP
+.nf
+381 {
+382     return this->dataType;
+383 }
+.fi
+.SS "float Process::getEnergy ()"
+
+.PP
+Definition at line 342 of file tl\&.cpp\&.
+.PP
+.nf
+342                         {
+343     return this->energy;
+344 }
+.fi
+.SS "float Process::getEqGate ()"
+
+.PP
+Definition at line 370 of file tl\&.cpp\&.
+.PP
+.nf
+371 {
+372     return this->eqGate;
+373 }
+.fi
+.SS "int Process::getId ()"
+
+.PP
+Definition at line 332 of file tl\&.cpp\&.
+.PP
+.nf
+333 {
+334     return this->id;
+335 }
+.fi
+.SS "string Process::getName ()"
+
+.PP
+Definition at line 322 of file tl\&.cpp\&.
+.PP
+.nf
+323 {
+324     return this->name;
+325 }
+.fi
+.SS "int Process::getPriority ()"
+
+.PP
+Definition at line 350 of file tl\&.cpp\&.
+.PP
+.nf
+351 {
+352     return this->priority;
+353 }
+.fi
+.SS "sc_time Process::getProcessTime ()"
+
+.PP
+Definition at line 440 of file tl\&.cpp\&.
+.PP
+.nf
+441 {
+442     return this->processTime;
+443 }
+.fi
+.SS "int Process::getPS_Profiling ()"
+
+.PP
+Definition at line 435 of file tl\&.cpp\&.
+.PP
+.nf
+436 {
+437     return this->profiling;
+438 }
+.fi
+.SS "void Process::setAffinity (string processorName, float affinity)"
+
+.PP
+Definition at line 414 of file tl\&.cpp\&.
+.PP
+.nf
+415 {
+416     map <string, float>::iterator end = this->affinity\&.end();
+417     pair<string, float> item (x, y);
+418     this->affinity\&.insert(end, item);
+419 }
+.fi
+.PP
+Referenced by SystemManager::generateProcessInstances()\&.
+.SS "void Process::setCodeSize (string procName, unsigned int value)"
+
+.PP
+Definition at line 390 of file tl\&.cpp\&.
+.PP
+.nf
+390                                                    {
+391     map <string, unsigned int>::iterator end = this->codeSizeMap\&.end();
+392     pair<string, unsigned int> item (p, mem);
+393     this->codeSizeMap\&.insert(end, item);
+394 }
+.fi
+.PP
+Referenced by SystemManager::generateProcessInstances()\&.
+.SS "void Process::setConcurrency (int procId, float conc)"
+
+.PP
+Definition at line 421 of file tl\&.cpp\&.
+.PP
+.nf
+422 {
+423     map <int, float>::iterator end = this->concurrency\&.end();
+424     pair<int, float> item (p, c);
+425     this->concurrency\&.insert(end, item);
+426 }
+.fi
+.PP
+Referenced by SystemManager::generateProcessInstances()\&.
+.SS "void Process::setCriticality (int x)"
+
+.PP
+Definition at line 365 of file tl\&.cpp\&.
+.PP
+.nf
+366 {
+367     criticality = x;
+368 }
+.fi
+.PP
+Referenced by SystemManager::generateProcessInstances()\&.
+.SS "void Process::setDataSize (string procName, unsigned int value)"
+
+.PP
+Definition at line 396 of file tl\&.cpp\&.
+.PP
+.nf
+396                                                    {
+397     map <string, unsigned int>::iterator end = this->dataSizeMap\&.end();
+398     pair<string, unsigned int> item (p, mem);
+399     this->dataSizeMap\&.insert(end, item);
+400 }
+.fi
+.PP
+Referenced by SystemManager::generateProcessInstances()\&.
+.SS "void Process::setDataType (int x)"
+
+.PP
+Definition at line 385 of file tl\&.cpp\&.
+.PP
+.nf
+386 {
+387     dataType = x;
+388 }
+.fi
+.PP
+Referenced by SystemManager::generateProcessInstances()\&.
+.SS "void Process::setEnergy (float energy)"
+
+.PP
+Definition at line 346 of file tl\&.cpp\&.
+.PP
+.nf
+346                                {
+347     energy = en;
+348 }
+.fi
+.PP
+Referenced by SystemManager::generateProcessInstances()\&.
+.SS "void Process::setEqGate (float g)"
+
+.PP
+Definition at line 375 of file tl\&.cpp\&.
+.PP
+.nf
+376 {
+377     eqGate = g;
+378 }
+.fi
+.PP
+Referenced by SystemManager::generateProcessInstances()\&.
+.SS "void Process::setId (int x)"
+
+.PP
+Definition at line 337 of file tl\&.cpp\&.
+.PP
+.nf
+338 {
+339     id = x;
+340 }
+.fi
+.PP
+Referenced by SystemManager::generateProcessInstances()\&.
+.SS "void Process::setLoad (int procId, float value)"
+
+.PP
+Definition at line 428 of file tl\&.cpp\&.
+.PP
+.nf
+428                                        {
+429     map <int, float>::iterator end = this->load\&.end();
+430     pair<int, float> item (p, value);
+431     this->load\&.insert(end, item);
+432 }
+.fi
+.PP
+Referenced by SystemManager::generateProcessInstances()\&.
+.SS "void Process::setMemSize (\fBMemory\fP m)"
+
+.SS "void Process::setName (string x)"
+
+.PP
+Definition at line 327 of file tl\&.cpp\&.
+.PP
+.nf
+328 {
+329     name = x;
+330 }
+.fi
+.PP
+Referenced by SystemManager::generateProcessInstances()\&.
+.SS "void Process::setPriority (int x)"
+
+.PP
+Definition at line 355 of file tl\&.cpp\&.
+.PP
+.nf
+356 {
+357     priority = x;
+358 }
+.fi
+.PP
+Referenced by SystemManager::generateProcessInstances()\&.
+.SH "Field Documentation"
+.PP 
+.SS "map<string,float> Process::affinity"
+
+.PP
+Definition at line 173 of file tl\&.h\&.
+.SS "map<string, unsigned int> Process::codeSizeMap"
+
+.PP
+Definition at line 170 of file tl\&.h\&.
+.SS "map<int,float> Process::concurrency"
+
+.PP
+Definition at line 174 of file tl\&.h\&.
+.SS "unsigned int Process::criticality"
+
+.PP
+Definition at line 167 of file tl\&.h\&.
+.SS "map<string, unsigned int> Process::dataSizeMap"
+
+.PP
+Definition at line 171 of file tl\&.h\&.
+.SS "unsigned int Process::dataType"
+
+.PP
+Definition at line 169 of file tl\&.h\&.
+.SS "float Process::energy"
+
+.PP
+Definition at line 178 of file tl\&.h\&.
+.SS "float Process::eqGate"
+
+.PP
+Definition at line 168 of file tl\&.h\&.
+.SS "unsigned int Process::id"
+
+.PP
+Definition at line 165 of file tl\&.h\&.
+.SS "map<int,float> Process::load"
+
+.PP
+Definition at line 175 of file tl\&.h\&.
+.SS "string Process::name"
+
+.PP
+Definition at line 164 of file tl\&.h\&.
+.SS "unsigned int Process::priority"
+
+.PP
+Definition at line 166 of file tl\&.h\&.
+.SS "sc_time Process::processTime"
+
+.PP
+Definition at line 177 of file tl\&.h\&.
+.PP
+Referenced by SystemManager::generateProcessInstances()\&.
+.SS "unsigned int Process::profiling"
+
+.PP
+Definition at line 176 of file tl\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FirFirGCD Application from the source code\&.

@@ -1,0 +1,129 @@
+\hypertarget{sc__csp__channel__ifs_8h_source}{}\doxysection{sc\+\_\+csp\+\_\+channel\+\_\+ifs.\+h}
+\label{sc__csp__channel__ifs_8h_source}\index{HepsycodeDesign/src/sc\_csp\_channel\_ifs.h@{HepsycodeDesign/src/sc\_csp\_channel\_ifs.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * University of L'Aquila -\/ HEPSYCODE Source Code License                       *}}
+\DoxyCodeLine{00003 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00004 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00005 \textcolor{comment}{ * (c) 2018-\/2019 Centre of Excellence DEWS All rights reserved                  *}}
+\DoxyCodeLine{00006 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00007 \textcolor{comment}{ * <one line to give the program's name and a brief idea of what it does.>      *}}
+\DoxyCodeLine{00008 \textcolor{comment}{ * Copyright (C) 2022  Vittoriano Muttillo, Luigi Pomante                       *                                    *}}
+\DoxyCodeLine{00009 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00010 \textcolor{comment}{ * This program is free software: you can redistribute it and/or modify         *}}
+\DoxyCodeLine{00011 \textcolor{comment}{ * it under the terms of the GNU General Public License as published by         *}}
+\DoxyCodeLine{00012 \textcolor{comment}{ * the Free Software Foundation, either version 3 of the License, or            *}}
+\DoxyCodeLine{00013 \textcolor{comment}{ * (at your option) any later version.                                          *}}
+\DoxyCodeLine{00014 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00015 \textcolor{comment}{ * This program is distributed in the hope that it will be useful,              *}}
+\DoxyCodeLine{00016 \textcolor{comment}{ * but WITHOUT ANY WARRANTY; without even the implied warranty of               *}}
+\DoxyCodeLine{00017 \textcolor{comment}{ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the                *}}
+\DoxyCodeLine{00018 \textcolor{comment}{ * GNU General Public License for more details.                                 *}}
+\DoxyCodeLine{00019 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00020 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00021 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00022 \textcolor{comment}{ * Created on: 09/May/2022                                                      *}}
+\DoxyCodeLine{00023 \textcolor{comment}{ * Authors: Vittoriano Muttillo, Luigi Pomante                                  *}}
+\DoxyCodeLine{00024 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00025 \textcolor{comment}{ * email: vittoriano.muttillo@guest.univaq.it                                   *}}
+\DoxyCodeLine{00026 \textcolor{comment}{ *        luigi.pomante@univaq.it                                               *}}
+\DoxyCodeLine{00027 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00028 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00029 \textcolor{comment}{ * This code has been developed from an HEPSYCODE model used as demonstrator by *}}
+\DoxyCodeLine{00030 \textcolor{comment}{ * University of L'Aquila.                                                      *}}
+\DoxyCodeLine{00031 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00032 \textcolor{comment}{ * The code is used as a working example in the 'Embedded Systems' course of    *}}
+\DoxyCodeLine{00033 \textcolor{comment}{ * the Master in Conputer Science Engineering offered by the                    *}}
+\DoxyCodeLine{00034 \textcolor{comment}{ * University of L'Aquila                                                       *}}
+\DoxyCodeLine{00035 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{00037 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00038 \textcolor{comment}{ * sc\_csp\_channel\_ifs.h : The sc\_csp\_channel<T> interface classes.}}
+\DoxyCodeLine{00039 \textcolor{comment}{ *}}
+\DoxyCodeLine{00040 \textcolor{comment}{ * CSP Channel: Main SystemC HEPSIM2 csp channel interface header file}}
+\DoxyCodeLine{00041 \textcolor{comment}{ *}}
+\DoxyCodeLine{00042 \textcolor{comment}{********************************************************************************/}}
+\DoxyCodeLine{00043  \textcolor{comment}{// start firfirgcd\_csp\_channel\_ifs\_group}}
+\DoxyCodeLine{00058 }
+\DoxyCodeLine{00059 \textcolor{preprocessor}{\#ifndef \_\_SC\_CSPCHANNEL\_IFS\_H\_\_}}
+\DoxyCodeLine{00060 \textcolor{preprocessor}{\#define \_\_SC\_CSPCHANNEL\_IFS\_H\_\_}}
+\DoxyCodeLine{00061 }
+\DoxyCodeLine{00062 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00063 \textcolor{comment}{ ***                                Includes                                  ***}}
+\DoxyCodeLine{00064 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00065 }
+\DoxyCodeLine{00066 \textcolor{preprocessor}{\#include "sysc/communication/sc\_interface.h"}}
+\DoxyCodeLine{00067 }
+\DoxyCodeLine{00068 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00069 \textcolor{comment}{ ***                                Functions                                 ***}}
+\DoxyCodeLine{00070 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00071 }
+\DoxyCodeLine{\Hypertarget{sc__csp__channel__ifs_8h_source_l00072}\mbox{\hyperlink{namespacesc__core}{00072}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesc__core}{sc\_core}}}
+\DoxyCodeLine{00073 \{}
+\DoxyCodeLine{00074 }
+\DoxyCodeLine{00075  \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00076  \textcolor{comment}{//  CLASS : sc\_csp\_channel\_in\_if<T>}}
+\DoxyCodeLine{00077  \textcolor{comment}{//}}
+\DoxyCodeLine{00078  \textcolor{comment}{//  The sc\_csp\_channel<T> input interface class.}}
+\DoxyCodeLine{00079  \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00080 }
+\DoxyCodeLine{00081  \textcolor{keyword}{template} <\textcolor{keyword}{class} T> }
+\DoxyCodeLine{00082  \textcolor{keyword}{class }\mbox{\hyperlink{classsc__core_1_1sc__csp__channel__in__if}{sc\_csp\_channel\_in\_if}} }
+\DoxyCodeLine{00083  :\textcolor{keyword}{virtual} \textcolor{keyword}{public} \mbox{\hyperlink{classsc__interface}{sc\_interface}} }
+\DoxyCodeLine{00084  \{ }
+\DoxyCodeLine{00085     \textcolor{keyword}{public}: }
+\DoxyCodeLine{\Hypertarget{sc__csp__channel__ifs_8h_source_l00086}\mbox{\hyperlink{classsc__core_1_1sc__csp__channel__in__if}{00086}} }
+\DoxyCodeLine{00087         \textcolor{comment}{// blocking read }}
+\DoxyCodeLine{00088         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsc__core_1_1sc__csp__channel__in__if_a5e8076fced231d716900901e5d60f080}{read}}( T\& ) = 0; }
+\DoxyCodeLine{00089         \textcolor{keyword}{virtual} T \mbox{\hyperlink{classsc__core_1_1sc__csp__channel__in__if_a5e8076fced231d716900901e5d60f080}{read}}() = 0; }
+\DoxyCodeLine{00090 }
+\DoxyCodeLine{00091         \textcolor{comment}{// ALT-\/support management}}
+\DoxyCodeLine{00092         \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsc__core_1_1sc__csp__channel__in__if_ad7139da842ceebdc4c64d4cf2b02d371}{read\_test}}() = 0;}
+\DoxyCodeLine{00093         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsc__core_1_1sc__csp__channel__in__if_a163aae4bbe4ad9f8dcee26b330e929d1}{register\_alt}}() = 0;}
+\DoxyCodeLine{00094         \textcolor{keyword}{virtual} \textcolor{keyword}{const} sc\_event \& \mbox{\hyperlink{classsc__core_1_1sc__csp__channel__in__if_acf52a1d31829961428e7205a835f8973}{get\_alt\_event}}() = 0;}
+\DoxyCodeLine{00095 }
+\DoxyCodeLine{00096  \textcolor{keyword}{protected}: }
+\DoxyCodeLine{00097 }
+\DoxyCodeLine{00098         \textcolor{comment}{// constructor }}
+\DoxyCodeLine{00099         \mbox{\hyperlink{classsc__core_1_1sc__csp__channel__in__if_a63016ae797a557ea1abffb6a3688ad9e}{sc\_csp\_channel\_in\_if}}() \{\} }
+\DoxyCodeLine{00100 }
+\DoxyCodeLine{00101 \}; }
+\DoxyCodeLine{00102 }
+\DoxyCodeLine{00103  \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00104  \textcolor{comment}{//  CLASS : sc\_csp\_channel\_out\_if<T>}}
+\DoxyCodeLine{00105  \textcolor{comment}{//}}
+\DoxyCodeLine{00106  \textcolor{comment}{//  The sc\_csp\_channel<T> output interface class.}}
+\DoxyCodeLine{\Hypertarget{sc__csp__channel__ifs_8h_source_l00107}\mbox{\hyperlink{classsc__core_1_1sc__csp__channel__in__if_a63016ae797a557ea1abffb6a3688ad9e}{00107}}  \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00108 }
+\DoxyCodeLine{00109  \textcolor{keyword}{template} <\textcolor{keyword}{class} T> }
+\DoxyCodeLine{00110  \textcolor{keyword}{class }\mbox{\hyperlink{classsc__core_1_1sc__csp__channel__out__if}{sc\_csp\_channel\_out\_if}} }
+\DoxyCodeLine{00111  :\textcolor{keyword}{virtual} \textcolor{keyword}{public} \mbox{\hyperlink{classsc__interface}{sc\_interface}} }
+\DoxyCodeLine{00112  \{ }
+\DoxyCodeLine{00113     \textcolor{keyword}{public}: }
+\DoxyCodeLine{\Hypertarget{sc__csp__channel__ifs_8h_source_l00114}\mbox{\hyperlink{classsc__core_1_1sc__csp__channel__out__if}{00114}} }
+\DoxyCodeLine{00115         \textcolor{comment}{// blocking write }}
+\DoxyCodeLine{00116         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsc__core_1_1sc__csp__channel__out__if_ae0da34a87857ef8c638455cb6484004b}{write}}( \textcolor{keyword}{const} T\& ) = 0; }
+\DoxyCodeLine{00117 }
+\DoxyCodeLine{00118         \textcolor{comment}{// ALT-\/support management}}
+\DoxyCodeLine{00119         \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classsc__core_1_1sc__csp__channel__out__if_af4f0e8a520cdb556754743a056fa4e37}{write\_test}}() = 0;}
+\DoxyCodeLine{00120         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classsc__core_1_1sc__csp__channel__out__if_a057d067cc18ad4887d53627ff8f5ba5a}{register\_alt}}() = 0;}
+\DoxyCodeLine{00121         \textcolor{keyword}{virtual} \textcolor{keyword}{const} sc\_event \& \mbox{\hyperlink{classsc__core_1_1sc__csp__channel__out__if_ad5cd0e709df419262e3714e91509d3d3}{get\_alt\_event}}() = 0;}
+\DoxyCodeLine{00122 }
+\DoxyCodeLine{00123     \textcolor{keyword}{protected}: }
+\DoxyCodeLine{00124 }
+\DoxyCodeLine{00125         \textcolor{comment}{// constructor }}
+\DoxyCodeLine{00126         \mbox{\hyperlink{classsc__core_1_1sc__csp__channel__out__if_afa1c0785fcb46ce78d4749b4ff28ff08}{sc\_csp\_channel\_out\_if}}()\{\} }
+\DoxyCodeLine{00127 }
+\DoxyCodeLine{00128 \}; }
+\DoxyCodeLine{00129 }
+\DoxyCodeLine{\Hypertarget{sc__csp__channel__ifs_8h_source_l00130}\mbox{\hyperlink{classsc__core_1_1sc__csp__channel__out__if_afa1c0785fcb46ce78d4749b4ff28ff08}{00130}} \} \textcolor{comment}{//end of namespace}}
+\DoxyCodeLine{00131  \textcolor{comment}{// end of firfirgcd\_csp\_channel\_ifs\_group}}
+\DoxyCodeLine{00133 }
+\DoxyCodeLine{00134 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00135 }
+\DoxyCodeLine{00136 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00137 \textcolor{comment}{ ***                                  EOF                                     ***}}
+\DoxyCodeLine{00138 \textcolor{comment}{ ********************************************************************************/}}
+
+\end{DoxyCode}

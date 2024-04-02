@@ -1,0 +1,729 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classsc__csp__channel" kind="class" language="C++" prot="public">
+    <compoundname>sc_csp_channel</compoundname>
+    <basecompoundref refid="classsc__core_1_1sc__csp__channel__in__if" prot="public" virt="non-virtual">sc_core::sc_csp_channel_in_if&lt; T &gt;</basecompoundref>
+    <basecompoundref refid="classsc__core_1_1sc__csp__channel__out__if" prot="public" virt="non-virtual">sc_core::sc_csp_channel_out_if&lt; T &gt;</basecompoundref>
+    <basecompoundref refid="classsc__prim__channel" prot="public" virt="non-virtual">sc_prim_channel</basecompoundref>
+    <includes refid="sc__csp__channel_8h" local="no">sc_csp_channel.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classsc__csp__channel_1a014541bbd872463dd525b35e951ee9ba" prot="protected" static="no" mutable="no">
+        <type>sc_event</type>
+        <definition>sc_event sc_csp_channel&lt; T &gt;::ready_to_read_event</definition>
+        <argsstring></argsstring>
+        <name>ready_to_read_event</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="163" column="10" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsc__csp__channel_1aab17ea7d52d31f39e68eb4472cb27a4a" prot="protected" static="no" mutable="no">
+        <type>sc_event</type>
+        <definition>sc_event sc_csp_channel&lt; T &gt;::ready_to_write_event</definition>
+        <argsstring></argsstring>
+        <name>ready_to_write_event</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="164" column="10" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsc__csp__channel_1acf1aadf77836e165d8b7672500bd2dc7" prot="protected" static="no" mutable="no">
+        <type>sc_event</type>
+        <definition>sc_event sc_csp_channel&lt; T &gt;::ready_alt_event</definition>
+        <argsstring></argsstring>
+        <name>ready_alt_event</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="165" column="10" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsc__csp__channel_1ae716d02584a29463adb04def170fce8e" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool sc_csp_channel&lt; T &gt;::ready_to_read</definition>
+        <argsstring></argsstring>
+        <name>ready_to_read</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="167" column="6" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsc__csp__channel_1ab7c20a9236f789c6e64d8c83ae19967f" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool sc_csp_channel&lt; T &gt;::ready_to_write</definition>
+        <argsstring></argsstring>
+        <name>ready_to_write</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="168" column="6" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsc__csp__channel_1aaeef06ac96bbb3468f9aa907c5b39253" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool sc_csp_channel&lt; T &gt;::enable_alt_events</definition>
+        <argsstring></argsstring>
+        <name>enable_alt_events</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="169" column="6" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsc__csp__channel_1aa4ab2439d490053e231a59dd9b77e6d6" prot="protected" static="no" mutable="no">
+        <type>T</type>
+        <definition>T sc_csp_channel&lt; T &gt;::csp_buf</definition>
+        <argsstring></argsstring>
+        <name>csp_buf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="171" column="4" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsc__csp__channel_1a03a5aa44e377fea90b93e68e481ad1e1" prot="protected" static="no" mutable="no">
+        <type>sc_port_base *</type>
+        <definition>sc_port_base* sc_csp_channel&lt; T &gt;::m_reader</definition>
+        <argsstring></argsstring>
+        <name>m_reader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="192" column="14" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsc__csp__channel_1ad4a06e1cfab0e87829b914b4230d2acb" prot="protected" static="no" mutable="no">
+        <type>sc_port_base *</type>
+        <definition>sc_port_base* sc_csp_channel&lt; T &gt;::m_writer</definition>
+        <argsstring></argsstring>
+        <name>m_writer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="193" column="14" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classsc__csp__channel_1aed1aa9cb465c4a9c7751169994408c72" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int sc_csp_channel&lt; T &gt;::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="174" column="14" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsc__csp__channel_1a5bef0234cd8c0762891d104dd4e7b68a" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int sc_csp_channel&lt; T &gt;::w_id</definition>
+        <argsstring></argsstring>
+        <name>w_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="175" column="14" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsc__csp__channel_1ae16790111d142e48baf4563eb5e44069" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int sc_csp_channel&lt; T &gt;::r_id</definition>
+        <argsstring></argsstring>
+        <name>r_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="176" column="14" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsc__csp__channel_1affca8dbc03ca31ac85f54766040aba41" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int sc_csp_channel&lt; T &gt;::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="177" column="14" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsc__csp__channel_1a36b454aeb9b50a4094f31801a6976b0f" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int sc_csp_channel&lt; T &gt;::num</definition>
+        <argsstring></argsstring>
+        <name>num</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="178" column="14" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsc__csp__channel_1a6508172b749b9dadf1824f5e816a32ed" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool sc_csp_channel&lt; T &gt;::IPC</definition>
+        <argsstring></argsstring>
+        <name>IPC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="179" column="6" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsc__csp__channel_1a5cd83229e038e07f237512df3df4adf9" prot="public" static="no" mutable="no">
+        <type>sc_time</type>
+        <definition>sc_time sc_csp_channel&lt; T &gt;::waiting_time</definition>
+        <argsstring></argsstring>
+        <name>waiting_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="181" column="9" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsc__csp__channel_1ab0977c6aab0732a7946a73aa4b2e6de8" prot="public" static="no" mutable="no">
+        <type>sc_time</type>
+        <definition>sc_time sc_csp_channel&lt; T &gt;::working_time</definition>
+        <argsstring></argsstring>
+        <name>working_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="182" column="9" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsc__csp__channel_1a58737a4adf049b01ddce1acbbb7c5115" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double sc_csp_channel&lt; T &gt;::partial_energy</definition>
+        <argsstring></argsstring>
+        <name>partial_energy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="184" column="8" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsc__csp__channel_1a97c55d92a3c04d41300ffdb208eabc92" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double sc_csp_channel&lt; T &gt;::working_energy</definition>
+        <argsstring></argsstring>
+        <name>working_energy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="185" column="8" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsc__csp__channel_1a4609ce8351fc80bfa9041292f6722d3c" prot="public" static="no" mutable="no">
+        <type>sc_time</type>
+        <definition>sc_time sc_csp_channel&lt; T &gt;::tcomm</definition>
+        <argsstring></argsstring>
+        <name>tcomm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="187" column="9" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsc__csp__channel_1a87dc80bcdbac9e16d542da60040795df" prot="public" static="no" mutable="no">
+        <type>sc_time</type>
+        <definition>sc_time sc_csp_channel&lt; T &gt;::tacomm</definition>
+        <argsstring></argsstring>
+        <name>tacomm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="188" column="9" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsc__csp__channel_1aae2e852312f70713be417eec3bd51b25" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int sc_csp_channel&lt; T &gt;::physical_width</definition>
+        <argsstring></argsstring>
+        <name>physical_width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="189" column="14" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsc__csp__channel_1a18caf07ac6dda7298155bf5bee992f81" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sc_csp_channel&lt; T &gt;::sc_csp_channel</definition>
+        <argsstring>(unsigned int channel_id=0)</argsstring>
+        <name>sc_csp_channel</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>channel_id</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="110" column="10" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="110" bodyend="127"/>
+        <references refid="class_system_manager_1ab75b55327c942c6950f67c14ba9dea08" compoundref="_system_manager_8h" startline="110">SystemManager::allocationCH_PL</references>
+        <references refid="group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad" compoundref="main_8cpp" startline="163">pSystemManager</references>
+        <references refid="class_system_manager_1a7dcc3ae8736a6aad7e27f276706205a3" compoundref="_system_manager_8h" startline="97">SystemManager::VCH</references>
+        <references refid="class_system_manager_1af28a1744a2d964a7047c31c6a5f1644a" compoundref="_system_manager_8h" startline="103">SystemManager::VPL</references>
+      </memberdef>
+      <memberdef kind="function" id="group__firfirgcd__csp__channel__group_1ga5bbbddcd88383d3ed9ee425ad87ee58c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void sc_csp_channel&lt; T &gt;::register_port</definition>
+        <argsstring>(sc_port_base &amp;, const char *)</argsstring>
+        <name>register_port</name>
+        <param>
+          <type>sc_port_base &amp;</type>
+          <defname>port_</defname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <defname>if_typename_</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="131" column="18" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="202" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="function" id="group__firfirgcd__csp__channel__group_1ga23046a4820dcf9ef26a75eba9cb7d49b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void sc_csp_channel&lt; T &gt;::read</definition>
+        <argsstring>(T &amp;)</argsstring>
+        <name>read</name>
+        <reimplements refid="classsc__core_1_1sc__csp__channel__in__if_1a2649054eea07eb61937ea38891162e85">read</reimplements>
+        <param>
+          <type>T &amp;</type>
+          <defname>val_</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="134" column="14" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="232" bodyend="305"/>
+        <references refid="group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a5d178ae2be9d93ea4cbf1a9f0a2d9cbe" compoundref="define_8h" startline="127">active</references>
+        <references refid="class_system_manager_1abfd1d205fa299fa757e2b78d15724734" compoundref="_system_manager_8h" startline="107">SystemManager::allocationPS_BB</references>
+        <references refid="class_system_manager_1a21d2bb74e4472f99ec04243168e7964e" compoundref="_system_manager_8cpp" startline="267" endline="270">SystemManager::checkSPP</references>
+        <references refid="group__firfirgcd__macros__group_1ga0f83efd33ffbe62c58c798abb824fa94" compoundref="macros_8h" startline="156">HEPSY_TRACE_BB_STATE</references>
+        <references refid="group__firfirgcd__macros__group_1ga139185aa9c10392aada97618a69ee2cd" compoundref="macros_8h" startline="148">HEPSY_TRACE_CH_STATE</references>
+        <references refid="group__firfirgcd__macros__group_1gaf1fe2324408cd29c1e2dcd55f2e4a9c1" compoundref="macros_8h" startline="140">HEPSY_TRACE_PS_STATE</references>
+        <references refid="group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48" compoundref="main_8cpp" startline="166">pSchedulingManager</references>
+        <references refid="group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad" compoundref="main_8cpp" startline="163">pSystemManager</references>
+        <references refid="group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473" compoundref="define_8h" startline="126">ready</references>
+        <references refid="group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c" compoundref="define_8h" startline="126">running</references>
+        <references refid="group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a66e84e235b9e03b6fdfc7ffe7e775de8" compoundref="define_8h" startline="127">suspended</references>
+        <references refid="group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a4c97ffbad296d4a6b84b1c508fc5d32a" compoundref="define_8h" startline="126">waiting</references>
+      </memberdef>
+      <memberdef kind="function" id="group__firfirgcd__csp__channel__group_1gaf3eb60ce6aecbe88c0e72fdb19a1f7af" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>T</type>
+        <definition>T sc_csp_channel&lt; T &gt;::read</definition>
+        <argsstring>()</argsstring>
+        <name>read</name>
+        <reimplements refid="classsc__core_1_1sc__csp__channel__in__if_1a5e8076fced231d716900901e5d60f080">read</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="135" column="11" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="310" bodyend="315"/>
+      </memberdef>
+      <memberdef kind="function" id="group__firfirgcd__csp__channel__group_1gaf8a9ace576ff2e0462c8db276f9f388d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void sc_csp_channel&lt; T &gt;::write</definition>
+        <argsstring>(const T &amp;)</argsstring>
+        <name>write</name>
+        <reimplements refid="classsc__core_1_1sc__csp__channel__out__if_1ae0da34a87857ef8c638455cb6484004b">write</reimplements>
+        <param>
+          <type>const T &amp;</type>
+          <defname>val_</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="138" column="14" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="322" bodyend="428"/>
+        <references refid="group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a5d178ae2be9d93ea4cbf1a9f0a2d9cbe" compoundref="define_8h" startline="127">active</references>
+        <references refid="class_system_manager_1abfd1d205fa299fa757e2b78d15724734" compoundref="_system_manager_8h" startline="107">SystemManager::allocationPS_BB</references>
+        <references refid="class_system_manager_1a21d2bb74e4472f99ec04243168e7964e" compoundref="_system_manager_8cpp" startline="267" endline="270">SystemManager::checkSPP</references>
+        <references refid="group__firfirgcd__macros__group_1ga0f83efd33ffbe62c58c798abb824fa94" compoundref="macros_8h" startline="156">HEPSY_TRACE_BB_STATE</references>
+        <references refid="group__firfirgcd__macros__group_1ga139185aa9c10392aada97618a69ee2cd" compoundref="macros_8h" startline="148">HEPSY_TRACE_CH_STATE</references>
+        <references refid="group__firfirgcd__macros__group_1gaf1fe2324408cd29c1e2dcd55f2e4a9c1" compoundref="macros_8h" startline="140">HEPSY_TRACE_PS_STATE</references>
+        <references refid="group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48" compoundref="main_8cpp" startline="166">pSchedulingManager</references>
+        <references refid="group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad" compoundref="main_8cpp" startline="163">pSystemManager</references>
+        <references refid="group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473" compoundref="define_8h" startline="126">ready</references>
+        <references refid="group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c" compoundref="define_8h" startline="126">running</references>
+        <references refid="group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a66e84e235b9e03b6fdfc7ffe7e775de8" compoundref="define_8h" startline="127">suspended</references>
+        <references refid="class_system_manager_1a7dcc3ae8736a6aad7e27f276706205a3" compoundref="_system_manager_8h" startline="97">SystemManager::VCH</references>
+        <references refid="group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a4c97ffbad296d4a6b84b1c508fc5d32a" compoundref="define_8h" startline="126">waiting</references>
+      </memberdef>
+      <memberdef kind="function" id="group__firfirgcd__csp__channel__group_1gab1a08e5d4129f9647e573af0c4ca4f30" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool sc_csp_channel&lt; T &gt;::read_test</definition>
+        <argsstring>()</argsstring>
+        <name>read_test</name>
+        <reimplements refid="classsc__core_1_1sc__csp__channel__in__if_1ad7139da842ceebdc4c64d4cf2b02d371">read_test</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="141" column="14" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="513" bodyend="516"/>
+      </memberdef>
+      <memberdef kind="function" id="group__firfirgcd__csp__channel__group_1ga3566fb8ed3dc3ba7ab7d6dbe17787153" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool sc_csp_channel&lt; T &gt;::write_test</definition>
+        <argsstring>()</argsstring>
+        <name>write_test</name>
+        <reimplements refid="classsc__core_1_1sc__csp__channel__out__if_1af4f0e8a520cdb556754743a056fa4e37">write_test</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="142" column="14" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="522" bodyend="525"/>
+      </memberdef>
+      <memberdef kind="function" id="group__firfirgcd__csp__channel__group_1gaaed132e73280fe2a46b14604240832bc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void sc_csp_channel&lt; T &gt;::register_alt</definition>
+        <argsstring>()</argsstring>
+        <name>register_alt</name>
+        <reimplements refid="classsc__core_1_1sc__csp__channel__in__if_1a163aae4bbe4ad9f8dcee26b330e929d1">register_alt</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="143" column="14" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="531" bodyend="534"/>
+      </memberdef>
+      <memberdef kind="function" id="group__firfirgcd__csp__channel__group_1ga40cb801a3a15df214563c89160c6d19c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>const sc_event &amp;</type>
+        <definition>const sc_event &amp; sc_csp_channel&lt; T &gt;::get_alt_event</definition>
+        <argsstring>()</argsstring>
+        <name>get_alt_event</name>
+        <reimplements refid="classsc__core_1_1sc__csp__channel__in__if_1acf52a1d31829961428e7205a835f8973">get_alt_event</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="144" column="25" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="540" bodyend="543"/>
+      </memberdef>
+      <memberdef kind="function" id="classsc__csp__channel_1a189b4ad7e6190ef15dde076380ff157f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sc_csp_channel&lt; T &gt;::operator T</definition>
+        <argsstring>()</argsstring>
+        <name>operator T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="148" column="1" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="148" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="classsc__csp__channel_1af613528dfec5c1d151cce1c5349d16a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classsc__csp__channel" kindref="compound">sc_csp_channel</ref>&lt; T &gt; &amp;</type>
+        <definition>sc_csp_channel&lt;T&gt;&amp; sc_csp_channel&lt; T &gt;::operator=</definition>
+        <argsstring>(const T &amp;a)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="151" column="16" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="151" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="group__firfirgcd__csp__channel__group_1ga216706630fbd1f222b428cc4e6aa523d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void sc_csp_channel&lt; T &gt;::trace</definition>
+        <argsstring>(sc_trace_file *tf) const</argsstring>
+        <name>trace</name>
+        <param>
+          <type>sc_trace_file *</type>
+          <declname>tf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="154" column="6" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="433" bodyend="436"/>
+      </memberdef>
+      <memberdef kind="function" id="classsc__csp__channel_1a60ae57ddb1ebd031e4ed21094a49a48b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>const char *</type>
+        <definition>virtual const char* sc_csp_channel&lt; T &gt;::kind</definition>
+        <argsstring>() const</argsstring>
+        <name>kind</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="156" column="20" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="156" bodyend="157"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="group__firfirgcd__csp__channel__group_1ga8be7bf7ee4f0c35e684b3de9a5163705" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void sc_csp_channel&lt; T &gt;::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="161" column="6" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="442" bodyend="505"/>
+        <references refid="class_system_manager_1ab75b55327c942c6950f67c14ba9dea08" compoundref="_system_manager_8h" startline="110">SystemManager::allocationCH_PL</references>
+        <references refid="class_system_manager_1abfd1d205fa299fa757e2b78d15724734" compoundref="_system_manager_8h" startline="107">SystemManager::allocationPS_BB</references>
+        <references refid="group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8dab8bd51b016c7432eb1d0071f9677defe" compoundref="define_8h" startline="78">display_id</references>
+        <references refid="group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad" compoundref="main_8cpp" startline="163">pSystemManager</references>
+        <references refid="group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8da6a6acb823daa9d2547901e1e253f1a92" compoundref="define_8h" startline="78">stimulus_id</references>
+        <references refid="class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32" compoundref="_system_manager_8h" startline="100">SystemManager::VBB</references>
+        <references refid="class_system_manager_1af28a1744a2d964a7047c31c6a5f1644a" compoundref="_system_manager_8h" startline="103">SystemManager::VPL</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>sc_interface</label>
+        <link refid="classsc__interface"/>
+      </node>
+      <node id="4">
+        <label>sc_core::sc_csp_channel_out_if&lt; T &gt;</label>
+        <link refid="classsc__core_1_1sc__csp__channel__out__if"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>sc_csp_channel&lt; T &gt;</label>
+        <link refid="classsc__csp__channel"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>sc_core::sc_csp_channel_in_if&lt; T &gt;</label>
+        <link refid="classsc__core_1_1sc__csp__channel__in__if"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>sc_prim_channel</label>
+        <link refid="classsc__prim__channel"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>sc_interface</label>
+        <link refid="classsc__interface"/>
+      </node>
+      <node id="12">
+        <label>T</label>
+      </node>
+      <node id="4">
+        <label>sc_core::sc_csp_channel_out_if&lt; T &gt;</label>
+        <link refid="classsc__core_1_1sc__csp__channel__out__if"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>sc_csp_channel&lt; T &gt;</label>
+        <link refid="classsc__csp__channel"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+partial_energy</edgelabel>
+          <edgelabel>+working_energy</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+r_id</edgelabel>
+          <edgelabel>+id</edgelabel>
+          <edgelabel>+num</edgelabel>
+          <edgelabel>+width</edgelabel>
+          <edgelabel>+physical_width</edgelabel>
+          <edgelabel>+w_id</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>#ready_to_write_event</edgelabel>
+          <edgelabel>#ready_alt_event</edgelabel>
+          <edgelabel>#ready_to_read_event</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+IPC</edgelabel>
+          <edgelabel>#ready_to_write</edgelabel>
+          <edgelabel>#ready_to_read</edgelabel>
+          <edgelabel>#enable_alt_events</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>+tcomm</edgelabel>
+          <edgelabel>+waiting_time</edgelabel>
+          <edgelabel>+working_time</edgelabel>
+          <edgelabel>+tacomm</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>#m_writer</edgelabel>
+          <edgelabel>#m_reader</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>#csp_buf</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>sc_port_base *</label>
+      </node>
+      <node id="7">
+        <label>int</label>
+      </node>
+      <node id="6">
+        <label>double</label>
+      </node>
+      <node id="10">
+        <label>sc_time</label>
+      </node>
+      <node id="2">
+        <label>sc_core::sc_csp_channel_in_if&lt; T &gt;</label>
+        <link refid="classsc__core_1_1sc__csp__channel__in__if"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>sc_prim_channel</label>
+        <link refid="classsc__prim__channel"/>
+      </node>
+      <node id="8">
+        <label>sc_event</label>
+      </node>
+      <node id="9">
+        <label>bool</label>
+      </node>
+    </collaborationgraph>
+    <location file="HepsycodeDesign/src/sc_csp_channel.h" line="105" column="1" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="101" bodyend="193"/>
+    <listofallmembers>
+      <member refid="classsc__csp__channel_1aa4ab2439d490053e231a59dd9b77e6d6" prot="protected" virt="non-virtual"><scope>sc_csp_channel</scope><name>csp_buf</name></member>
+      <member refid="classsc__csp__channel_1aaeef06ac96bbb3468f9aa907c5b39253" prot="protected" virt="non-virtual"><scope>sc_csp_channel</scope><name>enable_alt_events</name></member>
+      <member refid="group__firfirgcd__csp__channel__group_1ga40cb801a3a15df214563c89160c6d19c" prot="public" virt="virtual"><scope>sc_csp_channel</scope><name>get_alt_event</name></member>
+      <member refid="classsc__csp__channel_1aed1aa9cb465c4a9c7751169994408c72" prot="public" virt="non-virtual"><scope>sc_csp_channel</scope><name>id</name></member>
+      <member refid="group__firfirgcd__csp__channel__group_1ga8be7bf7ee4f0c35e684b3de9a5163705" prot="protected" virt="non-virtual"><scope>sc_csp_channel</scope><name>init</name></member>
+      <member refid="classsc__csp__channel_1a6508172b749b9dadf1824f5e816a32ed" prot="public" virt="non-virtual"><scope>sc_csp_channel</scope><name>IPC</name></member>
+      <member refid="classsc__csp__channel_1a60ae57ddb1ebd031e4ed21094a49a48b" prot="public" virt="virtual"><scope>sc_csp_channel</scope><name>kind</name></member>
+      <member refid="classsc__csp__channel_1a03a5aa44e377fea90b93e68e481ad1e1" prot="protected" virt="non-virtual"><scope>sc_csp_channel</scope><name>m_reader</name></member>
+      <member refid="classsc__csp__channel_1ad4a06e1cfab0e87829b914b4230d2acb" prot="protected" virt="non-virtual"><scope>sc_csp_channel</scope><name>m_writer</name></member>
+      <member refid="classsc__csp__channel_1a36b454aeb9b50a4094f31801a6976b0f" prot="public" virt="non-virtual"><scope>sc_csp_channel</scope><name>num</name></member>
+      <member refid="classsc__csp__channel_1a189b4ad7e6190ef15dde076380ff157f" prot="public" virt="non-virtual"><scope>sc_csp_channel</scope><name>operator T</name></member>
+      <member refid="classsc__csp__channel_1af613528dfec5c1d151cce1c5349d16a4" prot="public" virt="non-virtual"><scope>sc_csp_channel</scope><name>operator=</name></member>
+      <member refid="classsc__csp__channel_1a58737a4adf049b01ddce1acbbb7c5115" prot="public" virt="non-virtual"><scope>sc_csp_channel</scope><name>partial_energy</name></member>
+      <member refid="classsc__csp__channel_1aae2e852312f70713be417eec3bd51b25" prot="public" virt="non-virtual"><scope>sc_csp_channel</scope><name>physical_width</name></member>
+      <member refid="classsc__csp__channel_1ae16790111d142e48baf4563eb5e44069" prot="public" virt="non-virtual"><scope>sc_csp_channel</scope><name>r_id</name></member>
+      <member refid="group__firfirgcd__csp__channel__group_1ga23046a4820dcf9ef26a75eba9cb7d49b" prot="public" virt="virtual"><scope>sc_csp_channel</scope><name>read</name></member>
+      <member refid="group__firfirgcd__csp__channel__group_1gaf3eb60ce6aecbe88c0e72fdb19a1f7af" prot="public" virt="virtual"><scope>sc_csp_channel</scope><name>read</name></member>
+      <member refid="group__firfirgcd__csp__channel__group_1gab1a08e5d4129f9647e573af0c4ca4f30" prot="public" virt="virtual"><scope>sc_csp_channel</scope><name>read_test</name></member>
+      <member refid="classsc__csp__channel_1acf1aadf77836e165d8b7672500bd2dc7" prot="protected" virt="non-virtual"><scope>sc_csp_channel</scope><name>ready_alt_event</name></member>
+      <member refid="classsc__csp__channel_1ae716d02584a29463adb04def170fce8e" prot="protected" virt="non-virtual"><scope>sc_csp_channel</scope><name>ready_to_read</name></member>
+      <member refid="classsc__csp__channel_1a014541bbd872463dd525b35e951ee9ba" prot="protected" virt="non-virtual"><scope>sc_csp_channel</scope><name>ready_to_read_event</name></member>
+      <member refid="classsc__csp__channel_1ab7c20a9236f789c6e64d8c83ae19967f" prot="protected" virt="non-virtual"><scope>sc_csp_channel</scope><name>ready_to_write</name></member>
+      <member refid="classsc__csp__channel_1aab17ea7d52d31f39e68eb4472cb27a4a" prot="protected" virt="non-virtual"><scope>sc_csp_channel</scope><name>ready_to_write_event</name></member>
+      <member refid="group__firfirgcd__csp__channel__group_1gaaed132e73280fe2a46b14604240832bc" prot="public" virt="virtual"><scope>sc_csp_channel</scope><name>register_alt</name></member>
+      <member refid="group__firfirgcd__csp__channel__group_1ga5bbbddcd88383d3ed9ee425ad87ee58c" prot="public" virt="virtual"><scope>sc_csp_channel</scope><name>register_port</name></member>
+      <member refid="classsc__csp__channel_1a18caf07ac6dda7298155bf5bee992f81" prot="public" virt="non-virtual"><scope>sc_csp_channel</scope><name>sc_csp_channel</name></member>
+      <member refid="classsc__core_1_1sc__csp__channel__in__if_1a63016ae797a557ea1abffb6a3688ad9e" prot="protected" virt="non-virtual"><scope>sc_csp_channel</scope><name>sc_csp_channel_in_if</name></member>
+      <member refid="classsc__core_1_1sc__csp__channel__out__if_1afa1c0785fcb46ce78d4749b4ff28ff08" prot="protected" virt="non-virtual"><scope>sc_csp_channel</scope><name>sc_csp_channel_out_if</name></member>
+      <member refid="classsc__csp__channel_1a87dc80bcdbac9e16d542da60040795df" prot="public" virt="non-virtual"><scope>sc_csp_channel</scope><name>tacomm</name></member>
+      <member refid="classsc__csp__channel_1a4609ce8351fc80bfa9041292f6722d3c" prot="public" virt="non-virtual"><scope>sc_csp_channel</scope><name>tcomm</name></member>
+      <member refid="group__firfirgcd__csp__channel__group_1ga216706630fbd1f222b428cc4e6aa523d" prot="public" virt="non-virtual"><scope>sc_csp_channel</scope><name>trace</name></member>
+      <member refid="classsc__csp__channel_1a5bef0234cd8c0762891d104dd4e7b68a" prot="public" virt="non-virtual"><scope>sc_csp_channel</scope><name>w_id</name></member>
+      <member refid="classsc__csp__channel_1a5cd83229e038e07f237512df3df4adf9" prot="public" virt="non-virtual"><scope>sc_csp_channel</scope><name>waiting_time</name></member>
+      <member refid="classsc__csp__channel_1affca8dbc03ca31ac85f54766040aba41" prot="public" virt="non-virtual"><scope>sc_csp_channel</scope><name>width</name></member>
+      <member refid="classsc__csp__channel_1a97c55d92a3c04d41300ffdb208eabc92" prot="public" virt="non-virtual"><scope>sc_csp_channel</scope><name>working_energy</name></member>
+      <member refid="classsc__csp__channel_1ab0977c6aab0732a7946a73aa4b2e6de8" prot="public" virt="non-virtual"><scope>sc_csp_channel</scope><name>working_time</name></member>
+      <member refid="group__firfirgcd__csp__channel__group_1gaf8a9ace576ff2e0462c8db276f9f388d" prot="public" virt="virtual"><scope>sc_csp_channel</scope><name>write</name></member>
+      <member refid="group__firfirgcd__csp__channel__group_1ga3566fb8ed3dc3ba7ab7d6dbe17787153" prot="public" virt="virtual"><scope>sc_csp_channel</scope><name>write_test</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

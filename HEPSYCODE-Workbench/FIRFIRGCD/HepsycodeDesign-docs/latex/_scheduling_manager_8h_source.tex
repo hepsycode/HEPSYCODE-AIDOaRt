@@ -1,0 +1,294 @@
+\hypertarget{_scheduling_manager_8h_source}{}\doxysection{Scheduling\+Manager.\+h}
+\label{_scheduling_manager_8h_source}\index{HepsycodeDesign/src/SchedulingManager.h@{HepsycodeDesign/src/SchedulingManager.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * University of L'Aquila -\/ HEPSYCODE Source Code License                       *}}
+\DoxyCodeLine{00003 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00004 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00005 \textcolor{comment}{ * (c) 2018-\/2019 Centre of Excellence DEWS All rights reserved                  *}}
+\DoxyCodeLine{00006 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00007 \textcolor{comment}{ * <one line to give the program's name and a brief idea of what it does.>      *}}
+\DoxyCodeLine{00008 \textcolor{comment}{ * Copyright (C) 2022  Vittoriano Muttillo, Luigi Pomante                       *                                    *}}
+\DoxyCodeLine{00009 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00010 \textcolor{comment}{ * This program is free software: you can redistribute it and/or modify         *}}
+\DoxyCodeLine{00011 \textcolor{comment}{ * it under the terms of the GNU General Public License as published by         *}}
+\DoxyCodeLine{00012 \textcolor{comment}{ * the Free Software Foundation, either version 3 of the License, or            *}}
+\DoxyCodeLine{00013 \textcolor{comment}{ * (at your option) any later version.                                          *}}
+\DoxyCodeLine{00014 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00015 \textcolor{comment}{ * This program is distributed in the hope that it will be useful,              *}}
+\DoxyCodeLine{00016 \textcolor{comment}{ * but WITHOUT ANY WARRANTY; without even the implied warranty of               *}}
+\DoxyCodeLine{00017 \textcolor{comment}{ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the                *}}
+\DoxyCodeLine{00018 \textcolor{comment}{ * GNU General Public License for more details.                                 *}}
+\DoxyCodeLine{00019 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00020 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00021 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00022 \textcolor{comment}{ * Created on: 09/May/2022                                                      *}}
+\DoxyCodeLine{00023 \textcolor{comment}{ * Authors: Vittoriano Muttillo, Luigi Pomante                                  *}}
+\DoxyCodeLine{00024 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00025 \textcolor{comment}{ * email: vittoriano.muttillo@guest.univaq.it                                   *}}
+\DoxyCodeLine{00026 \textcolor{comment}{ *        luigi.pomante@univaq.it                                               *}}
+\DoxyCodeLine{00027 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00028 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00029 \textcolor{comment}{ * This code has been developed from an HEPSYCODE model used as demonstrator by *}}
+\DoxyCodeLine{00030 \textcolor{comment}{ * University of L'Aquila.                                                      *}}
+\DoxyCodeLine{00031 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00032 \textcolor{comment}{ * The code is used as a working example in the 'Embedded Systems' course of    *}}
+\DoxyCodeLine{00033 \textcolor{comment}{ * the Master in Conputer Science Engineering offered by the                    *}}
+\DoxyCodeLine{00034 \textcolor{comment}{ * University of L'Aquila                                                       *}}
+\DoxyCodeLine{00035 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{00037 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00038 \textcolor{comment}{ * display : FirFirGCD Display.}}
+\DoxyCodeLine{00039 \textcolor{comment}{ *}}
+\DoxyCodeLine{00040 \textcolor{comment}{ * Display: Display (feedback) file}}
+\DoxyCodeLine{00041 \textcolor{comment}{ *}}
+\DoxyCodeLine{00042 \textcolor{comment}{********************************************************************************/}}
+\DoxyCodeLine{00043  \textcolor{comment}{// start scheduling\_manager\_group}}
+\DoxyCodeLine{00058 }
+\DoxyCodeLine{00059 \textcolor{preprocessor}{\#ifndef \_\_SCHEDULINGMANAGER\_\_}}
+\DoxyCodeLine{00060 \textcolor{preprocessor}{\#define \_\_SCHEDULINGMANAGER\_\_}}
+\DoxyCodeLine{00061 }
+\DoxyCodeLine{00062 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00063 \textcolor{comment}{ ***                                Includes                                  ***}}
+\DoxyCodeLine{00064 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00065 }
+\DoxyCodeLine{00066 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{00067 \textcolor{preprocessor}{\#include <stdlib.h>}}
+\DoxyCodeLine{00068 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{00069 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{00070 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{00071 }
+\DoxyCodeLine{00072 \textcolor{preprocessor}{\#include <systemc.h>}}
+\DoxyCodeLine{00073 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{_system_manager_8h}{SystemManager.h}}"}}
+\DoxyCodeLine{00074 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{tl_8h}{tl.h}}"}}
+\DoxyCodeLine{00075 }
+\DoxyCodeLine{00076 \textcolor{keyword}{extern} \mbox{\hyperlink{class_system_manager}{SystemManager}} *\mbox{\hyperlink{group__scheduling__manager__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}};}
+\DoxyCodeLine{00077 }
+\DoxyCodeLine{00078 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{define_8h}{define.h}}"}}
+\DoxyCodeLine{00079 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{macros_8h}{macros.h}}"}}
+\DoxyCodeLine{00080 }
+\DoxyCodeLine{00081 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00082 \textcolor{comment}{ ***                                Functions                                 ***}}
+\DoxyCodeLine{00083 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00084 }
+\DoxyCodeLine{\Hypertarget{_scheduling_manager_8h_source_l00085}\mbox{\hyperlink{group__scheduling__manager__group_ga8bb983276d3b9929ea5985632a3fa4e0}{00085}} \mbox{\hyperlink{group__scheduling__manager__group_ga8bb983276d3b9929ea5985632a3fa4e0}{SC\_MODULE}}(SchedulingManager)}
+\DoxyCodeLine{00086 \{}
+\DoxyCodeLine{00087     \textcolor{keyword}{public}:}
+\DoxyCodeLine{00088 }
+\DoxyCodeLine{00089     \textcolor{comment}{// Data structure to manage scheduling and analysis}}
+\DoxyCodeLine{00090 }
+\DoxyCodeLine{00091     \mbox{\hyperlink{group__firfirgcd__define__group_gadc6e5733fc3c22f0a7b2914188c49c90}{state}} process\_state[\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}]; \textcolor{comment}{// Status of processes: ready (waiting for PU), run, waiting (when a process is waiting to complete a communication over a channel)}}
+\DoxyCodeLine{00092     \mbox{\hyperlink{group__firfirgcd__define__group_gadc6e5733fc3c22f0a7b2914188c49c90}{state}} channel\_state[\mbox{\hyperlink{group__firfirgcd__define__group_ga967ca22c6c7be038e1092147ce04f258}{NCH}}]; \textcolor{comment}{// Status of channels: ready (1 process is arrived), run (data transfer), waiting (0 processes)}}
+\DoxyCodeLine{00093     \mbox{\hyperlink{group__firfirgcd__define__group_gadc6e5733fc3c22f0a7b2914188c49c90}{state}} scheduler\_state[\mbox{\hyperlink{group__firfirgcd__define__group_ga498a2c2b57c15e562e939cccf28db094}{NBB}}]; \textcolor{comment}{// Status of schedulers: run (scheduler is performing ContextSwitch activities), ready (waiting for token from a process), waiting (if BB suspended)}}
+\DoxyCodeLine{00094 }
+\DoxyCodeLine{00095     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} matrixCOM[\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}][\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}]; \textcolor{comment}{//Communication Matrix}}
+\DoxyCodeLine{00096 }
+\DoxyCodeLine{00097     \textcolor{comment}{// Check READY\&RUN -\/ Potential concurrency}}
+\DoxyCodeLine{00098     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} matrixCONC\_PS\_RR[\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}][\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}]; \textcolor{comment}{//Processes Concurrency matrix}}
+\DoxyCodeLine{00099     \textcolor{keywordtype}{float} matrixCONC\_PS\_RR\_N[\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}][\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}]; \textcolor{comment}{//Normalized Processes Concurrency matrix (with respect to the number of tests)}}
+\DoxyCodeLine{00100     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} matrixCONC\_CH\_RR[\mbox{\hyperlink{group__firfirgcd__define__group_ga967ca22c6c7be038e1092147ce04f258}{NCH}}][\mbox{\hyperlink{group__firfirgcd__define__group_ga967ca22c6c7be038e1092147ce04f258}{NCH}}]; \textcolor{comment}{//Channels Concurrency matrix}}
+\DoxyCodeLine{00101     \textcolor{keywordtype}{float} matrixCONC\_CH\_RR\_N[\mbox{\hyperlink{group__firfirgcd__define__group_ga967ca22c6c7be038e1092147ce04f258}{NCH}}][\mbox{\hyperlink{group__firfirgcd__define__group_ga967ca22c6c7be038e1092147ce04f258}{NCH}}]; \textcolor{comment}{//Normalized Channels Concurrency matrix (with respect to the number of tests)}}
+\DoxyCodeLine{00102 }
+\DoxyCodeLine{00103     \textcolor{keywordtype}{void} checkStatesProcessesRR(); \textcolor{comment}{// Check processes pairs}}
+\DoxyCodeLine{00104     \textcolor{keywordtype}{void} checkStatesChannelsRR(); \textcolor{comment}{// Check channels pairs}}
+\DoxyCodeLine{00105 }
+\DoxyCodeLine{00106     \textcolor{comment}{// Check only RUN -\/ Actual concurrency}}
+\DoxyCodeLine{00107     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} matrixCONC\_PS\_R[\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}][\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}]; \textcolor{comment}{//Processes Concurrency matrix}}
+\DoxyCodeLine{00108     \textcolor{keywordtype}{float} matrixCONC\_PS\_R\_N[\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}][\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}]; \textcolor{comment}{//Normalized Processes Concurrency matrix (with respect to the number of tests)}}
+\DoxyCodeLine{00109     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} matrixCONC\_CH\_R[\mbox{\hyperlink{group__firfirgcd__define__group_ga967ca22c6c7be038e1092147ce04f258}{NCH}}][\mbox{\hyperlink{group__firfirgcd__define__group_ga967ca22c6c7be038e1092147ce04f258}{NCH}}]; \textcolor{comment}{//Channels Concurrency matrix}}
+\DoxyCodeLine{00110     \textcolor{keywordtype}{float} matrixCONC\_CH\_R\_N[\mbox{\hyperlink{group__firfirgcd__define__group_ga967ca22c6c7be038e1092147ce04f258}{NCH}}][\mbox{\hyperlink{group__firfirgcd__define__group_ga967ca22c6c7be038e1092147ce04f258}{NCH}}]; \textcolor{comment}{//Normalized Channels Concurrency matrix (with respect to the number of tests)}}
+\DoxyCodeLine{00111 }
+\DoxyCodeLine{00112     \textcolor{keywordtype}{void} checkStatesProcessesR(); \textcolor{comment}{// Check processes pairs}}
+\DoxyCodeLine{00113     \textcolor{keywordtype}{void} checkStatesChannelsR(); \textcolor{comment}{// Check channels pairs}}
+\DoxyCodeLine{00114 }
+\DoxyCodeLine{00115     \textcolor{comment}{// Check BB (actual) concurrency}}
+\DoxyCodeLine{00116     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} matrixCONC\_BB[\mbox{\hyperlink{group__firfirgcd__define__group_ga498a2c2b57c15e562e939cccf28db094}{NBB}}][\mbox{\hyperlink{group__firfirgcd__define__group_ga498a2c2b57c15e562e939cccf28db094}{NBB}}]; \textcolor{comment}{//BB Concurrency matrix}}
+\DoxyCodeLine{00117     \textcolor{keywordtype}{float} matrixCONC\_BB\_N[\mbox{\hyperlink{group__firfirgcd__define__group_ga498a2c2b57c15e562e939cccf28db094}{NBB}}][\mbox{\hyperlink{group__firfirgcd__define__group_ga498a2c2b57c15e562e939cccf28db094}{NBB}}]; \textcolor{comment}{//Normalized BB Concurrency matrix (number of tests?)}}
+\DoxyCodeLine{00118     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} vectorCONC\_BB[\mbox{\hyperlink{group__firfirgcd__define__group_ga498a2c2b57c15e562e939cccf28db094}{NBB}}+1]; \textcolor{comment}{//Number of BBs concurrenty active}}
+\DoxyCodeLine{00119     \textcolor{keywordtype}{float} vectorCONC\_BB\_N[\mbox{\hyperlink{group__firfirgcd__define__group_ga498a2c2b57c15e562e939cccf28db094}{NBB}}+1]; \textcolor{comment}{//Normalized number of BBs concurrenty active (number of tests?)}}
+\DoxyCodeLine{00120 }
+\DoxyCodeLine{00121     \textcolor{keywordtype}{void} checkStatesBB(); \textcolor{comment}{// Check BB pairs}}
+\DoxyCodeLine{00122 }
+\DoxyCodeLine{00123     \textcolor{comment}{//Number of concurrency tests: used to normalize the concurrency matrixes}}
+\DoxyCodeLine{00124     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} num\_tests\_CONC\_PS\_RR;}
+\DoxyCodeLine{00125     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} num\_tests\_CONC\_PS\_R;}
+\DoxyCodeLine{00126     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} num\_tests\_CONC\_CH\_RR;}
+\DoxyCodeLine{00127     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} num\_tests\_CONC\_CH\_R;}
+\DoxyCodeLine{00128     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} num\_tests\_CONC\_BB;}
+\DoxyCodeLine{00129 }
+\DoxyCodeLine{00130     \textcolor{comment}{// Events exchanged by scheduler and processes on the base of process IDs}}
+\DoxyCodeLine{00131     sc\_event schedule[\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}], release[\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}];}
+\DoxyCodeLine{00132 }
+\DoxyCodeLine{00133     \textcolor{comment}{// Functional Analyzer}}
+\DoxyCodeLine{00134     sc\_event unblock;}
+\DoxyCodeLine{00135     \textcolor{keywordtype}{bool} blocked;}
+\DoxyCodeLine{00136     \textcolor{keywordtype}{bool} process\_status\_changed[\mbox{\hyperlink{group__firfirgcd__define__group_ga498a2c2b57c15e562e939cccf28db094}{NBB}}]; \textcolor{comment}{// Used to avoid the block of schedulers if some changes in the processes state happened}}
+\DoxyCodeLine{00137 }
+\DoxyCodeLine{00138     \textcolor{comment}{// Items used to manage state of BB/PU}}
+\DoxyCodeLine{00139     \mbox{\hyperlink{group__firfirgcd__define__group_ga1a6b6fb557d8d37d59700faf4e4c9167}{mode}} BB\_mode[\mbox{\hyperlink{group__firfirgcd__define__group_ga498a2c2b57c15e562e939cccf28db094}{NBB}}]; \textcolor{comment}{// Mode of BB (suspended, active)}}
+\DoxyCodeLine{00140     sc\_event activate[\mbox{\hyperlink{group__firfirgcd__define__group_ga498a2c2b57c15e562e939cccf28db094}{NBB}}];}
+\DoxyCodeLine{00141 }
+\DoxyCodeLine{00142     \textcolor{comment}{// Data structure to keep track of scheduler timing overhead (the array is of NBB elements, the one related to SPP will not be used)}}
+\DoxyCodeLine{00143     sc\_time sched\_oh[\mbox{\hyperlink{group__firfirgcd__define__group_ga498a2c2b57c15e562e939cccf28db094}{NBB}}];}
+\DoxyCodeLine{00144 }
+\DoxyCodeLine{00145     \textcolor{comment}{// Data structure to keep track of scheduler energy consumption (the array is of NBB elements, the one related to SPP will not be used)}}
+\DoxyCodeLine{00146     \textcolor{keywordtype}{double} sched\_en[\mbox{\hyperlink{group__firfirgcd__define__group_ga498a2c2b57c15e562e939cccf28db094}{NBB}}];}
+\DoxyCodeLine{00147 }
+\DoxyCodeLine{00148     \textcolor{comment}{// Data structure to keep track of the number of scheduler executions (i.e., scheduler SC\_THREAD loops)}}
+\DoxyCodeLine{00149     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} sched\_loops[\mbox{\hyperlink{group__firfirgcd__define__group_ga498a2c2b57c15e562e939cccf28db094}{NBB}}]; \textcolor{comment}{// (the array is of NBB elements, the one related to SPP will not be used)}}
+\DoxyCodeLine{00150     \textcolor{comment}{// Data structure to keep track of the number of Context Switches}}
+\DoxyCodeLine{00151     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} sched\_CS[\mbox{\hyperlink{group__firfirgcd__define__group_ga498a2c2b57c15e562e939cccf28db094}{NBB}}]; \textcolor{comment}{// (the array is of NBB elements, the one related to SPP will not be used)}}
+\DoxyCodeLine{00152 }
+\DoxyCodeLine{00153     ofstream LOG; \textcolor{comment}{// File to log each stat change (PSs, CHs, BBs, and schedulers)}}
+\DoxyCodeLine{00154 }
+\DoxyCodeLine{00155     \textcolor{comment}{//Scheduler instances assigned to SC\_THREADs, one for each possible instance of of SW-\/PU (see instanceTL.xml)}}
+\DoxyCodeLine{00156     \textcolor{keywordtype}{void} scheduler\_8051\_0();}
+\DoxyCodeLine{00157     \textcolor{keywordtype}{void} scheduler\_8051\_1();}
+\DoxyCodeLine{00158     \textcolor{keywordtype}{void} scheduler\_leon3\_2();}
+\DoxyCodeLine{00159     \textcolor{keywordtype}{void} scheduler\_leon3\_3();}
+\DoxyCodeLine{00160     \textcolor{keywordtype}{void} functional\_analyzer();}
+\DoxyCodeLine{00161 }
+\DoxyCodeLine{00162     \textcolor{comment}{// Timing concurrency analysis}}
+\DoxyCodeLine{00163     \textcolor{keywordtype}{void} concurrency\_sampling();}
+\DoxyCodeLine{00164 }
+\DoxyCodeLine{00165     \textcolor{comment}{//Scheduling policies that can be used by scheduler instances}}
+\DoxyCodeLine{00166     \textcolor{comment}{// pinstance: ID of BB/SW-\/PU}}
+\DoxyCodeLine{00167     \textcolor{comment}{// full\_oh: weight for context switch time (normally 1)}}
+\DoxyCodeLine{00168     \textcolor{comment}{// part\_oh: weight for activities of the scheduler that doesn't imply a context switch (normally 0.25)}}
+\DoxyCodeLine{00169 }
+\DoxyCodeLine{00170     \textcolor{keywordtype}{void} policy\_SCHED\_RR(\textcolor{keywordtype}{int} pinstance, \textcolor{keywordtype}{float} full\_oh, \textcolor{keywordtype}{float} part\_oh);}
+\DoxyCodeLine{00171     \textcolor{keywordtype}{void} policy\_SCHED\_FCFS(\textcolor{keywordtype}{int} pinstance, \textcolor{keywordtype}{float} full\_oh, \textcolor{keywordtype}{float} part\_oh);}
+\DoxyCodeLine{00172     \textcolor{keywordtype}{void} policy\_SCHED\_FP(\textcolor{keywordtype}{int} pinstance, \textcolor{keywordtype}{float} full\_oh, \textcolor{keywordtype}{float} part\_oh);}
+\DoxyCodeLine{00173 }
+\DoxyCodeLine{00174     SC\_CTOR(SchedulingManager)}
+\DoxyCodeLine{00175     \{}
+\DoxyCodeLine{00176         LOG.open(\textcolor{stringliteral}{"LOG.csv"}); \textcolor{comment}{// Open file (closed in the destructor)}}
+\DoxyCodeLine{00177 }
+\DoxyCodeLine{00178         \textcolor{comment}{// Creation of a scheduler instance for each possible instance of of SW-\/PU (as listed in instanceTL.xml) }}
+\DoxyCodeLine{00179         \textcolor{comment}{// The NOT needed ones (i.e., no processes alocated on them) will self-\/quit}}
+\DoxyCodeLine{00180 }
+\DoxyCodeLine{00181 \textcolor{preprocessor}{        \#if defined(\_TIMING\_ENERGY\_)}}
+\DoxyCodeLine{00182 }
+\DoxyCodeLine{00183             SC\_THREAD(scheduler\_8051\_0);}
+\DoxyCodeLine{00184             SC\_THREAD(scheduler\_8051\_1);}
+\DoxyCodeLine{00185             SC\_THREAD(scheduler\_leon3\_2);}
+\DoxyCodeLine{00186             SC\_THREAD(scheduler\_leon3\_3);}
+\DoxyCodeLine{00187 }
+\DoxyCodeLine{00188 \textcolor{preprocessor}{        \#else}}
+\DoxyCodeLine{00189 }
+\DoxyCodeLine{00190             SC\_THREAD(functional\_analyzer);}
+\DoxyCodeLine{00191 }
+\DoxyCodeLine{00192 \textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{00193 }
+\DoxyCodeLine{00194 \textcolor{preprocessor}{        \#if defined(\_TIMING\_ENERGY\_) \&\& defined(\_CONCURRENCY\_)}}
+\DoxyCodeLine{00195 }
+\DoxyCodeLine{00196             \textcolor{comment}{// Thread for concurrency analysis (if activated)}}
+\DoxyCodeLine{00197             SC\_THREAD(concurrency\_sampling);}
+\DoxyCodeLine{00198 }
+\DoxyCodeLine{00199 \textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{00200 }
+\DoxyCodeLine{00201         LOG << \textcolor{stringliteral}{"sep=;"} << endl; \textcolor{comment}{// LP: ???}}
+\DoxyCodeLine{00202 }
+\DoxyCodeLine{00203         \textcolor{comment}{// Init}}
+\DoxyCodeLine{00204 }
+\DoxyCodeLine{00205         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} j=0; j<\mbox{\hyperlink{group__firfirgcd__define__group_ga498a2c2b57c15e562e939cccf28db094}{NBB}}; j++)}
+\DoxyCodeLine{00206         \{}
+\DoxyCodeLine{00207             scheduler\_state[j] = \mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90af35387cab0e820dcf7df1ed4702043e1}{undefined}};}
+\DoxyCodeLine{00208             \textcolor{keywordflow}{if}(\mbox{\hyperlink{group__scheduling__manager__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{VBB}}[j].getProcessors()[0].getProcessorType() != \textcolor{stringliteral}{"SPP"})}
+\DoxyCodeLine{00209             \{}
+\DoxyCodeLine{00210                 \mbox{\hyperlink{group__firfirgcd__macros__group_ga37921dae893594f3710d892f471de3cb}{HEPSY\_TRACE\_SCHED\_STATE}}(j)                                                               \(\backslash\)}
+\DoxyCodeLine{00211             \}}
+\DoxyCodeLine{00212 }
+\DoxyCodeLine{00213             sched\_oh[j]=sc\_time(0, SC\_MS);}
+\DoxyCodeLine{00214             sched\_en[j]=0;}
+\DoxyCodeLine{00215             sched\_loops[j]=0;}
+\DoxyCodeLine{00216             sched\_CS[j]=0;}
+\DoxyCodeLine{00217 }
+\DoxyCodeLine{00218             BB\_mode[j]=\mbox{\hyperlink{group__firfirgcd__define__group_gga1a6b6fb557d8d37d59700faf4e4c9167a53ace14c115e45153a1c9105accceb4c}{off}};}
+\DoxyCodeLine{00219             \mbox{\hyperlink{group__firfirgcd__macros__group_ga0782cab9383550027672da286d54c931}{HEPSY\_TRACE\_BB\_STATE\_THIS}}(j)}
+\DoxyCodeLine{00220 }
+\DoxyCodeLine{00221             process\_status\_changed[j]=\textcolor{keyword}{false};}
+\DoxyCodeLine{00222         \}}
+\DoxyCodeLine{00223 }
+\DoxyCodeLine{00224         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} j = 0; j<\mbox{\hyperlink{group__firfirgcd__define__group_ga498a2c2b57c15e562e939cccf28db094}{NBB}}+1; j++)}
+\DoxyCodeLine{00225         \{}
+\DoxyCodeLine{00226             vectorCONC\_BB[j] = 0;}
+\DoxyCodeLine{00227             vectorCONC\_BB\_N[j] = 0;}
+\DoxyCodeLine{00228         \}}
+\DoxyCodeLine{00229 }
+\DoxyCodeLine{00230         \textcolor{comment}{// Init}}
+\DoxyCodeLine{00231         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} j=0; j<\mbox{\hyperlink{group__scheduling__manager__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}.size(); j++)}
+\DoxyCodeLine{00232         \{}
+\DoxyCodeLine{00233             \textcolor{keywordflow}{if} (\mbox{\hyperlink{group__scheduling__manager__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a21d2bb74e4472f99ec04243168e7964e}{checkSPP}}(j)==\textcolor{keyword}{true}) process\_state[j]=\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c}{running}};}
+\DoxyCodeLine{00234             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (j==0) process\_state[j]=\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c}{running}};}
+\DoxyCodeLine{00235             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (j==1) process\_state[j]=\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c}{running}};}
+\DoxyCodeLine{00236             \textcolor{keywordflow}{else} process\_state[j]=\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473}{ready}};}
+\DoxyCodeLine{00237             \mbox{\hyperlink{group__firfirgcd__macros__group_gadc2d4bfbe106f792246792d01d66d63c}{HEPSY\_TRACE\_PS\_STATE\_THIS}}(j)}
+\DoxyCodeLine{00238 }
+\DoxyCodeLine{00239             \textcolor{comment}{// BB with processes are activated}}
+\DoxyCodeLine{00240             \textcolor{keywordflow}{if} (BB\_mode[\mbox{\hyperlink{group__scheduling__manager__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[j]]!=\mbox{\hyperlink{group__firfirgcd__define__group_gga1a6b6fb557d8d37d59700faf4e4c9167a5d178ae2be9d93ea4cbf1a9f0a2d9cbe}{active}})}
+\DoxyCodeLine{00241             \{}
+\DoxyCodeLine{00242                 BB\_mode[\mbox{\hyperlink{group__scheduling__manager__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[j]]=\mbox{\hyperlink{group__firfirgcd__define__group_gga1a6b6fb557d8d37d59700faf4e4c9167a5d178ae2be9d93ea4cbf1a9f0a2d9cbe}{active}};              }
+\DoxyCodeLine{00243                 \mbox{\hyperlink{group__firfirgcd__macros__group_ga0782cab9383550027672da286d54c931}{HEPSY\_TRACE\_BB\_STATE\_THIS}}(j)}
+\DoxyCodeLine{00244             \}}
+\DoxyCodeLine{00245         \}}
+\DoxyCodeLine{00246 }
+\DoxyCodeLine{00247         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}; i++)}
+\DoxyCodeLine{00248         \{}
+\DoxyCodeLine{00249             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0; j<\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}; j++)}
+\DoxyCodeLine{00250             \{}
+\DoxyCodeLine{00251                 matrixCONC\_PS\_RR[i][j]=0;}
+\DoxyCodeLine{00252                 matrixCONC\_PS\_RR\_N[i][j]=0;}
+\DoxyCodeLine{00253                 matrixCONC\_PS\_R[i][j]=0;}
+\DoxyCodeLine{00254                 matrixCONC\_PS\_R\_N[i][j]=0;}
+\DoxyCodeLine{00255                 matrixCOM[i][j]=0;}
+\DoxyCodeLine{00256             \}}
+\DoxyCodeLine{00257         \}}
+\DoxyCodeLine{00258 }
+\DoxyCodeLine{00259         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<\mbox{\hyperlink{group__firfirgcd__define__group_ga498a2c2b57c15e562e939cccf28db094}{NBB}}; i++)}
+\DoxyCodeLine{00260         \{}
+\DoxyCodeLine{00261             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0; j<\mbox{\hyperlink{group__firfirgcd__define__group_ga498a2c2b57c15e562e939cccf28db094}{NBB}}; j++)}
+\DoxyCodeLine{00262             \{}
+\DoxyCodeLine{00263                 matrixCONC\_BB[i][j]=0;}
+\DoxyCodeLine{00264             \}}
+\DoxyCodeLine{00265         \}}
+\DoxyCodeLine{00266 }
+\DoxyCodeLine{00267         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<\mbox{\hyperlink{group__firfirgcd__define__group_ga967ca22c6c7be038e1092147ce04f258}{NCH}}; i++)}
+\DoxyCodeLine{00268         \{}
+\DoxyCodeLine{00269             channel\_state[i]=\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a4c97ffbad296d4a6b84b1c508fc5d32a}{waiting}};}
+\DoxyCodeLine{00270             \mbox{\hyperlink{group__firfirgcd__macros__group_ga24b6f3a385f702b3a63e0811a0f22e75}{HEPSY\_TRACE\_CH\_STATE\_THIS}}(i)}
+\DoxyCodeLine{00271 }
+\DoxyCodeLine{00272             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0; j<\mbox{\hyperlink{group__firfirgcd__define__group_ga967ca22c6c7be038e1092147ce04f258}{NCH}}; j++)}
+\DoxyCodeLine{00273             \{}
+\DoxyCodeLine{00274                 matrixCONC\_CH\_RR[i][j]=0;}
+\DoxyCodeLine{00275                 matrixCONC\_CH\_RR\_N[i][j]=0;}
+\DoxyCodeLine{00276                 matrixCONC\_CH\_R[i][j]=0;}
+\DoxyCodeLine{00277                 matrixCONC\_CH\_R\_N[i][j]=0;}
+\DoxyCodeLine{00278             \}}
+\DoxyCodeLine{00279         \}}
+\DoxyCodeLine{00280 }
+\DoxyCodeLine{00281         blocked = \textcolor{keyword}{false};}
+\DoxyCodeLine{00282         num\_tests\_CONC\_PS\_RR=0;}
+\DoxyCodeLine{00283         num\_tests\_CONC\_CH\_RR=0;}
+\DoxyCodeLine{00284         num\_tests\_CONC\_PS\_R=0;}
+\DoxyCodeLine{00285         num\_tests\_CONC\_CH\_R=0;}
+\DoxyCodeLine{00286         num\_tests\_CONC\_BB=0;}
+\DoxyCodeLine{00287 }
+\DoxyCodeLine{00288     \}  }
+\DoxyCodeLine{00289 }
+\DoxyCodeLine{00290     \string~SchedulingManager()}
+\DoxyCodeLine{00291     \{}
+\DoxyCodeLine{00292         LOG.close(); \textcolor{comment}{// Close file}}
+\DoxyCodeLine{00293     \}}
+\DoxyCodeLine{00294 }
+\DoxyCodeLine{00295 \};}
+\DoxyCodeLine{00296  \textcolor{comment}{// end of scheduling\_manager\_group}}
+\DoxyCodeLine{00298 }
+\DoxyCodeLine{00299 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00300 }
+\DoxyCodeLine{00301 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00302 \textcolor{comment}{ ***                                  EOF                                     ***}}
+\DoxyCodeLine{00303 \textcolor{comment}{ ********************************************************************************/}}
+
+\end{DoxyCode}

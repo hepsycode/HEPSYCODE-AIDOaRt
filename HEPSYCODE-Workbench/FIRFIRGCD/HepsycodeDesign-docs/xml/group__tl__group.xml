@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="group__tl__group" kind="group">
+    <compoundname>tl_group</compoundname>
+    <title>HEPSIM Technologies Library.</title>
+    <innerclass refid="class_processing_unit" prot="public">ProcessingUnit</innerclass>
+    <innerclass refid="class_memory" prot="public">Memory</innerclass>
+    <innerclass refid="class_process" prot="public">Process</innerclass>
+    <innerclass refid="class_basic_block" prot="public">BasicBlock</innerclass>
+    <innerclass refid="class_physical_link" prot="public">PhysicalLink</innerclass>
+    <innerclass refid="class_channel" prot="public">Channel</innerclass>
+    <briefdescription>
+<para>Technologies Library Implementation. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>V. Muttillo, L. Pomante </para>
+</simplesect>
+<simplesect kind="date"><para>Apr. 2022 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

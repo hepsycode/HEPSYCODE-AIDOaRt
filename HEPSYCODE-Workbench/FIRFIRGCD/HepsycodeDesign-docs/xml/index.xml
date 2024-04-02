@@ -1,0 +1,532 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.17">
+  <compound refid="class_basic_block" kind="class"><name>BasicBlock</name>
+    <member refid="class_basic_block_1a4cad9fc9592145fea0335e694df17ebf" kind="variable"><name>name</name></member>
+    <member refid="class_basic_block_1a306c90076760a7ccd52ffab5cba5a2f5" kind="variable"><name>id</name></member>
+    <member refid="class_basic_block_1a730e1383a3247e3a456b6cea00575aed" kind="variable"><name>type</name></member>
+    <member refid="class_basic_block_1ae5d66a26435ab7c34ac15de59eafe7b3" kind="variable"><name>idPU</name></member>
+    <member refid="class_basic_block_1aaf3c4ccda26ba23923e66f1e77228f2c" kind="variable"><name>vpu</name></member>
+    <member refid="class_basic_block_1a298dcdfcc1736778a7262329d9204edd" kind="variable"><name>codeSize</name></member>
+    <member refid="class_basic_block_1ab89eed26cc943dd972c686391d7bbc69" kind="variable"><name>dataSize</name></member>
+    <member refid="class_basic_block_1a4c5622c7d3329c93c0bc39705bb19ff3" kind="variable"><name>eqG</name></member>
+    <member refid="class_basic_block_1a0cac9b02f5e385651a80c4469301a586" kind="variable"><name>FRT</name></member>
+    <member refid="class_basic_block_1ae1dead3b6fbfaaf11aa596013d9c3615" kind="function"><name>getName</name></member>
+    <member refid="class_basic_block_1a2be928b15c8a74a0f171f97c285791f2" kind="function"><name>setName</name></member>
+    <member refid="class_basic_block_1af7b05902e57ffd9e21fd582b3e49f29c" kind="function"><name>getId</name></member>
+    <member refid="class_basic_block_1a1abdc5c467f903b3bb6f51fb68283b21" kind="function"><name>setId</name></member>
+    <member refid="class_basic_block_1a42cf1d9e35e3f2ded6510a2f3f9d2c74" kind="function"><name>getType</name></member>
+    <member refid="class_basic_block_1ae33921bd8c15b268aba6f5b1526f893b" kind="function"><name>setType</name></member>
+    <member refid="class_basic_block_1a23d2e5aa36d0b173d7e662493dee7db0" kind="function"><name>getIdPU</name></member>
+    <member refid="class_basic_block_1aae5e45d56ddfdd6c791f14fed105b544" kind="function"><name>setIdPU</name></member>
+    <member refid="class_basic_block_1a5c247400a7e86e54f98bc5ea3a8b34d1" kind="function"><name>getProcessors</name></member>
+    <member refid="class_basic_block_1a4cbb966d0ce3b7364877cf6e46e33672" kind="function"><name>setProcessor</name></member>
+    <member refid="class_basic_block_1a201f977359d366099f7e63708fc1db80" kind="function"><name>getCodeSize</name></member>
+    <member refid="class_basic_block_1a14bbb26476609a17b226400d2fd8ec05" kind="function"><name>setCodeSize</name></member>
+    <member refid="class_basic_block_1a2e49d14597098dee219b8b628ec332e2" kind="function"><name>getDataSize</name></member>
+    <member refid="class_basic_block_1a9f71209e93288e8eb82311fe5961e2ff" kind="function"><name>setDataSize</name></member>
+    <member refid="class_basic_block_1ab4ae1a868abfaeb6a4003a9332b357cc" kind="function"><name>getEqG</name></member>
+    <member refid="class_basic_block_1aa3a9be4f5f76e76b91e5a3a009f95f44" kind="function"><name>setEqG</name></member>
+    <member refid="class_basic_block_1aa7ce9d2bdf5d92bf86b3e1290134af93" kind="function"><name>getFRT</name></member>
+    <member refid="class_basic_block_1aee9fb07de76f430ec78e48e85c3d5fd9" kind="function"><name>setFRT</name></member>
+  </compound>
+  <compound refid="class_channel" kind="class"><name>Channel</name>
+    <member refid="class_channel_1ada27be4a604630621c5de998c7f4a418" kind="variable"><name>name</name></member>
+    <member refid="class_channel_1afc927ef6eb5c4facb2bed6f9c74594b3" kind="variable"><name>id</name></member>
+    <member refid="class_channel_1a4150fdc6d32d1046ce353fead3a03859" kind="variable"><name>w_id</name></member>
+    <member refid="class_channel_1a9b6254aa7b5a479acc5c06e121d60541" kind="variable"><name>r_id</name></member>
+    <member refid="class_channel_1a8b61c56e572c25da10769f2391c5ca90" kind="variable"><name>width</name></member>
+    <member refid="class_channel_1a5aae410ad04998a0605d5e5f5aea6f67" kind="variable"><name>num</name></member>
+    <member refid="class_channel_1ae59cca5ceecbf1eab184500c71f13e4c" kind="variable"><name>working_time</name></member>
+    <member refid="class_channel_1ab19bcd2871b10a8a86029e7fd7ea022c" kind="variable"><name>working_energy</name></member>
+    <member refid="class_channel_1a53361b01056aea15c93053feb470b715" kind="function"><name>getName</name></member>
+    <member refid="class_channel_1a0a74f31ad2fd5c1bb1af019313e510c6" kind="function"><name>setName</name></member>
+    <member refid="class_channel_1a88e3cbfff29cf57b724e3bbd83f01a86" kind="function"><name>getId</name></member>
+    <member refid="class_channel_1a12e1cdd1b9887f1ed483d778772bfc53" kind="function"><name>setId</name></member>
+    <member refid="class_channel_1a6cc16d8f4b627251f9de609a62fa4d22" kind="function"><name>getW_id</name></member>
+    <member refid="class_channel_1af9e34fe60361f6e0c234e691d9d2824d" kind="function"><name>setW_id</name></member>
+    <member refid="class_channel_1a30a7fcde287743584d466cf092143bac" kind="function"><name>getR_id</name></member>
+    <member refid="class_channel_1a87fe96b999c9503c2a8839ee6498f256" kind="function"><name>setR_id</name></member>
+    <member refid="class_channel_1ab1496219d9f8b32b49b8df0ab86c4e9d" kind="function"><name>getWidth</name></member>
+    <member refid="class_channel_1a448e2f0beb2b7ce2a02a19e2eaf17d55" kind="function"><name>setWidth</name></member>
+    <member refid="class_channel_1a39aa69b49124b74185a3408af6ccfc43" kind="function"><name>getNum</name></member>
+    <member refid="class_channel_1adb8356f7bba44722ed6923684b8fdd7f" kind="function"><name>setNum</name></member>
+  </compound>
+  <compound refid="structfir16e__parameters" kind="struct"><name>fir16e_parameters</name>
+    <member refid="structfir16e__parameters_1aaf9c21d0921a75d9528f3afe73c4efbc" kind="variable"><name>acc</name></member>
+    <member refid="structfir16e__parameters_1a2e9179d705c294bf1e699545da5d26ed" kind="variable"><name>coef</name></member>
+    <member refid="structfir16e__parameters_1ae02a5c0f568ad52190d1585205337494" kind="variable"><name>shift</name></member>
+    <member refid="structfir16e__parameters_1a233235a05f5c75a7470c4e23aa279102" kind="variable"><name>sample_tmp</name></member>
+  </compound>
+  <compound refid="structfir16e__results" kind="struct"><name>fir16e_results</name>
+    <member refid="structfir16e__results_1a5b758c23c1cf7b9904536e4b4fdc9213" kind="variable"><name>acc</name></member>
+  </compound>
+  <compound refid="structfir16s__parameters" kind="struct"><name>fir16s_parameters</name>
+    <member refid="structfir16s__parameters_1ace4b801b0a54f27f7ad5f92b753a8175" kind="variable"><name>shift</name></member>
+    <member refid="structfir16s__parameters_1a364563d85914eb0eba02828d309d994b" kind="variable"><name>sample_tmp</name></member>
+  </compound>
+  <compound refid="structfir16s__results" kind="struct"><name>fir16s_results</name>
+    <member refid="structfir16s__results_1a73616346673b8d61fb292bfc064eb6d2" kind="variable"><name>shift</name></member>
+  </compound>
+  <compound refid="structfir8e__parameters" kind="struct"><name>fir8e_parameters</name>
+    <member refid="structfir8e__parameters_1ae9ddf548dcac80e717254886d2d81dfc" kind="variable"><name>acc</name></member>
+    <member refid="structfir8e__parameters_1a30f60f641f56effb5939e0e3134d7689" kind="variable"><name>coef</name></member>
+    <member refid="structfir8e__parameters_1a7b6494c52e9c74662b9f82058f5c45d3" kind="variable"><name>shift</name></member>
+    <member refid="structfir8e__parameters_1a489e356ce63ffc6a4364d51001466061" kind="variable"><name>sample_tmp</name></member>
+  </compound>
+  <compound refid="structfir8e__results" kind="struct"><name>fir8e_results</name>
+    <member refid="structfir8e__results_1a96690c57e8968fb79bbcf0736b919d74" kind="variable"><name>acc</name></member>
+  </compound>
+  <compound refid="structfir8s__parameters" kind="struct"><name>fir8s_parameters</name>
+    <member refid="structfir8s__parameters_1ac70dfc7970a004671d8e93000a3a1a8b" kind="variable"><name>shift</name></member>
+    <member refid="structfir8s__parameters_1a2e7beba5c105fe0936012d1b0b0d0fee" kind="variable"><name>sample_tmp</name></member>
+  </compound>
+  <compound refid="structfir8s__results" kind="struct"><name>fir8s_results</name>
+    <member refid="structfir8s__results_1af1e0155634694c6f2479e8c69ce72dc5" kind="variable"><name>shift</name></member>
+  </compound>
+  <compound refid="structgcde__parameters" kind="struct"><name>gcde_parameters</name>
+    <member refid="structgcde__parameters_1a6a87f3b51d21aa5c2d23625fa8e02216" kind="variable"><name>sample1</name></member>
+    <member refid="structgcde__parameters_1aca29a1b102b8cfb96f79e8254ef3477e" kind="variable"><name>sample2</name></member>
+  </compound>
+  <compound refid="structgcde__results" kind="struct"><name>gcde_results</name>
+    <member refid="structgcde__results_1adc9a829b13114c46522b001c376af7ec" kind="variable"><name>result</name></member>
+  </compound>
+  <compound refid="class_memory" kind="class"><name>Memory</name>
+    <member refid="class_memory_1ab9700fb68b6db81bed6115794f9d0c22" kind="variable"><name>codeSize</name></member>
+    <member refid="class_memory_1a46b899813a58e32a87d04599d63ca163" kind="variable"><name>dataSize</name></member>
+    <member refid="class_memory_1a9f8f1bf0bd47994bf6e2d64ddcdf9302" kind="function"><name>Memory</name></member>
+    <member refid="class_memory_1a6c9d8edd683dbae1f59f0a9aa3ef2424" kind="function"><name>getCodeSize</name></member>
+    <member refid="class_memory_1a1f00ca41f42ada4525f9bae30e1bced4" kind="function"><name>setCodeSize</name></member>
+    <member refid="class_memory_1ab361eff2cef17729f170bb94e431efbb" kind="function"><name>getDataSize</name></member>
+    <member refid="class_memory_1a50da769112b9a636b5fd0b8194bbb1cc" kind="function"><name>setDataSize</name></member>
+  </compound>
+  <compound refid="class_physical_link" kind="class"><name>PhysicalLink</name>
+    <member refid="class_physical_link_1ab7d8e236c3a63063c48a572753f92455" kind="variable"><name>name</name></member>
+    <member refid="class_physical_link_1a428c21ce3a75e45ac4e1da6967382f77" kind="variable"><name>id</name></member>
+    <member refid="class_physical_link_1a38f205a4a97e9869b93944e0f820f11b" kind="variable"><name>physical_width</name></member>
+    <member refid="class_physical_link_1a90cb0e1c2a0d9951899b587d6d2b247a" kind="variable"><name>tcomm</name></member>
+    <member refid="class_physical_link_1a2f2ff97a12a4c37da1892f0fc2e855b2" kind="variable"><name>tacomm</name></member>
+    <member refid="class_physical_link_1ac441e379b59ecb00c48ebef53f2d6b75" kind="variable"><name>bandwidth</name></member>
+    <member refid="class_physical_link_1a2c8e1cba265b4e099ac6b07c7839de0e" kind="variable"><name>a2</name></member>
+    <member refid="class_physical_link_1a46367b48d7ab1d5c06dd2051a6d5a32f" kind="variable"><name>a1</name></member>
+    <member refid="class_physical_link_1a38870d04d7877b9ebe3a3a9252745fa4" kind="function"><name>getName</name></member>
+    <member refid="class_physical_link_1a720451548bfac94a60eca8c8f47d343b" kind="function"><name>setName</name></member>
+    <member refid="class_physical_link_1a6b1247a6652918c90b4ae99b9f2f5b88" kind="function"><name>getId</name></member>
+    <member refid="class_physical_link_1a4c1ca22f348862858653c4f02496218f" kind="function"><name>setId</name></member>
+    <member refid="class_physical_link_1a5bd500fa155893a361f0884a3edefec7" kind="function"><name>getPhysicalWidth</name></member>
+    <member refid="class_physical_link_1aaed942eff035eb7f0a45e5cadc0200ab" kind="function"><name>setPhysicalWidth</name></member>
+    <member refid="class_physical_link_1ae83d2eca88f0999b1ea7c6ee72a788a8" kind="function"><name>getTcomm</name></member>
+    <member refid="class_physical_link_1a5b75831c5c40358e35dac40e95abdd71" kind="function"><name>setTcomm</name></member>
+    <member refid="class_physical_link_1acf0976c043aeef0e82b8482abf3bf4ec" kind="function"><name>getTAcomm</name></member>
+    <member refid="class_physical_link_1a9f72f16b0f7fa6b4976ab10c4988721c" kind="function"><name>setTAcomm</name></member>
+    <member refid="class_physical_link_1add09ffe313fb274e4ab886d87f5bef9d" kind="function"><name>getBandwidth</name></member>
+    <member refid="class_physical_link_1a8fcfa235def47bf09f6d3ae892dbb2c3" kind="function"><name>setBandwidth</name></member>
+    <member refid="class_physical_link_1a162bd0bc2daadc05c98bf10844be6b36" kind="function"><name>geta2</name></member>
+    <member refid="class_physical_link_1ab4e2b4917f65eb53ae125b6adf0f30b9" kind="function"><name>seta2</name></member>
+    <member refid="class_physical_link_1aa7897d3d8c11c58b493388604fc4a07b" kind="function"><name>geta1</name></member>
+    <member refid="class_physical_link_1a3a4bc3e300cf94a0105798d28ff7b8f2" kind="function"><name>seta1</name></member>
+  </compound>
+  <compound refid="class_process" kind="class"><name>Process</name>
+    <member refid="class_process_1a8458c9ab0528b0f5fccb56968c1eb577" kind="variable"><name>name</name></member>
+    <member refid="class_process_1af4fcdaeb47e30030e4d4877232b6c135" kind="variable"><name>id</name></member>
+    <member refid="class_process_1ae03e5ff2b64628843a8436bea9703b70" kind="variable"><name>priority</name></member>
+    <member refid="class_process_1af97a7745a37113e0d5b4ca9b17aed729" kind="variable"><name>criticality</name></member>
+    <member refid="class_process_1a70972fe640d0989f28bd451af196615c" kind="variable"><name>eqGate</name></member>
+    <member refid="class_process_1aa4ff148aceb9f05d1d5a5152e610a322" kind="variable"><name>dataType</name></member>
+    <member refid="class_process_1a3fbb956251eecb4b438c640fd8c1a12d" kind="variable"><name>codeSizeMap</name></member>
+    <member refid="class_process_1a125e902953b35206d7d2979e11b56d86" kind="variable"><name>dataSizeMap</name></member>
+    <member refid="class_process_1a86e0eaba322501bf13bd8138324a1a23" kind="variable"><name>affinity</name></member>
+    <member refid="class_process_1a6147d0be2c050cb4669640e7076e1241" kind="variable"><name>concurrency</name></member>
+    <member refid="class_process_1ab18c69089c09584e0d78630fa782ee93" kind="variable"><name>load</name></member>
+    <member refid="class_process_1ab824045bdc37b05cd9182fda746610b5" kind="variable"><name>profiling</name></member>
+    <member refid="class_process_1a47be8c61a3a5460452753dc98b68389f" kind="variable"><name>processTime</name></member>
+    <member refid="class_process_1a04c66e1f8802aa8528226df19a5d9516" kind="variable"><name>energy</name></member>
+    <member refid="class_process_1a9f4553eac74c657bb451f390c17d6bea" kind="function"><name>Process</name></member>
+    <member refid="class_process_1aae530d36427cb0c1fe817cb339bd7691" kind="function"><name>getName</name></member>
+    <member refid="class_process_1ad1d3a2fd1af703ff1b986512d675660b" kind="function"><name>setName</name></member>
+    <member refid="class_process_1a4a5b2f6a945300fd6ecd243bc14e8073" kind="function"><name>getId</name></member>
+    <member refid="class_process_1ac2d4d655dc9fe6317889938783ec2848" kind="function"><name>setId</name></member>
+    <member refid="class_process_1af5103e08c032d9247110f0a7655bf37c" kind="function"><name>getPriority</name></member>
+    <member refid="class_process_1a011879a0a11d6bacd3a6d768293ab0d2" kind="function"><name>setPriority</name></member>
+    <member refid="class_process_1a8eaeeedaf35ee19fcadf52b99e957aac" kind="function"><name>getCriticality</name></member>
+    <member refid="class_process_1a43c73ef0483b869e4231830eeff46d48" kind="function"><name>setCriticality</name></member>
+    <member refid="class_process_1a7653e5156ed113e2a030ba0188350363" kind="function"><name>getEqGate</name></member>
+    <member refid="class_process_1a74caf223f4391e3145eee5899b30a09b" kind="function"><name>setEqGate</name></member>
+    <member refid="class_process_1a1a52596c85f381905b97b858cbc8c145" kind="function"><name>getDataType</name></member>
+    <member refid="class_process_1a3aaefcd2768bd481e22228851b161546" kind="function"><name>setDataType</name></member>
+    <member refid="class_process_1af196d2bb3cb88dbf0c517428e7b09538" kind="function"><name>setMemSize</name></member>
+    <member refid="class_process_1af55a4774a1519b84988e4e3ec3fcc7a2" kind="function"><name>setCodeSize</name></member>
+    <member refid="class_process_1a268bc20c1c875e94e50c5d6d1ad9ec06" kind="function"><name>setDataSize</name></member>
+    <member refid="class_process_1a5dffdfeba3879c5e032db1c168d898be" kind="function"><name>getAffinityByName</name></member>
+    <member refid="class_process_1a6f1fdb3ef348ebe19f1fd44671edfed8" kind="function"><name>setAffinity</name></member>
+    <member refid="class_process_1a8fb82ba026f5530a9f9724fbf1142aba" kind="function"><name>setConcurrency</name></member>
+    <member refid="class_process_1a9d9cfc179387b12e2bb1cdc214b6a9d8" kind="function"><name>setLoad</name></member>
+    <member refid="class_process_1a73a66495ca1da4ba176cf2d04104acef" kind="function"><name>getPS_Profiling</name></member>
+    <member refid="class_process_1ad766d35cd91ef755abdc5df596980923" kind="function"><name>getProcessTime</name></member>
+    <member refid="class_process_1a2991ac041e868df69f3f394ee91791cb" kind="function"><name>setEnergy</name></member>
+    <member refid="class_process_1ad854bd9c327eff4b2f0a06cf184081b5" kind="function"><name>getEnergy</name></member>
+  </compound>
+  <compound refid="class_processing_unit" kind="class"><name>ProcessingUnit</name>
+    <member refid="class_processing_unit_1a39c59ae9752a23c906d91528b32d6ca2" kind="variable"><name>name</name></member>
+    <member refid="class_processing_unit_1a7c79d395aec1489d72e8deb11e81bcc3" kind="variable"><name>id</name></member>
+    <member refid="class_processing_unit_1a1798129379e63325bc45484193334d35" kind="variable"><name>processorType</name></member>
+    <member refid="class_processing_unit_1a82138ac0886f2af91a81e5c68e4ea375" kind="variable"><name>cost</name></member>
+    <member refid="class_processing_unit_1a53d94f4cc03f4dad1fdef142ddacbfee" kind="variable"><name>ISA</name></member>
+    <member refid="class_processing_unit_1a01ebb7abce840e8b996956228832e65e" kind="variable"><name>frequency</name></member>
+    <member refid="class_processing_unit_1a01bb4de07428d71da7b004594ff336bd" kind="variable"><name>CC4CS</name></member>
+    <member refid="class_processing_unit_1ab19b7aaa350746fa5d57e8cf70f0da3c" kind="variable"><name>Power</name></member>
+    <member refid="class_processing_unit_1a3d61b59933aa4703740546137478fdde" kind="variable"><name>MIPS</name></member>
+    <member refid="class_processing_unit_1aa9f158e72fea6e416f3c1de0e8a62320" kind="variable"><name>I4CSmin</name></member>
+    <member refid="class_processing_unit_1a8e68ace97807e113397794847ba13a37" kind="variable"><name>I4CSmax</name></member>
+    <member refid="class_processing_unit_1a946073849ecb4e68173fc843658114dd" kind="variable"><name>Vdd</name></member>
+    <member refid="class_processing_unit_1a30f2cae8129e6d834a95a9c0778e955d" kind="variable"><name>Idd</name></member>
+    <member refid="class_processing_unit_1a19c1e33d59378a6db80ec7bffaa72d22" kind="variable"><name>overheadCS</name></member>
+    <member refid="class_processing_unit_1a367aa0751e97e2562b64a50b4e4142dd" kind="function"><name>getId</name></member>
+    <member refid="class_processing_unit_1a95737a4e4a2bd424cb4455f0c4a84cf5" kind="function"><name>setId</name></member>
+    <member refid="class_processing_unit_1a9d6d56e08d110b9a12c45f12ebff1d97" kind="function"><name>getName</name></member>
+    <member refid="class_processing_unit_1a24c691bffdbf8b79fa8301ba6493e0e5" kind="function"><name>setName</name></member>
+    <member refid="class_processing_unit_1ab0655a56bb59cad8ece761abbbc65cdc" kind="function"><name>getProcessorType</name></member>
+    <member refid="class_processing_unit_1a11749a7a862ab46b771844fddc373ed6" kind="function"><name>setProcessorType</name></member>
+    <member refid="class_processing_unit_1a165cc1bf37c9a782333ede90806442d5" kind="function"><name>getCost</name></member>
+    <member refid="class_processing_unit_1aa3dae99a84415455a6db52ce06268ee6" kind="function"><name>setCost</name></member>
+    <member refid="class_processing_unit_1a05972e9632c4beca6a20454d06a07aef" kind="function"><name>getISA</name></member>
+    <member refid="class_processing_unit_1a32aac7fd512cb23a8cc629d87ce317d8" kind="function"><name>setISA</name></member>
+    <member refid="class_processing_unit_1a050cc3064600765a2c5b28f6a4034875" kind="function"><name>getFrequency</name></member>
+    <member refid="class_processing_unit_1a48a63b09d626c9563d36404b5f95a04a" kind="function"><name>setFrequency</name></member>
+    <member refid="class_processing_unit_1a01cb30925eeacbecd284554bef40f1e2" kind="function"><name>getCC4S</name></member>
+    <member refid="class_processing_unit_1a0878e37abdc168f31758d4df208c6663" kind="function"><name>setCC4S</name></member>
+    <member refid="class_processing_unit_1abd0118180953341e203b988f6430c72c" kind="function"><name>getPower</name></member>
+    <member refid="class_processing_unit_1a4994085fb506708d4c0f1c27565ffe2b" kind="function"><name>setPower</name></member>
+    <member refid="class_processing_unit_1afe2c892fcd7e24ced8de933eb7078265" kind="function"><name>getMIPS</name></member>
+    <member refid="class_processing_unit_1af91c01d3a84acf6f310949e80906e824" kind="function"><name>setMIPS</name></member>
+    <member refid="class_processing_unit_1a0d5c74b4ca7b117ec84b7ed1cd897840" kind="function"><name>getI4CSmin</name></member>
+    <member refid="class_processing_unit_1afb3bb2c3b1421dfabf867ff1bd084968" kind="function"><name>setI4CSmin</name></member>
+    <member refid="class_processing_unit_1a6ce43383c58fd2c1ef0b0320c0936543" kind="function"><name>getI4CSmax</name></member>
+    <member refid="class_processing_unit_1a9995278db81888144089791e7eef8b71" kind="function"><name>setI4CSmax</name></member>
+    <member refid="class_processing_unit_1a22cde43de69c7d230446ea3a45ad2107" kind="function"><name>getVdd</name></member>
+    <member refid="class_processing_unit_1ac4ef8b2cafc7e379b4cb05e463840128" kind="function"><name>setVdd</name></member>
+    <member refid="class_processing_unit_1aff68b527f86f27ea0b373c27406f6281" kind="function"><name>getIdd</name></member>
+    <member refid="class_processing_unit_1a12212762fb57a5b582782c66861443fc" kind="function"><name>setIdd</name></member>
+    <member refid="class_processing_unit_1aac8677c23e3d151d9994c863c817327a" kind="function"><name>getOverheadCS</name></member>
+    <member refid="class_processing_unit_1a4c38556d47f2cd40adc4092b09dba992" kind="function"><name>setOverheadCS</name></member>
+  </compound>
+  <compound refid="classsc__csp__channel" kind="class"><name>sc_csp_channel</name>
+    <member refid="classsc__csp__channel_1a014541bbd872463dd525b35e951ee9ba" kind="variable"><name>ready_to_read_event</name></member>
+    <member refid="classsc__csp__channel_1aab17ea7d52d31f39e68eb4472cb27a4a" kind="variable"><name>ready_to_write_event</name></member>
+    <member refid="classsc__csp__channel_1acf1aadf77836e165d8b7672500bd2dc7" kind="variable"><name>ready_alt_event</name></member>
+    <member refid="classsc__csp__channel_1ae716d02584a29463adb04def170fce8e" kind="variable"><name>ready_to_read</name></member>
+    <member refid="classsc__csp__channel_1ab7c20a9236f789c6e64d8c83ae19967f" kind="variable"><name>ready_to_write</name></member>
+    <member refid="classsc__csp__channel_1aaeef06ac96bbb3468f9aa907c5b39253" kind="variable"><name>enable_alt_events</name></member>
+    <member refid="classsc__csp__channel_1aa4ab2439d490053e231a59dd9b77e6d6" kind="variable"><name>csp_buf</name></member>
+    <member refid="classsc__csp__channel_1a03a5aa44e377fea90b93e68e481ad1e1" kind="variable"><name>m_reader</name></member>
+    <member refid="classsc__csp__channel_1ad4a06e1cfab0e87829b914b4230d2acb" kind="variable"><name>m_writer</name></member>
+    <member refid="classsc__csp__channel_1aed1aa9cb465c4a9c7751169994408c72" kind="variable"><name>id</name></member>
+    <member refid="classsc__csp__channel_1a5bef0234cd8c0762891d104dd4e7b68a" kind="variable"><name>w_id</name></member>
+    <member refid="classsc__csp__channel_1ae16790111d142e48baf4563eb5e44069" kind="variable"><name>r_id</name></member>
+    <member refid="classsc__csp__channel_1affca8dbc03ca31ac85f54766040aba41" kind="variable"><name>width</name></member>
+    <member refid="classsc__csp__channel_1a36b454aeb9b50a4094f31801a6976b0f" kind="variable"><name>num</name></member>
+    <member refid="classsc__csp__channel_1a6508172b749b9dadf1824f5e816a32ed" kind="variable"><name>IPC</name></member>
+    <member refid="classsc__csp__channel_1a5cd83229e038e07f237512df3df4adf9" kind="variable"><name>waiting_time</name></member>
+    <member refid="classsc__csp__channel_1ab0977c6aab0732a7946a73aa4b2e6de8" kind="variable"><name>working_time</name></member>
+    <member refid="classsc__csp__channel_1a58737a4adf049b01ddce1acbbb7c5115" kind="variable"><name>partial_energy</name></member>
+    <member refid="classsc__csp__channel_1a97c55d92a3c04d41300ffdb208eabc92" kind="variable"><name>working_energy</name></member>
+    <member refid="classsc__csp__channel_1a4609ce8351fc80bfa9041292f6722d3c" kind="variable"><name>tcomm</name></member>
+    <member refid="classsc__csp__channel_1a87dc80bcdbac9e16d542da60040795df" kind="variable"><name>tacomm</name></member>
+    <member refid="classsc__csp__channel_1aae2e852312f70713be417eec3bd51b25" kind="variable"><name>physical_width</name></member>
+    <member refid="classsc__csp__channel_1a18caf07ac6dda7298155bf5bee992f81" kind="function"><name>sc_csp_channel</name></member>
+    <member refid="group__firfirgcd__csp__channel__group_1ga5bbbddcd88383d3ed9ee425ad87ee58c" kind="function"><name>register_port</name></member>
+    <member refid="group__firfirgcd__csp__channel__group_1ga23046a4820dcf9ef26a75eba9cb7d49b" kind="function"><name>read</name></member>
+    <member refid="group__firfirgcd__csp__channel__group_1gaf3eb60ce6aecbe88c0e72fdb19a1f7af" kind="function"><name>read</name></member>
+    <member refid="group__firfirgcd__csp__channel__group_1gaf8a9ace576ff2e0462c8db276f9f388d" kind="function"><name>write</name></member>
+    <member refid="group__firfirgcd__csp__channel__group_1gab1a08e5d4129f9647e573af0c4ca4f30" kind="function"><name>read_test</name></member>
+    <member refid="group__firfirgcd__csp__channel__group_1ga3566fb8ed3dc3ba7ab7d6dbe17787153" kind="function"><name>write_test</name></member>
+    <member refid="group__firfirgcd__csp__channel__group_1gaaed132e73280fe2a46b14604240832bc" kind="function"><name>register_alt</name></member>
+    <member refid="group__firfirgcd__csp__channel__group_1ga40cb801a3a15df214563c89160c6d19c" kind="function"><name>get_alt_event</name></member>
+    <member refid="classsc__csp__channel_1a189b4ad7e6190ef15dde076380ff157f" kind="function"><name>operator T</name></member>
+    <member refid="classsc__csp__channel_1af613528dfec5c1d151cce1c5349d16a4" kind="function"><name>operator=</name></member>
+    <member refid="group__firfirgcd__csp__channel__group_1ga216706630fbd1f222b428cc4e6aa523d" kind="function"><name>trace</name></member>
+    <member refid="classsc__csp__channel_1a60ae57ddb1ebd031e4ed21094a49a48b" kind="function"><name>kind</name></member>
+    <member refid="group__firfirgcd__csp__channel__group_1ga8be7bf7ee4f0c35e684b3de9a5163705" kind="function"><name>init</name></member>
+  </compound>
+  <compound refid="classsc__core_1_1sc__csp__channel__in__if" kind="class"><name>sc_core::sc_csp_channel_in_if</name>
+    <member refid="classsc__core_1_1sc__csp__channel__in__if_1a2649054eea07eb61937ea38891162e85" kind="function"><name>read</name></member>
+    <member refid="classsc__core_1_1sc__csp__channel__in__if_1a5e8076fced231d716900901e5d60f080" kind="function"><name>read</name></member>
+    <member refid="classsc__core_1_1sc__csp__channel__in__if_1ad7139da842ceebdc4c64d4cf2b02d371" kind="function"><name>read_test</name></member>
+    <member refid="classsc__core_1_1sc__csp__channel__in__if_1a163aae4bbe4ad9f8dcee26b330e929d1" kind="function"><name>register_alt</name></member>
+    <member refid="classsc__core_1_1sc__csp__channel__in__if_1acf52a1d31829961428e7205a835f8973" kind="function"><name>get_alt_event</name></member>
+    <member refid="classsc__core_1_1sc__csp__channel__in__if_1a63016ae797a557ea1abffb6a3688ad9e" kind="function"><name>sc_csp_channel_in_if</name></member>
+  </compound>
+  <compound refid="classsc__core_1_1sc__csp__channel__out__if" kind="class"><name>sc_core::sc_csp_channel_out_if</name>
+    <member refid="classsc__core_1_1sc__csp__channel__out__if_1ae0da34a87857ef8c638455cb6484004b" kind="function"><name>write</name></member>
+    <member refid="classsc__core_1_1sc__csp__channel__out__if_1af4f0e8a520cdb556754743a056fa4e37" kind="function"><name>write_test</name></member>
+    <member refid="classsc__core_1_1sc__csp__channel__out__if_1a057d067cc18ad4887d53627ff8f5ba5a" kind="function"><name>register_alt</name></member>
+    <member refid="classsc__core_1_1sc__csp__channel__out__if_1ad5cd0e709df419262e3714e91509d3d3" kind="function"><name>get_alt_event</name></member>
+    <member refid="classsc__core_1_1sc__csp__channel__out__if_1afa1c0785fcb46ce78d4749b4ff28ff08" kind="function"><name>sc_csp_channel_out_if</name></member>
+  </compound>
+  <compound refid="classsc__interface" kind="class"><name>sc_interface</name>
+  </compound>
+  <compound refid="classsc__prim__channel" kind="class"><name>sc_prim_channel</name>
+  </compound>
+  <compound refid="class_system_manager" kind="class"><name>SystemManager</name>
+    <member refid="class_system_manager_1adcd8ce799616b977c206401ebdefab86" kind="variable"><name>VPS</name></member>
+    <member refid="class_system_manager_1a7dcc3ae8736a6aad7e27f276706205a3" kind="variable"><name>VCH</name></member>
+    <member refid="class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32" kind="variable"><name>VBB</name></member>
+    <member refid="class_system_manager_1af28a1744a2d964a7047c31c6a5f1644a" kind="variable"><name>VPL</name></member>
+    <member refid="class_system_manager_1abfd1d205fa299fa757e2b78d15724734" kind="variable"><name>allocationPS_BB</name></member>
+    <member refid="class_system_manager_1ab75b55327c942c6950f67c14ba9dea08" kind="variable"><name>allocationCH_PL</name></member>
+    <member refid="class_system_manager_1a7f06326402d0738cb87a1c03bf57f5c7" kind="variable"><name>FRL</name></member>
+    <member refid="class_system_manager_1a69ec2821a8a92a69fbb5cb0f789a64ca" kind="variable"><name>FRT</name></member>
+    <member refid="class_system_manager_1a2f8a3e2e1929be50ef8702629f50bb94" kind="function"><name>SystemManager</name></member>
+    <member refid="class_system_manager_1a545df7d9bd60c4d42797a7233a1f4d61" kind="function"><name>generateProcessInstances</name></member>
+    <member refid="class_system_manager_1a98b6400619bc75fc9333426b38b1d24b" kind="function"><name>generateChannelInstances</name></member>
+    <member refid="class_system_manager_1abb13ab99346bb9a9633852a797e03cf7" kind="function"><name>PS_Profiling</name></member>
+    <member refid="class_system_manager_1a21d2bb74e4472f99ec04243168e7964e" kind="function"><name>checkSPP</name></member>
+    <member refid="class_system_manager_1ab6efb1ee75ff2df870bd8e65480dc6e7" kind="function"><name>deleteConcXmlConCom</name></member>
+    <member refid="class_system_manager_1a5f16a17547d2cd543180e06e555304e7" kind="function"><name>updateXmlConCom</name></member>
+    <member refid="class_system_manager_1af468620e73667d65dbb7db93b78712a9" kind="function"><name>getAllocationPS_BB</name></member>
+    <member refid="class_system_manager_1aeaf3506efda2897408fd8d5273e871aa" kind="function"><name>updateSimulatedTime</name></member>
+    <member refid="class_system_manager_1a0d692288dbf1e1a75a331408cd4f2210" kind="function"><name>increaseSimulatedTime</name></member>
+    <member refid="class_system_manager_1a81c4c7415d63b21f9ae15fd5594b7692" kind="function"><name>increaseTimer</name></member>
+    <member refid="class_system_manager_1aa7e8eba2c8c064bc7e7df6ed9e9e1f53" kind="function"><name>updateEstimatedEnergy</name></member>
+    <member refid="class_system_manager_1a96ab5341b1af75dfcd59b14b02fa0bc7" kind="function"><name>increaseEstimatedEnergy</name></member>
+    <member refid="class_system_manager_1a9a32595149efd0a69d09c46387415aa0" kind="function"><name>deleteConcXmlEnergy</name></member>
+    <member refid="class_system_manager_1a99f32d48ffab81f6c16d86dedbede1e7" kind="function"><name>updateXmlEnergy</name></member>
+    <member refid="class_system_manager_1a77bb622cef7c79dab7463d02a2125542" kind="function"><name>generateBBInstances</name></member>
+    <member refid="class_system_manager_1a056fabdd037cf3a1c2e6e20764784159" kind="function"><name>generatePhysicalLinkInstances</name></member>
+    <member refid="class_system_manager_1a03ae9f4865c6ba14f9212ca4711d30a9" kind="function"><name>mappingPS</name></member>
+    <member refid="class_system_manager_1a027f130077f51033fad36ccaaeda2c57" kind="function"><name>mappingCH</name></member>
+    <member refid="class_system_manager_1ae0465f057cd9ac9f5c6d05befc85ff15" kind="function"><name>getFRT</name></member>
+    <member refid="class_system_manager_1a2babb39c1fc59e1d02782e3e39ea9412" kind="function"><name>setFRT</name></member>
+    <member refid="class_system_manager_1acf868dd1af35168e9e37a62b1a03780b" kind="function"><name>loadEst</name></member>
+    <member refid="class_system_manager_1ae7fbae6170e9f5e8aca0c436221dcf41" kind="function"><name>getFRL</name></member>
+    <member refid="class_system_manager_1aa25f8e4f2e4460d9652875772f48bb0e" kind="function"><name>deleteConcXmlLoad</name></member>
+    <member refid="class_system_manager_1afb69c0fedadb6e806e6576ad07c51162" kind="function"><name>updateXmlLoad</name></member>
+  </compound>
+  <compound refid="namespacepugi" kind="namespace"><name>pugi</name>
+  </compound>
+  <compound refid="namespacesc__core" kind="namespace"><name>sc_core</name>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="datatype_8h" kind="file"><name>datatype.h</name>
+  </compound>
+  <compound refid="define_8h" kind="file"><name>define.h</name>
+    <member refid="group__firfirgcd__define__group_1gad258142492454320138f79a00101f1f8" kind="define"><name>NPS</name></member>
+    <member refid="group__firfirgcd__define__group_1ga967ca22c6c7be038e1092147ce04f258" kind="define"><name>NCH</name></member>
+    <member refid="group__firfirgcd__define__group_1ga67e7d9a59126e595e10a78e11df73b39" kind="define"><name>TAP8</name></member>
+    <member refid="group__firfirgcd__define__group_1gaf2addfbdf98c5e76c823edde9336370f" kind="define"><name>TAP16</name></member>
+    <member refid="group__firfirgcd__define__group_1ga41078393655c31f01ef880a0492a776f" kind="define"><name>NUMBER_OF_INPUTS</name></member>
+    <member refid="group__firfirgcd__define__group_1ga498a2c2b57c15e562e939cccf28db094" kind="define"><name>NBB</name></member>
+    <member refid="group__firfirgcd__define__group_1ga76cc414b5d33950d0cb6ceea199d93de" kind="define"><name>NPL</name></member>
+    <member refid="group__firfirgcd__define__group_1ga796bd7c6ba2e59281760fb155c6287e8" kind="define"><name>APPLICATION</name></member>
+    <member refid="group__firfirgcd__define__group_1ga2398f91d2717d5cbd17f9f16c22d08ca" kind="define"><name>MAPPING_PS_BB</name></member>
+    <member refid="group__firfirgcd__define__group_1ga91657813bcfecb4c86e83b46e338364c" kind="define"><name>MAPPING_LC_PL</name></member>
+    <member refid="group__firfirgcd__define__group_1gacf471d2e884ab94235db48a5fd3ce252" kind="define"><name>energyComputation</name></member>
+    <member refid="group__firfirgcd__define__group_1ga8cfe71cc954d3c9e38dec20b50392b8d" kind="enum"><name>p_id</name></member>
+    <member refid="group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8da6a6acb823daa9d2547901e1e253f1a92" kind="enumvalue"><name>stimulus_id</name></member>
+    <member refid="group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8dab8bd51b016c7432eb1d0071f9677defe" kind="enumvalue"><name>display_id</name></member>
+    <member refid="group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8dada3380943e162c7dd92aee66f5d435ba" kind="enumvalue"><name>fir8m_id</name></member>
+    <member refid="group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8da183d4292fa4f5b3de92414e6f8c25157" kind="enumvalue"><name>fir8e_id</name></member>
+    <member refid="group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8daa1ce57908cd201f98c47ce27d9b6525c" kind="enumvalue"><name>fir8s_id</name></member>
+    <member refid="group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a" kind="enumvalue"><name>fir16m_id</name></member>
+    <member refid="group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8dab5eeffe958b1dca772bc9e6938f8e136" kind="enumvalue"><name>fir16e_id</name></member>
+    <member refid="group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8da4748eb52ab89dc23136a3e13b8e34d43" kind="enumvalue"><name>fir16s_id</name></member>
+    <member refid="group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8daa65866ff68063f414a6009f2bb6b5373" kind="enumvalue"><name>gcdm_id</name></member>
+    <member refid="group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8dadf90e6465f134074619ec58b5467394d" kind="enumvalue"><name>gcde_id</name></member>
+    <member refid="group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8daeb10f3005217e64d69d70e771e681c66" kind="enumvalue"><name>s_fir8m_fir8e_id</name></member>
+    <member refid="group__firfirgcd__define__group_1gaaa53553033df32820178982628a60cae" kind="enum"><name>bb_id</name></member>
+    <member refid="group__firfirgcd__define__group_1ggaaa53553033df32820178982628a60caea2112514dc02bed6a625e425c0487a6ab" kind="enumvalue"><name>BB8051_0_id</name></member>
+    <member refid="group__firfirgcd__define__group_1ggaaa53553033df32820178982628a60caea5487dd1d1d140792e1f0e2204299454c" kind="enumvalue"><name>BB8051_1_id</name></member>
+    <member refid="group__firfirgcd__define__group_1ggaaa53553033df32820178982628a60caeaa5912815fd96df44c5a5862aabfee096" kind="enumvalue"><name>BBleon3_0_id</name></member>
+    <member refid="group__firfirgcd__define__group_1ggaaa53553033df32820178982628a60caea375dd2456383ea5d0e048f3674a44671" kind="enumvalue"><name>BBleon3_1_id</name></member>
+    <member refid="group__firfirgcd__define__group_1ggaaa53553033df32820178982628a60caeabc53b9d75ec1bb7143ccae00479642a8" kind="enumvalue"><name>BBArtix7_0_id</name></member>
+    <member refid="group__firfirgcd__define__group_1gadc6e5733fc3c22f0a7b2914188c49c90" kind="enum"><name>state</name></member>
+    <member refid="group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90af35387cab0e820dcf7df1ed4702043e1" kind="enumvalue"><name>undefined</name></member>
+    <member refid="group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a4c97ffbad296d4a6b84b1c508fc5d32a" kind="enumvalue"><name>waiting</name></member>
+    <member refid="group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473" kind="enumvalue"><name>ready</name></member>
+    <member refid="group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c" kind="enumvalue"><name>running</name></member>
+    <member refid="group__firfirgcd__define__group_1ga1a6b6fb557d8d37d59700faf4e4c9167" kind="enum"><name>mode</name></member>
+    <member refid="group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a53ace14c115e45153a1c9105accceb4c" kind="enumvalue"><name>off</name></member>
+    <member refid="group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a66e84e235b9e03b6fdfc7ffe7e775de8" kind="enumvalue"><name>suspended</name></member>
+    <member refid="group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a5d178ae2be9d93ea4cbf1a9f0a2d9cbe" kind="enumvalue"><name>active</name></member>
+  </compound>
+  <compound refid="display_8cpp" kind="file"><name>display.cpp</name>
+  </compound>
+  <compound refid="display_8h" kind="file"><name>display.h</name>
+    <member refid="group__firfirgcd__display__group_1ga62f1837ecdb769140a861dbc2af2abdb" kind="function"><name>SC_MODULE</name></member>
+  </compound>
+  <compound refid="macros_8h" kind="file"><name>macros.h</name>
+    <member refid="group__firfirgcd__macros__group_1ga09b182b87a0936087ba1ff3ce91755e7" kind="define"><name>HEPSY_S</name></member>
+    <member refid="group__firfirgcd__macros__group_1ga652f3387e2319f751a6459f9db47cc3a" kind="define"><name>HEPSY_P</name></member>
+    <member refid="group__firfirgcd__macros__group_1gab8ed6dfd8e9d61861b9aff28d6b7300f" kind="define"><name>HEPSY_SCHED_CS</name></member>
+    <member refid="group__firfirgcd__macros__group_1ga64988c094471851711bcbbb5e1298616" kind="define"><name>PRE_WAIT</name></member>
+    <member refid="group__firfirgcd__macros__group_1ga521b4282fb564e25bc56196f1926ce30" kind="define"><name>POST_WAIT</name></member>
+    <member refid="group__firfirgcd__macros__group_1gaa2252b3bddc89494975397ffc18b09f5" kind="define"><name>HEPSY_S_TIMER</name></member>
+    <member refid="group__firfirgcd__macros__group_1gaf1fe2324408cd29c1e2dcd55f2e4a9c1" kind="define"><name>HEPSY_TRACE_PS_STATE</name></member>
+    <member refid="group__firfirgcd__macros__group_1gadc2d4bfbe106f792246792d01d66d63c" kind="define"><name>HEPSY_TRACE_PS_STATE_THIS</name></member>
+    <member refid="group__firfirgcd__macros__group_1ga139185aa9c10392aada97618a69ee2cd" kind="define"><name>HEPSY_TRACE_CH_STATE</name></member>
+    <member refid="group__firfirgcd__macros__group_1ga24b6f3a385f702b3a63e0811a0f22e75" kind="define"><name>HEPSY_TRACE_CH_STATE_THIS</name></member>
+    <member refid="group__firfirgcd__macros__group_1ga0f83efd33ffbe62c58c798abb824fa94" kind="define"><name>HEPSY_TRACE_BB_STATE</name></member>
+    <member refid="group__firfirgcd__macros__group_1ga0782cab9383550027672da286d54c931" kind="define"><name>HEPSY_TRACE_BB_STATE_THIS</name></member>
+    <member refid="group__firfirgcd__macros__group_1ga37921dae893594f3710d892f471de3cb" kind="define"><name>HEPSY_TRACE_SCHED_STATE</name></member>
+  </compound>
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="group__firfirgcd__main__group_1gaa604ac51b2579794e702367934dfb8ad" kind="variable"><name>pSystemManager</name></member>
+    <member refid="group__firfirgcd__main__group_1gad142acf1b36eb3c83c6e67364d257d48" kind="variable"><name>pSchedulingManager</name></member>
+    <member refid="group__firfirgcd__main__group_1gae8f25bd55b4a9f4801e99450be7d7423" kind="variable"><name>sampling_period</name></member>
+    <member refid="group__firfirgcd__main__group_1gaa8fde88a1a4ceac81a26274e6f38c4a4" kind="variable"><name>stop_concurrency_sampling</name></member>
+    <member refid="group__firfirgcd__main__group_1ga865e3def6cd1a641230218579d0a958f" kind="function"><name>sc_main</name></member>
+  </compound>
+  <compound refid="mainsystem_8h" kind="file"><name>mainsystem.h</name>
+    <member refid="group__firfirgcd__mainsystem__group_1ga7ea2a25adbd29a5e326b5236d331bb22" kind="function"><name>SC_MODULE</name></member>
+  </compound>
+  <compound refid="fir16__evaluation_8cpp" kind="file"><name>fir16_evaluation.cpp</name>
+  </compound>
+  <compound refid="fir16__main_8cpp" kind="file"><name>fir16_main.cpp</name>
+  </compound>
+  <compound refid="fir16__shifting_8cpp" kind="file"><name>fir16_shifting.cpp</name>
+  </compound>
+  <compound refid="fir8__evaluation_8cpp" kind="file"><name>fir8_evaluation.cpp</name>
+  </compound>
+  <compound refid="fir8__main_8cpp" kind="file"><name>fir8_main.cpp</name>
+  </compound>
+  <compound refid="fir8__shifting_8cpp" kind="file"><name>fir8_shifting.cpp</name>
+  </compound>
+  <compound refid="gcd__evaluation_8cpp" kind="file"><name>gcd_evaluation.cpp</name>
+  </compound>
+  <compound refid="gcd__main_8cpp" kind="file"><name>gcd_main.cpp</name>
+  </compound>
+  <compound refid="sc__csp__channel_8h" kind="file"><name>sc_csp_channel.h</name>
+    <member refid="group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad" kind="variable"><name>pSystemManager</name></member>
+    <member refid="group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48" kind="variable"><name>pSchedulingManager</name></member>
+  </compound>
+  <compound refid="sc__csp__channel__ifs_8h" kind="file"><name>sc_csp_channel_ifs.h</name>
+  </compound>
+  <compound refid="_scheduling_manager_8cpp" kind="file"><name>SchedulingManager.cpp</name>
+    <member refid="group__firfirgcd__main__group_1gaa604ac51b2579794e702367934dfb8ad" kind="variable"><name>pSystemManager</name></member>
+    <member refid="group__firfirgcd__main__group_1gaa8fde88a1a4ceac81a26274e6f38c4a4" kind="variable"><name>stop_concurrency_sampling</name></member>
+    <member refid="group__firfirgcd__main__group_1gae8f25bd55b4a9f4801e99450be7d7423" kind="variable"><name>sampling_period</name></member>
+  </compound>
+  <compound refid="_scheduling_manager_8h" kind="file"><name>SchedulingManager.h</name>
+    <member refid="group__scheduling__manager__group_1gaa604ac51b2579794e702367934dfb8ad" kind="variable"><name>pSystemManager</name></member>
+    <member refid="group__scheduling__manager__group_1ga8bb983276d3b9929ea5985632a3fa4e0" kind="function"><name>SC_MODULE</name></member>
+  </compound>
+  <compound refid="stim__gen_8cpp" kind="file"><name>stim_gen.cpp</name>
+    <member refid="group__firfirgcd__main__group_1gaa8fde88a1a4ceac81a26274e6f38c4a4" kind="variable"><name>stop_concurrency_sampling</name></member>
+  </compound>
+  <compound refid="stim__gen_8h" kind="file"><name>stim_gen.h</name>
+    <member refid="group__firfirgcd__stim__gen__group_1gac842ee10b82b5739821c3f7f39468620" kind="function"><name>SC_MODULE</name></member>
+  </compound>
+  <compound refid="_system_manager_8cpp" kind="file"><name>SystemManager.cpp</name>
+  </compound>
+  <compound refid="_system_manager_8h" kind="file"><name>SystemManager.h</name>
+  </compound>
+  <compound refid="tl_8cpp" kind="file"><name>tl.cpp</name>
+  </compound>
+  <compound refid="tl_8h" kind="file"><name>tl.h</name>
+  </compound>
+  <compound refid="group__firfirgcd__datatypes__group" kind="group"><name>firfirgcd_datatypes_group</name>
+  </compound>
+  <compound refid="group__firfirgcd__define__group" kind="group"><name>firfirgcd_define_group</name>
+    <member refid="group__firfirgcd__define__group_1ga8cfe71cc954d3c9e38dec20b50392b8d" kind="enum"><name>p_id</name></member>
+    <member refid="group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8da6a6acb823daa9d2547901e1e253f1a92" kind="enumvalue"><name>stimulus_id</name></member>
+    <member refid="group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8dab8bd51b016c7432eb1d0071f9677defe" kind="enumvalue"><name>display_id</name></member>
+    <member refid="group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8dada3380943e162c7dd92aee66f5d435ba" kind="enumvalue"><name>fir8m_id</name></member>
+    <member refid="group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8da183d4292fa4f5b3de92414e6f8c25157" kind="enumvalue"><name>fir8e_id</name></member>
+    <member refid="group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8daa1ce57908cd201f98c47ce27d9b6525c" kind="enumvalue"><name>fir8s_id</name></member>
+    <member refid="group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a" kind="enumvalue"><name>fir16m_id</name></member>
+    <member refid="group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8dab5eeffe958b1dca772bc9e6938f8e136" kind="enumvalue"><name>fir16e_id</name></member>
+    <member refid="group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8da4748eb52ab89dc23136a3e13b8e34d43" kind="enumvalue"><name>fir16s_id</name></member>
+    <member refid="group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8daa65866ff68063f414a6009f2bb6b5373" kind="enumvalue"><name>gcdm_id</name></member>
+    <member refid="group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8dadf90e6465f134074619ec58b5467394d" kind="enumvalue"><name>gcde_id</name></member>
+    <member refid="group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8daeb10f3005217e64d69d70e771e681c66" kind="enumvalue"><name>s_fir8m_fir8e_id</name></member>
+    <member refid="group__firfirgcd__define__group_1gaaa53553033df32820178982628a60cae" kind="enum"><name>bb_id</name></member>
+    <member refid="group__firfirgcd__define__group_1ggaaa53553033df32820178982628a60caea2112514dc02bed6a625e425c0487a6ab" kind="enumvalue"><name>BB8051_0_id</name></member>
+    <member refid="group__firfirgcd__define__group_1ggaaa53553033df32820178982628a60caea5487dd1d1d140792e1f0e2204299454c" kind="enumvalue"><name>BB8051_1_id</name></member>
+    <member refid="group__firfirgcd__define__group_1ggaaa53553033df32820178982628a60caeaa5912815fd96df44c5a5862aabfee096" kind="enumvalue"><name>BBleon3_0_id</name></member>
+    <member refid="group__firfirgcd__define__group_1ggaaa53553033df32820178982628a60caea375dd2456383ea5d0e048f3674a44671" kind="enumvalue"><name>BBleon3_1_id</name></member>
+    <member refid="group__firfirgcd__define__group_1ggaaa53553033df32820178982628a60caeabc53b9d75ec1bb7143ccae00479642a8" kind="enumvalue"><name>BBArtix7_0_id</name></member>
+    <member refid="group__firfirgcd__define__group_1gadc6e5733fc3c22f0a7b2914188c49c90" kind="enum"><name>state</name></member>
+    <member refid="group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90af35387cab0e820dcf7df1ed4702043e1" kind="enumvalue"><name>undefined</name></member>
+    <member refid="group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a4c97ffbad296d4a6b84b1c508fc5d32a" kind="enumvalue"><name>waiting</name></member>
+    <member refid="group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473" kind="enumvalue"><name>ready</name></member>
+    <member refid="group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c" kind="enumvalue"><name>running</name></member>
+    <member refid="group__firfirgcd__define__group_1ga1a6b6fb557d8d37d59700faf4e4c9167" kind="enum"><name>mode</name></member>
+    <member refid="group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a53ace14c115e45153a1c9105accceb4c" kind="enumvalue"><name>off</name></member>
+    <member refid="group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a66e84e235b9e03b6fdfc7ffe7e775de8" kind="enumvalue"><name>suspended</name></member>
+    <member refid="group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a5d178ae2be9d93ea4cbf1a9f0a2d9cbe" kind="enumvalue"><name>active</name></member>
+    <member refid="group__firfirgcd__define__group_1gad258142492454320138f79a00101f1f8" kind="define"><name>NPS</name></member>
+    <member refid="group__firfirgcd__define__group_1ga967ca22c6c7be038e1092147ce04f258" kind="define"><name>NCH</name></member>
+    <member refid="group__firfirgcd__define__group_1ga67e7d9a59126e595e10a78e11df73b39" kind="define"><name>TAP8</name></member>
+    <member refid="group__firfirgcd__define__group_1gaf2addfbdf98c5e76c823edde9336370f" kind="define"><name>TAP16</name></member>
+    <member refid="group__firfirgcd__define__group_1ga41078393655c31f01ef880a0492a776f" kind="define"><name>NUMBER_OF_INPUTS</name></member>
+    <member refid="group__firfirgcd__define__group_1ga498a2c2b57c15e562e939cccf28db094" kind="define"><name>NBB</name></member>
+    <member refid="group__firfirgcd__define__group_1ga76cc414b5d33950d0cb6ceea199d93de" kind="define"><name>NPL</name></member>
+    <member refid="group__firfirgcd__define__group_1ga796bd7c6ba2e59281760fb155c6287e8" kind="define"><name>APPLICATION</name></member>
+    <member refid="group__firfirgcd__define__group_1ga2398f91d2717d5cbd17f9f16c22d08ca" kind="define"><name>MAPPING_PS_BB</name></member>
+    <member refid="group__firfirgcd__define__group_1ga91657813bcfecb4c86e83b46e338364c" kind="define"><name>MAPPING_LC_PL</name></member>
+    <member refid="group__firfirgcd__define__group_1gacf471d2e884ab94235db48a5fd3ce252" kind="define"><name>energyComputation</name></member>
+  </compound>
+  <compound refid="group__firfirgcd__display__group" kind="group"><name>firfirgcd_display_group</name>
+    <member refid="group__firfirgcd__display__group_1ga62f1837ecdb769140a861dbc2af2abdb" kind="function"><name>SC_MODULE</name></member>
+  </compound>
+  <compound refid="group__firfirgcd__macros__group" kind="group"><name>firfirgcd_macros_group</name>
+    <member refid="group__firfirgcd__macros__group_1ga09b182b87a0936087ba1ff3ce91755e7" kind="define"><name>HEPSY_S</name></member>
+    <member refid="group__firfirgcd__macros__group_1ga652f3387e2319f751a6459f9db47cc3a" kind="define"><name>HEPSY_P</name></member>
+    <member refid="group__firfirgcd__macros__group_1gab8ed6dfd8e9d61861b9aff28d6b7300f" kind="define"><name>HEPSY_SCHED_CS</name></member>
+    <member refid="group__firfirgcd__macros__group_1ga64988c094471851711bcbbb5e1298616" kind="define"><name>PRE_WAIT</name></member>
+    <member refid="group__firfirgcd__macros__group_1ga521b4282fb564e25bc56196f1926ce30" kind="define"><name>POST_WAIT</name></member>
+    <member refid="group__firfirgcd__macros__group_1gaa2252b3bddc89494975397ffc18b09f5" kind="define"><name>HEPSY_S_TIMER</name></member>
+    <member refid="group__firfirgcd__macros__group_1gaf1fe2324408cd29c1e2dcd55f2e4a9c1" kind="define"><name>HEPSY_TRACE_PS_STATE</name></member>
+    <member refid="group__firfirgcd__macros__group_1gadc2d4bfbe106f792246792d01d66d63c" kind="define"><name>HEPSY_TRACE_PS_STATE_THIS</name></member>
+    <member refid="group__firfirgcd__macros__group_1ga139185aa9c10392aada97618a69ee2cd" kind="define"><name>HEPSY_TRACE_CH_STATE</name></member>
+    <member refid="group__firfirgcd__macros__group_1ga24b6f3a385f702b3a63e0811a0f22e75" kind="define"><name>HEPSY_TRACE_CH_STATE_THIS</name></member>
+    <member refid="group__firfirgcd__macros__group_1ga0f83efd33ffbe62c58c798abb824fa94" kind="define"><name>HEPSY_TRACE_BB_STATE</name></member>
+    <member refid="group__firfirgcd__macros__group_1ga0782cab9383550027672da286d54c931" kind="define"><name>HEPSY_TRACE_BB_STATE_THIS</name></member>
+    <member refid="group__firfirgcd__macros__group_1ga37921dae893594f3710d892f471de3cb" kind="define"><name>HEPSY_TRACE_SCHED_STATE</name></member>
+  </compound>
+  <compound refid="group__firfirgcd__main__group" kind="group"><name>firfirgcd_main_group</name>
+    <member refid="group__firfirgcd__main__group_1gaa604ac51b2579794e702367934dfb8ad" kind="variable"><name>pSystemManager</name></member>
+    <member refid="group__firfirgcd__main__group_1gad142acf1b36eb3c83c6e67364d257d48" kind="variable"><name>pSchedulingManager</name></member>
+    <member refid="group__firfirgcd__main__group_1gae8f25bd55b4a9f4801e99450be7d7423" kind="variable"><name>sampling_period</name></member>
+    <member refid="group__firfirgcd__main__group_1gaa8fde88a1a4ceac81a26274e6f38c4a4" kind="variable"><name>stop_concurrency_sampling</name></member>
+    <member refid="group__firfirgcd__main__group_1ga865e3def6cd1a641230218579d0a958f" kind="function"><name>sc_main</name></member>
+  </compound>
+  <compound refid="group__firfirgcd__mainsystem__group" kind="group"><name>firfirgcd_mainsystem_group</name>
+    <member refid="group__firfirgcd__mainsystem__group_1ga7ea2a25adbd29a5e326b5236d331bb22" kind="function"><name>SC_MODULE</name></member>
+  </compound>
+  <compound refid="group__firfirgcd__csp__channel__group" kind="group"><name>firfirgcd_csp_channel_group</name>
+    <member refid="group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad" kind="variable"><name>pSystemManager</name></member>
+    <member refid="group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48" kind="variable"><name>pSchedulingManager</name></member>
+    <member refid="group__firfirgcd__csp__channel__group_1ga5bbbddcd88383d3ed9ee425ad87ee58c" kind="function"><name>register_port</name></member>
+    <member refid="group__firfirgcd__csp__channel__group_1ga23046a4820dcf9ef26a75eba9cb7d49b" kind="function"><name>read</name></member>
+    <member refid="group__firfirgcd__csp__channel__group_1gaf3eb60ce6aecbe88c0e72fdb19a1f7af" kind="function"><name>read</name></member>
+    <member refid="group__firfirgcd__csp__channel__group_1gaf8a9ace576ff2e0462c8db276f9f388d" kind="function"><name>write</name></member>
+    <member refid="group__firfirgcd__csp__channel__group_1ga216706630fbd1f222b428cc4e6aa523d" kind="function"><name>trace</name></member>
+    <member refid="group__firfirgcd__csp__channel__group_1ga8be7bf7ee4f0c35e684b3de9a5163705" kind="function"><name>init</name></member>
+    <member refid="group__firfirgcd__csp__channel__group_1gab1a08e5d4129f9647e573af0c4ca4f30" kind="function"><name>read_test</name></member>
+    <member refid="group__firfirgcd__csp__channel__group_1ga3566fb8ed3dc3ba7ab7d6dbe17787153" kind="function"><name>write_test</name></member>
+    <member refid="group__firfirgcd__csp__channel__group_1gaaed132e73280fe2a46b14604240832bc" kind="function"><name>register_alt</name></member>
+    <member refid="group__firfirgcd__csp__channel__group_1ga40cb801a3a15df214563c89160c6d19c" kind="function"><name>get_alt_event</name></member>
+  </compound>
+  <compound refid="group__firfirgcd__csp__channel__ifs__group" kind="group"><name>firfirgcd_csp_channel_ifs_group</name>
+  </compound>
+  <compound refid="group__scheduling__manager__group" kind="group"><name>scheduling_manager_group</name>
+    <member refid="group__scheduling__manager__group_1gaa604ac51b2579794e702367934dfb8ad" kind="variable"><name>pSystemManager</name></member>
+    <member refid="group__scheduling__manager__group_1ga8bb983276d3b9929ea5985632a3fa4e0" kind="function"><name>SC_MODULE</name></member>
+  </compound>
+  <compound refid="group__firfirgcd__stim__gen__group" kind="group"><name>firfirgcd_stim_gen_group</name>
+    <member refid="group__firfirgcd__stim__gen__group_1gac842ee10b82b5739821c3f7f39468620" kind="function"><name>SC_MODULE</name></member>
+  </compound>
+  <compound refid="group__system__manager__group" kind="group"><name>system_manager_group</name>
+  </compound>
+  <compound refid="group__tl__group" kind="group"><name>tl_group</name>
+  </compound>
+  <compound refid="dir_c8af0c9532c0ed7a01fcfb80e323da4c" kind="dir"><name>HepsycodeDesign</name>
+  </compound>
+  <compound refid="dir_252a37b1f9b2b9bfd1d0c56a538601c6" kind="dir"><name>HepsycodeDesign/src/processesInstr</name>
+  </compound>
+  <compound refid="dir_d0ad28b65524201a249297d84afa8a64" kind="dir"><name>HepsycodeDesign/src</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

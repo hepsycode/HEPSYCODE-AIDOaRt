@@ -1,0 +1,58 @@
+.TH "firfirgcd_display_group" 3 "Mon Mar 20 2023" "FirFirGCD Application" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+firfirgcd_display_group \- Display Implementation\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSC_MODULE\fP (display)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Display Implementation\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+V\&. Muttillo, L\&. Pomante 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+Apr\&. 2022 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "SC_MODULE (display)"
+
+.PP
+Definition at line 83 of file display\&.h\&.
+.PP
+.nf
+84 {
+85 
+86     // Port for input by channel
+87     sc_port< sc_csp_channel_in_if< sc_uint<8> > > result_channel_port;
+88 
+89     SC_CTOR(display)
+90     {
+91         SC_THREAD(output);
+92     }
+93 
+94     // Main method
+95     void output();
+96 };
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FirFirGCD Application from the source code\&.

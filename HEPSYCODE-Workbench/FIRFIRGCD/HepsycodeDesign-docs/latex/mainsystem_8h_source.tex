@@ -1,0 +1,149 @@
+\hypertarget{mainsystem_8h_source}{}\doxysection{mainsystem.\+h}
+\label{mainsystem_8h_source}\index{HepsycodeDesign/src/mainsystem.h@{HepsycodeDesign/src/mainsystem.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * University of L'Aquila -\/ HEPSYCODE Source Code License                       *}}
+\DoxyCodeLine{00003 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00004 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00005 \textcolor{comment}{ * (c) 2018-\/2019 Centre of Excellence DEWS All rights reserved                  *}}
+\DoxyCodeLine{00006 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00007 \textcolor{comment}{ * <one line to give the program's name and a brief idea of what it does.>      *}}
+\DoxyCodeLine{00008 \textcolor{comment}{ * Copyright (C) 2022  Vittoriano Muttillo, Luigi Pomante                       *                                    *}}
+\DoxyCodeLine{00009 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00010 \textcolor{comment}{ * This program is free software: you can redistribute it and/or modify         *}}
+\DoxyCodeLine{00011 \textcolor{comment}{ * it under the terms of the GNU General Public License as published by         *}}
+\DoxyCodeLine{00012 \textcolor{comment}{ * the Free Software Foundation, either version 3 of the License, or            *}}
+\DoxyCodeLine{00013 \textcolor{comment}{ * (at your option) any later version.                                          *}}
+\DoxyCodeLine{00014 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00015 \textcolor{comment}{ * This program is distributed in the hope that it will be useful,              *}}
+\DoxyCodeLine{00016 \textcolor{comment}{ * but WITHOUT ANY WARRANTY; without even the implied warranty of               *}}
+\DoxyCodeLine{00017 \textcolor{comment}{ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the                *}}
+\DoxyCodeLine{00018 \textcolor{comment}{ * GNU General Public License for more details.                                 *}}
+\DoxyCodeLine{00019 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00020 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00021 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00022 \textcolor{comment}{ * Created on: 09/May/2022                                                      *}}
+\DoxyCodeLine{00023 \textcolor{comment}{ * Authors: Vittoriano Muttillo, Luigi Pomante                                  *}}
+\DoxyCodeLine{00024 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00025 \textcolor{comment}{ * email: vittoriano.muttillo@guest.univaq.it                                   *}}
+\DoxyCodeLine{00026 \textcolor{comment}{ *        luigi.pomante@univaq.it                                               *}}
+\DoxyCodeLine{00027 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00028 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00029 \textcolor{comment}{ * This code has been developed from an HEPSYCODE model used as demonstrator by *}}
+\DoxyCodeLine{00030 \textcolor{comment}{ * University of L'Aquila.                                                      *}}
+\DoxyCodeLine{00031 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00032 \textcolor{comment}{ * The code is used as a working example in the 'Embedded Systems' course of    *}}
+\DoxyCodeLine{00033 \textcolor{comment}{ * the Master in Conputer Science Engineering offered by the                    *}}
+\DoxyCodeLine{00034 \textcolor{comment}{ * University of L'Aquila                                                       *}}
+\DoxyCodeLine{00035 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{00037 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00038 \textcolor{comment}{ * mainsystem.h : FirFirGCD mainsystem.}}
+\DoxyCodeLine{00039 \textcolor{comment}{ *}}
+\DoxyCodeLine{00040 \textcolor{comment}{ * Mainsystem: Main SystemC HEPSIM2 header file}}
+\DoxyCodeLine{00041 \textcolor{comment}{ *}}
+\DoxyCodeLine{00042 \textcolor{comment}{********************************************************************************/}}
+\DoxyCodeLine{00043  \textcolor{comment}{// start firfirgcd\_mainsystem\_group}}
+\DoxyCodeLine{00058 }
+\DoxyCodeLine{00059 \textcolor{preprocessor}{\#ifndef \_\_MYSYSTEM\_\_}}
+\DoxyCodeLine{00060 \textcolor{preprocessor}{\#define \_\_MYSYSTEM\_\_}}
+\DoxyCodeLine{00061 }
+\DoxyCodeLine{00062 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00063 \textcolor{comment}{ ***                                Includes                                  ***}}
+\DoxyCodeLine{00064 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00065 }
+\DoxyCodeLine{00066 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{define_8h}{define.h}}"}}
+\DoxyCodeLine{00067 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{sc__csp__channel__ifs_8h}{sc\_csp\_channel\_ifs.h}}"}}
+\DoxyCodeLine{00068 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{sc__csp__channel_8h}{sc\_csp\_channel.h}}"}}
+\DoxyCodeLine{00069 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{datatype_8h}{datatype.h}}"}}
+\DoxyCodeLine{00070 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{_system_manager_8h}{SystemManager.h}}"}}
+\DoxyCodeLine{00071 }
+\DoxyCodeLine{00072 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00073 \textcolor{comment}{ ***                                Functions                                 ***}}
+\DoxyCodeLine{00074 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00075 }
+\DoxyCodeLine{00077 \textcolor{comment}{// SBM DEPENDENT}}
+\DoxyCodeLine{00079 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{mainsystem_8h_source_l00080}\mbox{\hyperlink{group__firfirgcd__mainsystem__group_ga7ea2a25adbd29a5e326b5236d331bb22}{00080}} \mbox{\hyperlink{group__firfirgcd__mainsystem__group_ga7ea2a25adbd29a5e326b5236d331bb22}{SC\_MODULE}}(mainsystem)}
+\DoxyCodeLine{00081 \{}
+\DoxyCodeLine{00082     \textcolor{comment}{// Ports for testbench connections}}
+\DoxyCodeLine{00083     sc\_port< sc\_csp\_channel\_in\_if< sc\_uint<8> > > stim1\_channel\_port;}
+\DoxyCodeLine{00084     sc\_port< sc\_csp\_channel\_in\_if< sc\_uint<8> > > stim2\_channel\_port;}
+\DoxyCodeLine{00085     sc\_port< sc\_csp\_channel\_out\_if< sc\_uint<8> > > result\_channel\_port;}
+\DoxyCodeLine{00086 }
+\DoxyCodeLine{00087     \textcolor{comment}{// PROCESSES}}
+\DoxyCodeLine{00088 }
+\DoxyCodeLine{00089     \textcolor{keywordtype}{void} fir8\_main();}
+\DoxyCodeLine{00090     \textcolor{keywordtype}{void} fir8\_evaluation();}
+\DoxyCodeLine{00091     \textcolor{keywordtype}{void} fir8\_shifting();}
+\DoxyCodeLine{00092 }
+\DoxyCodeLine{00093     \textcolor{keywordtype}{void} fir16\_main();}
+\DoxyCodeLine{00094     \textcolor{keywordtype}{void} fir16\_evaluation();}
+\DoxyCodeLine{00095     \textcolor{keywordtype}{void} fir16\_shifting();}
+\DoxyCodeLine{00096 }
+\DoxyCodeLine{00097     \textcolor{comment}{// Process}}
+\DoxyCodeLine{00098     \textcolor{keywordtype}{void} gcd\_main();}
+\DoxyCodeLine{00099     \textcolor{keywordtype}{void} gcd\_evaluation();}
+\DoxyCodeLine{00100 }
+\DoxyCodeLine{00101     \textcolor{comment}{// CHANNELS}}
+\DoxyCodeLine{00102 }
+\DoxyCodeLine{00103     \textcolor{comment}{// fir8}}
+\DoxyCodeLine{00104     \mbox{\hyperlink{classsc__csp__channel}{sc\_csp\_channel< fir8e\_parameters >}} *fir8e\_parameters\_channel;}
+\DoxyCodeLine{00105     \mbox{\hyperlink{classsc__csp__channel}{sc\_csp\_channel< fir8e\_results >}} *fir8e\_results\_channel;}
+\DoxyCodeLine{00106     \mbox{\hyperlink{classsc__csp__channel}{sc\_csp\_channel< fir8s\_parameters >}} *fir8s\_parameters\_channel;}
+\DoxyCodeLine{00107     \mbox{\hyperlink{classsc__csp__channel}{sc\_csp\_channel< fir8s\_results >}} *fir8s\_results\_channel;}
+\DoxyCodeLine{00108 }
+\DoxyCodeLine{00109     \textcolor{comment}{// fir16}}
+\DoxyCodeLine{00110     \mbox{\hyperlink{classsc__csp__channel}{sc\_csp\_channel< fir16e\_parameters >}} *fir16e\_parameters\_channel;}
+\DoxyCodeLine{00111     \mbox{\hyperlink{classsc__csp__channel}{sc\_csp\_channel< fir16e\_results >}} *fir16e\_results\_channel;}
+\DoxyCodeLine{00112     \mbox{\hyperlink{classsc__csp__channel}{sc\_csp\_channel< fir16s\_parameters >}} *fir16s\_parameters\_channel;}
+\DoxyCodeLine{00113     \mbox{\hyperlink{classsc__csp__channel}{sc\_csp\_channel< fir16s\_results >}} *fir16s\_results\_channel;}
+\DoxyCodeLine{00114 }
+\DoxyCodeLine{00115     \textcolor{comment}{// gcd}}
+\DoxyCodeLine{00116     \mbox{\hyperlink{classsc__csp__channel}{sc\_csp\_channel< gcde\_parameters >}} *gcde\_parameters\_channel;}
+\DoxyCodeLine{00117     \mbox{\hyperlink{classsc__csp__channel}{sc\_csp\_channel< gcde\_results >}} *gcde\_results\_channel;}
+\DoxyCodeLine{00118 }
+\DoxyCodeLine{00119     \textcolor{comment}{// Inter-\/process connections}}
+\DoxyCodeLine{00120     \mbox{\hyperlink{classsc__csp__channel}{sc\_csp\_channel< sc\_uint<8>}} > *results8\_channel;}
+\DoxyCodeLine{00121     \mbox{\hyperlink{classsc__csp__channel}{sc\_csp\_channel< sc\_uint<8>}} >   *results16\_channel;}
+\DoxyCodeLine{00122 }
+\DoxyCodeLine{00123     SC\_CTOR(mainsystem)}
+\DoxyCodeLine{00124     \{}
+\DoxyCodeLine{00125         fir8e\_parameters\_channel= \textcolor{keyword}{new} \mbox{\hyperlink{classsc__csp__channel}{sc\_csp\_channel< fir8e\_parameters >}} (0);}
+\DoxyCodeLine{00126         fir8e\_results\_channel= \textcolor{keyword}{new} \mbox{\hyperlink{classsc__csp__channel}{sc\_csp\_channel< fir8e\_results >}} (1);}
+\DoxyCodeLine{00127         fir8s\_parameters\_channel= \textcolor{keyword}{new} \mbox{\hyperlink{classsc__csp__channel}{sc\_csp\_channel< fir8s\_parameters >}} (2);}
+\DoxyCodeLine{00128         fir8s\_results\_channel= \textcolor{keyword}{new} \mbox{\hyperlink{classsc__csp__channel}{sc\_csp\_channel< fir8s\_results >}} (3);}
+\DoxyCodeLine{00129 }
+\DoxyCodeLine{00130         fir16e\_parameters\_channel= \textcolor{keyword}{new} \mbox{\hyperlink{classsc__csp__channel}{sc\_csp\_channel< fir16e\_parameters >}} (4);}
+\DoxyCodeLine{00131         fir16e\_results\_channel= \textcolor{keyword}{new} \mbox{\hyperlink{classsc__csp__channel}{sc\_csp\_channel< fir16e\_results >}} (5);}
+\DoxyCodeLine{00132         fir16s\_parameters\_channel= \textcolor{keyword}{new} \mbox{\hyperlink{classsc__csp__channel}{sc\_csp\_channel< fir16s\_parameters >}} (6);}
+\DoxyCodeLine{00133         fir16s\_results\_channel= \textcolor{keyword}{new} \mbox{\hyperlink{classsc__csp__channel}{sc\_csp\_channel< fir16s\_results >}} (7);}
+\DoxyCodeLine{00134 }
+\DoxyCodeLine{00135         gcde\_parameters\_channel = \textcolor{keyword}{new} \mbox{\hyperlink{classsc__csp__channel}{sc\_csp\_channel< gcde\_parameters >}} (10);}
+\DoxyCodeLine{00136         gcde\_results\_channel = \textcolor{keyword}{new} \mbox{\hyperlink{classsc__csp__channel}{sc\_csp\_channel< gcde\_results >}} (11);}
+\DoxyCodeLine{00137 }
+\DoxyCodeLine{00138         results8\_channel= \textcolor{keyword}{new} \mbox{\hyperlink{classsc__csp__channel}{sc\_csp\_channel< sc\_uint<8>}} > (8);}
+\DoxyCodeLine{00139         results16\_channel= \textcolor{keyword}{new} \mbox{\hyperlink{classsc__csp__channel}{sc\_csp\_channel< sc\_uint<8>}} > (9);}
+\DoxyCodeLine{00140 }
+\DoxyCodeLine{00141         SC\_THREAD(fir8\_main);}
+\DoxyCodeLine{00142         SC\_THREAD(fir8\_evaluation);}
+\DoxyCodeLine{00143         SC\_THREAD(fir8\_shifting);}
+\DoxyCodeLine{00144 }
+\DoxyCodeLine{00145         SC\_THREAD(fir16\_main);}
+\DoxyCodeLine{00146         SC\_THREAD(fir16\_evaluation);}
+\DoxyCodeLine{00147         SC\_THREAD(fir16\_shifting);}
+\DoxyCodeLine{00148 }
+\DoxyCodeLine{00149         SC\_THREAD(gcd\_main);}
+\DoxyCodeLine{00150         SC\_THREAD(gcd\_evaluation);}
+\DoxyCodeLine{00151     \}}
+\DoxyCodeLine{00152 \};}
+\DoxyCodeLine{00153  \textcolor{comment}{// end of firfirgcd\_mainsystem\_group}}
+\DoxyCodeLine{00155 }
+\DoxyCodeLine{00156 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00157 }
+\DoxyCodeLine{00158 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00159 \textcolor{comment}{ ***                                  EOF                                     ***}}
+\DoxyCodeLine{00160 \textcolor{comment}{ ********************************************************************************/}}
+
+\end{DoxyCode}

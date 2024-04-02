@@ -1,0 +1,62 @@
+\hypertarget{group__firfirgcd__stim__gen__group}{}\doxysection{Fir\+Fir\+G\+CD Stimulus.}
+\label{group__firfirgcd__stim__gen__group}\index{FirFirGCD Stimulus.@{FirFirGCD Stimulus.}}
+
+
+Stimulus Implementation.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__firfirgcd__stim__gen__group_gac842ee10b82b5739821c3f7f39468620}{S\+C\+\_\+\+M\+O\+D\+U\+LE}} (stim\+\_\+gen)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Stimulus Implementation. 
+
+\begin{DoxyAuthor}{Author}
+V. Muttillo, L. Pomante 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Apr. 2022 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__firfirgcd__stim__gen__group_gac842ee10b82b5739821c3f7f39468620}\label{group__firfirgcd__stim__gen__group_gac842ee10b82b5739821c3f7f39468620}} 
+\index{FirFirGCD Stimulus.@{FirFirGCD Stimulus.}!SC\_MODULE@{SC\_MODULE}}
+\index{SC\_MODULE@{SC\_MODULE}!FirFirGCD Stimulus.@{FirFirGCD Stimulus.}}
+\doxysubsubsection{\texorpdfstring{SC\_MODULE()}{SC\_MODULE()}}
+{\footnotesize\ttfamily S\+C\+\_\+\+M\+O\+D\+U\+LE (\begin{DoxyParamCaption}\item[{stim\+\_\+gen}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{stim__gen_8h_source_l00080}{80}} of file \mbox{\hyperlink{stim__gen_8h_source}{stim\+\_\+gen.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00081 \{}
+\DoxyCodeLine{00082     \textcolor{comment}{// Port for outputs to the channels}}
+\DoxyCodeLine{00083     sc\_port < sc\_csp\_channel\_out\_if < sc\_uint<8> > > stim1\_channel\_port;        }
+\DoxyCodeLine{00084     sc\_port < sc\_csp\_channel\_out\_if < sc\_uint<8> > > stim2\_channel\_port;        }
+\DoxyCodeLine{00085 }
+\DoxyCodeLine{00086     \textcolor{comment}{// Used to stop concurrency sampling (to allow the simulation to finish), if needed}}
+\DoxyCodeLine{00087     \textcolor{keywordtype}{bool} stop\_sampling1, stop\_sampling2;}
+\DoxyCodeLine{00088 }
+\DoxyCodeLine{00089     SC\_CTOR(stim\_gen)}
+\DoxyCodeLine{00090     \{}
+\DoxyCodeLine{00091         SC\_THREAD(stimulus1);}
+\DoxyCodeLine{00092         SC\_THREAD(stimulus2);}
+\DoxyCodeLine{00093 }
+\DoxyCodeLine{00094         \textcolor{comment}{// Used to stop concurrency sampling (to allow the simulation to finish), if needed}}
+\DoxyCodeLine{00095         stop\_sampling1=\textcolor{keyword}{false};}
+\DoxyCodeLine{00096         stop\_sampling2=\textcolor{keyword}{false};}
+\DoxyCodeLine{00097     \}  }
+\DoxyCodeLine{00098 }
+\DoxyCodeLine{00099     \textcolor{comment}{// Main methods}}
+\DoxyCodeLine{00100     \textcolor{keywordtype}{void} stimulus1();}
+\DoxyCodeLine{00101     \textcolor{keywordtype}{void} stimulus2();}
+\DoxyCodeLine{00102 \};}
+
+\end{DoxyCode}

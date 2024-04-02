@@ -1,0 +1,170 @@
+.TH "firfirgcd_macros_group" 3 "Mon Mar 20 2023" "FirFirGCD Application" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+firfirgcd_macros_group \- Macros Implementation\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBHEPSY_S\fP(X)"
+.br
+.ti -1c
+.RI "#define \fBHEPSY_P\fP(X)   \fBpSystemManager\fP\->PS_Profiling(X);"
+.br
+.ti -1c
+.RI "#define \fBHEPSY_SCHED_CS\fP(X,  i)"
+.br
+.ti -1c
+.RI "#define \fBPRE_WAIT\fP(X)"
+.br
+.ti -1c
+.RI "#define \fBPOST_WAIT\fP(X)"
+.br
+.ti -1c
+.RI "#define \fBHEPSY_S_TIMER\fP(X,  Y)"
+.br
+.ti -1c
+.RI "#define \fBHEPSY_TRACE_PS_STATE\fP(X)   \fBpSchedulingManager\fP\->LOG << 'Execution Time;' << sc_time_stamp()\&.to_seconds() << '; Energy;' << pSystemManager\->VPS[X]\&.getEnergy() << '; Process;' << X << '; State;' << pSchedulingManager\->process_state[X] << endl;"
+.br
+.ti -1c
+.RI "#define \fBHEPSY_TRACE_PS_STATE_THIS\fP(X)   this\->LOG << 'Execution Time;' << sc_time_stamp()\&.to_seconds() << '; Energy;' << pSystemManager\->VPS[X]\&.getEnergy() << '; Process;' << X << '; State;' << this\->process_state[X] << endl;"
+.br
+.ti -1c
+.RI "#define \fBHEPSY_TRACE_CH_STATE\fP(X)   \fBpSchedulingManager\fP\->LOG << 'Execution Time;' << sc_time_stamp()\&.to_seconds() << '; Energy;' << pSystemManager\->VCH[X]\&.working_energy << '; Channel;' << X << '; State;' << pSchedulingManager\->channel_state[X] << endl;"
+.br
+.ti -1c
+.RI "#define \fBHEPSY_TRACE_CH_STATE_THIS\fP(X)   this\->LOG << 'Execution Time;' << sc_time_stamp()\&.to_seconds() << '; Energy;' << pSystemManager\->VCH[X]\&.working_energy << '; Channel;' << X << '; State;' << this\->channel_state[X] << endl;"
+.br
+.ti -1c
+.RI "#define \fBHEPSY_TRACE_BB_STATE\fP(X)   \fBpSchedulingManager\fP\->LOG << 'Execution Time;' << sc_time_stamp()\&.to_seconds() << '; Energy;' << 0 << '; BB;' << X << '; Mode;' << pSchedulingManager\->BB_mode[X] << endl;"
+.br
+.ti -1c
+.RI "#define \fBHEPSY_TRACE_BB_STATE_THIS\fP(X)   this\->LOG << 'Execution Time;' << sc_time_stamp()\&.to_seconds() << '; Energy;' << 0 << '; BB;' << X << '; Mode;' << this\->BB_mode[X] << endl;"
+.br
+.ti -1c
+.RI "#define \fBHEPSY_TRACE_SCHED_STATE\fP(X)   this\->LOG << 'Execution Time;' << sc_time_stamp()\&.to_seconds() << '; Energy;' << this\->sched_en[X] << '; Scheduler;' << X << '; State;' << this\->scheduler_state[X] << endl;"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Macros Implementation\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+V\&. Muttillo, L\&. Pomante 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+Apr\&. 2022 
+.RE
+.PP
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define HEPSY_P(X)   \fBpSystemManager\fP\->PS_Profiling(X);"
+
+.PP
+Definition at line 91 of file macros\&.h\&.
+.SS "#define HEPSY_S(X)"
+\fBValue:\fP
+.PP
+.nf
+        wait(pSchedulingManager->schedule[X]);                  \
+        pSchedulingManager->release[X]\&.notify(SC_ZERO_TIME);
+.fi
+.PP
+Definition at line 84 of file macros\&.h\&.
+.SS "#define HEPSY_S_TIMER(X, Y)"
+\fBValue:\fP
+.PP
+.nf
+        pSystemManager->increaseTimer(X,Y);                                                     \
+        if(!pSystemManager->checkSPP(X)) wait(pSchedulingManager->schedule[X]);                 \
+        PRE_WAIT(X)                                                                             \
+        wait(Y);                                                                                \
+        POST_WAIT(X)                                                                            \
+        if(!pSystemManager->checkSPP(X)) pSchedulingManager->release[X]\&.notify(SC_ZERO_TIME);
+.fi
+.PP
+Definition at line 129 of file macros\&.h\&.
+.SS "#define HEPSY_SCHED_CS(X, i)"
+\fBValue:\fP
+.PP
+.nf
+      wait(pSystemManager->VBB[X]\&.getProcessors()[0]\&.getOverheadCS()*i);             \
+        this->sched_oh[X] += pSystemManager->VBB[X]\&.getProcessors()[0]\&.getOverheadCS()*i;      \
+        this->sched_en[X]+= ((pSystemManager->VBB[X]\&.getProcessors()[0]\&.getOverheadCS()\&.to_seconds() * pSystemManager->VBB[X]\&.getProcessors()[0]\&.getPower())*1000000);
+.fi
+.PP
+Definition at line 94 of file macros\&.h\&.
+.SS "#define HEPSY_TRACE_BB_STATE(X)   \fBpSchedulingManager\fP\->LOG << 'Execution Time;' << sc_time_stamp()\&.to_seconds() << '; Energy;' << 0 << '; BB;' << X << '; Mode;' << pSchedulingManager\->BB_mode[X] << endl;"
+
+.PP
+Definition at line 156 of file macros\&.h\&.
+.SS "#define HEPSY_TRACE_BB_STATE_THIS(X)   this\->LOG << 'Execution Time;' << sc_time_stamp()\&.to_seconds() << '; Energy;' << 0 << '; BB;' << X << '; Mode;' << this\->BB_mode[X] << endl;"
+
+.PP
+Definition at line 160 of file macros\&.h\&.
+.SS "#define HEPSY_TRACE_CH_STATE(X)   \fBpSchedulingManager\fP\->LOG << 'Execution Time;' << sc_time_stamp()\&.to_seconds() << '; Energy;' << pSystemManager\->VCH[X]\&.working_energy << '; Channel;' << X << '; State;' << pSchedulingManager\->channel_state[X] << endl;"
+
+.PP
+Definition at line 148 of file macros\&.h\&.
+.SS "#define HEPSY_TRACE_CH_STATE_THIS(X)   this\->LOG << 'Execution Time;' << sc_time_stamp()\&.to_seconds() << '; Energy;' << pSystemManager\->VCH[X]\&.working_energy << '; Channel;' << X << '; State;' << this\->channel_state[X] << endl;"
+
+.PP
+Definition at line 152 of file macros\&.h\&.
+.SS "#define HEPSY_TRACE_PS_STATE(X)   \fBpSchedulingManager\fP\->LOG << 'Execution Time;' << sc_time_stamp()\&.to_seconds() << '; Energy;' << pSystemManager\->VPS[X]\&.getEnergy() << '; Process;' << X << '; State;' << pSchedulingManager\->process_state[X] << endl;"
+
+.PP
+Definition at line 140 of file macros\&.h\&.
+.SS "#define HEPSY_TRACE_PS_STATE_THIS(X)   this\->LOG << 'Execution Time;' << sc_time_stamp()\&.to_seconds() << '; Energy;' << pSystemManager\->VPS[X]\&.getEnergy() << '; Process;' << X << '; State;' << this\->process_state[X] << endl;"
+
+.PP
+Definition at line 144 of file macros\&.h\&.
+.SS "#define HEPSY_TRACE_SCHED_STATE(X)   this\->LOG << 'Execution Time;' << sc_time_stamp()\&.to_seconds() << '; Energy;' << this\->sched_en[X] << '; Scheduler;' << X << '; State;' << this\->scheduler_state[X] << endl;"
+
+.PP
+Definition at line 164 of file macros\&.h\&.
+.SS "#define POST_WAIT(X)"
+\fBValue:\fP
+.PP
+.nf
+  if (pSchedulingManager->BB_mode[pSystemManager->allocationPS_BB[X]]==suspended)                 \
+    {                                                                                               \
+        if (pSystemManager->checkSPP(X)==true)                                                      \
+        {                                                                                           \
+            pSchedulingManager->BB_mode[pSystemManager->allocationPS_BB[X]]=active;                 \
+            HEPSY_TRACE_BB_STATE(X)                                                                             \
+        }                                                                                           \
+        else pSchedulingManager->activate[pSystemManager->allocationPS_BB[X]]\&.notify(SC_ZERO_TIME);  \
+    }                                                                                               \
+                                                                                                    \
+if (pSystemManager->checkSPP(X)==true) pSchedulingManager->process_state[X]=running;                \
+    else pSchedulingManager->process_state[X]=ready;                                                \
+    HEPSY_TRACE_PS_STATE(X)                                                                                     \
+                                                                                                    \
+if (pSystemManager->checkSPP(X)==false)                                                             \
+    pSchedulingManager->process_status_changed[pSystemManager->allocationPS_BB[X]]=true;
+.fi
+.PP
+Definition at line 109 of file macros\&.h\&.
+.SS "#define PRE_WAIT(X)"
+\fBValue:\fP
+.PP
+.nf
+   pSchedulingManager->process_state[X]=waiting;   \
+    HEPSY_TRACE_PS_STATE(X)
+.fi
+.PP
+Definition at line 101 of file macros\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FirFirGCD Application from the source code\&.

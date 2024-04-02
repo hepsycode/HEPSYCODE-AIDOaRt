@@ -1,0 +1,87 @@
+\hypertarget{stim__gen_8cpp_source}{}\doxysection{stim\+\_\+gen.\+cpp}
+\label{stim__gen_8cpp_source}\index{HepsycodeDesign/src/stim\_gen.cpp@{HepsycodeDesign/src/stim\_gen.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{stim__gen_8h}{stim\_gen.h}}"}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00004 }
+\DoxyCodeLine{00005 \textcolor{comment}{// STIMULUS: GENERATES INPUTS FOR THE SYSTEM}}
+\DoxyCodeLine{00006 }
+\DoxyCodeLine{00008 }
+\DoxyCodeLine{00009 \textcolor{keyword}{extern} \textcolor{keywordtype}{bool} \mbox{\hyperlink{group__firfirgcd__main__group_gaa8fde88a1a4ceac81a26274e6f38c4a4}{stop\_concurrency\_sampling}};}
+\DoxyCodeLine{00010 }
+\DoxyCodeLine{00011 \textcolor{comment}{// Stimulus for stim1}}
+\DoxyCodeLine{00012 \textcolor{keywordtype}{void} stim\_gen::stimulus1()}
+\DoxyCodeLine{00013 \{}
+\DoxyCodeLine{00014     sc\_uint<8> value1=1;}
+\DoxyCodeLine{00015     sc\_uint<8> value2=1;}
+\DoxyCodeLine{00016     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i=1;}
+\DoxyCodeLine{00017     sc\_time setup(10, SC\_MS), loop(10, SC\_MS), expected(0, SC\_MS);}
+\DoxyCodeLine{00018 }
+\DoxyCodeLine{00019     \textcolor{comment}{// Wait for setup}}
+\DoxyCodeLine{00020     wait(setup);}
+\DoxyCodeLine{00021     expected += setup;}
+\DoxyCodeLine{00022 }
+\DoxyCodeLine{00023     \textcolor{keywordflow}{while}(i <= \mbox{\hyperlink{group__firfirgcd__define__group_ga41078393655c31f01ef880a0492a776f}{NUMBER\_OF\_INPUTS}})}
+\DoxyCodeLine{00024     \{}
+\DoxyCodeLine{00025         \textcolor{comment}{// Sends out value1}}
+\DoxyCodeLine{00026         wait(loop);}
+\DoxyCodeLine{00027         expected += loop;}
+\DoxyCodeLine{00028         stim1\_channel\_port-\/>write(value1);}
+\DoxyCodeLine{00029         cout << \textcolor{stringliteral}{"Stimulus1-\/"} << i << \textcolor{stringliteral}{": \(\backslash\)t"} << value1 << \textcolor{stringliteral}{"\(\backslash\)t at time \(\backslash\)t"} << sc\_time\_stamp() << \textcolor{stringliteral}{" ("} << sc\_time\_stamp().to\_seconds() << \textcolor{stringliteral}{"/"} << expected.to\_seconds() << \textcolor{stringliteral}{")"} << endl;}
+\DoxyCodeLine{00030 }
+\DoxyCodeLine{00031         \textcolor{comment}{// Change next out values}}
+\DoxyCodeLine{00032         value1=value1+value2;}
+\DoxyCodeLine{00033         value2=(value2*value1)+1;}
+\DoxyCodeLine{00034 }
+\DoxyCodeLine{00035         \textcolor{comment}{// Counter}}
+\DoxyCodeLine{00036         i++;}
+\DoxyCodeLine{00037     \}}
+\DoxyCodeLine{00038     }
+\DoxyCodeLine{00039     \textcolor{comment}{// Used to stop concurrency sampling (to allow the simulation to finish), if needed}}
+\DoxyCodeLine{00040         stop\_sampling1 = \textcolor{keyword}{true};}
+\DoxyCodeLine{00041         \textcolor{keywordflow}{if} (stop\_sampling2==\textcolor{keyword}{true})}
+\DoxyCodeLine{00042             \textcolor{comment}{// Stop sampling SC\_THREAD in SchedulingManager}}
+\DoxyCodeLine{00043             \mbox{\hyperlink{group__firfirgcd__main__group_gaa8fde88a1a4ceac81a26274e6f38c4a4}{stop\_concurrency\_sampling}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{00044 \}}
+\DoxyCodeLine{00045 }
+\DoxyCodeLine{00046 \textcolor{comment}{// Stimulus for stim2}}
+\DoxyCodeLine{00047 \textcolor{keywordtype}{void} stim\_gen::stimulus2()}
+\DoxyCodeLine{00048 \{}
+\DoxyCodeLine{00049     sc\_uint<8> value1=1;}
+\DoxyCodeLine{00050     sc\_uint<8> value2=1;}
+\DoxyCodeLine{00051     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i=1;}
+\DoxyCodeLine{00052     sc\_time setup(10, SC\_MS), loop(10, SC\_MS), expected(0, SC\_MS);}
+\DoxyCodeLine{00053 }
+\DoxyCodeLine{00054     \textcolor{comment}{// Wait for setup}}
+\DoxyCodeLine{00055     wait(setup);}
+\DoxyCodeLine{00056     expected += setup;}
+\DoxyCodeLine{00057 }
+\DoxyCodeLine{00058     \textcolor{keywordflow}{while} (i <= \mbox{\hyperlink{group__firfirgcd__define__group_ga41078393655c31f01ef880a0492a776f}{NUMBER\_OF\_INPUTS}})}
+\DoxyCodeLine{00059     \{}
+\DoxyCodeLine{00060         \textcolor{comment}{// Sends out value2}}
+\DoxyCodeLine{00061         wait(loop);}
+\DoxyCodeLine{00062         expected += loop;}
+\DoxyCodeLine{00063         stim2\_channel\_port-\/>write(value2);}
+\DoxyCodeLine{00064         cout << \textcolor{stringliteral}{"Stimulus2-\/"} << i << \textcolor{stringliteral}{": \(\backslash\)t"} << value1 << \textcolor{stringliteral}{"\(\backslash\)t at time \(\backslash\)t"} << sc\_time\_stamp() << \textcolor{stringliteral}{" ("} << sc\_time\_stamp().to\_seconds() << \textcolor{stringliteral}{"/"} << expected.to\_seconds() << \textcolor{stringliteral}{")"} << endl;}
+\DoxyCodeLine{00065 }
+\DoxyCodeLine{00066         \textcolor{comment}{// Change next out values}}
+\DoxyCodeLine{00067         value1=value1+value2;}
+\DoxyCodeLine{00068         value2=(value2*value1)+1;}
+\DoxyCodeLine{00069 }
+\DoxyCodeLine{00070         \textcolor{comment}{// Counter}}
+\DoxyCodeLine{00071         i++;}
+\DoxyCodeLine{00072     \}}
+\DoxyCodeLine{00073 }
+\DoxyCodeLine{00074     \textcolor{comment}{// Used to stop concurrency sampling (to allow the simulation to finish), if needed}}
+\DoxyCodeLine{00075         stop\_sampling2 = \textcolor{keyword}{true};}
+\DoxyCodeLine{00076         \textcolor{keywordflow}{if} (stop\_sampling1==\textcolor{keyword}{true})}
+\DoxyCodeLine{00077             \textcolor{comment}{// Stop sampling SC\_THREAD in SchedulingManager}}
+\DoxyCodeLine{00078             \mbox{\hyperlink{group__firfirgcd__main__group_gaa8fde88a1a4ceac81a26274e6f38c4a4}{stop\_concurrency\_sampling}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{00079 \}}
+\DoxyCodeLine{00080 }
+\DoxyCodeLine{00081 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00082 \textcolor{comment}{ ***                                  EOF                                     ***}}
+\DoxyCodeLine{00083 \textcolor{comment}{ ********************************************************************************/}}
+
+\end{DoxyCode}

@@ -1,0 +1,342 @@
+\hypertarget{tl_8h_source}{}\doxysection{tl.\+h}
+\label{tl_8h_source}\index{HepsycodeDesign/src/tl.h@{HepsycodeDesign/src/tl.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * University of L'Aquila -\/ HEPSYCODE Source Code License                       *}}
+\DoxyCodeLine{00003 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00004 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00005 \textcolor{comment}{ * (c) 2018-\/2019 Centre of Excellence DEWS All rights reserved                  *}}
+\DoxyCodeLine{00006 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00007 \textcolor{comment}{ * <one line to give the program's name and a brief idea of what it does.>      *}}
+\DoxyCodeLine{00008 \textcolor{comment}{ * Copyright (C) 2022  Vittoriano Muttillo, Luigi Pomante                       *                                    *}}
+\DoxyCodeLine{00009 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00010 \textcolor{comment}{ * This program is free software: you can redistribute it and/or modify         *}}
+\DoxyCodeLine{00011 \textcolor{comment}{ * it under the terms of the GNU General Public License as published by         *}}
+\DoxyCodeLine{00012 \textcolor{comment}{ * the Free Software Foundation, either version 3 of the License, or            *}}
+\DoxyCodeLine{00013 \textcolor{comment}{ * (at your option) any later version.                                          *}}
+\DoxyCodeLine{00014 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00015 \textcolor{comment}{ * This program is distributed in the hope that it will be useful,              *}}
+\DoxyCodeLine{00016 \textcolor{comment}{ * but WITHOUT ANY WARRANTY; without even the implied warranty of               *}}
+\DoxyCodeLine{00017 \textcolor{comment}{ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the                *}}
+\DoxyCodeLine{00018 \textcolor{comment}{ * GNU General Public License for more details.                                 *}}
+\DoxyCodeLine{00019 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00020 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00021 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00022 \textcolor{comment}{ * Created on: 09/May/2022                                                      *}}
+\DoxyCodeLine{00023 \textcolor{comment}{ * Authors: Vittoriano Muttillo, Luigi Pomante                                  *}}
+\DoxyCodeLine{00024 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00025 \textcolor{comment}{ * email: vittoriano.muttillo@guest.univaq.it                                   *}}
+\DoxyCodeLine{00026 \textcolor{comment}{ *        luigi.pomante@univaq.it                                               *}}
+\DoxyCodeLine{00027 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00028 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00029 \textcolor{comment}{ * This code has been developed from an HEPSYCODE model used as demonstrator by *}}
+\DoxyCodeLine{00030 \textcolor{comment}{ * University of L'Aquila.                                                      *}}
+\DoxyCodeLine{00031 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00032 \textcolor{comment}{ * The code is used as a working example in the 'Embedded Systems' course of    *}}
+\DoxyCodeLine{00033 \textcolor{comment}{ * the Master in Conputer Science Engineering offered by the                    *}}
+\DoxyCodeLine{00034 \textcolor{comment}{ * University of L'Aquila                                                       *}}
+\DoxyCodeLine{00035 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{00037 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00038 \textcolor{comment}{ * tl : HEPSIM Technologies Library.}}
+\DoxyCodeLine{00039 \textcolor{comment}{ *}}
+\DoxyCodeLine{00040 \textcolor{comment}{ * tl: HEPSIM Technologies Library file}}
+\DoxyCodeLine{00041 \textcolor{comment}{ *}}
+\DoxyCodeLine{00042 \textcolor{comment}{********************************************************************************/}}
+\DoxyCodeLine{00043  \textcolor{comment}{// start tl\_group}}
+\DoxyCodeLine{00058 }
+\DoxyCodeLine{00059 \textcolor{preprocessor}{\#ifndef TL\_H\_}}
+\DoxyCodeLine{00060 \textcolor{preprocessor}{\#define TL\_H\_}}
+\DoxyCodeLine{00061 }
+\DoxyCodeLine{00062 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00063 \textcolor{comment}{ ***                                Includes                                  ***}}
+\DoxyCodeLine{00064 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00065 }
+\DoxyCodeLine{00066 \textcolor{preprocessor}{\#include <systemc.h>}}
+\DoxyCodeLine{00067 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{00068 \textcolor{preprocessor}{\#include <stdlib.h>}}
+\DoxyCodeLine{00069 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{00070 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{00071 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{00072 \textcolor{preprocessor}{\#include <set>}}
+\DoxyCodeLine{00073 }
+\DoxyCodeLine{00074 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{00075 }
+\DoxyCodeLine{00076 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00077 \textcolor{comment}{ ***                                Functions                                 ***}}
+\DoxyCodeLine{00078 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00079 }
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00080}\mbox{\hyperlink{class_processing_unit}{00080}} \textcolor{keyword}{class }\mbox{\hyperlink{class_processing_unit}{ProcessingUnit}}}
+\DoxyCodeLine{00081 \{}
+\DoxyCodeLine{00082     \textcolor{keyword}{public}:}
+\DoxyCodeLine{00083 }
+\DoxyCodeLine{00084         \textcolor{keywordtype}{string} name;}
+\DoxyCodeLine{00085         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} id;}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00086}\mbox{\hyperlink{class_processing_unit_a39c59ae9752a23c906d91528b32d6ca2}{00086}}         \textcolor{keywordtype}{string} processorType;}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00087}\mbox{\hyperlink{class_processing_unit_a7c79d395aec1489d72e8deb11e81bcc3}{00087}}         \textcolor{keywordtype}{float} cost;}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00088}\mbox{\hyperlink{class_processing_unit_a1798129379e63325bc45484193334d35}{00088}}         \textcolor{keywordtype}{string} ISA;}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00089}\mbox{\hyperlink{class_processing_unit_a82138ac0886f2af91a81e5c68e4ea375}{00089}}         \textcolor{keywordtype}{float} frequency; \textcolor{comment}{// in MHz}}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00090}\mbox{\hyperlink{class_processing_unit_a53d94f4cc03f4dad1fdef142ddacbfee}{00090}}         \textcolor{keywordtype}{float}** CC4CS; \textcolor{comment}{// multiple CC4CS: rows are int8, int16, int32, float, tot; columns are Q1 and Q3}}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00091}\mbox{\hyperlink{class_processing_unit_a01ebb7abce840e8b996956228832e65e}{00091}}         \textcolor{keywordtype}{float} Power; \textcolor{comment}{// in W}}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00092}\mbox{\hyperlink{class_processing_unit_a01bb4de07428d71da7b004594ff336bd}{00092}}         \textcolor{keywordtype}{float} MIPS; }
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00093}\mbox{\hyperlink{class_processing_unit_ab19b7aaa350746fa5d57e8cf70f0da3c}{00093}}         \textcolor{keywordtype}{float} I4CSmin;}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00094}\mbox{\hyperlink{class_processing_unit_a3d61b59933aa4703740546137478fdde}{00094}}         \textcolor{keywordtype}{float} I4CSmax;}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00095}\mbox{\hyperlink{class_processing_unit_aa9f158e72fea6e416f3c1de0e8a62320}{00095}}         \textcolor{keywordtype}{float} Vdd; \textcolor{comment}{// in V}}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00096}\mbox{\hyperlink{class_processing_unit_a8e68ace97807e113397794847ba13a37}{00096}}         \textcolor{keywordtype}{float} Idd; \textcolor{comment}{// in A}}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00097}\mbox{\hyperlink{class_processing_unit_a946073849ecb4e68173fc843658114dd}{00097}}         sc\_time overheadCS; \textcolor{comment}{// in us}}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00098}\mbox{\hyperlink{class_processing_unit_a30f2cae8129e6d834a95a9c0778e955d}{00098}} }
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00099}\mbox{\hyperlink{class_processing_unit_a19c1e33d59378a6db80ec7bffaa72d22}{00099}}     \textcolor{keyword}{public}:}
+\DoxyCodeLine{00100         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} getId();}
+\DoxyCodeLine{00101         \textcolor{keywordtype}{void} setId(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} c);}
+\DoxyCodeLine{00102 }
+\DoxyCodeLine{00103         \textcolor{keywordtype}{string} getName();}
+\DoxyCodeLine{00104         \textcolor{keywordtype}{void} setName(\textcolor{keywordtype}{string} x);}
+\DoxyCodeLine{00105 }
+\DoxyCodeLine{00106         \textcolor{keywordtype}{string} getProcessorType();}
+\DoxyCodeLine{00107         \textcolor{keywordtype}{void} setProcessorType(\textcolor{keywordtype}{string} x);}
+\DoxyCodeLine{00108 }
+\DoxyCodeLine{00109         \textcolor{keywordtype}{float} getCost();}
+\DoxyCodeLine{00110         \textcolor{keywordtype}{void} setCost(\textcolor{keywordtype}{float} x);}
+\DoxyCodeLine{00111 }
+\DoxyCodeLine{00112         \textcolor{keywordtype}{string} getISA();}
+\DoxyCodeLine{00113         \textcolor{keywordtype}{void} setISA(\textcolor{keywordtype}{string} x);}
+\DoxyCodeLine{00114 }
+\DoxyCodeLine{00115         \textcolor{keywordtype}{float} getFrequency();}
+\DoxyCodeLine{00116         \textcolor{keywordtype}{void} setFrequency(\textcolor{keywordtype}{float} x);}
+\DoxyCodeLine{00117 }
+\DoxyCodeLine{00118         \textcolor{keywordtype}{float}** getCC4S();}
+\DoxyCodeLine{00119         \textcolor{keywordtype}{void} setCC4S(\textcolor{keywordtype}{float}** x);}
+\DoxyCodeLine{00120 }
+\DoxyCodeLine{00121         \textcolor{keywordtype}{float} getPower();}
+\DoxyCodeLine{00122         \textcolor{keywordtype}{void} setPower(\textcolor{keywordtype}{float} x);}
+\DoxyCodeLine{00123 }
+\DoxyCodeLine{00124         \textcolor{keywordtype}{float} getMIPS();}
+\DoxyCodeLine{00125         \textcolor{keywordtype}{void} setMIPS(\textcolor{keywordtype}{float} x);}
+\DoxyCodeLine{00126 }
+\DoxyCodeLine{00127         \textcolor{keywordtype}{float} getI4CSmin();}
+\DoxyCodeLine{00128         \textcolor{keywordtype}{void} setI4CSmin(\textcolor{keywordtype}{float} x);}
+\DoxyCodeLine{00129 }
+\DoxyCodeLine{00130         \textcolor{keywordtype}{float} getI4CSmax();}
+\DoxyCodeLine{00131         \textcolor{keywordtype}{void} setI4CSmax(\textcolor{keywordtype}{float} x);}
+\DoxyCodeLine{00132 }
+\DoxyCodeLine{00133         \textcolor{keywordtype}{float} getVdd();}
+\DoxyCodeLine{00134         \textcolor{keywordtype}{void} setVdd(\textcolor{keywordtype}{float} x);}
+\DoxyCodeLine{00135 }
+\DoxyCodeLine{00136         \textcolor{keywordtype}{float} getIdd();}
+\DoxyCodeLine{00137         \textcolor{keywordtype}{void} setIdd(\textcolor{keywordtype}{float} x);}
+\DoxyCodeLine{00138 }
+\DoxyCodeLine{00139         sc\_time getOverheadCS();}
+\DoxyCodeLine{00140         \textcolor{keywordtype}{void} setOverheadCS(sc\_time x);}
+\DoxyCodeLine{00141 }
+\DoxyCodeLine{00142 \};}
+\DoxyCodeLine{00143 }
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00144}\mbox{\hyperlink{class_memory}{00144}} \textcolor{keyword}{class }\mbox{\hyperlink{class_memory}{Memory}}}
+\DoxyCodeLine{00145 \{}
+\DoxyCodeLine{00146     \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00147}\mbox{\hyperlink{class_memory_ab9700fb68b6db81bed6115794f9d0c22}{00147}}         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_memory_ab9700fb68b6db81bed6115794f9d0c22}{codeSize}};}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00148}\mbox{\hyperlink{class_memory_a46b899813a58e32a87d04599d63ca163}{00148}}         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_memory_a46b899813a58e32a87d04599d63ca163}{dataSize}};}
+\DoxyCodeLine{00149 }
+\DoxyCodeLine{00150     \textcolor{keyword}{public}:}
+\DoxyCodeLine{00151         \textcolor{comment}{//Memory();}}
+\DoxyCodeLine{00152         \mbox{\hyperlink{class_memory}{Memory}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} code, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} data);}
+\DoxyCodeLine{00153 }
+\DoxyCodeLine{00154         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} getCodeSize();}
+\DoxyCodeLine{00155         \textcolor{keywordtype}{void} setCodeSize(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} c);}
+\DoxyCodeLine{00156 }
+\DoxyCodeLine{00157         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} getDataSize();}
+\DoxyCodeLine{00158         \textcolor{keywordtype}{void} setDataSize(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} c);}
+\DoxyCodeLine{00159 \};}
+\DoxyCodeLine{00160 }
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00161}\mbox{\hyperlink{class_process}{00161}} \textcolor{keyword}{class }\mbox{\hyperlink{class_process}{Process}}}
+\DoxyCodeLine{00162 \{}
+\DoxyCodeLine{00163     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00164}\mbox{\hyperlink{class_process_a8458c9ab0528b0f5fccb56968c1eb577}{00164}}         \textcolor{keywordtype}{string} \mbox{\hyperlink{class_process_a8458c9ab0528b0f5fccb56968c1eb577}{name}};}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00165}\mbox{\hyperlink{class_process_af4fcdaeb47e30030e4d4877232b6c135}{00165}}         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_process_af4fcdaeb47e30030e4d4877232b6c135}{id}};}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00166}\mbox{\hyperlink{class_process_ae03e5ff2b64628843a8436bea9703b70}{00166}}         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_process_ae03e5ff2b64628843a8436bea9703b70}{priority}};}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00167}\mbox{\hyperlink{class_process_af97a7745a37113e0d5b4ca9b17aed729}{00167}}         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_process_af97a7745a37113e0d5b4ca9b17aed729}{criticality}};}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00168}\mbox{\hyperlink{class_process_a70972fe640d0989f28bd451af196615c}{00168}}         \textcolor{keywordtype}{float} \mbox{\hyperlink{class_process_a70972fe640d0989f28bd451af196615c}{eqGate}};}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00169}\mbox{\hyperlink{class_process_aa4ff148aceb9f05d1d5a5152e610a322}{00169}}         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_process_aa4ff148aceb9f05d1d5a5152e610a322}{dataType}};}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00170}\mbox{\hyperlink{class_process_a3fbb956251eecb4b438c640fd8c1a12d}{00170}}         map <string, unsigned int> \mbox{\hyperlink{class_process_a3fbb956251eecb4b438c640fd8c1a12d}{codeSizeMap}};}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00171}\mbox{\hyperlink{class_process_a125e902953b35206d7d2979e11b56d86}{00171}}         map <string, unsigned int> \mbox{\hyperlink{class_process_a125e902953b35206d7d2979e11b56d86}{dataSizeMap}};}
+\DoxyCodeLine{00172         \textcolor{comment}{//Memory mem;}}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00173}\mbox{\hyperlink{class_process_a86e0eaba322501bf13bd8138324a1a23}{00173}}         map <string,float> \mbox{\hyperlink{class_process_a86e0eaba322501bf13bd8138324a1a23}{affinity}};}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00174}\mbox{\hyperlink{class_process_a6147d0be2c050cb4669640e7076e1241}{00174}}         map <int,float> \mbox{\hyperlink{class_process_a6147d0be2c050cb4669640e7076e1241}{concurrency}};}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00175}\mbox{\hyperlink{class_process_ab18c69089c09584e0d78630fa782ee93}{00175}}         map <int,float> \mbox{\hyperlink{class_process_ab18c69089c09584e0d78630fa782ee93}{load}};}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00176}\mbox{\hyperlink{class_process_ab824045bdc37b05cd9182fda746610b5}{00176}}         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_process_ab824045bdc37b05cd9182fda746610b5}{profiling}};}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00177}\mbox{\hyperlink{class_process_a47be8c61a3a5460452753dc98b68389f}{00177}}         sc\_time \mbox{\hyperlink{class_process_a47be8c61a3a5460452753dc98b68389f}{processTime}};}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00178}\mbox{\hyperlink{class_process_a04c66e1f8802aa8528226df19a5d9516}{00178}}         \textcolor{keywordtype}{float} \mbox{\hyperlink{class_process_a04c66e1f8802aa8528226df19a5d9516}{energy}};}
+\DoxyCodeLine{00179 }
+\DoxyCodeLine{00180     \textcolor{keyword}{public}:}
+\DoxyCodeLine{00181         \mbox{\hyperlink{class_process}{Process}}();}
+\DoxyCodeLine{00182 }
+\DoxyCodeLine{00183         \textcolor{keywordtype}{string} getName();}
+\DoxyCodeLine{00184         \textcolor{keywordtype}{void} setName(\textcolor{keywordtype}{string} x);}
+\DoxyCodeLine{00185 }
+\DoxyCodeLine{00186         \textcolor{keywordtype}{int} getId();}
+\DoxyCodeLine{00187         \textcolor{keywordtype}{void} setId(\textcolor{keywordtype}{int} x);}
+\DoxyCodeLine{00188 }
+\DoxyCodeLine{00189         \textcolor{keywordtype}{int} getPriority();}
+\DoxyCodeLine{00190         \textcolor{keywordtype}{void} setPriority(\textcolor{keywordtype}{int} x);}
+\DoxyCodeLine{00191 }
+\DoxyCodeLine{00192         \textcolor{keywordtype}{int} getCriticality();}
+\DoxyCodeLine{00193         \textcolor{keywordtype}{void} setCriticality(\textcolor{keywordtype}{int} x);}
+\DoxyCodeLine{00194 }
+\DoxyCodeLine{00195         \textcolor{keywordtype}{float} getEqGate();}
+\DoxyCodeLine{00196         \textcolor{keywordtype}{void} setEqGate(\textcolor{keywordtype}{float} g);}
+\DoxyCodeLine{00197 }
+\DoxyCodeLine{00198         \textcolor{keywordtype}{int} getDataType();}
+\DoxyCodeLine{00199         \textcolor{keywordtype}{void} setDataType(\textcolor{keywordtype}{int} x);}
+\DoxyCodeLine{00200 }
+\DoxyCodeLine{00201         \textcolor{keywordtype}{void} setMemSize(\mbox{\hyperlink{class_memory}{Memory}} m);}
+\DoxyCodeLine{00202         \textcolor{keywordtype}{void} setCodeSize(\textcolor{keywordtype}{string} procName, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} value);}
+\DoxyCodeLine{00203         \textcolor{keywordtype}{void} setDataSize(\textcolor{keywordtype}{string} procName, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} value);}
+\DoxyCodeLine{00204 }
+\DoxyCodeLine{00205         \textcolor{keywordtype}{float} getAffinityByName(\textcolor{keywordtype}{string} processorName);}
+\DoxyCodeLine{00206         \textcolor{keywordtype}{void} setAffinity(\textcolor{keywordtype}{string} processorName, \textcolor{keywordtype}{float} affinity);}
+\DoxyCodeLine{00207 }
+\DoxyCodeLine{00208         \textcolor{keywordtype}{void} setConcurrency(\textcolor{keywordtype}{int} procId, \textcolor{keywordtype}{float} conc);}
+\DoxyCodeLine{00209 }
+\DoxyCodeLine{00210         \textcolor{keywordtype}{void} setLoad (\textcolor{keywordtype}{int} procId, \textcolor{keywordtype}{float} value);}
+\DoxyCodeLine{00211 }
+\DoxyCodeLine{00212         \textcolor{keywordtype}{int} getPS\_Profiling();}
+\DoxyCodeLine{00213         sc\_time getProcessTime();}
+\DoxyCodeLine{00214 }
+\DoxyCodeLine{00215         \textcolor{keywordtype}{void} setEnergy(\textcolor{keywordtype}{float} energy);}
+\DoxyCodeLine{00216         \textcolor{keywordtype}{float} getEnergy();}
+\DoxyCodeLine{00217 \};}
+\DoxyCodeLine{00218 }
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00219}\mbox{\hyperlink{class_basic_block}{00219}} \textcolor{keyword}{class }\mbox{\hyperlink{class_basic_block}{BasicBlock}}\{}
+\DoxyCodeLine{00220 }
+\DoxyCodeLine{00221 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00222}\mbox{\hyperlink{class_basic_block_a4cad9fc9592145fea0335e694df17ebf}{00222}}     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_basic_block_a4cad9fc9592145fea0335e694df17ebf}{name}};}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00223}\mbox{\hyperlink{class_basic_block_a306c90076760a7ccd52ffab5cba5a2f5}{00223}}     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_basic_block_a306c90076760a7ccd52ffab5cba5a2f5}{id}};}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00224}\mbox{\hyperlink{class_basic_block_a730e1383a3247e3a456b6cea00575aed}{00224}}     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_basic_block_a730e1383a3247e3a456b6cea00575aed}{type}};}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00225}\mbox{\hyperlink{class_basic_block_ae5d66a26435ab7c34ac15de59eafe7b3}{00225}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_basic_block_ae5d66a26435ab7c34ac15de59eafe7b3}{idPU}};}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00226}\mbox{\hyperlink{class_basic_block_aaf3c4ccda26ba23923e66f1e77228f2c}{00226}}     vector <ProcessingUnit> \mbox{\hyperlink{class_basic_block_aaf3c4ccda26ba23923e66f1e77228f2c}{vpu}};}
+\DoxyCodeLine{00227     \textcolor{comment}{//Memory memSize;}}
+\DoxyCodeLine{00228     \textcolor{comment}{//communicationUnit}}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00229}\mbox{\hyperlink{class_basic_block_a298dcdfcc1736778a7262329d9204edd}{00229}}     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_basic_block_a298dcdfcc1736778a7262329d9204edd}{codeSize}};}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00230}\mbox{\hyperlink{class_basic_block_ab89eed26cc943dd972c686391d7bbc69}{00230}}     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_basic_block_ab89eed26cc943dd972c686391d7bbc69}{dataSize}};}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00231}\mbox{\hyperlink{class_basic_block_a4c5622c7d3329c93c0bc39705bb19ff3}{00231}}     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_basic_block_a4c5622c7d3329c93c0bc39705bb19ff3}{eqG}};}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00232}\mbox{\hyperlink{class_basic_block_a0cac9b02f5e385651a80c4469301a586}{00232}}     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_basic_block_a0cac9b02f5e385651a80c4469301a586}{FRT}};}
+\DoxyCodeLine{00233 }
+\DoxyCodeLine{00234 \textcolor{keyword}{public}:}
+\DoxyCodeLine{00235     \textcolor{comment}{//BasicBlock();}}
+\DoxyCodeLine{00236 }
+\DoxyCodeLine{00237     \textcolor{comment}{//BasicBlock (unsigned int id, string type, ProcessingUnit pu, float frt);}}
+\DoxyCodeLine{00238 }
+\DoxyCodeLine{00239     \textcolor{keywordtype}{string} getName();}
+\DoxyCodeLine{00240     \textcolor{keywordtype}{void} setName(\textcolor{keywordtype}{string} x);}
+\DoxyCodeLine{00241 }
+\DoxyCodeLine{00242     \textcolor{keywordtype}{int} getId();}
+\DoxyCodeLine{00243     \textcolor{keywordtype}{void} setId(\textcolor{keywordtype}{int} x);}
+\DoxyCodeLine{00244 }
+\DoxyCodeLine{00245     \textcolor{keywordtype}{string} getType();}
+\DoxyCodeLine{00246     \textcolor{keywordtype}{void} setType(\textcolor{keywordtype}{string} x);}
+\DoxyCodeLine{00247 }
+\DoxyCodeLine{00248     \textcolor{keywordtype}{int} getIdPU();}
+\DoxyCodeLine{00249     \textcolor{keywordtype}{void} setIdPU(\textcolor{keywordtype}{int} x);}
+\DoxyCodeLine{00250 }
+\DoxyCodeLine{00251     vector<ProcessingUnit> getProcessors();}
+\DoxyCodeLine{00252     \textcolor{keywordtype}{void} setProcessor(vector<ProcessingUnit> pu);}
+\DoxyCodeLine{00253 }
+\DoxyCodeLine{00254     \textcolor{comment}{//Memory getMemSize();}}
+\DoxyCodeLine{00255     \textcolor{comment}{//void setMem(Memory m);}}
+\DoxyCodeLine{00256 }
+\DoxyCodeLine{00257     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} getCodeSize();}
+\DoxyCodeLine{00258     \textcolor{keywordtype}{void} setCodeSize(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} c);}
+\DoxyCodeLine{00259 }
+\DoxyCodeLine{00260     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} getDataSize();}
+\DoxyCodeLine{00261     \textcolor{keywordtype}{void} setDataSize(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} c);}
+\DoxyCodeLine{00262 }
+\DoxyCodeLine{00263 }
+\DoxyCodeLine{00264     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} getEqG();}
+\DoxyCodeLine{00265     \textcolor{keywordtype}{void} setEqG(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} c);}
+\DoxyCodeLine{00266 }
+\DoxyCodeLine{00267     \textcolor{keywordtype}{float} getFRT();}
+\DoxyCodeLine{00268     \textcolor{keywordtype}{void} setFRT(\textcolor{keywordtype}{float} x);}
+\DoxyCodeLine{00269 }
+\DoxyCodeLine{00270 }
+\DoxyCodeLine{00271 \};}
+\DoxyCodeLine{00272 }
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00273}\mbox{\hyperlink{class_physical_link}{00273}} \textcolor{keyword}{class }\mbox{\hyperlink{class_physical_link}{PhysicalLink}}}
+\DoxyCodeLine{00274 \{}
+\DoxyCodeLine{00275     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00276}\mbox{\hyperlink{class_physical_link_ab7d8e236c3a63063c48a572753f92455}{00276}}         \textcolor{keywordtype}{string} \mbox{\hyperlink{class_physical_link_ab7d8e236c3a63063c48a572753f92455}{name}};}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00277}\mbox{\hyperlink{class_physical_link_a428c21ce3a75e45ac4e1da6967382f77}{00277}}         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_physical_link_a428c21ce3a75e45ac4e1da6967382f77}{id}};}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00278}\mbox{\hyperlink{class_physical_link_a38f205a4a97e9869b93944e0f820f11b}{00278}}         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_physical_link_a38f205a4a97e9869b93944e0f820f11b}{physical\_width}}; \textcolor{comment}{// width of the physical link}}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00279}\mbox{\hyperlink{class_physical_link_a90cb0e1c2a0d9951899b587d6d2b247a}{00279}}         sc\_time \mbox{\hyperlink{class_physical_link_a90cb0e1c2a0d9951899b587d6d2b247a}{tcomm}}; \textcolor{comment}{// LP: (bandwidth / phisycal\_widht = 1/sec=hz (inverto)) ( per 1000)  (non sforare i 5 ms)}}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00280}\mbox{\hyperlink{class_physical_link_a2f2ff97a12a4c37da1892f0fc2e855b2}{00280}}         sc\_time \mbox{\hyperlink{class_physical_link_a2f2ff97a12a4c37da1892f0fc2e855b2}{tacomm}}; \textcolor{comment}{// LP: tcomm * K (es:K=1)}}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00281}\mbox{\hyperlink{class_physical_link_ac441e379b59ecb00c48ebef53f2d6b75}{00281}}         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_physical_link_ac441e379b59ecb00c48ebef53f2d6b75}{bandwidth}}; \textcolor{comment}{// bandwidth in bit/s}}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00282}\mbox{\hyperlink{class_physical_link_a2c8e1cba265b4e099ac6b07c7839de0e}{00282}}         \textcolor{keywordtype}{float} \mbox{\hyperlink{class_physical_link_a2c8e1cba265b4e099ac6b07c7839de0e}{a2}}; \textcolor{comment}{// a2 coefficient of energy curve}}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00283}\mbox{\hyperlink{class_physical_link_a46367b48d7ab1d5c06dd2051a6d5a32f}{00283}}         \textcolor{keywordtype}{float} \mbox{\hyperlink{class_physical_link_a46367b48d7ab1d5c06dd2051a6d5a32f}{a1}}; \textcolor{comment}{// a1 coefficient of energy curve}}
+\DoxyCodeLine{00284 }
+\DoxyCodeLine{00285     \textcolor{keyword}{public}:}
+\DoxyCodeLine{00286         \textcolor{keywordtype}{string} getName();}
+\DoxyCodeLine{00287         \textcolor{keywordtype}{void} setName(\textcolor{keywordtype}{string} x);}
+\DoxyCodeLine{00288 }
+\DoxyCodeLine{00289         \textcolor{keywordtype}{int} getId();}
+\DoxyCodeLine{00290         \textcolor{keywordtype}{void} setId(\textcolor{keywordtype}{int} x);}
+\DoxyCodeLine{00291 }
+\DoxyCodeLine{00292         \textcolor{keywordtype}{int} getPhysicalWidth();}
+\DoxyCodeLine{00293         \textcolor{keywordtype}{void} setPhysicalWidth(\textcolor{keywordtype}{int} x);}
+\DoxyCodeLine{00294 }
+\DoxyCodeLine{00295         sc\_time getTcomm();}
+\DoxyCodeLine{00296         \textcolor{keywordtype}{void} setTcomm(sc\_time x);}
+\DoxyCodeLine{00297 }
+\DoxyCodeLine{00298         sc\_time getTAcomm();}
+\DoxyCodeLine{00299         \textcolor{keywordtype}{void} setTAcomm(sc\_time x);}
+\DoxyCodeLine{00300 }
+\DoxyCodeLine{00301         \textcolor{keywordtype}{int} getBandwidth();}
+\DoxyCodeLine{00302         \textcolor{keywordtype}{void} setBandwidth(\textcolor{keywordtype}{int} x);}
+\DoxyCodeLine{00303 }
+\DoxyCodeLine{00304         \textcolor{keywordtype}{float} geta2();}
+\DoxyCodeLine{00305         \textcolor{keywordtype}{void} seta2(\textcolor{keywordtype}{float} x);}
+\DoxyCodeLine{00306 }
+\DoxyCodeLine{00307         \textcolor{keywordtype}{float} geta1();}
+\DoxyCodeLine{00308         \textcolor{keywordtype}{void} seta1(\textcolor{keywordtype}{float} x);}
+\DoxyCodeLine{00309 }
+\DoxyCodeLine{00310 \};}
+\DoxyCodeLine{00311 }
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00312}\mbox{\hyperlink{class_channel}{00312}} \textcolor{keyword}{class }\mbox{\hyperlink{class_channel}{Channel}}}
+\DoxyCodeLine{00313 \{}
+\DoxyCodeLine{00314     \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00315}\mbox{\hyperlink{class_channel_ada27be4a604630621c5de998c7f4a418}{00315}}         \textcolor{keywordtype}{string} \mbox{\hyperlink{class_channel_ada27be4a604630621c5de998c7f4a418}{name}};}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00316}\mbox{\hyperlink{class_channel_afc927ef6eb5c4facb2bed6f9c74594b3}{00316}}         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_channel_afc927ef6eb5c4facb2bed6f9c74594b3}{id}};}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00317}\mbox{\hyperlink{class_channel_a4150fdc6d32d1046ce353fead3a03859}{00317}}         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_channel_a4150fdc6d32d1046ce353fead3a03859}{w\_id}};}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00318}\mbox{\hyperlink{class_channel_a9b6254aa7b5a479acc5c06e121d60541}{00318}}         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_channel_a9b6254aa7b5a479acc5c06e121d60541}{r\_id}};}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00319}\mbox{\hyperlink{class_channel_a8b61c56e572c25da10769f2391c5ca90}{00319}}         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_channel_a8b61c56e572c25da10769f2391c5ca90}{width}}; \textcolor{comment}{// logical width of the channel}}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00320}\mbox{\hyperlink{class_channel_a5aae410ad04998a0605d5e5f5aea6f67}{00320}}         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_channel_a5aae410ad04998a0605d5e5f5aea6f67}{num}};}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00321}\mbox{\hyperlink{class_channel_ae59cca5ceecbf1eab184500c71f13e4c}{00321}}         sc\_time \mbox{\hyperlink{class_channel_ae59cca5ceecbf1eab184500c71f13e4c}{working\_time}};}
+\DoxyCodeLine{\Hypertarget{tl_8h_source_l00322}\mbox{\hyperlink{class_channel_ab19bcd2871b10a8a86029e7fd7ea022c}{00322}}         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_channel_ab19bcd2871b10a8a86029e7fd7ea022c}{working\_energy}};}
+\DoxyCodeLine{00323 }
+\DoxyCodeLine{00324     \textcolor{keyword}{public}:}
+\DoxyCodeLine{00325         \textcolor{keywordtype}{string} getName();}
+\DoxyCodeLine{00326         \textcolor{keywordtype}{void} setName(\textcolor{keywordtype}{string} x);}
+\DoxyCodeLine{00327 }
+\DoxyCodeLine{00328         \textcolor{keywordtype}{int} getId();}
+\DoxyCodeLine{00329         \textcolor{keywordtype}{void} setId(\textcolor{keywordtype}{int} x);}
+\DoxyCodeLine{00330 }
+\DoxyCodeLine{00331         \textcolor{keywordtype}{int} getW\_id();}
+\DoxyCodeLine{00332         \textcolor{keywordtype}{void} setW\_id(\textcolor{keywordtype}{int} x);}
+\DoxyCodeLine{00333 }
+\DoxyCodeLine{00334         \textcolor{keywordtype}{int} getR\_id();}
+\DoxyCodeLine{00335         \textcolor{keywordtype}{void} setR\_id(\textcolor{keywordtype}{int} x);}
+\DoxyCodeLine{00336 }
+\DoxyCodeLine{00337         \textcolor{keywordtype}{int} getWidth();}
+\DoxyCodeLine{00338         \textcolor{keywordtype}{void} setWidth(\textcolor{keywordtype}{int} x);}
+\DoxyCodeLine{00339 }
+\DoxyCodeLine{00340         \textcolor{keywordtype}{int} getNum();}
+\DoxyCodeLine{00341         \textcolor{keywordtype}{void} setNum(\textcolor{keywordtype}{int} x);}
+\DoxyCodeLine{00342 }
+\DoxyCodeLine{00343 \};}
+\DoxyCodeLine{00344  \textcolor{comment}{// end of tl\_group}}
+\DoxyCodeLine{00346 }
+\DoxyCodeLine{00347 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* TL\_H\_ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00348 }
+\DoxyCodeLine{00349 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00350 \textcolor{comment}{ ***                                  EOF                                     ***}}
+\DoxyCodeLine{00351 \textcolor{comment}{ ********************************************************************************/}}
+
+\end{DoxyCode}

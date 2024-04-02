@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structfir8e__parameters" kind="struct" language="C++" prot="public">
+    <compoundname>fir8e_parameters</compoundname>
+    <includes refid="datatype_8h" local="yes">src/datatype.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structfir8e__parameters_1ae9ddf548dcac80e717254886d2d81dfc" prot="public" static="no" mutable="no">
+        <type>sc_uint&lt; 19 &gt;</type>
+        <definition>sc_uint&lt;19&gt; fir8e_parameters::acc</definition>
+        <argsstring></argsstring>
+        <name>acc</name>
+        <briefdescription>
+<para>Example 1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/datatype.h" line="96" column="9" bodyfile="HepsycodeDesign/src/datatype.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfir8e__parameters_1a30f60f641f56effb5939e0e3134d7689" prot="public" static="no" mutable="no">
+        <type>sc_uint&lt; 9 &gt;</type>
+        <definition>sc_uint&lt;9&gt; fir8e_parameters::coef[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>coef</name>
+        <briefdescription>
+<para>Example 2. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/datatype.h" line="97" column="9" bodyfile="HepsycodeDesign/src/datatype.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfir8e__parameters_1a7b6494c52e9c74662b9f82058f5c45d3" prot="public" static="no" mutable="no">
+        <type>sc_uint&lt; 8 &gt;</type>
+        <definition>sc_uint&lt;8&gt; fir8e_parameters::shift[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>shift</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Example 3. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/datatype.h" line="98" column="9" bodyfile="HepsycodeDesign/src/datatype.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfir8e__parameters_1a489e356ce63ffc6a4364d51001466061" prot="public" static="no" mutable="no">
+        <type>sc_uint&lt; 8 &gt;</type>
+        <definition>sc_uint&lt;8&gt; fir8e_parameters::sample_tmp</definition>
+        <argsstring></argsstring>
+        <name>sample_tmp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Example 4. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/datatype.h" line="99" column="9" bodyfile="HepsycodeDesign/src/datatype.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Message from fir8m to fir8e. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>struct <ref refid="structfir8e__parameters" kindref="compound">fir8e_parameters</ref></para>
+<para>Some details about the <ref refid="structfir8e__parameters" kindref="compound">fir8e_parameters</ref> struct. <linebreak/>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>fir8e_parameters</label>
+        <link refid="structfir8e__parameters"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+shift</edgelabel>
+          <edgelabel>+sample_tmp</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+coef</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+acc</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>sc_uint&lt; 9 &gt;</label>
+      </node>
+      <node id="4">
+        <label>sc_uint&lt; 19 &gt;</label>
+      </node>
+      <node id="2">
+        <label>sc_uint&lt; 8 &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="HepsycodeDesign/src/datatype.h" line="95" column="1" bodyfile="HepsycodeDesign/src/datatype.h" bodystart="94" bodyend="100"/>
+    <listofallmembers>
+      <member refid="structfir8e__parameters_1ae9ddf548dcac80e717254886d2d81dfc" prot="public" virt="non-virtual"><scope>fir8e_parameters</scope><name>acc</name></member>
+      <member refid="structfir8e__parameters_1a30f60f641f56effb5939e0e3134d7689" prot="public" virt="non-virtual"><scope>fir8e_parameters</scope><name>coef</name></member>
+      <member refid="structfir8e__parameters_1a489e356ce63ffc6a4364d51001466061" prot="public" virt="non-virtual"><scope>fir8e_parameters</scope><name>sample_tmp</name></member>
+      <member refid="structfir8e__parameters_1a7b6494c52e9c74662b9f82058f5c45d3" prot="public" virt="non-virtual"><scope>fir8e_parameters</scope><name>shift</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

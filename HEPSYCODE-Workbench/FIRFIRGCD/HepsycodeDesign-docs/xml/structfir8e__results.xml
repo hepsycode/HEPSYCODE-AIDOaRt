@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structfir8e__results" kind="struct" language="C++" prot="public">
+    <compoundname>fir8e_results</compoundname>
+    <includes refid="datatype_8h" local="yes">src/datatype.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structfir8e__results_1a96690c57e8968fb79bbcf0736b919d74" prot="public" static="no" mutable="no">
+        <type>sc_uint&lt; 19 &gt;</type>
+        <definition>sc_uint&lt;19&gt; fir8e_results::acc</definition>
+        <argsstring></argsstring>
+        <name>acc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/datatype.h" line="111" column="9" bodyfile="HepsycodeDesign/src/datatype.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>struct <ref refid="structfir8e__results" kindref="compound">fir8e_results</ref> </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Some details about the <ref refid="structfir8e__results" kindref="compound">fir8e_results</ref> struct. <linebreak/>
+Message from fir8e to fir8m </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>fir8e_results</label>
+        <link refid="structfir8e__results"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+acc</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>sc_uint&lt; 19 &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="HepsycodeDesign/src/datatype.h" line="110" column="1" bodyfile="HepsycodeDesign/src/datatype.h" bodystart="109" bodyend="112"/>
+    <listofallmembers>
+      <member refid="structfir8e__results_1a96690c57e8968fb79bbcf0736b919d74" prot="public" virt="non-virtual"><scope>fir8e_results</scope><name>acc</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

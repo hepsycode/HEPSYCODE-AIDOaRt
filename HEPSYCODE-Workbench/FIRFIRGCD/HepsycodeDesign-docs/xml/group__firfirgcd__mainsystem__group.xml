@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="group__firfirgcd__mainsystem__group" kind="group">
+    <compoundname>firfirgcd_mainsystem_group</compoundname>
+    <title>FirFirGCD Mainsystem.</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__firfirgcd__mainsystem__group_1ga7ea2a25adbd29a5e326b5236d331bb22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SC_MODULE</definition>
+        <argsstring>(mainsystem)</argsstring>
+        <name>SC_MODULE</name>
+        <param>
+          <type>mainsystem</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/mainsystem.h" line="80" column="1" bodyfile="HepsycodeDesign/src/mainsystem.h" bodystart="80" bodyend="152"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Mainsystem Implementation. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>V. Muttillo, L. Pomante </para>
+</simplesect>
+<simplesect kind="date"><para>Apr. 2022 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

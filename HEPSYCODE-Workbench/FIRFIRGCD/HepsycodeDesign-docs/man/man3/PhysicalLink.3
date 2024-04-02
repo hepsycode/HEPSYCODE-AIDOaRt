@@ -1,0 +1,309 @@
+.TH "PhysicalLink" 3 "Mon Mar 20 2023" "FirFirGCD Application" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PhysicalLink
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <tl\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "string \fBgetName\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetName\fP (string x)"
+.br
+.ti -1c
+.RI "int \fBgetId\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetId\fP (int x)"
+.br
+.ti -1c
+.RI "int \fBgetPhysicalWidth\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetPhysicalWidth\fP (int x)"
+.br
+.ti -1c
+.RI "sc_time \fBgetTcomm\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetTcomm\fP (sc_time x)"
+.br
+.ti -1c
+.RI "sc_time \fBgetTAcomm\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetTAcomm\fP (sc_time x)"
+.br
+.ti -1c
+.RI "int \fBgetBandwidth\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetBandwidth\fP (int x)"
+.br
+.ti -1c
+.RI "float \fBgeta2\fP ()"
+.br
+.ti -1c
+.RI "void \fBseta2\fP (float x)"
+.br
+.ti -1c
+.RI "float \fBgeta1\fP ()"
+.br
+.ti -1c
+.RI "void \fBseta1\fP (float x)"
+.br
+.in -1c
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "string \fBname\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBid\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBphysical_width\fP"
+.br
+.ti -1c
+.RI "sc_time \fBtcomm\fP"
+.br
+.ti -1c
+.RI "sc_time \fBtacomm\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBbandwidth\fP"
+.br
+.ti -1c
+.RI "float \fBa2\fP"
+.br
+.ti -1c
+.RI "float \fBa1\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 273 of file tl\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "float PhysicalLink::geta1 ()"
+
+.PP
+Definition at line 542 of file tl\&.cpp\&.
+.PP
+.nf
+543 {
+544     return this->a1;
+545 }
+.fi
+.SS "float PhysicalLink::geta2 ()"
+
+.PP
+Definition at line 532 of file tl\&.cpp\&.
+.PP
+.nf
+533 {
+534     return this->a2;
+535 }
+.fi
+.SS "int PhysicalLink::getBandwidth ()"
+
+.PP
+Definition at line 497 of file tl\&.cpp\&.
+.PP
+.nf
+498 {
+499     return this->bandwidth;
+500 }
+.fi
+.SS "int PhysicalLink::getId ()"
+
+.PP
+Definition at line 472 of file tl\&.cpp\&.
+.PP
+.nf
+473 {
+474     return this->id;
+475 }
+.fi
+.SS "string PhysicalLink::getName ()"
+
+.PP
+Definition at line 477 of file tl\&.cpp\&.
+.PP
+.nf
+478 {
+479     return this->name;
+480 }
+.fi
+.SS "int PhysicalLink::getPhysicalWidth ()"
+
+.PP
+Definition at line 482 of file tl\&.cpp\&.
+.PP
+.nf
+483 {
+484     return this->physical_width;
+485 }
+.fi
+.SS "sc_time PhysicalLink::getTAcomm ()"
+
+.PP
+Definition at line 492 of file tl\&.cpp\&.
+.PP
+.nf
+493 {
+494     return this->tacomm;
+495 }
+.fi
+.SS "sc_time PhysicalLink::getTcomm ()"
+
+.PP
+Definition at line 487 of file tl\&.cpp\&.
+.PP
+.nf
+488 {
+489     return this->tcomm;
+490 }
+.fi
+.SS "void PhysicalLink::seta1 (float x)"
+
+.PP
+Definition at line 547 of file tl\&.cpp\&.
+.PP
+.nf
+548 {
+549     a1 = x;
+550 }
+.fi
+.SS "void PhysicalLink::seta2 (float x)"
+
+.PP
+Definition at line 537 of file tl\&.cpp\&.
+.PP
+.nf
+538 {
+539     a2 = x;
+540 }
+.fi
+.SS "void PhysicalLink::setBandwidth (int x)"
+
+.PP
+Definition at line 527 of file tl\&.cpp\&.
+.PP
+.nf
+528 {
+529     bandwidth = x;
+530 }
+.fi
+.SS "void PhysicalLink::setId (int x)"
+
+.PP
+Definition at line 502 of file tl\&.cpp\&.
+.PP
+.nf
+503 {
+504     id = x;
+505 }
+.fi
+.PP
+Referenced by SystemManager::generatePhysicalLinkInstances()\&.
+.SS "void PhysicalLink::setName (string x)"
+
+.PP
+Definition at line 507 of file tl\&.cpp\&.
+.PP
+.nf
+508 {
+509     name = x;
+510 }
+.fi
+.PP
+Referenced by SystemManager::generatePhysicalLinkInstances()\&.
+.SS "void PhysicalLink::setPhysicalWidth (int x)"
+
+.PP
+Definition at line 512 of file tl\&.cpp\&.
+.PP
+.nf
+513 {
+514     physical_width = x;
+515 }
+.fi
+.SS "void PhysicalLink::setTAcomm (sc_time x)"
+
+.PP
+Definition at line 522 of file tl\&.cpp\&.
+.PP
+.nf
+523 {
+524     tacomm = x;
+525 }
+.fi
+.SS "void PhysicalLink::setTcomm (sc_time x)"
+
+.PP
+Definition at line 517 of file tl\&.cpp\&.
+.PP
+.nf
+518 {
+519     tcomm = x;
+520 }
+.fi
+.SH "Field Documentation"
+.PP 
+.SS "float PhysicalLink::a1"
+
+.PP
+Definition at line 283 of file tl\&.h\&.
+.PP
+Referenced by SystemManager::generatePhysicalLinkInstances()\&.
+.SS "float PhysicalLink::a2"
+
+.PP
+Definition at line 282 of file tl\&.h\&.
+.PP
+Referenced by SystemManager::generatePhysicalLinkInstances()\&.
+.SS "unsigned int PhysicalLink::bandwidth"
+
+.PP
+Definition at line 281 of file tl\&.h\&.
+.PP
+Referenced by SystemManager::generatePhysicalLinkInstances()\&.
+.SS "unsigned int PhysicalLink::id"
+
+.PP
+Definition at line 277 of file tl\&.h\&.
+.SS "string PhysicalLink::name"
+
+.PP
+Definition at line 276 of file tl\&.h\&.
+.SS "unsigned int PhysicalLink::physical_width"
+
+.PP
+Definition at line 278 of file tl\&.h\&.
+.PP
+Referenced by SystemManager::generatePhysicalLinkInstances()\&.
+.SS "sc_time PhysicalLink::tacomm"
+
+.PP
+Definition at line 280 of file tl\&.h\&.
+.PP
+Referenced by SystemManager::generatePhysicalLinkInstances()\&.
+.SS "sc_time PhysicalLink::tcomm"
+
+.PP
+Definition at line 279 of file tl\&.h\&.
+.PP
+Referenced by SystemManager::generatePhysicalLinkInstances()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FirFirGCD Application from the source code\&.

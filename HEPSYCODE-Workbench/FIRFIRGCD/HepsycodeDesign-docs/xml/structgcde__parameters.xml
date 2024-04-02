@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structgcde__parameters" kind="struct" language="C++" prot="public">
+    <compoundname>gcde_parameters</compoundname>
+    <includes refid="datatype_8h" local="no">datatype.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgcde__parameters_1a6a87f3b51d21aa5c2d23625fa8e02216" prot="public" static="no" mutable="no">
+        <type>sc_uint&lt; 8 &gt;</type>
+        <definition>sc_uint&lt;8&gt; gcde_parameters::sample1</definition>
+        <argsstring></argsstring>
+        <name>sample1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/datatype.h" line="180" column="9" bodyfile="HepsycodeDesign/src/datatype.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgcde__parameters_1aca29a1b102b8cfb96f79e8254ef3477e" prot="public" static="no" mutable="no">
+        <type>sc_uint&lt; 8 &gt;</type>
+        <definition>sc_uint&lt;8&gt; gcde_parameters::sample2</definition>
+        <argsstring></argsstring>
+        <name>sample2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/datatype.h" line="181" column="9" bodyfile="HepsycodeDesign/src/datatype.h" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Message from gcdm to gcde. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>gcde_parameters</label>
+        <link refid="structgcde__parameters"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+sample1</edgelabel>
+          <edgelabel>+sample2</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>sc_uint&lt; 8 &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="HepsycodeDesign/src/datatype.h" line="177" column="1" bodyfile="HepsycodeDesign/src/datatype.h" bodystart="176" bodyend="180"/>
+    <listofallmembers>
+      <member refid="structgcde__parameters_1a6a87f3b51d21aa5c2d23625fa8e02216" prot="public" virt="non-virtual"><scope>gcde_parameters</scope><name>sample1</name></member>
+      <member refid="structgcde__parameters_1aca29a1b102b8cfb96f79e8254ef3477e" prot="public" virt="non-virtual"><scope>gcde_parameters</scope><name>sample2</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

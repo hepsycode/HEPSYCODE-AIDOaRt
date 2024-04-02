@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<plugin
+	name="HepsyCode Tools"
+	id="transformationTest"
+	version="0.0.0"
+	provider-name="OTI">
+	
+    <requires>
+	<import plugin="org.eclipse.core.resources"/>
+        <import plugin="org.eclipse.ui"/>
+    </requires>
+
+    <runtime>
+	<library name="transformationTest.jar"/>
+    </runtime>
+	
+    <extension point = "org.eclipse.ui.actionSets">
+        <actionSet
+            id="transformationTest.Model2TextActionSet"
+            label="HepsyCode"
+	    visible="true"
+	    description="The action set for HepsyCode Tool">
+	    <menu
+		id="transformationTest.Model2TextMenu"
+		label="Hepsycode Tools">
+		<separator name="hepsycode"/>
+	    </menu>
+	    <action id="transformationTest.actions.Model2TextAction"
+		menubarPath="transformationTest.Model2TextMenu/hepsycode"
+		toolbarPath="Normal"			
+		label="Generate SystemC Functional Model"
+		tooltip="Press to Generate SystemC Model"
+		icon="icons/hepsycode.png"
+		class="transformationTest.Model2TextAction"/>
+        </actionSet>
+    </extension>
+</plugin>

@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:hml="org.univaq.hepsy" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis uid="_Uu0TAMG2Eey-76UM0dR0tQ" selectedViews="_empTwMG2Eey-76UM0dR0tQ" version="15.0.0.202201261500">
+    <semanticResources>Tekne_AIDOaRt_Use_Case.hepsy</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_empTwMG2Eey-76UM0dR0tQ">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_iNzAoMG2Eey-76UM0dR0tQ" name="Tekne AIDOaRt Use Case" repPath="#_iNs6AMG2Eey-76UM0dR0tQ" changeId="dc157f93-b7e8-41f8-9f7d-854cdd97ef6b">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']"/>
+        <target xmi:type="hml:BehaviorSpecification" href="Tekne_AIDOaRt_Use_Case.hepsy#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram uid="_iNs6AMG2Eey-76UM0dR0tQ">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_iPm-gMG2Eey-76UM0dR0tQ" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_iPm-gcG2Eey-76UM0dR0tQ" type="Sirius" element="_iNs6AMG2Eey-76UM0dR0tQ" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_n8qKkJ5lEe2bboi7XQLDvg" type="2001" element="_n8kD8J5lEe2bboi7XQLDvg">
+          <children xmi:type="notation:Node" xmi:id="_n840EJ5lEe2bboi7XQLDvg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_n840EZ5lEe2bboi7XQLDvg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_n86CMJ5lEe2bboi7XQLDvg" type="3003" element="_n8krAJ5lEe2bboi7XQLDvg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_n86CMZ5lEe2bboi7XQLDvg" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_n86CMp5lEe2bboi7XQLDvg"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_vGsIUJ5lEe2bboi7XQLDvg" type="3001" element="_vGpFAJ5lEe2bboi7XQLDvg">
+            <children xmi:type="notation:Node" xmi:id="_vGsIU55lEe2bboi7XQLDvg" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_vGsIVJ5lEe2bboi7XQLDvg" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_vGvysJ5lEe2bboi7XQLDvg" type="3003" element="_vGpFAZ5lEe2bboi7XQLDvg">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_vGvysZ5lEe2bboi7XQLDvg" fontName="Ubuntu"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vGvysp5lEe2bboi7XQLDvg"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_vGsIUZ5lEe2bboi7XQLDvg" fontName="Ubuntu" fontHeight="12"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vGsIUp5lEe2bboi7XQLDvg" x="99" y="90" width="30" height="30"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_n8qKkZ5lEe2bboi7XQLDvg" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_n8qKkp5lEe2bboi7XQLDvg" x="15" y="190" width="105" height="226"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_qS_IwJ5lEe2bboi7XQLDvg" type="2002" element="_qS3M8J5lEe2bboi7XQLDvg">
+          <children xmi:type="notation:Node" xmi:id="_qTAW4J5lEe2bboi7XQLDvg" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_qTCMEJ5lEe2bboi7XQLDvg" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_UEFoMJ5mEe2bboi7XQLDvg" type="3007" element="_UD73MJ5mEe2bboi7XQLDvg">
+              <children xmi:type="notation:Node" xmi:id="_UEFoM55mEe2bboi7XQLDvg" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_UEFoNJ5mEe2bboi7XQLDvg" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_UEG2UJ5mEe2bboi7XQLDvg" type="3016" element="_UD73MZ5mEe2bboi7XQLDvg">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_UEG2UZ5mEe2bboi7XQLDvg" fontName="Ubuntu"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UEG2Up5mEe2bboi7XQLDvg"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_UEFoMZ5mEe2bboi7XQLDvg" fontName="Ubuntu" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UEFoMp5mEe2bboi7XQLDvg" x="64" y="244" width="150" height="80"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_liCs0J5mEe2bboi7XQLDvg" type="3007" element="_lh7_IJ5mEe2bboi7XQLDvg">
+              <children xmi:type="notation:Node" xmi:id="_liCs055mEe2bboi7XQLDvg" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_liCs1J5mEe2bboi7XQLDvg" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_liDT4J5mEe2bboi7XQLDvg" type="3016" element="_lh7_IZ5mEe2bboi7XQLDvg">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_liDT4Z5mEe2bboi7XQLDvg" fontName="Ubuntu"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_liDT4p5mEe2bboi7XQLDvg"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_liCs0Z5mEe2bboi7XQLDvg" fontName="Ubuntu" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_liCs0p5mEe2bboi7XQLDvg" x="70" y="18" width="138" height="69"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_obY4gJ5mEe2bboi7XQLDvg" type="3007" element="_obSx4J5mEe2bboi7XQLDvg">
+              <children xmi:type="notation:Node" xmi:id="_obY4g55mEe2bboi7XQLDvg" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_obY4hJ5mEe2bboi7XQLDvg" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_obZfkJ5mEe2bboi7XQLDvg" type="3016" element="_obSx4Z5mEe2bboi7XQLDvg">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_obZfkZ5mEe2bboi7XQLDvg" fontName="Ubuntu"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_obZfkp5mEe2bboi7XQLDvg"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_obY4gZ5mEe2bboi7XQLDvg" fontName="Ubuntu" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_obY4gp5mEe2bboi7XQLDvg" x="223" y="133" width="139" height="75"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_p8amYJ5mEe2bboi7XQLDvg" type="3007" element="_p8XjEJ5mEe2bboi7XQLDvg">
+              <children xmi:type="notation:Node" xmi:id="_p8bNcJ5mEe2bboi7XQLDvg" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_p8bNcZ5mEe2bboi7XQLDvg" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_p8bNcp5mEe2bboi7XQLDvg" type="3016" element="_p8XjEZ5mEe2bboi7XQLDvg">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_p8bNc55mEe2bboi7XQLDvg" fontName="Ubuntu"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_p8bNdJ5mEe2bboi7XQLDvg"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_p8amYZ5mEe2bboi7XQLDvg" fontName="Ubuntu" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_p8amYp5mEe2bboi7XQLDvg" x="223" y="363" width="139" height="76"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ysacYJ5mEe2bboi7XQLDvg" type="3007" element="_ysTusJ5mEe2bboi7XQLDvg">
+              <children xmi:type="notation:Node" xmi:id="_ysbDcJ5mEe2bboi7XQLDvg" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_ysbDcZ5mEe2bboi7XQLDvg" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_ysbDcp5mEe2bboi7XQLDvg" type="3016" element="_ysUVwJ5mEe2bboi7XQLDvg">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_ysbDc55mEe2bboi7XQLDvg" fontName="Ubuntu"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ysbDdJ5mEe2bboi7XQLDvg"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_ysacYZ5mEe2bboi7XQLDvg" fontName="Ubuntu" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ysacYp5mEe2bboi7XQLDvg" x="59" y="524" width="139" height="76"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_1RExgJ5mEe2bboi7XQLDvg" type="3007" element="_1RBuMJ5mEe2bboi7XQLDvg">
+              <children xmi:type="notation:Node" xmi:id="_1RFYkJ5mEe2bboi7XQLDvg" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_1RFYkZ5mEe2bboi7XQLDvg" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_1RFYkp5mEe2bboi7XQLDvg" type="3016" element="_1RBuMZ5mEe2bboi7XQLDvg">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_1RFYk55mEe2bboi7XQLDvg" fontName="Ubuntu"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1RFYlJ5mEe2bboi7XQLDvg"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_1RExgZ5mEe2bboi7XQLDvg" fontName="Ubuntu" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1RExgp5mEe2bboi7XQLDvg" x="629" y="18" width="108" height="69"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_6xvkwJ5mEe2bboi7XQLDvg" type="3007" element="_6xlMsJ5mEe2bboi7XQLDvg">
+              <children xmi:type="notation:Node" xmi:id="_6xvkw55mEe2bboi7XQLDvg" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_6xvkxJ5mEe2bboi7XQLDvg" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_6xwL0J5mEe2bboi7XQLDvg" type="3016" element="_6xlzwJ5mEe2bboi7XQLDvg">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_6xwL0Z5mEe2bboi7XQLDvg" fontName="Ubuntu"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6xwL0p5mEe2bboi7XQLDvg"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_6xvkwZ5mEe2bboi7XQLDvg" fontName="Ubuntu" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6xvkwp5mEe2bboi7XQLDvg" x="628" y="128" width="110" height="75"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="__9JSoJ5mEe2bboi7XQLDvg" type="3007" element="__9EaIJ5mEe2bboi7XQLDvg">
+              <children xmi:type="notation:Node" xmi:id="__9JSo55mEe2bboi7XQLDvg" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="__9JSpJ5mEe2bboi7XQLDvg" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="__9J5sJ5mEe2bboi7XQLDvg" type="3016" element="__9FBMJ5mEe2bboi7XQLDvg">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="__9J5sZ5mEe2bboi7XQLDvg" fontName="Ubuntu"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="__9J5sp5mEe2bboi7XQLDvg"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="__9JSoZ5mEe2bboi7XQLDvg" fontName="Ubuntu" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__9JSop5mEe2bboi7XQLDvg" x="629" y="374" width="110" height="74"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_DvEsIJ5nEe2bboi7XQLDvg" type="3007" element="_DvBBwJ5nEe2bboi7XQLDvg">
+              <children xmi:type="notation:Node" xmi:id="_DvEsI55nEe2bboi7XQLDvg" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_DvEsJJ5nEe2bboi7XQLDvg" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_DvFTMJ5nEe2bboi7XQLDvg" type="3016" element="_DvBBwZ5nEe2bboi7XQLDvg">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_DvFTMZ5nEe2bboi7XQLDvg" fontName="Ubuntu"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DvFTMp5nEe2bboi7XQLDvg"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_DvEsIZ5nEe2bboi7XQLDvg" fontName="Ubuntu" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DvEsIp5nEe2bboi7XQLDvg" x="629" y="524" width="108" height="76"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_I1nvMJ5nEe2bboi7XQLDvg" type="3007" element="_I1kE0J5nEe2bboi7XQLDvg">
+              <children xmi:type="notation:Node" xmi:id="_I1oWQJ5nEe2bboi7XQLDvg" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_I1oWQZ5nEe2bboi7XQLDvg" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_I1o9UJ5nEe2bboi7XQLDvg" type="3016" element="_I1kE0Z5nEe2bboi7XQLDvg">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_I1o9UZ5nEe2bboi7XQLDvg" fontName="Ubuntu"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_I1o9Up5nEe2bboi7XQLDvg"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_I1nvMZ5nEe2bboi7XQLDvg" fontName="Ubuntu" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_I1nvMp5nEe2bboi7XQLDvg" x="849" y="219" width="120" height="83"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_qTCMEZ5lEe2bboi7XQLDvg"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_qTCMEp5lEe2bboi7XQLDvg"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_vlPskJ5lEe2bboi7XQLDvg" type="3012" element="_vlI-4J5lEe2bboi7XQLDvg">
+            <children xmi:type="notation:Node" xmi:id="_vlQToJ5lEe2bboi7XQLDvg" type="5010">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_vlQToZ5lEe2bboi7XQLDvg" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_vlQ6sJ5lEe2bboi7XQLDvg" type="3003" element="_vlI-4Z5lEe2bboi7XQLDvg">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_vlQ6sZ5lEe2bboi7XQLDvg" fontName="Ubuntu"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vlQ6sp5lEe2bboi7XQLDvg"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_vlPskZ5lEe2bboi7XQLDvg" fontName="Ubuntu" fontHeight="12"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vlPskp5lEe2bboi7XQLDvg" x="-22" y="269" width="30" height="30"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ClMvcJ5mEe2bboi7XQLDvg" type="3012" element="_ClHP4J5mEe2bboi7XQLDvg">
+            <children xmi:type="notation:Node" xmi:id="_ClNWgJ5mEe2bboi7XQLDvg" type="5010">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_ClNWgZ5mEe2bboi7XQLDvg" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_ClNWgp5mEe2bboi7XQLDvg" type="3003" element="_ClH28J5mEe2bboi7XQLDvg">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_ClNWg55mEe2bboi7XQLDvg" fontName="Ubuntu"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ClNWhJ5mEe2bboi7XQLDvg"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_ClMvcZ5mEe2bboi7XQLDvg" fontName="Ubuntu" fontHeight="12"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ClMvcp5mEe2bboi7XQLDvg" x="1033" y="245" width="30" height="30"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_qS_IwZ5lEe2bboi7XQLDvg" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qS_Iwp5lEe2bboi7XQLDvg" x="260" y="15" width="1042" height="637"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_ssiaEJ5lEe2bboi7XQLDvg" type="2001" element="_ssevsJ5lEe2bboi7XQLDvg">
+          <children xmi:type="notation:Node" xmi:id="_ssiaE55lEe2bboi7XQLDvg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_ssiaFJ5lEe2bboi7XQLDvg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ssjBIJ5lEe2bboi7XQLDvg" type="3003" element="_ssevsZ5lEe2bboi7XQLDvg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_ssjBIZ5lEe2bboi7XQLDvg" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ssjBIp5lEe2bboi7XQLDvg"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_C8YgYJ5mEe2bboi7XQLDvg" type="3001" element="_C8TA0J5mEe2bboi7XQLDvg">
+            <children xmi:type="notation:Node" xmi:id="_C8ZHcJ5mEe2bboi7XQLDvg" type="5001">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_C8ZHcZ5mEe2bboi7XQLDvg" y="5"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_C8ZugJ5mEe2bboi7XQLDvg" type="3003" element="_C8TA0Z5mEe2bboi7XQLDvg">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_C8ZugZ5mEe2bboi7XQLDvg" fontName="Ubuntu"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C8Zugp5mEe2bboi7XQLDvg"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_C8YgYZ5mEe2bboi7XQLDvg" fontName="Ubuntu" fontHeight="12"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C8YgYp5mEe2bboi7XQLDvg" x="-22" y="100" width="30" height="30"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_ssiaEZ5lEe2bboi7XQLDvg" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ssiaEp5lEe2bboi7XQLDvg" x="1455" y="155" width="111" height="246"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_iPm-gsG2Eey-76UM0dR0tQ"/>
+        <edges xmi:type="notation:Edge" xmi:id="_1YtgAJ5lEe2bboi7XQLDvg" type="4001" element="_1YoAcJ5lEe2bboi7XQLDvg" source="_vGsIUJ5lEe2bboi7XQLDvg" target="_vlPskJ5lEe2bboi7XQLDvg">
+          <children xmi:type="notation:Node" xmi:id="_1YuuIJ5lEe2bboi7XQLDvg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1YuuIZ5lEe2bboi7XQLDvg" x="-5" y="-33" width="126" height="58"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_1YuuIp5lEe2bboi7XQLDvg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1YuuI55lEe2bboi7XQLDvg" x="-3"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_1YvVMJ5lEe2bboi7XQLDvg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1YvVMZ5lEe2bboi7XQLDvg" x="-3" y="3"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_1YtgAZ5lEe2bboi7XQLDvg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_1YtgAp5lEe2bboi7XQLDvg" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_1YtgA55lEe2bboi7XQLDvg" points="[0, 0, -108, -4]$[108, 4, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_1YwjUJ5lEe2bboi7XQLDvg" id="(1.0,0.4666666666666667)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_1YwjUZ5lEe2bboi7XQLDvg" id="(0.0,0.4666666666666667)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_IKJlwJ5mEe2bboi7XQLDvg" type="4001" element="_IKF7ZJ5mEe2bboi7XQLDvg" source="_C8YgYJ5mEe2bboi7XQLDvg" target="_ClMvcJ5mEe2bboi7XQLDvg">
+          <children xmi:type="notation:Node" xmi:id="_IKKM0J5mEe2bboi7XQLDvg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IKKM0Z5mEe2bboi7XQLDvg" x="-1" y="30" width="117" height="48"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_IKKM0p5mEe2bboi7XQLDvg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IKKM055mEe2bboi7XQLDvg" x="109" y="14"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_IKKz4J5mEe2bboi7XQLDvg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IKKz4Z5mEe2bboi7XQLDvg" x="13" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_IKJlwZ5mEe2bboi7XQLDvg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_IKJlwp5mEe2bboi7XQLDvg" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_IKJlw55mEe2bboi7XQLDvg" points="[0, 0, 201, -5]$[-201, 5, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IKKz4p5mEe2bboi7XQLDvg" id="(0.0,0.4666666666666667)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IKKz455mEe2bboi7XQLDvg" id="(1.0,0.4666666666666667)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_8Fw78J5nEe2bboi7XQLDvg" type="4001" element="_8FtRkJ5nEe2bboi7XQLDvg" source="_vlPskJ5lEe2bboi7XQLDvg" target="_UEFoMJ5mEe2bboi7XQLDvg">
+          <children xmi:type="notation:Node" xmi:id="_8FxjAJ5nEe2bboi7XQLDvg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8FxjAZ5nEe2bboi7XQLDvg" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_8FxjAp5nEe2bboi7XQLDvg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8FxjA55nEe2bboi7XQLDvg" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_8FxjBJ5nEe2bboi7XQLDvg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8FxjBZ5nEe2bboi7XQLDvg" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_8Fw78Z5nEe2bboi7XQLDvg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_8Fw78p5nEe2bboi7XQLDvg" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_8Fw7855nEe2bboi7XQLDvg" points="[4, -10, -42, -12]$[16, -10, -30, -12]$[46, -10, 0, -12]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8FxjBp5nEe2bboi7XQLDvg" id="(0.8666666666666667,0.8)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8FxjB55nEe2bboi7XQLDvg" id="(0.0,0.5625)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_-VEFEJ5nEe2bboi7XQLDvg" type="4001" element="_-VAasJ5nEe2bboi7XQLDvg" source="_I1nvMJ5nEe2bboi7XQLDvg" target="_ClMvcJ5mEe2bboi7XQLDvg">
+          <children xmi:type="notation:Node" xmi:id="_-VEsIJ5nEe2bboi7XQLDvg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-VEsIZ5nEe2bboi7XQLDvg" x="-1" y="-3"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-VEsIp5nEe2bboi7XQLDvg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-VEsI55nEe2bboi7XQLDvg" x="1" y="2"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-VEsJJ5nEe2bboi7XQLDvg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-VEsJZ5nEe2bboi7XQLDvg" x="1" y="4"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_-VEFEZ5nEe2bboi7XQLDvg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_-VEFEp5nEe2bboi7XQLDvg" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-VEFE55nEe2bboi7XQLDvg" points="[0, 0, -27, 2]$[27, -2, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-VEsJp5nEe2bboi7XQLDvg" id="(1.0,0.4457831325301205)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-VEsJ55nEe2bboi7XQLDvg" id="(0.0,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="__6yFsJ5nEe2bboi7XQLDvg" type="4001" element="__6t0QJ5nEe2bboi7XQLDvg" source="_UEFoMJ5mEe2bboi7XQLDvg" target="_liCs0J5mEe2bboi7XQLDvg">
+          <children xmi:type="notation:Node" xmi:id="__6yswJ5nEe2bboi7XQLDvg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="__6yswZ5nEe2bboi7XQLDvg" x="56" y="22"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="__6yswp5nEe2bboi7XQLDvg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="__6ysw55nEe2bboi7XQLDvg" x="-2" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="__6ysxJ5nEe2bboi7XQLDvg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="__6ysxZ5nEe2bboi7XQLDvg" x="-7" y="4"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="__6yFsZ5nEe2bboi7XQLDvg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="__6yFsp5nEe2bboi7XQLDvg" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="__6yFs55nEe2bboi7XQLDvg" points="[-1, -15, 7, 158]$[-8, -172, 0, 1]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="__6ysxp5nEe2bboi7XQLDvg" id="(0.5266666666666666,0.1875)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="__6ysx55nEe2bboi7XQLDvg" id="(0.47101449275362317,0.9855072463768116)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_HjHJAJ5oEe2bboi7XQLDvg" type="4001" element="_HjDepJ5oEe2bboi7XQLDvg" source="_UEFoMJ5mEe2bboi7XQLDvg" target="_obY4gJ5mEe2bboi7XQLDvg">
+          <children xmi:type="notation:Node" xmi:id="_HjHJBJ5oEe2bboi7XQLDvg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HjHJBZ5oEe2bboi7XQLDvg" x="53" y="104"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_HjHJBp5oEe2bboi7XQLDvg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HjHJB55oEe2bboi7XQLDvg" x="-3" y="3"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_HjHJCJ5oEe2bboi7XQLDvg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HjHJCZ5oEe2bboi7XQLDvg" x="-5" y="4"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_HjHJAZ5oEe2bboi7XQLDvg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_HjHJAp5oEe2bboi7XQLDvg" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_HjHJA55oEe2bboi7XQLDvg" points="[11, -18, -41, 66]$[52, -84, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_HjHJCp5oEe2bboi7XQLDvg" id="(0.7133333333333334,0.225)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_HjHJC55oEe2bboi7XQLDvg" id="(0.0,0.6)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_MolOAJ5oEe2bboi7XQLDvg" type="4001" element="_MofueJ5oEe2bboi7XQLDvg" source="_UEFoMJ5mEe2bboi7XQLDvg" target="_p8amYJ5mEe2bboi7XQLDvg">
+          <children xmi:type="notation:Node" xmi:id="_MolOBJ5oEe2bboi7XQLDvg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MolOBZ5oEe2bboi7XQLDvg" x="66" y="-98"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_MolOBp5oEe2bboi7XQLDvg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MolOB55oEe2bboi7XQLDvg" x="-2" y="8"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_MolOCJ5oEe2bboi7XQLDvg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MolOCZ5oEe2bboi7XQLDvg" y="9"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_MolOAZ5oEe2bboi7XQLDvg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_MolOAp5oEe2bboi7XQLDvg" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_MolOA55oEe2bboi7XQLDvg" points="[2, 4, -54, -74]$[56, 78, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Mol1EJ5oEe2bboi7XQLDvg" id="(0.6866666666666666,0.95)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Mol1EZ5oEe2bboi7XQLDvg" id="(0.0,0.4605263157894737)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_SdnHsJ5oEe2bboi7XQLDvg" type="4001" element="_Sdi2TJ5oEe2bboi7XQLDvg" source="_UEFoMJ5mEe2bboi7XQLDvg" target="_ysacYJ5mEe2bboi7XQLDvg">
+          <children xmi:type="notation:Node" xmi:id="_SdnuwJ5oEe2bboi7XQLDvg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SdnuwZ5oEe2bboi7XQLDvg" x="49" y="-21"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Sdnuwp5oEe2bboi7XQLDvg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Sdnuw55oEe2bboi7XQLDvg" x="-2" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_SdnuxJ5oEe2bboi7XQLDvg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SdnuxZ5oEe2bboi7XQLDvg" x="5" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_SdnHsZ5oEe2bboi7XQLDvg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_SdnHsp5oEe2bboi7XQLDvg" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_SdnHs55oEe2bboi7XQLDvg" points="[-7, 40, -2, -207]$[-7, 240, -2, -7]"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Sdnux55oEe2bboi7XQLDvg" id="(0.539568345323741,0.09210526315789473)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_d3RHkJ5oEe2bboi7XQLDvg" type="4001" element="_d3MPFJ5oEe2bboi7XQLDvg" source="_liCs0J5mEe2bboi7XQLDvg" target="_1RExgJ5mEe2bboi7XQLDvg">
+          <children xmi:type="notation:Node" xmi:id="_d3RHlJ5oEe2bboi7XQLDvg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_d3RHlZ5oEe2bboi7XQLDvg" x="75" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_d3RHlp5oEe2bboi7XQLDvg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_d3RHl55oEe2bboi7XQLDvg" x="153" y="8"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_d3RHmJ5oEe2bboi7XQLDvg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_d3RHmZ5oEe2bboi7XQLDvg" y="8"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_d3RHkZ5oEe2bboi7XQLDvg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_d3RHkp5oEe2bboi7XQLDvg" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_d3RHk55oEe2bboi7XQLDvg" points="[0, 0, -429, 0]$[421, 0, -8, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_d3RHmp5oEe2bboi7XQLDvg" id="(1.0,0.4927536231884058)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_d3RHm55oEe2bboi7XQLDvg" id="(0.07407407407407407,0.4927536231884058)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_i-1eUJ5oEe2bboi7XQLDvg" type="4001" element="_i-xz_J5oEe2bboi7XQLDvg" source="_obY4gJ5mEe2bboi7XQLDvg" target="_6xvkwJ5mEe2bboi7XQLDvg">
+          <children xmi:type="notation:Node" xmi:id="_i-1eVJ5oEe2bboi7XQLDvg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_i-1eVZ5oEe2bboi7XQLDvg" x="-12" y="-12"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_i-1eVp5oEe2bboi7XQLDvg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_i-1eV55oEe2bboi7XQLDvg" x="-15" y="6"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_i-1eWJ5oEe2bboi7XQLDvg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_i-1eWZ5oEe2bboi7XQLDvg" x="-52" y="5"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_i-1eUZ5oEe2bboi7XQLDvg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_i-1eUp5oEe2bboi7XQLDvg" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_i-1eU55oEe2bboi7XQLDvg" points="[0, 0, -286, 5]$[266, -5, -20, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_i-2FYJ5oEe2bboi7XQLDvg" id="(1.0,0.48)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_i-2FYZ5oEe2bboi7XQLDvg" id="(0.18181818181818182,0.48)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_yR3jgJ5oEe2bboi7XQLDvg" type="4001" element="_yRzSGJ5oEe2bboi7XQLDvg" source="_p8amYJ5mEe2bboi7XQLDvg" target="__9JSoJ5mEe2bboi7XQLDvg">
+          <children xmi:type="notation:Node" xmi:id="_yR3jhJ5oEe2bboi7XQLDvg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yR3jhZ5oEe2bboi7XQLDvg" x="7" y="-8"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_yR3jhp5oEe2bboi7XQLDvg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yR3jh55oEe2bboi7XQLDvg" x="-18" y="4"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_yR3jiJ5oEe2bboi7XQLDvg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yR3jiZ5oEe2bboi7XQLDvg" x="-15" y="4"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_yR3jgZ5oEe2bboi7XQLDvg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_yR3jgp5oEe2bboi7XQLDvg" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_yR3jg55oEe2bboi7XQLDvg" points="[0, 0, -267, -11]$[267, 11, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_yR4KkJ5oEe2bboi7XQLDvg" id="(1.0,0.47368421052631576)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_yR4KkZ5oEe2bboi7XQLDvg" id="(0.0,0.4864864864864865)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_358mUJ5oEe2bboi7XQLDvg" type="4001" element="_350DgJ5oEe2bboi7XQLDvg" source="_ysacYJ5mEe2bboi7XQLDvg" target="_DvEsIJ5nEe2bboi7XQLDvg">
+          <children xmi:type="notation:Node" xmi:id="_358mVJ5oEe2bboi7XQLDvg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_358mVZ5oEe2bboi7XQLDvg" x="-12" y="-15"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_358mVp5oEe2bboi7XQLDvg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_358mV55oEe2bboi7XQLDvg" x="-20" y="2"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_358mWJ5oEe2bboi7XQLDvg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_358mWZ5oEe2bboi7XQLDvg" x="-10" y="3"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_358mUZ5oEe2bboi7XQLDvg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_358mUp5oEe2bboi7XQLDvg" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_358mU55oEe2bboi7XQLDvg" points="[0, 0, -441, 0]$[441, 0, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_358mWp5oEe2bboi7XQLDvg" id="(1.0,0.4868421052631579)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_358mW55oEe2bboi7XQLDvg" id="(0.09815950920245398,0.4868421052631579)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_JtjK0J5pEe2bboi7XQLDvg" type="4001" element="_Jtfgdp5pEe2bboi7XQLDvg" source="_1RExgJ5mEe2bboi7XQLDvg" target="_I1nvMJ5nEe2bboi7XQLDvg">
+          <children xmi:type="notation:Node" xmi:id="_JtjK1J5pEe2bboi7XQLDvg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JtjK1Z5pEe2bboi7XQLDvg" x="-132" y="57"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_JtjK1p5pEe2bboi7XQLDvg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JtjK155pEe2bboi7XQLDvg" x="-5" y="7"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Jtjx4J5pEe2bboi7XQLDvg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Jtjx4Z5pEe2bboi7XQLDvg" x="-9" y="8"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_JtjK0Z5pEe2bboi7XQLDvg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_JtjK0p5pEe2bboi7XQLDvg" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_JtjK055pEe2bboi7XQLDvg" points="[10, 8, -195, -172]$[189, 166, -16, -14]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Jtjx4p5pEe2bboi7XQLDvg" id="(0.913867355727821,0.5072463768115942)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Jtjx455pEe2bboi7XQLDvg" id="(0.6916666666666667,0.1686746987951807)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_PM028J5pEe2bboi7XQLDvg" type="4001" element="_PMxMtJ5pEe2bboi7XQLDvg" source="_6xvkwJ5mEe2bboi7XQLDvg" target="_I1nvMJ5nEe2bboi7XQLDvg">
+          <children xmi:type="notation:Node" xmi:id="_PM1eAJ5pEe2bboi7XQLDvg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PM2FEJ5pEe2bboi7XQLDvg" x="-60" y="47"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_PM2FEZ5pEe2bboi7XQLDvg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PM2FEp5pEe2bboi7XQLDvg" x="-1" y="4"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_PM2sIJ5pEe2bboi7XQLDvg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PM2sIZ5pEe2bboi7XQLDvg" x="-2" y="9"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_PM028Z5pEe2bboi7XQLDvg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_PM028p5pEe2bboi7XQLDvg" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_PM02855pEe2bboi7XQLDvg" points="[0, 0, -128, -75]$[111, 65, -17, -10]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_PM2sIp5pEe2bboi7XQLDvg" id="(1.0,0.5333333333333333)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_PM2sI55pEe2bboi7XQLDvg" id="(0.14166666666666666,0.2891566265060241)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_TSLiwJ5pEe2bboi7XQLDvg" type="4001" element="_TSHRZJ5pEe2bboi7XQLDvg" source="__9JSoJ5mEe2bboi7XQLDvg" target="_I1nvMJ5nEe2bboi7XQLDvg">
+          <children xmi:type="notation:Node" xmi:id="_TSMJ0J5pEe2bboi7XQLDvg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TSMJ0Z5pEe2bboi7XQLDvg" x="6" y="-8"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_TSMJ0p5pEe2bboi7XQLDvg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TSMJ055pEe2bboi7XQLDvg" x="-13" y="1"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_TSMJ1J5pEe2bboi7XQLDvg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TSMJ1Z5pEe2bboi7XQLDvg" x="-14" y="-1"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_TSLiwZ5pEe2bboi7XQLDvg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_TSLiwp5pEe2bboi7XQLDvg" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_TSLiw55pEe2bboi7XQLDvg" points="[22, -18, -139, 110]$[133, -107, -28, 21]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_TSMJ1p5pEe2bboi7XQLDvg" id="(0.8066465256797584,0.47297297297297297)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_TSMJ155pEe2bboi7XQLDvg" id="(0.24166666666666667,0.7469879518072289)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_cOJ_QJ5pEe2bboi7XQLDvg" type="4001" element="_cOGU-J5pEe2bboi7XQLDvg" source="_DvEsIJ5nEe2bboi7XQLDvg" target="_I1nvMJ5nEe2bboi7XQLDvg">
+          <children xmi:type="notation:Node" xmi:id="_cOJ_RJ5pEe2bboi7XQLDvg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cOJ_RZ5pEe2bboi7XQLDvg" x="-127" y="-58"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_cOJ_Rp5pEe2bboi7XQLDvg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cOJ_R55pEe2bboi7XQLDvg" x="-5" y="4"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_cOJ_SJ5pEe2bboi7XQLDvg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cOJ_SZ5pEe2bboi7XQLDvg" x="-2" y="4"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_cOJ_QZ5pEe2bboi7XQLDvg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_cOJ_Qp5pEe2bboi7XQLDvg" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_cOJ_Q55pEe2bboi7XQLDvg" points="[0, 0, -160, 267]$[160, -267, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_cOJ_Sp5pEe2bboi7XQLDvg" id="(0.9263803680981595,0.5921052631578947)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_cOJ_S55pEe2bboi7XQLDvg" id="(0.3333333333333333,1.0)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_iQS7AMG2Eey-76UM0dR0tQ" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_iQS7AcG2Eey-76UM0dR0tQ"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_n8kD8J5lEe2bboi7XQLDvg" name="Stimulus" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="hml:Stimulus" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.0"/>
+      <semanticElements xmi:type="hml:Stimulus" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.0"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_vGpFAJ5lEe2bboi7XQLDvg" name="stimulus_system_port_out" outgoingEdges="_1YoAcJ5lEe2bboi7XQLDvg" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="hml:Port" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.0/@ports.0"/>
+        <semanticElements xmi:type="hml:Port" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.0/@ports.0"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Square" uid="_vGpFAZ5lEe2bboi7XQLDvg" labelSize="12" showIcon="false" borderSize="2" borderSizeComputationExpression="2" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@nodeMappings[name='Stimulus']/@borderedNodeMappings[name='Port']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@nodeMappings[name='Stimulus']/@borderedNodeMappings[name='Port']"/>
+      </ownedBorderedNodes>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_n8krAJ5lEe2bboi7XQLDvg" labelSize="12" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="136,136,136" borderLineStyle="dash" labelPosition="node" color="194,239,255">
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@nodeMappings[name='Stimulus']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@nodeMappings[name='Stimulus']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_qS3M8J5lEe2bboi7XQLDvg" name="TEKNE System">
+      <target xmi:type="hml:StructuredNode" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1"/>
+      <semanticElements xmi:type="hml:StructuredNode" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_vlI-4J5lEe2bboi7XQLDvg" name="stimulus_system_port_in" outgoingEdges="_8FtRkJ5nEe2bboi7XQLDvg" incomingEdges="_1YoAcJ5lEe2bboi7XQLDvg" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="hml:Port" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@ports.0"/>
+        <semanticElements xmi:type="hml:Port" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@ports.0"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Square" uid="_vlI-4Z5lEe2bboi7XQLDvg" labelSize="12" showIcon="false" borderSize="2" borderSizeComputationExpression="2" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@containerMappings[name='Node']/@borderedNodeMappings[name='Port']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@containerMappings[name='Node']/@borderedNodeMappings[name='Port']"/>
+      </ownedBorderedNodes>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_ClHP4J5mEe2bboi7XQLDvg" name="system_display_port_out" incomingEdges="_IKF7ZJ5mEe2bboi7XQLDvg _-VAasJ5nEe2bboi7XQLDvg" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="hml:Port" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@ports.1"/>
+        <semanticElements xmi:type="hml:Port" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@ports.1"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Square" uid="_ClH28J5mEe2bboi7XQLDvg" labelSize="12" showIcon="false" borderSize="2" borderSizeComputationExpression="2" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@containerMappings[name='Node']/@borderedNodeMappings[name='Port']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@containerMappings[name='Node']/@borderedNodeMappings[name='Port']"/>
+      </ownedBorderedNodes>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_qS3M8Z5lEe2bboi7XQLDvg" labelSize="12" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderLineStyle="dash">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@containerMappings[name='Node']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@containerMappings[name='Node']"/>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_UD73MJ5mEe2bboi7XQLDvg" name="sampleTimCord" outgoingEdges="__6t0QJ5nEe2bboi7XQLDvg _HjDepJ5oEe2bboi7XQLDvg _MofueJ5oEe2bboi7XQLDvg _Sdi2TJ5oEe2bboi7XQLDvg" incomingEdges="_8FtRkJ5nEe2bboi7XQLDvg" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="hml:Process" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@processes.0"/>
+        <semanticElements xmi:type="hml:Process" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@processes.0"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Ellipse" uid="_UD73MZ5mEe2bboi7XQLDvg" labelSize="12" showIcon="false" borderSize="2" borderSizeComputationExpression="2" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@containerMappings[name='Node']/@subNodeMappings[name='Process']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@containerMappings[name='Node']/@subNodeMappings[name='Process']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_lh7_IJ5mEe2bboi7XQLDvg" name="cleanData_01" outgoingEdges="_d3MPFJ5oEe2bboi7XQLDvg" incomingEdges="__6t0QJ5nEe2bboi7XQLDvg" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="hml:Process" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@processes.1"/>
+        <semanticElements xmi:type="hml:Process" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@processes.1"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Ellipse" uid="_lh7_IZ5mEe2bboi7XQLDvg" labelSize="12" showIcon="false" borderSize="2" borderSizeComputationExpression="2" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@containerMappings[name='Node']/@subNodeMappings[name='Process']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@containerMappings[name='Node']/@subNodeMappings[name='Process']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_obSx4J5mEe2bboi7XQLDvg" name="cleanData_02" outgoingEdges="_i-xz_J5oEe2bboi7XQLDvg" incomingEdges="_HjDepJ5oEe2bboi7XQLDvg" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="hml:Process" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@processes.2"/>
+        <semanticElements xmi:type="hml:Process" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@processes.2"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Ellipse" uid="_obSx4Z5mEe2bboi7XQLDvg" labelSize="12" showIcon="false" borderSize="2" borderSizeComputationExpression="2" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@containerMappings[name='Node']/@subNodeMappings[name='Process']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@containerMappings[name='Node']/@subNodeMappings[name='Process']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_p8XjEJ5mEe2bboi7XQLDvg" name="cleanData_03" outgoingEdges="_yRzSGJ5oEe2bboi7XQLDvg" incomingEdges="_MofueJ5oEe2bboi7XQLDvg" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="hml:Process" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@processes.3"/>
+        <semanticElements xmi:type="hml:Process" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@processes.3"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Ellipse" uid="_p8XjEZ5mEe2bboi7XQLDvg" labelSize="12" showIcon="false" borderSize="2" borderSizeComputationExpression="2" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@containerMappings[name='Node']/@subNodeMappings[name='Process']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@containerMappings[name='Node']/@subNodeMappings[name='Process']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_ysTusJ5mEe2bboi7XQLDvg" name="cleanData_04" outgoingEdges="_350DgJ5oEe2bboi7XQLDvg" incomingEdges="_Sdi2TJ5oEe2bboi7XQLDvg" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="hml:Process" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@processes.4"/>
+        <semanticElements xmi:type="hml:Process" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@processes.4"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Ellipse" uid="_ysUVwJ5mEe2bboi7XQLDvg" labelSize="12" showIcon="false" borderSize="2" borderSizeComputationExpression="2" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@containerMappings[name='Node']/@subNodeMappings[name='Process']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@containerMappings[name='Node']/@subNodeMappings[name='Process']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_1RBuMJ5mEe2bboi7XQLDvg" name="ann_01" outgoingEdges="_Jtfgdp5pEe2bboi7XQLDvg" incomingEdges="_d3MPFJ5oEe2bboi7XQLDvg" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="hml:Process" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@processes.5"/>
+        <semanticElements xmi:type="hml:Process" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@processes.5"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Ellipse" uid="_1RBuMZ5mEe2bboi7XQLDvg" labelSize="12" showIcon="false" borderSize="2" borderSizeComputationExpression="2" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@containerMappings[name='Node']/@subNodeMappings[name='Process']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@containerMappings[name='Node']/@subNodeMappings[name='Process']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_6xlMsJ5mEe2bboi7XQLDvg" name="ann_02" outgoingEdges="_PMxMtJ5pEe2bboi7XQLDvg" incomingEdges="_i-xz_J5oEe2bboi7XQLDvg" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="hml:Process" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@processes.6"/>
+        <semanticElements xmi:type="hml:Process" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@processes.6"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Ellipse" uid="_6xlzwJ5mEe2bboi7XQLDvg" labelSize="12" showIcon="false" borderSize="2" borderSizeComputationExpression="2" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@containerMappings[name='Node']/@subNodeMappings[name='Process']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@containerMappings[name='Node']/@subNodeMappings[name='Process']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="__9EaIJ5mEe2bboi7XQLDvg" name="ann_03" outgoingEdges="_TSHRZJ5pEe2bboi7XQLDvg" incomingEdges="_yRzSGJ5oEe2bboi7XQLDvg" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="hml:Process" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@processes.7"/>
+        <semanticElements xmi:type="hml:Process" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@processes.7"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Ellipse" uid="__9FBMJ5mEe2bboi7XQLDvg" labelSize="12" showIcon="false" borderSize="2" borderSizeComputationExpression="2" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@containerMappings[name='Node']/@subNodeMappings[name='Process']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@containerMappings[name='Node']/@subNodeMappings[name='Process']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_DvBBwJ5nEe2bboi7XQLDvg" name="ann_04" outgoingEdges="_cOGU-J5pEe2bboi7XQLDvg" incomingEdges="_350DgJ5oEe2bboi7XQLDvg" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="hml:Process" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@processes.8"/>
+        <semanticElements xmi:type="hml:Process" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@processes.8"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Ellipse" uid="_DvBBwZ5nEe2bboi7XQLDvg" labelSize="12" showIcon="false" borderSize="2" borderSizeComputationExpression="2" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@containerMappings[name='Node']/@subNodeMappings[name='Process']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@containerMappings[name='Node']/@subNodeMappings[name='Process']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_I1kE0J5nEe2bboi7XQLDvg" name="dataCollector" outgoingEdges="_-VAasJ5nEe2bboi7XQLDvg" incomingEdges="_Jtfgdp5pEe2bboi7XQLDvg _PMxMtJ5pEe2bboi7XQLDvg _TSHRZJ5pEe2bboi7XQLDvg _cOGU-J5pEe2bboi7XQLDvg" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="hml:Process" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@processes.9"/>
+        <semanticElements xmi:type="hml:Process" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@processes.9"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Ellipse" uid="_I1kE0Z5nEe2bboi7XQLDvg" labelSize="12" showIcon="false" borderSize="2" borderSizeComputationExpression="2" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@containerMappings[name='Node']/@subNodeMappings[name='Process']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@containerMappings[name='Node']/@subNodeMappings[name='Process']"/>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_ssevsJ5lEe2bboi7XQLDvg" name="Display" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="hml:Display" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.2"/>
+      <semanticElements xmi:type="hml:Display" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.2"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_C8TA0J5mEe2bboi7XQLDvg" name="system_display_port_in" outgoingEdges="_IKF7ZJ5mEe2bboi7XQLDvg" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="hml:Port" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.2/@ports.0"/>
+        <semanticElements xmi:type="hml:Port" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.2/@ports.0"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Square" uid="_C8TA0Z5mEe2bboi7XQLDvg" labelSize="12" showIcon="false" borderSize="2" borderSizeComputationExpression="2" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@nodeMappings[name='Display']/@borderedNodeMappings[name='Port']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@nodeMappings[name='Display']/@borderedNodeMappings[name='Port']"/>
+      </ownedBorderedNodes>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_ssevsZ5lEe2bboi7XQLDvg" labelSize="12" showIcon="false" borderSize="2" borderSizeComputationExpression="2" borderColor="136,136,136" borderLineStyle="dash" labelPosition="node" color="253,206,137">
+        <description xmi:type="style:SquareDescription" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@nodeMappings[name='Display']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@nodeMappings[name='Display']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_1YoAcJ5lEe2bboi7XQLDvg" name="stimulus_system_channel" sourceNode="_vGpFAJ5lEe2bboi7XQLDvg" targetNode="_vlI-4J5lEe2bboi7XQLDvg">
+      <target xmi:type="hml:Channel" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.0/@ports.0/@pChannels.0"/>
+      <semanticElements xmi:type="hml:Channel" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.0/@ports.0/@pChannels.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_1YongJ5lEe2bboi7XQLDvg" targetArrow="NoDecoration" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@edgeMappings[name='Connector']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_1YongZ5lEe2bboi7XQLDvg" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@edgeMappings[name='Connector']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_IKF7ZJ5mEe2bboi7XQLDvg" name="system_display_channel" sourceNode="_C8TA0J5mEe2bboi7XQLDvg" targetNode="_ClHP4J5mEe2bboi7XQLDvg">
+      <target xmi:type="hml:Channel" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.2/@ports.0/@pChannels.0"/>
+      <semanticElements xmi:type="hml:Channel" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.2/@ports.0/@pChannels.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_IKGicJ5mEe2bboi7XQLDvg" targetArrow="NoDecoration" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@edgeMappings[name='Connector']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_IKGicZ5mEe2bboi7XQLDvg" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@edgeMappings[name='Connector']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_8FtRkJ5nEe2bboi7XQLDvg" sourceNode="_vlI-4J5lEe2bboi7XQLDvg" targetNode="_UD73MJ5mEe2bboi7XQLDvg">
+      <target xmi:type="hml:Port" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@ports.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_8FtRkZ5nEe2bboi7XQLDvg" lineStyle="dash" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@edgeMappings[name='ExtensionPortProc']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_8FtRkp5nEe2bboi7XQLDvg" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@edgeMappings[name='ExtensionPortProc']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_-VAasJ5nEe2bboi7XQLDvg" sourceNode="_I1kE0J5nEe2bboi7XQLDvg" targetNode="_ClHP4J5mEe2bboi7XQLDvg">
+      <target xmi:type="hml:Process" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@processes.9"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_-VBBwJ5nEe2bboi7XQLDvg" lineStyle="dash" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@edgeMappings[name='ExtensionProcPort']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_-VBBwZ5nEe2bboi7XQLDvg" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@edgeMappings[name='ExtensionProcPort']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="__6t0QJ5nEe2bboi7XQLDvg" name="sampleTimCord_cleanData_01_channel" sourceNode="_UD73MJ5mEe2bboi7XQLDvg" targetNode="_lh7_IJ5mEe2bboi7XQLDvg">
+      <target xmi:type="hml:Channel" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@nChannels.0"/>
+      <semanticElements xmi:type="hml:Channel" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@nChannels.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="__6vCYJ5nEe2bboi7XQLDvg" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@edgeMappings[name='Channel']/@conditionnalStyles.0/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="__6vCYZ5nEe2bboi7XQLDvg" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@edgeMappings[name='Channel']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_HjDepJ5oEe2bboi7XQLDvg" name="sampleTimCord_cleanData_02_channel" sourceNode="_UD73MJ5mEe2bboi7XQLDvg" targetNode="_obSx4J5mEe2bboi7XQLDvg">
+      <target xmi:type="hml:Channel" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@nChannels.1"/>
+      <semanticElements xmi:type="hml:Channel" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@nChannels.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_HjDepZ5oEe2bboi7XQLDvg" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@edgeMappings[name='Channel']/@conditionnalStyles.0/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_HjDepp5oEe2bboi7XQLDvg" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@edgeMappings[name='Channel']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_MofueJ5oEe2bboi7XQLDvg" name="sampleTimCord_cleanData_03_channel" sourceNode="_UD73MJ5mEe2bboi7XQLDvg" targetNode="_p8XjEJ5mEe2bboi7XQLDvg">
+      <target xmi:type="hml:Channel" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@nChannels.2"/>
+      <semanticElements xmi:type="hml:Channel" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@nChannels.2"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_MogVgJ5oEe2bboi7XQLDvg" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@edgeMappings[name='Channel']/@conditionnalStyles.0/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_MogVgZ5oEe2bboi7XQLDvg" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@edgeMappings[name='Channel']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Sdi2TJ5oEe2bboi7XQLDvg" name="sampleTimCord_cleanData_04_channel" sourceNode="_UD73MJ5mEe2bboi7XQLDvg" targetNode="_ysTusJ5mEe2bboi7XQLDvg">
+      <target xmi:type="hml:Channel" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@nChannels.3"/>
+      <semanticElements xmi:type="hml:Channel" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@nChannels.3"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_SdjdUJ5oEe2bboi7XQLDvg" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@edgeMappings[name='Channel']/@conditionnalStyles.0/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_SdjdUZ5oEe2bboi7XQLDvg" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@edgeMappings[name='Channel']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_d3MPFJ5oEe2bboi7XQLDvg" name="cleanData_01_ann_01_channel" sourceNode="_lh7_IJ5mEe2bboi7XQLDvg" targetNode="_1RBuMJ5mEe2bboi7XQLDvg">
+      <target xmi:type="hml:Channel" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@nChannels.4"/>
+      <semanticElements xmi:type="hml:Channel" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@nChannels.4"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_d3MPFZ5oEe2bboi7XQLDvg" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@edgeMappings[name='Channel']/@conditionnalStyles.0/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_d3MPFp5oEe2bboi7XQLDvg" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@edgeMappings[name='Channel']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_i-xz_J5oEe2bboi7XQLDvg" name="cleanData_02_ann_02_channel" sourceNode="_obSx4J5mEe2bboi7XQLDvg" targetNode="_6xlMsJ5mEe2bboi7XQLDvg">
+      <target xmi:type="hml:Channel" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@nChannels.5"/>
+      <semanticElements xmi:type="hml:Channel" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@nChannels.5"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_i-xz_Z5oEe2bboi7XQLDvg" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@edgeMappings[name='Channel']/@conditionnalStyles.0/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_i-xz_p5oEe2bboi7XQLDvg" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@edgeMappings[name='Channel']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_yRzSGJ5oEe2bboi7XQLDvg" name="cleanData_03_ann_03_channel" sourceNode="_p8XjEJ5mEe2bboi7XQLDvg" targetNode="__9EaIJ5mEe2bboi7XQLDvg">
+      <target xmi:type="hml:Channel" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@nChannels.6"/>
+      <semanticElements xmi:type="hml:Channel" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@nChannels.6"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_yRzSGZ5oEe2bboi7XQLDvg" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@edgeMappings[name='Channel']/@conditionnalStyles.0/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_yRzSGp5oEe2bboi7XQLDvg" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@edgeMappings[name='Channel']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_350DgJ5oEe2bboi7XQLDvg" name="cleanData_04_ann_04_channel" sourceNode="_ysTusJ5mEe2bboi7XQLDvg" targetNode="_DvBBwJ5nEe2bboi7XQLDvg">
+      <target xmi:type="hml:Channel" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@nChannels.7"/>
+      <semanticElements xmi:type="hml:Channel" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@nChannels.7"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_350DgZ5oEe2bboi7XQLDvg" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@edgeMappings[name='Channel']/@conditionnalStyles.0/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_350Dgp5oEe2bboi7XQLDvg" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@edgeMappings[name='Channel']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Jtfgdp5pEe2bboi7XQLDvg" name="ann_01_dataCollector_channel" sourceNode="_1RBuMJ5mEe2bboi7XQLDvg" targetNode="_I1kE0J5nEe2bboi7XQLDvg">
+      <target xmi:type="hml:Channel" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@nChannels.8"/>
+      <semanticElements xmi:type="hml:Channel" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@nChannels.8"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_Jtfgd55pEe2bboi7XQLDvg" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@edgeMappings[name='Channel']/@conditionnalStyles.0/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_JtfgeJ5pEe2bboi7XQLDvg" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@edgeMappings[name='Channel']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_PMxMtJ5pEe2bboi7XQLDvg" name="ann_02_dataCollector_channel" sourceNode="_6xlMsJ5mEe2bboi7XQLDvg" targetNode="_I1kE0J5nEe2bboi7XQLDvg">
+      <target xmi:type="hml:Channel" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@nChannels.9"/>
+      <semanticElements xmi:type="hml:Channel" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@nChannels.9"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_PMxMtZ5pEe2bboi7XQLDvg" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@edgeMappings[name='Channel']/@conditionnalStyles.0/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_PMxMtp5pEe2bboi7XQLDvg" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@edgeMappings[name='Channel']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_TSHRZJ5pEe2bboi7XQLDvg" name="ann_03_dataCollector_channel" sourceNode="__9EaIJ5mEe2bboi7XQLDvg" targetNode="_I1kE0J5nEe2bboi7XQLDvg">
+      <target xmi:type="hml:Channel" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@nChannels.10"/>
+      <semanticElements xmi:type="hml:Channel" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@nChannels.10"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_TSHRZZ5pEe2bboi7XQLDvg" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@edgeMappings[name='Channel']/@conditionnalStyles.0/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_TSHRZp5pEe2bboi7XQLDvg" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@edgeMappings[name='Channel']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_cOGU-J5pEe2bboi7XQLDvg" name="ann_04_dataCollector_channel" sourceNode="_DvBBwJ5nEe2bboi7XQLDvg" targetNode="_I1kE0J5nEe2bboi7XQLDvg">
+      <target xmi:type="hml:Channel" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@nChannels.11"/>
+      <semanticElements xmi:type="hml:Channel" href="Tekne_AIDOaRt_Use_Case.hepsy#//@nodes.1/@nChannels.11"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_cOGU-Z5pEe2bboi7XQLDvg" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@edgeMappings[name='Channel']/@conditionnalStyles.0/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_cOGU-p5pEe2bboi7XQLDvg" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@edgeMappings[name='Channel']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_iNxLcMG2Eey-76UM0dR0tQ"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/org.univaq.hepsy.design/description/hepsy.odesign#//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer"/>
+    <target xmi:type="hml:BehaviorSpecification" href="Tekne_AIDOaRt_Use_Case.hepsy#/"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>

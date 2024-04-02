@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structfir16e__results" kind="struct" language="C++" prot="public">
+    <compoundname>fir16e_results</compoundname>
+    <includes refid="datatype_8h" local="no">datatype.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structfir16e__results_1a5b758c23c1cf7b9904536e4b4fdc9213" prot="public" static="no" mutable="no">
+        <type>sc_uint&lt; 19 &gt;</type>
+        <definition>sc_uint&lt;19&gt; fir16e_results::acc</definition>
+        <argsstring></argsstring>
+        <name>acc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/datatype.h" line="155" column="9" bodyfile="HepsycodeDesign/src/datatype.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Message from fir16e to fir16m. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>sc_uint&lt; 19 &gt;</label>
+      </node>
+      <node id="1">
+        <label>fir16e_results</label>
+        <link refid="structfir16e__results"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+acc</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HepsycodeDesign/src/datatype.h" line="154" column="1" bodyfile="HepsycodeDesign/src/datatype.h" bodystart="153" bodyend="156"/>
+    <listofallmembers>
+      <member refid="structfir16e__results_1a5b758c23c1cf7b9904536e4b4fdc9213" prot="public" virt="non-virtual"><scope>fir16e_results</scope><name>acc</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

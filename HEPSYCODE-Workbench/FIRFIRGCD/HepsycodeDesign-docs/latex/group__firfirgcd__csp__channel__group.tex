@@ -1,0 +1,577 @@
+\hypertarget{group__firfirgcd__csp__channel__group}{}\doxysection{Fir\+Fir\+G\+CD C\+SP Channel.}
+\label{group__firfirgcd__csp__channel__group}\index{FirFirGCD CSP Channel.@{FirFirGCD CSP Channel.}}
+
+
+C\+SP \mbox{\hyperlink{class_channel}{Channel}} Implementation.  
+
+
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsc__csp__channel}{sc\+\_\+csp\+\_\+channel$<$ T $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{group__firfirgcd__csp__channel__group_ga5bbbddcd88383d3ed9ee425ad87ee58c}{sc\+\_\+csp\+\_\+channel$<$ T $>$\+::register\+\_\+port}} (sc\+\_\+port\+\_\+base \&, const char $\ast$)
+\item 
+virtual void \mbox{\hyperlink{group__firfirgcd__csp__channel__group_ga23046a4820dcf9ef26a75eba9cb7d49b}{sc\+\_\+csp\+\_\+channel$<$ T $>$\+::read}} (T \&)
+\item 
+virtual T \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaf3eb60ce6aecbe88c0e72fdb19a1f7af}{sc\+\_\+csp\+\_\+channel$<$ T $>$\+::read}} ()
+\item 
+virtual void \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaf8a9ace576ff2e0462c8db276f9f388d}{sc\+\_\+csp\+\_\+channel$<$ T $>$\+::write}} (const T \&)
+\item 
+void \mbox{\hyperlink{group__firfirgcd__csp__channel__group_ga216706630fbd1f222b428cc4e6aa523d}{sc\+\_\+csp\+\_\+channel$<$ T $>$\+::trace}} (sc\+\_\+trace\+\_\+file $\ast$tf) const
+\item 
+void \mbox{\hyperlink{group__firfirgcd__csp__channel__group_ga8be7bf7ee4f0c35e684b3de9a5163705}{sc\+\_\+csp\+\_\+channel$<$ T $>$\+::init}} ()
+\item 
+virtual bool \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gab1a08e5d4129f9647e573af0c4ca4f30}{sc\+\_\+csp\+\_\+channel$<$ T $>$\+::read\+\_\+test}} ()
+\item 
+virtual bool \mbox{\hyperlink{group__firfirgcd__csp__channel__group_ga3566fb8ed3dc3ba7ab7d6dbe17787153}{sc\+\_\+csp\+\_\+channel$<$ T $>$\+::write\+\_\+test}} ()
+\item 
+virtual void \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaaed132e73280fe2a46b14604240832bc}{sc\+\_\+csp\+\_\+channel$<$ T $>$\+::register\+\_\+alt}} ()
+\item 
+virtual const sc\+\_\+event \& \mbox{\hyperlink{group__firfirgcd__csp__channel__group_ga40cb801a3a15df214563c89160c6d19c}{sc\+\_\+csp\+\_\+channel$<$ T $>$\+::get\+\_\+alt\+\_\+event}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_system_manager}{System\+Manager}} $\ast$ \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{p\+System\+Manager}}
+\item 
+Scheduling\+Manager $\ast$ \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}{p\+Scheduling\+Manager}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+C\+SP \mbox{\hyperlink{class_channel}{Channel}} Implementation. 
+
+\begin{DoxyAuthor}{Author}
+V. Muttillo, L. Pomante 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Apr. 2022 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__firfirgcd__csp__channel__group_ga40cb801a3a15df214563c89160c6d19c}\label{group__firfirgcd__csp__channel__group_ga40cb801a3a15df214563c89160c6d19c}} 
+\index{FirFirGCD CSP Channel.@{FirFirGCD CSP Channel.}!get\_alt\_event@{get\_alt\_event}}
+\index{get\_alt\_event@{get\_alt\_event}!FirFirGCD CSP Channel.@{FirFirGCD CSP Channel.}}
+\doxysubsubsection{\texorpdfstring{get\_alt\_event()}{get\_alt\_event()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+const sc\+\_\+event \& \mbox{\hyperlink{classsc__csp__channel}{sc\+\_\+csp\+\_\+channel}}$<$ T $>$\+::get\+\_\+alt\+\_\+event\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsc__core_1_1sc__csp__channel__in__if_acf52a1d31829961428e7205a835f8973}{sc\+\_\+core\+::sc\+\_\+csp\+\_\+channel\+\_\+in\+\_\+if$<$ T $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{sc__csp__channel_8h_source_l00540}{540}} of file \mbox{\hyperlink{sc__csp__channel_8h_source}{sc\+\_\+csp\+\_\+channel.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00541 \{}
+\DoxyCodeLine{00542     \textcolor{keywordflow}{return} \mbox{\hyperlink{classsc__csp__channel_acf1aadf77836e165d8b7672500bd2dc7}{ready\_alt\_event}};}
+\DoxyCodeLine{00543 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group__firfirgcd__csp__channel__group_ga8be7bf7ee4f0c35e684b3de9a5163705}\label{group__firfirgcd__csp__channel__group_ga8be7bf7ee4f0c35e684b3de9a5163705}} 
+\index{FirFirGCD CSP Channel.@{FirFirGCD CSP Channel.}!init@{init}}
+\index{init@{init}!FirFirGCD CSP Channel.@{FirFirGCD CSP Channel.}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classsc__csp__channel}{sc\+\_\+csp\+\_\+channel}}$<$ T $>$\+::init\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{sc__csp__channel_8h_source_l00442}{442}} of file \mbox{\hyperlink{sc__csp__channel_8h_source}{sc\+\_\+csp\+\_\+channel.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00443 \{}
+\DoxyCodeLine{00444     \mbox{\hyperlink{classsc__csp__channel_a03a5aa44e377fea90b93e68e481ad1e1}{m\_reader}} = 0;}
+\DoxyCodeLine{00445     \mbox{\hyperlink{classsc__csp__channel_ad4a06e1cfab0e87829b914b4230d2acb}{m\_writer}} = 0;}
+\DoxyCodeLine{00446 }
+\DoxyCodeLine{00447     \mbox{\hyperlink{classsc__csp__channel_a36b454aeb9b50a4094f31801a6976b0f}{num}}=0;}
+\DoxyCodeLine{00448     \mbox{\hyperlink{classsc__csp__channel_ae716d02584a29463adb04def170fce8e}{ready\_to\_read}}=\textcolor{keyword}{false};}
+\DoxyCodeLine{00449     \mbox{\hyperlink{classsc__csp__channel_ab7c20a9236f789c6e64d8c83ae19967f}{ready\_to\_write}}=\textcolor{keyword}{false};}
+\DoxyCodeLine{00450     \mbox{\hyperlink{classsc__csp__channel_aaeef06ac96bbb3468f9aa907c5b39253}{enable\_alt\_events}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{00451 }
+\DoxyCodeLine{00452     \mbox{\hyperlink{classsc__csp__channel_ab0977c6aab0732a7946a73aa4b2e6de8}{working\_time}} = sc\_time(0, SC\_MS);}
+\DoxyCodeLine{00453     \mbox{\hyperlink{classsc__csp__channel_a97c55d92a3c04d41300ffdb208eabc92}{working\_energy}}=0;}
+\DoxyCodeLine{00454 }
+\DoxyCodeLine{00455     \textcolor{comment}{// verify if the processes are allocated on the same BB (then IPC=false)}}
+\DoxyCodeLine{00456     \textcolor{keywordflow}{if} ((\mbox{\hyperlink{classsc__csp__channel_a5bef0234cd8c0762891d104dd4e7b68a}{w\_id}}==\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6a6acb823daa9d2547901e1e253f1a92}{stimulus\_id}}) || (\mbox{\hyperlink{classsc__csp__channel_a5bef0234cd8c0762891d104dd4e7b68a}{w\_id}}==\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8dab8bd51b016c7432eb1d0071f9677defe}{display\_id}}) || (\mbox{\hyperlink{classsc__csp__channel_ae16790111d142e48baf4563eb5e44069}{r\_id}}==\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6a6acb823daa9d2547901e1e253f1a92}{stimulus\_id}}) || (\mbox{\hyperlink{classsc__csp__channel_ae16790111d142e48baf4563eb5e44069}{r\_id}}==\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8dab8bd51b016c7432eb1d0071f9677defe}{display\_id}}))}
+\DoxyCodeLine{00457     \{}
+\DoxyCodeLine{00458         \textcolor{comment}{// Communications toward testbench are always considered}}
+\DoxyCodeLine{00459         \mbox{\hyperlink{classsc__csp__channel_a6508172b749b9dadf1824f5e816a32ed}{IPC}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{00460     \}}
+\DoxyCodeLine{00461     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{VBB}}[\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[\mbox{\hyperlink{classsc__csp__channel_a5bef0234cd8c0762891d104dd4e7b68a}{w\_id}}]].getProcessors()[0].getName() !=}
+\DoxyCodeLine{00462         \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{VBB}}[\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[\mbox{\hyperlink{classsc__csp__channel_ae16790111d142e48baf4563eb5e44069}{r\_id}}]].getProcessors()[0].getName())}
+\DoxyCodeLine{00463     \{}
+\DoxyCodeLine{00464         \textcolor{comment}{// Different BB names}}
+\DoxyCodeLine{00465         \mbox{\hyperlink{classsc__csp__channel_a6508172b749b9dadf1824f5e816a32ed}{IPC}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{00466     \}}
+\DoxyCodeLine{00467     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{VBB}}[\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[\mbox{\hyperlink{classsc__csp__channel_a5bef0234cd8c0762891d104dd4e7b68a}{w\_id}}]].getId() !=}
+\DoxyCodeLine{00468         \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{VBB}}[\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[\mbox{\hyperlink{classsc__csp__channel_ae16790111d142e48baf4563eb5e44069}{r\_id}}]].getId())}
+\DoxyCodeLine{00469     \{}
+\DoxyCodeLine{00470         \textcolor{comment}{// Different BB instances}}
+\DoxyCodeLine{00471         \mbox{\hyperlink{classsc__csp__channel_a6508172b749b9dadf1824f5e816a32ed}{IPC}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{00472     \}}
+\DoxyCodeLine{00473     \textcolor{keywordflow}{else} \mbox{\hyperlink{classsc__csp__channel_a6508172b749b9dadf1824f5e816a32ed}{IPC}}=\textcolor{keyword}{false};}
+\DoxyCodeLine{00474 }
+\DoxyCodeLine{00475     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classsc__csp__channel_a6508172b749b9dadf1824f5e816a32ed}{IPC}}==\textcolor{keyword}{true})}
+\DoxyCodeLine{00476     \{}
+\DoxyCodeLine{00477 }
+\DoxyCodeLine{00478         \textcolor{comment}{// compute the time needed for the communication}}
+\DoxyCodeLine{00479         \mbox{\hyperlink{classsc__csp__channel_a5cd83229e038e07f237512df3df4adf9}{waiting\_time}} = (ceil((\textcolor{keywordtype}{float})\mbox{\hyperlink{classsc__csp__channel_affca8dbc03ca31ac85f54766040aba41}{width}}/\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_af28a1744a2d964a7047c31c6a5f1644a}{VPL}}[\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_ab75b55327c942c6950f67c14ba9dea08}{allocationCH\_PL}}[\textcolor{keywordtype}{id}]].getPhysicalWidth())*\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_af28a1744a2d964a7047c31c6a5f1644a}{VPL}}[\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_ab75b55327c942c6950f67c14ba9dea08}{allocationCH\_PL}}[\mbox{\hyperlink{classsc__csp__channel_aed1aa9cb465c4a9c7751169994408c72}{id}}]].getTcomm()+\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_af28a1744a2d964a7047c31c6a5f1644a}{VPL}}[\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_ab75b55327c942c6950f67c14ba9dea08}{allocationCH\_PL}}[\mbox{\hyperlink{classsc__csp__channel_aed1aa9cb465c4a9c7751169994408c72}{id}}]].getTAcomm());}
+\DoxyCodeLine{00480 }
+\DoxyCodeLine{00481         \textcolor{comment}{// LP: non mi torna la trasmissione seriale di pi{\ucr} bit dato che ne consideriamo sempre solo uno alla volta (check tesi Marinella)}}
+\DoxyCodeLine{00482         \textcolor{comment}{// compute the energy needed for the communication }}
+\DoxyCodeLine{00483         \textcolor{comment}{// energy for x bit is: a2 * x\string^2 + a1 * x}}
+\DoxyCodeLine{00484         \textcolor{comment}{// en\_bit = energy for 1 bit = a2 + a1}}
+\DoxyCodeLine{00485         \textcolor{keywordtype}{float} en\_bit =  \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_af28a1744a2d964a7047c31c6a5f1644a}{VPL}}[\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_ab75b55327c942c6950f67c14ba9dea08}{allocationCH\_PL}}[\mbox{\hyperlink{classsc__csp__channel_aed1aa9cb465c4a9c7751169994408c72}{id}}]].geta2() + \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_af28a1744a2d964a7047c31c6a5f1644a}{VPL}}[\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_ab75b55327c942c6950f67c14ba9dea08}{allocationCH\_PL}}[\mbox{\hyperlink{classsc__csp__channel_aed1aa9cb465c4a9c7751169994408c72}{id}}]].geta1();}
+\DoxyCodeLine{00486 }
+\DoxyCodeLine{00487         \textcolor{comment}{// energy for 1 transmission is: en\_bit * PhysicalWidth}}
+\DoxyCodeLine{00488         \textcolor{keywordtype}{float} en\_trans = en\_bit * \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_af28a1744a2d964a7047c31c6a5f1644a}{VPL}}[\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_ab75b55327c942c6950f67c14ba9dea08}{allocationCH\_PL}}[\mbox{\hyperlink{classsc__csp__channel_aed1aa9cb465c4a9c7751169994408c72}{id}}]].getPhysicalWidth();}
+\DoxyCodeLine{00489 }
+\DoxyCodeLine{00490         \textcolor{comment}{// energy for communication is: energy for 1 transmission * \#transmissions}}
+\DoxyCodeLine{00491         \mbox{\hyperlink{classsc__csp__channel_a58737a4adf049b01ddce1acbbb7c5115}{partial\_energy}} = ceil((\textcolor{keywordtype}{float})\mbox{\hyperlink{classsc__csp__channel_affca8dbc03ca31ac85f54766040aba41}{width}}/\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_af28a1744a2d964a7047c31c6a5f1644a}{VPL}}[\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_ab75b55327c942c6950f67c14ba9dea08}{allocationCH\_PL}}[\textcolor{keywordtype}{id}]].getPhysicalWidth()) * en\_trans;}
+\DoxyCodeLine{00492 }
+\DoxyCodeLine{00493     \}}
+\DoxyCodeLine{00494     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00495     \{}
+\DoxyCodeLine{00496 }
+\DoxyCodeLine{00497         \textcolor{comment}{// Zero for processes on the same BB/PU}}
+\DoxyCodeLine{00498         \mbox{\hyperlink{classsc__csp__channel_a5cd83229e038e07f237512df3df4adf9}{waiting\_time}} = sc\_time(0, SC\_MS);}
+\DoxyCodeLine{00499 }
+\DoxyCodeLine{00500         \textcolor{comment}{// Zero for processes on the same BB/PU}}
+\DoxyCodeLine{00501         \mbox{\hyperlink{classsc__csp__channel_a58737a4adf049b01ddce1acbbb7c5115}{partial\_energy}} = 0;}
+\DoxyCodeLine{00502 }
+\DoxyCodeLine{00503     \}}
+\DoxyCodeLine{00504 }
+\DoxyCodeLine{00505 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{_system_manager_8h_source_l00110}{System\+Manager\+::allocation\+C\+H\+\_\+\+PL}}, \mbox{\hyperlink{_system_manager_8h_source_l00107}{System\+Manager\+::allocation\+P\+S\+\_\+\+BB}}, \mbox{\hyperlink{define_8h_source_l00078}{display\+\_\+id}}, \mbox{\hyperlink{main_8cpp_source_l00163}{p\+System\+Manager}}, \mbox{\hyperlink{define_8h_source_l00078}{stimulus\+\_\+id}}, \mbox{\hyperlink{_system_manager_8h_source_l00100}{System\+Manager\+::\+V\+BB}}, and \mbox{\hyperlink{_system_manager_8h_source_l00103}{System\+Manager\+::\+V\+PL}}.
+
+\mbox{\Hypertarget{group__firfirgcd__csp__channel__group_gaf3eb60ce6aecbe88c0e72fdb19a1f7af}\label{group__firfirgcd__csp__channel__group_gaf3eb60ce6aecbe88c0e72fdb19a1f7af}} 
+\index{FirFirGCD CSP Channel.@{FirFirGCD CSP Channel.}!read@{read}}
+\index{read@{read}!FirFirGCD CSP Channel.@{FirFirGCD CSP Channel.}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T \mbox{\hyperlink{classsc__csp__channel}{sc\+\_\+csp\+\_\+channel}}$<$ T $>$\+::read\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsc__core_1_1sc__csp__channel__in__if_a5e8076fced231d716900901e5d60f080}{sc\+\_\+core\+::sc\+\_\+csp\+\_\+channel\+\_\+in\+\_\+if$<$ T $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{sc__csp__channel_8h_source_l00310}{310}} of file \mbox{\hyperlink{sc__csp__channel_8h_source}{sc\+\_\+csp\+\_\+channel.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00311 \{}
+\DoxyCodeLine{00312     T tmp;}
+\DoxyCodeLine{00313     \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaf3eb60ce6aecbe88c0e72fdb19a1f7af}{read}}( tmp );}
+\DoxyCodeLine{00314     \textcolor{keywordflow}{return} tmp;}
+\DoxyCodeLine{00315 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group__firfirgcd__csp__channel__group_ga23046a4820dcf9ef26a75eba9cb7d49b}\label{group__firfirgcd__csp__channel__group_ga23046a4820dcf9ef26a75eba9cb7d49b}} 
+\index{FirFirGCD CSP Channel.@{FirFirGCD CSP Channel.}!read@{read}}
+\index{read@{read}!FirFirGCD CSP Channel.@{FirFirGCD CSP Channel.}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classsc__csp__channel}{sc\+\_\+csp\+\_\+channel}}$<$ T $>$\+::read (\begin{DoxyParamCaption}\item[{T \&}]{val\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsc__core_1_1sc__csp__channel__in__if_a2649054eea07eb61937ea38891162e85}{sc\+\_\+core\+::sc\+\_\+csp\+\_\+channel\+\_\+in\+\_\+if$<$ T $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{sc__csp__channel_8h_source_l00232}{232}} of file \mbox{\hyperlink{sc__csp__channel_8h_source}{sc\+\_\+csp\+\_\+channel.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00233 \{}
+\DoxyCodeLine{00234     \textcolor{comment}{//  Update process status (also testbench processes)}}
+\DoxyCodeLine{00235     \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>process\_state[\mbox{\hyperlink{classsc__csp__channel_ae16790111d142e48baf4563eb5e44069}{r\_id}}]=\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a4c97ffbad296d4a6b84b1c508fc5d32a}{waiting}};}
+\DoxyCodeLine{00236     \mbox{\hyperlink{group__firfirgcd__macros__group_gaf1fe2324408cd29c1e2dcd55f2e4a9c1}{HEPSY\_TRACE\_PS\_STATE}}(\mbox{\hyperlink{classsc__csp__channel_ae16790111d142e48baf4563eb5e44069}{r\_id}})}
+\DoxyCodeLine{00237 }
+\DoxyCodeLine{00238     \textcolor{comment}{// Update channel status (if needed)}}
+\DoxyCodeLine{00239     \textcolor{keywordflow}{if} (\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>channel\_state[\textcolor{keywordtype}{id}]==\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a4c97ffbad296d4a6b84b1c508fc5d32a}{waiting}})}
+\DoxyCodeLine{00240     \{}
+\DoxyCodeLine{00241         \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>channel\_state[\mbox{\hyperlink{classsc__csp__channel_aed1aa9cb465c4a9c7751169994408c72}{id}}]=\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473}{ready}};}
+\DoxyCodeLine{00242         \mbox{\hyperlink{group__firfirgcd__macros__group_ga139185aa9c10392aada97618a69ee2cd}{HEPSY\_TRACE\_CH\_STATE}}(\textcolor{keywordtype}{id})}
+\DoxyCodeLine{00243     \}}
+\DoxyCodeLine{00244 }
+\DoxyCodeLine{00245     \textcolor{comment}{// Update BB mode (only for SPP, the others PUs are managed in the schedulers)}}
+\DoxyCodeLine{00246     \textcolor{keywordflow}{if} (\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a21d2bb74e4472f99ec04243168e7964e}{checkSPP}}(\mbox{\hyperlink{classsc__csp__channel_ae16790111d142e48baf4563eb5e44069}{r\_id}})==\textcolor{keyword}{true})}
+\DoxyCodeLine{00247     \{}
+\DoxyCodeLine{00248         \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>BB\_mode[\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[\mbox{\hyperlink{classsc__csp__channel_ae16790111d142e48baf4563eb5e44069}{r\_id}}]]=\mbox{\hyperlink{group__firfirgcd__define__group_gga1a6b6fb557d8d37d59700faf4e4c9167a66e84e235b9e03b6fdfc7ffe7e775de8}{suspended}};}
+\DoxyCodeLine{00249         \mbox{\hyperlink{group__firfirgcd__macros__group_ga0f83efd33ffbe62c58c798abb824fa94}{HEPSY\_TRACE\_BB\_STATE}}(\mbox{\hyperlink{classsc__csp__channel_ae16790111d142e48baf4563eb5e44069}{r\_id}})}
+\DoxyCodeLine{00250     \}}
+\DoxyCodeLine{00251 }
+\DoxyCodeLine{00252     \textcolor{keywordflow}{if}(\mbox{\hyperlink{classsc__csp__channel_ab7c20a9236f789c6e64d8c83ae19967f}{ready\_to\_write}}==\textcolor{keyword}{true})}
+\DoxyCodeLine{00253     \{}
+\DoxyCodeLine{00254         \mbox{\hyperlink{classsc__csp__channel_ae716d02584a29463adb04def170fce8e}{ready\_to\_read}}=\textcolor{keyword}{true};}
+\DoxyCodeLine{00255         \mbox{\hyperlink{classsc__csp__channel_a014541bbd872463dd525b35e951ee9ba}{ready\_to\_read\_event}}.notify(SC\_ZERO\_TIME);}
+\DoxyCodeLine{00256         sc\_core::wait(\mbox{\hyperlink{classsc__csp__channel_aab17ea7d52d31f39e68eb4472cb27a4a}{ready\_to\_write\_event}});}
+\DoxyCodeLine{00257 }
+\DoxyCodeLine{00258         val\_=\mbox{\hyperlink{classsc__csp__channel_aa4ab2439d490053e231a59dd9b77e6d6}{csp\_buf}};}
+\DoxyCodeLine{00259 }
+\DoxyCodeLine{00260         \mbox{\hyperlink{classsc__csp__channel_ae716d02584a29463adb04def170fce8e}{ready\_to\_read}}=\textcolor{keyword}{false};}
+\DoxyCodeLine{00261         \mbox{\hyperlink{classsc__csp__channel_a014541bbd872463dd525b35e951ee9ba}{ready\_to\_read\_event}}.notify(SC\_ZERO\_TIME);}
+\DoxyCodeLine{00262     \}}
+\DoxyCodeLine{00263     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00264     \{}
+\DoxyCodeLine{00265         \mbox{\hyperlink{classsc__csp__channel_ae716d02584a29463adb04def170fce8e}{ready\_to\_read}}=\textcolor{keyword}{true};}
+\DoxyCodeLine{00266 }
+\DoxyCodeLine{00267         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classsc__csp__channel_aaeef06ac96bbb3468f9aa907c5b39253}{enable\_alt\_events}}) \mbox{\hyperlink{classsc__csp__channel_acf1aadf77836e165d8b7672500bd2dc7}{ready\_alt\_event}}.notify(SC\_ZERO\_TIME); \textcolor{comment}{// added for ALT}}
+\DoxyCodeLine{00268         sc\_core::wait(\mbox{\hyperlink{classsc__csp__channel_aab17ea7d52d31f39e68eb4472cb27a4a}{ready\_to\_write\_event}});}
+\DoxyCodeLine{00269 }
+\DoxyCodeLine{00270         val\_=\mbox{\hyperlink{classsc__csp__channel_aa4ab2439d490053e231a59dd9b77e6d6}{csp\_buf}};}
+\DoxyCodeLine{00271 }
+\DoxyCodeLine{00272         \mbox{\hyperlink{classsc__csp__channel_ae716d02584a29463adb04def170fce8e}{ready\_to\_read}}=\textcolor{keyword}{false};}
+\DoxyCodeLine{00273         \mbox{\hyperlink{classsc__csp__channel_a014541bbd872463dd525b35e951ee9ba}{ready\_to\_read\_event}}.notify(SC\_ZERO\_TIME);}
+\DoxyCodeLine{00274         sc\_core::wait(\mbox{\hyperlink{classsc__csp__channel_aab17ea7d52d31f39e68eb4472cb27a4a}{ready\_to\_write\_event}});}
+\DoxyCodeLine{00275     \}}
+\DoxyCodeLine{00276 }
+\DoxyCodeLine{00277     \textcolor{comment}{// Update BB mode}}
+\DoxyCodeLine{00278     \textcolor{keywordflow}{if} (\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>BB\_mode[\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[\mbox{\hyperlink{classsc__csp__channel_ae16790111d142e48baf4563eb5e44069}{r\_id}}]]==\mbox{\hyperlink{group__firfirgcd__define__group_gga1a6b6fb557d8d37d59700faf4e4c9167a66e84e235b9e03b6fdfc7ffe7e775de8}{suspended}})}
+\DoxyCodeLine{00279     \{}
+\DoxyCodeLine{00280         \textcolor{keywordflow}{if} (\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a21d2bb74e4472f99ec04243168e7964e}{checkSPP}}(\mbox{\hyperlink{classsc__csp__channel_ae16790111d142e48baf4563eb5e44069}{r\_id}})==\textcolor{keyword}{true})}
+\DoxyCodeLine{00281         \{}
+\DoxyCodeLine{00282             \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>BB\_mode[\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[\mbox{\hyperlink{classsc__csp__channel_ae16790111d142e48baf4563eb5e44069}{r\_id}}]]=\mbox{\hyperlink{group__firfirgcd__define__group_gga1a6b6fb557d8d37d59700faf4e4c9167a5d178ae2be9d93ea4cbf1a9f0a2d9cbe}{active}};}
+\DoxyCodeLine{00283             \mbox{\hyperlink{group__firfirgcd__macros__group_ga0f83efd33ffbe62c58c798abb824fa94}{HEPSY\_TRACE\_BB\_STATE}}(\mbox{\hyperlink{classsc__csp__channel_ae16790111d142e48baf4563eb5e44069}{r\_id}})}
+\DoxyCodeLine{00284         \}}
+\DoxyCodeLine{00285         \textcolor{keywordflow}{else} \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>activate[\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[\mbox{\hyperlink{classsc__csp__channel_ae16790111d142e48baf4563eb5e44069}{r\_id}}]].notify(SC\_ZERO\_TIME); \textcolor{comment}{// Ask to the scheduler to reactivate BB}}
+\DoxyCodeLine{00286     \}}
+\DoxyCodeLine{00287 }
+\DoxyCodeLine{00288     \textcolor{comment}{// Update channel status (if needed)}}
+\DoxyCodeLine{00289     \textcolor{keywordflow}{if} (\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>channel\_state[\textcolor{keywordtype}{id}]==\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473}{ready}})}
+\DoxyCodeLine{00290     \{}
+\DoxyCodeLine{00291         \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>channel\_state[\mbox{\hyperlink{classsc__csp__channel_aed1aa9cb465c4a9c7751169994408c72}{id}}]=\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a4c97ffbad296d4a6b84b1c508fc5d32a}{waiting}};}
+\DoxyCodeLine{00292         \mbox{\hyperlink{group__firfirgcd__macros__group_ga139185aa9c10392aada97618a69ee2cd}{HEPSY\_TRACE\_CH\_STATE}}(\textcolor{keywordtype}{id})}
+\DoxyCodeLine{00293     \}}
+\DoxyCodeLine{00294 }
+\DoxyCodeLine{00295     \textcolor{comment}{//  Update process status (also testbench processes)}}
+\DoxyCodeLine{00296     \textcolor{keywordflow}{if} (\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a21d2bb74e4472f99ec04243168e7964e}{checkSPP}}(\mbox{\hyperlink{classsc__csp__channel_ae16790111d142e48baf4563eb5e44069}{r\_id}})==\textcolor{keyword}{true}) \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>process\_state[\mbox{\hyperlink{classsc__csp__channel_ae16790111d142e48baf4563eb5e44069}{r\_id}}]=\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c}{running}};}
+\DoxyCodeLine{00297     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00298     \{}
+\DoxyCodeLine{00299         \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>process\_state[\mbox{\hyperlink{classsc__csp__channel_ae16790111d142e48baf4563eb5e44069}{r\_id}}]=\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473}{ready}};}
+\DoxyCodeLine{00300 }
+\DoxyCodeLine{00301         \textcolor{comment}{//WARNING: needed to correctly perform the round check (see WARNING in scheduler)}}
+\DoxyCodeLine{00302         \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>process\_status\_changed[\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[\mbox{\hyperlink{classsc__csp__channel_ae16790111d142e48baf4563eb5e44069}{r\_id}}]]=\textcolor{keyword}{true};}
+\DoxyCodeLine{00303     \}}
+\DoxyCodeLine{00304     \mbox{\hyperlink{group__firfirgcd__macros__group_gaf1fe2324408cd29c1e2dcd55f2e4a9c1}{HEPSY\_TRACE\_PS\_STATE}}(\mbox{\hyperlink{classsc__csp__channel_ae16790111d142e48baf4563eb5e44069}{r\_id}})}
+\DoxyCodeLine{00305 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{define_8h_source_l00127}{active}}, \mbox{\hyperlink{_system_manager_8h_source_l00107}{System\+Manager\+::allocation\+P\+S\+\_\+\+BB}}, \mbox{\hyperlink{_system_manager_8cpp_source_l00267}{System\+Manager\+::check\+S\+P\+P()}}, \mbox{\hyperlink{macros_8h_source_l00156}{H\+E\+P\+S\+Y\+\_\+\+T\+R\+A\+C\+E\+\_\+\+B\+B\+\_\+\+S\+T\+A\+TE}}, \mbox{\hyperlink{macros_8h_source_l00148}{H\+E\+P\+S\+Y\+\_\+\+T\+R\+A\+C\+E\+\_\+\+C\+H\+\_\+\+S\+T\+A\+TE}}, \mbox{\hyperlink{macros_8h_source_l00140}{H\+E\+P\+S\+Y\+\_\+\+T\+R\+A\+C\+E\+\_\+\+P\+S\+\_\+\+S\+T\+A\+TE}}, \mbox{\hyperlink{main_8cpp_source_l00166}{p\+Scheduling\+Manager}}, \mbox{\hyperlink{main_8cpp_source_l00163}{p\+System\+Manager}}, \mbox{\hyperlink{define_8h_source_l00126}{ready}}, \mbox{\hyperlink{define_8h_source_l00126}{running}}, \mbox{\hyperlink{define_8h_source_l00127}{suspended}}, and \mbox{\hyperlink{define_8h_source_l00126}{waiting}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__firfirgcd__csp__channel__group_ga23046a4820dcf9ef26a75eba9cb7d49b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__firfirgcd__csp__channel__group_gab1a08e5d4129f9647e573af0c4ca4f30}\label{group__firfirgcd__csp__channel__group_gab1a08e5d4129f9647e573af0c4ca4f30}} 
+\index{FirFirGCD CSP Channel.@{FirFirGCD CSP Channel.}!read\_test@{read\_test}}
+\index{read\_test@{read\_test}!FirFirGCD CSP Channel.@{FirFirGCD CSP Channel.}}
+\doxysubsubsection{\texorpdfstring{read\_test()}{read\_test()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{classsc__csp__channel}{sc\+\_\+csp\+\_\+channel}}$<$ T $>$\+::read\+\_\+test\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsc__core_1_1sc__csp__channel__in__if_ad7139da842ceebdc4c64d4cf2b02d371}{sc\+\_\+core\+::sc\+\_\+csp\+\_\+channel\+\_\+in\+\_\+if$<$ T $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{sc__csp__channel_8h_source_l00513}{513}} of file \mbox{\hyperlink{sc__csp__channel_8h_source}{sc\+\_\+csp\+\_\+channel.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00514 \{}
+\DoxyCodeLine{00515     \textcolor{keywordflow}{return} \mbox{\hyperlink{classsc__csp__channel_ab7c20a9236f789c6e64d8c83ae19967f}{ready\_to\_write}};}
+\DoxyCodeLine{00516 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group__firfirgcd__csp__channel__group_gaaed132e73280fe2a46b14604240832bc}\label{group__firfirgcd__csp__channel__group_gaaed132e73280fe2a46b14604240832bc}} 
+\index{FirFirGCD CSP Channel.@{FirFirGCD CSP Channel.}!register\_alt@{register\_alt}}
+\index{register\_alt@{register\_alt}!FirFirGCD CSP Channel.@{FirFirGCD CSP Channel.}}
+\doxysubsubsection{\texorpdfstring{register\_alt()}{register\_alt()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classsc__csp__channel}{sc\+\_\+csp\+\_\+channel}}$<$ T $>$\+::register\+\_\+alt\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsc__core_1_1sc__csp__channel__in__if_a163aae4bbe4ad9f8dcee26b330e929d1}{sc\+\_\+core\+::sc\+\_\+csp\+\_\+channel\+\_\+in\+\_\+if$<$ T $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{sc__csp__channel_8h_source_l00531}{531}} of file \mbox{\hyperlink{sc__csp__channel_8h_source}{sc\+\_\+csp\+\_\+channel.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00532 \{}
+\DoxyCodeLine{00533     \mbox{\hyperlink{classsc__csp__channel_aaeef06ac96bbb3468f9aa907c5b39253}{enable\_alt\_events}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{00534 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group__firfirgcd__csp__channel__group_ga5bbbddcd88383d3ed9ee425ad87ee58c}\label{group__firfirgcd__csp__channel__group_ga5bbbddcd88383d3ed9ee425ad87ee58c}} 
+\index{FirFirGCD CSP Channel.@{FirFirGCD CSP Channel.}!register\_port@{register\_port}}
+\index{register\_port@{register\_port}!FirFirGCD CSP Channel.@{FirFirGCD CSP Channel.}}
+\doxysubsubsection{\texorpdfstring{register\_port()}{register\_port()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classsc__csp__channel}{sc\+\_\+csp\+\_\+channel}}$<$ T $>$\+::register\+\_\+port (\begin{DoxyParamCaption}\item[{sc\+\_\+port\+\_\+base \&}]{port\+\_\+,  }\item[{const char $\ast$}]{if\+\_\+typename\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line \mbox{\hyperlink{sc__csp__channel_8h_source_l00202}{202}} of file \mbox{\hyperlink{sc__csp__channel_8h_source}{sc\+\_\+csp\+\_\+channel.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00204 \{}
+\DoxyCodeLine{00205     std::string nm( if\_typename\_ );}
+\DoxyCodeLine{00206     \textcolor{keywordflow}{if}( nm == \textcolor{keyword}{typeid}( \mbox{\hyperlink{classsc__core_1_1sc__csp__channel__in__if}{sc\_csp\_channel\_in\_if<T>}} ).name())}
+\DoxyCodeLine{00207     \{}
+\DoxyCodeLine{00208         \textcolor{comment}{// only one reader can be connected}}
+\DoxyCodeLine{00209         \textcolor{keywordflow}{if}( \mbox{\hyperlink{classsc__csp__channel_a03a5aa44e377fea90b93e68e481ad1e1}{m\_reader}} != 0 ) \{}
+\DoxyCodeLine{00210             SC\_REPORT\_ERROR(\textcolor{stringliteral}{"sc\_csp\_channel<T> cannot have more than one reader"}, 0 );}
+\DoxyCodeLine{00211     \}}
+\DoxyCodeLine{00212     \mbox{\hyperlink{classsc__csp__channel_a03a5aa44e377fea90b93e68e481ad1e1}{m\_reader}} = \&port\_;}
+\DoxyCodeLine{00213     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( nm == \textcolor{keyword}{typeid}( \mbox{\hyperlink{classsc__core_1_1sc__csp__channel__out__if}{sc\_csp\_channel\_out\_if<T>}} ).name()) \{}
+\DoxyCodeLine{00214         \textcolor{comment}{// only one writer can be connected}}
+\DoxyCodeLine{00215         \textcolor{keywordflow}{if}( \mbox{\hyperlink{classsc__csp__channel_ad4a06e1cfab0e87829b914b4230d2acb}{m\_writer}} != 0 ) \{}
+\DoxyCodeLine{00216             SC\_REPORT\_ERROR(\textcolor{stringliteral}{"sc\_csp\_channel<T> cannot have more than one writer"}, 0 );}
+\DoxyCodeLine{00217         \}}
+\DoxyCodeLine{00218     \mbox{\hyperlink{classsc__csp__channel_ad4a06e1cfab0e87829b914b4230d2acb}{m\_writer}} = \&port\_;}
+\DoxyCodeLine{00219     \}}
+\DoxyCodeLine{00220     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00221     \{}
+\DoxyCodeLine{00222         SC\_REPORT\_ERROR( SC\_ID\_BIND\_IF\_TO\_PORT\_, }
+\DoxyCodeLine{00223                      \textcolor{stringliteral}{"sc\_csp\_channel<T> port not recognized"} );}
+\DoxyCodeLine{00224     \}}
+\DoxyCodeLine{00225 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group__firfirgcd__csp__channel__group_ga216706630fbd1f222b428cc4e6aa523d}\label{group__firfirgcd__csp__channel__group_ga216706630fbd1f222b428cc4e6aa523d}} 
+\index{FirFirGCD CSP Channel.@{FirFirGCD CSP Channel.}!trace@{trace}}
+\index{trace@{trace}!FirFirGCD CSP Channel.@{FirFirGCD CSP Channel.}}
+\doxysubsubsection{\texorpdfstring{trace()}{trace()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classsc__csp__channel}{sc\+\_\+csp\+\_\+channel}}$<$ T $>$\+::trace (\begin{DoxyParamCaption}\item[{sc\+\_\+trace\+\_\+file $\ast$}]{tf }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{sc__csp__channel_8h_source_l00433}{433}} of file \mbox{\hyperlink{sc__csp__channel_8h_source}{sc\+\_\+csp\+\_\+channel.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00434 \{}
+\DoxyCodeLine{00435     \textcolor{comment}{// WIP}}
+\DoxyCodeLine{00436 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group__firfirgcd__csp__channel__group_gaf8a9ace576ff2e0462c8db276f9f388d}\label{group__firfirgcd__csp__channel__group_gaf8a9ace576ff2e0462c8db276f9f388d}} 
+\index{FirFirGCD CSP Channel.@{FirFirGCD CSP Channel.}!write@{write}}
+\index{write@{write}!FirFirGCD CSP Channel.@{FirFirGCD CSP Channel.}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classsc__csp__channel}{sc\+\_\+csp\+\_\+channel}}$<$ T $>$\+::write (\begin{DoxyParamCaption}\item[{const T \&}]{val\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsc__core_1_1sc__csp__channel__out__if_ae0da34a87857ef8c638455cb6484004b}{sc\+\_\+core\+::sc\+\_\+csp\+\_\+channel\+\_\+out\+\_\+if$<$ T $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{sc__csp__channel_8h_source_l00322}{322}} of file \mbox{\hyperlink{sc__csp__channel_8h_source}{sc\+\_\+csp\+\_\+channel.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00323 \{}
+\DoxyCodeLine{00324     \textcolor{comment}{//  Update process status (also testbench processes)}}
+\DoxyCodeLine{00325     \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>process\_state[\mbox{\hyperlink{classsc__csp__channel_a5bef0234cd8c0762891d104dd4e7b68a}{w\_id}}]=\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a4c97ffbad296d4a6b84b1c508fc5d32a}{waiting}};}
+\DoxyCodeLine{00326     \mbox{\hyperlink{group__firfirgcd__macros__group_gaf1fe2324408cd29c1e2dcd55f2e4a9c1}{HEPSY\_TRACE\_PS\_STATE}}(\mbox{\hyperlink{classsc__csp__channel_a5bef0234cd8c0762891d104dd4e7b68a}{w\_id}})}
+\DoxyCodeLine{00327 }
+\DoxyCodeLine{00328     \textcolor{comment}{// Update channel status (if needed)}}
+\DoxyCodeLine{00329     \textcolor{keywordflow}{if} (\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>channel\_state[\textcolor{keywordtype}{id}]==\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a4c97ffbad296d4a6b84b1c508fc5d32a}{waiting}})}
+\DoxyCodeLine{00330     \{}
+\DoxyCodeLine{00331         \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>channel\_state[\mbox{\hyperlink{classsc__csp__channel_aed1aa9cb465c4a9c7751169994408c72}{id}}]=\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473}{ready}};}
+\DoxyCodeLine{00332         \mbox{\hyperlink{group__firfirgcd__macros__group_ga139185aa9c10392aada97618a69ee2cd}{HEPSY\_TRACE\_CH\_STATE}}(\textcolor{keywordtype}{id})}
+\DoxyCodeLine{00333     \}}
+\DoxyCodeLine{00334 }
+\DoxyCodeLine{00335     \textcolor{comment}{// Update BB mode (only for SPP, the others PUs are managed in the schedulers)}}
+\DoxyCodeLine{00336     \textcolor{keywordflow}{if} (\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a21d2bb74e4472f99ec04243168e7964e}{checkSPP}}(\mbox{\hyperlink{classsc__csp__channel_a5bef0234cd8c0762891d104dd4e7b68a}{w\_id}})==\textcolor{keyword}{true})}
+\DoxyCodeLine{00337     \{}
+\DoxyCodeLine{00338         \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>BB\_mode[\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[\mbox{\hyperlink{classsc__csp__channel_a5bef0234cd8c0762891d104dd4e7b68a}{w\_id}}]]=\mbox{\hyperlink{group__firfirgcd__define__group_gga1a6b6fb557d8d37d59700faf4e4c9167a66e84e235b9e03b6fdfc7ffe7e775de8}{suspended}};}
+\DoxyCodeLine{00339         \mbox{\hyperlink{group__firfirgcd__macros__group_ga0f83efd33ffbe62c58c798abb824fa94}{HEPSY\_TRACE\_BB\_STATE}}(\mbox{\hyperlink{classsc__csp__channel_a5bef0234cd8c0762891d104dd4e7b68a}{w\_id}})}
+\DoxyCodeLine{00340     \}}
+\DoxyCodeLine{00341 }
+\DoxyCodeLine{00342     \textcolor{keywordflow}{if}( \mbox{\hyperlink{classsc__csp__channel_ae716d02584a29463adb04def170fce8e}{ready\_to\_read}}==\textcolor{keyword}{true})}
+\DoxyCodeLine{00343     \{}
+\DoxyCodeLine{00344         \mbox{\hyperlink{classsc__csp__channel_aa4ab2439d490053e231a59dd9b77e6d6}{csp\_buf}}=val\_;}
+\DoxyCodeLine{00345 }
+\DoxyCodeLine{00346         \mbox{\hyperlink{classsc__csp__channel_ab7c20a9236f789c6e64d8c83ae19967f}{ready\_to\_write}}=\textcolor{keyword}{true};}
+\DoxyCodeLine{00347         \mbox{\hyperlink{classsc__csp__channel_aab17ea7d52d31f39e68eb4472cb27a4a}{ready\_to\_write\_event}}.notify(SC\_ZERO\_TIME);}
+\DoxyCodeLine{00348         sc\_core::wait(\mbox{\hyperlink{classsc__csp__channel_a014541bbd872463dd525b35e951ee9ba}{ready\_to\_read\_event}});}
+\DoxyCodeLine{00349 }
+\DoxyCodeLine{00350         \textcolor{comment}{// Update channel status}}
+\DoxyCodeLine{00351         \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>channel\_state[\mbox{\hyperlink{classsc__csp__channel_aed1aa9cb465c4a9c7751169994408c72}{id}}]=\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c}{running}};}
+\DoxyCodeLine{00352         \mbox{\hyperlink{group__firfirgcd__macros__group_ga139185aa9c10392aada97618a69ee2cd}{HEPSY\_TRACE\_CH\_STATE}}(\textcolor{keywordtype}{id})}
+\DoxyCodeLine{00353 }
+\DoxyCodeLine{00354         \textcolor{comment}{// Manage simulated time and energy}}
+\DoxyCodeLine{00355         wait(\mbox{\hyperlink{classsc__csp__channel_a5cd83229e038e07f237512df3df4adf9}{waiting\_time}});}
+\DoxyCodeLine{00356         \mbox{\hyperlink{classsc__csp__channel_ab0977c6aab0732a7946a73aa4b2e6de8}{working\_time}}+= \mbox{\hyperlink{classsc__csp__channel_a5cd83229e038e07f237512df3df4adf9}{waiting\_time}};}
+\DoxyCodeLine{00357         \mbox{\hyperlink{classsc__csp__channel_a97c55d92a3c04d41300ffdb208eabc92}{working\_energy}}+=\mbox{\hyperlink{classsc__csp__channel_a58737a4adf049b01ddce1acbbb7c5115}{partial\_energy}};}
+\DoxyCodeLine{00358 }
+\DoxyCodeLine{00359         \textcolor{comment}{// Update channel status}}
+\DoxyCodeLine{00360         \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>channel\_state[\mbox{\hyperlink{classsc__csp__channel_aed1aa9cb465c4a9c7751169994408c72}{id}}]=\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473}{ready}};}
+\DoxyCodeLine{00361         \mbox{\hyperlink{group__firfirgcd__macros__group_ga139185aa9c10392aada97618a69ee2cd}{HEPSY\_TRACE\_CH\_STATE}}(\textcolor{keywordtype}{id})}
+\DoxyCodeLine{00362 }
+\DoxyCodeLine{00363         \mbox{\hyperlink{classsc__csp__channel_ab7c20a9236f789c6e64d8c83ae19967f}{ready\_to\_write}}=\textcolor{keyword}{false};}
+\DoxyCodeLine{00364         \mbox{\hyperlink{classsc__csp__channel_aab17ea7d52d31f39e68eb4472cb27a4a}{ready\_to\_write\_event}}.notify(SC\_ZERO\_TIME);}
+\DoxyCodeLine{00365     \}}
+\DoxyCodeLine{00366     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00367     \{}
+\DoxyCodeLine{00368         \mbox{\hyperlink{classsc__csp__channel_ab7c20a9236f789c6e64d8c83ae19967f}{ready\_to\_write}}=\textcolor{keyword}{true};}
+\DoxyCodeLine{00369 }
+\DoxyCodeLine{00370         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classsc__csp__channel_aaeef06ac96bbb3468f9aa907c5b39253}{enable\_alt\_events}}) \mbox{\hyperlink{classsc__csp__channel_acf1aadf77836e165d8b7672500bd2dc7}{ready\_alt\_event}}.notify(SC\_ZERO\_TIME); \textcolor{comment}{// added for ALT}}
+\DoxyCodeLine{00371         sc\_core::wait(\mbox{\hyperlink{classsc__csp__channel_a014541bbd872463dd525b35e951ee9ba}{ready\_to\_read\_event}});}
+\DoxyCodeLine{00372 }
+\DoxyCodeLine{00373         \mbox{\hyperlink{classsc__csp__channel_aa4ab2439d490053e231a59dd9b77e6d6}{csp\_buf}}=val\_;}
+\DoxyCodeLine{00374 }
+\DoxyCodeLine{00375         \textcolor{comment}{// Update channel status}}
+\DoxyCodeLine{00376         \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>channel\_state[\mbox{\hyperlink{classsc__csp__channel_aed1aa9cb465c4a9c7751169994408c72}{id}}]=\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c}{running}};}
+\DoxyCodeLine{00377         \mbox{\hyperlink{group__firfirgcd__macros__group_ga139185aa9c10392aada97618a69ee2cd}{HEPSY\_TRACE\_CH\_STATE}}(\textcolor{keywordtype}{id})}
+\DoxyCodeLine{00378 }
+\DoxyCodeLine{00379         \textcolor{comment}{// Manage simulated time and energy}}
+\DoxyCodeLine{00380         wait(\mbox{\hyperlink{classsc__csp__channel_a5cd83229e038e07f237512df3df4adf9}{waiting\_time}});}
+\DoxyCodeLine{00381         \mbox{\hyperlink{classsc__csp__channel_ab0977c6aab0732a7946a73aa4b2e6de8}{working\_time}}+= \mbox{\hyperlink{classsc__csp__channel_a5cd83229e038e07f237512df3df4adf9}{waiting\_time}};}
+\DoxyCodeLine{00382         \mbox{\hyperlink{classsc__csp__channel_a97c55d92a3c04d41300ffdb208eabc92}{working\_energy}}+=\mbox{\hyperlink{classsc__csp__channel_a58737a4adf049b01ddce1acbbb7c5115}{partial\_energy}};}
+\DoxyCodeLine{00383 }
+\DoxyCodeLine{00384         \textcolor{comment}{// Update channel status}}
+\DoxyCodeLine{00385         \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>channel\_state[\mbox{\hyperlink{classsc__csp__channel_aed1aa9cb465c4a9c7751169994408c72}{id}}]=\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473}{ready}};}
+\DoxyCodeLine{00386         \mbox{\hyperlink{group__firfirgcd__macros__group_ga139185aa9c10392aada97618a69ee2cd}{HEPSY\_TRACE\_CH\_STATE}}(\textcolor{keywordtype}{id})}
+\DoxyCodeLine{00387 }
+\DoxyCodeLine{00388         \mbox{\hyperlink{classsc__csp__channel_ab7c20a9236f789c6e64d8c83ae19967f}{ready\_to\_write}}=\textcolor{keyword}{false};}
+\DoxyCodeLine{00389         \mbox{\hyperlink{classsc__csp__channel_aab17ea7d52d31f39e68eb4472cb27a4a}{ready\_to\_write\_event}}.notify(SC\_ZERO\_TIME);}
+\DoxyCodeLine{00390         sc\_core::wait(\mbox{\hyperlink{classsc__csp__channel_a014541bbd872463dd525b35e951ee9ba}{ready\_to\_read\_event}});}
+\DoxyCodeLine{00391     \}                                       }
+\DoxyCodeLine{00392 }
+\DoxyCodeLine{00393     \textcolor{comment}{// Update BB mode}}
+\DoxyCodeLine{00394     \textcolor{keywordflow}{if} (\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>BB\_mode[\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[\mbox{\hyperlink{classsc__csp__channel_a5bef0234cd8c0762891d104dd4e7b68a}{w\_id}}]]==\mbox{\hyperlink{group__firfirgcd__define__group_gga1a6b6fb557d8d37d59700faf4e4c9167a66e84e235b9e03b6fdfc7ffe7e775de8}{suspended}})}
+\DoxyCodeLine{00395     \{}
+\DoxyCodeLine{00396         \textcolor{keywordflow}{if} (\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a21d2bb74e4472f99ec04243168e7964e}{checkSPP}}(\mbox{\hyperlink{classsc__csp__channel_a5bef0234cd8c0762891d104dd4e7b68a}{w\_id}})==\textcolor{keyword}{true})}
+\DoxyCodeLine{00397         \{}
+\DoxyCodeLine{00398             \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>BB\_mode[\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[\mbox{\hyperlink{classsc__csp__channel_a5bef0234cd8c0762891d104dd4e7b68a}{w\_id}}]]=\mbox{\hyperlink{group__firfirgcd__define__group_gga1a6b6fb557d8d37d59700faf4e4c9167a5d178ae2be9d93ea4cbf1a9f0a2d9cbe}{active}};}
+\DoxyCodeLine{00399             \mbox{\hyperlink{group__firfirgcd__macros__group_ga0f83efd33ffbe62c58c798abb824fa94}{HEPSY\_TRACE\_BB\_STATE}}(\mbox{\hyperlink{classsc__csp__channel_a5bef0234cd8c0762891d104dd4e7b68a}{w\_id}})}
+\DoxyCodeLine{00400         \}}
+\DoxyCodeLine{00401         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00402             \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>activate[\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[\mbox{\hyperlink{classsc__csp__channel_a5bef0234cd8c0762891d104dd4e7b68a}{w\_id}}]].notify(SC\_ZERO\_TIME);}
+\DoxyCodeLine{00403     \}}
+\DoxyCodeLine{00404 }
+\DoxyCodeLine{00405     \textcolor{comment}{// Update channel status (if needed)}}
+\DoxyCodeLine{00406     \textcolor{keywordflow}{if} (\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>channel\_state[\textcolor{keywordtype}{id}]==\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473}{ready}})}
+\DoxyCodeLine{00407     \{}
+\DoxyCodeLine{00408         \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>channel\_state[\mbox{\hyperlink{classsc__csp__channel_aed1aa9cb465c4a9c7751169994408c72}{id}}]=\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a4c97ffbad296d4a6b84b1c508fc5d32a}{waiting}};}
+\DoxyCodeLine{00409         \mbox{\hyperlink{group__firfirgcd__macros__group_ga139185aa9c10392aada97618a69ee2cd}{HEPSY\_TRACE\_CH\_STATE}}(\textcolor{keywordtype}{id})}
+\DoxyCodeLine{00410     \}}
+\DoxyCodeLine{00411 }
+\DoxyCodeLine{00412     \textcolor{comment}{//  Update process status}}
+\DoxyCodeLine{00413     \textcolor{keywordflow}{if} (\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a21d2bb74e4472f99ec04243168e7964e}{checkSPP}}(\mbox{\hyperlink{classsc__csp__channel_a5bef0234cd8c0762891d104dd4e7b68a}{w\_id}})==\textcolor{keyword}{true}) \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>process\_state[\mbox{\hyperlink{classsc__csp__channel_a5bef0234cd8c0762891d104dd4e7b68a}{w\_id}}]=\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c}{running}};}
+\DoxyCodeLine{00414     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00415     \{}
+\DoxyCodeLine{00416         \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>process\_state[\mbox{\hyperlink{classsc__csp__channel_a5bef0234cd8c0762891d104dd4e7b68a}{w\_id}}]=\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473}{ready}};}
+\DoxyCodeLine{00417 }
+\DoxyCodeLine{00418         \textcolor{comment}{//WARNING: needed to correctly perform the round check (see WARNING in scheduler)}}
+\DoxyCodeLine{00419         \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>process\_status\_changed[\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[\mbox{\hyperlink{classsc__csp__channel_a5bef0234cd8c0762891d104dd4e7b68a}{w\_id}}]]=\textcolor{keyword}{true};}
+\DoxyCodeLine{00420     \}}
+\DoxyCodeLine{00421     \mbox{\hyperlink{group__firfirgcd__macros__group_gaf1fe2324408cd29c1e2dcd55f2e4a9c1}{HEPSY\_TRACE\_PS\_STATE}}(\mbox{\hyperlink{classsc__csp__channel_a5bef0234cd8c0762891d104dd4e7b68a}{w\_id}})}
+\DoxyCodeLine{00422 }
+\DoxyCodeLine{00423     \textcolor{comment}{// Channel profiling (done only in write metod)}}
+\DoxyCodeLine{00424     \mbox{\hyperlink{classsc__csp__channel_a36b454aeb9b50a4094f31801a6976b0f}{num}}++;}
+\DoxyCodeLine{00425     \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7dcc3ae8736a6aad7e27f276706205a3}{VCH}}[\mbox{\hyperlink{classsc__csp__channel_aed1aa9cb465c4a9c7751169994408c72}{id}}].setNum(\mbox{\hyperlink{classsc__csp__channel_a36b454aeb9b50a4094f31801a6976b0f}{num}});}
+\DoxyCodeLine{00426     \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7dcc3ae8736a6aad7e27f276706205a3}{VCH}}[\mbox{\hyperlink{classsc__csp__channel_aed1aa9cb465c4a9c7751169994408c72}{id}}].working\_time = \mbox{\hyperlink{classsc__csp__channel_ab0977c6aab0732a7946a73aa4b2e6de8}{working\_time}};}
+\DoxyCodeLine{00427     \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7dcc3ae8736a6aad7e27f276706205a3}{VCH}}[\mbox{\hyperlink{classsc__csp__channel_aed1aa9cb465c4a9c7751169994408c72}{id}}].working\_energy = \mbox{\hyperlink{classsc__csp__channel_a97c55d92a3c04d41300ffdb208eabc92}{working\_energy}};}
+\DoxyCodeLine{00428 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{define_8h_source_l00127}{active}}, \mbox{\hyperlink{_system_manager_8h_source_l00107}{System\+Manager\+::allocation\+P\+S\+\_\+\+BB}}, \mbox{\hyperlink{_system_manager_8cpp_source_l00267}{System\+Manager\+::check\+S\+P\+P()}}, \mbox{\hyperlink{macros_8h_source_l00156}{H\+E\+P\+S\+Y\+\_\+\+T\+R\+A\+C\+E\+\_\+\+B\+B\+\_\+\+S\+T\+A\+TE}}, \mbox{\hyperlink{macros_8h_source_l00148}{H\+E\+P\+S\+Y\+\_\+\+T\+R\+A\+C\+E\+\_\+\+C\+H\+\_\+\+S\+T\+A\+TE}}, \mbox{\hyperlink{macros_8h_source_l00140}{H\+E\+P\+S\+Y\+\_\+\+T\+R\+A\+C\+E\+\_\+\+P\+S\+\_\+\+S\+T\+A\+TE}}, \mbox{\hyperlink{main_8cpp_source_l00166}{p\+Scheduling\+Manager}}, \mbox{\hyperlink{main_8cpp_source_l00163}{p\+System\+Manager}}, \mbox{\hyperlink{define_8h_source_l00126}{ready}}, \mbox{\hyperlink{define_8h_source_l00126}{running}}, \mbox{\hyperlink{define_8h_source_l00127}{suspended}}, \mbox{\hyperlink{_system_manager_8h_source_l00097}{System\+Manager\+::\+V\+CH}}, and \mbox{\hyperlink{define_8h_source_l00126}{waiting}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__firfirgcd__csp__channel__group_gaf8a9ace576ff2e0462c8db276f9f388d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__firfirgcd__csp__channel__group_ga3566fb8ed3dc3ba7ab7d6dbe17787153}\label{group__firfirgcd__csp__channel__group_ga3566fb8ed3dc3ba7ab7d6dbe17787153}} 
+\index{FirFirGCD CSP Channel.@{FirFirGCD CSP Channel.}!write\_test@{write\_test}}
+\index{write\_test@{write\_test}!FirFirGCD CSP Channel.@{FirFirGCD CSP Channel.}}
+\doxysubsubsection{\texorpdfstring{write\_test()}{write\_test()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{classsc__csp__channel}{sc\+\_\+csp\+\_\+channel}}$<$ T $>$\+::write\+\_\+test\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classsc__core_1_1sc__csp__channel__out__if_af4f0e8a520cdb556754743a056fa4e37}{sc\+\_\+core\+::sc\+\_\+csp\+\_\+channel\+\_\+out\+\_\+if$<$ T $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{sc__csp__channel_8h_source_l00522}{522}} of file \mbox{\hyperlink{sc__csp__channel_8h_source}{sc\+\_\+csp\+\_\+channel.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00523 \{}
+\DoxyCodeLine{00524     \textcolor{keywordflow}{return} \mbox{\hyperlink{classsc__csp__channel_ae716d02584a29463adb04def170fce8e}{ready\_to\_read}};}
+\DoxyCodeLine{00525 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}\label{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}} 
+\index{FirFirGCD CSP Channel.@{FirFirGCD CSP Channel.}!pSchedulingManager@{pSchedulingManager}}
+\index{pSchedulingManager@{pSchedulingManager}!FirFirGCD CSP Channel.@{FirFirGCD CSP Channel.}}
+\doxysubsubsection{\texorpdfstring{pSchedulingManager}{pSchedulingManager}}
+{\footnotesize\ttfamily Scheduling\+Manager$\ast$ p\+Scheduling\+Manager}
+
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00166}{166}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{sc__csp__channel_8h_source_l00232}{sc\+\_\+csp\+\_\+channel$<$ T $>$\+::read()}}, \mbox{\hyperlink{main_8cpp_source_l00177}{sc\+\_\+main()}}, and \mbox{\hyperlink{sc__csp__channel_8h_source_l00322}{sc\+\_\+csp\+\_\+channel$<$ T $>$\+::write()}}.
+
+\mbox{\Hypertarget{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}\label{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}} 
+\index{FirFirGCD CSP Channel.@{FirFirGCD CSP Channel.}!pSystemManager@{pSystemManager}}
+\index{pSystemManager@{pSystemManager}!FirFirGCD CSP Channel.@{FirFirGCD CSP Channel.}}
+\doxysubsubsection{\texorpdfstring{pSystemManager}{pSystemManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_system_manager}{System\+Manager}}$\ast$ p\+System\+Manager}
+
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00163}{163}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{sc__csp__channel_8h_source_l00442}{sc\+\_\+csp\+\_\+channel$<$ T $>$\+::init()}}, \mbox{\hyperlink{sc__csp__channel_8h_source_l00232}{sc\+\_\+csp\+\_\+channel$<$ T $>$\+::read()}}, \mbox{\hyperlink{sc__csp__channel_8h_source_l00110}{sc\+\_\+csp\+\_\+channel$<$ T $>$\+::sc\+\_\+csp\+\_\+channel()}}, and \mbox{\hyperlink{sc__csp__channel_8h_source_l00322}{sc\+\_\+csp\+\_\+channel$<$ T $>$\+::write()}}.
+

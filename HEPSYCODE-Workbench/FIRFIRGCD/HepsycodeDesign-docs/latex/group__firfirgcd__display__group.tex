@@ -1,0 +1,53 @@
+\hypertarget{group__firfirgcd__display__group}{}\doxysection{Fir\+Fir\+G\+CD Display.}
+\label{group__firfirgcd__display__group}\index{FirFirGCD Display.@{FirFirGCD Display.}}
+
+
+Display Implementation.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__firfirgcd__display__group_ga62f1837ecdb769140a861dbc2af2abdb}{S\+C\+\_\+\+M\+O\+D\+U\+LE}} (display)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Display Implementation. 
+
+\begin{DoxyAuthor}{Author}
+V. Muttillo, L. Pomante 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Apr. 2022 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__firfirgcd__display__group_ga62f1837ecdb769140a861dbc2af2abdb}\label{group__firfirgcd__display__group_ga62f1837ecdb769140a861dbc2af2abdb}} 
+\index{FirFirGCD Display.@{FirFirGCD Display.}!SC\_MODULE@{SC\_MODULE}}
+\index{SC\_MODULE@{SC\_MODULE}!FirFirGCD Display.@{FirFirGCD Display.}}
+\doxysubsubsection{\texorpdfstring{SC\_MODULE()}{SC\_MODULE()}}
+{\footnotesize\ttfamily S\+C\+\_\+\+M\+O\+D\+U\+LE (\begin{DoxyParamCaption}\item[{display}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{display_8h_source_l00083}{83}} of file \mbox{\hyperlink{display_8h_source}{display.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00084 \{}
+\DoxyCodeLine{00085 }
+\DoxyCodeLine{00086     \textcolor{comment}{// Port for input by channel}}
+\DoxyCodeLine{00087     sc\_port< sc\_csp\_channel\_in\_if< sc\_uint<8> > > result\_channel\_port;}
+\DoxyCodeLine{00088 }
+\DoxyCodeLine{00089     SC\_CTOR(display)}
+\DoxyCodeLine{00090     \{}
+\DoxyCodeLine{00091         SC\_THREAD(output);}
+\DoxyCodeLine{00092     \}}
+\DoxyCodeLine{00093 }
+\DoxyCodeLine{00094     \textcolor{comment}{// Main method}}
+\DoxyCodeLine{00095     \textcolor{keywordtype}{void} output();}
+\DoxyCodeLine{00096 \};}
+
+\end{DoxyCode}

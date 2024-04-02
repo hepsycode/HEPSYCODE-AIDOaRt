@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_macros_8h">
+<title>HepsycodeDesign/src/macros.h File Reference</title>
+<indexterm><primary>HepsycodeDesign/src/macros.h</primary></indexterm>
+<para>
+
+<para>Macros Documented file. </para>
+ 
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="macros_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group__firfirgcd__macros__group_1ga09b182b87a0936087ba1ff3ce91755e7">HEPSY_S</link>(X)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group__firfirgcd__macros__group_1ga652f3387e2319f751a6459f9db47cc3a">HEPSY_P</link>(X)   <link linkend="_group__scheduling__manager__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;PS_Profiling(X);</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group__firfirgcd__macros__group_1gab8ed6dfd8e9d61861b9aff28d6b7300f">HEPSY_SCHED_CS</link>(X,  i)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group__firfirgcd__macros__group_1ga64988c094471851711bcbbb5e1298616">PRE_WAIT</link>(X)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group__firfirgcd__macros__group_1ga521b4282fb564e25bc56196f1926ce30">POST_WAIT</link>(X)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group__firfirgcd__macros__group_1gaa2252b3bddc89494975397ffc18b09f5">HEPSY_S_TIMER</link>(X,  Y)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group__firfirgcd__macros__group_1gaf1fe2324408cd29c1e2dcd55f2e4a9c1">HEPSY_TRACE_PS_STATE</link>(X)   <link linkend="_group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;LOG &lt;&lt; &quot;Execution Time;&quot; &lt;&lt; sc_time_stamp().to_seconds() &lt;&lt; &quot;; Energy;&quot; &lt;&lt; pSystemManager-&gt;VPS[X].getEnergy() &lt;&lt; &quot;; Process;&quot; &lt;&lt; X &lt;&lt; &quot;; State;&quot; &lt;&lt; pSchedulingManager-&gt;process_state[X] &lt;&lt; endl;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group__firfirgcd__macros__group_1gadc2d4bfbe106f792246792d01d66d63c">HEPSY_TRACE_PS_STATE_THIS</link>(X)   this-&gt;LOG &lt;&lt; &quot;Execution Time;&quot; &lt;&lt; sc_time_stamp().to_seconds() &lt;&lt; &quot;; Energy;&quot; &lt;&lt; pSystemManager-&gt;VPS[X].getEnergy() &lt;&lt; &quot;; Process;&quot; &lt;&lt; X &lt;&lt; &quot;; State;&quot; &lt;&lt; this-&gt;process_state[X] &lt;&lt; endl;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group__firfirgcd__macros__group_1ga139185aa9c10392aada97618a69ee2cd">HEPSY_TRACE_CH_STATE</link>(X)   <link linkend="_group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;LOG &lt;&lt; &quot;Execution Time;&quot; &lt;&lt; sc_time_stamp().to_seconds() &lt;&lt; &quot;; Energy;&quot; &lt;&lt; pSystemManager-&gt;VCH[X].working_energy &lt;&lt; &quot;; Channel;&quot; &lt;&lt; X &lt;&lt; &quot;; State;&quot; &lt;&lt; pSchedulingManager-&gt;channel_state[X] &lt;&lt; endl;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group__firfirgcd__macros__group_1ga24b6f3a385f702b3a63e0811a0f22e75">HEPSY_TRACE_CH_STATE_THIS</link>(X)   this-&gt;LOG &lt;&lt; &quot;Execution Time;&quot; &lt;&lt; sc_time_stamp().to_seconds() &lt;&lt; &quot;; Energy;&quot; &lt;&lt; pSystemManager-&gt;VCH[X].working_energy &lt;&lt; &quot;; Channel;&quot; &lt;&lt; X &lt;&lt; &quot;; State;&quot; &lt;&lt; this-&gt;channel_state[X] &lt;&lt; endl;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group__firfirgcd__macros__group_1ga0f83efd33ffbe62c58c798abb824fa94">HEPSY_TRACE_BB_STATE</link>(X)   <link linkend="_group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;LOG &lt;&lt; &quot;Execution Time;&quot; &lt;&lt; sc_time_stamp().to_seconds() &lt;&lt; &quot;; Energy;&quot; &lt;&lt; 0 &lt;&lt; &quot;; BB;&quot; &lt;&lt; X &lt;&lt; &quot;; Mode;&quot; &lt;&lt; pSchedulingManager-&gt;BB_mode[X] &lt;&lt; endl;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group__firfirgcd__macros__group_1ga0782cab9383550027672da286d54c931">HEPSY_TRACE_BB_STATE_THIS</link>(X)   this-&gt;LOG &lt;&lt; &quot;Execution Time;&quot; &lt;&lt; sc_time_stamp().to_seconds() &lt;&lt; &quot;; Energy;&quot; &lt;&lt; 0 &lt;&lt; &quot;; BB;&quot; &lt;&lt; X &lt;&lt; &quot;; Mode;&quot; &lt;&lt; this-&gt;BB_mode[X] &lt;&lt; endl;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group__firfirgcd__macros__group_1ga37921dae893594f3710d892f471de3cb">HEPSY_TRACE_SCHED_STATE</link>(X)   this-&gt;LOG &lt;&lt; &quot;Execution Time;&quot; &lt;&lt; sc_time_stamp().to_seconds() &lt;&lt; &quot;; Energy;&quot; &lt;&lt; this-&gt;sched_en[X] &lt;&lt; &quot;; Scheduler;&quot; &lt;&lt; X &lt;&lt; &quot;; State;&quot; &lt;&lt; this-&gt;scheduler_state[X] &lt;&lt; endl;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Macros Documented file. </para>
+
+<para>Macros: Macros file </para>
+</section>
+</section>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated hepsy -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.univaq.hepsy.presentation.HepsyModelWizardID"
+            name="%_UI_HepsyModelWizard_label"
+            class="org.univaq.hepsy.presentation.HepsyModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/HepsyModelFile.gif">
+         <description>%_UI_HepsyModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated hepsy -->
+      <editor
+            id="org.univaq.hepsy.presentation.HepsyEditorID"
+            name="%_UI_HepsyEditor_label"
+            icon="icons/full/obj16/HepsyModelFile.gif"
+            extensions="hepsy"
+            class="org.univaq.hepsy.presentation.HepsyEditor"
+            contributorClass="org.univaq.hepsy.presentation.HepsyActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

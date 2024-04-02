@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<parameters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+	<ga>
+		<generation>50</generation>		
+		<numPartition>10000</numPartition>
+		<numMaxPartition>50000</numMaxPartition>
+		<birthRate>0.3</birthRate>
+		<deathRate>0.15</deathRate>
+		<radioactivityRate>0.3</radioactivityRate>
+	</ga>
+	<ga_evolution>
+		<execution>1</execution> <!-- 1 : First Execution, 0 : Second Execution -->
+		<elitism>1</elitism> <!-- 0 : No elitism, 1 : Elitism -->
+		<equalization>0</equalization> <!-- 0 : No Equalization, 1 : Equalization -->
+		
+		<!-- Parallel parameters for Initial Population Generation -->
+		<parallel_IP>0</parallel_IP> <!-- 0 : Serial, 1 : Parallel -->
+		<num_threads_IPG>4</num_threads_IPG>
+		<!-- If chunk = 0, then set chunk = loop_count/number_of_threads -->
+		<!--  If chunk = 1 with static scheduling, then the schedule is similar to guided -->
+		<chunk_size_IPG>5000</chunk_size_IPG>
+		<!-- OMP Parallel (only one of this) -->
+		
+		<!-- 0 No option, 1 guided, 2 dynamic, 3 static, 4 auto -->
+		<omp_parallel_for_schedule_IPG>1</omp_parallel_for_schedule_IPG>
+		
+		<omp_parallel_sections_private_IPG>0</omp_parallel_sections_private_IPG>
+		
+		<!-- Parallel parameters for Cost Function Evaluation-->
+		<parallel_CF>0</parallel_CF> <!-- 0 : Serial, 1 : Parallel -->
+		<num_threads>4</num_threads>
+		<!-- If chunk = 0, then set chunk = loop_count/number_of_threads -->
+		<!--  If chunk = 1 with static scheduling, then the schedule is similar to guided -->
+		<chunk_size>5000</chunk_size>
+		<!-- OMP Parallel (only one of this) -->
+		
+		<!-- 0 No option, 1 guided, 2 dynamic, 3 static, 4 auto -->
+		<omp_parallel_for_schedule>1</omp_parallel_for_schedule>
+		
+		<omp_parallel_cost_funct_eval>0</omp_parallel_cost_funct_eval>
+		
+		<omp_parallel_sections_private>0</omp_parallel_sections_private>
+		
+		<omp_parallel_sections_private_pop_split_parallel_cost_funct_eval>0</omp_parallel_sections_private_pop_split_parallel_cost_funct_eval>
+	</ga_evolution>
+
+	<weights>
+		<affinity>		0.0</affinity> <!-- 0,1 -->
+		<communication>	0.1</communication> <!-- 0,1 -->
+		<parallelism>	0.1</parallelism> <!-- 0,1 -->
+		<load>			0.6</load>
+		<cost>			0.1</cost>
+		<kbSize>		0.0</kbSize>
+		<eqgSize>		0.0</eqgSize>
+    	<energy>		0.0</energy>
+   	 	<energyTC>		0.1</energyTC>
+   	 	<criticality>	0.0</criticality>
+		<feasibility>	1.0</feasibility>
+	</weights>
+</parameters>

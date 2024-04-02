@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structfir8s__parameters">
+<title>fir8s_parameters Struct Reference</title>
+<indexterm><primary>fir8s_parameters</primary></indexterm>
+<para>
+
+<para>struct <link linkend="_structfir8s__parameters">fir8s_parameters</link> </para>
+ 
+</para>
+<para>
+<computeroutput>#include &quot;src/datatype.h&quot;</computeroutput>
+</para>
+Collaboration diagram for fir8s_parameters:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="structfir8s__parameters__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>sc_uint&lt; 8 &gt; <link linkend="_structfir8s__parameters_1ac70dfc7970a004671d8e93000a3a1a8b">shift</link> [8]</para>
+</listitem>
+            <listitem><para>sc_uint&lt; 8 &gt; <link linkend="_structfir8s__parameters_1a2e7beba5c105fe0936012d1b0b0d0fee">sample_tmp</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>struct <link linkend="_structfir8s__parameters">fir8s_parameters</link> </para>
+
+
+
+<para>Some details about the <link linkend="_structfir8s__parameters">fir8s_parameters</link> struct. 
+<literallayout>&#160;&#xa;</literallayout>
+Message from fir8m to fir8s </para>
+<para>
+Definition at line 121 of file datatype.h.</para>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_structfir8s__parameters_1a2e7beba5c105fe0936012d1b0b0d0fee"/>    <section>
+    <title>sample_tmp</title>
+<indexterm><primary>sample_tmp</primary><secondary>fir8s_parameters</secondary></indexterm>
+<indexterm><primary>fir8s_parameters</primary><secondary>sample_tmp</secondary></indexterm>
+<para><computeroutput>sc_uint&lt;8&gt; fir8s_parameters::sample_tmp</computeroutput></para><para>
+Definition at line 124 of file datatype.h.</para>
+    </section><anchor xml:id="_structfir8s__parameters_1ac70dfc7970a004671d8e93000a3a1a8b"/>    <section>
+    <title>shift</title>
+<indexterm><primary>shift</primary><secondary>fir8s_parameters</secondary></indexterm>
+<indexterm><primary>fir8s_parameters</primary><secondary>shift</secondary></indexterm>
+<para><computeroutput>sc_uint&lt;8&gt; fir8s_parameters::shift[8]</computeroutput></para><para>
+Definition at line 123 of file datatype.h.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+HepsycodeDesign/src/<link linkend="_datatype_8h">datatype.h</link></section>
+</section>

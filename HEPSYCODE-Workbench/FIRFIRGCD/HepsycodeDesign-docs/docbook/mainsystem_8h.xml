@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_mainsystem_8h">
+<title>HepsycodeDesign/src/mainsystem.h File Reference</title>
+<indexterm><primary>HepsycodeDesign/src/mainsystem.h</primary></indexterm>
+<para>
+
+<para>Mainsystem Documented file. </para>
+ 
+</para>
+<programlisting>#include &quot;define.h&quot;
+#include &quot;sc_csp_channel_ifs.h&quot;
+#include &quot;sc_csp_channel.h&quot;
+#include &quot;datatype.h&quot;
+#include &quot;SystemManager.h&quot;
+</programlisting>Include dependency graph for mainsystem.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="mainsystem_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="mainsystem_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group__firfirgcd__mainsystem__group_1ga7ea2a25adbd29a5e326b5236d331bb22">SC_MODULE</link> (mainsystem)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Mainsystem Documented file. </para>
+
+<para>Details. </para>
+</section>
+</section>

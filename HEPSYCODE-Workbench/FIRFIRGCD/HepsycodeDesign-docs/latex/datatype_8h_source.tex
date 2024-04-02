@@ -1,0 +1,150 @@
+\hypertarget{datatype_8h_source}{}\doxysection{datatype.\+h}
+\label{datatype_8h_source}\index{HepsycodeDesign/src/datatype.h@{HepsycodeDesign/src/datatype.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * University of L'Aquila -\/ HEPSYCODE Source Code License                       *}}
+\DoxyCodeLine{00003 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00004 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00005 \textcolor{comment}{ * (c) 2018-\/2019 Centre of Excellence DEWS All rights reserved                  *}}
+\DoxyCodeLine{00006 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00007 \textcolor{comment}{ * <one line to give the program's name and a brief idea of what it does.>      *}}
+\DoxyCodeLine{00008 \textcolor{comment}{ * Copyright (C) 2022  Vittoriano Muttillo, Luigi Pomante                       *                                    *}}
+\DoxyCodeLine{00009 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00010 \textcolor{comment}{ * This program is free software: you can redistribute it and/or modify         *}}
+\DoxyCodeLine{00011 \textcolor{comment}{ * it under the terms of the GNU General Public License as published by         *}}
+\DoxyCodeLine{00012 \textcolor{comment}{ * the Free Software Foundation, either version 3 of the License, or            *}}
+\DoxyCodeLine{00013 \textcolor{comment}{ * (at your option) any later version.                                          *}}
+\DoxyCodeLine{00014 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00015 \textcolor{comment}{ * This program is distributed in the hope that it will be useful,              *}}
+\DoxyCodeLine{00016 \textcolor{comment}{ * but WITHOUT ANY WARRANTY; without even the implied warranty of               *}}
+\DoxyCodeLine{00017 \textcolor{comment}{ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the                *}}
+\DoxyCodeLine{00018 \textcolor{comment}{ * GNU General Public License for more details.                                 *}}
+\DoxyCodeLine{00019 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00020 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00021 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00022 \textcolor{comment}{ * Created on: 19/Aug/2019                                                      *}}
+\DoxyCodeLine{00023 \textcolor{comment}{ * Authors: Vittoriano Muttillo, Luigi Pomante                                  *}}
+\DoxyCodeLine{00024 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00025 \textcolor{comment}{ * email: vittoriano.muttillo@guest.univaq.it                                   *}}
+\DoxyCodeLine{00026 \textcolor{comment}{ *        luigi.pomante@univaq.it                                               *}}
+\DoxyCodeLine{00027 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00028 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00029 \textcolor{comment}{ * This code has been developed from an HEPSYCODE model used as demonstrator by *}}
+\DoxyCodeLine{00030 \textcolor{comment}{ * University of L'Aquila.                                                      *}}
+\DoxyCodeLine{00031 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00032 \textcolor{comment}{ * The code is used as a working example in the 'Embedded Systems' course of    *}}
+\DoxyCodeLine{00033 \textcolor{comment}{ * the Master in Conputer Science Engineering offered by the                    *}}
+\DoxyCodeLine{00034 \textcolor{comment}{ * University of L'Aquila                                                       *}}
+\DoxyCodeLine{00035 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{00037 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00038 \textcolor{comment}{ * datatypes.h : Defines the FirFirGCD datatypes.                               *}}
+\DoxyCodeLine{00039 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00040 \textcolor{comment}{ * Defines all the FirFirGCD related datatypes                                  *}}
+\DoxyCodeLine{00041 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00042 \textcolor{comment}{********************************************************************************/}}
+\DoxyCodeLine{00043  \textcolor{comment}{// start firfirgcd\_datatypes\_group}}
+\DoxyCodeLine{00059 }
+\DoxyCodeLine{00060 \textcolor{preprocessor}{\#ifndef \_\_DATATYPE\_H\_\_}}
+\DoxyCodeLine{00061 \textcolor{preprocessor}{\#define \_\_DATATYPE\_H\_\_}}
+\DoxyCodeLine{00062 }
+\DoxyCodeLine{00063 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00064 \textcolor{comment}{ ***                                Includes                                  ***}}
+\DoxyCodeLine{00065 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00066 }
+\DoxyCodeLine{00067 \textcolor{preprocessor}{\#include <systemc.h>}}
+\DoxyCodeLine{00068 }
+\DoxyCodeLine{00069 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00070 \textcolor{comment}{ ***                                Defines                                   ***}}
+\DoxyCodeLine{00071 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00072 }
+\DoxyCodeLine{00073 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00074 \textcolor{comment}{ ***                                Typedefs                                  ***}}
+\DoxyCodeLine{00075 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00076 }
+\DoxyCodeLine{00077 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00078 \textcolor{comment}{ ***                              Struct                                      ***}}
+\DoxyCodeLine{00079 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00080 }
+\DoxyCodeLine{00081 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00082 \textcolor{comment}{ ***                              fir8\_group                                  ***}}
+\DoxyCodeLine{00083 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00084 }
+\DoxyCodeLine{00092 }
+\DoxyCodeLine{\Hypertarget{datatype_8h_source_l00094}\mbox{\hyperlink{structfir8e__parameters}{00094}} \textcolor{keyword}{struct }\mbox{\hyperlink{structfir8e__parameters}{fir8e\_parameters}}}
+\DoxyCodeLine{00095 \{}
+\DoxyCodeLine{\Hypertarget{datatype_8h_source_l00096}\mbox{\hyperlink{structfir8e__parameters_ae9ddf548dcac80e717254886d2d81dfc}{00096}}     sc\_uint<19> \mbox{\hyperlink{structfir8e__parameters_ae9ddf548dcac80e717254886d2d81dfc}{acc}};  }
+\DoxyCodeLine{\Hypertarget{datatype_8h_source_l00097}\mbox{\hyperlink{structfir8e__parameters_a30f60f641f56effb5939e0e3134d7689}{00097}}     sc\_uint<9> \mbox{\hyperlink{structfir8e__parameters_a30f60f641f56effb5939e0e3134d7689}{coef}}[8];  }
+\DoxyCodeLine{\Hypertarget{datatype_8h_source_l00098}\mbox{\hyperlink{structfir8e__parameters_a7b6494c52e9c74662b9f82058f5c45d3}{00098}}     sc\_uint<8> \mbox{\hyperlink{structfir8e__parameters_a7b6494c52e9c74662b9f82058f5c45d3}{shift}}[8]; }
+\DoxyCodeLine{\Hypertarget{datatype_8h_source_l00099}\mbox{\hyperlink{structfir8e__parameters_a489e356ce63ffc6a4364d51001466061}{00099}}     sc\_uint<8> \mbox{\hyperlink{structfir8e__parameters_a489e356ce63ffc6a4364d51001466061}{sample\_tmp}};  }
+\DoxyCodeLine{00100 \};}
+\DoxyCodeLine{00101 }
+\DoxyCodeLine{\Hypertarget{datatype_8h_source_l00109}\mbox{\hyperlink{structfir8e__results}{00109}} \textcolor{keyword}{struct }\mbox{\hyperlink{structfir8e__results}{fir8e\_results}}}
+\DoxyCodeLine{00110 \{}
+\DoxyCodeLine{\Hypertarget{datatype_8h_source_l00111}\mbox{\hyperlink{structfir8e__results_a96690c57e8968fb79bbcf0736b919d74}{00111}}     sc\_uint<19> \mbox{\hyperlink{structfir8e__results_a96690c57e8968fb79bbcf0736b919d74}{acc}};}
+\DoxyCodeLine{00112 \};}
+\DoxyCodeLine{00113 }
+\DoxyCodeLine{\Hypertarget{datatype_8h_source_l00121}\mbox{\hyperlink{structfir8s__parameters}{00121}} \textcolor{keyword}{struct }\mbox{\hyperlink{structfir8s__parameters}{fir8s\_parameters}}}
+\DoxyCodeLine{00122 \{}
+\DoxyCodeLine{\Hypertarget{datatype_8h_source_l00123}\mbox{\hyperlink{structfir8s__parameters_ac70dfc7970a004671d8e93000a3a1a8b}{00123}}     sc\_uint<8> \mbox{\hyperlink{structfir8s__parameters_ac70dfc7970a004671d8e93000a3a1a8b}{shift}}[8];}
+\DoxyCodeLine{\Hypertarget{datatype_8h_source_l00124}\mbox{\hyperlink{structfir8s__parameters_a2e7beba5c105fe0936012d1b0b0d0fee}{00124}}     sc\_uint<8> \mbox{\hyperlink{structfir8s__parameters_a2e7beba5c105fe0936012d1b0b0d0fee}{sample\_tmp}};}
+\DoxyCodeLine{00125 \};}
+\DoxyCodeLine{00126 }
+\DoxyCodeLine{\Hypertarget{datatype_8h_source_l00134}\mbox{\hyperlink{structfir8s__results}{00134}} \textcolor{keyword}{struct }\mbox{\hyperlink{structfir8s__results}{fir8s\_results}}}
+\DoxyCodeLine{00135 \{}
+\DoxyCodeLine{\Hypertarget{datatype_8h_source_l00136}\mbox{\hyperlink{structfir8s__results_af1e0155634694c6f2479e8c69ce72dc5}{00136}}     sc\_uint<8> \mbox{\hyperlink{structfir8s__results_af1e0155634694c6f2479e8c69ce72dc5}{shift}}[8];}
+\DoxyCodeLine{00137 \};}
+\DoxyCodeLine{00138 }
+\DoxyCodeLine{00139 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00140 \textcolor{comment}{ ***                              fir16\_group                                 ***}}
+\DoxyCodeLine{00141 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00142 }
+\DoxyCodeLine{\Hypertarget{datatype_8h_source_l00144}\mbox{\hyperlink{structfir16e__parameters}{00144}} \textcolor{keyword}{struct }\mbox{\hyperlink{structfir16e__parameters}{fir16e\_parameters}}}
+\DoxyCodeLine{00145 \{}
+\DoxyCodeLine{00146     sc\_uint<19> \mbox{\hyperlink{structfir16e__parameters_aaf9c21d0921a75d9528f3afe73c4efbc}{acc}};}
+\DoxyCodeLine{00147     sc\_uint<9> \mbox{\hyperlink{structfir16e__parameters_a2e9179d705c294bf1e699545da5d26ed}{coef}}[16];}
+\DoxyCodeLine{\Hypertarget{datatype_8h_source_l00148}\mbox{\hyperlink{structfir16e__parameters_aaf9c21d0921a75d9528f3afe73c4efbc}{00148}}     sc\_uint<8> \mbox{\hyperlink{structfir16e__parameters_ae02a5c0f568ad52190d1585205337494}{shift}}[16];}
+\DoxyCodeLine{\Hypertarget{datatype_8h_source_l00149}\mbox{\hyperlink{structfir16e__parameters_a2e9179d705c294bf1e699545da5d26ed}{00149}}     sc\_uint<8> \mbox{\hyperlink{structfir16e__parameters_a233235a05f5c75a7470c4e23aa279102}{sample\_tmp}};}
+\DoxyCodeLine{\Hypertarget{datatype_8h_source_l00150}\mbox{\hyperlink{structfir16e__parameters_ae02a5c0f568ad52190d1585205337494}{00150}} \};}
+\DoxyCodeLine{\Hypertarget{datatype_8h_source_l00151}\mbox{\hyperlink{structfir16e__parameters_a233235a05f5c75a7470c4e23aa279102}{00151}} }
+\DoxyCodeLine{\Hypertarget{datatype_8h_source_l00153}\mbox{\hyperlink{structfir16e__results}{00153}} \textcolor{keyword}{struct }\mbox{\hyperlink{structfir16e__results}{fir16e\_results}}}
+\DoxyCodeLine{00154 \{}
+\DoxyCodeLine{\Hypertarget{datatype_8h_source_l00155}\mbox{\hyperlink{structfir16e__results_a5b758c23c1cf7b9904536e4b4fdc9213}{00155}}     sc\_uint<19> \mbox{\hyperlink{structfir16e__results_a5b758c23c1cf7b9904536e4b4fdc9213}{acc}};}
+\DoxyCodeLine{00156 \};}
+\DoxyCodeLine{00157 }
+\DoxyCodeLine{\Hypertarget{datatype_8h_source_l00159}\mbox{\hyperlink{structfir16s__parameters}{00159}} \textcolor{keyword}{struct }\mbox{\hyperlink{structfir16s__parameters}{fir16s\_parameters}}}
+\DoxyCodeLine{00160 \{}
+\DoxyCodeLine{\Hypertarget{datatype_8h_source_l00161}\mbox{\hyperlink{structfir16s__parameters_ace4b801b0a54f27f7ad5f92b753a8175}{00161}}     sc\_uint<8> \mbox{\hyperlink{structfir16s__parameters_ace4b801b0a54f27f7ad5f92b753a8175}{shift}}[16];}
+\DoxyCodeLine{\Hypertarget{datatype_8h_source_l00162}\mbox{\hyperlink{structfir16s__parameters_a364563d85914eb0eba02828d309d994b}{00162}}     sc\_uint<8> \mbox{\hyperlink{structfir16s__parameters_a364563d85914eb0eba02828d309d994b}{sample\_tmp}};}
+\DoxyCodeLine{00163 \};}
+\DoxyCodeLine{00164 }
+\DoxyCodeLine{\Hypertarget{datatype_8h_source_l00166}\mbox{\hyperlink{structfir16s__results}{00166}} \textcolor{keyword}{struct }\mbox{\hyperlink{structfir16s__results}{fir16s\_results}}}
+\DoxyCodeLine{00167 \{}
+\DoxyCodeLine{\Hypertarget{datatype_8h_source_l00168}\mbox{\hyperlink{structfir16s__results_a73616346673b8d61fb292bfc064eb6d2}{00168}} sc\_uint<8> \mbox{\hyperlink{structfir16s__results_a73616346673b8d61fb292bfc064eb6d2}{shift}}[16];}
+\DoxyCodeLine{00169 \};}
+\DoxyCodeLine{00170 }
+\DoxyCodeLine{00171 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00172 \textcolor{comment}{ ***                              gcd\_group                                   ***}}
+\DoxyCodeLine{00173 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00174 }
+\DoxyCodeLine{\Hypertarget{datatype_8h_source_l00176}\mbox{\hyperlink{structgcde__parameters}{00176}} \textcolor{keyword}{struct }\mbox{\hyperlink{structgcde__parameters}{gcde\_parameters}}}
+\DoxyCodeLine{00177 \{}
+\DoxyCodeLine{00178     sc\_uint<8> \mbox{\hyperlink{structgcde__parameters_a6a87f3b51d21aa5c2d23625fa8e02216}{sample1}};}
+\DoxyCodeLine{00179     sc\_uint<8> \mbox{\hyperlink{structgcde__parameters_aca29a1b102b8cfb96f79e8254ef3477e}{sample2}};}
+\DoxyCodeLine{\Hypertarget{datatype_8h_source_l00180}\mbox{\hyperlink{structgcde__parameters_a6a87f3b51d21aa5c2d23625fa8e02216}{00180}} \};}
+\DoxyCodeLine{\Hypertarget{datatype_8h_source_l00181}\mbox{\hyperlink{structgcde__parameters_aca29a1b102b8cfb96f79e8254ef3477e}{00181}} }
+\DoxyCodeLine{\Hypertarget{datatype_8h_source_l00183}\mbox{\hyperlink{structgcde__results}{00183}} \textcolor{keyword}{struct }\mbox{\hyperlink{structgcde__results}{gcde\_results}}}
+\DoxyCodeLine{00184 \{}
+\DoxyCodeLine{\Hypertarget{datatype_8h_source_l00185}\mbox{\hyperlink{structgcde__results_adc9a829b13114c46522b001c376af7ec}{00185}}     sc\_uint<8> \mbox{\hyperlink{structgcde__results_adc9a829b13114c46522b001c376af7ec}{result}};}
+\DoxyCodeLine{00186 \};}
+\DoxyCodeLine{00187 }
+\DoxyCodeLine{00189  \textcolor{comment}{// end of firfirgcd\_datatypes\_group}}
+\DoxyCodeLine{00191 }
+\DoxyCodeLine{00192 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00193 }
+\DoxyCodeLine{00194 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00195 \textcolor{comment}{ ***                                  EOF                                     ***}}
+\DoxyCodeLine{00196 \textcolor{comment}{ ********************************************************************************/}}
+
+\end{DoxyCode}

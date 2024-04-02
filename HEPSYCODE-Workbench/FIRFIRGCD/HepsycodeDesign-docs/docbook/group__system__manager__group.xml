@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group__system__manager__group">
+<title>HEPSIM System Manager.</title>
+<indexterm><primary>HEPSIM System Manager.</primary></indexterm>
+<para>
+
+<para>System Manager Implementation. </para>
+ 
+</para>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_system_manager">SystemManager</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>System Manager Implementation. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>V. Muttillo, L. Pomante </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>Apr. 2022 </para>
+</formalpara>
+</para>
+</section>
+</section>

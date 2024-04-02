@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<instancesPS>
+	<process>
+		<name>stimulus</name>
+		<id>0</id>
+		<priority>NA</priority>
+		<criticality>NA</criticality>
+		<eqGate value="0" />
+		<concurrency>
+			<processId id="1" value="0" />
+			<processId id="2" value="0" />
+		</concurrency>
+		<comunication>
+			<rec idRec="1" value="0" />
+			<rec idRec="2" value="80" />
+		</comunication>
+		<energy>
+			<processorId id="0" value="0" />
+		</energy>
+		<load>
+			<processorId id="0" value="0" />
+		</load>
+	</process>
+	<process>
+		<name>display</name>
+		<id>1</id>
+		<priority>NA</priority>
+		<criticality>NA</criticality>
+		<eqGate value="0" />
+		<concurrency>
+			<processId id="0" value="0" />
+			<processId id="2" value="0" />
+		</concurrency>
+		<comunication>
+			<rec idRec="0" value="0" />
+			<rec idRec="2" value="0" />
+		</comunication>
+		<energy>
+			<processorId id="0" value="0" />
+		</energy>
+		<load>
+			<processorId id="0" value="0" />
+		</load>
+	</process>
+	<process>
+		<name>TekneProcess_main</name>
+		<id>2</id>
+		<priority>1</priority>
+		<criticality>0</criticality>
+		<eqGate value="50" />
+		<concurrency>
+			<processId id="0" value="0" />
+			<processId id="1" value="0" />
+		</concurrency>
+		<comunication>
+			<rec idRec="0" value="0" />
+			<rec idRec="1" value="80" />
+		</comunication>
+		<energy>
+			<processorId id="0" value="517701" />
+			<processorId id="1" value="517701" />
+			<processorId id="2" value="176216" />
+			<processorId id="3" value="176216" />
+		</energy>
+		<load>
+			<processorId id="0" value="0.998857" />
+			<processorId id="1" value="0.998857" />
+			<processorId id="2" value="0.997191" />
+			<processorId id="3" value="0.997191" />
+		</load>
+	</process>
+</instancesPS>
+<instancesLL>
+	<logical_link>
+		<name>stim_system_channel</name>
+		<id>0</id>
+		<w_id>0</w_id>
+		<r_id>2</r_id>
+		<width>8</width>
+		<concurrency>
+			<channelId id="1" value="1.35096e-05" />
+		</concurrency>
+	</logical_link>
+	<logical_link>
+		<name>system_display_channel</name>
+		<id>1</id>
+		<w_id>2</w_id>
+		<r_id>1</r_id>
+		<width>8</width>
+		<concurrency>
+			<channelId id="0" value="0" />
+		</concurrency>
+	</logical_link>
+</instancesLL>

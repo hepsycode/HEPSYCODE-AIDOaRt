@@ -1,0 +1,342 @@
+.TH "BasicBlock" 3 "Mon Mar 20 2023" "FirFirGCD Application" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+BasicBlock
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <tl\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "string \fBgetName\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetName\fP (string x)"
+.br
+.ti -1c
+.RI "int \fBgetId\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetId\fP (int x)"
+.br
+.ti -1c
+.RI "string \fBgetType\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetType\fP (string x)"
+.br
+.ti -1c
+.RI "int \fBgetIdPU\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetIdPU\fP (int x)"
+.br
+.ti -1c
+.RI "vector< \fBProcessingUnit\fP > \fBgetProcessors\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetProcessor\fP (vector< \fBProcessingUnit\fP > pu)"
+.br
+.ti -1c
+.RI "unsigned int \fBgetCodeSize\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetCodeSize\fP (unsigned int c)"
+.br
+.ti -1c
+.RI "unsigned int \fBgetDataSize\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetDataSize\fP (unsigned int c)"
+.br
+.ti -1c
+.RI "unsigned int \fBgetEqG\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetEqG\fP (unsigned int c)"
+.br
+.ti -1c
+.RI "float \fBgetFRT\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetFRT\fP (float x)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "string \fBname\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBid\fP"
+.br
+.ti -1c
+.RI "string \fBtype\fP"
+.br
+.ti -1c
+.RI "int \fBidPU\fP"
+.br
+.ti -1c
+.RI "vector< \fBProcessingUnit\fP > \fBvpu\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBcodeSize\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBdataSize\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBeqG\fP"
+.br
+.ti -1c
+.RI "float \fBFRT\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 219 of file tl\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "unsigned int BasicBlock::getCodeSize ()"
+
+.PP
+Definition at line 277 of file tl\&.cpp\&.
+.PP
+.nf
+277                                     {
+278     return this->codeSize;
+279 }
+.fi
+.SS "unsigned int BasicBlock::getDataSize ()"
+
+.PP
+Definition at line 285 of file tl\&.cpp\&.
+.PP
+.nf
+285                                     {
+286     return this->dataSize;
+287 }
+.fi
+.SS "unsigned int BasicBlock::getEqG ()"
+
+.PP
+Definition at line 293 of file tl\&.cpp\&.
+.PP
+.nf
+293                                {
+294     return this->eqG;
+295 }
+.fi
+.SS "float BasicBlock::getFRT ()"
+
+.PP
+Definition at line 305 of file tl\&.cpp\&.
+.PP
+.nf
+305                          {
+306     return FRT;
+307 }
+.fi
+.SS "int BasicBlock::getId ()"
+
+.PP
+Definition at line 229 of file tl\&.cpp\&.
+.PP
+.nf
+230 {
+231     return this->id;
+232 }
+.fi
+.SS "int BasicBlock::getIdPU ()"
+
+.PP
+Definition at line 250 of file tl\&.cpp\&.
+.PP
+.nf
+251 {
+252     return this->idPU;
+253 }
+.fi
+.SS "string BasicBlock::getName ()"
+
+.PP
+Definition at line 219 of file tl\&.cpp\&.
+.PP
+.nf
+220 {
+221     return this->name;
+222 }
+.fi
+.SS "vector< \fBProcessingUnit\fP > BasicBlock::getProcessors ()"
+
+.PP
+Definition at line 271 of file tl\&.cpp\&.
+.PP
+.nf
+272 {
+273     return vpu;
+274 }
+.fi
+.SS "string BasicBlock::getType ()"
+
+.PP
+Definition at line 239 of file tl\&.cpp\&.
+.PP
+.nf
+240 {
+241     return type;
+242 }
+.fi
+.SS "void BasicBlock::setCodeSize (unsigned int c)"
+
+.PP
+Definition at line 281 of file tl\&.cpp\&.
+.PP
+.nf
+281                                           {
+282     this->codeSize = c;
+283 }
+.fi
+.PP
+Referenced by SystemManager::generateBBInstances()\&.
+.SS "void BasicBlock::setDataSize (unsigned int c)"
+
+.PP
+Definition at line 289 of file tl\&.cpp\&.
+.PP
+.nf
+289                                           {
+290     this->dataSize = d;
+291 }
+.fi
+.PP
+Referenced by SystemManager::generateBBInstances()\&.
+.SS "void BasicBlock::setEqG (unsigned int c)"
+
+.PP
+Definition at line 297 of file tl\&.cpp\&.
+.PP
+.nf
+297                                      {
+298     this->eqG = e;
+299 }
+.fi
+.PP
+Referenced by SystemManager::generateBBInstances()\&.
+.SS "void BasicBlock::setFRT (float x)"
+
+.PP
+Definition at line 301 of file tl\&.cpp\&.
+.PP
+.nf
+301                                {
+302     FRT = x;
+303 }
+.fi
+.PP
+Referenced by SystemManager::generateBBInstances()\&.
+.SS "void BasicBlock::setId (int x)"
+
+.PP
+Definition at line 234 of file tl\&.cpp\&.
+.PP
+.nf
+235 {
+236     id = x;
+237 }
+.fi
+.PP
+Referenced by SystemManager::generateBBInstances()\&.
+.SS "void BasicBlock::setIdPU (int x)"
+
+.PP
+Definition at line 255 of file tl\&.cpp\&.
+.PP
+.nf
+256 {
+257     idPU = x;
+258 }
+.fi
+.SS "void BasicBlock::setName (string x)"
+
+.PP
+Definition at line 224 of file tl\&.cpp\&.
+.PP
+.nf
+225 {
+226     name = x;
+227 }
+.fi
+.PP
+Referenced by SystemManager::generateBBInstances()\&.
+.SS "void BasicBlock::setProcessor (vector< \fBProcessingUnit\fP > pu)"
+
+.PP
+Definition at line 260 of file tl\&.cpp\&.
+.PP
+.nf
+261 {
+262     vpu= p;
+263 }
+.fi
+.PP
+Referenced by SystemManager::generateBBInstances()\&.
+.SS "void BasicBlock::setType (string x)"
+
+.PP
+Definition at line 245 of file tl\&.cpp\&.
+.PP
+.nf
+246 {
+247     type = x;
+248 }
+.fi
+.PP
+Referenced by SystemManager::generateBBInstances()\&.
+.SH "Field Documentation"
+.PP 
+.SS "unsigned int BasicBlock::codeSize\fC [private]\fP"
+
+.PP
+Definition at line 229 of file tl\&.h\&.
+.SS "unsigned int BasicBlock::dataSize\fC [private]\fP"
+
+.PP
+Definition at line 230 of file tl\&.h\&.
+.SS "unsigned int BasicBlock::eqG\fC [private]\fP"
+
+.PP
+Definition at line 231 of file tl\&.h\&.
+.SS "float BasicBlock::FRT\fC [private]\fP"
+
+.PP
+Definition at line 232 of file tl\&.h\&.
+.SS "unsigned int BasicBlock::id\fC [private]\fP"
+
+.PP
+Definition at line 223 of file tl\&.h\&.
+.SS "int BasicBlock::idPU\fC [private]\fP"
+
+.PP
+Definition at line 225 of file tl\&.h\&.
+.SS "string BasicBlock::name\fC [private]\fP"
+
+.PP
+Definition at line 222 of file tl\&.h\&.
+.SS "string BasicBlock::type\fC [private]\fP"
+
+.PP
+Definition at line 224 of file tl\&.h\&.
+.SS "vector<\fBProcessingUnit\fP> BasicBlock::vpu\fC [private]\fP"
+
+.PP
+Definition at line 226 of file tl\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FirFirGCD Application from the source code\&.

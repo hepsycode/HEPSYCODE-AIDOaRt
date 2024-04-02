@@ -1,0 +1,111 @@
+.TH "Memory" 3 "Mon Mar 20 2023" "FirFirGCD Application" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Memory
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <tl\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMemory\fP (unsigned int code, unsigned int data)"
+.br
+.ti -1c
+.RI "unsigned int \fBgetCodeSize\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetCodeSize\fP (unsigned int c)"
+.br
+.ti -1c
+.RI "unsigned int \fBgetDataSize\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetDataSize\fP (unsigned int c)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "unsigned int \fBcodeSize\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBdataSize\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 144 of file tl\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Memory::Memory (unsigned int code, unsigned int data)"
+
+.PP
+Definition at line 448 of file tl\&.cpp\&.
+.PP
+.nf
+448                                             {
+449     this->codeSize = c;
+450     this->dataSize = d;
+451 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "unsigned int Memory::getCodeSize ()"
+
+.PP
+Definition at line 454 of file tl\&.cpp\&.
+.PP
+.nf
+454                                 {
+455     return this->codeSize;
+456 }
+.fi
+.SS "unsigned int Memory::getDataSize ()"
+
+.PP
+Definition at line 462 of file tl\&.cpp\&.
+.PP
+.nf
+462                                 {
+463     return this->dataSize;
+464 }
+.fi
+.SS "void Memory::setCodeSize (unsigned int c)"
+
+.PP
+Definition at line 458 of file tl\&.cpp\&.
+.PP
+.nf
+458                                       {
+459     this->codeSize = c;
+460 }
+.fi
+.SS "void Memory::setDataSize (unsigned int c)"
+
+.PP
+Definition at line 466 of file tl\&.cpp\&.
+.PP
+.nf
+466                                       {
+467     this->dataSize = d;
+468 }
+.fi
+.SH "Field Documentation"
+.PP 
+.SS "unsigned int Memory::codeSize\fC [private]\fP"
+
+.PP
+Definition at line 147 of file tl\&.h\&.
+.SS "unsigned int Memory::dataSize\fC [private]\fP"
+
+.PP
+Definition at line 148 of file tl\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FirFirGCD Application from the source code\&.

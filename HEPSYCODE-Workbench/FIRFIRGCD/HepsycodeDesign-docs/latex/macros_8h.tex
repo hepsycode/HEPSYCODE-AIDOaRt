@@ -1,0 +1,53 @@
+\hypertarget{macros_8h}{}\doxysection{Hepsycode\+Design/src/macros.h File Reference}
+\label{macros_8h}\index{HepsycodeDesign/src/macros.h@{HepsycodeDesign/src/macros.h}}
+
+
+Macros Documented file.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{macros_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{H\+E\+P\+S\+Y\+\_\+S}}(X)
+\item 
+\#define \mbox{\hyperlink{group__firfirgcd__macros__group_ga652f3387e2319f751a6459f9db47cc3a}{H\+E\+P\+S\+Y\+\_\+P}}(X)~\mbox{\hyperlink{group__scheduling__manager__group_gaa604ac51b2579794e702367934dfb8ad}{p\+System\+Manager}}-\/$>$P\+S\+\_\+\+Profiling(X);
+\item 
+\#define \mbox{\hyperlink{group__firfirgcd__macros__group_gab8ed6dfd8e9d61861b9aff28d6b7300f}{H\+E\+P\+S\+Y\+\_\+\+S\+C\+H\+E\+D\+\_\+\+CS}}(X,  i)
+\item 
+\#define \mbox{\hyperlink{group__firfirgcd__macros__group_ga64988c094471851711bcbbb5e1298616}{P\+R\+E\+\_\+\+W\+A\+IT}}(X)
+\item 
+\#define \mbox{\hyperlink{group__firfirgcd__macros__group_ga521b4282fb564e25bc56196f1926ce30}{P\+O\+S\+T\+\_\+\+W\+A\+IT}}(X)
+\item 
+\#define \mbox{\hyperlink{group__firfirgcd__macros__group_gaa2252b3bddc89494975397ffc18b09f5}{H\+E\+P\+S\+Y\+\_\+\+S\+\_\+\+T\+I\+M\+ER}}(X,  Y)
+\item 
+\#define \mbox{\hyperlink{group__firfirgcd__macros__group_gaf1fe2324408cd29c1e2dcd55f2e4a9c1}{H\+E\+P\+S\+Y\+\_\+\+T\+R\+A\+C\+E\+\_\+\+P\+S\+\_\+\+S\+T\+A\+TE}}(X)~\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}{p\+Scheduling\+Manager}}-\/$>$L\+OG $<$$<$ \char`\"{}Execution Time;\char`\"{} $<$$<$ sc\+\_\+time\+\_\+stamp().to\+\_\+seconds() $<$$<$ \char`\"{}; Energy;\char`\"{} $<$$<$ p\+System\+Manager-\/$>$V\+PS\mbox{[}X\mbox{]}.get\+Energy() $<$$<$ \char`\"{}; Process;\char`\"{} $<$$<$ X $<$$<$ \char`\"{}; State;\char`\"{} $<$$<$ p\+Scheduling\+Manager-\/$>$process\+\_\+state\mbox{[}X\mbox{]} $<$$<$ endl;
+\item 
+\#define \mbox{\hyperlink{group__firfirgcd__macros__group_gadc2d4bfbe106f792246792d01d66d63c}{H\+E\+P\+S\+Y\+\_\+\+T\+R\+A\+C\+E\+\_\+\+P\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T\+H\+IS}}(X)~this-\/$>$L\+OG $<$$<$ \char`\"{}Execution Time;\char`\"{} $<$$<$ sc\+\_\+time\+\_\+stamp().to\+\_\+seconds() $<$$<$ \char`\"{}; Energy;\char`\"{} $<$$<$ p\+System\+Manager-\/$>$V\+PS\mbox{[}X\mbox{]}.get\+Energy() $<$$<$ \char`\"{}; Process;\char`\"{} $<$$<$ X $<$$<$ \char`\"{}; State;\char`\"{} $<$$<$ this-\/$>$process\+\_\+state\mbox{[}X\mbox{]} $<$$<$ endl;
+\item 
+\#define \mbox{\hyperlink{group__firfirgcd__macros__group_ga139185aa9c10392aada97618a69ee2cd}{H\+E\+P\+S\+Y\+\_\+\+T\+R\+A\+C\+E\+\_\+\+C\+H\+\_\+\+S\+T\+A\+TE}}(X)~\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}{p\+Scheduling\+Manager}}-\/$>$L\+OG $<$$<$ \char`\"{}Execution Time;\char`\"{} $<$$<$ sc\+\_\+time\+\_\+stamp().to\+\_\+seconds() $<$$<$ \char`\"{}; Energy;\char`\"{} $<$$<$ p\+System\+Manager-\/$>$V\+CH\mbox{[}X\mbox{]}.working\+\_\+energy $<$$<$ \char`\"{}; Channel;\char`\"{} $<$$<$ X $<$$<$ \char`\"{}; State;\char`\"{} $<$$<$ p\+Scheduling\+Manager-\/$>$channel\+\_\+state\mbox{[}X\mbox{]} $<$$<$ endl;
+\item 
+\#define \mbox{\hyperlink{group__firfirgcd__macros__group_ga24b6f3a385f702b3a63e0811a0f22e75}{H\+E\+P\+S\+Y\+\_\+\+T\+R\+A\+C\+E\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T\+H\+IS}}(X)~this-\/$>$L\+OG $<$$<$ \char`\"{}Execution Time;\char`\"{} $<$$<$ sc\+\_\+time\+\_\+stamp().to\+\_\+seconds() $<$$<$ \char`\"{}; Energy;\char`\"{} $<$$<$ p\+System\+Manager-\/$>$V\+CH\mbox{[}X\mbox{]}.working\+\_\+energy $<$$<$ \char`\"{}; Channel;\char`\"{} $<$$<$ X $<$$<$ \char`\"{}; State;\char`\"{} $<$$<$ this-\/$>$channel\+\_\+state\mbox{[}X\mbox{]} $<$$<$ endl;
+\item 
+\#define \mbox{\hyperlink{group__firfirgcd__macros__group_ga0f83efd33ffbe62c58c798abb824fa94}{H\+E\+P\+S\+Y\+\_\+\+T\+R\+A\+C\+E\+\_\+\+B\+B\+\_\+\+S\+T\+A\+TE}}(X)~\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}{p\+Scheduling\+Manager}}-\/$>$L\+OG $<$$<$ \char`\"{}Execution Time;\char`\"{} $<$$<$ sc\+\_\+time\+\_\+stamp().to\+\_\+seconds() $<$$<$ \char`\"{}; Energy;\char`\"{} $<$$<$ 0 $<$$<$ \char`\"{}; BB;\char`\"{} $<$$<$ X $<$$<$ \char`\"{}; Mode;\char`\"{} $<$$<$ p\+Scheduling\+Manager-\/$>$B\+B\+\_\+mode\mbox{[}X\mbox{]} $<$$<$ endl;
+\item 
+\#define \mbox{\hyperlink{group__firfirgcd__macros__group_ga0782cab9383550027672da286d54c931}{H\+E\+P\+S\+Y\+\_\+\+T\+R\+A\+C\+E\+\_\+\+B\+B\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T\+H\+IS}}(X)~this-\/$>$L\+OG $<$$<$ \char`\"{}Execution Time;\char`\"{} $<$$<$ sc\+\_\+time\+\_\+stamp().to\+\_\+seconds() $<$$<$ \char`\"{}; Energy;\char`\"{} $<$$<$ 0 $<$$<$ \char`\"{}; BB;\char`\"{} $<$$<$ X $<$$<$ \char`\"{}; Mode;\char`\"{} $<$$<$ this-\/$>$B\+B\+\_\+mode\mbox{[}X\mbox{]} $<$$<$ endl;
+\item 
+\#define \mbox{\hyperlink{group__firfirgcd__macros__group_ga37921dae893594f3710d892f471de3cb}{H\+E\+P\+S\+Y\+\_\+\+T\+R\+A\+C\+E\+\_\+\+S\+C\+H\+E\+D\+\_\+\+S\+T\+A\+TE}}(X)~this-\/$>$L\+OG $<$$<$ \char`\"{}Execution Time;\char`\"{} $<$$<$ sc\+\_\+time\+\_\+stamp().to\+\_\+seconds() $<$$<$ \char`\"{}; Energy;\char`\"{} $<$$<$ this-\/$>$sched\+\_\+en\mbox{[}X\mbox{]} $<$$<$ \char`\"{}; Scheduler;\char`\"{} $<$$<$ X $<$$<$ \char`\"{}; State;\char`\"{} $<$$<$ this-\/$>$scheduler\+\_\+state\mbox{[}X\mbox{]} $<$$<$ endl;
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Macros Documented file. 
+
+Macros\+: Macros file 
+
+Definition in file \mbox{\hyperlink{macros_8h_source}{macros.\+h}}.
+

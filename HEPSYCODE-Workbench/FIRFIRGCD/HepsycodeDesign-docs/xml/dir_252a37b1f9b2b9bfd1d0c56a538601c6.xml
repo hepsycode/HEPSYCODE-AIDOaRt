@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_252a37b1f9b2b9bfd1d0c56a538601c6" kind="dir">
+    <compoundname>HepsycodeDesign/src/processesInstr</compoundname>
+    <innerfile refid="fir16__evaluation_8cpp">fir16_evaluation.cpp</innerfile>
+    <innerfile refid="fir16__main_8cpp">fir16_main.cpp</innerfile>
+    <innerfile refid="fir16__shifting_8cpp">fir16_shifting.cpp</innerfile>
+    <innerfile refid="fir8__evaluation_8cpp">fir8_evaluation.cpp</innerfile>
+    <innerfile refid="fir8__main_8cpp">fir8_main.cpp</innerfile>
+    <innerfile refid="fir8__shifting_8cpp">fir8_shifting.cpp</innerfile>
+    <innerfile refid="gcd__evaluation_8cpp">gcd_evaluation.cpp</innerfile>
+    <innerfile refid="gcd__main_8cpp">gcd_main.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HepsycodeDesign/src/processesInstr/"/>
+  </compounddef>
+</doxygen>

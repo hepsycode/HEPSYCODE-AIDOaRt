@@ -1,0 +1,164 @@
+\hypertarget{class_memory}{}\doxysection{Memory Class Reference}
+\label{class_memory}\index{Memory@{Memory}}
+
+
+{\ttfamily \#include $<$tl.\+h$>$}
+
+
+
+Collaboration diagram for Memory\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=177pt]{class_memory__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_memory_a9f8f1bf0bd47994bf6e2d64ddcdf9302}{Memory}} (unsigned int code, unsigned int data)
+\item 
+unsigned int \mbox{\hyperlink{class_memory_a6c9d8edd683dbae1f59f0a9aa3ef2424}{get\+Code\+Size}} ()
+\item 
+void \mbox{\hyperlink{class_memory_a1f00ca41f42ada4525f9bae30e1bced4}{set\+Code\+Size}} (unsigned int c)
+\item 
+unsigned int \mbox{\hyperlink{class_memory_ab361eff2cef17729f170bb94e431efbb}{get\+Data\+Size}} ()
+\item 
+void \mbox{\hyperlink{class_memory_a50da769112b9a636b5fd0b8194bbb1cc}{set\+Data\+Size}} (unsigned int c)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{class_memory_ab9700fb68b6db81bed6115794f9d0c22}{code\+Size}}
+\item 
+unsigned int \mbox{\hyperlink{class_memory_a46b899813a58e32a87d04599d63ca163}{data\+Size}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{tl_8h_source_l00144}{144}} of file \mbox{\hyperlink{tl_8h_source}{tl.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_memory_a9f8f1bf0bd47994bf6e2d64ddcdf9302}\label{class_memory_a9f8f1bf0bd47994bf6e2d64ddcdf9302}} 
+\index{Memory@{Memory}!Memory@{Memory}}
+\index{Memory@{Memory}!Memory@{Memory}}
+\doxysubsubsection{\texorpdfstring{Memory()}{Memory()}}
+{\footnotesize\ttfamily Memory\+::\+Memory (\begin{DoxyParamCaption}\item[{unsigned int}]{code,  }\item[{unsigned int}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00448}{448}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00448                                             \{}
+\DoxyCodeLine{00449     this-\/>\mbox{\hyperlink{class_memory_ab9700fb68b6db81bed6115794f9d0c22}{codeSize}} = c;}
+\DoxyCodeLine{00450     this-\/>\mbox{\hyperlink{class_memory_a46b899813a58e32a87d04599d63ca163}{dataSize}} = d;}
+\DoxyCodeLine{00451 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_memory_a6c9d8edd683dbae1f59f0a9aa3ef2424}\label{class_memory_a6c9d8edd683dbae1f59f0a9aa3ef2424}} 
+\index{Memory@{Memory}!getCodeSize@{getCodeSize}}
+\index{getCodeSize@{getCodeSize}!Memory@{Memory}}
+\doxysubsubsection{\texorpdfstring{getCodeSize()}{getCodeSize()}}
+{\footnotesize\ttfamily unsigned int Memory\+::get\+Code\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00454}{454}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00454                                 \{}
+\DoxyCodeLine{00455     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_memory_ab9700fb68b6db81bed6115794f9d0c22}{codeSize}};}
+\DoxyCodeLine{00456 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_memory_ab361eff2cef17729f170bb94e431efbb}\label{class_memory_ab361eff2cef17729f170bb94e431efbb}} 
+\index{Memory@{Memory}!getDataSize@{getDataSize}}
+\index{getDataSize@{getDataSize}!Memory@{Memory}}
+\doxysubsubsection{\texorpdfstring{getDataSize()}{getDataSize()}}
+{\footnotesize\ttfamily unsigned int Memory\+::get\+Data\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00462}{462}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00462                                 \{}
+\DoxyCodeLine{00463     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_memory_a46b899813a58e32a87d04599d63ca163}{dataSize}};}
+\DoxyCodeLine{00464 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_memory_a1f00ca41f42ada4525f9bae30e1bced4}\label{class_memory_a1f00ca41f42ada4525f9bae30e1bced4}} 
+\index{Memory@{Memory}!setCodeSize@{setCodeSize}}
+\index{setCodeSize@{setCodeSize}!Memory@{Memory}}
+\doxysubsubsection{\texorpdfstring{setCodeSize()}{setCodeSize()}}
+{\footnotesize\ttfamily void Memory\+::set\+Code\+Size (\begin{DoxyParamCaption}\item[{unsigned int}]{c }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00458}{458}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00458                                       \{}
+\DoxyCodeLine{00459     this-\/>\mbox{\hyperlink{class_memory_ab9700fb68b6db81bed6115794f9d0c22}{codeSize}} = c;}
+\DoxyCodeLine{00460 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_memory_a50da769112b9a636b5fd0b8194bbb1cc}\label{class_memory_a50da769112b9a636b5fd0b8194bbb1cc}} 
+\index{Memory@{Memory}!setDataSize@{setDataSize}}
+\index{setDataSize@{setDataSize}!Memory@{Memory}}
+\doxysubsubsection{\texorpdfstring{setDataSize()}{setDataSize()}}
+{\footnotesize\ttfamily void Memory\+::set\+Data\+Size (\begin{DoxyParamCaption}\item[{unsigned int}]{c }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00466}{466}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00466                                       \{}
+\DoxyCodeLine{00467     this-\/>\mbox{\hyperlink{class_memory_a46b899813a58e32a87d04599d63ca163}{dataSize}} = d;}
+\DoxyCodeLine{00468 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_memory_ab9700fb68b6db81bed6115794f9d0c22}\label{class_memory_ab9700fb68b6db81bed6115794f9d0c22}} 
+\index{Memory@{Memory}!codeSize@{codeSize}}
+\index{codeSize@{codeSize}!Memory@{Memory}}
+\doxysubsubsection{\texorpdfstring{codeSize}{codeSize}}
+{\footnotesize\ttfamily unsigned int Memory\+::code\+Size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8h_source_l00147}{147}} of file \mbox{\hyperlink{tl_8h_source}{tl.\+h}}.
+
+\mbox{\Hypertarget{class_memory_a46b899813a58e32a87d04599d63ca163}\label{class_memory_a46b899813a58e32a87d04599d63ca163}} 
+\index{Memory@{Memory}!dataSize@{dataSize}}
+\index{dataSize@{dataSize}!Memory@{Memory}}
+\doxysubsubsection{\texorpdfstring{dataSize}{dataSize}}
+{\footnotesize\ttfamily unsigned int Memory\+::data\+Size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8h_source_l00148}{148}} of file \mbox{\hyperlink{tl_8h_source}{tl.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Hepsycode\+Design/src/\mbox{\hyperlink{tl_8h}{tl.\+h}}\item 
+Hepsycode\+Design/src/\mbox{\hyperlink{tl_8cpp}{tl.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,1464 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_system_manager">
+<title>SystemManager Class Reference</title>
+<indexterm><primary>SystemManager</primary></indexterm>
+<para>
+<computeroutput>#include &lt;SystemManager.h&gt;</computeroutput>
+</para>
+Collaboration diagram for SystemManager:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_system_manager__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_system_manager_1a2f8a3e2e1929be50ef8702629f50bb94">SystemManager</link> ()</para>
+</listitem>
+            <listitem><para>vector&lt; <link linkend="_class_process">Process</link> &gt; <link linkend="_class_system_manager_1a545df7d9bd60c4d42797a7233a1f4d61">generateProcessInstances</link> ()</para>
+</listitem>
+            <listitem><para>vector&lt; <link linkend="_class_channel">Channel</link> &gt; <link linkend="_class_system_manager_1a98b6400619bc75fc9333426b38b1d24b">generateChannelInstances</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_system_manager_1abb13ab99346bb9a9633852a797e03cf7">PS_Profiling</link> (int processId)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_system_manager_1a21d2bb74e4472f99ec04243168e7964e">checkSPP</link> (int processId)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_system_manager_1ab6efb1ee75ff2df870bd8e65480dc6e7">deleteConcXmlConCom</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_system_manager_1a5f16a17547d2cd543180e06e555304e7">updateXmlConCom</link> (float matrixCONC_PS_N[10][10], unsigned int matrixCOM[10][10], float matrixCONC_CH_N[15][15])</para>
+</listitem>
+            <listitem><para>vector&lt; int &gt; <link linkend="_class_system_manager_1af468620e73667d65dbb7db93b78712a9">getAllocationPS_BB</link> (int <link linkend="_group__firfirgcd__define__group_1gaaa53553033df32820178982628a60cae">bb_id</link>)</para>
+</listitem>
+            <listitem><para>sc_time <link linkend="_class_system_manager_1aeaf3506efda2897408fd8d5273e871aa">updateSimulatedTime</link> (int processId)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_system_manager_1a0d692288dbf1e1a75a331408cd4f2210">increaseSimulatedTime</link> (int processId)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_system_manager_1a81c4c7415d63b21f9ae15fd5594b7692">increaseTimer</link> (int processId, sc_time delta)</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_system_manager_1aa7e8eba2c8c064bc7e7df6ed9e9e1f53">updateEstimatedEnergy</link> (int processId)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_system_manager_1a96ab5341b1af75dfcd59b14b02fa0bc7">increaseEstimatedEnergy</link> (int processId)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_system_manager_1a9a32595149efd0a69d09c46387415aa0">deleteConcXmlEnergy</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_system_manager_1a99f32d48ffab81f6c16d86dedbede1e7">updateXmlEnergy</link> ()</para>
+</listitem>
+            <listitem><para>vector&lt; <link linkend="_class_basic_block">BasicBlock</link> &gt; <link linkend="_class_system_manager_1a77bb622cef7c79dab7463d02a2125542">generateBBInstances</link> ()</para>
+</listitem>
+            <listitem><para>vector&lt; <link linkend="_class_physical_link">PhysicalLink</link> &gt; <link linkend="_class_system_manager_1a056fabdd037cf3a1c2e6e20764784159">generatePhysicalLinkInstances</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_system_manager_1a03ae9f4865c6ba14f9212ca4711d30a9">mappingPS</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_system_manager_1a027f130077f51033fad36ccaaeda2c57">mappingCH</link> ()</para>
+</listitem>
+            <listitem><para>sc_time <link linkend="_class_system_manager_1ae0465f057cd9ac9f5c6d05befc85ff15">getFRT</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_system_manager_1a2babb39c1fc59e1d02782e3e39ea9412">setFRT</link> (sc_time x)</para>
+</listitem>
+            <listitem><para>float * <link linkend="_class_system_manager_1acf868dd1af35168e9e37a62b1a03780b">loadEst</link> (sc_time FRT_n)</para>
+</listitem>
+            <listitem><para>float * <link linkend="_class_system_manager_1ae7fbae6170e9f5e8aca0c436221dcf41">getFRL</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_system_manager_1aa25f8e4f2e4460d9652875772f48bb0e">deleteConcXmlLoad</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_system_manager_1afb69c0fedadb6e806e6576ad07c51162">updateXmlLoad</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>vector&lt; <link linkend="_class_process">Process</link> &gt; <link linkend="_class_system_manager_1adcd8ce799616b977c206401ebdefab86">VPS</link></para>
+</listitem>
+            <listitem><para>vector&lt; <link linkend="_class_channel">Channel</link> &gt; <link linkend="_class_system_manager_1a7dcc3ae8736a6aad7e27f276706205a3">VCH</link></para>
+</listitem>
+            <listitem><para>vector&lt; <link linkend="_class_basic_block">BasicBlock</link> &gt; <link linkend="_class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32">VBB</link></para>
+</listitem>
+            <listitem><para>vector&lt; <link linkend="_class_physical_link">PhysicalLink</link> &gt; <link linkend="_class_system_manager_1af28a1744a2d964a7047c31c6a5f1644a">VPL</link></para>
+</listitem>
+            <listitem><para>vector&lt; int &gt; <link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link></para>
+</listitem>
+            <listitem><para>vector&lt; int &gt; <link linkend="_class_system_manager_1ab75b55327c942c6950f67c14ba9dea08">allocationCH_PL</link></para>
+</listitem>
+            <listitem><para>float <link linkend="_class_system_manager_1a7f06326402d0738cb87a1c03bf57f5c7">FRL</link> [10]</para>
+</listitem>
+            <listitem><para>sc_time <link linkend="_class_system_manager_1a69ec2821a8a92a69fbb5cb0f789a64ca">FRT</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 86 of file SystemManager.h.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_system_manager_1a2f8a3e2e1929be50ef8702629f50bb94"/>    <section>
+    <title>SystemManager()</title>
+<indexterm><primary>SystemManager</primary><secondary>SystemManager</secondary></indexterm>
+<indexterm><primary>SystemManager</primary><secondary>SystemManager</secondary></indexterm>
+<para><computeroutput>SystemManager::SystemManager ( )</computeroutput></para><para>
+Definition at line 78 of file SystemManager.cpp.</para>
+<programlisting>79 {
+80 
+81 &#32;&#32;&#32;&#32;<link linkend="_class_system_manager_1adcd8ce799616b977c206401ebdefab86">VPS</link>&#32;=&#32;<link linkend="_class_system_manager_1a545df7d9bd60c4d42797a7233a1f4d61">generateProcessInstances</link>();
+82 &#32;&#32;&#32;&#32;<link linkend="_class_system_manager_1a7dcc3ae8736a6aad7e27f276706205a3">VCH</link>&#32;=&#32;<link linkend="_class_system_manager_1a98b6400619bc75fc9333426b38b1d24b">generateChannelInstances</link>();
+83 
+84 &#32;&#32;&#32;&#32;<link linkend="_class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32">VBB</link>&#32;=&#32;<link linkend="_class_system_manager_1a77bb622cef7c79dab7463d02a2125542">generateBBInstances</link>();
+85 &#32;&#32;&#32;&#32;<link linkend="_class_system_manager_1af28a1744a2d964a7047c31c6a5f1644a">VPL</link>&#32;=&#32;<link linkend="_class_system_manager_1a056fabdd037cf3a1c2e6e20764784159">generatePhysicalLinkInstances</link>();
+86 &#32;&#32;&#32;&#32;<link linkend="_class_system_manager_1a03ae9f4865c6ba14f9212ca4711d30a9">mappingPS</link>();
+87 &#32;&#32;&#32;&#32;<link linkend="_class_system_manager_1a027f130077f51033fad36ccaaeda2c57">mappingCH</link>();
+88 }
+</programlisting></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_system_manager_1a21d2bb74e4472f99ec04243168e7964e"/>    <section>
+    <title>checkSPP()</title>
+<indexterm><primary>checkSPP</primary><secondary>SystemManager</secondary></indexterm>
+<indexterm><primary>SystemManager</primary><secondary>checkSPP</secondary></indexterm>
+<para><computeroutput>bool SystemManager::checkSPP (int processId)</computeroutput></para><para>
+Definition at line 267 of file SystemManager.cpp.</para>
+<programlisting>268 {
+269 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32">VBB</link>[<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[processId]].getProcessors()[0].getProcessorType()&#32;==&#32;<emphasis role="stringliteral">&quot;SPP&quot;</emphasis>;
+270 }
+</programlisting><para>
+Referenced by sc_csp_channel&lt; T &gt;::read(), SC_MODULE(), and sc_csp_channel&lt; T &gt;::write().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_system_manager_a21d2bb74e4472f99ec04243168e7964e_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_system_manager_1ab6efb1ee75ff2df870bd8e65480dc6e7"/>    <section>
+    <title>deleteConcXmlConCom()</title>
+<indexterm><primary>deleteConcXmlConCom</primary><secondary>SystemManager</secondary></indexterm>
+<indexterm><primary>SystemManager</primary><secondary>deleteConcXmlConCom</secondary></indexterm>
+<para><computeroutput>void SystemManager::deleteConcXmlConCom ( )</computeroutput></para><para>
+Definition at line 286 of file SystemManager.cpp.</para>
+<programlisting>287 {
+288 
+289 &#32;&#32;&#32;&#32;pugi::xml_document&#32;myDoc;
+290 &#32;&#32;&#32;&#32;pugi::xml_parse_result&#32;myResult&#32;=&#32;myDoc.load_file(<emphasis role="stringliteral">&quot;./XML/application.xml&quot;</emphasis>);
+291 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;XML&#32;Delete&#32;result:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;myResult.description()&#32;&lt;&lt;&#32;endl;
+292 
+293 &#32;&#32;&#32;&#32;<emphasis role="comment">//method&#32;2:&#32;use&#32;object/node&#32;structure</emphasis>
+294 &#32;&#32;&#32;&#32;pugi::xml_node&#32;instancesPS&#32;=&#32;myDoc.child(<emphasis role="stringliteral">&quot;instancesPS&quot;</emphasis>);
+295 &#32;&#32;&#32;&#32;xml_node&#32;processes&#32;=&#32;instancesPS.child(<emphasis role="stringliteral">&quot;process&quot;</emphasis>);
+296 
+297 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;<link linkend="_group__firfirgcd__define__group_1gad258142492454320138f79a00101f1f8">NPS</link>;&#32;i++){
+298 
+299 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;xml_node&#32;concom&#32;=&#32;processes.child(<emphasis role="stringliteral">&quot;concurrency&quot;</emphasis>);
+300 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(pugi::xml_node&#32;processorId&#32;=&#32;concom.child(<emphasis role="stringliteral">&quot;processId&quot;</emphasis>);&#32;processorId;&#32;processorId&#32;=&#32;processorId.next_sibling())&#32;{
+301 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;concom.remove_child(processorId);
+302 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+303 
+304 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;xml_node&#32;concom2&#32;=&#32;processes.child(<emphasis role="stringliteral">&quot;comunication&quot;</emphasis>);
+305 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(pugi::xml_node&#32;processorId&#32;=&#32;concom2.child(<emphasis role="stringliteral">&quot;rec&quot;</emphasis>);&#32;processorId;&#32;processorId&#32;=&#32;processorId.next_sibling())&#32;{
+306 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;concom2.remove_child(processorId);
+307 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+308 
+309 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;processes&#32;=&#32;processes.next_sibling();
+310 
+311 &#32;&#32;&#32;&#32;}
+312 
+313 &#32;&#32;&#32;&#32;xml_node&#32;instancesCH&#32;=&#32;myDoc.child(<emphasis role="stringliteral">&quot;instancesLL&quot;</emphasis>);
+314 &#32;&#32;&#32;&#32;xml_node&#32;processesCH&#32;=&#32;instancesCH.child(<emphasis role="stringliteral">&quot;logical_link&quot;</emphasis>);
+315 
+316 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;<link linkend="_group__firfirgcd__define__group_1ga967ca22c6c7be038e1092147ce04f258">NCH</link>;&#32;i++){
+317 
+318 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;xml_node&#32;concom3&#32;=&#32;processesCH.child(<emphasis role="stringliteral">&quot;concurrency&quot;</emphasis>);
+319 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(pugi::xml_node&#32;processorId&#32;=&#32;concom3.child(<emphasis role="stringliteral">&quot;channelId&quot;</emphasis>);&#32;processorId;&#32;processorId&#32;=&#32;processorId.next_sibling())&#32;{
+320 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;concom3.remove_child(processorId);
+321 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+322 
+323 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;processesCH&#32;=&#32;processesCH.next_sibling();
+324 
+325 &#32;&#32;&#32;&#32;}
+326 
+327 &#32;&#32;&#32;&#32;myDoc.save_file(<emphasis role="stringliteral">&quot;./XML/application.xml&quot;</emphasis>);
+328 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;endl;
+329 }
+</programlisting><para>
+References NCH, and NPS.</para>
+<para>
+Referenced by sc_main().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_system_manager_ab6efb1ee75ff2df870bd8e65480dc6e7_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_system_manager_1a9a32595149efd0a69d09c46387415aa0"/>    <section>
+    <title>deleteConcXmlEnergy()</title>
+<indexterm><primary>deleteConcXmlEnergy</primary><secondary>SystemManager</secondary></indexterm>
+<indexterm><primary>SystemManager</primary><secondary>deleteConcXmlEnergy</secondary></indexterm>
+<para><computeroutput>void SystemManager::deleteConcXmlEnergy ( )</computeroutput></para><para>
+Definition at line 1104 of file SystemManager.cpp.</para>
+<programlisting>1104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+1105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>*&#32;temp;
+1106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;Id;
+1107 
+1108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_document&#32;myDoc;
+1109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_parse_result&#32;myResult&#32;=&#32;myDoc.load_file(<emphasis role="stringliteral">&quot;./XML/application.xml&quot;</emphasis>);
+1110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;XML&#32;Delete&#32;result:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;myResult.description()&#32;&lt;&lt;&#32;endl;
+1111 
+1112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//method&#32;2:&#32;use&#32;object/node&#32;structure</emphasis>
+1113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;instancesPS&#32;=&#32;myDoc.child(<emphasis role="stringliteral">&quot;instancesPS&quot;</emphasis>);
+1114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;xml_node&#32;processes&#32;=&#32;instancesPS.child(<emphasis role="stringliteral">&quot;process&quot;</emphasis>);
+1115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;<link linkend="_group__firfirgcd__define__group_1gad258142492454320138f79a00101f1f8">NPS</link>;&#32;i++){
+1116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;temp&#32;=&#32;(<emphasis role="keywordtype">char</emphasis>*)&#32;processes.child_value(<emphasis role="stringliteral">&quot;id&quot;</emphasis>);
+1117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Id&#32;=&#32;atoi(temp);&#32;<emphasis role="comment">//id&#32;process</emphasis>
+1118 
+1119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;xml_node&#32;energy&#32;=&#32;processes.child(<emphasis role="stringliteral">&quot;energy&quot;</emphasis>);
+1120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(pugi::xml_node&#32;processorId&#32;=&#32;energy.child(<emphasis role="stringliteral">&quot;processorId&quot;</emphasis>);&#32;processorId;&#32;processorId&#32;=&#32;processorId.next_sibling())&#32;{
+1121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;processor_id_n&#32;=&#32;processorId.attribute(<emphasis role="stringliteral">&quot;id&quot;</emphasis>).as_int();<emphasis role="comment">//</emphasis>
+1122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;process_load_value&#32;=&#32;processorId.attribute(<emphasis role="stringliteral">&quot;value&quot;</emphasis>).as_float();<emphasis role="comment">//</emphasis>
+1123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[Id]&#32;==&#32;processor_id_n){
+1124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;energy.remove_child(processorId);
+1125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+1126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+1127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;processes&#32;=&#32;processes.next_sibling();
+1128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+1129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;myDoc.save_file(<emphasis role="stringliteral">&quot;./XML/application.xml&quot;</emphasis>);
+1130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&lt;&lt;endl;
+1131 
+1133 
+1134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_document&#32;myDoc2;
+1135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_parse_result&#32;myResult2&#32;=&#32;myDoc2.load_file(<emphasis role="stringliteral">&quot;./XML/instancesTL.xml&quot;</emphasis>);
+1136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;XML&#32;result:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;myResult2.description()&#32;&lt;&lt;&#32;endl;
+1137 
+1138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;instancesBB&#32;=&#32;myDoc2.child(<emphasis role="stringliteral">&quot;instancesBB&quot;</emphasis>);
+1139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;xml_node&#32;basicBlock&#32;=&#32;instancesBB.child(<emphasis role="stringliteral">&quot;basicBlock&quot;</emphasis>);
+1140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;<link linkend="_group__firfirgcd__define__group_1ga498a2c2b57c15e562e939cccf28db094">NBB</link>;&#32;i++){
+1141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;temp&#32;=&#32;(<emphasis role="keywordtype">char</emphasis>*)&#32;basicBlock.child_value(<emphasis role="stringliteral">&quot;id&quot;</emphasis>);
+1142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Id&#32;=&#32;atoi(temp);&#32;<emphasis role="comment">//id&#32;process</emphasis>
+1143 
+1144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;xml_node&#32;energyEst&#32;=&#32;basicBlock.child(<emphasis role="stringliteral">&quot;energyEstimation&quot;</emphasis>);
+1145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(pugi::xml_node&#32;energyTOT&#32;=&#32;energyEst.child(<emphasis role="stringliteral">&quot;energyTOT&quot;</emphasis>);&#32;energyTOT;&#32;energyTOT&#32;=&#32;energyTOT.next_sibling())&#32;{
+1146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;processor_id_n&#32;=&#32;energyTOT.attribute(<emphasis role="stringliteral">&quot;id&quot;</emphasis>).as_int();<emphasis role="comment">//</emphasis>
+1147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;energy_value&#32;=&#32;energyTOT.attribute(<emphasis role="stringliteral">&quot;value&quot;</emphasis>).as_float();<emphasis role="comment">//</emphasis>
+1148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(Id&#32;==&#32;<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[2]){
+1149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;energyEst.remove_child(energyTOT);
+1150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+1151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+1152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;basicBlock&#32;=&#32;basicBlock.next_sibling();
+1153 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+1154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Saving&#32;result:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;myDoc2.save_file(<emphasis role="stringliteral">&quot;./XML/instancesTL.xml&quot;</emphasis>)&#32;&lt;&lt;&#32;endl;
+1155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&lt;&lt;endl;
+1156 
+1157 &#32;&#32;&#32;&#32;}
+</programlisting><para>
+References NBB, and NPS.</para>
+<para>
+Referenced by sc_main().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_system_manager_a9a32595149efd0a69d09c46387415aa0_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_system_manager_1aa25f8e4f2e4460d9652875772f48bb0e"/>    <section>
+    <title>deleteConcXmlLoad()</title>
+<indexterm><primary>deleteConcXmlLoad</primary><secondary>SystemManager</secondary></indexterm>
+<indexterm><primary>SystemManager</primary><secondary>deleteConcXmlLoad</secondary></indexterm>
+<para><computeroutput>void SystemManager::deleteConcXmlLoad ( )</computeroutput></para><para>
+Definition at line 1247 of file SystemManager.cpp.</para>
+<programlisting>1247 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+1248 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>*&#32;temp;
+1249 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;Id;
+1250 
+1251 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_document&#32;myDoc;
+1252 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_parse_result&#32;myResult&#32;=&#32;myDoc.load_file(<emphasis role="stringliteral">&quot;./XML/application.xml&quot;</emphasis>);
+1253 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;XML&#32;Delete&#32;result:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;myResult.description()&#32;&lt;&lt;&#32;endl;
+1254 
+1255 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//method&#32;2:&#32;use&#32;object/node&#32;structure</emphasis>
+1256 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;instancesPS&#32;=&#32;myDoc.child(<emphasis role="stringliteral">&quot;instancesPS&quot;</emphasis>);
+1257 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;xml_node&#32;processes&#32;=&#32;instancesPS.child(<emphasis role="stringliteral">&quot;process&quot;</emphasis>);
+1258 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;<link linkend="_group__firfirgcd__define__group_1gad258142492454320138f79a00101f1f8">NPS</link>;&#32;i++){
+1259 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;temp&#32;=&#32;(<emphasis role="keywordtype">char</emphasis>*)&#32;processes.child_value(<emphasis role="stringliteral">&quot;id&quot;</emphasis>);
+1260 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Id&#32;=&#32;atoi(temp);&#32;<emphasis role="comment">//id&#32;process</emphasis>
+1261 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;xml_node&#32;load&#32;=&#32;processes.child(<emphasis role="stringliteral">&quot;load&quot;</emphasis>);
+1262 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(pugi::xml_node&#32;processorId&#32;=&#32;load.child(<emphasis role="stringliteral">&quot;processorId&quot;</emphasis>);&#32;processorId;&#32;processorId&#32;=&#32;processorId.next_sibling())&#32;{
+1263 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;processor_id_n&#32;=&#32;processorId.attribute(<emphasis role="stringliteral">&quot;id&quot;</emphasis>).as_int();<emphasis role="comment">//</emphasis>
+1264 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;process_load_value&#32;=&#32;processorId.attribute(<emphasis role="stringliteral">&quot;value&quot;</emphasis>).as_float();<emphasis role="comment">//</emphasis>
+1265 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[Id]&#32;==&#32;processor_id_n){
+1266 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;load.remove_child(processorId);
+1267 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+1268 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+1269 
+1270 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;&#32;xml_node&#32;WCET&#32;=&#32;processes.child(&quot;WCET&quot;);</emphasis>
+1271 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;for&#32;(pugi::xml_node&#32;processorId&#32;=&#32;WCET.child(&quot;processorId&quot;);&#32;processorId;&#32;processorId&#32;=&#32;processorId.next_sibling())&#32;{</emphasis>
+1272 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;WCET.remove_child(processorId);</emphasis>
+1273 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+1274 <emphasis role="comment"></emphasis>
+1275 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;xml_node&#32;Period&#32;=&#32;processes.child(&quot;Period&quot;);</emphasis>
+1276 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;for&#32;(pugi::xml_node&#32;processorId&#32;=&#32;Period.child(&quot;processorId&quot;);&#32;processorId;&#32;processorId&#32;=&#32;processorId.next_sibling())&#32;{</emphasis>
+1277 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Period.remove_child(processorId);</emphasis>
+1278 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+1279 <emphasis role="comment"></emphasis>
+1280 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;xml_node&#32;Deadline&#32;=&#32;processes.child(&quot;Deadline&quot;);</emphasis>
+1281 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;for&#32;(pugi::xml_node&#32;processorId&#32;=&#32;Deadline.child(&quot;processorId&quot;);&#32;processorId;&#32;processorId&#32;=&#32;processorId.next_sibling())&#32;{</emphasis>
+1282 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Deadline.remove_child(processorId);</emphasis>
+1283 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;*/</emphasis>
+1284 
+1285 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;processes&#32;=&#32;processes.next_sibling();
+1286 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+1287 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;myDoc.save_file(<emphasis role="stringliteral">&quot;./XML/application.xml&quot;</emphasis>);
+1288 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&lt;&lt;endl;
+1289 
+1290 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_document&#32;myDoc2;
+1291 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_parse_result&#32;myResult2&#32;=&#32;myDoc2.load_file(<emphasis role="stringliteral">&quot;./XML/instancesTL.xml&quot;</emphasis>);
+1292 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;XML&#32;result:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;myResult2.description()&#32;&lt;&lt;&#32;endl;
+1293 
+1294 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;instancesBB&#32;=&#32;myDoc2.child(<emphasis role="stringliteral">&quot;instancesBB&quot;</emphasis>);
+1295 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;xml_node&#32;basicBlock&#32;=&#32;instancesBB.child(<emphasis role="stringliteral">&quot;basicBlock&quot;</emphasis>);
+1296 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;<link linkend="_group__firfirgcd__define__group_1ga498a2c2b57c15e562e939cccf28db094">NBB</link>;&#32;i++){
+1297 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;temp&#32;=&#32;(<emphasis role="keywordtype">char</emphasis>*)&#32;basicBlock.child_value(<emphasis role="stringliteral">&quot;id&quot;</emphasis>);
+1298 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Id&#32;=&#32;atoi(temp);&#32;<emphasis role="comment">//id&#32;process</emphasis>
+1299 
+1300 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;xml_node&#32;<link linkend="_class_system_manager_1acf868dd1af35168e9e37a62b1a03780b">loadEst</link>&#32;=&#32;basicBlock.child(<emphasis role="stringliteral">&quot;loadEstimation&quot;</emphasis>);
+1301 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(pugi::xml_node&#32;loadTOT&#32;=&#32;<link linkend="_class_system_manager_1acf868dd1af35168e9e37a62b1a03780b">loadEst</link>.child(<emphasis role="stringliteral">&quot;FreeRunningTime&quot;</emphasis>);&#32;loadTOT;&#32;loadTOT&#32;=&#32;loadTOT.next_sibling())&#32;{
+1302 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;processor_id_n&#32;=&#32;loadTOT.attribute(<emphasis role="stringliteral">&quot;id&quot;</emphasis>).as_int();<emphasis role="comment">//</emphasis>
+1303 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;energy_value&#32;=&#32;loadTOT.attribute(<emphasis role="stringliteral">&quot;value&quot;</emphasis>).as_float();<emphasis role="comment">//</emphasis>
+1304 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(Id&#32;==&#32;<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[2]){
+1305 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_system_manager_1acf868dd1af35168e9e37a62b1a03780b">loadEst</link>.remove_child(loadTOT);
+1306 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+1307 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+1308 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;basicBlock&#32;=&#32;basicBlock.next_sibling();
+1309 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+1310 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Saving&#32;result:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;myDoc2.save_file(<emphasis role="stringliteral">&quot;./XML/instancesTL.xml&quot;</emphasis>)&#32;&lt;&lt;&#32;endl;
+1311 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;myDoc2.reset();
+1312 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&lt;&lt;endl;
+1313 
+1314 &#32;&#32;&#32;&#32;}
+</programlisting><para>
+References NBB, and NPS.</para>
+<para>
+Referenced by sc_main().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_system_manager_aa25f8e4f2e4460d9652875772f48bb0e_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_system_manager_1a77bb622cef7c79dab7463d02a2125542"/>    <section>
+    <title>generateBBInstances()</title>
+<indexterm><primary>generateBBInstances</primary><secondary>SystemManager</secondary></indexterm>
+<indexterm><primary>SystemManager</primary><secondary>generateBBInstances</secondary></indexterm>
+<para><computeroutput>vector&lt; <link linkend="_class_basic_block">BasicBlock</link> &gt; SystemManager::generateBBInstances ( )</computeroutput></para><para>
+Definition at line 636 of file SystemManager.cpp.</para>
+<programlisting>636 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+637 
+638 &#32;&#32;&#32;&#32;vector&lt;BasicBlock&gt;&#32;vbb;
+639 
+640 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;<link linkend="_group__firfirgcd__define__group_1ga498a2c2b57c15e562e939cccf28db094">NBB</link>;&#32;i++){
+641 
+642 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_basic_block">BasicBlock</link>&#32;bb;
+643 
+644 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//BB-ID</emphasis>
+645 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bb.<link linkend="_class_basic_block_1a1abdc5c467f903b3bb6f51fb68283b21">setId</link>(i);
+646 
+647 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//BB-NAME</emphasis>
+648 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bb.<link linkend="_class_basic_block_1a2be928b15c8a74a0f171f97c285791f2">setName</link>(<emphasis role="stringliteral">&quot;dummy&quot;</emphasis>);
+649 
+650 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//BB-TYPE</emphasis>
+651 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bb.<link linkend="_class_basic_block_1ae33921bd8c15b268aba6f5b1526f893b">setType</link>(<emphasis role="stringliteral">&quot;dummy&quot;</emphasis>);
+652 
+653 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;PROCESSING&#32;UNIT</emphasis>
+654 
+655 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vector&lt;ProcessingUnit&gt;&#32;vpu;
+656 
+657 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;j&#32;=&#32;0;&#32;j&#32;&lt;&#32;4;&#32;j++){&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;each&#32;block&#32;contains&#32;at&#32;most&#32;4&#32;pu</emphasis>
+658 
+659 
+660 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_processing_unit">ProcessingUnit</link>&#32;pu;
+661 
+662 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//PU-NAME</emphasis>
+663 
+664 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pu.<link linkend="_class_processing_unit_1a24c691bffdbf8b79fa8301ba6493e0e5">setName</link>(<emphasis role="stringliteral">&quot;dummy&quot;</emphasis>);
+665 
+666 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//PU-ID</emphasis>
+667 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;idPU&#32;=&#32;j;
+668 
+669 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pu.<link linkend="_class_processing_unit_1a95737a4e4a2bd424cb4455f0c4a84cf5">setId</link>(idPU);
+670 
+671 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//Processor&#32;Type</emphasis>
+672 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pu.<link linkend="_class_processing_unit_1a11749a7a862ab46b771844fddc373ed6">setProcessorType</link>(<emphasis role="stringliteral">&quot;dummy&quot;</emphasis>);
+673 
+675 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//pu.setCost(0);</emphasis>
+676 
+677 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//PU-ISA</emphasis>
+678 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pu.<link linkend="_class_processing_unit_1a32aac7fd512cb23a8cc629d87ce317d8">setISA</link>(<emphasis role="stringliteral">&quot;dummy&quot;</emphasis>);
+679 
+680 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;PU-Frequency&#32;(MHz)</emphasis>
+681 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pu.<link linkend="_class_processing_unit_1a48a63b09d626c9563d36404b5f95a04a">setFrequency</link>(0);
+682 
+683 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;PU-CC4CS</emphasis>
+684 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>**&#32;array&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>*[5];&#32;<emphasis role="comment">//TODO:&#32;eliminare&#32;**?</emphasis>
+685 
+686 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//Int8</emphasis>
+687 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;idCC4CSminint8&#32;=&#32;0;
+688 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;idCC4CSmaxint8&#32;=&#32;0;
+689 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//Int16</emphasis>
+690 
+691 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;idCC4CSminint16&#32;=&#32;0;
+692 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;idCC4CSmaxint16&#32;=&#32;0;
+693 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//Int32</emphasis>
+694 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;idCC4CSminint32&#32;=&#32;0;
+695 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;idCC4CSmaxint32&#32;=&#32;0;
+696 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//Float</emphasis>
+697 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;idCC4CSminfloat&#32;=&#32;0;
+698 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;idCC4CSmaxfloat&#32;=&#32;0;
+699 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//Tot</emphasis>
+700 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;idCC4CSmin&#32;=&#32;0;
+701 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;idCC4CSmax&#32;=&#32;0;
+702 
+703 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//TODO:&#32;ciclo&#32;con&#32;tutti&#32;0!</emphasis>
+704 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;array[0]&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>[2];
+705 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;array[0][0]&#32;=&#32;idCC4CSminint8;
+706 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;array[0][1]&#32;=&#32;idCC4CSmaxint8;
+707 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;array[1]&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>[2];
+708 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;array[1][0]&#32;=&#32;idCC4CSminint16;
+709 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;array[1][1]&#32;=&#32;idCC4CSmaxint16;
+710 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;array[2]&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>[2];
+711 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;array[2][0]&#32;=&#32;idCC4CSminint32;
+712 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;array[2][1]&#32;=&#32;idCC4CSmaxint32;
+713 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;array[3]&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>[2];
+714 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;array[3][0]&#32;=&#32;idCC4CSminfloat;
+715 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;array[3][1]&#32;=&#32;idCC4CSmaxfloat;
+716 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;array[4]&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>[2];
+717 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;array[4][0]&#32;=&#32;idCC4CSmin;
+718 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;array[4][1]&#32;=&#32;idCC4CSmax;
+719 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pu.<link linkend="_class_processing_unit_1a0878e37abdc168f31758d4df208c6663">setCC4S</link>(array);
+720 
+721 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;PU-Power&#32;(W)</emphasis>
+722 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pu.<link linkend="_class_processing_unit_1a4994085fb506708d4c0f1c27565ffe2b">setPower</link>(0);
+723 
+724 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;PU-MIPS</emphasis>
+725 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;idMIPS&#32;=&#32;0;
+726 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pu.<link linkend="_class_processing_unit_1af91c01d3a84acf6f310949e80906e824">setMIPS</link>(idMIPS);
+727 
+728 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;PU-I4CS</emphasis>
+729 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;idI4CSmin&#32;=&#32;0;
+730 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pu.<link linkend="_class_processing_unit_1afb3bb2c3b1421dfabf867ff1bd084968">setI4CSmin</link>(idI4CSmin);
+731 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;idI4CSmax&#32;=&#32;0;
+732 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pu.<link linkend="_class_processing_unit_1a9995278db81888144089791e7eef8b71">setI4CSmax</link>(idI4CSmax);
+733 
+734 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;PU-Vdd&#32;(V)</emphasis>
+735 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;idVdd&#32;=&#32;0;
+736 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pu.<link linkend="_class_processing_unit_1ac4ef8b2cafc7e379b4cb05e463840128">setVdd</link>(idVdd);
+737 
+738 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;PU-Idd&#32;(A)</emphasis>
+739 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;idIdd&#32;=&#32;0;
+740 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pu.<link linkend="_class_processing_unit_1a12212762fb57a5b582782c66861443fc">setIdd</link>(idIdd);
+741 
+742 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;PU-overheadCS&#32;(us)</emphasis>
+743 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;idOver&#32;=&#32;0;
+744 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pu.<link linkend="_class_processing_unit_1a4c38556d47f2cd40adc4092b09dba992">setOverheadCS</link>(sc_time((<emphasis role="keywordtype">int</emphasis>)idOver,&#32;SC_US));
+745 
+746 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vpu.push_back(pu);
+747 
+748 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+749 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bb.<link linkend="_class_basic_block_1a4cbb966d0ce3b7364877cf6e46e33672">setProcessor</link>(vpu);
+750 
+751 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;LOCAL&#32;MEMORY</emphasis>
+752 
+753 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//CODE&#32;SIZE</emphasis>
+754 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bb.<link linkend="_class_basic_block_1a14bbb26476609a17b226400d2fd8ec05">setCodeSize</link>(0);
+755 
+756 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//DATA&#32;SIZE</emphasis>
+757 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bb.<link linkend="_class_basic_block_1a9f71209e93288e8eb82311fe5961e2ff">setDataSize</link>(0);
+758 
+759 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//eQG</emphasis>
+760 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bb.<link linkend="_class_basic_block_1aa3a9be4f5f76e76b91e5a3a009f95f44">setEqG</link>(0);
+761 
+762 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Free&#32;Running&#32;time</emphasis>
+763 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;lmFreeRunningTime&#32;=&#32;0;
+764 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bb.<link linkend="_class_basic_block_1aee9fb07de76f430ec78e48e85c3d5fd9">setFRT</link>(lmFreeRunningTime);
+765 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vbb.push_back(bb);
+766 &#32;&#32;&#32;&#32;}
+767 
+768 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;vbb;
+769 }
+</programlisting><para>
+References NBB, ProcessingUnit::setCC4S(), BasicBlock::setCodeSize(), BasicBlock::setDataSize(), BasicBlock::setEqG(), ProcessingUnit::setFrequency(), BasicBlock::setFRT(), ProcessingUnit::setI4CSmax(), ProcessingUnit::setI4CSmin(), ProcessingUnit::setId(), BasicBlock::setId(), ProcessingUnit::setIdd(), ProcessingUnit::setISA(), ProcessingUnit::setMIPS(), ProcessingUnit::setName(), BasicBlock::setName(), ProcessingUnit::setOverheadCS(), ProcessingUnit::setPower(), BasicBlock::setProcessor(), ProcessingUnit::setProcessorType(), BasicBlock::setType(), and ProcessingUnit::setVdd().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_system_manager_a77bb622cef7c79dab7463d02a2125542_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_system_manager_1a98b6400619bc75fc9333426b38b1d24b"/>    <section>
+    <title>generateChannelInstances()</title>
+<indexterm><primary>generateChannelInstances</primary><secondary>SystemManager</secondary></indexterm>
+<indexterm><primary>SystemManager</primary><secondary>generateChannelInstances</secondary></indexterm>
+<para><computeroutput>vector&lt; <link linkend="_class_channel">Channel</link> &gt; SystemManager::generateChannelInstances ( )</computeroutput></para><para>
+Definition at line 198 of file SystemManager.cpp.</para>
+<programlisting>199 {
+200 &#32;&#32;&#32;&#32;vector&lt;Channel&gt;&#32;vch;
+201 
+202 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;parsing&#32;xml&#32;file</emphasis>
+203 
+204 &#32;&#32;&#32;&#32;xml_document&#32;myDoc;
+205 &#32;&#32;&#32;&#32;xml_parse_result&#32;myResult&#32;=&#32;myDoc.load_file(<link linkend="_group__firfirgcd__define__group_1ga796bd7c6ba2e59281760fb155c6287e8">APPLICATION</link>);
+206 &#32;&#32;&#32;&#32;xml_node&#32;instancesLL&#32;=&#32;myDoc.child(<emphasis role="stringliteral">&quot;instancesLL&quot;</emphasis>);
+207 
+208 &#32;&#32;&#32;&#32;<emphasis role="comment">//channel&#32;parameters</emphasis>
+209 
+210 &#32;&#32;&#32;&#32;xml_node_iterator&#32;seqChannel_it;
+211 
+212 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(seqChannel_it=instancesLL.begin();&#32;seqChannel_it!=instancesLL.end();&#32;++seqChannel_it){
+213 
+214 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;xml_node_iterator&#32;channel_node_it&#32;=&#32;seqChannel_it-&gt;begin();
+215 
+216 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_channel">Channel</link>&#32;ch;
+217 
+218 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>*&#32;temp;
+219 
+220 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;CH-NAME</emphasis>
+221 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;name&#32;=&#32;channel_node_it-&gt;child_value();
+222 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ch.<link linkend="_class_channel_1a0a74f31ad2fd5c1bb1af019313e510c6">setName</link>(name);
+223 
+224 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;CH-ID</emphasis>
+225 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;channel_node_it++;
+226 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;temp&#32;=&#32;(<emphasis role="keywordtype">char</emphasis>*)&#32;channel_node_it-&gt;child_value();
+227 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;&#32;<emphasis role="keywordtype">id</emphasis>&#32;=&#32;atoi(temp);
+228 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ch.<link linkend="_class_channel_1a12e1cdd1b9887f1ed483d778772bfc53">setId</link>(<emphasis role="keywordtype">id</emphasis>);
+229 
+230 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;writer&#32;ID</emphasis>
+231 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;channel_node_it++;
+232 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;temp&#32;=&#32;(<emphasis role="keywordtype">char</emphasis>*)&#32;channel_node_it-&gt;child_value();
+233 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;&#32;w_id&#32;=&#32;atoi(temp);
+234 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ch.<link linkend="_class_channel_1af9e34fe60361f6e0c234e691d9d2824d">setW_id</link>(w_id);
+235 
+236 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;reader&#32;ID</emphasis>
+237 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;channel_node_it++;
+238 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;temp&#32;=&#32;(<emphasis role="keywordtype">char</emphasis>*)&#32;channel_node_it-&gt;child_value();
+239 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;&#32;r_id&#32;=&#32;atoi(temp);
+240 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ch.<link linkend="_class_channel_1a87fe96b999c9503c2a8839ee6498f256">setR_id</link>(r_id);
+241 
+242 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;CH-width&#32;(logical&#32;width)</emphasis>
+243 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;channel_node_it++;
+244 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;temp&#32;=&#32;(<emphasis role="keywordtype">char</emphasis>*)&#32;channel_node_it-&gt;child_value();
+245 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;&#32;width&#32;=&#32;atoi(temp);
+246 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ch.<link linkend="_class_channel_1a448e2f0beb2b7ce2a02a19e2eaf17d55">setWidth</link>(width);
+247 
+248 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ch.<link linkend="_class_channel_1adb8356f7bba44722ed6923684b8fdd7f">setNum</link>(0);
+249 
+250 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vch.push_back(ch);
+251 
+252 &#32;&#32;&#32;&#32;}
+253 
+254 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;vch;
+255 }
+</programlisting><para>
+References APPLICATION, Channel::setId(), Channel::setName(), Channel::setNum(), Channel::setR_id(), Channel::setW_id(), and Channel::setWidth().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_system_manager_a98b6400619bc75fc9333426b38b1d24b_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_system_manager_1a056fabdd037cf3a1c2e6e20764784159"/>    <section>
+    <title>generatePhysicalLinkInstances()</title>
+<indexterm><primary>generatePhysicalLinkInstances</primary><secondary>SystemManager</secondary></indexterm>
+<indexterm><primary>SystemManager</primary><secondary>generatePhysicalLinkInstances</secondary></indexterm>
+<para><computeroutput>vector&lt; <link linkend="_class_physical_link">PhysicalLink</link> &gt; SystemManager::generatePhysicalLinkInstances ( )</computeroutput></para><para>
+Definition at line 854 of file SystemManager.cpp.</para>
+<programlisting>855 {
+856 &#32;&#32;&#32;&#32;vector&lt;PhysicalLink&gt;&#32;<link linkend="_class_system_manager_1af28a1744a2d964a7047c31c6a5f1644a">VPL</link>;
+857 
+858 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;<link linkend="_group__firfirgcd__define__group_1ga76cc414b5d33950d0cb6ceea199d93de">NPL</link>;&#32;i++){
+859 
+860 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_physical_link">PhysicalLink</link>&#32;pl;
+861 
+862 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pl.<link linkend="_class_physical_link_1a4c1ca22f348862858653c4f02496218f">setId</link>(i);
+863 
+864 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pl.<link linkend="_class_physical_link_1a720451548bfac94a60eca8c8f47d343b">setName</link>(<emphasis role="stringliteral">&quot;dummy&quot;</emphasis>);
+865 
+866 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pl.<link linkend="_class_physical_link_1a38f205a4a97e9869b93944e0f820f11b">physical_width</link>=1;&#32;<emphasis role="comment">//&#32;width&#32;of&#32;the&#32;physical&#32;link</emphasis>
+867 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pl.<link linkend="_class_physical_link_1a90cb0e1c2a0d9951899b587d6d2b247a">tcomm</link>=sc_time(0,&#32;SC_MS);&#32;<emphasis role="comment">//&#32;LP:&#32;(bandwidth&#32;/&#32;phisycal_widht&#32;=&#32;1/sec=hz&#32;(inverto))&#32;(&#32;per&#32;1000)&#32;&#32;(non&#32;sforare&#32;i&#32;5&#32;ms)</emphasis>
+868 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pl.<link linkend="_class_physical_link_1a2f2ff97a12a4c37da1892f0fc2e855b2">tacomm</link>=sc_time(0,&#32;SC_MS);&#32;<emphasis role="comment">//&#32;LP:&#32;tcomm&#32;*&#32;K&#32;(es:K=1)</emphasis>
+869 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pl.<link linkend="_class_physical_link_1ac441e379b59ecb00c48ebef53f2d6b75">bandwidth</link>=0;&#32;<emphasis role="comment">//&#32;bandwidth&#32;in&#32;bit/s</emphasis>
+870 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pl.<link linkend="_class_physical_link_1a2c8e1cba265b4e099ac6b07c7839de0e">a2</link>=0;&#32;<emphasis role="comment">//&#32;a2&#32;coefficient&#32;of&#32;energy&#32;curve</emphasis>
+871 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pl.<link linkend="_class_physical_link_1a46367b48d7ab1d5c06dd2051a6d5a32f">a1</link>=0;&#32;<emphasis role="comment">//&#32;a1&#32;coefficient&#32;of&#32;energy&#32;curve</emphasis>
+872 
+873 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_system_manager_1af28a1744a2d964a7047c31c6a5f1644a">VPL</link>.push_back(pl);
+874 &#32;&#32;&#32;&#32;}
+875 
+876 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_system_manager_1af28a1744a2d964a7047c31c6a5f1644a">VPL</link>;
+877 }
+</programlisting><para>
+References PhysicalLink::a1, PhysicalLink::a2, PhysicalLink::bandwidth, NPL, PhysicalLink::physical_width, PhysicalLink::setId(), PhysicalLink::setName(), PhysicalLink::tacomm, and PhysicalLink::tcomm.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_system_manager_a056fabdd037cf3a1c2e6e20764784159_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_system_manager_1a545df7d9bd60c4d42797a7233a1f4d61"/>    <section>
+    <title>generateProcessInstances()</title>
+<indexterm><primary>generateProcessInstances</primary><secondary>SystemManager</secondary></indexterm>
+<indexterm><primary>SystemManager</primary><secondary>generateProcessInstances</secondary></indexterm>
+<para><computeroutput>vector&lt; <link linkend="_class_process">Process</link> &gt; SystemManager::generateProcessInstances ( )</computeroutput></para><para>
+Definition at line 91 of file SystemManager.cpp.</para>
+<programlisting>91 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+92 
+93 &#32;&#32;&#32;&#32;vector&lt;Process&gt;&#32;vps2;
+94 
+95 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;exp_id&#32;=&#32;0;
+96 
+97 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;processId;
+98 
+99 &#32;&#32;&#32;&#32;pugi::xml_document&#32;doc;
+100 &#32;&#32;&#32;&#32;pugi::xml_parse_result&#32;result&#32;=&#32;doc.load_file(<link linkend="_group__firfirgcd__define__group_1ga796bd7c6ba2e59281760fb155c6287e8">APPLICATION</link>);
+101 
+102 &#32;&#32;&#32;&#32;xml_node&#32;instancesPS2&#32;=&#32;doc.child(<emphasis role="stringliteral">&quot;instancesPS&quot;</emphasis>);
+103 
+104 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(pugi::xml_node&#32;xn_process&#32;=&#32;instancesPS2.first_child();&#32;!xn_process.empty();&#32;xn_process&#32;=&#32;xn_process.next_sibling()){
+105 
+106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_process">Process</link>&#32;pi;
+107 
+108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Process&#32;Name</emphasis>
+109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pi.<link linkend="_class_process_1ad1d3a2fd1af703ff1b986512d675660b">setName</link>(xn_process.child_value(<emphasis role="stringliteral">&quot;name&quot;</emphasis>));
+110 
+111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Process&#32;id</emphasis>
+112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;processId&#32;=&#32;atoi((<emphasis role="keywordtype">char</emphasis>*)&#32;xn_process.child_value(<emphasis role="stringliteral">&quot;id&quot;</emphasis>));
+113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pi.<link linkend="_class_process_1ac2d4d655dc9fe6317889938783ec2848">setId</link>(processId);
+114 
+115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Process&#32;Priority</emphasis>
+116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pi.<link linkend="_class_process_1a011879a0a11d6bacd3a6d768293ab0d2">setPriority</link>(atoi((<emphasis role="keywordtype">char</emphasis>*)&#32;xn_process.child_value(<emphasis role="stringliteral">&quot;priority&quot;</emphasis>)));
+117 
+118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Process&#32;Criticality</emphasis>
+119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pi.<link linkend="_class_process_1a43c73ef0483b869e4231830eeff46d48">setCriticality</link>(atoi((<emphasis role="keywordtype">char</emphasis>*)&#32;xn_process.child_value(<emphasis role="stringliteral">&quot;criticality&quot;</emphasis>)));
+120 
+121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Process&#32;eqGate&#32;(HW&#32;size)</emphasis>
+122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;xml_node&#32;eqGate&#32;=&#32;xn_process.child(<emphasis role="stringliteral">&quot;eqGate&quot;</emphasis>);
+123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pi.<link linkend="_class_process_1a74caf223f4391e3145eee5899b30a09b">setEqGate</link>((<emphasis role="keywordtype">float</emphasis>)eqGate.attribute(<emphasis role="stringliteral">&quot;value&quot;</emphasis>).as_int());
+124 
+125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Process&#32;dataType</emphasis>
+126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pi.<link linkend="_class_process_1a3aaefcd2768bd481e22228851b161546">setDataType</link>(atoi((<emphasis role="keywordtype">char</emphasis>*)&#32;xn_process.child_value(<emphasis role="stringliteral">&quot;dataType&quot;</emphasis>)));
+127 
+128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Process&#32;MemSize&#32;(SW&#32;Size)</emphasis>
+129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;xml_node&#32;memSize&#32;=&#32;xn_process.child(<emphasis role="stringliteral">&quot;memSize&quot;</emphasis>);
+130 
+131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;xml_node&#32;codeSize&#32;=&#32;memSize.child(<emphasis role="stringliteral">&quot;codeSize&quot;</emphasis>);
+132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(pugi::xml_node&#32;processorModel&#32;=&#32;codeSize.child(<emphasis role="stringliteral">&quot;processorModel&quot;</emphasis>);&#32;processorModel;&#32;processorModel&#32;=&#32;processorModel.next_sibling())&#32;{
+133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pi.<link linkend="_class_process_1af55a4774a1519b84988e4e3ec3fcc7a2">setCodeSize</link>(&#32;processorModel.attribute(<emphasis role="stringliteral">&quot;name&quot;</emphasis>).as_string(),&#32;processorModel.attribute(<emphasis role="stringliteral">&quot;value&quot;</emphasis>).as_int()&#32;);
+134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+135 
+136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;xml_node&#32;dataSize&#32;=&#32;memSize.child(<emphasis role="stringliteral">&quot;dataSize&quot;</emphasis>);
+137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(pugi::xml_node&#32;processorModel&#32;=&#32;dataSize.child(<emphasis role="stringliteral">&quot;processorModel&quot;</emphasis>);&#32;processorModel;&#32;processorModel&#32;=&#32;processorModel.next_sibling())&#32;{
+138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pi.<link linkend="_class_process_1a268bc20c1c875e94e50c5d6d1ad9ec06">setDataSize</link>(&#32;processorModel.attribute(<emphasis role="stringliteral">&quot;name&quot;</emphasis>).as_string(),&#32;processorModel.attribute(<emphasis role="stringliteral">&quot;value&quot;</emphasis>).as_int()&#32;);
+139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+140 
+141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Process&#32;Affinity</emphasis>
+142 
+143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;xml_node&#32;affinity&#32;=&#32;xn_process.child(<emphasis role="stringliteral">&quot;affinity&quot;</emphasis>);
+144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(pugi::xml_node&#32;processorType&#32;=&#32;affinity.child(<emphasis role="stringliteral">&quot;processorType&quot;</emphasis>);&#32;processorType;&#32;processorType&#32;=&#32;processorType.next_sibling())&#32;{
+145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;processorType_name&#32;=&#32;processorType.attribute(<emphasis role="stringliteral">&quot;name&quot;</emphasis>).as_string();
+146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;affinity_value&#32;=&#32;processorType.attribute(<emphasis role="stringliteral">&quot;value&quot;</emphasis>).as_float();
+147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pi.<link linkend="_class_process_1a6f1fdb3ef348ebe19f1fd44671edfed8">setAffinity</link>(processorType_name,&#32;affinity_value);
+148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+149 
+150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Process&#32;Concurrency</emphasis>
+151 
+152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;xml_node&#32;concurrency&#32;=&#32;xn_process.child(<emphasis role="stringliteral">&quot;concurrency&quot;</emphasis>);
+153 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(pugi::xml_node&#32;xn_cprocessId&#32;=&#32;concurrency.child(<emphasis role="stringliteral">&quot;processId&quot;</emphasis>);&#32;xn_cprocessId;&#32;xn_cprocessId&#32;=&#32;xn_cprocessId.next_sibling())&#32;{
+154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;process_id_n&#32;=&#32;xn_cprocessId.attribute(<emphasis role="stringliteral">&quot;id&quot;</emphasis>).as_int();
+155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;process_concurrency_value&#32;=&#32;xn_cprocessId.attribute(<emphasis role="stringliteral">&quot;value&quot;</emphasis>).as_float();
+156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pi.<link linkend="_class_process_1a8fb82ba026f5530a9f9724fbf1142aba">setConcurrency</link>(process_id_n,&#32;process_concurrency_value);
+157 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+158 
+159 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Process&#32;Load</emphasis>
+160 
+161 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;xml_node&#32;load&#32;=&#32;xn_process.child(<emphasis role="stringliteral">&quot;load&quot;</emphasis>);
+162 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(pugi::xml_node&#32;processorId&#32;=&#32;load.child(<emphasis role="stringliteral">&quot;processorId&quot;</emphasis>);&#32;processorId;&#32;processorId&#32;=&#32;processorId.next_sibling())&#32;{
+163 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;processor_id_n&#32;=&#32;processorId.attribute(<emphasis role="stringliteral">&quot;id&quot;</emphasis>).as_int();
+164 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;process_load_value&#32;=&#32;processorId.attribute(<emphasis role="stringliteral">&quot;value&quot;</emphasis>).as_float();
+165 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pi.<link linkend="_class_process_1a9d9cfc179387b12e2bb1cdc214b6a9d8">setLoad</link>(processor_id_n,&#32;process_load_value);
+166 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+167 
+168 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Process&#32;time&#32;(init)</emphasis>
+169 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pi.<link linkend="_class_process_1a47be8c61a3a5460452753dc98b68389f">processTime</link>&#32;=&#32;sc_time(0,&#32;SC_MS);
+170 
+171 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Process&#32;energy&#32;(init)</emphasis>
+172 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pi.<link linkend="_class_process_1a2991ac041e868df69f3f394ee91791cb">setEnergy</link>(0);
+173 
+174 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Process&#32;Communication</emphasis>
+175 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;TO&#32;DO</emphasis>
+176 
+177 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(processId&#32;==&#32;exp_id){
+178 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vps2.push_back(pi);
+179 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;exp_id++;
+180 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+181 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;XML&#32;for&#32;application&#32;is&#32;corrupted\n&quot;</emphasis>;
+182 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;exit(11);
+183 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+184 
+185 &#32;&#32;&#32;&#32;}
+186 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(exp_id&#32;!=&#32;<link linkend="_group__firfirgcd__define__group_1gad258142492454320138f79a00101f1f8">NPS</link>){
+187 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;XML&#32;for&#32;application&#32;is&#32;corrupted&#32;(NPS)\n&quot;</emphasis>;
+188 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;exit(11);
+189 &#32;&#32;&#32;&#32;}
+190 
+191 &#32;&#32;&#32;&#32;doc.reset();
+192 
+193 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;vps2;
+194 
+195 }
+</programlisting><para>
+References APPLICATION, NPS, Process::processTime, Process::setAffinity(), Process::setCodeSize(), Process::setConcurrency(), Process::setCriticality(), Process::setDataSize(), Process::setDataType(), Process::setEnergy(), Process::setEqGate(), Process::setId(), Process::setLoad(), Process::setName(), and Process::setPriority().</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_system_manager_a545df7d9bd60c4d42797a7233a1f4d61_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_system_manager_1af468620e73667d65dbb7db93b78712a9"/>    <section>
+    <title>getAllocationPS_BB()</title>
+<indexterm><primary>getAllocationPS_BB</primary><secondary>SystemManager</secondary></indexterm>
+<indexterm><primary>SystemManager</primary><secondary>getAllocationPS_BB</secondary></indexterm>
+<para><computeroutput>vector&lt; int &gt; SystemManager::getAllocationPS_BB (int bb_id)</computeroutput></para><para>
+Definition at line 273 of file SystemManager.cpp.</para>
+<programlisting>274 {
+275 &#32;&#32;&#32;&#32;vector&lt;int&gt;&#32;pu_alloc;
+276 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;j&#32;=&#32;2;&#32;j&#32;&lt;&#32;<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>.size();&#32;j++)&#32;<emphasis role="comment">//&#32;0&#32;and&#32;1&#32;are&#32;the&#32;testbench</emphasis>
+277 &#32;&#32;&#32;&#32;{
+278 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[j]&#32;==&#32;<link linkend="_group__firfirgcd__define__group_1gaaa53553033df32820178982628a60cae">bb_id</link>)&#32;pu_alloc.push_back(j);
+279 &#32;&#32;&#32;&#32;}
+280 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;pu_alloc;
+281 }
+</programlisting>    </section><anchor xml:id="_class_system_manager_1ae7fbae6170e9f5e8aca0c436221dcf41"/>    <section>
+    <title>getFRL()</title>
+<indexterm><primary>getFRL</primary><secondary>SystemManager</secondary></indexterm>
+<indexterm><primary>SystemManager</primary><secondary>getFRL</secondary></indexterm>
+<para><computeroutput>float * SystemManager::getFRL ( )</computeroutput></para><para>
+Definition at line 1241 of file SystemManager.cpp.</para>
+<programlisting>1241 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+1242 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_system_manager_1a7f06326402d0738cb87a1c03bf57f5c7">FRL</link>;
+1243 &#32;&#32;&#32;&#32;}
+</programlisting><para>
+Referenced by sc_main().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_system_manager_ae7fbae6170e9f5e8aca0c436221dcf41_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_system_manager_1ae0465f057cd9ac9f5c6d05befc85ff15"/>    <section>
+    <title>getFRT()</title>
+<indexterm><primary>getFRT</primary><secondary>SystemManager</secondary></indexterm>
+<indexterm><primary>SystemManager</primary><secondary>getFRT</secondary></indexterm>
+<para><computeroutput>sc_time SystemManager::getFRT ( )</computeroutput></para><para>
+Definition at line 1226 of file SystemManager.cpp.</para>
+<programlisting>1226 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+1227 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_system_manager_1a69ec2821a8a92a69fbb5cb0f789a64ca">FRT</link>;
+1228 &#32;&#32;&#32;&#32;}
+</programlisting>    </section><anchor xml:id="_class_system_manager_1a96ab5341b1af75dfcd59b14b02fa0bc7"/>    <section>
+    <title>increaseEstimatedEnergy()</title>
+<indexterm><primary>increaseEstimatedEnergy</primary><secondary>SystemManager</secondary></indexterm>
+<indexterm><primary>SystemManager</primary><secondary>increaseEstimatedEnergy</secondary></indexterm>
+<para><computeroutput>void SystemManager::increaseEstimatedEnergy (int processId)</computeroutput></para><para>
+Definition at line 1091 of file SystemManager.cpp.</para>
+<programlisting>1092 &#32;&#32;&#32;&#32;{
+1093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_system_manager_1adcd8ce799616b977c206401ebdefab86">VPS</link>[processId].energy&#32;+=&#32;<link linkend="_class_system_manager_1aa7e8eba2c8c064bc7e7df6ed9e9e1f53">updateEstimatedEnergy</link>(processId);&#32;<emphasis role="comment">//&#32;Cumulated&#32;sum&#32;of&#32;the&#32;statement&#32;execution&#32;energy</emphasis>
+1094 &#32;&#32;&#32;&#32;}
+</programlisting>    </section><anchor xml:id="_class_system_manager_1a0d692288dbf1e1a75a331408cd4f2210"/>    <section>
+    <title>increaseSimulatedTime()</title>
+<indexterm><primary>increaseSimulatedTime</primary><secondary>SystemManager</secondary></indexterm>
+<indexterm><primary>SystemManager</primary><secondary>increaseSimulatedTime</secondary></indexterm>
+<para><computeroutput>void SystemManager::increaseSimulatedTime (int processId)</computeroutput></para><para>
+Definition at line 1085 of file SystemManager.cpp.</para>
+<programlisting>1086 &#32;&#32;&#32;&#32;{
+1087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_system_manager_1adcd8ce799616b977c206401ebdefab86">VPS</link>[processId].processTime&#32;+=&#32;<link linkend="_class_system_manager_1aeaf3506efda2897408fd8d5273e871aa">updateSimulatedTime</link>(processId);&#32;<emphasis role="comment">//&#32;Cumulated&#32;sum&#32;of&#32;the&#32;statement&#32;execution&#32;time</emphasis>
+1088 &#32;&#32;&#32;&#32;}
+</programlisting>    </section><anchor xml:id="_class_system_manager_1a81c4c7415d63b21f9ae15fd5594b7692"/>    <section>
+    <title>increaseTimer()</title>
+<indexterm><primary>increaseTimer</primary><secondary>SystemManager</secondary></indexterm>
+<indexterm><primary>SystemManager</primary><secondary>increaseTimer</secondary></indexterm>
+<para><computeroutput>void SystemManager::increaseTimer (int processId, sc_time delta)</computeroutput></para><para>
+Definition at line 1097 of file SystemManager.cpp.</para>
+<programlisting>1098 &#32;&#32;&#32;&#32;{
+1099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_system_manager_1adcd8ce799616b977c206401ebdefab86">VPS</link>[processId].processTime&#32;+=&#32;delta;&#32;<emphasis role="comment">//&#32;Cumulated&#32;sum&#32;of&#32;the&#32;statement&#32;execution&#32;time</emphasis>
+1100 &#32;&#32;&#32;&#32;}
+</programlisting>    </section><anchor xml:id="_class_system_manager_1acf868dd1af35168e9e37a62b1a03780b"/>    <section>
+    <title>loadEst()</title>
+<indexterm><primary>loadEst</primary><secondary>SystemManager</secondary></indexterm>
+<indexterm><primary>SystemManager</primary><secondary>loadEst</secondary></indexterm>
+<para><computeroutput>float * SystemManager::loadEst (sc_time FRT_n)</computeroutput></para><para>
+Definition at line 1234 of file SystemManager.cpp.</para>
+<programlisting>1234 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+1235 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keywordtype">unsigned</emphasis>&#32;i&#32;=2;&#32;i&lt;<link linkend="_class_system_manager_1adcd8ce799616b977c206401ebdefab86">VPS</link>.size();&#32;i++){
+1236 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_system_manager_1a7f06326402d0738cb87a1c03bf57f5c7">FRL</link>[i]&#32;=&#32;(float)&#32;((<link linkend="_class_system_manager_1adcd8ce799616b977c206401ebdefab86">VPS</link>[i].processTime/<link linkend="_class_system_manager_1adcd8ce799616b977c206401ebdefab86">VPS</link>[i].profiling)/(FRT_n/<link linkend="_class_system_manager_1adcd8ce799616b977c206401ebdefab86">VPS</link>[i].profiling));&#32;<emphasis role="comment">//</emphasis>
+1237 &#32;&#32;&#32;&#32;}
+1238 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_system_manager_1a7f06326402d0738cb87a1c03bf57f5c7">FRL</link>;
+1239 &#32;&#32;&#32;&#32;}
+</programlisting><para>
+Referenced by sc_main().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_system_manager_acf868dd1af35168e9e37a62b1a03780b_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_system_manager_1a027f130077f51033fad36ccaaeda2c57"/>    <section>
+    <title>mappingCH()</title>
+<indexterm><primary>mappingCH</primary><secondary>SystemManager</secondary></indexterm>
+<indexterm><primary>SystemManager</primary><secondary>mappingCH</secondary></indexterm>
+<para><computeroutput>void SystemManager::mappingCH ( )</computeroutput></para><para>
+Definition at line 967 of file SystemManager.cpp.</para>
+<programlisting>967 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+968 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;j&#32;=&#32;0;&#32;j&#32;&lt;&#32;<link linkend="_group__firfirgcd__define__group_1ga967ca22c6c7be038e1092147ce04f258">NCH</link>;&#32;j++){
+969 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;linkId&#32;=&#32;0;
+970 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_system_manager_1ab75b55327c942c6950f67c14ba9dea08">allocationCH_PL</link>.push_back(linkId);
+971 &#32;&#32;&#32;&#32;}
+972 }
+</programlisting><para>
+References NCH.</para>
+    </section><anchor xml:id="_class_system_manager_1a03ae9f4865c6ba14f9212ca4711d30a9"/>    <section>
+    <title>mappingPS()</title>
+<indexterm><primary>mappingPS</primary><secondary>SystemManager</secondary></indexterm>
+<indexterm><primary>SystemManager</primary><secondary>mappingPS</secondary></indexterm>
+<para><computeroutput>void SystemManager::mappingPS ( )</computeroutput></para><para>
+Definition at line 921 of file SystemManager.cpp.</para>
+<programlisting>921 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+922 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;j&#32;=&#32;0;&#32;j&lt;<link linkend="_group__firfirgcd__define__group_1gad258142492454320138f79a00101f1f8">NPS</link>;&#32;j++){
+923 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;bbId&#32;=&#32;0;
+924 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>.push_back(bbId);
+925 &#32;&#32;&#32;&#32;}
+926 }
+</programlisting><para>
+References NPS.</para>
+    </section><anchor xml:id="_class_system_manager_1abb13ab99346bb9a9633852a797e03cf7"/>    <section>
+    <title>PS_Profiling()</title>
+<indexterm><primary>PS_Profiling</primary><secondary>SystemManager</secondary></indexterm>
+<indexterm><primary>SystemManager</primary><secondary>PS_Profiling</secondary></indexterm>
+<para><computeroutput>void SystemManager::PS_Profiling (int processId)</computeroutput></para><para>
+Definition at line 261 of file SystemManager.cpp.</para>
+<programlisting>262 {
+263 &#32;&#32;&#32;&#32;<link linkend="_class_system_manager_1adcd8ce799616b977c206401ebdefab86">VPS</link>[processId].profiling++;
+264 }
+</programlisting>    </section><anchor xml:id="_class_system_manager_1a2babb39c1fc59e1d02782e3e39ea9412"/>    <section>
+    <title>setFRT()</title>
+<indexterm><primary>setFRT</primary><secondary>SystemManager</secondary></indexterm>
+<indexterm><primary>SystemManager</primary><secondary>setFRT</secondary></indexterm>
+<para><computeroutput>void SystemManager::setFRT (sc_time x)</computeroutput></para><para>
+Definition at line 1230 of file SystemManager.cpp.</para>
+<programlisting>1230 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+1231 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_system_manager_1a69ec2821a8a92a69fbb5cb0f789a64ca">FRT</link>&#32;=&#32;x;
+1232 &#32;&#32;&#32;&#32;}
+</programlisting><para>
+Referenced by sc_main().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_system_manager_a2babb39c1fc59e1d02782e3e39ea9412_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_system_manager_1aa7e8eba2c8c064bc7e7df6ed9e9e1f53"/>    <section>
+    <title>updateEstimatedEnergy()</title>
+<indexterm><primary>updateEstimatedEnergy</primary><secondary>SystemManager</secondary></indexterm>
+<indexterm><primary>SystemManager</primary><secondary>updateEstimatedEnergy</secondary></indexterm>
+<para><computeroutput>float SystemManager::updateEstimatedEnergy (int processId)</computeroutput></para><para>
+Definition at line 1005 of file SystemManager.cpp.</para>
+<programlisting>1006 &#32;&#32;&#32;&#32;{
+1007 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;J4CS;
+1008 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;P;
+1009 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(<link linkend="_group__firfirgcd__define__group_1gacf471d2e884ab94235db48a5fd3ce252">energyComputation</link>&#32;==&#32;<emphasis role="stringliteral">&quot;EPC&quot;</emphasis>)&#32;{
+1010 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;EPC&#32;--&gt;&#32;J4CS&#32;=&#32;CC4CSaff&#32;*&#32;EPC&#32;=&#32;CC4CSaff&#32;*&#32;(P/f)</emphasis>
+1011 
+1012 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Id&#32;representing&#32;process&#32;dominant&#32;datatype&#32;</emphasis>
+1013 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;dataType&#32;=&#32;<link linkend="_class_system_manager_1adcd8ce799616b977c206401ebdefab86">VPS</link>[processId].getDataType();
+1014 
+1015 
+1016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//I&#32;HAVE&#32;TO&#32;ADD&#32;A&#32;LOOP&#32;IN&#32;ORDER&#32;TO&#32;TAKE&#32;THE&#32;PARAMETERS&#32;OF&#32;EACH&#32;PROCESSOR&#32;(?)&#32;**********************</emphasis>
+1017 
+1018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;CC4Smin&#32;=&#32;<link linkend="_class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32">VBB</link>[<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[processId]].getProcessors()[0].getCC4S()[dataType][0];&#32;<emphasis role="comment">//&#32;Average/min&#32;number&#32;of&#32;clock&#32;cycles&#32;needed&#32;by&#32;the&#32;PU&#32;to&#32;execute&#32;a&#32;C&#32;statement</emphasis>
+1019 
+1020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//float&#32;CC4Smin&#32;=&#32;VBB[allocationPS_BB[processId]].getCC4S()[dataType][0];&#32;//&#32;Average/min&#32;number&#32;of&#32;clock&#32;cycles&#32;needed&#32;by&#32;the&#32;PU&#32;to&#32;execute&#32;a&#32;C&#32;statement</emphasis>
+1021 
+1022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//float&#32;CC4Smax&#32;=&#32;VBB[allocationPS_BB[processId]].getCC4S()[dataType][1];</emphasis>
+1023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;CC4Smax&#32;=&#32;<link linkend="_class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32">VBB</link>[<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[processId]].getProcessors()[0].getCC4S()[dataType][1];<emphasis role="comment">//&#32;Average/max&#32;number&#32;of&#32;clock&#32;cycles&#32;needed&#32;by&#32;the&#32;PU&#32;to&#32;execute&#32;a&#32;C&#32;statement</emphasis>
+1024 
+1025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Affinity-based&#32;interpolation&#32;</emphasis>
+1026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;CC4Saff&#32;=&#32;CC4Smin&#32;+&#32;((CC4Smax-CC4Smin)*(1-<link linkend="_class_system_manager_1adcd8ce799616b977c206401ebdefab86">VPS</link>[processId].getAffinityByName(<link linkend="_class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32">VBB</link>[<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[processId]].getProcessors()[0].getProcessorType())));
+1027 
+1028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(this-&gt;<link linkend="_class_system_manager_1a21d2bb74e4472f99ec04243168e7964e">checkSPP</link>(processId))&#32;{
+1029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;if&#32;the&#32;process&#32;is&#32;on&#32;a&#32;SPP&#32;(HW)&#32;--&gt;&#32;P&#32;=&#32;Vdd&#32;*&#32;Idd&#32;(V*A&#32;=&#32;W)</emphasis>
+1030 
+1031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;P&#32;=&#32;<link linkend="_class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32">VBB</link>[<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[processId]].getProcessors()[0].getVdd()&#32;*&#32;<link linkend="_class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32">VBB</link>[<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[processId]].getProcessors()[0].getIdd();
+1032 
+1033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+1034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;if&#32;the&#32;process&#32;is&#32;on&#32;a&#32;GPP/DSP&#32;(SW)&#32;--&gt;&#32;P&#32;(W)</emphasis>
+1035 
+1036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;P&#32;=&#32;<link linkend="_class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32">VBB</link>[<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[processId]].getProcessors()[0].getPower();
+1037 
+1038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+1039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;EPC&#32;=&#32;P/f&#32;(W/MHz&#32;=&#32;uJ)</emphasis>
+1040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;EPC&#32;=&#32;P&#32;/&#32;<link linkend="_class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32">VBB</link>[<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[processId]].getProcessors()[0].getFrequency();
+1041 
+1042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;J4CS&#32;=&#32;CC4Saff&#32;*&#32;EPC;&#32;<emphasis role="comment">//&#32;uJ</emphasis>
+1043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{&#32;
+1044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;EPI&#32;</emphasis>
+1045 
+1046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(this-&gt;<link linkend="_class_system_manager_1a21d2bb74e4472f99ec04243168e7964e">checkSPP</link>(processId))&#32;{
+1047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;if&#32;the&#32;process&#32;is&#32;on&#32;a&#32;SPP&#32;(HW)&#32;--&gt;&#32;J4CS&#32;=&#32;CC4CSaff&#32;*&#32;P&#32;*&#32;(1/f)</emphasis>
+1048 
+1049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Id&#32;representing&#32;process&#32;dominant&#32;datatype&#32;</emphasis>
+1050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;dataType&#32;=&#32;<link linkend="_class_system_manager_1adcd8ce799616b977c206401ebdefab86">VPS</link>[processId].getDataType();&#32;&#32;&#32;&#32;
+1051 
+1052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;CC4Smin&#32;=&#32;<link linkend="_class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32">VBB</link>[<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[processId]].getProcessors()[0].getCC4S()[dataType][0];&#32;<emphasis role="comment">//&#32;Average/min&#32;number&#32;of&#32;clock&#32;cycles&#32;needed&#32;by&#32;the&#32;PU&#32;to&#32;execute&#32;a&#32;C&#32;statement</emphasis>
+1053 
+1054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;CC4Smax&#32;=&#32;<link linkend="_class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32">VBB</link>[<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[processId]].getProcessors()[0].getCC4S()[dataType][1];&#32;<emphasis role="comment">//&#32;Average/max&#32;number&#32;of&#32;clock&#32;cycles&#32;needed&#32;by&#32;the&#32;PU&#32;to&#32;execute&#32;a&#32;C&#32;statement</emphasis>
+1055 
+1056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Affinity-based&#32;interpolation&#32;</emphasis>
+1057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;CC4Saff&#32;=&#32;CC4Smin&#32;+&#32;((CC4Smax-CC4Smin)*(1-<link linkend="_class_system_manager_1adcd8ce799616b977c206401ebdefab86">VPS</link>[processId].getAffinityByName(<link linkend="_class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32">VBB</link>[<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[processId]].getProcessors()[0].getProcessorType())));
+1058 
+1059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;P&#32;=&#32;Vdd&#32;*&#32;Idd&#32;(V*A&#32;=&#32;W)</emphasis>
+1060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;P&#32;=&#32;<link linkend="_class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32">VBB</link>[<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[processId]].getProcessors()[0].getVdd()&#32;*&#32;<link linkend="_class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32">VBB</link>[<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[processId]].getProcessors()[0].getIdd();
+1061 
+1062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;J4CS&#32;=&#32;CC4Saff&#32;*&#32;(P&#32;/&#32;<link linkend="_class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32">VBB</link>[<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[processId]].getProcessors()[0].getFrequency());&#32;<emphasis role="comment">//&#32;uJ</emphasis>
+1063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+1064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;if&#32;the&#32;process&#32;is&#32;on&#32;a&#32;GPP/DSP&#32;(SW)&#32;--&gt;&#32;J4CS&#32;=&#32;I4CSaff&#32;*&#32;EPI&#32;=&#32;I4CSaff&#32;*&#32;(P/MIPS)</emphasis>
+1065 
+1066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;I4CSmin&#32;=&#32;<link linkend="_class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32">VBB</link>[<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[processId]].getProcessors()[0].getI4CSmin();&#32;<emphasis role="comment">//&#32;Average/min&#32;number&#32;of&#32;assembly&#32;instructions&#32;to&#32;execute&#32;a&#32;C&#32;statement</emphasis>
+1067 
+1068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;I4CSmax&#32;=&#32;<link linkend="_class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32">VBB</link>[<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[processId]].getProcessors()[0].getI4CSmax();&#32;<emphasis role="comment">//&#32;Average/max&#32;number&#32;of&#32;assembly&#32;instructions&#32;to&#32;execute&#32;a&#32;C&#32;statement</emphasis>
+1069 
+1070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Affinity-based&#32;interpolation&#32;</emphasis>
+1071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;I4CSaff&#32;=&#32;I4CSmin&#32;+&#32;((I4CSmax-I4CSmin)*(1-<link linkend="_class_system_manager_1adcd8ce799616b977c206401ebdefab86">VPS</link>[processId].getAffinityByName(<link linkend="_class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32">VBB</link>[<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[processId]].getProcessors()[0].getProcessorType())));
+1072 
+1073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;P&#32;=&#32;<link linkend="_class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32">VBB</link>[<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[processId]].getProcessors()[0].getPower();&#32;<emphasis role="comment">//&#32;Watt</emphasis>
+1074 
+1075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;EPI&#32;=&#32;P/MIPS&#32;(uJ/instr)</emphasis>
+1076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;EPI&#32;=&#32;P&#32;/&#32;<link linkend="_class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32">VBB</link>[<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[processId]].getProcessors()[0].getMIPS();
+1077 
+1078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;J4CS&#32;=&#32;I4CSaff&#32;*&#32;EPI;&#32;<emphasis role="comment">//&#32;uJ</emphasis>
+1079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+1080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;
+1081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;J4CS;
+1082 &#32;&#32;&#32;&#32;}
+</programlisting><para>
+References energyComputation.</para>
+    </section><anchor xml:id="_class_system_manager_1aeaf3506efda2897408fd8d5273e871aa"/>    <section>
+    <title>updateSimulatedTime()</title>
+<indexterm><primary>updateSimulatedTime</primary><secondary>SystemManager</secondary></indexterm>
+<indexterm><primary>SystemManager</primary><secondary>updateSimulatedTime</secondary></indexterm>
+<para><computeroutput>sc_time SystemManager::updateSimulatedTime (int processId)</computeroutput></para><para>
+Definition at line 985 of file SystemManager.cpp.</para>
+<programlisting>986 &#32;&#32;&#32;&#32;{&#32;&#32;&#32;
+987 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Id&#32;representing&#32;process&#32;dominant&#32;datatype&#32;</emphasis>
+988 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;dataType&#32;=&#32;<link linkend="_class_system_manager_1adcd8ce799616b977c206401ebdefab86">VPS</link>[processId].getDataType();
+989 
+990 
+991 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//*********************VPU&#32;WAS&#32;CHANGED&#32;IN&#32;VBB**********************</emphasis>
+992 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;CC4Smin&#32;=&#32;<link linkend="_class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32">VBB</link>[<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[processId]].getProcessors()[0].getCC4S()[dataType][0];&#32;<emphasis role="comment">//&#32;Average/min&#32;number&#32;of&#32;clock&#32;cycles&#32;needed&#32;by&#32;the&#32;PU&#32;to&#32;execute&#32;a&#32;C&#32;statement</emphasis>
+993 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;CC4Smax&#32;=&#32;<link linkend="_class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32">VBB</link>[<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[processId]].getProcessors()[0].getCC4S()[dataType][1];&#32;<emphasis role="comment">//&#32;Average/max&#32;number&#32;of&#32;clock&#32;cycles&#32;needed&#32;by&#32;the&#32;PU&#32;to&#32;execute&#32;a&#32;C&#32;statement</emphasis>
+994 
+995 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Affinity-based&#32;interpolation&#32;and&#32;round&#32;up&#32;of&#32;CC4CSaff</emphasis>
+996 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;CC4Saff&#32;=&#32;(<emphasis role="keywordtype">unsigned</emphasis>&#32;int)&#32;ceil(CC4Smin&#32;+&#32;((CC4Smax-CC4Smin)*(1-<link linkend="_class_system_manager_1adcd8ce799616b977c206401ebdefab86">VPS</link>[processId].getAffinityByName(<link linkend="_class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32">VBB</link>[<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[processId]].getProcessors()[0].getProcessorType()))));
+997 
+998 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;frequency&#32;=&#32;<link linkend="_class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32">VBB</link>[<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[processId]].getProcessors()[0].getFrequency();&#32;<emphasis role="comment">//&#32;Frequency&#32;of&#32;the&#32;processor&#32;(MHz)</emphasis>
+999 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sc_time&#32;value((CC4Saff/(frequency*1000)),&#32;SC_MS);&#32;<emphasis role="comment">//&#32;Average&#32;time&#32;(ms)&#32;needed&#32;to&#32;execute&#32;a&#32;C&#32;statement</emphasis>
+1000 
+1001 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;value;
+1002 &#32;&#32;&#32;&#32;}
+</programlisting>    </section><anchor xml:id="_class_system_manager_1a5f16a17547d2cd543180e06e555304e7"/>    <section>
+    <title>updateXmlConCom()</title>
+<indexterm><primary>updateXmlConCom</primary><secondary>SystemManager</secondary></indexterm>
+<indexterm><primary>SystemManager</primary><secondary>updateXmlConCom</secondary></indexterm>
+<para><computeroutput>void SystemManager::updateXmlConCom (float matrixCONC_PS_N[10][10], unsigned int matrixCOM[10][10], float matrixCONC_CH_N[15][15])</computeroutput></para><para>
+Definition at line 331 of file SystemManager.cpp.</para>
+<programlisting>332 {
+333 &#32;&#32;&#32;&#32;pugi::xml_document&#32;myDoc;
+334 &#32;&#32;&#32;&#32;pugi::xml_parse_result&#32;myResult&#32;=&#32;myDoc.load_file(<emphasis role="stringliteral">&quot;./XML/application.xml&quot;</emphasis>);
+335 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;XML&#32;result:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;myResult.description()&#32;&lt;&lt;&#32;endl;
+336 
+337 &#32;&#32;&#32;&#32;<emphasis role="comment">//method&#32;2:&#32;use&#32;object/node&#32;structure</emphasis>
+338 &#32;&#32;&#32;&#32;pugi::xml_node&#32;instancesPS&#32;=&#32;myDoc.child(<emphasis role="stringliteral">&quot;instancesPS&quot;</emphasis>);
+339 
+340 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(xml_node_iterator&#32;seqProcess_it&#32;=&#32;instancesPS.begin();&#32;seqProcess_it&#32;!=&#32;instancesPS.end();&#32;++seqProcess_it){
+341 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;Id&#32;=&#32;atoi(seqProcess_it-&gt;child_value(<emphasis role="stringliteral">&quot;id&quot;</emphasis>));
+342 
+343 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(seqProcess_it-&gt;child(<emphasis role="stringliteral">&quot;concurrency&quot;</emphasis>)){
+344 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;concurrency&#32;=&#32;seqProcess_it-&gt;child(<emphasis role="stringliteral">&quot;concurrency&quot;</emphasis>);
+345 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&lt;<link linkend="_group__firfirgcd__define__group_1gad258142492454320138f79a00101f1f8">NPS</link>;&#32;i++){
+346 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(i&#32;!=&#32;Id){
+347 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;conc_it&#32;=&#32;concurrency.append_child(<emphasis role="stringliteral">&quot;processId&quot;</emphasis>);
+348 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;conc_it.append_attribute(<emphasis role="stringliteral">&quot;id&quot;</emphasis>).set_value(i);
+349 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;conc_it.append_attribute(<emphasis role="stringliteral">&quot;value&quot;</emphasis>).set_value(matrixCONC_PS_N[Id][i]);
+350 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+351 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+352 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+353 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>{
+354 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;concurrency&#32;=&#32;seqProcess_it-&gt;append_child(<emphasis role="stringliteral">&quot;concurrency&quot;</emphasis>);
+355 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&lt;<link linkend="_group__firfirgcd__define__group_1gad258142492454320138f79a00101f1f8">NPS</link>;&#32;i++){
+356 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(i&#32;!=&#32;Id){
+357 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;conc_it&#32;=&#32;concurrency.append_child(<emphasis role="stringliteral">&quot;processId&quot;</emphasis>);
+358 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;conc_it.append_attribute(<emphasis role="stringliteral">&quot;id&quot;</emphasis>).set_value(i);
+359 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;conc_it.append_attribute(<emphasis role="stringliteral">&quot;value&quot;</emphasis>).set_value(matrixCONC_PS_N[Id][i]);
+360 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+361 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+362 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+363 &#32;&#32;&#32;&#32;}
+364 
+365 &#32;&#32;&#32;&#32;<emphasis role="comment">//method&#32;2:&#32;use&#32;object/node&#32;structure</emphasis>
+366 &#32;&#32;&#32;&#32;pugi::xml_node&#32;instancesCOM&#32;=&#32;myDoc.child(<emphasis role="stringliteral">&quot;instancesPS&quot;</emphasis>);
+367 
+368 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(pugi::xml_node_iterator&#32;seqProcess_it&#32;=&#32;instancesCOM.begin();&#32;seqProcess_it&#32;!=&#32;instancesCOM.end();&#32;++seqProcess_it){
+369 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;Id&#32;=&#32;atoi(seqProcess_it-&gt;child_value(<emphasis role="stringliteral">&quot;id&quot;</emphasis>));
+370 
+371 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(seqProcess_it-&gt;child(<emphasis role="stringliteral">&quot;comunication&quot;</emphasis>)){
+372 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;comunication&#32;=&#32;seqProcess_it-&gt;child(<emphasis role="stringliteral">&quot;comunication&quot;</emphasis>);
+373 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&lt;<link linkend="_group__firfirgcd__define__group_1gad258142492454320138f79a00101f1f8">NPS</link>;&#32;i++){
+374 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(i&#32;!=&#32;Id){
+375 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;com_it&#32;=&#32;comunication.append_child(<emphasis role="stringliteral">&quot;rec&quot;</emphasis>);
+376 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;com_it.append_attribute(<emphasis role="stringliteral">&quot;idRec&quot;</emphasis>).set_value(i);
+377 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;com_it.append_attribute(<emphasis role="stringliteral">&quot;value&quot;</emphasis>).set_value(matrixCOM[Id][i]);
+378 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+379 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+380 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+381 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>{
+382 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;comunication&#32;=&#32;seqProcess_it-&gt;append_child(<emphasis role="stringliteral">&quot;comunication&quot;</emphasis>);
+383 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&lt;<link linkend="_group__firfirgcd__define__group_1gad258142492454320138f79a00101f1f8">NPS</link>;&#32;i++){
+384 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(i&#32;!=&#32;Id){
+385 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;com_it&#32;=&#32;comunication.append_child(<emphasis role="stringliteral">&quot;rec&quot;</emphasis>);
+386 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;com_it.append_attribute(<emphasis role="stringliteral">&quot;idRec&quot;</emphasis>).set_value(i);
+387 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;com_it.append_attribute(<emphasis role="stringliteral">&quot;value&quot;</emphasis>).set_value(matrixCOM[Id][i]);
+388 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+389 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+390 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+391 
+392 &#32;&#32;&#32;&#32;}
+393 
+394 &#32;&#32;&#32;&#32;pugi::xml_node&#32;instancesLL&#32;=&#32;myDoc.child(<emphasis role="stringliteral">&quot;instancesLL&quot;</emphasis>);
+395 
+396 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(xml_node_iterator&#32;seqLink_it&#32;=&#32;instancesLL.begin();&#32;seqLink_it&#32;!=&#32;instancesLL.end();&#32;++seqLink_it){
+397 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;Id&#32;=&#32;atoi(seqLink_it-&gt;child_value(<emphasis role="stringliteral">&quot;id&quot;</emphasis>));
+398 
+399 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(seqLink_it-&gt;child(<emphasis role="stringliteral">&quot;concurrency&quot;</emphasis>)){
+400 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;concurrencyL&#32;=&#32;seqLink_it-&gt;child(<emphasis role="stringliteral">&quot;concurrency&quot;</emphasis>);
+401 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&lt;<link linkend="_group__firfirgcd__define__group_1ga967ca22c6c7be038e1092147ce04f258">NCH</link>;&#32;i++){
+402 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(i&#32;!=&#32;Id){
+403 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;concL_it&#32;=&#32;concurrencyL.append_child(<emphasis role="stringliteral">&quot;channelId&quot;</emphasis>);
+404 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;concL_it.append_attribute(<emphasis role="stringliteral">&quot;id&quot;</emphasis>).set_value(i);
+405 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;concL_it.append_attribute(<emphasis role="stringliteral">&quot;value&quot;</emphasis>).set_value(matrixCONC_CH_N[Id][i]);
+406 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+407 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+408 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+409 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>{
+410 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;concurrencyL&#32;=&#32;seqLink_it-&gt;append_child(<emphasis role="stringliteral">&quot;concurrency&quot;</emphasis>);
+411 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&lt;<link linkend="_group__firfirgcd__define__group_1ga967ca22c6c7be038e1092147ce04f258">NCH</link>;&#32;i++){
+412 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(i&#32;!=&#32;Id){
+413 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;concL_it&#32;=&#32;concurrencyL.append_child(<emphasis role="stringliteral">&quot;channelId&quot;</emphasis>);
+414 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;concL_it.append_attribute(<emphasis role="stringliteral">&quot;id&quot;</emphasis>).set_value(i);
+415 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;concL_it.append_attribute(<emphasis role="stringliteral">&quot;value&quot;</emphasis>).set_value(matrixCONC_CH_N[Id][i]);
+416 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+417 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+418 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+419 &#32;&#32;&#32;&#32;}
+420 
+421 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Saving&#32;result:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;myDoc.save_file(<emphasis role="stringliteral">&quot;./XML/application.xml&quot;</emphasis>)&#32;&lt;&lt;&#32;endl;
+422 &#32;&#32;&#32;&#32;myDoc.reset();
+423 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;endl;
+424 }
+</programlisting><para>
+References NCH, and NPS.</para>
+<para>
+Referenced by sc_main().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_system_manager_a5f16a17547d2cd543180e06e555304e7_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_system_manager_1a99f32d48ffab81f6c16d86dedbede1e7"/>    <section>
+    <title>updateXmlEnergy()</title>
+<indexterm><primary>updateXmlEnergy</primary><secondary>SystemManager</secondary></indexterm>
+<indexterm><primary>SystemManager</primary><secondary>updateXmlEnergy</secondary></indexterm>
+<para><computeroutput>void SystemManager::updateXmlEnergy ( )</computeroutput></para><para>
+Definition at line 1159 of file SystemManager.cpp.</para>
+<programlisting>1160 &#32;&#32;&#32;&#32;{
+1161 
+1162 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_document&#32;myDoc;
+1163 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_parse_result&#32;myResult&#32;=&#32;myDoc.load_file(<emphasis role="stringliteral">&quot;./XML/application.xml&quot;</emphasis>);
+1164 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;XML&#32;result:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;myResult.description()&#32;&lt;&lt;&#32;endl;
+1165 
+1166 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//method&#32;2:&#32;use&#32;object/node&#32;structure</emphasis>
+1167 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;instancesPS&#32;=&#32;myDoc.child(<emphasis role="stringliteral">&quot;instancesPS&quot;</emphasis>);
+1168 
+1170 
+1171 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;instancesPS2&#32;=&#32;myDoc.child(<emphasis role="stringliteral">&quot;instancesPS&quot;</emphasis>);
+1172 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;sumEnergyTot=0;
+1173 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(xml_node_iterator&#32;seqProcess_it2=instancesPS2.begin();&#32;seqProcess_it2!=instancesPS2.end();&#32;++seqProcess_it2){
+1174 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;Id&#32;=&#32;atoi(seqProcess_it2-&gt;child_value(<emphasis role="stringliteral">&quot;id&quot;</emphasis>));
+1175 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(seqProcess_it2-&gt;child(<emphasis role="stringliteral">&quot;energy&quot;</emphasis>)){
+1176 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;energy&#32;=&#32;seqProcess_it2-&gt;child(<emphasis role="stringliteral">&quot;energy&quot;</emphasis>);
+1177 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;energy_it&#32;=&#32;energy.append_child(<emphasis role="stringliteral">&quot;processorId&quot;</emphasis>);
+1178 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;energy_it.append_attribute(<emphasis role="stringliteral">&quot;id&quot;</emphasis>).set_value(<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[Id]);
+1179 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;energy_it.append_attribute(<emphasis role="stringliteral">&quot;value&quot;</emphasis>).set_value(<link linkend="_class_system_manager_1adcd8ce799616b977c206401ebdefab86">VPS</link>[Id].getEnergy());
+1180 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>{
+1181 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;energy&#32;=&#32;seqProcess_it2-&gt;append_child(<emphasis role="stringliteral">&quot;energy&quot;</emphasis>);
+1182 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;energy_it&#32;=&#32;energy.append_child(<emphasis role="stringliteral">&quot;processorId&quot;</emphasis>);
+1183 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;energy_it.append_attribute(<emphasis role="stringliteral">&quot;id&quot;</emphasis>).set_value(<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[Id]);
+1184 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;energy_it.append_attribute(<emphasis role="stringliteral">&quot;value&quot;</emphasis>).set_value(<link linkend="_class_system_manager_1adcd8ce799616b977c206401ebdefab86">VPS</link>[Id].getEnergy());
+1185 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+1186 
+1187 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sumEnergyTot+=<link linkend="_class_system_manager_1adcd8ce799616b977c206401ebdefab86">VPS</link>[Id].getEnergy();
+1188 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+1189 
+1190 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Saving&#32;result:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;myDoc.save_file(<emphasis role="stringliteral">&quot;./XML/application.xml&quot;</emphasis>)&#32;&lt;&lt;&#32;endl;
+1191 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;myDoc.reset();
+1192 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&lt;&lt;endl;
+1193 
+1194 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_document&#32;myDoc2;
+1195 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_parse_result&#32;myResult2&#32;=&#32;myDoc2.load_file(<emphasis role="stringliteral">&quot;./XML/instancesTL.xml&quot;</emphasis>);
+1196 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;XML&#32;result:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;myResult2.description()&#32;&lt;&lt;&#32;endl;
+1197 
+1198 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;xml_node&#32;instancesBB&#32;=&#32;myDoc2.child(<emphasis role="stringliteral">&quot;instancesBB&quot;</emphasis>);
+1199 
+1200 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(xml_node_iterator&#32;seqBB_it=instancesBB.begin();&#32;seqBB_it!=instancesBB.end();&#32;++seqBB_it){
+1201 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;Id&#32;=&#32;atoi(seqBB_it-&gt;child_value(<emphasis role="stringliteral">&quot;id&quot;</emphasis>));
+1203 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(Id&#32;==&#32;<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[2]){
+1204 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(seqBB_it-&gt;child(<emphasis role="stringliteral">&quot;energyEstimation&quot;</emphasis>)){
+1205 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;energyEstimation&#32;=&#32;seqBB_it-&gt;child(<emphasis role="stringliteral">&quot;energyEstimation&quot;</emphasis>);
+1206 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;xml_node&#32;entot_node&#32;=&#32;energyEstimation.append_child(<emphasis role="stringliteral">&quot;energyTOT&quot;</emphasis>);
+1207 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;entot_node.append_attribute(<emphasis role="stringliteral">&quot;id&quot;</emphasis>).set_value(<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[2]);
+1208 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;entot_node.append_attribute(<emphasis role="stringliteral">&quot;value&quot;</emphasis>).set_value(sumEnergyTot);
+1209 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>{
+1210 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;energyEstimation&#32;=&#32;seqBB_it-&gt;append_child(<emphasis role="stringliteral">&quot;energyEstimation&quot;</emphasis>);
+1211 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;xml_node&#32;entot_node&#32;=&#32;energyEstimation.append_child(<emphasis role="stringliteral">&quot;energyTOT&quot;</emphasis>);
+1212 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;entot_node.append_attribute(<emphasis role="stringliteral">&quot;id&quot;</emphasis>).set_value(<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[2]);
+1213 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;entot_node.append_attribute(<emphasis role="stringliteral">&quot;value&quot;</emphasis>).set_value(sumEnergyTot);
+1214 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+1215 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+1216 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+1217 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Saving&#32;result:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;myDoc2.save_file(<emphasis role="stringliteral">&quot;./XML/instancesTL.xml&quot;</emphasis>)&#32;&lt;&lt;&#32;endl;
+1218 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;myDoc2.reset();
+1219 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&lt;&lt;endl;
+1220 
+1221 &#32;&#32;&#32;&#32;}
+</programlisting><para>
+Referenced by sc_main().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_system_manager_a99f32d48ffab81f6c16d86dedbede1e7_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_system_manager_1afb69c0fedadb6e806e6576ad07c51162"/>    <section>
+    <title>updateXmlLoad()</title>
+<indexterm><primary>updateXmlLoad</primary><secondary>SystemManager</secondary></indexterm>
+<indexterm><primary>SystemManager</primary><secondary>updateXmlLoad</secondary></indexterm>
+<para><computeroutput>void SystemManager::updateXmlLoad ( )</computeroutput></para><para>
+Definition at line 1316 of file SystemManager.cpp.</para>
+<programlisting>1317 &#32;&#32;&#32;&#32;{
+1318 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_document&#32;myDoc;
+1319 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_parse_result&#32;myResult&#32;=&#32;myDoc.load_file(<emphasis role="stringliteral">&quot;./XML/application.xml&quot;</emphasis>);
+1320 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;XML&#32;result:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;myResult.description()&#32;&lt;&lt;&#32;endl;
+1321 
+1322 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//method&#32;2:&#32;use&#32;object/node&#32;structure</emphasis>
+1323 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;instancesPS&#32;=&#32;myDoc.child(<emphasis role="stringliteral">&quot;instancesPS&quot;</emphasis>);
+1324 
+1325 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(xml_node_iterator&#32;seqProcess_it=instancesPS.begin();&#32;seqProcess_it!=instancesPS.end();&#32;++seqProcess_it){
+1326 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;Id&#32;=&#32;atoi(seqProcess_it-&gt;child_value(<emphasis role="stringliteral">&quot;id&quot;</emphasis>));
+1327 
+1329 
+1330 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(seqProcess_it-&gt;child(<emphasis role="stringliteral">&quot;load&quot;</emphasis>)){
+1331 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;load&#32;=&#32;seqProcess_it-&gt;child(<emphasis role="stringliteral">&quot;load&quot;</emphasis>);
+1332 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;load_it&#32;=&#32;load.append_child(<emphasis role="stringliteral">&quot;processorId&quot;</emphasis>);
+1333 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;load_it.append_attribute(<emphasis role="stringliteral">&quot;id&quot;</emphasis>).set_value(<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[Id]);
+1334 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;load_it.append_attribute(<emphasis role="stringliteral">&quot;value&quot;</emphasis>).set_value(<link linkend="_class_system_manager_1a7f06326402d0738cb87a1c03bf57f5c7">FRL</link>[Id]);
+1335 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>{
+1336 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;load&#32;=&#32;seqProcess_it-&gt;append_child(<emphasis role="stringliteral">&quot;load&quot;</emphasis>);
+1337 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;load_it&#32;=&#32;load.append_child(<emphasis role="stringliteral">&quot;processorId&quot;</emphasis>);
+1338 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;load_it.append_attribute(<emphasis role="stringliteral">&quot;id&quot;</emphasis>).set_value(<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[Id]);
+1339 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;load_it.append_attribute(<emphasis role="stringliteral">&quot;value&quot;</emphasis>).set_value(<link linkend="_class_system_manager_1a7f06326402d0738cb87a1c03bf57f5c7">FRL</link>[Id]);
+1340 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+1341 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+1342 
+1344 
+1346 &#32;&#32;&#32;&#32;<emphasis role="comment">//pugi::xml_node&#32;instancesPS2&#32;=&#32;myDoc.child(&quot;instancesPS&quot;);</emphasis>
+1347 
+1348 &#32;&#32;&#32;&#32;<emphasis role="comment">//for&#32;(pugi::xml_node_iterator&#32;seqProcess_it=instancesPS2.begin();&#32;seqProcess_it!=instancesPS2.end();&#32;++seqProcess_it){</emphasis>
+1349 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;int&#32;Id&#32;=&#32;atoi(seqProcess_it-&gt;child_value(&quot;id&quot;));</emphasis>
+1350 &#32;&#32;&#32;&#32;<emphasis role="comment">//</emphasis>
+1351 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;if(seqProcess_it-&gt;child(&quot;WCET&quot;)){</emphasis>
+1352 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;comunication&#32;=&#32;seqProcess_it-&gt;child(&quot;WCET&quot;);</emphasis>
+1353 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;for&#32;(int&#32;i=0;&#32;i&lt;NPS;&#32;i++){</emphasis>
+1354 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;if(i!=Id){</emphasis>
+1355 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;wcet_it&#32;=&#32;comunication.append_child(&quot;processorId&quot;);</emphasis>
+1356 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;double&#32;wcet_task&#32;=&#32;(VPS[Id].processTime.to_seconds());</emphasis>
+1357 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;wcet_it.append_attribute(&quot;id&quot;).set_value(i);</emphasis>
+1358 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;wcet_it.append_attribute(&quot;value&quot;).set_value((wcet_task/VPS[Id].profiling)*1000000.0);</emphasis>
+1359 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+1360 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+1361 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;}else{</emphasis>
+1362 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;WCET&#32;=&#32;seqProcess_it-&gt;append_child(&quot;WCET&quot;);</emphasis>
+1363 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;for&#32;(int&#32;i=0;&#32;i&lt;VPU.size();&#32;i++){</emphasis>
+1364 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;if(i!=Id){</emphasis>
+1365 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;wcet_it&#32;=&#32;WCET.append_child(&quot;processorId&quot;);</emphasis>
+1366 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;double&#32;wcet_task&#32;=&#32;(VPS[Id].processTime.to_seconds());</emphasis>
+1367 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;wcet_it.append_attribute(&quot;id&quot;).set_value(i);</emphasis>
+1368 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;wcet_it.append_attribute(&quot;value&quot;).set_value((wcet_task/VPS[Id].profiling)*1000000.0);</emphasis>
+1369 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+1370 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+1371 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;}</emphasis>
+1372 &#32;&#32;&#32;&#32;<emphasis role="comment">//}</emphasis>
+1373 
+1375 
+1376 &#32;&#32;&#32;&#32;<emphasis role="comment">//pugi::xml_node&#32;instancesPS3&#32;=&#32;myDoc.child(&quot;instancesPS&quot;);</emphasis>
+1377 
+1378 &#32;&#32;&#32;&#32;<emphasis role="comment">//for&#32;(xml_node_iterator&#32;seqLink_it=instancesPS3.begin();&#32;seqLink_it!=instancesPS3.end();&#32;++seqLink_it){</emphasis>
+1379 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;int&#32;Id&#32;=&#32;atoi(seqLink_it-&gt;child_value(&quot;id&quot;));</emphasis>
+1380 &#32;&#32;&#32;&#32;<emphasis role="comment">//</emphasis>
+1381 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;if(seqLink_it-&gt;child(&quot;Period&quot;)){</emphasis>
+1382 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;Period&#32;=&#32;seqLink_it-&gt;child(&quot;Period&quot;);</emphasis>
+1383 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;for&#32;(int&#32;i=0;&#32;i&lt;NPS;&#32;i++){</emphasis>
+1384 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;if(i!=Id){</emphasis>
+1385 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;period_it&#32;=&#32;Period.append_child(&quot;processorId&quot;);</emphasis>
+1386 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;period_it.append_attribute(&quot;id&quot;).set_value(i);</emphasis>
+1387 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;double&#32;period_value&#32;=&#32;(FRT.to_seconds());</emphasis>
+1388 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;period_it.append_attribute(&quot;value&quot;).set_value((period_value/VPS[Id].profiling)*1000000.0);</emphasis>
+1389 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+1390 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+1391 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;}else{</emphasis>
+1392 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;Period&#32;=&#32;seqLink_it-&gt;append_child(&quot;Period&quot;);</emphasis>
+1393 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;for&#32;(int&#32;i=0;&#32;i&lt;NPS;&#32;i++){</emphasis>
+1394 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;if(i!=Id){</emphasis>
+1395 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;period_it&#32;=&#32;Period.append_child(&quot;processorId&quot;);</emphasis>
+1396 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;period_it.append_attribute(&quot;id&quot;).set_value(i);</emphasis>
+1397 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;double&#32;period_value&#32;=&#32;(FRT.to_seconds());</emphasis>
+1398 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;period_it.append_attribute(&quot;value&quot;).set_value((period_value/VPS[Id].profiling)*1000000.0);</emphasis>
+1399 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+1400 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+1401 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;}</emphasis>
+1402 &#32;&#32;&#32;&#32;<emphasis role="comment">//}</emphasis>
+1403 
+1405 
+1406 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;pugi::xml_node&#32;instancesPS4&#32;=&#32;myDoc.child(&quot;instancesPS&quot;);</emphasis>
+1407 
+1408 &#32;&#32;&#32;&#32;<emphasis role="comment">//for&#32;(xml_node_iterator&#32;seqLink_it=instancesPS4.begin();&#32;seqLink_it!=instancesPS4.end();&#32;++seqLink_it){</emphasis>
+1409 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;int&#32;Id&#32;=&#32;atoi(seqLink_it-&gt;child_value(&quot;id&quot;));</emphasis>
+1410 
+1411 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;if(seqLink_it-&gt;child(&quot;Deadline&quot;)){</emphasis>
+1412 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;Deadline&#32;=&#32;seqLink_it-&gt;child(&quot;Deadline&quot;);</emphasis>
+1413 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;for&#32;(int&#32;i=0;&#32;i&lt;NPS;&#32;i++){</emphasis>
+1414 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;if(i!=Id){</emphasis>
+1415 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;dead_it&#32;=&#32;Deadline.append_child(&quot;processorId&quot;);</emphasis>
+1416 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dead_it.append_attribute(&quot;id&quot;).set_value(i);</emphasis>
+1417 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;double&#32;deadline_value&#32;=&#32;(FRT.to_seconds());</emphasis>
+1418 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;double&#32;dead_tot&#32;=&#32;(deadline_value/VPS[Id].profiling)*1000000.0;</emphasis>
+1419 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&lt;&lt;&quot;VPS[&quot;&lt;&lt;Id&lt;&lt;&quot;].profiling&#32;--&gt;&#32;&#32;&quot;&lt;&lt;VPS[Id].profiling&lt;&lt;endl;</emphasis>
+1420 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dead_it.append_attribute(&quot;value&quot;).set_value(dead_tot);</emphasis>
+1421 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+1422 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+1423 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;}else{</emphasis>
+1424 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;Deadline&#32;=&#32;seqLink_it-&gt;append_child(&quot;Deadline&quot;);</emphasis>
+1425 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;for&#32;(int&#32;i=0;&#32;i&lt;NPS;&#32;i++){</emphasis>
+1426 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;if(i!=Id){</emphasis>
+1427 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;dead_it&#32;=&#32;Deadline.append_child(&quot;processorId&quot;);</emphasis>
+1428 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dead_it.append_attribute(&quot;id&quot;).set_value(i);</emphasis>
+1429 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;double&#32;deadline_value&#32;=&#32;(FRT.to_seconds());</emphasis>
+1430 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;double&#32;dead_tot&#32;=&#32;(deadline_value/VPS[Id].profiling)*1000000.0;</emphasis>
+1431 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dead_it.append_attribute(&quot;value&quot;).set_value(dead_tot);</emphasis>
+1432 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+1433 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+1434 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;}</emphasis>
+1435 &#32;&#32;&#32;&#32;<emphasis role="comment">//}</emphasis>
+1436 
+1437 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Saving&#32;result:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;myDoc.save_file(<emphasis role="stringliteral">&quot;./XML/application.xml&quot;</emphasis>)&#32;&lt;&lt;&#32;endl;
+1438 &#32;&#32;&#32;&#32;myDoc.reset();
+1439 &#32;&#32;&#32;&#32;cout&lt;&lt;endl;
+1440 
+1441 &#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;pugi::xml_document&#32;myDoc2;</emphasis>
+1442 <emphasis role="comment">&#32;&#32;&#32;&#32;pugi::xml_parse_result&#32;myResult2&#32;=&#32;myDoc2.load_file(&quot;./XML/instancesTL.xml&quot;);</emphasis>
+1443 <emphasis role="comment">&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;&quot;XML&#32;result:&#32;&quot;&#32;&lt;&lt;&#32;myResult2.description()&#32;&lt;&lt;&#32;endl;</emphasis>
+1444 <emphasis role="comment"></emphasis>
+1445 <emphasis role="comment">&#32;&#32;&#32;&#32;xml_node&#32;instancesBB&#32;=&#32;myDoc2.child(&quot;instancesBB&quot;);</emphasis>
+1446 <emphasis role="comment"></emphasis>
+1447 <emphasis role="comment">&#32;&#32;&#32;&#32;for&#32;(xml_node_iterator&#32;seqBB_it=instancesBB.begin();&#32;seqBB_it!=instancesBB.end();&#32;++seqBB_it){</emphasis>
+1448 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;int&#32;Id&#32;=&#32;atoi(seqBB_it-&gt;child_value(&quot;id&quot;));</emphasis>
+1449 <emphasis role="comment"></emphasis>
+1451 <emphasis role="comment"></emphasis>
+1452 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;if(seqBB_it-&gt;child(&quot;loadEstimation&quot;)){</emphasis>
+1453 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;loadEstimation&#32;=&#32;seqBB_it-&gt;child(&quot;loadEstimation&quot;);</emphasis>
+1454 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;xml_node&#32;frl_node&#32;=&#32;loadEstimation.child(&quot;FreeRunningTime&quot;);</emphasis>
+1455 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;if(!(allocationPS_BB[Id]&#32;!=&#32;Id))</emphasis>
+1456 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{</emphasis>
+1457 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sc_time&#32;local_frt&#32;=&#32;FRT;</emphasis>
+1458 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//frl_node.attribute(&quot;value&quot;)=(local_frt.to_double()*1000);&#32;//another&#32;solution&#32;for&#32;the&#32;number&#32;conversion</emphasis>
+1459 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;frl_node.attribute(&quot;value&quot;)=(local_frt.to_seconds()*1000);</emphasis>
+1460 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+1461 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}else{</emphasis>
+1462 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;loadEstimation&#32;=&#32;seqBB_it-&gt;append_child(&quot;loadEstimation&quot;);</emphasis>
+1463 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;xml_node&#32;frl_node&#32;=&#32;loadEstimation.append_child(&quot;FreeRunningTime&quot;);</emphasis>
+1464 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;if(allocationPS_BB[Id]&#32;==&#32;Id)</emphasis>
+1465 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{</emphasis>
+1466 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sc_time&#32;local_frt&#32;=&#32;FRT;</emphasis>
+1467 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//frl_node.attribute(&quot;value&quot;)=(local_frt.to_double()*1000);&#32;&#32;//another&#32;solution&#32;for&#32;the&#32;number&#32;conversion</emphasis>
+1468 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;frl_node.attribute(&quot;value&quot;)=(local_frt.to_seconds()*1000);</emphasis>
+1469 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+1470 <emphasis role="comment"></emphasis>
+1471 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}</emphasis>
+1472 <emphasis role="comment">&#32;&#32;&#32;&#32;}</emphasis>
+1473 <emphasis role="comment"></emphasis>
+1474 <emphasis role="comment">&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;&quot;Saving&#32;result:&#32;&quot;&#32;&lt;&lt;&#32;myDoc2.save_file(&quot;./XML/instancesTL.xml&quot;)&#32;&lt;&lt;&#32;endl;</emphasis>
+1475 <emphasis role="comment">&#32;&#32;&#32;&#32;myDoc2.reset();</emphasis>
+1476 <emphasis role="comment">&#32;&#32;&#32;&#32;cout&lt;&lt;endl;&#32;*/</emphasis>
+1477 
+1479 
+1480 &#32;&#32;&#32;&#32;pugi::xml_document&#32;myDoc2;
+1481 &#32;&#32;&#32;&#32;pugi::xml_parse_result&#32;myResult2&#32;=&#32;myDoc2.load_file(<emphasis role="stringliteral">&quot;./XML/instancesTL.xml&quot;</emphasis>);
+1482 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;XML&#32;result:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;myResult2.description()&#32;&lt;&lt;&#32;endl;
+1483 
+1484 &#32;&#32;&#32;&#32;xml_node&#32;instancesBB&#32;=&#32;myDoc2.child(<emphasis role="stringliteral">&quot;instancesBB&quot;</emphasis>);
+1485 
+1486 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(xml_node_iterator&#32;seqBB_it=instancesBB.begin();&#32;seqBB_it!=instancesBB.end();&#32;++seqBB_it){
+1487 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;Id&#32;=&#32;atoi(seqBB_it-&gt;child_value(<emphasis role="stringliteral">&quot;id&quot;</emphasis>));
+1489 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(Id&#32;==&#32;<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[2]){
+1490 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(seqBB_it-&gt;child(<emphasis role="stringliteral">&quot;loadEstimation&quot;</emphasis>)){
+1491 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;energyEstimation&#32;=&#32;seqBB_it-&gt;child(<emphasis role="stringliteral">&quot;loadEstimation&quot;</emphasis>);
+1492 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;xml_node&#32;entot_node&#32;=&#32;energyEstimation.append_child(<emphasis role="stringliteral">&quot;FreeRunningTime&quot;</emphasis>);
+1493 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;entot_node.append_attribute(<emphasis role="stringliteral">&quot;id&quot;</emphasis>).set_value(<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[2]);
+1494 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sc_time&#32;local_frt&#32;=&#32;<link linkend="_class_system_manager_1a69ec2821a8a92a69fbb5cb0f789a64ca">FRT</link>;
+1495 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;entot_node.append_attribute(<emphasis role="stringliteral">&quot;value&quot;</emphasis>).set_value(local_frt.to_seconds()*1000);
+1496 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>{
+1497 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pugi::xml_node&#32;energyEstimation&#32;=&#32;seqBB_it-&gt;append_child(<emphasis role="stringliteral">&quot;energyEstimation&quot;</emphasis>);
+1498 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;xml_node&#32;entot_node&#32;=&#32;energyEstimation.append_child(<emphasis role="stringliteral">&quot;energyTOT&quot;</emphasis>);
+1499 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;entot_node.append_attribute(<emphasis role="stringliteral">&quot;id&quot;</emphasis>).set_value(<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[2]);
+1500 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sc_time&#32;local_frt&#32;=&#32;<link linkend="_class_system_manager_1a69ec2821a8a92a69fbb5cb0f789a64ca">FRT</link>;
+1501 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;entot_node.append_attribute(<emphasis role="stringliteral">&quot;value&quot;</emphasis>).set_value(local_frt.to_seconds()*1000);
+1502 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+1503 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+1504 &#32;&#32;&#32;&#32;}
+1505 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Saving&#32;result:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;myDoc2.save_file(<emphasis role="stringliteral">&quot;./XML/instancesTL.xml&quot;</emphasis>)&#32;&lt;&lt;&#32;endl;
+1506 &#32;&#32;&#32;&#32;myDoc2.reset();
+1507 &#32;&#32;&#32;&#32;cout&lt;&lt;endl;
+1508 
+1509 }
+</programlisting><para>
+Referenced by sc_main().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_system_manager_afb69c0fedadb6e806e6576ad07c51162_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_class_system_manager_1ab75b55327c942c6950f67c14ba9dea08"/>    <section>
+    <title>allocationCH_PL</title>
+<indexterm><primary>allocationCH_PL</primary><secondary>SystemManager</secondary></indexterm>
+<indexterm><primary>SystemManager</primary><secondary>allocationCH_PL</secondary></indexterm>
+<para><computeroutput>vector&lt;int&gt; SystemManager::allocationCH_PL</computeroutput></para><para>
+Definition at line 110 of file SystemManager.h.</para>
+<para>
+Referenced by sc_csp_channel&lt; T &gt;::init(), sc_csp_channel&lt; T &gt;::sc_csp_channel(), and sc_main().</para>
+    </section><anchor xml:id="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734"/>    <section>
+    <title>allocationPS_BB</title>
+<indexterm><primary>allocationPS_BB</primary><secondary>SystemManager</secondary></indexterm>
+<indexterm><primary>SystemManager</primary><secondary>allocationPS_BB</secondary></indexterm>
+<para><computeroutput>vector&lt;int&gt; SystemManager::allocationPS_BB</computeroutput></para><para>
+Definition at line 107 of file SystemManager.h.</para>
+<para>
+Referenced by sc_csp_channel&lt; T &gt;::init(), sc_csp_channel&lt; T &gt;::read(), sc_main(), SC_MODULE(), and sc_csp_channel&lt; T &gt;::write().</para>
+    </section><anchor xml:id="_class_system_manager_1a7f06326402d0738cb87a1c03bf57f5c7"/>    <section>
+    <title>FRL</title>
+<indexterm><primary>FRL</primary><secondary>SystemManager</secondary></indexterm>
+<indexterm><primary>SystemManager</primary><secondary>FRL</secondary></indexterm>
+<para><computeroutput>float SystemManager::FRL[10]</computeroutput></para><para>
+Definition at line 172 of file SystemManager.h.</para>
+    </section><anchor xml:id="_class_system_manager_1a69ec2821a8a92a69fbb5cb0f789a64ca"/>    <section>
+    <title>FRT</title>
+<indexterm><primary>FRT</primary><secondary>SystemManager</secondary></indexterm>
+<indexterm><primary>SystemManager</primary><secondary>FRT</secondary></indexterm>
+<para><computeroutput>sc_time SystemManager::FRT</computeroutput></para><para>
+Definition at line 175 of file SystemManager.h.</para>
+    </section><anchor xml:id="_class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32"/>    <section>
+    <title>VBB</title>
+<indexterm><primary>VBB</primary><secondary>SystemManager</secondary></indexterm>
+<indexterm><primary>SystemManager</primary><secondary>VBB</secondary></indexterm>
+<para><computeroutput>vector&lt;<link linkend="_class_basic_block">BasicBlock</link>&gt; SystemManager::VBB</computeroutput></para><para>
+Definition at line 100 of file SystemManager.h.</para>
+<para>
+Referenced by sc_csp_channel&lt; T &gt;::init(), sc_main(), and SC_MODULE().</para>
+    </section><anchor xml:id="_class_system_manager_1a7dcc3ae8736a6aad7e27f276706205a3"/>    <section>
+    <title>VCH</title>
+<indexterm><primary>VCH</primary><secondary>SystemManager</secondary></indexterm>
+<indexterm><primary>SystemManager</primary><secondary>VCH</secondary></indexterm>
+<para><computeroutput>vector&lt;<link linkend="_class_channel">Channel</link>&gt; SystemManager::VCH</computeroutput></para><para>
+Definition at line 97 of file SystemManager.h.</para>
+<para>
+Referenced by sc_csp_channel&lt; T &gt;::sc_csp_channel(), sc_main(), and sc_csp_channel&lt; T &gt;::write().</para>
+    </section><anchor xml:id="_class_system_manager_1af28a1744a2d964a7047c31c6a5f1644a"/>    <section>
+    <title>VPL</title>
+<indexterm><primary>VPL</primary><secondary>SystemManager</secondary></indexterm>
+<indexterm><primary>SystemManager</primary><secondary>VPL</secondary></indexterm>
+<para><computeroutput>vector&lt;<link linkend="_class_physical_link">PhysicalLink</link>&gt; SystemManager::VPL</computeroutput></para><para>
+Definition at line 103 of file SystemManager.h.</para>
+<para>
+Referenced by sc_csp_channel&lt; T &gt;::init(), sc_csp_channel&lt; T &gt;::sc_csp_channel(), and sc_main().</para>
+    </section><anchor xml:id="_class_system_manager_1adcd8ce799616b977c206401ebdefab86"/>    <section>
+    <title>VPS</title>
+<indexterm><primary>VPS</primary><secondary>SystemManager</secondary></indexterm>
+<indexterm><primary>SystemManager</primary><secondary>VPS</secondary></indexterm>
+<para><computeroutput>vector&lt;<link linkend="_class_process">Process</link>&gt; SystemManager::VPS</computeroutput></para><para>
+Definition at line 94 of file SystemManager.h.</para>
+<para>
+Referenced by sc_main(), and SC_MODULE().</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+HepsycodeDesign/src/<link linkend="__system_manager_8h">SystemManager.h</link>HepsycodeDesign/src/<link linkend="__system_manager_8cpp">SystemManager.cpp</link></section>
+</section>

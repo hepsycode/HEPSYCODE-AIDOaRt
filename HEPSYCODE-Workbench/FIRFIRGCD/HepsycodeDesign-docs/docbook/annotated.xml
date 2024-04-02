@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_annotated">
+<title>Data Structures</title>
+Here are the data structures with brief descriptions:<link linkend="_class_basic_block">BasicBlock</link><link linkend="_class_channel">Channel</link><link linkend="_structfir16e__parameters">fir16e_parameters</link>
+<para>Message from fir16m to fir16e </para>
+<link linkend="_structfir16e__results">fir16e_results</link>
+<para>Message from fir16e to fir16m </para>
+<link linkend="_structfir16s__parameters">fir16s_parameters</link>
+<para>Message from fir16m to fir16s </para>
+<link linkend="_structfir16s__results">fir16s_results</link>
+<para>Message from fir16s to fir16m </para>
+<link linkend="_structfir8e__parameters">fir8e_parameters</link>
+<para>Message from fir8m to fir8e </para>
+<link linkend="_structfir8e__results">fir8e_results</link>
+<para>Struct <link linkend="_structfir8e__results">fir8e_results</link> </para>
+<link linkend="_structfir8s__parameters">fir8s_parameters</link>
+<para>Struct <link linkend="_structfir8s__parameters">fir8s_parameters</link> </para>
+<link linkend="_structfir8s__results">fir8s_results</link>
+<para>Struct <link linkend="_structfir8s__results">fir8s_results</link> </para>
+<link linkend="_structgcde__parameters">gcde_parameters</link>
+<para>Message from gcdm to gcde </para>
+<link linkend="_structgcde__results">gcde_results</link>
+<para>Message from gcde to gcdm </para>
+<link linkend="_class_memory">Memory</link><link linkend="_class_physical_link">PhysicalLink</link><link linkend="_class_process">Process</link><link linkend="_class_processing_unit">ProcessingUnit</link><link linkend="_classsc__csp__channel">sc_csp_channel&lt; T &gt;</link><link linkend="_classsc__core_1_1sc__csp__channel__in__if">sc_core::sc_csp_channel_in_if&lt; T &gt;</link><link linkend="_classsc__core_1_1sc__csp__channel__out__if">sc_core::sc_csp_channel_out_if&lt; T &gt;</link><link linkend="_classsc__interface">sc_interface</link><link linkend="_classsc__prim__channel">sc_prim_channel</link><link linkend="_class_system_manager">SystemManager</link></section>

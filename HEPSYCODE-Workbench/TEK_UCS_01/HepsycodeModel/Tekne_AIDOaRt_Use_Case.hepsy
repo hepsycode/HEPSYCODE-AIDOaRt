@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hml:BehaviorSpecification xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hml="org.univaq.hepsy">
+  <nodes xsi:type="hml:Stimulus" name="Stimulus">
+    <ports name="stimulus_system_port_out">
+      <pChannels name="stimulus_system_channel" pFrom="//@nodes.0/@ports.0" pTo="//@nodes.1/@ports.0" rendezVous="true">
+        <message name="stimulus_system_payload">
+          <entry name="example" type="sc_int"/>
+        </message>
+      </pChannels>
+    </ports>
+  </nodes>
+  <nodes xsi:type="hml:StructuredNode" name="TEKNE System">
+    <nChannels name="sampleTimCord_cleanData_01_channel" nFrom="//@nodes.1/@processes.0" nTo="//@nodes.1/@processes.1">
+      <message name="sampleTimCord_cleanData_01_payload">
+        <entry name="example" type="sc_int"/>
+      </message>
+    </nChannels>
+    <nChannels name="sampleTimCord_cleanData_02_channel" nFrom="//@nodes.1/@processes.0" nTo="//@nodes.1/@processes.2" rendezVous="true">
+      <message name="sampleTimCord_cleanData_02_payload">
+        <entry name="example" type="sc_int"/>
+      </message>
+    </nChannels>
+    <nChannels name="sampleTimCord_cleanData_03_channel" nFrom="//@nodes.1/@processes.0" nTo="//@nodes.1/@processes.3" rendezVous="true">
+      <message name="sampleTimCord_cleanData_03_payload">
+        <entry name="example" type="sc_int"/>
+      </message>
+    </nChannels>
+    <nChannels name="sampleTimCord_cleanData_04_channel" nFrom="//@nodes.1/@processes.0" nTo="//@nodes.1/@processes.4" rendezVous="true">
+      <message name="sampleTimCord_cleanData_04_payload">
+        <entry name="example" type="sc_int"/>
+      </message>
+    </nChannels>
+    <nChannels name="cleanData_01_ann_01_channel" nFrom="//@nodes.1/@processes.1" nTo="//@nodes.1/@processes.5" rendezVous="true">
+      <message name="cleanData_01_ann_01_payload">
+        <entry name="example" type="sc_int"/>
+      </message>
+    </nChannels>
+    <nChannels name="cleanData_02_ann_02_channel" nFrom="//@nodes.1/@processes.2" nTo="//@nodes.1/@processes.6" rendezVous="true">
+      <message name="cleanData_02_ann_02_payload">
+        <entry name="example" type="sc_int"/>
+      </message>
+    </nChannels>
+    <nChannels name="cleanData_03_ann_03_channel" nFrom="//@nodes.1/@processes.3" nTo="//@nodes.1/@processes.7" rendezVous="true">
+      <message name="cleanData_03_ann_03_payload">
+        <entry name="example" type="sc_int"/>
+      </message>
+    </nChannels>
+    <nChannels name="cleanData_04_ann_04_channel" nFrom="//@nodes.1/@processes.4" nTo="//@nodes.1/@processes.8" rendezVous="true">
+      <message name="cleanData_04_ann_04_payload">
+        <entry name="example" type="sc_int"/>
+      </message>
+    </nChannels>
+    <nChannels name="ann_01_dataCollector_channel" nFrom="//@nodes.1/@processes.5" nTo="//@nodes.1/@processes.9">
+      <message name="ann_01_dataCollector_payload">
+        <entry name="example" type="sc_int"/>
+      </message>
+    </nChannels>
+    <nChannels name="ann_02_dataCollector_channel" nFrom="//@nodes.1/@processes.6" nTo="//@nodes.1/@processes.9">
+      <message name="ann_02_dataCollector_payload">
+        <entry name="example" type="sc_int"/>
+      </message>
+    </nChannels>
+    <nChannels name="ann_03_dataCollector_channel" nFrom="//@nodes.1/@processes.7" nTo="//@nodes.1/@processes.9">
+      <message name="ann_03_dataCollector_payload">
+        <entry name="example" type="sc_int"/>
+      </message>
+    </nChannels>
+    <nChannels name="ann_04_dataCollector_channel" nFrom="//@nodes.1/@processes.8" nTo="//@nodes.1/@processes.9" rendezVous="true">
+      <message name="ann_04_dataCollector_payload">
+        <entry name="example" type="sc_int"/>
+      </message>
+    </nChannels>
+    <ports name="stimulus_system_port_in" portExtension="//@nodes.1/@processes.0"/>
+    <ports name="system_display_port_out"/>
+    <processes name="sampleTimCord"/>
+    <processes name="cleanData_01"/>
+    <processes name="cleanData_02"/>
+    <processes name="cleanData_03"/>
+    <processes name="cleanData_04"/>
+    <processes name="ann_01"/>
+    <processes name="ann_02"/>
+    <processes name="ann_03"/>
+    <processes name="ann_04"/>
+    <processes name="dataCollector" processExtension="//@nodes.1/@ports.1"/>
+  </nodes>
+  <nodes xsi:type="hml:Display" name="Display">
+    <ports name="system_display_port_in">
+      <pChannels name="system_display_channel" pFrom="//@nodes.2/@ports.0" pTo="//@nodes.1/@ports.1" rendezVous="true">
+        <message name="system_display_payload">
+          <entry name="example" type="sc_int"/>
+        </message>
+      </pChannels>
+    </ports>
+  </nodes>
+</hml:BehaviorSpecification>

@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structgcde__results">
+<title>gcde_results Struct Reference</title>
+<indexterm><primary>gcde_results</primary></indexterm>
+<para>
+
+<para>Message from gcde to gcdm. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;datatype.h&gt;</computeroutput>
+</para>
+Collaboration diagram for gcde_results:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="structgcde__results__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>sc_uint&lt; 8 &gt; <link linkend="_structgcde__results_1adc9a829b13114c46522b001c376af7ec">result</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Message from gcde to gcdm. </para>
+<para>
+Definition at line 183 of file datatype.h.</para>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_structgcde__results_1adc9a829b13114c46522b001c376af7ec"/>    <section>
+    <title>result</title>
+<indexterm><primary>result</primary><secondary>gcde_results</secondary></indexterm>
+<indexterm><primary>gcde_results</primary><secondary>result</secondary></indexterm>
+<para><computeroutput>sc_uint&lt;8&gt; gcde_results::result</computeroutput></para><para>
+Definition at line 185 of file datatype.h.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+HepsycodeDesign/src/<link linkend="_datatype_8h">datatype.h</link></section>
+</section>

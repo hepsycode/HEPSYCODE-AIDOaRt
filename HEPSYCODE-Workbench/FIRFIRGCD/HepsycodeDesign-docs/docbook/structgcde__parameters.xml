@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structgcde__parameters">
+<title>gcde_parameters Struct Reference</title>
+<indexterm><primary>gcde_parameters</primary></indexterm>
+<para>
+
+<para>Message from gcdm to gcde. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;datatype.h&gt;</computeroutput>
+</para>
+Collaboration diagram for gcde_parameters:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="structgcde__parameters__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>sc_uint&lt; 8 &gt; <link linkend="_structgcde__parameters_1a6a87f3b51d21aa5c2d23625fa8e02216">sample1</link></para>
+</listitem>
+            <listitem><para>sc_uint&lt; 8 &gt; <link linkend="_structgcde__parameters_1aca29a1b102b8cfb96f79e8254ef3477e">sample2</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Message from gcdm to gcde. </para>
+<para>
+Definition at line 176 of file datatype.h.</para>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_structgcde__parameters_1a6a87f3b51d21aa5c2d23625fa8e02216"/>    <section>
+    <title>sample1</title>
+<indexterm><primary>sample1</primary><secondary>gcde_parameters</secondary></indexterm>
+<indexterm><primary>gcde_parameters</primary><secondary>sample1</secondary></indexterm>
+<para><computeroutput>sc_uint&lt;8&gt; gcde_parameters::sample1</computeroutput></para><para>
+Definition at line 180 of file datatype.h.</para>
+    </section><anchor xml:id="_structgcde__parameters_1aca29a1b102b8cfb96f79e8254ef3477e"/>    <section>
+    <title>sample2</title>
+<indexterm><primary>sample2</primary><secondary>gcde_parameters</secondary></indexterm>
+<indexterm><primary>gcde_parameters</primary><secondary>sample2</secondary></indexterm>
+<para><computeroutput>sc_uint&lt;8&gt; gcde_parameters::sample2</computeroutput></para><para>
+Definition at line 181 of file datatype.h.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+HepsycodeDesign/src/<link linkend="_datatype_8h">datatype.h</link></section>
+</section>

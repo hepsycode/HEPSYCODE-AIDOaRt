@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classsc__interface" kind="class" language="C++" prot="public">
+    <compoundname>sc_interface</compoundname>
+    <derivedcompoundref refid="classsc__core_1_1sc__csp__channel__in__if" prot="public" virt="virtual">sc_core::sc_csp_channel_in_if&lt; T &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classsc__core_1_1sc__csp__channel__out__if" prot="public" virt="virtual">sc_core::sc_csp_channel_out_if&lt; T &gt;</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>sc_interface</label>
+        <link refid="classsc__interface"/>
+      </node>
+      <node id="4">
+        <label>sc_core::sc_csp_channel_out_if&lt; T &gt;</label>
+        <link refid="classsc__core_1_1sc__csp__channel__out__if"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>sc_csp_channel&lt; T &gt;</label>
+        <link refid="classsc__csp__channel"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>sc_core::sc_csp_channel_in_if&lt; T &gt;</label>
+        <link refid="classsc__core_1_1sc__csp__channel__in__if"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>sc_interface</label>
+        <link refid="classsc__interface"/>
+      </node>
+    </collaborationgraph>
+    <location file="HepsycodeDesign/src/sc_csp_channel_ifs.h" line="116" column="1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,316 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_physical_link">
+<title>PhysicalLink Class Reference</title>
+<indexterm><primary>PhysicalLink</primary></indexterm>
+<para>
+<computeroutput>#include &lt;tl.h&gt;</computeroutput>
+</para>
+Collaboration diagram for PhysicalLink:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_physical_link__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_class_physical_link_1a38870d04d7877b9ebe3a3a9252745fa4">getName</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_physical_link_1a720451548bfac94a60eca8c8f47d343b">setName</link> (string x)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_physical_link_1a6b1247a6652918c90b4ae99b9f2f5b88">getId</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_physical_link_1a4c1ca22f348862858653c4f02496218f">setId</link> (int x)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_physical_link_1a5bd500fa155893a361f0884a3edefec7">getPhysicalWidth</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_physical_link_1aaed942eff035eb7f0a45e5cadc0200ab">setPhysicalWidth</link> (int x)</para>
+</listitem>
+            <listitem><para>sc_time <link linkend="_class_physical_link_1ae83d2eca88f0999b1ea7c6ee72a788a8">getTcomm</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_physical_link_1a5b75831c5c40358e35dac40e95abdd71">setTcomm</link> (sc_time x)</para>
+</listitem>
+            <listitem><para>sc_time <link linkend="_class_physical_link_1acf0976c043aeef0e82b8482abf3bf4ec">getTAcomm</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_physical_link_1a9f72f16b0f7fa6b4976ab10c4988721c">setTAcomm</link> (sc_time x)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_physical_link_1add09ffe313fb274e4ab886d87f5bef9d">getBandwidth</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_physical_link_1a8fcfa235def47bf09f6d3ae892dbb2c3">setBandwidth</link> (int x)</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_physical_link_1a162bd0bc2daadc05c98bf10844be6b36">geta2</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_physical_link_1ab4e2b4917f65eb53ae125b6adf0f30b9">seta2</link> (float x)</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_physical_link_1aa7897d3d8c11c58b493388604fc4a07b">geta1</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_physical_link_1a3a4bc3e300cf94a0105798d28ff7b8f2">seta1</link> (float x)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_class_physical_link_1ab7d8e236c3a63063c48a572753f92455">name</link></para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_class_physical_link_1a428c21ce3a75e45ac4e1da6967382f77">id</link></para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_class_physical_link_1a38f205a4a97e9869b93944e0f820f11b">physical_width</link></para>
+</listitem>
+            <listitem><para>sc_time <link linkend="_class_physical_link_1a90cb0e1c2a0d9951899b587d6d2b247a">tcomm</link></para>
+</listitem>
+            <listitem><para>sc_time <link linkend="_class_physical_link_1a2f2ff97a12a4c37da1892f0fc2e855b2">tacomm</link></para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_class_physical_link_1ac441e379b59ecb00c48ebef53f2d6b75">bandwidth</link></para>
+</listitem>
+            <listitem><para>float <link linkend="_class_physical_link_1a2c8e1cba265b4e099ac6b07c7839de0e">a2</link></para>
+</listitem>
+            <listitem><para>float <link linkend="_class_physical_link_1a46367b48d7ab1d5c06dd2051a6d5a32f">a1</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 273 of file tl.h.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_physical_link_1aa7897d3d8c11c58b493388604fc4a07b"/>    <section>
+    <title>geta1()</title>
+<indexterm><primary>geta1</primary><secondary>PhysicalLink</secondary></indexterm>
+<indexterm><primary>PhysicalLink</primary><secondary>geta1</secondary></indexterm>
+<para><computeroutput>float PhysicalLink::geta1 ( )</computeroutput></para><para>
+Definition at line 542 of file tl.cpp.</para>
+<programlisting>543 {
+544 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_physical_link_1a46367b48d7ab1d5c06dd2051a6d5a32f">a1</link>;
+545 }
+</programlisting>    </section><anchor xml:id="_class_physical_link_1a162bd0bc2daadc05c98bf10844be6b36"/>    <section>
+    <title>geta2()</title>
+<indexterm><primary>geta2</primary><secondary>PhysicalLink</secondary></indexterm>
+<indexterm><primary>PhysicalLink</primary><secondary>geta2</secondary></indexterm>
+<para><computeroutput>float PhysicalLink::geta2 ( )</computeroutput></para><para>
+Definition at line 532 of file tl.cpp.</para>
+<programlisting>533 {
+534 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_physical_link_1a2c8e1cba265b4e099ac6b07c7839de0e">a2</link>;
+535 }
+</programlisting>    </section><anchor xml:id="_class_physical_link_1add09ffe313fb274e4ab886d87f5bef9d"/>    <section>
+    <title>getBandwidth()</title>
+<indexterm><primary>getBandwidth</primary><secondary>PhysicalLink</secondary></indexterm>
+<indexterm><primary>PhysicalLink</primary><secondary>getBandwidth</secondary></indexterm>
+<para><computeroutput>int PhysicalLink::getBandwidth ( )</computeroutput></para><para>
+Definition at line 497 of file tl.cpp.</para>
+<programlisting>498 {
+499 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_physical_link_1ac441e379b59ecb00c48ebef53f2d6b75">bandwidth</link>;
+500 }
+</programlisting>    </section><anchor xml:id="_class_physical_link_1a6b1247a6652918c90b4ae99b9f2f5b88"/>    <section>
+    <title>getId()</title>
+<indexterm><primary>getId</primary><secondary>PhysicalLink</secondary></indexterm>
+<indexterm><primary>PhysicalLink</primary><secondary>getId</secondary></indexterm>
+<para><computeroutput>int PhysicalLink::getId ( )</computeroutput></para><para>
+Definition at line 472 of file tl.cpp.</para>
+<programlisting>473 {
+474 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_physical_link_1a428c21ce3a75e45ac4e1da6967382f77">id</link>;
+475 }
+</programlisting>    </section><anchor xml:id="_class_physical_link_1a38870d04d7877b9ebe3a3a9252745fa4"/>    <section>
+    <title>getName()</title>
+<indexterm><primary>getName</primary><secondary>PhysicalLink</secondary></indexterm>
+<indexterm><primary>PhysicalLink</primary><secondary>getName</secondary></indexterm>
+<para><computeroutput>string PhysicalLink::getName ( )</computeroutput></para><para>
+Definition at line 477 of file tl.cpp.</para>
+<programlisting>478 {
+479 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_physical_link_1ab7d8e236c3a63063c48a572753f92455">name</link>;
+480 }
+</programlisting>    </section><anchor xml:id="_class_physical_link_1a5bd500fa155893a361f0884a3edefec7"/>    <section>
+    <title>getPhysicalWidth()</title>
+<indexterm><primary>getPhysicalWidth</primary><secondary>PhysicalLink</secondary></indexterm>
+<indexterm><primary>PhysicalLink</primary><secondary>getPhysicalWidth</secondary></indexterm>
+<para><computeroutput>int PhysicalLink::getPhysicalWidth ( )</computeroutput></para><para>
+Definition at line 482 of file tl.cpp.</para>
+<programlisting>483 {
+484 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_physical_link_1a38f205a4a97e9869b93944e0f820f11b">physical_width</link>;
+485 }
+</programlisting>    </section><anchor xml:id="_class_physical_link_1acf0976c043aeef0e82b8482abf3bf4ec"/>    <section>
+    <title>getTAcomm()</title>
+<indexterm><primary>getTAcomm</primary><secondary>PhysicalLink</secondary></indexterm>
+<indexterm><primary>PhysicalLink</primary><secondary>getTAcomm</secondary></indexterm>
+<para><computeroutput>sc_time PhysicalLink::getTAcomm ( )</computeroutput></para><para>
+Definition at line 492 of file tl.cpp.</para>
+<programlisting>493 {
+494 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_physical_link_1a2f2ff97a12a4c37da1892f0fc2e855b2">tacomm</link>;
+495 }
+</programlisting>    </section><anchor xml:id="_class_physical_link_1ae83d2eca88f0999b1ea7c6ee72a788a8"/>    <section>
+    <title>getTcomm()</title>
+<indexterm><primary>getTcomm</primary><secondary>PhysicalLink</secondary></indexterm>
+<indexterm><primary>PhysicalLink</primary><secondary>getTcomm</secondary></indexterm>
+<para><computeroutput>sc_time PhysicalLink::getTcomm ( )</computeroutput></para><para>
+Definition at line 487 of file tl.cpp.</para>
+<programlisting>488 {
+489 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_physical_link_1a90cb0e1c2a0d9951899b587d6d2b247a">tcomm</link>;
+490 }
+</programlisting>    </section><anchor xml:id="_class_physical_link_1a3a4bc3e300cf94a0105798d28ff7b8f2"/>    <section>
+    <title>seta1()</title>
+<indexterm><primary>seta1</primary><secondary>PhysicalLink</secondary></indexterm>
+<indexterm><primary>PhysicalLink</primary><secondary>seta1</secondary></indexterm>
+<para><computeroutput>void PhysicalLink::seta1 (float x)</computeroutput></para><para>
+Definition at line 547 of file tl.cpp.</para>
+<programlisting>548 {
+549 &#32;&#32;&#32;&#32;<link linkend="_class_physical_link_1a46367b48d7ab1d5c06dd2051a6d5a32f">a1</link>&#32;=&#32;x;
+550 }
+</programlisting>    </section><anchor xml:id="_class_physical_link_1ab4e2b4917f65eb53ae125b6adf0f30b9"/>    <section>
+    <title>seta2()</title>
+<indexterm><primary>seta2</primary><secondary>PhysicalLink</secondary></indexterm>
+<indexterm><primary>PhysicalLink</primary><secondary>seta2</secondary></indexterm>
+<para><computeroutput>void PhysicalLink::seta2 (float x)</computeroutput></para><para>
+Definition at line 537 of file tl.cpp.</para>
+<programlisting>538 {
+539 &#32;&#32;&#32;&#32;<link linkend="_class_physical_link_1a2c8e1cba265b4e099ac6b07c7839de0e">a2</link>&#32;=&#32;x;
+540 }
+</programlisting>    </section><anchor xml:id="_class_physical_link_1a8fcfa235def47bf09f6d3ae892dbb2c3"/>    <section>
+    <title>setBandwidth()</title>
+<indexterm><primary>setBandwidth</primary><secondary>PhysicalLink</secondary></indexterm>
+<indexterm><primary>PhysicalLink</primary><secondary>setBandwidth</secondary></indexterm>
+<para><computeroutput>void PhysicalLink::setBandwidth (int x)</computeroutput></para><para>
+Definition at line 527 of file tl.cpp.</para>
+<programlisting>528 {
+529 &#32;&#32;&#32;&#32;<link linkend="_class_physical_link_1ac441e379b59ecb00c48ebef53f2d6b75">bandwidth</link>&#32;=&#32;x;
+530 }
+</programlisting>    </section><anchor xml:id="_class_physical_link_1a4c1ca22f348862858653c4f02496218f"/>    <section>
+    <title>setId()</title>
+<indexterm><primary>setId</primary><secondary>PhysicalLink</secondary></indexterm>
+<indexterm><primary>PhysicalLink</primary><secondary>setId</secondary></indexterm>
+<para><computeroutput>void PhysicalLink::setId (int x)</computeroutput></para><para>
+Definition at line 502 of file tl.cpp.</para>
+<programlisting>503 {
+504 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">id</emphasis>&#32;=&#32;x;
+505 }
+</programlisting><para>
+Referenced by SystemManager::generatePhysicalLinkInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_physical_link_a4c1ca22f348862858653c4f02496218f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_physical_link_1a720451548bfac94a60eca8c8f47d343b"/>    <section>
+    <title>setName()</title>
+<indexterm><primary>setName</primary><secondary>PhysicalLink</secondary></indexterm>
+<indexterm><primary>PhysicalLink</primary><secondary>setName</secondary></indexterm>
+<para><computeroutput>void PhysicalLink::setName (string x)</computeroutput></para><para>
+Definition at line 507 of file tl.cpp.</para>
+<programlisting>508 {
+509 &#32;&#32;&#32;&#32;<link linkend="_class_physical_link_1ab7d8e236c3a63063c48a572753f92455">name</link>&#32;=&#32;x;
+510 }
+</programlisting><para>
+Referenced by SystemManager::generatePhysicalLinkInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_physical_link_a720451548bfac94a60eca8c8f47d343b_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_physical_link_1aaed942eff035eb7f0a45e5cadc0200ab"/>    <section>
+    <title>setPhysicalWidth()</title>
+<indexterm><primary>setPhysicalWidth</primary><secondary>PhysicalLink</secondary></indexterm>
+<indexterm><primary>PhysicalLink</primary><secondary>setPhysicalWidth</secondary></indexterm>
+<para><computeroutput>void PhysicalLink::setPhysicalWidth (int x)</computeroutput></para><para>
+Definition at line 512 of file tl.cpp.</para>
+<programlisting>513 {
+514 &#32;&#32;&#32;&#32;<link linkend="_class_physical_link_1a38f205a4a97e9869b93944e0f820f11b">physical_width</link>&#32;=&#32;x;
+515 }
+</programlisting>    </section><anchor xml:id="_class_physical_link_1a9f72f16b0f7fa6b4976ab10c4988721c"/>    <section>
+    <title>setTAcomm()</title>
+<indexterm><primary>setTAcomm</primary><secondary>PhysicalLink</secondary></indexterm>
+<indexterm><primary>PhysicalLink</primary><secondary>setTAcomm</secondary></indexterm>
+<para><computeroutput>void PhysicalLink::setTAcomm (sc_time x)</computeroutput></para><para>
+Definition at line 522 of file tl.cpp.</para>
+<programlisting>523 {
+524 &#32;&#32;&#32;&#32;<link linkend="_class_physical_link_1a2f2ff97a12a4c37da1892f0fc2e855b2">tacomm</link>&#32;=&#32;x;
+525 }
+</programlisting>    </section><anchor xml:id="_class_physical_link_1a5b75831c5c40358e35dac40e95abdd71"/>    <section>
+    <title>setTcomm()</title>
+<indexterm><primary>setTcomm</primary><secondary>PhysicalLink</secondary></indexterm>
+<indexterm><primary>PhysicalLink</primary><secondary>setTcomm</secondary></indexterm>
+<para><computeroutput>void PhysicalLink::setTcomm (sc_time x)</computeroutput></para><para>
+Definition at line 517 of file tl.cpp.</para>
+<programlisting>518 {
+519 &#32;&#32;&#32;&#32;<link linkend="_class_physical_link_1a90cb0e1c2a0d9951899b587d6d2b247a">tcomm</link>&#32;=&#32;x;
+520 }
+</programlisting></section>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_class_physical_link_1a46367b48d7ab1d5c06dd2051a6d5a32f"/>    <section>
+    <title>a1</title>
+<indexterm><primary>a1</primary><secondary>PhysicalLink</secondary></indexterm>
+<indexterm><primary>PhysicalLink</primary><secondary>a1</secondary></indexterm>
+<para><computeroutput>float PhysicalLink::a1</computeroutput></para><para>
+Definition at line 283 of file tl.h.</para>
+<para>
+Referenced by SystemManager::generatePhysicalLinkInstances().</para>
+    </section><anchor xml:id="_class_physical_link_1a2c8e1cba265b4e099ac6b07c7839de0e"/>    <section>
+    <title>a2</title>
+<indexterm><primary>a2</primary><secondary>PhysicalLink</secondary></indexterm>
+<indexterm><primary>PhysicalLink</primary><secondary>a2</secondary></indexterm>
+<para><computeroutput>float PhysicalLink::a2</computeroutput></para><para>
+Definition at line 282 of file tl.h.</para>
+<para>
+Referenced by SystemManager::generatePhysicalLinkInstances().</para>
+    </section><anchor xml:id="_class_physical_link_1ac441e379b59ecb00c48ebef53f2d6b75"/>    <section>
+    <title>bandwidth</title>
+<indexterm><primary>bandwidth</primary><secondary>PhysicalLink</secondary></indexterm>
+<indexterm><primary>PhysicalLink</primary><secondary>bandwidth</secondary></indexterm>
+<para><computeroutput>unsigned int PhysicalLink::bandwidth</computeroutput></para><para>
+Definition at line 281 of file tl.h.</para>
+<para>
+Referenced by SystemManager::generatePhysicalLinkInstances().</para>
+    </section><anchor xml:id="_class_physical_link_1a428c21ce3a75e45ac4e1da6967382f77"/>    <section>
+    <title>id</title>
+<indexterm><primary>id</primary><secondary>PhysicalLink</secondary></indexterm>
+<indexterm><primary>PhysicalLink</primary><secondary>id</secondary></indexterm>
+<para><computeroutput>unsigned int PhysicalLink::id</computeroutput></para><para>
+Definition at line 277 of file tl.h.</para>
+    </section><anchor xml:id="_class_physical_link_1ab7d8e236c3a63063c48a572753f92455"/>    <section>
+    <title>name</title>
+<indexterm><primary>name</primary><secondary>PhysicalLink</secondary></indexterm>
+<indexterm><primary>PhysicalLink</primary><secondary>name</secondary></indexterm>
+<para><computeroutput>string PhysicalLink::name</computeroutput></para><para>
+Definition at line 276 of file tl.h.</para>
+    </section><anchor xml:id="_class_physical_link_1a38f205a4a97e9869b93944e0f820f11b"/>    <section>
+    <title>physical_width</title>
+<indexterm><primary>physical_width</primary><secondary>PhysicalLink</secondary></indexterm>
+<indexterm><primary>PhysicalLink</primary><secondary>physical_width</secondary></indexterm>
+<para><computeroutput>unsigned int PhysicalLink::physical_width</computeroutput></para><para>
+Definition at line 278 of file tl.h.</para>
+<para>
+Referenced by SystemManager::generatePhysicalLinkInstances().</para>
+    </section><anchor xml:id="_class_physical_link_1a2f2ff97a12a4c37da1892f0fc2e855b2"/>    <section>
+    <title>tacomm</title>
+<indexterm><primary>tacomm</primary><secondary>PhysicalLink</secondary></indexterm>
+<indexterm><primary>PhysicalLink</primary><secondary>tacomm</secondary></indexterm>
+<para><computeroutput>sc_time PhysicalLink::tacomm</computeroutput></para><para>
+Definition at line 280 of file tl.h.</para>
+<para>
+Referenced by SystemManager::generatePhysicalLinkInstances().</para>
+    </section><anchor xml:id="_class_physical_link_1a90cb0e1c2a0d9951899b587d6d2b247a"/>    <section>
+    <title>tcomm</title>
+<indexterm><primary>tcomm</primary><secondary>PhysicalLink</secondary></indexterm>
+<indexterm><primary>PhysicalLink</primary><secondary>tcomm</secondary></indexterm>
+<para><computeroutput>sc_time PhysicalLink::tcomm</computeroutput></para><para>
+Definition at line 279 of file tl.h.</para>
+<para>
+Referenced by SystemManager::generatePhysicalLinkInstances().</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+HepsycodeDesign/src/<link linkend="_tl_8h">tl.h</link>HepsycodeDesign/src/<link linkend="_tl_8cpp">tl.cpp</link></section>
+</section>

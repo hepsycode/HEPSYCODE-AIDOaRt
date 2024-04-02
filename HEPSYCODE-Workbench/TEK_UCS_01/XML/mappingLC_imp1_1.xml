@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<mapping>
+	<allocation CHid="0">
+		<channelId CHid="0" Lname="RAM@LOCAL" value="2" />
+	</allocation>
+	<allocation CHid="1">
+		<channelId CHid="1" Lname="RAM@LOCAL" value="2" />
+	</allocation>
+	<allocation CHid="2">
+		<channelId CHid="2" Lname="RAM@LOCAL" value="2" />
+	</allocation>
+	<allocation CHid="3">
+		<channelId CHid="3" Lname="RAM@LOCAL" value="2" />
+	</allocation>
+	<allocation CHid="4">
+		<channelId CHid="4" Lname="RAM@LOCAL" value="2" />
+	</allocation>
+	<allocation CHid="5">
+		<channelId CHid="5" Lname="RAM@LOCAL" value="2" />
+	</allocation>
+	<allocation CHid="6">
+		<channelId CHid="6" Lname="RAM@LOCAL" value="2" />
+	</allocation>
+	<allocation CHid="7">
+		<channelId CHid="7" Lname="RAM@LOCAL" value="2" />
+	</allocation>
+	<allocation CHid="8">
+		<channelId CHid="8" Lname="RAM@LOCAL" value="2" />
+	</allocation>
+	<allocation CHid="9">
+		<channelId CHid="9" Lname="RAM@LOCAL" value="2" />
+	</allocation>
+	<allocation CHid="10">
+		<channelId CHid="10" Lname="RAM@LOCAL" value="2" />
+	</allocation>
+	<allocation CHid="11">
+		<channelId CHid="11" Lname="RAM@LOCAL" value="2" />
+	</allocation>
+	<allocation CHid="12">
+		<channelId CHid="12" Lname="RAM@LOCAL" value="2" />
+	</allocation>
+	<allocation CHid="13">
+		<channelId CHid="13" Lname="RAM@LOCAL" value="2" />
+	</allocation>
+</mapping>
+

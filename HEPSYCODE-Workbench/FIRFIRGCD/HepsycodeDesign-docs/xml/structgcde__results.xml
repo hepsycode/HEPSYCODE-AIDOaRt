@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structgcde__results" kind="struct" language="C++" prot="public">
+    <compoundname>gcde_results</compoundname>
+    <includes refid="datatype_8h" local="no">datatype.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgcde__results_1adc9a829b13114c46522b001c376af7ec" prot="public" static="no" mutable="no">
+        <type>sc_uint&lt; 8 &gt;</type>
+        <definition>sc_uint&lt;8&gt; gcde_results::result</definition>
+        <argsstring></argsstring>
+        <name>result</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/datatype.h" line="185" column="9" bodyfile="HepsycodeDesign/src/datatype.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Message from gcde to gcdm. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>gcde_results</label>
+        <link refid="structgcde__results"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+result</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>sc_uint&lt; 8 &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="HepsycodeDesign/src/datatype.h" line="184" column="1" bodyfile="HepsycodeDesign/src/datatype.h" bodystart="183" bodyend="186"/>
+    <listofallmembers>
+      <member refid="structgcde__results_1adc9a829b13114c46522b001c376af7ec" prot="public" virt="non-virtual"><scope>gcde_results</scope><name>result</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

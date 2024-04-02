@@ -1,0 +1,74 @@
+.TH "sc_core::sc_csp_channel_out_if< T >" 3 "Mon Mar 20 2023" "FirFirGCD Application" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+sc_core::sc_csp_channel_out_if< T >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <sc_csp_channel_ifs\&.h>\fP
+.PP
+Inherits \fBsc_interface\fP\&.
+.PP
+Inherited by \fBsc_csp_channel< T >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBwrite\fP (const T &)=0"
+.br
+.ti -1c
+.RI "virtual bool \fBwrite_test\fP ()=0"
+.br
+.ti -1c
+.RI "virtual void \fBregister_alt\fP ()=0"
+.br
+.ti -1c
+.RI "virtual const sc_event & \fBget_alt_event\fP ()=0"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBsc_csp_channel_out_if\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<class T>
+.br
+class sc_core::sc_csp_channel_out_if< T >"
+
+.PP
+Definition at line 114 of file sc_csp_channel_ifs\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<class T > \fBsc_core::sc_csp_channel_out_if\fP< T >::\fBsc_csp_channel_out_if\fP ()\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 130 of file sc_csp_channel_ifs\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "template<class T > virtual const sc_event& \fBsc_core::sc_csp_channel_out_if\fP< T >::get_alt_event ()\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBsc_csp_channel< T >\fP\&.
+.SS "template<class T > virtual void \fBsc_core::sc_csp_channel_out_if\fP< T >::register_alt ()\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBsc_csp_channel< T >\fP\&.
+.SS "template<class T > virtual void \fBsc_core::sc_csp_channel_out_if\fP< T >::write (const T &)\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBsc_csp_channel< T >\fP\&.
+.SS "template<class T > virtual bool \fBsc_core::sc_csp_channel_out_if\fP< T >::write_test ()\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBsc_csp_channel< T >\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FirFirGCD Application from the source code\&.

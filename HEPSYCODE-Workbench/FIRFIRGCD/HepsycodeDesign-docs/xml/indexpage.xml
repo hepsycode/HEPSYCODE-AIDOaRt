@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>HEPSYCODE FirFirGCD Application</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<sect1 id="index_1INTRODUCTION">
+<title>INTRODUCTION</title>
+<para>Hepsycode is a prototypal tool to improve the design time of embedded applications. It is based on a System-Level methodology for HW/SW Co-Design of Heterogeneous Parallel Dedicated Systems. The whole framework drives the designer from an Electronic System-Level (ESL) behavioral model, with related NF requirements, including real-time and mixed-criticality ones, to the final HW/SW implementation, considering specific HW technologies, scheduling policies and Inter-Process Communication (IPC) mechanisms. The system behavior modeling language introduced in Hepsycode, named HML (HEPSY Modeling Language), is based on the Communicating Sequential Processes (CSP) Model of Computation (MoC). It allows modeling the behavior of the system as a network of processes communicating through unidirectional synchronous channels. By means of HML it is possible to specify the System Behavior Model (SBM), an executable model of the system behavior, a set of Non Functional Constraints (NFC) and a set of Reference Inputs (RI) to be used for simulation-based activities. Through the execution of different steps, including a system-level Design Space Exploration (DSE) approach that allows the related co-design methodology to suggest an HW/SW partitioning of the application specification and a mapping of the partitioned entities onto an automatically defined heterogeneous multi-processor architecture, it is possible to proceed with system implementation.</para>
+<para>Hepsycode uses Eclipse MDE technologies, SystemC custom simulator implementation and an evolutionary genetic algorithm for partitioning activities, all integrated into an automatic framework that drive the designer from first input to final solution.</para>
+<sect2 id="index_1WEBSITE">
+<title>WEBSITE</title>
+<para><ulink url="http://www.hepsycode.com">www.hepsycode.com</ulink></para>
+</sect2>
+<sect2 id="index_1LICENSE">
+<title>LICENSE</title>
+<para>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007 (see <ulink url="https://www.gnu.org/licenses/gpl-3.0.en.html">gpl-3.0.en.html</ulink>)</para>
+</sect2>
+<sect2 id="index_1SUPPORT">
+<title>SUPPORT</title>
+<para>We currently support:</para>
+<para>Email:<itemizedlist>
+<listitem><para>Luigi Pomante: <ulink url="mailto:luigi.pomante@univaq.it">luigi.pomante@univaq.it</ulink></para>
+</listitem><listitem><para>Vittoriano Muttillo: <ulink url="mailto:vittoriano.muttillo@guest.univaq.it">vittoriano.muttillo@guest.univaq.it</ulink></para>
+</listitem><listitem><para>Main contact: <ulink url="mailto:info@hepsycode.com">info@hepsycode.com</ulink></para>
+</listitem></itemizedlist>
+</para>
+<para>(please take care to use [HEPSYCODE SUPPORT] as object</para>
+</sect2>
+<sect2 id="index_1Additional">
+<title>information</title>
+<para>Research publications are available on <ulink url="http://www.hepsycode.com/">Hepsycode Website</ulink> and <ulink url="http://www.pomante.net/sito_gg/Publications.htm">Publications</ulink></para>
+</sect2>
+</sect1>
+<sect1 id="index_1Example">
+<title>Use Case FirFirGCD</title>
+<para>We provide an example Hepsycode project, called FirFirGCD (FFG). FFG is a synthetic application that takes in input pairs of values (triggered by Stimulus), makes two filtering actions (FIR8 and FIR16) and then makes the Greatest Common Divisor (GCD) between the filters outputs and displays the result. This application is composed of three main components: 2 Finite Impulse Response (FIR) digital filters and a Greatest Common Divisor (GCD) component, as show in the figure below.</para>
+<para><image type="html" name="FirFirGCD_Model_0_0.png"></image>
+</para>
+<para>More details can be found at the link: <ulink url="http://www.hepsycode.com">www.hepsycode.com</ulink> </para>
+</sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacesc__core" kind="namespace" language="C++">
+    <compoundname>sc_core</compoundname>
+    <innerclass refid="classsc__core_1_1sc__csp__channel__in__if" prot="public">sc_core::sc_csp_channel_in_if</innerclass>
+    <innerclass refid="classsc__core_1_1sc__csp__channel__out__if" prot="public">sc_core::sc_csp_channel_out_if</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HepsycodeDesign/src/sc_csp_channel_ifs.h" line="73" column="1"/>
+  </compounddef>
+</doxygen>

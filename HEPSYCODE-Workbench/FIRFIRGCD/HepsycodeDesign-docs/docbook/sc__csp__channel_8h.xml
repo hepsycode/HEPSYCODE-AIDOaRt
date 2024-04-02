@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_sc__csp__channel_8h">
+<title>HepsycodeDesign/src/sc_csp_channel.h File Reference</title>
+<indexterm><primary>HepsycodeDesign/src/sc_csp_channel.h</primary></indexterm>
+<para>
+
+<para>The sc_csp_channel&lt;T&gt; primitive channel class documented file. </para>
+ 
+</para>
+<programlisting>#include &quot;sysc/communication/sc_communication_ids.h&quot;
+#include &quot;sysc/communication/sc_prim_channel.h&quot;
+#include &quot;sysc/kernel/sc_event.h&quot;
+#include &quot;sysc/kernel/sc_simcontext.h&quot;
+#include &quot;sysc/tracing/sc_trace.h&quot;
+#include &lt;typeinfo&gt;
+#include &quot;sc_csp_channel_ifs.h&quot;
+#include &quot;define.h&quot;
+#include &quot;SystemManager.h&quot;
+#include &quot;SchedulingManager.h&quot;
+</programlisting>Include dependency graph for sc_csp_channel.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="sc__csp__channel_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="sc__csp__channel_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classsc__csp__channel">sc_csp_channel&lt; T &gt;</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_system_manager">SystemManager</link> * <link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link></para>
+</listitem>
+            <listitem><para>SchedulingManager * <link linkend="_group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>The sc_csp_channel&lt;T&gt; primitive channel class documented file. </para>
+
+<para>Details. </para>
+</section>
+</section>

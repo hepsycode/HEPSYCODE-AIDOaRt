@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/EcoreXES/src-gen" creationIcons="false" editDirectory="/EcoreXES.edit/src-gen"
+    editorDirectory="/EcoreXES.editor/src-gen" modelPluginID="EcoreXES" modelName="EcoreXES"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>ecoreXES.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="EcoreXES" basePackage="at.jku.se.ecorexes" disposableProviderFactory="true"
+      ecorePackage="ecoreXES.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ecoreXES.ecore#//EventType">
+      <genEnumLiterals ecoreEnumLiteral="ecoreXES.ecore#//EventType/SET"/>
+      <genEnumLiterals ecoreEnumLiteral="ecoreXES.ecore#//EventType/UNSET"/>
+      <genEnumLiterals ecoreEnumLiteral="ecoreXES.ecore#//EventType/ADD"/>
+      <genEnumLiterals ecoreEnumLiteral="ecoreXES.ecore#//EventType/REMOVE"/>
+      <genEnumLiterals ecoreEnumLiteral="ecoreXES.ecore#//EventType/ADD_MANY"/>
+      <genEnumLiterals ecoreEnumLiteral="ecoreXES.ecore#//EventType/REMOVE_MANY"/>
+      <genEnumLiterals ecoreEnumLiteral="ecoreXES.ecore#//EventType/MOVE"/>
+      <genEnumLiterals ecoreEnumLiteral="ecoreXES.ecore#//EventType/RESOLVE"/>
+    </genEnums>
+    <genClasses ecoreClass="ecoreXES.ecore#//Event">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ecoreXES.ecore#//Event/set"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ecoreXES.ecore#//Event/timestamp"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ecoreXES.ecore#//Event/fatureAndClass"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ecoreXES.ecore#//Event/id"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ecoreXES.ecore#//Event/referencevalue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ecoreXES.ecore#//Event/dataValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ecoreXES.ecore#//Event/eventType"/>
+    </genClasses>
+    <genClasses ecoreClass="ecoreXES.ecore#//Log">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ecoreXES.ecore#//Log/resource"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ecoreXES.ecore#//Log/event"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ecoreXES.ecore#//Log/attributes"/>
+    </genClasses>
+    <genClasses ecoreClass="ecoreXES.ecore#//Attributes">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ecoreXES.ecore#//Attributes/name"/>
+    </genClasses>
+    <genClasses ecoreClass="ecoreXES.ecore#//FeatureAndClass">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ecoreXES.ecore#//FeatureAndClass/class"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ecoreXES.ecore#//FeatureAndClass/feature"/>
+    </genClasses>
+    <genClasses ecoreClass="ecoreXES.ecore#//Feature"/>
+    <genClasses ecoreClass="ecoreXES.ecore#//JavaClass"/>
+    <genClasses ecoreClass="ecoreXES.ecore#//ID"/>
+    <genClasses ecoreClass="ecoreXES.ecore#//ReferenceValue"/>
+  </genPackages>
+</genmodel:GenModel>

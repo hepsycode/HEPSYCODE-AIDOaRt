@@ -1,0 +1,229 @@
+\hypertarget{group__firfirgcd__macros__group}{}\doxysection{Fir\+Fir\+G\+CD Macros.}
+\label{group__firfirgcd__macros__group}\index{FirFirGCD Macros.@{FirFirGCD Macros.}}
+
+
+Macros Implementation.  
+
+
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{H\+E\+P\+S\+Y\+\_\+S}}(X)
+\item 
+\#define \mbox{\hyperlink{group__firfirgcd__macros__group_ga652f3387e2319f751a6459f9db47cc3a}{H\+E\+P\+S\+Y\+\_\+P}}(X)~\mbox{\hyperlink{group__scheduling__manager__group_gaa604ac51b2579794e702367934dfb8ad}{p\+System\+Manager}}-\/$>$P\+S\+\_\+\+Profiling(X);
+\item 
+\#define \mbox{\hyperlink{group__firfirgcd__macros__group_gab8ed6dfd8e9d61861b9aff28d6b7300f}{H\+E\+P\+S\+Y\+\_\+\+S\+C\+H\+E\+D\+\_\+\+CS}}(X,  i)
+\item 
+\#define \mbox{\hyperlink{group__firfirgcd__macros__group_ga64988c094471851711bcbbb5e1298616}{P\+R\+E\+\_\+\+W\+A\+IT}}(X)
+\item 
+\#define \mbox{\hyperlink{group__firfirgcd__macros__group_ga521b4282fb564e25bc56196f1926ce30}{P\+O\+S\+T\+\_\+\+W\+A\+IT}}(X)
+\item 
+\#define \mbox{\hyperlink{group__firfirgcd__macros__group_gaa2252b3bddc89494975397ffc18b09f5}{H\+E\+P\+S\+Y\+\_\+\+S\+\_\+\+T\+I\+M\+ER}}(X,  Y)
+\item 
+\#define \mbox{\hyperlink{group__firfirgcd__macros__group_gaf1fe2324408cd29c1e2dcd55f2e4a9c1}{H\+E\+P\+S\+Y\+\_\+\+T\+R\+A\+C\+E\+\_\+\+P\+S\+\_\+\+S\+T\+A\+TE}}(X)~\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}{p\+Scheduling\+Manager}}-\/$>$L\+OG $<$$<$ \char`\"{}Execution Time;\char`\"{} $<$$<$ sc\+\_\+time\+\_\+stamp().to\+\_\+seconds() $<$$<$ \char`\"{}; Energy;\char`\"{} $<$$<$ p\+System\+Manager-\/$>$V\+PS\mbox{[}X\mbox{]}.get\+Energy() $<$$<$ \char`\"{}; Process;\char`\"{} $<$$<$ X $<$$<$ \char`\"{}; State;\char`\"{} $<$$<$ p\+Scheduling\+Manager-\/$>$process\+\_\+state\mbox{[}X\mbox{]} $<$$<$ endl;
+\item 
+\#define \mbox{\hyperlink{group__firfirgcd__macros__group_gadc2d4bfbe106f792246792d01d66d63c}{H\+E\+P\+S\+Y\+\_\+\+T\+R\+A\+C\+E\+\_\+\+P\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T\+H\+IS}}(X)~this-\/$>$L\+OG $<$$<$ \char`\"{}Execution Time;\char`\"{} $<$$<$ sc\+\_\+time\+\_\+stamp().to\+\_\+seconds() $<$$<$ \char`\"{}; Energy;\char`\"{} $<$$<$ p\+System\+Manager-\/$>$V\+PS\mbox{[}X\mbox{]}.get\+Energy() $<$$<$ \char`\"{}; Process;\char`\"{} $<$$<$ X $<$$<$ \char`\"{}; State;\char`\"{} $<$$<$ this-\/$>$process\+\_\+state\mbox{[}X\mbox{]} $<$$<$ endl;
+\item 
+\#define \mbox{\hyperlink{group__firfirgcd__macros__group_ga139185aa9c10392aada97618a69ee2cd}{H\+E\+P\+S\+Y\+\_\+\+T\+R\+A\+C\+E\+\_\+\+C\+H\+\_\+\+S\+T\+A\+TE}}(X)~\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}{p\+Scheduling\+Manager}}-\/$>$L\+OG $<$$<$ \char`\"{}Execution Time;\char`\"{} $<$$<$ sc\+\_\+time\+\_\+stamp().to\+\_\+seconds() $<$$<$ \char`\"{}; Energy;\char`\"{} $<$$<$ p\+System\+Manager-\/$>$V\+CH\mbox{[}X\mbox{]}.working\+\_\+energy $<$$<$ \char`\"{}; Channel;\char`\"{} $<$$<$ X $<$$<$ \char`\"{}; State;\char`\"{} $<$$<$ p\+Scheduling\+Manager-\/$>$channel\+\_\+state\mbox{[}X\mbox{]} $<$$<$ endl;
+\item 
+\#define \mbox{\hyperlink{group__firfirgcd__macros__group_ga24b6f3a385f702b3a63e0811a0f22e75}{H\+E\+P\+S\+Y\+\_\+\+T\+R\+A\+C\+E\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T\+H\+IS}}(X)~this-\/$>$L\+OG $<$$<$ \char`\"{}Execution Time;\char`\"{} $<$$<$ sc\+\_\+time\+\_\+stamp().to\+\_\+seconds() $<$$<$ \char`\"{}; Energy;\char`\"{} $<$$<$ p\+System\+Manager-\/$>$V\+CH\mbox{[}X\mbox{]}.working\+\_\+energy $<$$<$ \char`\"{}; Channel;\char`\"{} $<$$<$ X $<$$<$ \char`\"{}; State;\char`\"{} $<$$<$ this-\/$>$channel\+\_\+state\mbox{[}X\mbox{]} $<$$<$ endl;
+\item 
+\#define \mbox{\hyperlink{group__firfirgcd__macros__group_ga0f83efd33ffbe62c58c798abb824fa94}{H\+E\+P\+S\+Y\+\_\+\+T\+R\+A\+C\+E\+\_\+\+B\+B\+\_\+\+S\+T\+A\+TE}}(X)~\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}{p\+Scheduling\+Manager}}-\/$>$L\+OG $<$$<$ \char`\"{}Execution Time;\char`\"{} $<$$<$ sc\+\_\+time\+\_\+stamp().to\+\_\+seconds() $<$$<$ \char`\"{}; Energy;\char`\"{} $<$$<$ 0 $<$$<$ \char`\"{}; BB;\char`\"{} $<$$<$ X $<$$<$ \char`\"{}; Mode;\char`\"{} $<$$<$ p\+Scheduling\+Manager-\/$>$B\+B\+\_\+mode\mbox{[}X\mbox{]} $<$$<$ endl;
+\item 
+\#define \mbox{\hyperlink{group__firfirgcd__macros__group_ga0782cab9383550027672da286d54c931}{H\+E\+P\+S\+Y\+\_\+\+T\+R\+A\+C\+E\+\_\+\+B\+B\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T\+H\+IS}}(X)~this-\/$>$L\+OG $<$$<$ \char`\"{}Execution Time;\char`\"{} $<$$<$ sc\+\_\+time\+\_\+stamp().to\+\_\+seconds() $<$$<$ \char`\"{}; Energy;\char`\"{} $<$$<$ 0 $<$$<$ \char`\"{}; BB;\char`\"{} $<$$<$ X $<$$<$ \char`\"{}; Mode;\char`\"{} $<$$<$ this-\/$>$B\+B\+\_\+mode\mbox{[}X\mbox{]} $<$$<$ endl;
+\item 
+\#define \mbox{\hyperlink{group__firfirgcd__macros__group_ga37921dae893594f3710d892f471de3cb}{H\+E\+P\+S\+Y\+\_\+\+T\+R\+A\+C\+E\+\_\+\+S\+C\+H\+E\+D\+\_\+\+S\+T\+A\+TE}}(X)~this-\/$>$L\+OG $<$$<$ \char`\"{}Execution Time;\char`\"{} $<$$<$ sc\+\_\+time\+\_\+stamp().to\+\_\+seconds() $<$$<$ \char`\"{}; Energy;\char`\"{} $<$$<$ this-\/$>$sched\+\_\+en\mbox{[}X\mbox{]} $<$$<$ \char`\"{}; Scheduler;\char`\"{} $<$$<$ X $<$$<$ \char`\"{}; State;\char`\"{} $<$$<$ this-\/$>$scheduler\+\_\+state\mbox{[}X\mbox{]} $<$$<$ endl;
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Macros Implementation. 
+
+\begin{DoxyAuthor}{Author}
+V. Muttillo, L. Pomante 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Apr. 2022 
+\end{DoxyDate}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__firfirgcd__macros__group_ga652f3387e2319f751a6459f9db47cc3a}\label{group__firfirgcd__macros__group_ga652f3387e2319f751a6459f9db47cc3a}} 
+\index{FirFirGCD Macros.@{FirFirGCD Macros.}!HEPSY\_P@{HEPSY\_P}}
+\index{HEPSY\_P@{HEPSY\_P}!FirFirGCD Macros.@{FirFirGCD Macros.}}
+\doxysubsubsection{\texorpdfstring{HEPSY\_P}{HEPSY\_P}}
+{\footnotesize\ttfamily \#define H\+E\+P\+S\+Y\+\_\+P(\begin{DoxyParamCaption}\item[{}]{X }\end{DoxyParamCaption})~\mbox{\hyperlink{group__scheduling__manager__group_gaa604ac51b2579794e702367934dfb8ad}{p\+System\+Manager}}-\/$>$P\+S\+\_\+\+Profiling(X);}
+
+
+
+Definition at line \mbox{\hyperlink{macros_8h_source_l00091}{91}} of file \mbox{\hyperlink{macros_8h_source}{macros.\+h}}.
+
+\mbox{\Hypertarget{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}\label{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}} 
+\index{FirFirGCD Macros.@{FirFirGCD Macros.}!HEPSY\_S@{HEPSY\_S}}
+\index{HEPSY\_S@{HEPSY\_S}!FirFirGCD Macros.@{FirFirGCD Macros.}}
+\doxysubsubsection{\texorpdfstring{HEPSY\_S}{HEPSY\_S}}
+{\footnotesize\ttfamily \#define H\+E\+P\+S\+Y\+\_\+S(\begin{DoxyParamCaption}\item[{}]{X }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{        wait(\mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>schedule[X]);                    \(\backslash\)}
+\DoxyCodeLine{        pSchedulingManager-\/>release[X].notify(SC\_ZERO\_TIME);}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{macros_8h_source_l00084}{84}} of file \mbox{\hyperlink{macros_8h_source}{macros.\+h}}.
+
+\mbox{\Hypertarget{group__firfirgcd__macros__group_gaa2252b3bddc89494975397ffc18b09f5}\label{group__firfirgcd__macros__group_gaa2252b3bddc89494975397ffc18b09f5}} 
+\index{FirFirGCD Macros.@{FirFirGCD Macros.}!HEPSY\_S\_TIMER@{HEPSY\_S\_TIMER}}
+\index{HEPSY\_S\_TIMER@{HEPSY\_S\_TIMER}!FirFirGCD Macros.@{FirFirGCD Macros.}}
+\doxysubsubsection{\texorpdfstring{HEPSY\_S\_TIMER}{HEPSY\_S\_TIMER}}
+{\footnotesize\ttfamily \#define H\+E\+P\+S\+Y\+\_\+\+S\+\_\+\+T\+I\+M\+ER(\begin{DoxyParamCaption}\item[{}]{X,  }\item[{}]{Y }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{        \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a81c4c7415d63b21f9ae15fd5594b7692}{increaseTimer}}(X,Y);                                                      \(\backslash\)}
+\DoxyCodeLine{        if(!\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a21d2bb74e4472f99ec04243168e7964e}{checkSPP}}(X)) wait(\mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>schedule[X]);                 \(\backslash\)}
+\DoxyCodeLine{        PRE\_WAIT(X)                                                                             \(\backslash\)}
+\DoxyCodeLine{        wait(Y);                                                                                \(\backslash\)}
+\DoxyCodeLine{        POST\_WAIT(X)                                                                            \(\backslash\)}
+\DoxyCodeLine{        if(!\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a21d2bb74e4472f99ec04243168e7964e}{checkSPP}}(X)) \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>release[X].notify(SC\_ZERO\_TIME);}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{macros_8h_source_l00129}{129}} of file \mbox{\hyperlink{macros_8h_source}{macros.\+h}}.
+
+\mbox{\Hypertarget{group__firfirgcd__macros__group_gab8ed6dfd8e9d61861b9aff28d6b7300f}\label{group__firfirgcd__macros__group_gab8ed6dfd8e9d61861b9aff28d6b7300f}} 
+\index{FirFirGCD Macros.@{FirFirGCD Macros.}!HEPSY\_SCHED\_CS@{HEPSY\_SCHED\_CS}}
+\index{HEPSY\_SCHED\_CS@{HEPSY\_SCHED\_CS}!FirFirGCD Macros.@{FirFirGCD Macros.}}
+\doxysubsubsection{\texorpdfstring{HEPSY\_SCHED\_CS}{HEPSY\_SCHED\_CS}}
+{\footnotesize\ttfamily \#define H\+E\+P\+S\+Y\+\_\+\+S\+C\+H\+E\+D\+\_\+\+CS(\begin{DoxyParamCaption}\item[{}]{X,  }\item[{}]{i }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{        wait(\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{VBB}}[X].getProcessors()[0].getOverheadCS()*i);              \(\backslash\)}
+\DoxyCodeLine{        this-\/>sched\_oh[X] += \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{VBB}}[X].getProcessors()[0].getOverheadCS()*i;      \(\backslash\)}
+\DoxyCodeLine{        this-\/>sched\_en[X]+= ((\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{VBB}}[X].getProcessors()[0].getOverheadCS().to\_seconds() * \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{VBB}}[X].getProcessors()[0].getPower())*1000000);}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{macros_8h_source_l00094}{94}} of file \mbox{\hyperlink{macros_8h_source}{macros.\+h}}.
+
+\mbox{\Hypertarget{group__firfirgcd__macros__group_ga0f83efd33ffbe62c58c798abb824fa94}\label{group__firfirgcd__macros__group_ga0f83efd33ffbe62c58c798abb824fa94}} 
+\index{FirFirGCD Macros.@{FirFirGCD Macros.}!HEPSY\_TRACE\_BB\_STATE@{HEPSY\_TRACE\_BB\_STATE}}
+\index{HEPSY\_TRACE\_BB\_STATE@{HEPSY\_TRACE\_BB\_STATE}!FirFirGCD Macros.@{FirFirGCD Macros.}}
+\doxysubsubsection{\texorpdfstring{HEPSY\_TRACE\_BB\_STATE}{HEPSY\_TRACE\_BB\_STATE}}
+{\footnotesize\ttfamily \#define H\+E\+P\+S\+Y\+\_\+\+T\+R\+A\+C\+E\+\_\+\+B\+B\+\_\+\+S\+T\+A\+TE(\begin{DoxyParamCaption}\item[{}]{X }\end{DoxyParamCaption})~\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}{p\+Scheduling\+Manager}}-\/$>$L\+OG $<$$<$ \char`\"{}Execution Time;\char`\"{} $<$$<$ sc\+\_\+time\+\_\+stamp().to\+\_\+seconds() $<$$<$ \char`\"{}; Energy;\char`\"{} $<$$<$ 0 $<$$<$ \char`\"{}; BB;\char`\"{} $<$$<$ X $<$$<$ \char`\"{}; Mode;\char`\"{} $<$$<$ p\+Scheduling\+Manager-\/$>$B\+B\+\_\+mode\mbox{[}X\mbox{]} $<$$<$ endl;}
+
+
+
+Definition at line \mbox{\hyperlink{macros_8h_source_l00156}{156}} of file \mbox{\hyperlink{macros_8h_source}{macros.\+h}}.
+
+\mbox{\Hypertarget{group__firfirgcd__macros__group_ga0782cab9383550027672da286d54c931}\label{group__firfirgcd__macros__group_ga0782cab9383550027672da286d54c931}} 
+\index{FirFirGCD Macros.@{FirFirGCD Macros.}!HEPSY\_TRACE\_BB\_STATE\_THIS@{HEPSY\_TRACE\_BB\_STATE\_THIS}}
+\index{HEPSY\_TRACE\_BB\_STATE\_THIS@{HEPSY\_TRACE\_BB\_STATE\_THIS}!FirFirGCD Macros.@{FirFirGCD Macros.}}
+\doxysubsubsection{\texorpdfstring{HEPSY\_TRACE\_BB\_STATE\_THIS}{HEPSY\_TRACE\_BB\_STATE\_THIS}}
+{\footnotesize\ttfamily \#define H\+E\+P\+S\+Y\+\_\+\+T\+R\+A\+C\+E\+\_\+\+B\+B\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T\+H\+IS(\begin{DoxyParamCaption}\item[{}]{X }\end{DoxyParamCaption})~this-\/$>$L\+OG $<$$<$ \char`\"{}Execution Time;\char`\"{} $<$$<$ sc\+\_\+time\+\_\+stamp().to\+\_\+seconds() $<$$<$ \char`\"{}; Energy;\char`\"{} $<$$<$ 0 $<$$<$ \char`\"{}; BB;\char`\"{} $<$$<$ X $<$$<$ \char`\"{}; Mode;\char`\"{} $<$$<$ this-\/$>$B\+B\+\_\+mode\mbox{[}X\mbox{]} $<$$<$ endl;}
+
+
+
+Definition at line \mbox{\hyperlink{macros_8h_source_l00160}{160}} of file \mbox{\hyperlink{macros_8h_source}{macros.\+h}}.
+
+\mbox{\Hypertarget{group__firfirgcd__macros__group_ga139185aa9c10392aada97618a69ee2cd}\label{group__firfirgcd__macros__group_ga139185aa9c10392aada97618a69ee2cd}} 
+\index{FirFirGCD Macros.@{FirFirGCD Macros.}!HEPSY\_TRACE\_CH\_STATE@{HEPSY\_TRACE\_CH\_STATE}}
+\index{HEPSY\_TRACE\_CH\_STATE@{HEPSY\_TRACE\_CH\_STATE}!FirFirGCD Macros.@{FirFirGCD Macros.}}
+\doxysubsubsection{\texorpdfstring{HEPSY\_TRACE\_CH\_STATE}{HEPSY\_TRACE\_CH\_STATE}}
+{\footnotesize\ttfamily \#define H\+E\+P\+S\+Y\+\_\+\+T\+R\+A\+C\+E\+\_\+\+C\+H\+\_\+\+S\+T\+A\+TE(\begin{DoxyParamCaption}\item[{}]{X }\end{DoxyParamCaption})~\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}{p\+Scheduling\+Manager}}-\/$>$L\+OG $<$$<$ \char`\"{}Execution Time;\char`\"{} $<$$<$ sc\+\_\+time\+\_\+stamp().to\+\_\+seconds() $<$$<$ \char`\"{}; Energy;\char`\"{} $<$$<$ p\+System\+Manager-\/$>$V\+CH\mbox{[}X\mbox{]}.working\+\_\+energy $<$$<$ \char`\"{}; Channel;\char`\"{} $<$$<$ X $<$$<$ \char`\"{}; State;\char`\"{} $<$$<$ p\+Scheduling\+Manager-\/$>$channel\+\_\+state\mbox{[}X\mbox{]} $<$$<$ endl;}
+
+
+
+Definition at line \mbox{\hyperlink{macros_8h_source_l00148}{148}} of file \mbox{\hyperlink{macros_8h_source}{macros.\+h}}.
+
+\mbox{\Hypertarget{group__firfirgcd__macros__group_ga24b6f3a385f702b3a63e0811a0f22e75}\label{group__firfirgcd__macros__group_ga24b6f3a385f702b3a63e0811a0f22e75}} 
+\index{FirFirGCD Macros.@{FirFirGCD Macros.}!HEPSY\_TRACE\_CH\_STATE\_THIS@{HEPSY\_TRACE\_CH\_STATE\_THIS}}
+\index{HEPSY\_TRACE\_CH\_STATE\_THIS@{HEPSY\_TRACE\_CH\_STATE\_THIS}!FirFirGCD Macros.@{FirFirGCD Macros.}}
+\doxysubsubsection{\texorpdfstring{HEPSY\_TRACE\_CH\_STATE\_THIS}{HEPSY\_TRACE\_CH\_STATE\_THIS}}
+{\footnotesize\ttfamily \#define H\+E\+P\+S\+Y\+\_\+\+T\+R\+A\+C\+E\+\_\+\+C\+H\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T\+H\+IS(\begin{DoxyParamCaption}\item[{}]{X }\end{DoxyParamCaption})~this-\/$>$L\+OG $<$$<$ \char`\"{}Execution Time;\char`\"{} $<$$<$ sc\+\_\+time\+\_\+stamp().to\+\_\+seconds() $<$$<$ \char`\"{}; Energy;\char`\"{} $<$$<$ p\+System\+Manager-\/$>$V\+CH\mbox{[}X\mbox{]}.working\+\_\+energy $<$$<$ \char`\"{}; Channel;\char`\"{} $<$$<$ X $<$$<$ \char`\"{}; State;\char`\"{} $<$$<$ this-\/$>$channel\+\_\+state\mbox{[}X\mbox{]} $<$$<$ endl;}
+
+
+
+Definition at line \mbox{\hyperlink{macros_8h_source_l00152}{152}} of file \mbox{\hyperlink{macros_8h_source}{macros.\+h}}.
+
+\mbox{\Hypertarget{group__firfirgcd__macros__group_gaf1fe2324408cd29c1e2dcd55f2e4a9c1}\label{group__firfirgcd__macros__group_gaf1fe2324408cd29c1e2dcd55f2e4a9c1}} 
+\index{FirFirGCD Macros.@{FirFirGCD Macros.}!HEPSY\_TRACE\_PS\_STATE@{HEPSY\_TRACE\_PS\_STATE}}
+\index{HEPSY\_TRACE\_PS\_STATE@{HEPSY\_TRACE\_PS\_STATE}!FirFirGCD Macros.@{FirFirGCD Macros.}}
+\doxysubsubsection{\texorpdfstring{HEPSY\_TRACE\_PS\_STATE}{HEPSY\_TRACE\_PS\_STATE}}
+{\footnotesize\ttfamily \#define H\+E\+P\+S\+Y\+\_\+\+T\+R\+A\+C\+E\+\_\+\+P\+S\+\_\+\+S\+T\+A\+TE(\begin{DoxyParamCaption}\item[{}]{X }\end{DoxyParamCaption})~\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}{p\+Scheduling\+Manager}}-\/$>$L\+OG $<$$<$ \char`\"{}Execution Time;\char`\"{} $<$$<$ sc\+\_\+time\+\_\+stamp().to\+\_\+seconds() $<$$<$ \char`\"{}; Energy;\char`\"{} $<$$<$ p\+System\+Manager-\/$>$V\+PS\mbox{[}X\mbox{]}.get\+Energy() $<$$<$ \char`\"{}; Process;\char`\"{} $<$$<$ X $<$$<$ \char`\"{}; State;\char`\"{} $<$$<$ p\+Scheduling\+Manager-\/$>$process\+\_\+state\mbox{[}X\mbox{]} $<$$<$ endl;}
+
+
+
+Definition at line \mbox{\hyperlink{macros_8h_source_l00140}{140}} of file \mbox{\hyperlink{macros_8h_source}{macros.\+h}}.
+
+\mbox{\Hypertarget{group__firfirgcd__macros__group_gadc2d4bfbe106f792246792d01d66d63c}\label{group__firfirgcd__macros__group_gadc2d4bfbe106f792246792d01d66d63c}} 
+\index{FirFirGCD Macros.@{FirFirGCD Macros.}!HEPSY\_TRACE\_PS\_STATE\_THIS@{HEPSY\_TRACE\_PS\_STATE\_THIS}}
+\index{HEPSY\_TRACE\_PS\_STATE\_THIS@{HEPSY\_TRACE\_PS\_STATE\_THIS}!FirFirGCD Macros.@{FirFirGCD Macros.}}
+\doxysubsubsection{\texorpdfstring{HEPSY\_TRACE\_PS\_STATE\_THIS}{HEPSY\_TRACE\_PS\_STATE\_THIS}}
+{\footnotesize\ttfamily \#define H\+E\+P\+S\+Y\+\_\+\+T\+R\+A\+C\+E\+\_\+\+P\+S\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T\+H\+IS(\begin{DoxyParamCaption}\item[{}]{X }\end{DoxyParamCaption})~this-\/$>$L\+OG $<$$<$ \char`\"{}Execution Time;\char`\"{} $<$$<$ sc\+\_\+time\+\_\+stamp().to\+\_\+seconds() $<$$<$ \char`\"{}; Energy;\char`\"{} $<$$<$ p\+System\+Manager-\/$>$V\+PS\mbox{[}X\mbox{]}.get\+Energy() $<$$<$ \char`\"{}; Process;\char`\"{} $<$$<$ X $<$$<$ \char`\"{}; State;\char`\"{} $<$$<$ this-\/$>$process\+\_\+state\mbox{[}X\mbox{]} $<$$<$ endl;}
+
+
+
+Definition at line \mbox{\hyperlink{macros_8h_source_l00144}{144}} of file \mbox{\hyperlink{macros_8h_source}{macros.\+h}}.
+
+\mbox{\Hypertarget{group__firfirgcd__macros__group_ga37921dae893594f3710d892f471de3cb}\label{group__firfirgcd__macros__group_ga37921dae893594f3710d892f471de3cb}} 
+\index{FirFirGCD Macros.@{FirFirGCD Macros.}!HEPSY\_TRACE\_SCHED\_STATE@{HEPSY\_TRACE\_SCHED\_STATE}}
+\index{HEPSY\_TRACE\_SCHED\_STATE@{HEPSY\_TRACE\_SCHED\_STATE}!FirFirGCD Macros.@{FirFirGCD Macros.}}
+\doxysubsubsection{\texorpdfstring{HEPSY\_TRACE\_SCHED\_STATE}{HEPSY\_TRACE\_SCHED\_STATE}}
+{\footnotesize\ttfamily \#define H\+E\+P\+S\+Y\+\_\+\+T\+R\+A\+C\+E\+\_\+\+S\+C\+H\+E\+D\+\_\+\+S\+T\+A\+TE(\begin{DoxyParamCaption}\item[{}]{X }\end{DoxyParamCaption})~this-\/$>$L\+OG $<$$<$ \char`\"{}Execution Time;\char`\"{} $<$$<$ sc\+\_\+time\+\_\+stamp().to\+\_\+seconds() $<$$<$ \char`\"{}; Energy;\char`\"{} $<$$<$ this-\/$>$sched\+\_\+en\mbox{[}X\mbox{]} $<$$<$ \char`\"{}; Scheduler;\char`\"{} $<$$<$ X $<$$<$ \char`\"{}; State;\char`\"{} $<$$<$ this-\/$>$scheduler\+\_\+state\mbox{[}X\mbox{]} $<$$<$ endl;}
+
+
+
+Definition at line \mbox{\hyperlink{macros_8h_source_l00164}{164}} of file \mbox{\hyperlink{macros_8h_source}{macros.\+h}}.
+
+\mbox{\Hypertarget{group__firfirgcd__macros__group_ga521b4282fb564e25bc56196f1926ce30}\label{group__firfirgcd__macros__group_ga521b4282fb564e25bc56196f1926ce30}} 
+\index{FirFirGCD Macros.@{FirFirGCD Macros.}!POST\_WAIT@{POST\_WAIT}}
+\index{POST\_WAIT@{POST\_WAIT}!FirFirGCD Macros.@{FirFirGCD Macros.}}
+\doxysubsubsection{\texorpdfstring{POST\_WAIT}{POST\_WAIT}}
+{\footnotesize\ttfamily \#define P\+O\+S\+T\+\_\+\+W\+A\+IT(\begin{DoxyParamCaption}\item[{}]{X }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (\mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>BB\_mode[\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[X]]==\mbox{\hyperlink{group__firfirgcd__define__group_gga1a6b6fb557d8d37d59700faf4e4c9167a66e84e235b9e03b6fdfc7ffe7e775de8}{suspended}})                 \(\backslash\)}
+\DoxyCodeLine{    \{                                                                                               \(\backslash\)}
+\DoxyCodeLine{        if (\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a21d2bb74e4472f99ec04243168e7964e}{checkSPP}}(X)==\textcolor{keyword}{true})                                                        \(\backslash\)}
+\DoxyCodeLine{        \{                                                                                           \(\backslash\)}
+\DoxyCodeLine{            pSchedulingManager-\/>BB\_mode[\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[X]]=\mbox{\hyperlink{group__firfirgcd__define__group_gga1a6b6fb557d8d37d59700faf4e4c9167a5d178ae2be9d93ea4cbf1a9f0a2d9cbe}{active}};                  \(\backslash\)}
+\DoxyCodeLine{            HEPSY\_TRACE\_BB\_STATE(X)                                                                             \(\backslash\)}
+\DoxyCodeLine{        \}                                                                                           \(\backslash\)}
+\DoxyCodeLine{        else \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>activate[\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[X]].notify(SC\_ZERO\_TIME);  \(\backslash\)}
+\DoxyCodeLine{    \}                                                                                               \(\backslash\)}
+\DoxyCodeLine{                                                                                                    \(\backslash\)}
+\DoxyCodeLine{if (\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a21d2bb74e4472f99ec04243168e7964e}{checkSPP}}(X)==\textcolor{keyword}{true}) \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>process\_state[X]=\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c}{running}};             \(\backslash\)}
+\DoxyCodeLine{    else \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>process\_state[X]=\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473}{ready}};                                             \(\backslash\)}
+\DoxyCodeLine{    \mbox{\hyperlink{group__firfirgcd__macros__group_gaf1fe2324408cd29c1e2dcd55f2e4a9c1}{HEPSY\_TRACE\_PS\_STATE}}(X)                                                                                     \(\backslash\)}
+\DoxyCodeLine{                                                                                                    \(\backslash\)}
+\DoxyCodeLine{if (\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>checkSPP(X)==false)                                                               \(\backslash\)}
+\DoxyCodeLine{    \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>process\_status\_changed[\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>allocationPS\_BB[X]]=true;}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{macros_8h_source_l00109}{109}} of file \mbox{\hyperlink{macros_8h_source}{macros.\+h}}.
+
+\mbox{\Hypertarget{group__firfirgcd__macros__group_ga64988c094471851711bcbbb5e1298616}\label{group__firfirgcd__macros__group_ga64988c094471851711bcbbb5e1298616}} 
+\index{FirFirGCD Macros.@{FirFirGCD Macros.}!PRE\_WAIT@{PRE\_WAIT}}
+\index{PRE\_WAIT@{PRE\_WAIT}!FirFirGCD Macros.@{FirFirGCD Macros.}}
+\doxysubsubsection{\texorpdfstring{PRE\_WAIT}{PRE\_WAIT}}
+{\footnotesize\ttfamily \#define P\+R\+E\+\_\+\+W\+A\+IT(\begin{DoxyParamCaption}\item[{}]{X }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>process\_state[X]=\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a4c97ffbad296d4a6b84b1c508fc5d32a}{waiting}};  \(\backslash\)}
+\DoxyCodeLine{    HEPSY\_TRACE\_PS\_STATE(X)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{macros_8h_source_l00101}{101}} of file \mbox{\hyperlink{macros_8h_source}{macros.\+h}}.
+

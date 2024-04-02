@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structfir16s__results">
+<title>fir16s_results Struct Reference</title>
+<indexterm><primary>fir16s_results</primary></indexterm>
+<para>
+
+<para>Message from fir16s to fir16m. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;datatype.h&gt;</computeroutput>
+</para>
+Collaboration diagram for fir16s_results:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="structfir16s__results__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>sc_uint&lt; 8 &gt; <link linkend="_structfir16s__results_1a73616346673b8d61fb292bfc064eb6d2">shift</link> [16]</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Message from fir16s to fir16m. </para>
+<para>
+Definition at line 166 of file datatype.h.</para>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_structfir16s__results_1a73616346673b8d61fb292bfc064eb6d2"/>    <section>
+    <title>shift</title>
+<indexterm><primary>shift</primary><secondary>fir16s_results</secondary></indexterm>
+<indexterm><primary>fir16s_results</primary><secondary>shift</secondary></indexterm>
+<para><computeroutput>sc_uint&lt;8&gt; fir16s_results::shift[16]</computeroutput></para><para>
+Definition at line 168 of file datatype.h.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+HepsycodeDesign/src/<link linkend="_datatype_8h">datatype.h</link></section>
+</section>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<parameters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+	<ga>
+		<generation>10</generation>
+		<initialPopulation>10000</initialPopulation>
+		<numPartition>10000</numPartition>
+		<numMaxPartition>500000</numMaxPartition>
+		<birthRate>0.2</birthRate>
+		<deathRate>0.1</deathRate>
+		<radioactivityRate>0.3</radioactivityRate>
+	</ga>
+
+	<weights>
+		<saturation>	0.3 </saturation> <!-- 0,1 -->
+		<exploitation>  0.3 </exploitation> <!-- 0,1 -->
+		<concurrency>	0.0 </concurrency> <!-- 0,1 -->
+		<physical_cost>	0.4 </physical_cost> <!-- 0,1 -->
+		<criticality>	0.0 </criticality>
+		<fattibilita>   10.0 </fattibilita>
+	</weights>
+</parameters>

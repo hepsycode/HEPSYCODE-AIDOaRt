@@ -1,0 +1,282 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group__scheduling__manager__group">
+<title>HEPSIM Scheduling Manager.</title>
+<indexterm><primary>HEPSIM Scheduling Manager.</primary></indexterm>
+<para>
+
+<para>Scheduling Manager Implementation. </para>
+ 
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group__scheduling__manager__group_1ga8bb983276d3b9929ea5985632a3fa4e0">SC_MODULE</link> (SchedulingManager)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_system_manager">SystemManager</link> * <link linkend="_group__scheduling__manager__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Scheduling Manager Implementation. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>V. Muttillo, L. Pomante </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>Apr. 2022 </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_group__scheduling__manager__group_1ga8bb983276d3b9929ea5985632a3fa4e0"/>    <section>
+    <title>SC_MODULE()</title>
+<indexterm><primary>SC_MODULE</primary><secondary>HEPSIM Scheduling Manager.</secondary></indexterm>
+<indexterm><primary>HEPSIM Scheduling Manager.</primary><secondary>SC_MODULE</secondary></indexterm>
+<para><computeroutput>SC_MODULE (SchedulingManager )</computeroutput></para><para>
+Definition at line 85 of file SchedulingManager.h.</para>
+<programlisting>86 {
+87 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>:
+88 
+89 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Data&#32;structure&#32;to&#32;manage&#32;scheduling&#32;and&#32;analysis</emphasis>
+90 
+91 &#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__define__group_1gadc6e5733fc3c22f0a7b2914188c49c90">state</link>&#32;process_state[<link linkend="_group__firfirgcd__define__group_1gad258142492454320138f79a00101f1f8">NPS</link>];&#32;<emphasis role="comment">//&#32;Status&#32;of&#32;processes:&#32;ready&#32;(waiting&#32;for&#32;PU),&#32;run,&#32;waiting&#32;(when&#32;a&#32;process&#32;is&#32;waiting&#32;to&#32;complete&#32;a&#32;communication&#32;over&#32;a&#32;channel)</emphasis>
+92 &#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__define__group_1gadc6e5733fc3c22f0a7b2914188c49c90">state</link>&#32;channel_state[<link linkend="_group__firfirgcd__define__group_1ga967ca22c6c7be038e1092147ce04f258">NCH</link>];&#32;<emphasis role="comment">//&#32;Status&#32;of&#32;channels:&#32;ready&#32;(1&#32;process&#32;is&#32;arrived),&#32;run&#32;(data&#32;transfer),&#32;waiting&#32;(0&#32;processes)</emphasis>
+93 &#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__define__group_1gadc6e5733fc3c22f0a7b2914188c49c90">state</link>&#32;scheduler_state[<link linkend="_group__firfirgcd__define__group_1ga498a2c2b57c15e562e939cccf28db094">NBB</link>];&#32;<emphasis role="comment">//&#32;Status&#32;of&#32;schedulers:&#32;run&#32;(scheduler&#32;is&#32;performing&#32;ContextSwitch&#32;activities),&#32;ready&#32;(waiting&#32;for&#32;token&#32;from&#32;a&#32;process),&#32;waiting&#32;(if&#32;BB&#32;suspended)</emphasis>
+94 
+95 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;matrixCOM[<link linkend="_group__firfirgcd__define__group_1gad258142492454320138f79a00101f1f8">NPS</link>][<link linkend="_group__firfirgcd__define__group_1gad258142492454320138f79a00101f1f8">NPS</link>];&#32;<emphasis role="comment">//Communication&#32;Matrix</emphasis>
+96 
+97 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Check&#32;READY&amp;RUN&#32;-&#32;Potential&#32;concurrency</emphasis>
+98 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;matrixCONC_PS_RR[<link linkend="_group__firfirgcd__define__group_1gad258142492454320138f79a00101f1f8">NPS</link>][<link linkend="_group__firfirgcd__define__group_1gad258142492454320138f79a00101f1f8">NPS</link>];&#32;<emphasis role="comment">//Processes&#32;Concurrency&#32;matrix</emphasis>
+99 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;matrixCONC_PS_RR_N[<link linkend="_group__firfirgcd__define__group_1gad258142492454320138f79a00101f1f8">NPS</link>][<link linkend="_group__firfirgcd__define__group_1gad258142492454320138f79a00101f1f8">NPS</link>];&#32;<emphasis role="comment">//Normalized&#32;Processes&#32;Concurrency&#32;matrix&#32;(with&#32;respect&#32;to&#32;the&#32;number&#32;of&#32;tests)</emphasis>
+100 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;matrixCONC_CH_RR[<link linkend="_group__firfirgcd__define__group_1ga967ca22c6c7be038e1092147ce04f258">NCH</link>][<link linkend="_group__firfirgcd__define__group_1ga967ca22c6c7be038e1092147ce04f258">NCH</link>];&#32;<emphasis role="comment">//Channels&#32;Concurrency&#32;matrix</emphasis>
+101 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;matrixCONC_CH_RR_N[<link linkend="_group__firfirgcd__define__group_1ga967ca22c6c7be038e1092147ce04f258">NCH</link>][<link linkend="_group__firfirgcd__define__group_1ga967ca22c6c7be038e1092147ce04f258">NCH</link>];&#32;<emphasis role="comment">//Normalized&#32;Channels&#32;Concurrency&#32;matrix&#32;(with&#32;respect&#32;to&#32;the&#32;number&#32;of&#32;tests)</emphasis>
+102 
+103 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;checkStatesProcessesRR();&#32;<emphasis role="comment">//&#32;Check&#32;processes&#32;pairs</emphasis>
+104 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;checkStatesChannelsRR();&#32;<emphasis role="comment">//&#32;Check&#32;channels&#32;pairs</emphasis>
+105 
+106 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Check&#32;only&#32;RUN&#32;-&#32;Actual&#32;concurrency</emphasis>
+107 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;matrixCONC_PS_R[<link linkend="_group__firfirgcd__define__group_1gad258142492454320138f79a00101f1f8">NPS</link>][<link linkend="_group__firfirgcd__define__group_1gad258142492454320138f79a00101f1f8">NPS</link>];&#32;<emphasis role="comment">//Processes&#32;Concurrency&#32;matrix</emphasis>
+108 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;matrixCONC_PS_R_N[<link linkend="_group__firfirgcd__define__group_1gad258142492454320138f79a00101f1f8">NPS</link>][<link linkend="_group__firfirgcd__define__group_1gad258142492454320138f79a00101f1f8">NPS</link>];&#32;<emphasis role="comment">//Normalized&#32;Processes&#32;Concurrency&#32;matrix&#32;(with&#32;respect&#32;to&#32;the&#32;number&#32;of&#32;tests)</emphasis>
+109 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;matrixCONC_CH_R[<link linkend="_group__firfirgcd__define__group_1ga967ca22c6c7be038e1092147ce04f258">NCH</link>][<link linkend="_group__firfirgcd__define__group_1ga967ca22c6c7be038e1092147ce04f258">NCH</link>];&#32;<emphasis role="comment">//Channels&#32;Concurrency&#32;matrix</emphasis>
+110 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;matrixCONC_CH_R_N[<link linkend="_group__firfirgcd__define__group_1ga967ca22c6c7be038e1092147ce04f258">NCH</link>][<link linkend="_group__firfirgcd__define__group_1ga967ca22c6c7be038e1092147ce04f258">NCH</link>];&#32;<emphasis role="comment">//Normalized&#32;Channels&#32;Concurrency&#32;matrix&#32;(with&#32;respect&#32;to&#32;the&#32;number&#32;of&#32;tests)</emphasis>
+111 
+112 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;checkStatesProcessesR();&#32;<emphasis role="comment">//&#32;Check&#32;processes&#32;pairs</emphasis>
+113 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;checkStatesChannelsR();&#32;<emphasis role="comment">//&#32;Check&#32;channels&#32;pairs</emphasis>
+114 
+115 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Check&#32;BB&#32;(actual)&#32;concurrency</emphasis>
+116 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;matrixCONC_BB[<link linkend="_group__firfirgcd__define__group_1ga498a2c2b57c15e562e939cccf28db094">NBB</link>][<link linkend="_group__firfirgcd__define__group_1ga498a2c2b57c15e562e939cccf28db094">NBB</link>];&#32;<emphasis role="comment">//BB&#32;Concurrency&#32;matrix</emphasis>
+117 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;matrixCONC_BB_N[<link linkend="_group__firfirgcd__define__group_1ga498a2c2b57c15e562e939cccf28db094">NBB</link>][<link linkend="_group__firfirgcd__define__group_1ga498a2c2b57c15e562e939cccf28db094">NBB</link>];&#32;<emphasis role="comment">//Normalized&#32;BB&#32;Concurrency&#32;matrix&#32;(number&#32;of&#32;tests?)</emphasis>
+118 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;vectorCONC_BB[<link linkend="_group__firfirgcd__define__group_1ga498a2c2b57c15e562e939cccf28db094">NBB</link>+1];&#32;<emphasis role="comment">//Number&#32;of&#32;BBs&#32;concurrenty&#32;active</emphasis>
+119 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;vectorCONC_BB_N[<link linkend="_group__firfirgcd__define__group_1ga498a2c2b57c15e562e939cccf28db094">NBB</link>+1];&#32;<emphasis role="comment">//Normalized&#32;number&#32;of&#32;BBs&#32;concurrenty&#32;active&#32;(number&#32;of&#32;tests?)</emphasis>
+120 
+121 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;checkStatesBB();&#32;<emphasis role="comment">//&#32;Check&#32;BB&#32;pairs</emphasis>
+122 
+123 &#32;&#32;&#32;&#32;<emphasis role="comment">//Number&#32;of&#32;concurrency&#32;tests:&#32;used&#32;to&#32;normalize&#32;the&#32;concurrency&#32;matrixes</emphasis>
+124 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;num_tests_CONC_PS_RR;
+125 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;num_tests_CONC_PS_R;
+126 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;num_tests_CONC_CH_RR;
+127 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;num_tests_CONC_CH_R;
+128 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;num_tests_CONC_BB;
+129 
+130 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Events&#32;exchanged&#32;by&#32;scheduler&#32;and&#32;processes&#32;on&#32;the&#32;base&#32;of&#32;process&#32;IDs</emphasis>
+131 &#32;&#32;&#32;&#32;sc_event&#32;schedule[<link linkend="_group__firfirgcd__define__group_1gad258142492454320138f79a00101f1f8">NPS</link>],&#32;release[<link linkend="_group__firfirgcd__define__group_1gad258142492454320138f79a00101f1f8">NPS</link>];
+132 
+133 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Functional&#32;Analyzer</emphasis>
+134 &#32;&#32;&#32;&#32;sc_event&#32;unblock;
+135 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;blocked;
+136 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;process_status_changed[<link linkend="_group__firfirgcd__define__group_1ga498a2c2b57c15e562e939cccf28db094">NBB</link>];&#32;<emphasis role="comment">//&#32;Used&#32;to&#32;avoid&#32;the&#32;block&#32;of&#32;schedulers&#32;if&#32;some&#32;changes&#32;in&#32;the&#32;processes&#32;state&#32;happened</emphasis>
+137 
+138 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Items&#32;used&#32;to&#32;manage&#32;state&#32;of&#32;BB/PU</emphasis>
+139 &#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__define__group_1ga1a6b6fb557d8d37d59700faf4e4c9167">mode</link>&#32;BB_mode[<link linkend="_group__firfirgcd__define__group_1ga498a2c2b57c15e562e939cccf28db094">NBB</link>];&#32;<emphasis role="comment">//&#32;Mode&#32;of&#32;BB&#32;(suspended,&#32;active)</emphasis>
+140 &#32;&#32;&#32;&#32;sc_event&#32;activate[<link linkend="_group__firfirgcd__define__group_1ga498a2c2b57c15e562e939cccf28db094">NBB</link>];
+141 
+142 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Data&#32;structure&#32;to&#32;keep&#32;track&#32;of&#32;scheduler&#32;timing&#32;overhead&#32;(the&#32;array&#32;is&#32;of&#32;NBB&#32;elements,&#32;the&#32;one&#32;related&#32;to&#32;SPP&#32;will&#32;not&#32;be&#32;used)</emphasis>
+143 &#32;&#32;&#32;&#32;sc_time&#32;sched_oh[<link linkend="_group__firfirgcd__define__group_1ga498a2c2b57c15e562e939cccf28db094">NBB</link>];
+144 
+145 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Data&#32;structure&#32;to&#32;keep&#32;track&#32;of&#32;scheduler&#32;energy&#32;consumption&#32;(the&#32;array&#32;is&#32;of&#32;NBB&#32;elements,&#32;the&#32;one&#32;related&#32;to&#32;SPP&#32;will&#32;not&#32;be&#32;used)</emphasis>
+146 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;sched_en[<link linkend="_group__firfirgcd__define__group_1ga498a2c2b57c15e562e939cccf28db094">NBB</link>];
+147 
+148 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Data&#32;structure&#32;to&#32;keep&#32;track&#32;of&#32;the&#32;number&#32;of&#32;scheduler&#32;executions&#32;(i.e.,&#32;scheduler&#32;SC_THREAD&#32;loops)</emphasis>
+149 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;sched_loops[<link linkend="_group__firfirgcd__define__group_1ga498a2c2b57c15e562e939cccf28db094">NBB</link>];&#32;<emphasis role="comment">//&#32;(the&#32;array&#32;is&#32;of&#32;NBB&#32;elements,&#32;the&#32;one&#32;related&#32;to&#32;SPP&#32;will&#32;not&#32;be&#32;used)</emphasis>
+150 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Data&#32;structure&#32;to&#32;keep&#32;track&#32;of&#32;the&#32;number&#32;of&#32;Context&#32;Switches</emphasis>
+151 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;sched_CS[<link linkend="_group__firfirgcd__define__group_1ga498a2c2b57c15e562e939cccf28db094">NBB</link>];&#32;<emphasis role="comment">//&#32;(the&#32;array&#32;is&#32;of&#32;NBB&#32;elements,&#32;the&#32;one&#32;related&#32;to&#32;SPP&#32;will&#32;not&#32;be&#32;used)</emphasis>
+152 
+153 &#32;&#32;&#32;&#32;ofstream&#32;LOG;&#32;<emphasis role="comment">//&#32;File&#32;to&#32;log&#32;each&#32;stat&#32;change&#32;(PSs,&#32;CHs,&#32;BBs,&#32;and&#32;schedulers)</emphasis>
+154 
+155 &#32;&#32;&#32;&#32;<emphasis role="comment">//Scheduler&#32;instances&#32;assigned&#32;to&#32;SC_THREADs,&#32;one&#32;for&#32;each&#32;possible&#32;instance&#32;of&#32;of&#32;SW-PU&#32;(see&#32;instanceTL.xml)</emphasis>
+156 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;scheduler_8051_0();
+157 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;scheduler_8051_1();
+158 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;scheduler_leon3_2();
+159 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;scheduler_leon3_3();
+160 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;functional_analyzer();
+161 
+162 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Timing&#32;concurrency&#32;analysis</emphasis>
+163 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;concurrency_sampling();
+164 
+165 &#32;&#32;&#32;&#32;<emphasis role="comment">//Scheduling&#32;policies&#32;that&#32;can&#32;be&#32;used&#32;by&#32;scheduler&#32;instances</emphasis>
+166 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;pinstance:&#32;ID&#32;of&#32;BB/SW-PU</emphasis>
+167 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;full_oh:&#32;weight&#32;for&#32;context&#32;switch&#32;time&#32;(normally&#32;1)</emphasis>
+168 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;part_oh:&#32;weight&#32;for&#32;activities&#32;of&#32;the&#32;scheduler&#32;that&#32;doesn&apos;t&#32;imply&#32;a&#32;context&#32;switch&#32;(normally&#32;0.25)</emphasis>
+169 
+170 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;policy_SCHED_RR(<emphasis role="keywordtype">int</emphasis>&#32;pinstance,&#32;<emphasis role="keywordtype">float</emphasis>&#32;full_oh,&#32;<emphasis role="keywordtype">float</emphasis>&#32;part_oh);
+171 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;policy_SCHED_FCFS(<emphasis role="keywordtype">int</emphasis>&#32;pinstance,&#32;<emphasis role="keywordtype">float</emphasis>&#32;full_oh,&#32;<emphasis role="keywordtype">float</emphasis>&#32;part_oh);
+172 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;policy_SCHED_FP(<emphasis role="keywordtype">int</emphasis>&#32;pinstance,&#32;<emphasis role="keywordtype">float</emphasis>&#32;full_oh,&#32;<emphasis role="keywordtype">float</emphasis>&#32;part_oh);
+173 
+174 &#32;&#32;&#32;&#32;SC_CTOR(SchedulingManager)
+175 &#32;&#32;&#32;&#32;{
+176 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LOG.open(<emphasis role="stringliteral">&quot;LOG.csv&quot;</emphasis>);&#32;<emphasis role="comment">//&#32;Open&#32;file&#32;(closed&#32;in&#32;the&#32;destructor)</emphasis>
+177 
+178 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Creation&#32;of&#32;a&#32;scheduler&#32;instance&#32;for&#32;each&#32;possible&#32;instance&#32;of&#32;of&#32;SW-PU&#32;(as&#32;listed&#32;in&#32;instanceTL.xml)&#32;</emphasis>
+179 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;The&#32;NOT&#32;needed&#32;ones&#32;(i.e.,&#32;no&#32;processes&#32;alocated&#32;on&#32;them)&#32;will&#32;self-quit</emphasis>
+180 
+181 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#if&#32;defined(_TIMING_ENERGY_)</emphasis>
+182 
+183 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SC_THREAD(scheduler_8051_0);
+184 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SC_THREAD(scheduler_8051_1);
+185 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SC_THREAD(scheduler_leon3_2);
+186 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SC_THREAD(scheduler_leon3_3);
+187 
+188 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#else</emphasis>
+189 
+190 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SC_THREAD(functional_analyzer);
+191 
+192 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#endif</emphasis>
+193 
+194 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#if&#32;defined(_TIMING_ENERGY_)&#32;&amp;&amp;&#32;defined(_CONCURRENCY_)</emphasis>
+195 
+196 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Thread&#32;for&#32;concurrency&#32;analysis&#32;(if&#32;activated)</emphasis>
+197 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SC_THREAD(concurrency_sampling);
+198 
+199 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#endif</emphasis>
+200 
+201 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LOG&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;sep=;&quot;</emphasis>&#32;&lt;&lt;&#32;endl;&#32;<emphasis role="comment">//&#32;LP:&#32;???</emphasis>
+202 
+203 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Init</emphasis>
+204 
+205 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;j=0;&#32;j&lt;<link linkend="_group__firfirgcd__define__group_1ga498a2c2b57c15e562e939cccf28db094">NBB</link>;&#32;j++)
+206 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+207 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;scheduler_state[j]&#32;=&#32;<link linkend="_group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90af35387cab0e820dcf7df1ed4702043e1">undefined</link>;
+208 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(<link linkend="_group__scheduling__manager__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32">VBB</link>[j].getProcessors()[0].getProcessorType()&#32;!=&#32;<emphasis role="stringliteral">&quot;SPP&quot;</emphasis>)
+209 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+210 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__macros__group_1ga37921dae893594f3710d892f471de3cb">HEPSY_TRACE_SCHED_STATE</link>(j)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+211 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+212 
+213 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sched_oh[j]=sc_time(0,&#32;SC_MS);
+214 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sched_en[j]=0;
+215 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sched_loops[j]=0;
+216 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sched_CS[j]=0;
+217 
+218 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;BB_mode[j]=<link linkend="_group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a53ace14c115e45153a1c9105accceb4c">off</link>;
+219 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__macros__group_1ga0782cab9383550027672da286d54c931">HEPSY_TRACE_BB_STATE_THIS</link>(j)
+220 
+221 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;process_status_changed[j]=<emphasis role="keyword">false</emphasis>;
+222 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+223 
+224 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;j&#32;=&#32;0;&#32;j&lt;<link linkend="_group__firfirgcd__define__group_1ga498a2c2b57c15e562e939cccf28db094">NBB</link>+1;&#32;j++)
+225 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+226 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vectorCONC_BB[j]&#32;=&#32;0;
+227 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vectorCONC_BB_N[j]&#32;=&#32;0;
+228 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+229 
+230 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Init</emphasis>
+231 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;j=0;&#32;j&lt;<link linkend="_group__scheduling__manager__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1adcd8ce799616b977c206401ebdefab86">VPS</link>.size();&#32;j++)
+232 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+233 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_group__scheduling__manager__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1a21d2bb74e4472f99ec04243168e7964e">checkSPP</link>(j)==<emphasis role="keyword">true</emphasis>)&#32;process_state[j]=<link linkend="_group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c">running</link>;
+234 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(j==0)&#32;process_state[j]=<link linkend="_group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c">running</link>;
+235 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(j==1)&#32;process_state[j]=<link linkend="_group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c">running</link>;
+236 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;process_state[j]=<link linkend="_group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473">ready</link>;
+237 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__macros__group_1gadc2d4bfbe106f792246792d01d66d63c">HEPSY_TRACE_PS_STATE_THIS</link>(j)
+238 
+239 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;BB&#32;with&#32;processes&#32;are&#32;activated</emphasis>
+240 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(BB_mode[<link linkend="_group__scheduling__manager__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[j]]!=<link linkend="_group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a5d178ae2be9d93ea4cbf1a9f0a2d9cbe">active</link>)
+241 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+242 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;BB_mode[<link linkend="_group__scheduling__manager__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[j]]=<link linkend="_group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a5d178ae2be9d93ea4cbf1a9f0a2d9cbe">active</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+243 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__macros__group_1ga0782cab9383550027672da286d54c931">HEPSY_TRACE_BB_STATE_THIS</link>(j)
+244 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+245 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+246 
+247 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i=0;&#32;i&lt;<link linkend="_group__firfirgcd__define__group_1gad258142492454320138f79a00101f1f8">NPS</link>;&#32;i++)
+248 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+249 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;j=0;&#32;j&lt;<link linkend="_group__firfirgcd__define__group_1gad258142492454320138f79a00101f1f8">NPS</link>;&#32;j++)
+250 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+251 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;matrixCONC_PS_RR[i][j]=0;
+252 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;matrixCONC_PS_RR_N[i][j]=0;
+253 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;matrixCONC_PS_R[i][j]=0;
+254 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;matrixCONC_PS_R_N[i][j]=0;
+255 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;matrixCOM[i][j]=0;
+256 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+257 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+258 
+259 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i=0;&#32;i&lt;<link linkend="_group__firfirgcd__define__group_1ga498a2c2b57c15e562e939cccf28db094">NBB</link>;&#32;i++)
+260 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+261 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;j=0;&#32;j&lt;<link linkend="_group__firfirgcd__define__group_1ga498a2c2b57c15e562e939cccf28db094">NBB</link>;&#32;j++)
+262 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+263 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;matrixCONC_BB[i][j]=0;
+264 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+265 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+266 
+267 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i=0;&#32;i&lt;<link linkend="_group__firfirgcd__define__group_1ga967ca22c6c7be038e1092147ce04f258">NCH</link>;&#32;i++)
+268 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+269 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;channel_state[i]=<link linkend="_group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a4c97ffbad296d4a6b84b1c508fc5d32a">waiting</link>;
+270 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__macros__group_1ga24b6f3a385f702b3a63e0811a0f22e75">HEPSY_TRACE_CH_STATE_THIS</link>(i)
+271 
+272 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;j=0;&#32;j&lt;<link linkend="_group__firfirgcd__define__group_1ga967ca22c6c7be038e1092147ce04f258">NCH</link>;&#32;j++)
+273 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+274 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;matrixCONC_CH_RR[i][j]=0;
+275 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;matrixCONC_CH_RR_N[i][j]=0;
+276 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;matrixCONC_CH_R[i][j]=0;
+277 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;matrixCONC_CH_R_N[i][j]=0;
+278 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+279 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+280 
+281 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;blocked&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+282 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;num_tests_CONC_PS_RR=0;
+283 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;num_tests_CONC_CH_RR=0;
+284 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;num_tests_CONC_PS_R=0;
+285 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;num_tests_CONC_CH_R=0;
+286 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;num_tests_CONC_BB=0;
+287 
+288 &#32;&#32;&#32;&#32;}&#32;&#32;
+289 
+290 &#32;&#32;&#32;&#32;~SchedulingManager()
+291 &#32;&#32;&#32;&#32;{
+292 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;LOG.close();&#32;<emphasis role="comment">//&#32;Close&#32;file</emphasis>
+293 &#32;&#32;&#32;&#32;}
+294 
+295 };
+</programlisting><para>
+References active, SystemManager::allocationPS_BB, SystemManager::checkSPP(), HEPSY_TRACE_BB_STATE_THIS, HEPSY_TRACE_CH_STATE_THIS, HEPSY_TRACE_PS_STATE_THIS, HEPSY_TRACE_SCHED_STATE, NBB, NCH, NPS, off, pSystemManager, ready, running, undefined, SystemManager::VBB, SystemManager::VPS, and waiting.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="group__scheduling__manager__group_ga8bb983276d3b9929ea5985632a3fa4e0_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_group__scheduling__manager__group_1gaa604ac51b2579794e702367934dfb8ad"/>    <section>
+    <title>pSystemManager</title>
+<indexterm><primary>pSystemManager</primary><secondary>HEPSIM Scheduling Manager.</secondary></indexterm>
+<indexterm><primary>HEPSIM Scheduling Manager.</primary><secondary>pSystemManager</secondary></indexterm>
+<para><computeroutput><link linkend="_class_system_manager">SystemManager</link>* pSystemManager</computeroutput></para><para>
+Definition at line 163 of file main.cpp.</para>
+<para>
+Referenced by sc_main(), and SC_MODULE().</para>
+</section>
+</section>
+</section>

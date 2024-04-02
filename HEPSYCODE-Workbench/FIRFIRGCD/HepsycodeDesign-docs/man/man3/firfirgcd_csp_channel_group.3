@@ -1,0 +1,470 @@
+.TH "firfirgcd_csp_channel_group" 3 "Mon Mar 20 2023" "FirFirGCD Application" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+firfirgcd_csp_channel_group \- CSP \fBChannel\fP Implementation\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "class \fBsc_csp_channel< T >\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBsc_csp_channel< T >::register_port\fP (sc_port_base &, const char *)"
+.br
+.ti -1c
+.RI "virtual void \fBsc_csp_channel< T >::read\fP (T &)"
+.br
+.ti -1c
+.RI "virtual T \fBsc_csp_channel< T >::read\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBsc_csp_channel< T >::write\fP (const T &)"
+.br
+.ti -1c
+.RI "void \fBsc_csp_channel< T >::trace\fP (sc_trace_file *tf) const"
+.br
+.ti -1c
+.RI "void \fBsc_csp_channel< T >::init\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBsc_csp_channel< T >::read_test\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBsc_csp_channel< T >::write_test\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBsc_csp_channel< T >::register_alt\fP ()"
+.br
+.ti -1c
+.RI "virtual const sc_event & \fBsc_csp_channel< T >::get_alt_event\fP ()"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBSystemManager\fP * \fBpSystemManager\fP"
+.br
+.ti -1c
+.RI "SchedulingManager * \fBpSchedulingManager\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+CSP \fBChannel\fP Implementation\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+V\&. Muttillo, L\&. Pomante 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+Apr\&. 2022 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "template<class T > const sc_event & \fBsc_csp_channel\fP< T >::get_alt_event\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBsc_core::sc_csp_channel_in_if< T >\fP\&.
+.PP
+Definition at line 540 of file sc_csp_channel\&.h\&.
+.PP
+.nf
+541 {
+542     return ready_alt_event;
+543 }
+.fi
+.SS "template<class T > void \fBsc_csp_channel\fP< T >::init\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 442 of file sc_csp_channel\&.h\&.
+.PP
+.nf
+443 {
+444     m_reader = 0;
+445     m_writer = 0;
+446 
+447     num=0;
+448     ready_to_read=false;
+449     ready_to_write=false;
+450     enable_alt_events = false;
+451 
+452     working_time = sc_time(0, SC_MS);
+453     working_energy=0;
+454 
+455     // verify if the processes are allocated on the same BB (then IPC=false)
+456     if ((w_id==stimulus_id) || (w_id==display_id) || (r_id==stimulus_id) || (r_id==display_id))
+457     {
+458         // Communications toward testbench are always considered
+459         IPC = true;
+460     }
+461     else if (pSystemManager->VBB[pSystemManager->allocationPS_BB[w_id]]\&.getProcessors()[0]\&.getName() !=
+462         pSystemManager->VBB[pSystemManager->allocationPS_BB[r_id]]\&.getProcessors()[0]\&.getName())
+463     {
+464         // Different BB names
+465         IPC = true;
+466     }
+467     else if (pSystemManager->VBB[pSystemManager->allocationPS_BB[w_id]]\&.getId() !=
+468         pSystemManager->VBB[pSystemManager->allocationPS_BB[r_id]]\&.getId())
+469     {
+470         // Different BB instances
+471         IPC = true;
+472     }
+473     else IPC=false;
+474 
+475     if (IPC==true)
+476     {
+477 
+478         // compute the time needed for the communication
+479         waiting_time = (ceil((float)width/pSystemManager->VPL[pSystemManager->allocationCH_PL[id]]\&.getPhysicalWidth())*pSystemManager->VPL[pSystemManager->allocationCH_PL[id]]\&.getTcomm()+pSystemManager->VPL[pSystemManager->allocationCH_PL[id]]\&.getTAcomm());
+480 
+481         // LP: non mi torna la trasmissione seriale di pi� bit dato che ne consideriamo sempre solo uno alla volta (check tesi Marinella)
+482         // compute the energy needed for the communication 
+483         // energy for x bit is: a2 * x^2 + a1 * x
+484         // en_bit = energy for 1 bit = a2 + a1
+485         float en_bit =  pSystemManager->VPL[pSystemManager->allocationCH_PL[id]]\&.geta2() + pSystemManager->VPL[pSystemManager->allocationCH_PL[id]]\&.geta1();
+486 
+487         // energy for 1 transmission is: en_bit * PhysicalWidth
+488         float en_trans = en_bit * pSystemManager->VPL[pSystemManager->allocationCH_PL[id]]\&.getPhysicalWidth();
+489 
+490         // energy for communication is: energy for 1 transmission * #transmissions
+491         partial_energy = ceil((float)width/pSystemManager->VPL[pSystemManager->allocationCH_PL[id]]\&.getPhysicalWidth()) * en_trans;
+492 
+493     }
+494     else
+495     {
+496 
+497         // Zero for processes on the same BB/PU
+498         waiting_time = sc_time(0, SC_MS);
+499 
+500         // Zero for processes on the same BB/PU
+501         partial_energy = 0;
+502 
+503     }
+504 
+505 }
+.fi
+.PP
+References SystemManager::allocationCH_PL, SystemManager::allocationPS_BB, display_id, pSystemManager, stimulus_id, SystemManager::VBB, and SystemManager::VPL\&.
+.SS "template<class T > T \fBsc_csp_channel\fP< T >::read\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBsc_core::sc_csp_channel_in_if< T >\fP\&.
+.PP
+Definition at line 310 of file sc_csp_channel\&.h\&.
+.PP
+.nf
+311 {
+312     T tmp;
+313     read( tmp );
+314     return tmp;
+315 }
+.fi
+.SS "template<class T > void \fBsc_csp_channel\fP< T >::read (T & val_)\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBsc_core::sc_csp_channel_in_if< T >\fP\&.
+.PP
+Definition at line 232 of file sc_csp_channel\&.h\&.
+.PP
+.nf
+233 {
+234     //  Update process status (also testbench processes)
+235     pSchedulingManager->process_state[r_id]=waiting;
+236     HEPSY_TRACE_PS_STATE(r_id)
+237 
+238     // Update channel status (if needed)
+239     if (pSchedulingManager->channel_state[id]==waiting)
+240     {
+241         pSchedulingManager->channel_state[id]=ready;
+242         HEPSY_TRACE_CH_STATE(id)
+243     }
+244 
+245     // Update BB mode (only for SPP, the others PUs are managed in the schedulers)
+246     if (pSystemManager->checkSPP(r_id)==true)
+247     {
+248         pSchedulingManager->BB_mode[pSystemManager->allocationPS_BB[r_id]]=suspended;
+249         HEPSY_TRACE_BB_STATE(r_id)
+250     }
+251 
+252     if(ready_to_write==true)
+253     {
+254         ready_to_read=true;
+255         ready_to_read_event\&.notify(SC_ZERO_TIME);
+256         sc_core::wait(ready_to_write_event);
+257 
+258         val_=csp_buf;
+259 
+260         ready_to_read=false;
+261         ready_to_read_event\&.notify(SC_ZERO_TIME);
+262     }
+263     else
+264     {
+265         ready_to_read=true;
+266 
+267         if (enable_alt_events) ready_alt_event\&.notify(SC_ZERO_TIME); // added for ALT
+268         sc_core::wait(ready_to_write_event);
+269 
+270         val_=csp_buf;
+271 
+272         ready_to_read=false;
+273         ready_to_read_event\&.notify(SC_ZERO_TIME);
+274         sc_core::wait(ready_to_write_event);
+275     }
+276 
+277     // Update BB mode
+278     if (pSchedulingManager->BB_mode[pSystemManager->allocationPS_BB[r_id]]==suspended)
+279     {
+280         if (pSystemManager->checkSPP(r_id)==true)
+281         {
+282             pSchedulingManager->BB_mode[pSystemManager->allocationPS_BB[r_id]]=active;
+283             HEPSY_TRACE_BB_STATE(r_id)
+284         }
+285         else pSchedulingManager->activate[pSystemManager->allocationPS_BB[r_id]]\&.notify(SC_ZERO_TIME); // Ask to the scheduler to reactivate BB
+286     }
+287 
+288     // Update channel status (if needed)
+289     if (pSchedulingManager->channel_state[id]==ready)
+290     {
+291         pSchedulingManager->channel_state[id]=waiting;
+292         HEPSY_TRACE_CH_STATE(id)
+293     }
+294 
+295     //  Update process status (also testbench processes)
+296     if (pSystemManager->checkSPP(r_id)==true) pSchedulingManager->process_state[r_id]=running;
+297     else
+298     {
+299         pSchedulingManager->process_state[r_id]=ready;
+300 
+301         //WARNING: needed to correctly perform the round check (see WARNING in scheduler)
+302         pSchedulingManager->process_status_changed[pSystemManager->allocationPS_BB[r_id]]=true;
+303     }
+304     HEPSY_TRACE_PS_STATE(r_id)
+305 }
+.fi
+.PP
+References active, SystemManager::allocationPS_BB, SystemManager::checkSPP(), HEPSY_TRACE_BB_STATE, HEPSY_TRACE_CH_STATE, HEPSY_TRACE_PS_STATE, pSchedulingManager, pSystemManager, ready, running, suspended, and waiting\&.
+.SS "template<class T > bool \fBsc_csp_channel\fP< T >::read_test\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBsc_core::sc_csp_channel_in_if< T >\fP\&.
+.PP
+Definition at line 513 of file sc_csp_channel\&.h\&.
+.PP
+.nf
+514 {
+515     return ready_to_write;
+516 }
+.fi
+.SS "template<class T > void \fBsc_csp_channel\fP< T >::register_alt\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBsc_core::sc_csp_channel_in_if< T >\fP\&.
+.PP
+Definition at line 531 of file sc_csp_channel\&.h\&.
+.PP
+.nf
+532 {
+533     enable_alt_events = true;
+534 }
+.fi
+.SS "template<class T > void \fBsc_csp_channel\fP< T >::register_port (sc_port_base & port_, const char * if_typename_)\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Definition at line 202 of file sc_csp_channel\&.h\&.
+.PP
+.nf
+204 {
+205     std::string nm( if_typename_ );
+206     if( nm == typeid( sc_csp_channel_in_if<T> )\&.name())
+207     {
+208         // only one reader can be connected
+209         if( m_reader != 0 ) {
+210             SC_REPORT_ERROR("sc_csp_channel<T> cannot have more than one reader", 0 );
+211     }
+212     m_reader = &port_;
+213     } else if( nm == typeid( sc_csp_channel_out_if<T> )\&.name()) {
+214         // only one writer can be connected
+215         if( m_writer != 0 ) {
+216             SC_REPORT_ERROR("sc_csp_channel<T> cannot have more than one writer", 0 );
+217         }
+218     m_writer = &port_;
+219     }
+220     else
+221     {
+222         SC_REPORT_ERROR( SC_ID_BIND_IF_TO_PORT_, 
+223                      "sc_csp_channel<T> port not recognized" );
+224     }
+225 }
+.fi
+.SS "template<class T > void \fBsc_csp_channel\fP< T >::trace (sc_trace_file * tf) const\fC [inline]\fP"
+
+.PP
+Definition at line 433 of file sc_csp_channel\&.h\&.
+.PP
+.nf
+434 {
+435     // WIP
+436 }
+.fi
+.SS "template<class T > void \fBsc_csp_channel\fP< T >::write (const T & val_)\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBsc_core::sc_csp_channel_out_if< T >\fP\&.
+.PP
+Definition at line 322 of file sc_csp_channel\&.h\&.
+.PP
+.nf
+323 {
+324     //  Update process status (also testbench processes)
+325     pSchedulingManager->process_state[w_id]=waiting;
+326     HEPSY_TRACE_PS_STATE(w_id)
+327 
+328     // Update channel status (if needed)
+329     if (pSchedulingManager->channel_state[id]==waiting)
+330     {
+331         pSchedulingManager->channel_state[id]=ready;
+332         HEPSY_TRACE_CH_STATE(id)
+333     }
+334 
+335     // Update BB mode (only for SPP, the others PUs are managed in the schedulers)
+336     if (pSystemManager->checkSPP(w_id)==true)
+337     {
+338         pSchedulingManager->BB_mode[pSystemManager->allocationPS_BB[w_id]]=suspended;
+339         HEPSY_TRACE_BB_STATE(w_id)
+340     }
+341 
+342     if( ready_to_read==true)
+343     {
+344         csp_buf=val_;
+345 
+346         ready_to_write=true;
+347         ready_to_write_event\&.notify(SC_ZERO_TIME);
+348         sc_core::wait(ready_to_read_event);
+349 
+350         // Update channel status
+351         pSchedulingManager->channel_state[id]=running;
+352         HEPSY_TRACE_CH_STATE(id)
+353 
+354         // Manage simulated time and energy
+355         wait(waiting_time);
+356         working_time+= waiting_time;
+357         working_energy+=partial_energy;
+358 
+359         // Update channel status
+360         pSchedulingManager->channel_state[id]=ready;
+361         HEPSY_TRACE_CH_STATE(id)
+362 
+363         ready_to_write=false;
+364         ready_to_write_event\&.notify(SC_ZERO_TIME);
+365     }
+366     else
+367     {
+368         ready_to_write=true;
+369 
+370         if (enable_alt_events) ready_alt_event\&.notify(SC_ZERO_TIME); // added for ALT
+371         sc_core::wait(ready_to_read_event);
+372 
+373         csp_buf=val_;
+374 
+375         // Update channel status
+376         pSchedulingManager->channel_state[id]=running;
+377         HEPSY_TRACE_CH_STATE(id)
+378 
+379         // Manage simulated time and energy
+380         wait(waiting_time);
+381         working_time+= waiting_time;
+382         working_energy+=partial_energy;
+383 
+384         // Update channel status
+385         pSchedulingManager->channel_state[id]=ready;
+386         HEPSY_TRACE_CH_STATE(id)
+387 
+388         ready_to_write=false;
+389         ready_to_write_event\&.notify(SC_ZERO_TIME);
+390         sc_core::wait(ready_to_read_event);
+391     }                                       
+392 
+393     // Update BB mode
+394     if (pSchedulingManager->BB_mode[pSystemManager->allocationPS_BB[w_id]]==suspended)
+395     {
+396         if (pSystemManager->checkSPP(w_id)==true)
+397         {
+398             pSchedulingManager->BB_mode[pSystemManager->allocationPS_BB[w_id]]=active;
+399             HEPSY_TRACE_BB_STATE(w_id)
+400         }
+401         else
+402             pSchedulingManager->activate[pSystemManager->allocationPS_BB[w_id]]\&.notify(SC_ZERO_TIME);
+403     }
+404 
+405     // Update channel status (if needed)
+406     if (pSchedulingManager->channel_state[id]==ready)
+407     {
+408         pSchedulingManager->channel_state[id]=waiting;
+409         HEPSY_TRACE_CH_STATE(id)
+410     }
+411 
+412     //  Update process status
+413     if (pSystemManager->checkSPP(w_id)==true) pSchedulingManager->process_state[w_id]=running;
+414     else
+415     {
+416         pSchedulingManager->process_state[w_id]=ready;
+417 
+418         //WARNING: needed to correctly perform the round check (see WARNING in scheduler)
+419         pSchedulingManager->process_status_changed[pSystemManager->allocationPS_BB[w_id]]=true;
+420     }
+421     HEPSY_TRACE_PS_STATE(w_id)
+422 
+423     // Channel profiling (done only in write metod)
+424     num++;
+425     pSystemManager->VCH[id]\&.setNum(num);
+426     pSystemManager->VCH[id]\&.working_time = working_time;
+427     pSystemManager->VCH[id]\&.working_energy = working_energy;
+428 }
+.fi
+.PP
+References active, SystemManager::allocationPS_BB, SystemManager::checkSPP(), HEPSY_TRACE_BB_STATE, HEPSY_TRACE_CH_STATE, HEPSY_TRACE_PS_STATE, pSchedulingManager, pSystemManager, ready, running, suspended, SystemManager::VCH, and waiting\&.
+.SS "template<class T > bool \fBsc_csp_channel\fP< T >::write_test\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBsc_core::sc_csp_channel_out_if< T >\fP\&.
+.PP
+Definition at line 522 of file sc_csp_channel\&.h\&.
+.PP
+.nf
+523 {
+524     return ready_to_read;
+525 }
+.fi
+.SH "Variable Documentation"
+.PP 
+.SS "SchedulingManager* pSchedulingManager"
+
+.PP
+Definition at line 166 of file main\&.cpp\&.
+.PP
+Referenced by sc_csp_channel< T >::read(), sc_main(), and sc_csp_channel< T >::write()\&.
+.SS "\fBSystemManager\fP* pSystemManager"
+
+.PP
+Definition at line 163 of file main\&.cpp\&.
+.PP
+Referenced by sc_csp_channel< T >::init(), sc_csp_channel< T >::read(), sc_csp_channel< T >::sc_csp_channel(), and sc_csp_channel< T >::write()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FirFirGCD Application from the source code\&.

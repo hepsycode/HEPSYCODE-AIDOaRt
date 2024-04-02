@@ -1,0 +1,826 @@
+\hypertarget{class_process}{}\doxysection{Process Class Reference}
+\label{class_process}\index{Process@{Process}}
+
+
+{\ttfamily \#include $<$tl.\+h$>$}
+
+
+
+Collaboration diagram for Process\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_process__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_process_a9f4553eac74c657bb451f390c17d6bea}{Process}} ()
+\item 
+string \mbox{\hyperlink{class_process_aae530d36427cb0c1fe817cb339bd7691}{get\+Name}} ()
+\item 
+void \mbox{\hyperlink{class_process_ad1d3a2fd1af703ff1b986512d675660b}{set\+Name}} (string x)
+\item 
+int \mbox{\hyperlink{class_process_a4a5b2f6a945300fd6ecd243bc14e8073}{get\+Id}} ()
+\item 
+void \mbox{\hyperlink{class_process_ac2d4d655dc9fe6317889938783ec2848}{set\+Id}} (int x)
+\item 
+int \mbox{\hyperlink{class_process_af5103e08c032d9247110f0a7655bf37c}{get\+Priority}} ()
+\item 
+void \mbox{\hyperlink{class_process_a011879a0a11d6bacd3a6d768293ab0d2}{set\+Priority}} (int x)
+\item 
+int \mbox{\hyperlink{class_process_a8eaeeedaf35ee19fcadf52b99e957aac}{get\+Criticality}} ()
+\item 
+void \mbox{\hyperlink{class_process_a43c73ef0483b869e4231830eeff46d48}{set\+Criticality}} (int x)
+\item 
+float \mbox{\hyperlink{class_process_a7653e5156ed113e2a030ba0188350363}{get\+Eq\+Gate}} ()
+\item 
+void \mbox{\hyperlink{class_process_a74caf223f4391e3145eee5899b30a09b}{set\+Eq\+Gate}} (float g)
+\item 
+int \mbox{\hyperlink{class_process_a1a52596c85f381905b97b858cbc8c145}{get\+Data\+Type}} ()
+\item 
+void \mbox{\hyperlink{class_process_a3aaefcd2768bd481e22228851b161546}{set\+Data\+Type}} (int x)
+\item 
+void \mbox{\hyperlink{class_process_af196d2bb3cb88dbf0c517428e7b09538}{set\+Mem\+Size}} (\mbox{\hyperlink{class_memory}{Memory}} m)
+\item 
+void \mbox{\hyperlink{class_process_af55a4774a1519b84988e4e3ec3fcc7a2}{set\+Code\+Size}} (string proc\+Name, unsigned int value)
+\item 
+void \mbox{\hyperlink{class_process_a268bc20c1c875e94e50c5d6d1ad9ec06}{set\+Data\+Size}} (string proc\+Name, unsigned int value)
+\item 
+float \mbox{\hyperlink{class_process_a5dffdfeba3879c5e032db1c168d898be}{get\+Affinity\+By\+Name}} (string processor\+Name)
+\item 
+void \mbox{\hyperlink{class_process_a6f1fdb3ef348ebe19f1fd44671edfed8}{set\+Affinity}} (string processor\+Name, float \mbox{\hyperlink{class_process_a86e0eaba322501bf13bd8138324a1a23}{affinity}})
+\item 
+void \mbox{\hyperlink{class_process_a8fb82ba026f5530a9f9724fbf1142aba}{set\+Concurrency}} (int proc\+Id, float conc)
+\item 
+void \mbox{\hyperlink{class_process_a9d9cfc179387b12e2bb1cdc214b6a9d8}{set\+Load}} (int proc\+Id, float value)
+\item 
+int \mbox{\hyperlink{class_process_a73a66495ca1da4ba176cf2d04104acef}{get\+P\+S\+\_\+\+Profiling}} ()
+\item 
+sc\+\_\+time \mbox{\hyperlink{class_process_ad766d35cd91ef755abdc5df596980923}{get\+Process\+Time}} ()
+\item 
+void \mbox{\hyperlink{class_process_a2991ac041e868df69f3f394ee91791cb}{set\+Energy}} (float \mbox{\hyperlink{class_process_a04c66e1f8802aa8528226df19a5d9516}{energy}})
+\item 
+float \mbox{\hyperlink{class_process_ad854bd9c327eff4b2f0a06cf184081b5}{get\+Energy}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_process_a8458c9ab0528b0f5fccb56968c1eb577}{name}}
+\item 
+unsigned int \mbox{\hyperlink{class_process_af4fcdaeb47e30030e4d4877232b6c135}{id}}
+\item 
+unsigned int \mbox{\hyperlink{class_process_ae03e5ff2b64628843a8436bea9703b70}{priority}}
+\item 
+unsigned int \mbox{\hyperlink{class_process_af97a7745a37113e0d5b4ca9b17aed729}{criticality}}
+\item 
+float \mbox{\hyperlink{class_process_a70972fe640d0989f28bd451af196615c}{eq\+Gate}}
+\item 
+unsigned int \mbox{\hyperlink{class_process_aa4ff148aceb9f05d1d5a5152e610a322}{data\+Type}}
+\item 
+map$<$ string, unsigned int $>$ \mbox{\hyperlink{class_process_a3fbb956251eecb4b438c640fd8c1a12d}{code\+Size\+Map}}
+\item 
+map$<$ string, unsigned int $>$ \mbox{\hyperlink{class_process_a125e902953b35206d7d2979e11b56d86}{data\+Size\+Map}}
+\item 
+map$<$ string, float $>$ \mbox{\hyperlink{class_process_a86e0eaba322501bf13bd8138324a1a23}{affinity}}
+\item 
+map$<$ int, float $>$ \mbox{\hyperlink{class_process_a6147d0be2c050cb4669640e7076e1241}{concurrency}}
+\item 
+map$<$ int, float $>$ \mbox{\hyperlink{class_process_ab18c69089c09584e0d78630fa782ee93}{load}}
+\item 
+unsigned int \mbox{\hyperlink{class_process_ab824045bdc37b05cd9182fda746610b5}{profiling}}
+\item 
+sc\+\_\+time \mbox{\hyperlink{class_process_a47be8c61a3a5460452753dc98b68389f}{process\+Time}}
+\item 
+float \mbox{\hyperlink{class_process_a04c66e1f8802aa8528226df19a5d9516}{energy}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{tl_8h_source_l00161}{161}} of file \mbox{\hyperlink{tl_8h_source}{tl.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_process_a9f4553eac74c657bb451f390c17d6bea}\label{class_process_a9f4553eac74c657bb451f390c17d6bea}} 
+\index{Process@{Process}!Process@{Process}}
+\index{Process@{Process}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{Process()}{Process()}}
+{\footnotesize\ttfamily Process\+::\+Process (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00311}{311}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00311                 \{}
+\DoxyCodeLine{00312     \textcolor{keywordtype}{id} = 0;}
+\DoxyCodeLine{00313     \mbox{\hyperlink{class_process_a70972fe640d0989f28bd451af196615c}{eqGate}} = 0;}
+\DoxyCodeLine{00314     \mbox{\hyperlink{class_process_aa4ff148aceb9f05d1d5a5152e610a322}{dataType}} = 0;}
+\DoxyCodeLine{00315     \mbox{\hyperlink{class_process_af97a7745a37113e0d5b4ca9b17aed729}{criticality}} = 0;}
+\DoxyCodeLine{00316     \mbox{\hyperlink{class_process_ab824045bdc37b05cd9182fda746610b5}{profiling}} = 0;}
+\DoxyCodeLine{00317     \mbox{\hyperlink{class_process_a47be8c61a3a5460452753dc98b68389f}{processTime}} = sc\_time(0, SC\_MS);}
+\DoxyCodeLine{00318     \mbox{\hyperlink{class_process_ae03e5ff2b64628843a8436bea9703b70}{priority}} = 0;}
+\DoxyCodeLine{00319     \mbox{\hyperlink{class_process_a04c66e1f8802aa8528226df19a5d9516}{energy}} = 0;}
+\DoxyCodeLine{00320 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_process_a5dffdfeba3879c5e032db1c168d898be}\label{class_process_a5dffdfeba3879c5e032db1c168d898be}} 
+\index{Process@{Process}!getAffinityByName@{getAffinityByName}}
+\index{getAffinityByName@{getAffinityByName}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{getAffinityByName()}{getAffinityByName()}}
+{\footnotesize\ttfamily float Process\+::get\+Affinity\+By\+Name (\begin{DoxyParamCaption}\item[{string}]{processor\+Name }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00406}{406}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00406                                                      \{}
+\DoxyCodeLine{00407     map<string, float>::iterator it = this-\/>\mbox{\hyperlink{class_process_a86e0eaba322501bf13bd8138324a1a23}{affinity}}.find(processorName);}
+\DoxyCodeLine{00408     \textcolor{keywordflow}{if} ( it != this-\/>\mbox{\hyperlink{class_process_a86e0eaba322501bf13bd8138324a1a23}{affinity}}.end() )}
+\DoxyCodeLine{00409         \textcolor{keywordflow}{return} it-\/>second;}
+\DoxyCodeLine{00410     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00411         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00412 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_process_a8eaeeedaf35ee19fcadf52b99e957aac}\label{class_process_a8eaeeedaf35ee19fcadf52b99e957aac}} 
+\index{Process@{Process}!getCriticality@{getCriticality}}
+\index{getCriticality@{getCriticality}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{getCriticality()}{getCriticality()}}
+{\footnotesize\ttfamily int Process\+::get\+Criticality (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00360}{360}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00361 \{}
+\DoxyCodeLine{00362     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_process_af97a7745a37113e0d5b4ca9b17aed729}{criticality}};}
+\DoxyCodeLine{00363 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_process_a1a52596c85f381905b97b858cbc8c145}\label{class_process_a1a52596c85f381905b97b858cbc8c145}} 
+\index{Process@{Process}!getDataType@{getDataType}}
+\index{getDataType@{getDataType}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{getDataType()}{getDataType()}}
+{\footnotesize\ttfamily int Process\+::get\+Data\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00380}{380}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00381 \{}
+\DoxyCodeLine{00382     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_process_aa4ff148aceb9f05d1d5a5152e610a322}{dataType}};}
+\DoxyCodeLine{00383 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_process_ad854bd9c327eff4b2f0a06cf184081b5}\label{class_process_ad854bd9c327eff4b2f0a06cf184081b5}} 
+\index{Process@{Process}!getEnergy@{getEnergy}}
+\index{getEnergy@{getEnergy}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{getEnergy()}{getEnergy()}}
+{\footnotesize\ttfamily float Process\+::get\+Energy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00342}{342}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00342                         \{}
+\DoxyCodeLine{00343     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_process_a04c66e1f8802aa8528226df19a5d9516}{energy}};}
+\DoxyCodeLine{00344 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_process_a7653e5156ed113e2a030ba0188350363}\label{class_process_a7653e5156ed113e2a030ba0188350363}} 
+\index{Process@{Process}!getEqGate@{getEqGate}}
+\index{getEqGate@{getEqGate}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{getEqGate()}{getEqGate()}}
+{\footnotesize\ttfamily float Process\+::get\+Eq\+Gate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00370}{370}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00371 \{}
+\DoxyCodeLine{00372     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_process_a70972fe640d0989f28bd451af196615c}{eqGate}};}
+\DoxyCodeLine{00373 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_process_a4a5b2f6a945300fd6ecd243bc14e8073}\label{class_process_a4a5b2f6a945300fd6ecd243bc14e8073}} 
+\index{Process@{Process}!getId@{getId}}
+\index{getId@{getId}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily int Process\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00332}{332}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00333 \{}
+\DoxyCodeLine{00334     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_process_af4fcdaeb47e30030e4d4877232b6c135}{id}};}
+\DoxyCodeLine{00335 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_process_aae530d36427cb0c1fe817cb339bd7691}\label{class_process_aae530d36427cb0c1fe817cb339bd7691}} 
+\index{Process@{Process}!getName@{getName}}
+\index{getName@{getName}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily string Process\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00322}{322}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00323 \{}
+\DoxyCodeLine{00324     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_process_a8458c9ab0528b0f5fccb56968c1eb577}{name}};}
+\DoxyCodeLine{00325 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_process_af5103e08c032d9247110f0a7655bf37c}\label{class_process_af5103e08c032d9247110f0a7655bf37c}} 
+\index{Process@{Process}!getPriority@{getPriority}}
+\index{getPriority@{getPriority}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{getPriority()}{getPriority()}}
+{\footnotesize\ttfamily int Process\+::get\+Priority (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00350}{350}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00351 \{}
+\DoxyCodeLine{00352     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_process_ae03e5ff2b64628843a8436bea9703b70}{priority}};}
+\DoxyCodeLine{00353 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_process_ad766d35cd91ef755abdc5df596980923}\label{class_process_ad766d35cd91ef755abdc5df596980923}} 
+\index{Process@{Process}!getProcessTime@{getProcessTime}}
+\index{getProcessTime@{getProcessTime}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{getProcessTime()}{getProcessTime()}}
+{\footnotesize\ttfamily sc\+\_\+time Process\+::get\+Process\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00440}{440}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00441 \{}
+\DoxyCodeLine{00442     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_process_a47be8c61a3a5460452753dc98b68389f}{processTime}};}
+\DoxyCodeLine{00443 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_process_a73a66495ca1da4ba176cf2d04104acef}\label{class_process_a73a66495ca1da4ba176cf2d04104acef}} 
+\index{Process@{Process}!getPS\_Profiling@{getPS\_Profiling}}
+\index{getPS\_Profiling@{getPS\_Profiling}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{getPS\_Profiling()}{getPS\_Profiling()}}
+{\footnotesize\ttfamily int Process\+::get\+P\+S\+\_\+\+Profiling (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00435}{435}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00436 \{}
+\DoxyCodeLine{00437     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_process_ab824045bdc37b05cd9182fda746610b5}{profiling}};}
+\DoxyCodeLine{00438 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_process_a6f1fdb3ef348ebe19f1fd44671edfed8}\label{class_process_a6f1fdb3ef348ebe19f1fd44671edfed8}} 
+\index{Process@{Process}!setAffinity@{setAffinity}}
+\index{setAffinity@{setAffinity}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{setAffinity()}{setAffinity()}}
+{\footnotesize\ttfamily void Process\+::set\+Affinity (\begin{DoxyParamCaption}\item[{string}]{processor\+Name,  }\item[{float}]{affinity }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00414}{414}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00415 \{}
+\DoxyCodeLine{00416     map <string, float>::iterator end = this-\/>\mbox{\hyperlink{class_process_a86e0eaba322501bf13bd8138324a1a23}{affinity}}.end();}
+\DoxyCodeLine{00417     pair<string, float> item (x, y);}
+\DoxyCodeLine{00418     this-\/>\mbox{\hyperlink{class_process_a86e0eaba322501bf13bd8138324a1a23}{affinity}}.insert(end, item);}
+\DoxyCodeLine{00419 \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{_system_manager_8cpp_source_l00091}{System\+Manager\+::generate\+Process\+Instances()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_process_a6f1fdb3ef348ebe19f1fd44671edfed8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_process_af55a4774a1519b84988e4e3ec3fcc7a2}\label{class_process_af55a4774a1519b84988e4e3ec3fcc7a2}} 
+\index{Process@{Process}!setCodeSize@{setCodeSize}}
+\index{setCodeSize@{setCodeSize}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{setCodeSize()}{setCodeSize()}}
+{\footnotesize\ttfamily void Process\+::set\+Code\+Size (\begin{DoxyParamCaption}\item[{string}]{proc\+Name,  }\item[{unsigned int}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00390}{390}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00390                                                    \{}
+\DoxyCodeLine{00391     map <string, unsigned int>::iterator end = this-\/>\mbox{\hyperlink{class_process_a3fbb956251eecb4b438c640fd8c1a12d}{codeSizeMap}}.end();}
+\DoxyCodeLine{00392     pair<string, unsigned int> item (p, mem);}
+\DoxyCodeLine{00393     this-\/>\mbox{\hyperlink{class_process_a3fbb956251eecb4b438c640fd8c1a12d}{codeSizeMap}}.insert(end, item);}
+\DoxyCodeLine{00394 \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{_system_manager_8cpp_source_l00091}{System\+Manager\+::generate\+Process\+Instances()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_process_af55a4774a1519b84988e4e3ec3fcc7a2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_process_a8fb82ba026f5530a9f9724fbf1142aba}\label{class_process_a8fb82ba026f5530a9f9724fbf1142aba}} 
+\index{Process@{Process}!setConcurrency@{setConcurrency}}
+\index{setConcurrency@{setConcurrency}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{setConcurrency()}{setConcurrency()}}
+{\footnotesize\ttfamily void Process\+::set\+Concurrency (\begin{DoxyParamCaption}\item[{int}]{proc\+Id,  }\item[{float}]{conc }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00421}{421}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00422 \{}
+\DoxyCodeLine{00423     map <int, float>::iterator end = this-\/>\mbox{\hyperlink{class_process_a6147d0be2c050cb4669640e7076e1241}{concurrency}}.end();}
+\DoxyCodeLine{00424     pair<int, float> item (p, c);}
+\DoxyCodeLine{00425     this-\/>\mbox{\hyperlink{class_process_a6147d0be2c050cb4669640e7076e1241}{concurrency}}.insert(end, item);}
+\DoxyCodeLine{00426 \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{_system_manager_8cpp_source_l00091}{System\+Manager\+::generate\+Process\+Instances()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_process_a8fb82ba026f5530a9f9724fbf1142aba_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_process_a43c73ef0483b869e4231830eeff46d48}\label{class_process_a43c73ef0483b869e4231830eeff46d48}} 
+\index{Process@{Process}!setCriticality@{setCriticality}}
+\index{setCriticality@{setCriticality}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{setCriticality()}{setCriticality()}}
+{\footnotesize\ttfamily void Process\+::set\+Criticality (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00365}{365}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00366 \{}
+\DoxyCodeLine{00367     \mbox{\hyperlink{class_process_af97a7745a37113e0d5b4ca9b17aed729}{criticality}} = x;}
+\DoxyCodeLine{00368 \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{_system_manager_8cpp_source_l00091}{System\+Manager\+::generate\+Process\+Instances()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_process_a43c73ef0483b869e4231830eeff46d48_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_process_a268bc20c1c875e94e50c5d6d1ad9ec06}\label{class_process_a268bc20c1c875e94e50c5d6d1ad9ec06}} 
+\index{Process@{Process}!setDataSize@{setDataSize}}
+\index{setDataSize@{setDataSize}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{setDataSize()}{setDataSize()}}
+{\footnotesize\ttfamily void Process\+::set\+Data\+Size (\begin{DoxyParamCaption}\item[{string}]{proc\+Name,  }\item[{unsigned int}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00396}{396}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00396                                                    \{}
+\DoxyCodeLine{00397     map <string, unsigned int>::iterator end = this-\/>\mbox{\hyperlink{class_process_a125e902953b35206d7d2979e11b56d86}{dataSizeMap}}.end();}
+\DoxyCodeLine{00398     pair<string, unsigned int> item (p, mem);}
+\DoxyCodeLine{00399     this-\/>\mbox{\hyperlink{class_process_a125e902953b35206d7d2979e11b56d86}{dataSizeMap}}.insert(end, item);}
+\DoxyCodeLine{00400 \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{_system_manager_8cpp_source_l00091}{System\+Manager\+::generate\+Process\+Instances()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_process_a268bc20c1c875e94e50c5d6d1ad9ec06_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_process_a3aaefcd2768bd481e22228851b161546}\label{class_process_a3aaefcd2768bd481e22228851b161546}} 
+\index{Process@{Process}!setDataType@{setDataType}}
+\index{setDataType@{setDataType}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{setDataType()}{setDataType()}}
+{\footnotesize\ttfamily void Process\+::set\+Data\+Type (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00385}{385}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00386 \{}
+\DoxyCodeLine{00387     \mbox{\hyperlink{class_process_aa4ff148aceb9f05d1d5a5152e610a322}{dataType}} = x;}
+\DoxyCodeLine{00388 \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{_system_manager_8cpp_source_l00091}{System\+Manager\+::generate\+Process\+Instances()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_process_a3aaefcd2768bd481e22228851b161546_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_process_a2991ac041e868df69f3f394ee91791cb}\label{class_process_a2991ac041e868df69f3f394ee91791cb}} 
+\index{Process@{Process}!setEnergy@{setEnergy}}
+\index{setEnergy@{setEnergy}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{setEnergy()}{setEnergy()}}
+{\footnotesize\ttfamily void Process\+::set\+Energy (\begin{DoxyParamCaption}\item[{float}]{energy }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00346}{346}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00346                                \{}
+\DoxyCodeLine{00347     \mbox{\hyperlink{class_process_a04c66e1f8802aa8528226df19a5d9516}{energy}} = en;}
+\DoxyCodeLine{00348 \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{_system_manager_8cpp_source_l00091}{System\+Manager\+::generate\+Process\+Instances()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_process_a2991ac041e868df69f3f394ee91791cb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_process_a74caf223f4391e3145eee5899b30a09b}\label{class_process_a74caf223f4391e3145eee5899b30a09b}} 
+\index{Process@{Process}!setEqGate@{setEqGate}}
+\index{setEqGate@{setEqGate}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{setEqGate()}{setEqGate()}}
+{\footnotesize\ttfamily void Process\+::set\+Eq\+Gate (\begin{DoxyParamCaption}\item[{float}]{g }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00375}{375}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00376 \{}
+\DoxyCodeLine{00377     \mbox{\hyperlink{class_process_a70972fe640d0989f28bd451af196615c}{eqGate}} = g;}
+\DoxyCodeLine{00378 \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{_system_manager_8cpp_source_l00091}{System\+Manager\+::generate\+Process\+Instances()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_process_a74caf223f4391e3145eee5899b30a09b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_process_ac2d4d655dc9fe6317889938783ec2848}\label{class_process_ac2d4d655dc9fe6317889938783ec2848}} 
+\index{Process@{Process}!setId@{setId}}
+\index{setId@{setId}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{setId()}{setId()}}
+{\footnotesize\ttfamily void Process\+::set\+Id (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00337}{337}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00338 \{}
+\DoxyCodeLine{00339     \textcolor{keywordtype}{id} = x;}
+\DoxyCodeLine{00340 \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{_system_manager_8cpp_source_l00091}{System\+Manager\+::generate\+Process\+Instances()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_process_ac2d4d655dc9fe6317889938783ec2848_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_process_a9d9cfc179387b12e2bb1cdc214b6a9d8}\label{class_process_a9d9cfc179387b12e2bb1cdc214b6a9d8}} 
+\index{Process@{Process}!setLoad@{setLoad}}
+\index{setLoad@{setLoad}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{setLoad()}{setLoad()}}
+{\footnotesize\ttfamily void Process\+::set\+Load (\begin{DoxyParamCaption}\item[{int}]{proc\+Id,  }\item[{float}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00428}{428}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00428                                        \{}
+\DoxyCodeLine{00429     map <int, float>::iterator end = this-\/>\mbox{\hyperlink{class_process_ab18c69089c09584e0d78630fa782ee93}{load}}.end();}
+\DoxyCodeLine{00430     pair<int, float> item (p, value);}
+\DoxyCodeLine{00431     this-\/>\mbox{\hyperlink{class_process_ab18c69089c09584e0d78630fa782ee93}{load}}.insert(end, item);}
+\DoxyCodeLine{00432 \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{_system_manager_8cpp_source_l00091}{System\+Manager\+::generate\+Process\+Instances()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_process_a9d9cfc179387b12e2bb1cdc214b6a9d8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_process_af196d2bb3cb88dbf0c517428e7b09538}\label{class_process_af196d2bb3cb88dbf0c517428e7b09538}} 
+\index{Process@{Process}!setMemSize@{setMemSize}}
+\index{setMemSize@{setMemSize}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{setMemSize()}{setMemSize()}}
+{\footnotesize\ttfamily void Process\+::set\+Mem\+Size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_memory}{Memory}}}]{m }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_process_ad1d3a2fd1af703ff1b986512d675660b}\label{class_process_ad1d3a2fd1af703ff1b986512d675660b}} 
+\index{Process@{Process}!setName@{setName}}
+\index{setName@{setName}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily void Process\+::set\+Name (\begin{DoxyParamCaption}\item[{string}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00327}{327}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00328 \{}
+\DoxyCodeLine{00329     \mbox{\hyperlink{class_process_a8458c9ab0528b0f5fccb56968c1eb577}{name}} = x;}
+\DoxyCodeLine{00330 \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{_system_manager_8cpp_source_l00091}{System\+Manager\+::generate\+Process\+Instances()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_process_ad1d3a2fd1af703ff1b986512d675660b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_process_a011879a0a11d6bacd3a6d768293ab0d2}\label{class_process_a011879a0a11d6bacd3a6d768293ab0d2}} 
+\index{Process@{Process}!setPriority@{setPriority}}
+\index{setPriority@{setPriority}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{setPriority()}{setPriority()}}
+{\footnotesize\ttfamily void Process\+::set\+Priority (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00355}{355}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00356 \{}
+\DoxyCodeLine{00357     \mbox{\hyperlink{class_process_ae03e5ff2b64628843a8436bea9703b70}{priority}} = x;}
+\DoxyCodeLine{00358 \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{_system_manager_8cpp_source_l00091}{System\+Manager\+::generate\+Process\+Instances()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_process_a011879a0a11d6bacd3a6d768293ab0d2_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_process_a86e0eaba322501bf13bd8138324a1a23}\label{class_process_a86e0eaba322501bf13bd8138324a1a23}} 
+\index{Process@{Process}!affinity@{affinity}}
+\index{affinity@{affinity}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{affinity}{affinity}}
+{\footnotesize\ttfamily map$<$string,float$>$ Process\+::affinity}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8h_source_l00173}{173}} of file \mbox{\hyperlink{tl_8h_source}{tl.\+h}}.
+
+\mbox{\Hypertarget{class_process_a3fbb956251eecb4b438c640fd8c1a12d}\label{class_process_a3fbb956251eecb4b438c640fd8c1a12d}} 
+\index{Process@{Process}!codeSizeMap@{codeSizeMap}}
+\index{codeSizeMap@{codeSizeMap}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{codeSizeMap}{codeSizeMap}}
+{\footnotesize\ttfamily map$<$string, unsigned int$>$ Process\+::code\+Size\+Map}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8h_source_l00170}{170}} of file \mbox{\hyperlink{tl_8h_source}{tl.\+h}}.
+
+\mbox{\Hypertarget{class_process_a6147d0be2c050cb4669640e7076e1241}\label{class_process_a6147d0be2c050cb4669640e7076e1241}} 
+\index{Process@{Process}!concurrency@{concurrency}}
+\index{concurrency@{concurrency}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{concurrency}{concurrency}}
+{\footnotesize\ttfamily map$<$int,float$>$ Process\+::concurrency}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8h_source_l00174}{174}} of file \mbox{\hyperlink{tl_8h_source}{tl.\+h}}.
+
+\mbox{\Hypertarget{class_process_af97a7745a37113e0d5b4ca9b17aed729}\label{class_process_af97a7745a37113e0d5b4ca9b17aed729}} 
+\index{Process@{Process}!criticality@{criticality}}
+\index{criticality@{criticality}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{criticality}{criticality}}
+{\footnotesize\ttfamily unsigned int Process\+::criticality}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8h_source_l00167}{167}} of file \mbox{\hyperlink{tl_8h_source}{tl.\+h}}.
+
+\mbox{\Hypertarget{class_process_a125e902953b35206d7d2979e11b56d86}\label{class_process_a125e902953b35206d7d2979e11b56d86}} 
+\index{Process@{Process}!dataSizeMap@{dataSizeMap}}
+\index{dataSizeMap@{dataSizeMap}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{dataSizeMap}{dataSizeMap}}
+{\footnotesize\ttfamily map$<$string, unsigned int$>$ Process\+::data\+Size\+Map}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8h_source_l00171}{171}} of file \mbox{\hyperlink{tl_8h_source}{tl.\+h}}.
+
+\mbox{\Hypertarget{class_process_aa4ff148aceb9f05d1d5a5152e610a322}\label{class_process_aa4ff148aceb9f05d1d5a5152e610a322}} 
+\index{Process@{Process}!dataType@{dataType}}
+\index{dataType@{dataType}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{dataType}{dataType}}
+{\footnotesize\ttfamily unsigned int Process\+::data\+Type}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8h_source_l00169}{169}} of file \mbox{\hyperlink{tl_8h_source}{tl.\+h}}.
+
+\mbox{\Hypertarget{class_process_a04c66e1f8802aa8528226df19a5d9516}\label{class_process_a04c66e1f8802aa8528226df19a5d9516}} 
+\index{Process@{Process}!energy@{energy}}
+\index{energy@{energy}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{energy}{energy}}
+{\footnotesize\ttfamily float Process\+::energy}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8h_source_l00178}{178}} of file \mbox{\hyperlink{tl_8h_source}{tl.\+h}}.
+
+\mbox{\Hypertarget{class_process_a70972fe640d0989f28bd451af196615c}\label{class_process_a70972fe640d0989f28bd451af196615c}} 
+\index{Process@{Process}!eqGate@{eqGate}}
+\index{eqGate@{eqGate}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{eqGate}{eqGate}}
+{\footnotesize\ttfamily float Process\+::eq\+Gate}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8h_source_l00168}{168}} of file \mbox{\hyperlink{tl_8h_source}{tl.\+h}}.
+
+\mbox{\Hypertarget{class_process_af4fcdaeb47e30030e4d4877232b6c135}\label{class_process_af4fcdaeb47e30030e4d4877232b6c135}} 
+\index{Process@{Process}!id@{id}}
+\index{id@{id}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily unsigned int Process\+::id}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8h_source_l00165}{165}} of file \mbox{\hyperlink{tl_8h_source}{tl.\+h}}.
+
+\mbox{\Hypertarget{class_process_ab18c69089c09584e0d78630fa782ee93}\label{class_process_ab18c69089c09584e0d78630fa782ee93}} 
+\index{Process@{Process}!load@{load}}
+\index{load@{load}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{load}{load}}
+{\footnotesize\ttfamily map$<$int,float$>$ Process\+::load}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8h_source_l00175}{175}} of file \mbox{\hyperlink{tl_8h_source}{tl.\+h}}.
+
+\mbox{\Hypertarget{class_process_a8458c9ab0528b0f5fccb56968c1eb577}\label{class_process_a8458c9ab0528b0f5fccb56968c1eb577}} 
+\index{Process@{Process}!name@{name}}
+\index{name@{name}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily string Process\+::name}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8h_source_l00164}{164}} of file \mbox{\hyperlink{tl_8h_source}{tl.\+h}}.
+
+\mbox{\Hypertarget{class_process_ae03e5ff2b64628843a8436bea9703b70}\label{class_process_ae03e5ff2b64628843a8436bea9703b70}} 
+\index{Process@{Process}!priority@{priority}}
+\index{priority@{priority}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{priority}{priority}}
+{\footnotesize\ttfamily unsigned int Process\+::priority}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8h_source_l00166}{166}} of file \mbox{\hyperlink{tl_8h_source}{tl.\+h}}.
+
+\mbox{\Hypertarget{class_process_a47be8c61a3a5460452753dc98b68389f}\label{class_process_a47be8c61a3a5460452753dc98b68389f}} 
+\index{Process@{Process}!processTime@{processTime}}
+\index{processTime@{processTime}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{processTime}{processTime}}
+{\footnotesize\ttfamily sc\+\_\+time Process\+::process\+Time}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8h_source_l00177}{177}} of file \mbox{\hyperlink{tl_8h_source}{tl.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{_system_manager_8cpp_source_l00091}{System\+Manager\+::generate\+Process\+Instances()}}.
+
+\mbox{\Hypertarget{class_process_ab824045bdc37b05cd9182fda746610b5}\label{class_process_ab824045bdc37b05cd9182fda746610b5}} 
+\index{Process@{Process}!profiling@{profiling}}
+\index{profiling@{profiling}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{profiling}{profiling}}
+{\footnotesize\ttfamily unsigned int Process\+::profiling}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8h_source_l00176}{176}} of file \mbox{\hyperlink{tl_8h_source}{tl.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Hepsycode\+Design/src/\mbox{\hyperlink{tl_8h}{tl.\+h}}\item 
+Hepsycode\+Design/src/\mbox{\hyperlink{tl_8cpp}{tl.\+cpp}}\end{DoxyCompactItemize}

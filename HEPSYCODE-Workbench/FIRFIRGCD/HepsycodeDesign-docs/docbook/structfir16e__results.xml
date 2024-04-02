@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structfir16e__results">
+<title>fir16e_results Struct Reference</title>
+<indexterm><primary>fir16e_results</primary></indexterm>
+<para>
+
+<para>Message from fir16e to fir16m. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;datatype.h&gt;</computeroutput>
+</para>
+Collaboration diagram for fir16e_results:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="structfir16e__results__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>sc_uint&lt; 19 &gt; <link linkend="_structfir16e__results_1a5b758c23c1cf7b9904536e4b4fdc9213">acc</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Message from fir16e to fir16m. </para>
+<para>
+Definition at line 153 of file datatype.h.</para>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_structfir16e__results_1a5b758c23c1cf7b9904536e4b4fdc9213"/>    <section>
+    <title>acc</title>
+<indexterm><primary>acc</primary><secondary>fir16e_results</secondary></indexterm>
+<indexterm><primary>fir16e_results</primary><secondary>acc</secondary></indexterm>
+<para><computeroutput>sc_uint&lt;19&gt; fir16e_results::acc</computeroutput></para><para>
+Definition at line 155 of file datatype.h.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+HepsycodeDesign/src/<link linkend="_datatype_8h">datatype.h</link></section>
+</section>

@@ -1,0 +1,304 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_channel">
+<title>Channel Class Reference</title>
+<indexterm><primary>Channel</primary></indexterm>
+<para>
+<computeroutput>#include &lt;tl.h&gt;</computeroutput>
+</para>
+Collaboration diagram for Channel:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_channel__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_class_channel_1a53361b01056aea15c93053feb470b715">getName</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_channel_1a0a74f31ad2fd5c1bb1af019313e510c6">setName</link> (string x)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_channel_1a88e3cbfff29cf57b724e3bbd83f01a86">getId</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_channel_1a12e1cdd1b9887f1ed483d778772bfc53">setId</link> (int x)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_channel_1a6cc16d8f4b627251f9de609a62fa4d22">getW_id</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_channel_1af9e34fe60361f6e0c234e691d9d2824d">setW_id</link> (int x)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_channel_1a30a7fcde287743584d466cf092143bac">getR_id</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_channel_1a87fe96b999c9503c2a8839ee6498f256">setR_id</link> (int x)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_channel_1ab1496219d9f8b32b49b8df0ab86c4e9d">getWidth</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_channel_1a448e2f0beb2b7ce2a02a19e2eaf17d55">setWidth</link> (int x)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_channel_1a39aa69b49124b74185a3408af6ccfc43">getNum</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_channel_1adb8356f7bba44722ed6923684b8fdd7f">setNum</link> (int x)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_class_channel_1ada27be4a604630621c5de998c7f4a418">name</link></para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_class_channel_1afc927ef6eb5c4facb2bed6f9c74594b3">id</link></para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_class_channel_1a4150fdc6d32d1046ce353fead3a03859">w_id</link></para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_class_channel_1a9b6254aa7b5a479acc5c06e121d60541">r_id</link></para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_class_channel_1a8b61c56e572c25da10769f2391c5ca90">width</link></para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_class_channel_1a5aae410ad04998a0605d5e5f5aea6f67">num</link></para>
+</listitem>
+            <listitem><para>sc_time <link linkend="_class_channel_1ae59cca5ceecbf1eab184500c71f13e4c">working_time</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_class_channel_1ab19bcd2871b10a8a86029e7fd7ea022c">working_energy</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 312 of file tl.h.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_channel_1a88e3cbfff29cf57b724e3bbd83f01a86"/>    <section>
+    <title>getId()</title>
+<indexterm><primary>getId</primary><secondary>Channel</secondary></indexterm>
+<indexterm><primary>Channel</primary><secondary>getId</secondary></indexterm>
+<para><computeroutput>int Channel::getId ( )</computeroutput></para><para>
+Definition at line 559 of file tl.cpp.</para>
+<programlisting>560 {
+561 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_channel_1afc927ef6eb5c4facb2bed6f9c74594b3">id</link>;
+562 }
+</programlisting>    </section><anchor xml:id="_class_channel_1a53361b01056aea15c93053feb470b715"/>    <section>
+    <title>getName()</title>
+<indexterm><primary>getName</primary><secondary>Channel</secondary></indexterm>
+<indexterm><primary>Channel</primary><secondary>getName</secondary></indexterm>
+<para><computeroutput>string Channel::getName ( )</computeroutput></para><para>
+Definition at line 554 of file tl.cpp.</para>
+<programlisting>555 {
+556 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_channel_1ada27be4a604630621c5de998c7f4a418">name</link>;
+557 }
+</programlisting>    </section><anchor xml:id="_class_channel_1a39aa69b49124b74185a3408af6ccfc43"/>    <section>
+    <title>getNum()</title>
+<indexterm><primary>getNum</primary><secondary>Channel</secondary></indexterm>
+<indexterm><primary>Channel</primary><secondary>getNum</secondary></indexterm>
+<para><computeroutput>int Channel::getNum ( )</computeroutput></para><para>
+Definition at line 579 of file tl.cpp.</para>
+<programlisting>580 {
+581 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_channel_1a5aae410ad04998a0605d5e5f5aea6f67">num</link>;
+582 }
+</programlisting>    </section><anchor xml:id="_class_channel_1a30a7fcde287743584d466cf092143bac"/>    <section>
+    <title>getR_id()</title>
+<indexterm><primary>getR_id</primary><secondary>Channel</secondary></indexterm>
+<indexterm><primary>Channel</primary><secondary>getR_id</secondary></indexterm>
+<para><computeroutput>int Channel::getR_id ( )</computeroutput></para><para>
+Definition at line 574 of file tl.cpp.</para>
+<programlisting>575 {
+576 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_channel_1a9b6254aa7b5a479acc5c06e121d60541">r_id</link>;
+577 }
+</programlisting>    </section><anchor xml:id="_class_channel_1a6cc16d8f4b627251f9de609a62fa4d22"/>    <section>
+    <title>getW_id()</title>
+<indexterm><primary>getW_id</primary><secondary>Channel</secondary></indexterm>
+<indexterm><primary>Channel</primary><secondary>getW_id</secondary></indexterm>
+<para><computeroutput>int Channel::getW_id ( )</computeroutput></para><para>
+Definition at line 569 of file tl.cpp.</para>
+<programlisting>570 {
+571 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_channel_1a4150fdc6d32d1046ce353fead3a03859">w_id</link>;
+572 }
+</programlisting>    </section><anchor xml:id="_class_channel_1ab1496219d9f8b32b49b8df0ab86c4e9d"/>    <section>
+    <title>getWidth()</title>
+<indexterm><primary>getWidth</primary><secondary>Channel</secondary></indexterm>
+<indexterm><primary>Channel</primary><secondary>getWidth</secondary></indexterm>
+<para><computeroutput>int Channel::getWidth ( )</computeroutput></para><para>
+Definition at line 564 of file tl.cpp.</para>
+<programlisting>565 {
+566 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_channel_1a8b61c56e572c25da10769f2391c5ca90">width</link>;
+567 }
+</programlisting>    </section><anchor xml:id="_class_channel_1a12e1cdd1b9887f1ed483d778772bfc53"/>    <section>
+    <title>setId()</title>
+<indexterm><primary>setId</primary><secondary>Channel</secondary></indexterm>
+<indexterm><primary>Channel</primary><secondary>setId</secondary></indexterm>
+<para><computeroutput>void Channel::setId (int x)</computeroutput></para><para>
+Definition at line 589 of file tl.cpp.</para>
+<programlisting>590 {
+591 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">id</emphasis>&#32;=&#32;x;
+592 }
+</programlisting><para>
+Referenced by SystemManager::generateChannelInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_channel_a12e1cdd1b9887f1ed483d778772bfc53_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_channel_1a0a74f31ad2fd5c1bb1af019313e510c6"/>    <section>
+    <title>setName()</title>
+<indexterm><primary>setName</primary><secondary>Channel</secondary></indexterm>
+<indexterm><primary>Channel</primary><secondary>setName</secondary></indexterm>
+<para><computeroutput>void Channel::setName (string x)</computeroutput></para><para>
+Definition at line 584 of file tl.cpp.</para>
+<programlisting>585 {
+586 &#32;&#32;&#32;&#32;<link linkend="_class_channel_1ada27be4a604630621c5de998c7f4a418">name</link>&#32;=&#32;x;
+587 }
+</programlisting><para>
+Referenced by SystemManager::generateChannelInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_channel_a0a74f31ad2fd5c1bb1af019313e510c6_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_channel_1adb8356f7bba44722ed6923684b8fdd7f"/>    <section>
+    <title>setNum()</title>
+<indexterm><primary>setNum</primary><secondary>Channel</secondary></indexterm>
+<indexterm><primary>Channel</primary><secondary>setNum</secondary></indexterm>
+<para><computeroutput>void Channel::setNum (int x)</computeroutput></para><para>
+Definition at line 609 of file tl.cpp.</para>
+<programlisting>610 {
+611 &#32;&#32;&#32;&#32;<link linkend="_class_channel_1a5aae410ad04998a0605d5e5f5aea6f67">num</link>&#32;=&#32;x;
+612 }
+</programlisting><para>
+Referenced by SystemManager::generateChannelInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_channel_adb8356f7bba44722ed6923684b8fdd7f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_channel_1a87fe96b999c9503c2a8839ee6498f256"/>    <section>
+    <title>setR_id()</title>
+<indexterm><primary>setR_id</primary><secondary>Channel</secondary></indexterm>
+<indexterm><primary>Channel</primary><secondary>setR_id</secondary></indexterm>
+<para><computeroutput>void Channel::setR_id (int x)</computeroutput></para><para>
+Definition at line 604 of file tl.cpp.</para>
+<programlisting>605 {
+606 &#32;&#32;&#32;&#32;<link linkend="_class_channel_1a9b6254aa7b5a479acc5c06e121d60541">r_id</link>&#32;=&#32;x;
+607 }
+</programlisting><para>
+Referenced by SystemManager::generateChannelInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_channel_a87fe96b999c9503c2a8839ee6498f256_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_channel_1af9e34fe60361f6e0c234e691d9d2824d"/>    <section>
+    <title>setW_id()</title>
+<indexterm><primary>setW_id</primary><secondary>Channel</secondary></indexterm>
+<indexterm><primary>Channel</primary><secondary>setW_id</secondary></indexterm>
+<para><computeroutput>void Channel::setW_id (int x)</computeroutput></para><para>
+Definition at line 599 of file tl.cpp.</para>
+<programlisting>600 {
+601 &#32;&#32;&#32;&#32;<link linkend="_class_channel_1a4150fdc6d32d1046ce353fead3a03859">w_id</link>&#32;=&#32;x;
+602 }
+</programlisting><para>
+Referenced by SystemManager::generateChannelInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_channel_af9e34fe60361f6e0c234e691d9d2824d_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_channel_1a448e2f0beb2b7ce2a02a19e2eaf17d55"/>    <section>
+    <title>setWidth()</title>
+<indexterm><primary>setWidth</primary><secondary>Channel</secondary></indexterm>
+<indexterm><primary>Channel</primary><secondary>setWidth</secondary></indexterm>
+<para><computeroutput>void Channel::setWidth (int x)</computeroutput></para><para>
+Definition at line 594 of file tl.cpp.</para>
+<programlisting>595 {
+596 &#32;&#32;&#32;&#32;<link linkend="_class_channel_1a8b61c56e572c25da10769f2391c5ca90">width</link>&#32;=&#32;x;
+597 }
+</programlisting><para>
+Referenced by SystemManager::generateChannelInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_channel_a448e2f0beb2b7ce2a02a19e2eaf17d55_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_class_channel_1afc927ef6eb5c4facb2bed6f9c74594b3"/>    <section>
+    <title>id</title>
+<indexterm><primary>id</primary><secondary>Channel</secondary></indexterm>
+<indexterm><primary>Channel</primary><secondary>id</secondary></indexterm>
+<para><computeroutput>unsigned int Channel::id</computeroutput></para><para>
+Definition at line 316 of file tl.h.</para>
+    </section><anchor xml:id="_class_channel_1ada27be4a604630621c5de998c7f4a418"/>    <section>
+    <title>name</title>
+<indexterm><primary>name</primary><secondary>Channel</secondary></indexterm>
+<indexterm><primary>Channel</primary><secondary>name</secondary></indexterm>
+<para><computeroutput>string Channel::name</computeroutput></para><para>
+Definition at line 315 of file tl.h.</para>
+    </section><anchor xml:id="_class_channel_1a5aae410ad04998a0605d5e5f5aea6f67"/>    <section>
+    <title>num</title>
+<indexterm><primary>num</primary><secondary>Channel</secondary></indexterm>
+<indexterm><primary>Channel</primary><secondary>num</secondary></indexterm>
+<para><computeroutput>unsigned int Channel::num</computeroutput></para><para>
+Definition at line 320 of file tl.h.</para>
+    </section><anchor xml:id="_class_channel_1a9b6254aa7b5a479acc5c06e121d60541"/>    <section>
+    <title>r_id</title>
+<indexterm><primary>r_id</primary><secondary>Channel</secondary></indexterm>
+<indexterm><primary>Channel</primary><secondary>r_id</secondary></indexterm>
+<para><computeroutput>unsigned int Channel::r_id</computeroutput></para><para>
+Definition at line 318 of file tl.h.</para>
+    </section><anchor xml:id="_class_channel_1a4150fdc6d32d1046ce353fead3a03859"/>    <section>
+    <title>w_id</title>
+<indexterm><primary>w_id</primary><secondary>Channel</secondary></indexterm>
+<indexterm><primary>Channel</primary><secondary>w_id</secondary></indexterm>
+<para><computeroutput>unsigned int Channel::w_id</computeroutput></para><para>
+Definition at line 317 of file tl.h.</para>
+    </section><anchor xml:id="_class_channel_1a8b61c56e572c25da10769f2391c5ca90"/>    <section>
+    <title>width</title>
+<indexterm><primary>width</primary><secondary>Channel</secondary></indexterm>
+<indexterm><primary>Channel</primary><secondary>width</secondary></indexterm>
+<para><computeroutput>unsigned int Channel::width</computeroutput></para><para>
+Definition at line 319 of file tl.h.</para>
+    </section><anchor xml:id="_class_channel_1ab19bcd2871b10a8a86029e7fd7ea022c"/>    <section>
+    <title>working_energy</title>
+<indexterm><primary>working_energy</primary><secondary>Channel</secondary></indexterm>
+<indexterm><primary>Channel</primary><secondary>working_energy</secondary></indexterm>
+<para><computeroutput>double Channel::working_energy</computeroutput></para><para>
+Definition at line 322 of file tl.h.</para>
+    </section><anchor xml:id="_class_channel_1ae59cca5ceecbf1eab184500c71f13e4c"/>    <section>
+    <title>working_time</title>
+<indexterm><primary>working_time</primary><secondary>Channel</secondary></indexterm>
+<indexterm><primary>Channel</primary><secondary>working_time</secondary></indexterm>
+<para><computeroutput>sc_time Channel::working_time</computeroutput></para><para>
+Definition at line 321 of file tl.h.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+HepsycodeDesign/src/<link linkend="_tl_8h">tl.h</link>HepsycodeDesign/src/<link linkend="_tl_8cpp">tl.cpp</link></section>
+</section>

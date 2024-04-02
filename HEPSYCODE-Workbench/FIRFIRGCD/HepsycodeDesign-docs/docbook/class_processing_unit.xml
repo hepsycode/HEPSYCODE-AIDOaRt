@@ -1,0 +1,605 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_processing_unit">
+<title>ProcessingUnit Class Reference</title>
+<indexterm><primary>ProcessingUnit</primary></indexterm>
+<para>
+<computeroutput>#include &lt;tl.h&gt;</computeroutput>
+</para>
+Collaboration diagram for ProcessingUnit:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_processing_unit__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>unsigned int <link linkend="_class_processing_unit_1a367aa0751e97e2562b64a50b4e4142dd">getId</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_processing_unit_1a95737a4e4a2bd424cb4455f0c4a84cf5">setId</link> (unsigned int c)</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_processing_unit_1a9d6d56e08d110b9a12c45f12ebff1d97">getName</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_processing_unit_1a24c691bffdbf8b79fa8301ba6493e0e5">setName</link> (string x)</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_processing_unit_1ab0655a56bb59cad8ece761abbbc65cdc">getProcessorType</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_processing_unit_1a11749a7a862ab46b771844fddc373ed6">setProcessorType</link> (string x)</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_processing_unit_1a165cc1bf37c9a782333ede90806442d5">getCost</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_processing_unit_1aa3dae99a84415455a6db52ce06268ee6">setCost</link> (float x)</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_processing_unit_1a05972e9632c4beca6a20454d06a07aef">getISA</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_processing_unit_1a32aac7fd512cb23a8cc629d87ce317d8">setISA</link> (string x)</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_processing_unit_1a050cc3064600765a2c5b28f6a4034875">getFrequency</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_processing_unit_1a48a63b09d626c9563d36404b5f95a04a">setFrequency</link> (float x)</para>
+</listitem>
+            <listitem><para>float ** <link linkend="_class_processing_unit_1a01cb30925eeacbecd284554bef40f1e2">getCC4S</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_processing_unit_1a0878e37abdc168f31758d4df208c6663">setCC4S</link> (float **x)</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_processing_unit_1abd0118180953341e203b988f6430c72c">getPower</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_processing_unit_1a4994085fb506708d4c0f1c27565ffe2b">setPower</link> (float x)</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_processing_unit_1afe2c892fcd7e24ced8de933eb7078265">getMIPS</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_processing_unit_1af91c01d3a84acf6f310949e80906e824">setMIPS</link> (float x)</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_processing_unit_1a0d5c74b4ca7b117ec84b7ed1cd897840">getI4CSmin</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_processing_unit_1afb3bb2c3b1421dfabf867ff1bd084968">setI4CSmin</link> (float x)</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_processing_unit_1a6ce43383c58fd2c1ef0b0320c0936543">getI4CSmax</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_processing_unit_1a9995278db81888144089791e7eef8b71">setI4CSmax</link> (float x)</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_processing_unit_1a22cde43de69c7d230446ea3a45ad2107">getVdd</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_processing_unit_1ac4ef8b2cafc7e379b4cb05e463840128">setVdd</link> (float x)</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_processing_unit_1aff68b527f86f27ea0b373c27406f6281">getIdd</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_processing_unit_1a12212762fb57a5b582782c66861443fc">setIdd</link> (float x)</para>
+</listitem>
+            <listitem><para>sc_time <link linkend="_class_processing_unit_1aac8677c23e3d151d9994c863c817327a">getOverheadCS</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_processing_unit_1a4c38556d47f2cd40adc4092b09dba992">setOverheadCS</link> (sc_time x)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_class_processing_unit_1a39c59ae9752a23c906d91528b32d6ca2">name</link></para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_class_processing_unit_1a7c79d395aec1489d72e8deb11e81bcc3">id</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_class_processing_unit_1a1798129379e63325bc45484193334d35">processorType</link></para>
+</listitem>
+            <listitem><para>float <link linkend="_class_processing_unit_1a82138ac0886f2af91a81e5c68e4ea375">cost</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_class_processing_unit_1a53d94f4cc03f4dad1fdef142ddacbfee">ISA</link></para>
+</listitem>
+            <listitem><para>float <link linkend="_class_processing_unit_1a01ebb7abce840e8b996956228832e65e">frequency</link></para>
+</listitem>
+            <listitem><para>float ** <link linkend="_class_processing_unit_1a01bb4de07428d71da7b004594ff336bd">CC4CS</link></para>
+</listitem>
+            <listitem><para>float <link linkend="_class_processing_unit_1ab19b7aaa350746fa5d57e8cf70f0da3c">Power</link></para>
+</listitem>
+            <listitem><para>float <link linkend="_class_processing_unit_1a3d61b59933aa4703740546137478fdde">MIPS</link></para>
+</listitem>
+            <listitem><para>float <link linkend="_class_processing_unit_1aa9f158e72fea6e416f3c1de0e8a62320">I4CSmin</link></para>
+</listitem>
+            <listitem><para>float <link linkend="_class_processing_unit_1a8e68ace97807e113397794847ba13a37">I4CSmax</link></para>
+</listitem>
+            <listitem><para>float <link linkend="_class_processing_unit_1a946073849ecb4e68173fc843658114dd">Vdd</link></para>
+</listitem>
+            <listitem><para>float <link linkend="_class_processing_unit_1a30f2cae8129e6d834a95a9c0778e955d">Idd</link></para>
+</listitem>
+            <listitem><para>sc_time <link linkend="_class_processing_unit_1a19c1e33d59378a6db80ec7bffaa72d22">overheadCS</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 80 of file tl.h.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_processing_unit_1a01cb30925eeacbecd284554bef40f1e2"/>    <section>
+    <title>getCC4S()</title>
+<indexterm><primary>getCC4S</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>getCC4S</secondary></indexterm>
+<para><computeroutput>float ** ProcessingUnit::getCC4S ( )</computeroutput></para><para>
+Definition at line 129 of file tl.cpp.</para>
+<programlisting>130 {
+131 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_processing_unit_1a01bb4de07428d71da7b004594ff336bd">CC4CS</link>;
+132 }
+</programlisting>    </section><anchor xml:id="_class_processing_unit_1a165cc1bf37c9a782333ede90806442d5"/>    <section>
+    <title>getCost()</title>
+<indexterm><primary>getCost</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>getCost</secondary></indexterm>
+<para><computeroutput>float ProcessingUnit::getCost ( )</computeroutput></para><para>
+Definition at line 99 of file tl.cpp.</para>
+<programlisting>100 {
+101 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_processing_unit_1a82138ac0886f2af91a81e5c68e4ea375">cost</link>;
+102 }
+</programlisting>    </section><anchor xml:id="_class_processing_unit_1a050cc3064600765a2c5b28f6a4034875"/>    <section>
+    <title>getFrequency()</title>
+<indexterm><primary>getFrequency</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>getFrequency</secondary></indexterm>
+<para><computeroutput>float ProcessingUnit::getFrequency ( )</computeroutput></para><para>
+Definition at line 119 of file tl.cpp.</para>
+<programlisting>120 {
+121 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_processing_unit_1a01ebb7abce840e8b996956228832e65e">frequency</link>;
+122 }
+</programlisting>    </section><anchor xml:id="_class_processing_unit_1a6ce43383c58fd2c1ef0b0320c0936543"/>    <section>
+    <title>getI4CSmax()</title>
+<indexterm><primary>getI4CSmax</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>getI4CSmax</secondary></indexterm>
+<para><computeroutput>float ProcessingUnit::getI4CSmax ( )</computeroutput></para><para>
+Definition at line 169 of file tl.cpp.</para>
+<programlisting>170 {
+171 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_processing_unit_1a8e68ace97807e113397794847ba13a37">I4CSmax</link>;
+172 }
+</programlisting>    </section><anchor xml:id="_class_processing_unit_1a0d5c74b4ca7b117ec84b7ed1cd897840"/>    <section>
+    <title>getI4CSmin()</title>
+<indexterm><primary>getI4CSmin</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>getI4CSmin</secondary></indexterm>
+<para><computeroutput>float ProcessingUnit::getI4CSmin ( )</computeroutput></para><para>
+Definition at line 159 of file tl.cpp.</para>
+<programlisting>160 {
+161 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_processing_unit_1aa9f158e72fea6e416f3c1de0e8a62320">I4CSmin</link>;
+162 }
+</programlisting>    </section><anchor xml:id="_class_processing_unit_1a367aa0751e97e2562b64a50b4e4142dd"/>    <section>
+    <title>getId()</title>
+<indexterm><primary>getId</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>getId</secondary></indexterm>
+<para><computeroutput>unsigned int ProcessingUnit::getId ( )</computeroutput></para><para>
+Definition at line 71 of file tl.cpp.</para>
+<programlisting>71 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+72 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_processing_unit_1a7c79d395aec1489d72e8deb11e81bcc3">id</link>;
+73 }
+</programlisting>    </section><anchor xml:id="_class_processing_unit_1aff68b527f86f27ea0b373c27406f6281"/>    <section>
+    <title>getIdd()</title>
+<indexterm><primary>getIdd</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>getIdd</secondary></indexterm>
+<para><computeroutput>float ProcessingUnit::getIdd ( )</computeroutput></para><para>
+Definition at line 189 of file tl.cpp.</para>
+<programlisting>190 {
+191 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_processing_unit_1a30f2cae8129e6d834a95a9c0778e955d">Idd</link>;
+192 }
+</programlisting>    </section><anchor xml:id="_class_processing_unit_1a05972e9632c4beca6a20454d06a07aef"/>    <section>
+    <title>getISA()</title>
+<indexterm><primary>getISA</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>getISA</secondary></indexterm>
+<para><computeroutput>string ProcessingUnit::getISA ( )</computeroutput></para><para>
+Definition at line 109 of file tl.cpp.</para>
+<programlisting>110 {
+111 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_processing_unit_1a53d94f4cc03f4dad1fdef142ddacbfee">ISA</link>;
+112 }
+</programlisting>    </section><anchor xml:id="_class_processing_unit_1afe2c892fcd7e24ced8de933eb7078265"/>    <section>
+    <title>getMIPS()</title>
+<indexterm><primary>getMIPS</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>getMIPS</secondary></indexterm>
+<para><computeroutput>float ProcessingUnit::getMIPS ( )</computeroutput></para><para>
+Definition at line 149 of file tl.cpp.</para>
+<programlisting>150 {
+151 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_processing_unit_1a3d61b59933aa4703740546137478fdde">MIPS</link>;
+152 }
+</programlisting>    </section><anchor xml:id="_class_processing_unit_1a9d6d56e08d110b9a12c45f12ebff1d97"/>    <section>
+    <title>getName()</title>
+<indexterm><primary>getName</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>getName</secondary></indexterm>
+<para><computeroutput>string ProcessingUnit::getName ( )</computeroutput></para><para>
+Definition at line 79 of file tl.cpp.</para>
+<programlisting>80 {
+81 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_processing_unit_1a39c59ae9752a23c906d91528b32d6ca2">name</link>;
+82 }
+</programlisting>    </section><anchor xml:id="_class_processing_unit_1aac8677c23e3d151d9994c863c817327a"/>    <section>
+    <title>getOverheadCS()</title>
+<indexterm><primary>getOverheadCS</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>getOverheadCS</secondary></indexterm>
+<para><computeroutput>sc_time ProcessingUnit::getOverheadCS ( )</computeroutput></para><para>
+Definition at line 199 of file tl.cpp.</para>
+<programlisting>200 {
+201 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_processing_unit_1a19c1e33d59378a6db80ec7bffaa72d22">overheadCS</link>;
+202 }
+</programlisting>    </section><anchor xml:id="_class_processing_unit_1abd0118180953341e203b988f6430c72c"/>    <section>
+    <title>getPower()</title>
+<indexterm><primary>getPower</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>getPower</secondary></indexterm>
+<para><computeroutput>float ProcessingUnit::getPower ( )</computeroutput></para><para>
+Definition at line 139 of file tl.cpp.</para>
+<programlisting>140 {
+141 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_processing_unit_1ab19b7aaa350746fa5d57e8cf70f0da3c">Power</link>;
+142 }
+</programlisting>    </section><anchor xml:id="_class_processing_unit_1ab0655a56bb59cad8ece761abbbc65cdc"/>    <section>
+    <title>getProcessorType()</title>
+<indexterm><primary>getProcessorType</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>getProcessorType</secondary></indexterm>
+<para><computeroutput>string ProcessingUnit::getProcessorType ( )</computeroutput></para><para>
+Definition at line 89 of file tl.cpp.</para>
+<programlisting>90 {
+91 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_processing_unit_1a1798129379e63325bc45484193334d35">processorType</link>;
+92 }
+</programlisting>    </section><anchor xml:id="_class_processing_unit_1a22cde43de69c7d230446ea3a45ad2107"/>    <section>
+    <title>getVdd()</title>
+<indexterm><primary>getVdd</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>getVdd</secondary></indexterm>
+<para><computeroutput>float ProcessingUnit::getVdd ( )</computeroutput></para><para>
+Definition at line 179 of file tl.cpp.</para>
+<programlisting>180 {
+181 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_processing_unit_1a946073849ecb4e68173fc843658114dd">Vdd</link>;
+182 }
+</programlisting>    </section><anchor xml:id="_class_processing_unit_1a0878e37abdc168f31758d4df208c6663"/>    <section>
+    <title>setCC4S()</title>
+<indexterm><primary>setCC4S</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>setCC4S</secondary></indexterm>
+<para><computeroutput>void ProcessingUnit::setCC4S (float ** x)</computeroutput></para><para>
+Definition at line 134 of file tl.cpp.</para>
+<programlisting>135 {
+136 &#32;&#32;&#32;&#32;<link linkend="_class_processing_unit_1a01bb4de07428d71da7b004594ff336bd">CC4CS</link>&#32;=&#32;x;
+137 }
+</programlisting><para>
+Referenced by SystemManager::generateBBInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_processing_unit_a0878e37abdc168f31758d4df208c6663_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_processing_unit_1aa3dae99a84415455a6db52ce06268ee6"/>    <section>
+    <title>setCost()</title>
+<indexterm><primary>setCost</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>setCost</secondary></indexterm>
+<para><computeroutput>void ProcessingUnit::setCost (float x)</computeroutput></para><para>
+Definition at line 104 of file tl.cpp.</para>
+<programlisting>105 {
+106 &#32;&#32;&#32;&#32;<link linkend="_class_processing_unit_1a82138ac0886f2af91a81e5c68e4ea375">cost</link>&#32;=&#32;x;
+107 }
+</programlisting>    </section><anchor xml:id="_class_processing_unit_1a48a63b09d626c9563d36404b5f95a04a"/>    <section>
+    <title>setFrequency()</title>
+<indexterm><primary>setFrequency</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>setFrequency</secondary></indexterm>
+<para><computeroutput>void ProcessingUnit::setFrequency (float x)</computeroutput></para><para>
+Definition at line 124 of file tl.cpp.</para>
+<programlisting>125 {
+126 &#32;&#32;&#32;&#32;<link linkend="_class_processing_unit_1a01ebb7abce840e8b996956228832e65e">frequency</link>&#32;=&#32;x;
+127 }
+</programlisting><para>
+Referenced by SystemManager::generateBBInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_processing_unit_a48a63b09d626c9563d36404b5f95a04a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_processing_unit_1a9995278db81888144089791e7eef8b71"/>    <section>
+    <title>setI4CSmax()</title>
+<indexterm><primary>setI4CSmax</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>setI4CSmax</secondary></indexterm>
+<para><computeroutput>void ProcessingUnit::setI4CSmax (float x)</computeroutput></para><para>
+Definition at line 174 of file tl.cpp.</para>
+<programlisting>175 {
+176 &#32;&#32;&#32;&#32;<link linkend="_class_processing_unit_1a8e68ace97807e113397794847ba13a37">I4CSmax</link>&#32;=&#32;x;
+177 }
+</programlisting><para>
+Referenced by SystemManager::generateBBInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_processing_unit_a9995278db81888144089791e7eef8b71_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_processing_unit_1afb3bb2c3b1421dfabf867ff1bd084968"/>    <section>
+    <title>setI4CSmin()</title>
+<indexterm><primary>setI4CSmin</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>setI4CSmin</secondary></indexterm>
+<para><computeroutput>void ProcessingUnit::setI4CSmin (float x)</computeroutput></para><para>
+Definition at line 164 of file tl.cpp.</para>
+<programlisting>165 {
+166 &#32;&#32;&#32;&#32;<link linkend="_class_processing_unit_1aa9f158e72fea6e416f3c1de0e8a62320">I4CSmin</link>&#32;=&#32;x;
+167 }
+</programlisting><para>
+Referenced by SystemManager::generateBBInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_processing_unit_afb3bb2c3b1421dfabf867ff1bd084968_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_processing_unit_1a95737a4e4a2bd424cb4455f0c4a84cf5"/>    <section>
+    <title>setId()</title>
+<indexterm><primary>setId</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>setId</secondary></indexterm>
+<para><computeroutput>void ProcessingUnit::setId (unsigned int c)</computeroutput></para><para>
+Definition at line 75 of file tl.cpp.</para>
+<programlisting>75 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+76 &#32;&#32;&#32;&#32;this-&gt;<emphasis role="keywordtype">id</emphasis>&#32;=&#32;c;
+77 }
+</programlisting><para>
+Referenced by SystemManager::generateBBInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_processing_unit_a95737a4e4a2bd424cb4455f0c4a84cf5_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_processing_unit_1a12212762fb57a5b582782c66861443fc"/>    <section>
+    <title>setIdd()</title>
+<indexterm><primary>setIdd</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>setIdd</secondary></indexterm>
+<para><computeroutput>void ProcessingUnit::setIdd (float x)</computeroutput></para><para>
+Definition at line 194 of file tl.cpp.</para>
+<programlisting>195 {
+196 &#32;&#32;&#32;&#32;<link linkend="_class_processing_unit_1a30f2cae8129e6d834a95a9c0778e955d">Idd</link>&#32;=&#32;x;
+197 }
+</programlisting><para>
+Referenced by SystemManager::generateBBInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_processing_unit_a12212762fb57a5b582782c66861443fc_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_processing_unit_1a32aac7fd512cb23a8cc629d87ce317d8"/>    <section>
+    <title>setISA()</title>
+<indexterm><primary>setISA</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>setISA</secondary></indexterm>
+<para><computeroutput>void ProcessingUnit::setISA (string x)</computeroutput></para><para>
+Definition at line 114 of file tl.cpp.</para>
+<programlisting>115 {
+116 &#32;&#32;&#32;&#32;<link linkend="_class_processing_unit_1a53d94f4cc03f4dad1fdef142ddacbfee">ISA</link>&#32;=&#32;x;
+117 }
+</programlisting><para>
+Referenced by SystemManager::generateBBInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_processing_unit_a32aac7fd512cb23a8cc629d87ce317d8_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_processing_unit_1af91c01d3a84acf6f310949e80906e824"/>    <section>
+    <title>setMIPS()</title>
+<indexterm><primary>setMIPS</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>setMIPS</secondary></indexterm>
+<para><computeroutput>void ProcessingUnit::setMIPS (float x)</computeroutput></para><para>
+Definition at line 154 of file tl.cpp.</para>
+<programlisting>155 {
+156 &#32;&#32;&#32;&#32;<link linkend="_class_processing_unit_1a3d61b59933aa4703740546137478fdde">MIPS</link>&#32;=&#32;x;
+157 }
+</programlisting><para>
+Referenced by SystemManager::generateBBInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_processing_unit_af91c01d3a84acf6f310949e80906e824_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_processing_unit_1a24c691bffdbf8b79fa8301ba6493e0e5"/>    <section>
+    <title>setName()</title>
+<indexterm><primary>setName</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>setName</secondary></indexterm>
+<para><computeroutput>void ProcessingUnit::setName (string x)</computeroutput></para><para>
+Definition at line 84 of file tl.cpp.</para>
+<programlisting>85 {
+86 &#32;&#32;&#32;&#32;<link linkend="_class_processing_unit_1a39c59ae9752a23c906d91528b32d6ca2">name</link>&#32;=&#32;x;
+87 }
+</programlisting><para>
+Referenced by SystemManager::generateBBInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_processing_unit_a24c691bffdbf8b79fa8301ba6493e0e5_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_processing_unit_1a4c38556d47f2cd40adc4092b09dba992"/>    <section>
+    <title>setOverheadCS()</title>
+<indexterm><primary>setOverheadCS</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>setOverheadCS</secondary></indexterm>
+<para><computeroutput>void ProcessingUnit::setOverheadCS (sc_time x)</computeroutput></para><para>
+Definition at line 204 of file tl.cpp.</para>
+<programlisting>205 {
+206 &#32;&#32;&#32;&#32;<link linkend="_class_processing_unit_1a19c1e33d59378a6db80ec7bffaa72d22">overheadCS</link>&#32;=&#32;x;
+207 }
+</programlisting><para>
+Referenced by SystemManager::generateBBInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_processing_unit_a4c38556d47f2cd40adc4092b09dba992_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_processing_unit_1a4994085fb506708d4c0f1c27565ffe2b"/>    <section>
+    <title>setPower()</title>
+<indexterm><primary>setPower</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>setPower</secondary></indexterm>
+<para><computeroutput>void ProcessingUnit::setPower (float x)</computeroutput></para><para>
+Definition at line 144 of file tl.cpp.</para>
+<programlisting>145 {
+146 &#32;&#32;&#32;&#32;<link linkend="_class_processing_unit_1ab19b7aaa350746fa5d57e8cf70f0da3c">Power</link>&#32;=&#32;x;
+147 }
+</programlisting><para>
+Referenced by SystemManager::generateBBInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_processing_unit_a4994085fb506708d4c0f1c27565ffe2b_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_processing_unit_1a11749a7a862ab46b771844fddc373ed6"/>    <section>
+    <title>setProcessorType()</title>
+<indexterm><primary>setProcessorType</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>setProcessorType</secondary></indexterm>
+<para><computeroutput>void ProcessingUnit::setProcessorType (string x)</computeroutput></para><para>
+Definition at line 94 of file tl.cpp.</para>
+<programlisting>95 {
+96 &#32;&#32;&#32;&#32;<link linkend="_class_processing_unit_1a1798129379e63325bc45484193334d35">processorType</link>&#32;=&#32;x;
+97 }
+</programlisting><para>
+Referenced by SystemManager::generateBBInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_processing_unit_a11749a7a862ab46b771844fddc373ed6_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_processing_unit_1ac4ef8b2cafc7e379b4cb05e463840128"/>    <section>
+    <title>setVdd()</title>
+<indexterm><primary>setVdd</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>setVdd</secondary></indexterm>
+<para><computeroutput>void ProcessingUnit::setVdd (float x)</computeroutput></para><para>
+Definition at line 184 of file tl.cpp.</para>
+<programlisting>185 {
+186 &#32;&#32;&#32;&#32;<link linkend="_class_processing_unit_1a946073849ecb4e68173fc843658114dd">Vdd</link>&#32;=&#32;x;
+187 }
+</programlisting><para>
+Referenced by SystemManager::generateBBInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_processing_unit_ac4ef8b2cafc7e379b4cb05e463840128_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_class_processing_unit_1a01bb4de07428d71da7b004594ff336bd"/>    <section>
+    <title>CC4CS</title>
+<indexterm><primary>CC4CS</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>CC4CS</secondary></indexterm>
+<para><computeroutput>float** ProcessingUnit::CC4CS</computeroutput></para><para>
+Definition at line 92 of file tl.h.</para>
+    </section><anchor xml:id="_class_processing_unit_1a82138ac0886f2af91a81e5c68e4ea375"/>    <section>
+    <title>cost</title>
+<indexterm><primary>cost</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>cost</secondary></indexterm>
+<para><computeroutput>float ProcessingUnit::cost</computeroutput></para><para>
+Definition at line 89 of file tl.h.</para>
+    </section><anchor xml:id="_class_processing_unit_1a01ebb7abce840e8b996956228832e65e"/>    <section>
+    <title>frequency</title>
+<indexterm><primary>frequency</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>frequency</secondary></indexterm>
+<para><computeroutput>float ProcessingUnit::frequency</computeroutput></para><para>
+Definition at line 91 of file tl.h.</para>
+    </section><anchor xml:id="_class_processing_unit_1a8e68ace97807e113397794847ba13a37"/>    <section>
+    <title>I4CSmax</title>
+<indexterm><primary>I4CSmax</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>I4CSmax</secondary></indexterm>
+<para><computeroutput>float ProcessingUnit::I4CSmax</computeroutput></para><para>
+Definition at line 96 of file tl.h.</para>
+    </section><anchor xml:id="_class_processing_unit_1aa9f158e72fea6e416f3c1de0e8a62320"/>    <section>
+    <title>I4CSmin</title>
+<indexterm><primary>I4CSmin</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>I4CSmin</secondary></indexterm>
+<para><computeroutput>float ProcessingUnit::I4CSmin</computeroutput></para><para>
+Definition at line 95 of file tl.h.</para>
+    </section><anchor xml:id="_class_processing_unit_1a7c79d395aec1489d72e8deb11e81bcc3"/>    <section>
+    <title>id</title>
+<indexterm><primary>id</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>id</secondary></indexterm>
+<para><computeroutput>unsigned int ProcessingUnit::id</computeroutput></para><para>
+Definition at line 87 of file tl.h.</para>
+    </section><anchor xml:id="_class_processing_unit_1a30f2cae8129e6d834a95a9c0778e955d"/>    <section>
+    <title>Idd</title>
+<indexterm><primary>Idd</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>Idd</secondary></indexterm>
+<para><computeroutput>float ProcessingUnit::Idd</computeroutput></para><para>
+Definition at line 98 of file tl.h.</para>
+    </section><anchor xml:id="_class_processing_unit_1a53d94f4cc03f4dad1fdef142ddacbfee"/>    <section>
+    <title>ISA</title>
+<indexterm><primary>ISA</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>ISA</secondary></indexterm>
+<para><computeroutput>string ProcessingUnit::ISA</computeroutput></para><para>
+Definition at line 90 of file tl.h.</para>
+    </section><anchor xml:id="_class_processing_unit_1a3d61b59933aa4703740546137478fdde"/>    <section>
+    <title>MIPS</title>
+<indexterm><primary>MIPS</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>MIPS</secondary></indexterm>
+<para><computeroutput>float ProcessingUnit::MIPS</computeroutput></para><para>
+Definition at line 94 of file tl.h.</para>
+    </section><anchor xml:id="_class_processing_unit_1a39c59ae9752a23c906d91528b32d6ca2"/>    <section>
+    <title>name</title>
+<indexterm><primary>name</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>name</secondary></indexterm>
+<para><computeroutput>string ProcessingUnit::name</computeroutput></para><para>
+Definition at line 86 of file tl.h.</para>
+    </section><anchor xml:id="_class_processing_unit_1a19c1e33d59378a6db80ec7bffaa72d22"/>    <section>
+    <title>overheadCS</title>
+<indexterm><primary>overheadCS</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>overheadCS</secondary></indexterm>
+<para><computeroutput>sc_time ProcessingUnit::overheadCS</computeroutput></para><para>
+Definition at line 99 of file tl.h.</para>
+    </section><anchor xml:id="_class_processing_unit_1ab19b7aaa350746fa5d57e8cf70f0da3c"/>    <section>
+    <title>Power</title>
+<indexterm><primary>Power</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>Power</secondary></indexterm>
+<para><computeroutput>float ProcessingUnit::Power</computeroutput></para><para>
+Definition at line 93 of file tl.h.</para>
+    </section><anchor xml:id="_class_processing_unit_1a1798129379e63325bc45484193334d35"/>    <section>
+    <title>processorType</title>
+<indexterm><primary>processorType</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>processorType</secondary></indexterm>
+<para><computeroutput>string ProcessingUnit::processorType</computeroutput></para><para>
+Definition at line 88 of file tl.h.</para>
+    </section><anchor xml:id="_class_processing_unit_1a946073849ecb4e68173fc843658114dd"/>    <section>
+    <title>Vdd</title>
+<indexterm><primary>Vdd</primary><secondary>ProcessingUnit</secondary></indexterm>
+<indexterm><primary>ProcessingUnit</primary><secondary>Vdd</secondary></indexterm>
+<para><computeroutput>float ProcessingUnit::Vdd</computeroutput></para><para>
+Definition at line 97 of file tl.h.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+HepsycodeDesign/src/<link linkend="_tl_8h">tl.h</link>HepsycodeDesign/src/<link linkend="_tl_8cpp">tl.cpp</link></section>
+</section>

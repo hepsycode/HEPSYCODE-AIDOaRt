@@ -1,0 +1,749 @@
+<?xml version="1.0"?>
+<instancesPS>
+	<process>
+		<name>stimulus</name>
+		<id>0</id>
+		<priority>NA</priority>
+		<criticality>NA</criticality>
+		<eqGate value="0" />
+		<concurrency>
+			<processId id="1" value="0" />
+			<processId id="2" value="0" />
+			<processId id="3" value="0" />
+			<processId id="4" value="0" />
+			<processId id="5" value="0" />
+			<processId id="6" value="0" />
+			<processId id="7" value="0" />
+			<processId id="8" value="0" />
+			<processId id="9" value="0" />
+		</concurrency>
+		<comunication>
+			<rec idRec="1" value="0" />
+			<rec idRec="2" value="80" />
+			<rec idRec="3" value="0" />
+			<rec idRec="4" value="0" />
+			<rec idRec="5" value="80" />
+			<rec idRec="6" value="0" />
+			<rec idRec="7" value="0" />
+			<rec idRec="8" value="0" />
+			<rec idRec="9" value="0" />
+		</comunication>
+		<energy>
+			<processorId id="0" value="0" />
+		</energy>
+		<load>
+			<processorId id="0" value="0" />
+		</load>
+	</process>
+	<process>
+		<name>display</name>
+		<id>1</id>
+		<priority>NA</priority>
+		<criticality>NA</criticality>
+		<eqGate value="0" />
+		<concurrency>
+			<processId id="0" value="0" />
+			<processId id="2" value="0" />
+			<processId id="3" value="0" />
+			<processId id="4" value="0" />
+			<processId id="5" value="0" />
+			<processId id="6" value="0" />
+			<processId id="7" value="0" />
+			<processId id="8" value="0" />
+			<processId id="9" value="0" />
+		</concurrency>
+		<comunication>
+			<rec idRec="0" value="0" />
+			<rec idRec="2" value="0" />
+			<rec idRec="3" value="0" />
+			<rec idRec="4" value="0" />
+			<rec idRec="5" value="0" />
+			<rec idRec="6" value="0" />
+			<rec idRec="7" value="0" />
+			<rec idRec="8" value="0" />
+			<rec idRec="9" value="0" />
+		</comunication>
+		<energy>
+			<processorId id="0" value="0" />
+		</energy>
+		<load>
+			<processorId id="0" value="0" />
+		</load>
+	</process>
+	<process>
+		<name>fir8_main</name>
+		<id>2</id>
+		<priority>90</priority>
+		<criticality>0</criticality>
+		<eqGate value="50" />
+		<concurrency>
+			<processId id="0" value="0" />
+			<processId id="1" value="0" />
+			<processId id="3" value="0.0555086" />
+			<processId id="4" value="0.0469996" />
+			<processId id="5" value="0.430987" />
+			<processId id="6" value="9.09083e-05" />
+			<processId id="7" value="0.0617267" />
+			<processId id="8" value="0.0618085" />
+			<processId id="9" value="0.00183635" />
+		</concurrency>
+		<comunication>
+			<rec idRec="0" value="0" />
+			<rec idRec="1" value="0" />
+			<rec idRec="3" value="1630" />
+			<rec idRec="4" value="720" />
+			<rec idRec="5" value="0" />
+			<rec idRec="6" value="0" />
+			<rec idRec="7" value="0" />
+			<rec idRec="8" value="80" />
+			<rec idRec="9" value="0" />
+		</comunication>
+		<energy>
+			<processorId id="0" value="8017.66" />
+			<processorId id="1" value="8017.66" />
+			<processorId id="3" value="2731.77" />
+			<processorId id="2" value="2731.77" />
+		</energy>
+		<load>
+			<processorId id="0" value="0.11228" />
+			<processorId id="1" value="0.11228" />
+			<processorId id="2" value="0.0481292" />
+			<processorId id="3" value="0.0481292" />
+		</load>
+	</process>
+	<process>
+		<name>fir8_evaluation</name>
+		<id>3</id>
+		<priority>70</priority>
+		<criticality>0</criticality>
+		<eqGate value="50" />
+		<concurrency>
+			<processId id="0" value="0" />
+			<processId id="1" value="0" />
+			<processId id="2" value="0" />
+			<processId id="4" value="0.00309997" />
+			<processId id="5" value="0.0567722" />
+			<processId id="6" value="9.09083e-06" />
+			<processId id="7" value="0.00309997" />
+			<processId id="8" value="0.00309997" />
+			<processId id="9" value="0.00309997" />
+		</concurrency>
+		<comunication>
+			<rec idRec="0" value="0" />
+			<rec idRec="1" value="0" />
+			<rec idRec="2" value="190" />
+			<rec idRec="4" value="0" />
+			<rec idRec="5" value="0" />
+			<rec idRec="6" value="0" />
+			<rec idRec="7" value="0" />
+			<rec idRec="8" value="0" />
+			<rec idRec="9" value="0" />
+		</comunication>
+		<energy>
+			<processorId id="0" value="5962.53" />
+			<processorId id="1" value="5962.53" />
+			<processorId id="3" value="2031.58" />
+			<processorId id="2" value="2031.58" />
+		</energy>
+		<load>
+			<processorId id="0" value="0.0835" />
+			<processorId id="1" value="0.0835" />
+			<processorId id="2" value="0.0357927" />
+			<processorId id="3" value="0.0357927" />
+		</load>
+	</process>
+	<process>
+		<name>fir8_shifting</name>
+		<id>4</id>
+		<priority>70</priority>
+		<criticality>0</criticality>
+		<eqGate value="50" />
+		<concurrency>
+			<processId id="0" value="0" />
+			<processId id="1" value="0" />
+			<processId id="2" value="0" />
+			<processId id="3" value="0" />
+			<processId id="5" value="0.0495359" />
+			<processId id="6" value="9.09083e-06" />
+			<processId id="7" value="0.00437269" />
+			<processId id="8" value="0.00437269" />
+			<processId id="9" value="0.00437269" />
+		</concurrency>
+		<comunication>
+			<rec idRec="0" value="0" />
+			<rec idRec="1" value="0" />
+			<rec idRec="2" value="640" />
+			<rec idRec="3" value="0" />
+			<rec idRec="5" value="0" />
+			<rec idRec="6" value="0" />
+			<rec idRec="7" value="0" />
+			<rec idRec="8" value="0" />
+			<rec idRec="9" value="0" />
+		</comunication>
+		<energy>
+			<processorId id="0" value="3725.67" />
+			<processorId id="1" value="3725.67" />
+			<processorId id="3" value="1269.43" />
+			<processorId id="2" value="1269.43" />
+		</energy>
+		<load>
+			<processorId id="0" value="0.0521753" />
+			<processorId id="1" value="0.0521753" />
+			<processorId id="2" value="0.0223652" />
+			<processorId id="3" value="0.0223652" />
+		</load>
+	</process>
+	<process>
+		<name>fir16_main</name>
+		<id>5</id>
+		<priority>70</priority>
+		<criticality>1</criticality>
+		<eqGate value="50" />
+		<concurrency>
+			<processId id="0" value="0" />
+			<processId id="1" value="0" />
+			<processId id="2" value="0" />
+			<processId id="3" value="0" />
+			<processId id="4" value="0" />
+			<processId id="6" value="9.09083e-05" />
+			<processId id="7" value="0.0683448" />
+			<processId id="8" value="0.0704721" />
+			<processId id="9" value="0.00845447" />
+		</concurrency>
+		<comunication>
+			<rec idRec="0" value="0" />
+			<rec idRec="1" value="0" />
+			<rec idRec="2" value="0" />
+			<rec idRec="3" value="0" />
+			<rec idRec="4" value="0" />
+			<rec idRec="6" value="2990" />
+			<rec idRec="7" value="1360" />
+			<rec idRec="8" value="80" />
+			<rec idRec="9" value="0" />
+		</comunication>
+		<energy>
+			<processorId id="0" value="14945" />
+			<processorId id="1" value="14945" />
+			<processorId id="3" value="5092.03" />
+			<processorId id="2" value="5092.03" />
+		</energy>
+		<load>
+			<processorId id="0" value="0.209288" />
+			<processorId id="1" value="0.209288" />
+			<processorId id="2" value="0.0897125" />
+			<processorId id="3" value="0.0897125" />
+		</load>
+	</process>
+	<process>
+		<name>fir16_evaluation</name>
+		<id>6</id>
+		<priority>70</priority>
+		<criticality>1</criticality>
+		<eqGate value="50" />
+		<concurrency>
+			<processId id="0" value="0" />
+			<processId id="1" value="0" />
+			<processId id="2" value="0" />
+			<processId id="3" value="0" />
+			<processId id="4" value="0" />
+			<processId id="5" value="0" />
+			<processId id="7" value="9.09083e-06" />
+			<processId id="8" value="9.09083e-06" />
+			<processId id="9" value="9.09083e-06" />
+		</concurrency>
+		<comunication>
+			<rec idRec="0" value="0" />
+			<rec idRec="1" value="0" />
+			<rec idRec="2" value="0" />
+			<rec idRec="3" value="0" />
+			<rec idRec="4" value="0" />
+			<rec idRec="5" value="190" />
+			<rec idRec="7" value="0" />
+			<rec idRec="8" value="0" />
+			<rec idRec="9" value="0" />
+		</comunication>
+		<energy>
+			<processorId id="0" value="11554.7" />
+			<processorId id="1" value="11554.7" />
+			<processorId id="2" value="3936.85" />
+			<processorId id="3" value="3936.85" />
+			<processorId id="4" value="0.000421517" />
+		</energy>
+		<load>
+			<processorId id="0" value="0.161812" />
+			<processorId id="1" value="0.161812" />
+			<processorId id="2" value="0.0693614" />
+			<processorId id="3" value="0.0693614" />
+		</load>
+	</process>
+	<process>
+		<name>fir16_shifting</name>
+		<id>7</id>
+		<priority>70</priority>
+		<criticality>1</criticality>
+		<eqGate value="50" />
+		<concurrency>
+			<processId id="0" value="0" />
+			<processId id="1" value="0" />
+			<processId id="2" value="0" />
+			<processId id="3" value="0" />
+			<processId id="4" value="0" />
+			<processId id="5" value="0" />
+			<processId id="6" value="0" />
+			<processId id="8" value="0.00972718" />
+			<processId id="9" value="0.00972718" />
+		</concurrency>
+		<comunication>
+			<rec idRec="0" value="0" />
+			<rec idRec="1" value="0" />
+			<rec idRec="2" value="0" />
+			<rec idRec="3" value="0" />
+			<rec idRec="4" value="0" />
+			<rec idRec="5" value="1280" />
+			<rec idRec="6" value="0" />
+			<rec idRec="8" value="0" />
+			<rec idRec="9" value="0" />
+		</comunication>
+		<energy>
+			<processorId id="0" value="7080.96" />
+			<processorId id="1" value="7080.96" />
+			<processorId id="3" value="2412.63" />
+			<processorId id="2" value="2412.63" />
+		</energy>
+		<load>
+			<processorId id="0" value="0.0991623" />
+			<processorId id="1" value="0.0991623" />
+			<processorId id="2" value="0.0425064" />
+			<processorId id="3" value="0.0425064" />
+		</load>
+	</process>
+	<process>
+		<name>gcd_main</name>
+		<id>8</id>
+		<priority>70</priority>
+		<criticality>2</criticality>
+		<eqGate value="50" />
+		<concurrency>
+			<processId id="0" value="0" />
+			<processId id="1" value="0" />
+			<processId id="2" value="0" />
+			<processId id="3" value="0" />
+			<processId id="4" value="0" />
+			<processId id="5" value="0" />
+			<processId id="6" value="0" />
+			<processId id="7" value="0" />
+			<processId id="9" value="0.0479723" />
+		</concurrency>
+		<comunication>
+			<rec idRec="0" value="0" />
+			<rec idRec="1" value="80" />
+			<rec idRec="2" value="0" />
+			<rec idRec="3" value="0" />
+			<rec idRec="4" value="0" />
+			<rec idRec="5" value="0" />
+			<rec idRec="6" value="0" />
+			<rec idRec="7" value="0" />
+			<rec idRec="9" value="160" />
+		</comunication>
+		<energy>
+			<processorId id="0" value="1006.56" />
+			<processorId id="1" value="1006.56" />
+			<processorId id="3" value="342.96" />
+			<processorId id="2" value="342.96" />
+		</energy>
+		<load>
+			<processorId id="0" value="0.0140961" />
+			<processorId id="1" value="0.0140961" />
+			<processorId id="2" value="0.00604237" />
+			<processorId id="3" value="0.00604237" />
+		</load>
+	</process>
+	<process>
+		<name>gcd_evaluation</name>
+		<id>9</id>
+		<priority>70</priority>
+		<criticality>3</criticality>
+		<eqGate value="5" />
+		<concurrency>
+			<processId id="0" value="0" />
+			<processId id="1" value="0" />
+			<processId id="2" value="0" />
+			<processId id="3" value="0" />
+			<processId id="4" value="0" />
+			<processId id="5" value="0" />
+			<processId id="6" value="0" />
+			<processId id="7" value="0" />
+			<processId id="8" value="0" />
+		</concurrency>
+		<comunication>
+			<rec idRec="0" value="0" />
+			<rec idRec="1" value="0" />
+			<rec idRec="2" value="0" />
+			<rec idRec="3" value="0" />
+			<rec idRec="4" value="0" />
+			<rec idRec="5" value="0" />
+			<rec idRec="6" value="0" />
+			<rec idRec="7" value="0" />
+			<rec idRec="8" value="80" />
+		</comunication>
+		<energy>
+			<processorId id="0" value="3026.67" />
+			<processorId id="1" value="3026.67" />
+			<processorId id="3" value="1031.26" />
+			<processorId id="2" value="1031.26" />
+		</energy>
+		<load>
+			<processorId id="0" value="0.0423863" />
+			<processorId id="1" value="0.0423863" />
+			<processorId id="2" value="0.0181691" />
+			<processorId id="3" value="0.0181691" />
+		</load>
+	</process>
+</instancesPS>
+<instancesLL>
+	<logical_link>
+		<name>fir8e_parameters_channel_1</name>
+		<id>0</id>
+		<w_id>2</w_id>
+		<r_id>3</r_id>
+		<width>163</width>
+		<concurrency>
+			<channelId id="1" value="0" />
+			<channelId id="2" value="0.734139" />
+			<channelId id="3" value="0.0941719" />
+			<channelId id="4" value="0.862065" />
+			<channelId id="5" value="0.0126817" />
+			<channelId id="6" value="0.769857" />
+			<channelId id="7" value="0.0383724" />
+			<channelId id="8" value="0.68263" />
+			<channelId id="9" value="0.0130908" />
+			<channelId id="10" value="0.807765" />
+			<channelId id="11" value="0.0208453" />
+			<channelId id="12" value="0.554659" />
+			<channelId id="13" value="0.534168" />
+			<channelId id="14" value="0.874747" />
+		</concurrency>
+	</logical_link>
+	<logical_link>
+		<name>fir8e_results_channel_1</name>
+		<id>1</id>
+		<w_id>3</w_id>
+		<r_id>2</r_id>
+		<width>19</width>
+		<concurrency>
+			<channelId id="0" value="0" />
+			<channelId id="2" value="0.0684812" />
+			<channelId id="3" value="0" />
+			<channelId id="4" value="0.0517086" />
+			<channelId id="5" value="0.0166908" />
+			<channelId id="6" value="0.0684812" />
+			<channelId id="7" value="0" />
+			<channelId id="8" value="0.0684812" />
+			<channelId id="9" value="0" />
+			<channelId id="10" value="0.0684812" />
+			<channelId id="11" value="0" />
+			<channelId id="12" value="0" />
+			<channelId id="13" value="0" />
+			<channelId id="14" value="0.0684812" />
+		</concurrency>
+	</logical_link>
+	<logical_link>
+		<name>fir8s_parameters_channel</name>
+		<id>2</id>
+		<w_id>2</w_id>
+		<r_id>4</r_id>
+		<width>72</width>
+		<concurrency>
+			<channelId id="0" value="0" />
+			<channelId id="1" value="0" />
+			<channelId id="3" value="0" />
+			<channelId id="4" value="0.815874" />
+			<channelId id="5" value="0.040336" />
+			<channelId id="6" value="0.829338" />
+			<channelId id="7" value="0.0106363" />
+			<channelId id="8" value="0.665448" />
+			<channelId id="9" value="0.0130908" />
+			<channelId id="10" value="0.790584" />
+			<channelId id="11" value="0.0208453" />
+			<channelId id="12" value="0.553386" />
+			<channelId id="13" value="0.534168" />
+			<channelId id="14" value="0.856292" />
+		</concurrency>
+	</logical_link>
+	<logical_link>
+		<name>fir8s_results_channel</name>
+		<id>3</id>
+		<w_id>4</w_id>
+		<r_id>2</r_id>
+		<width>64</width>
+		<concurrency>
+			<channelId id="0" value="0" />
+			<channelId id="1" value="0" />
+			<channelId id="2" value="0" />
+			<channelId id="4" value="0.0941719" />
+			<channelId id="5" value="0" />
+			<channelId id="6" value="0.0305179" />
+			<channelId id="7" value="0.0147271" />
+			<channelId id="8" value="0.0941719" />
+			<channelId id="9" value="0" />
+			<channelId id="10" value="0.0941719" />
+			<channelId id="11" value="0" />
+			<channelId id="12" value="0" />
+			<channelId id="13" value="0" />
+			<channelId id="14" value="0.0941719" />
+		</concurrency>
+	</logical_link>
+	<logical_link>
+		<name>fir16e_parameters_channel</name>
+		<id>4</id>
+		<w_id>5</w_id>
+		<r_id>6</r_id>
+		<width>299</width>
+		<concurrency>
+			<channelId id="0" value="0" />
+			<channelId id="1" value="0" />
+			<channelId id="2" value="0" />
+			<channelId id="3" value="0" />
+			<channelId id="5" value="0" />
+			<channelId id="6" value="0.851592" />
+			<channelId id="7" value="0.0383724" />
+			<channelId id="8" value="0.764366" />
+			<channelId id="9" value="0.0130908" />
+			<channelId id="10" value="0.889501" />
+			<channelId id="11" value="0.0208453" />
+			<channelId id="12" value="0.555922" />
+			<channelId id="13" value="0.534168" />
+			<channelId id="14" value="0.959573" />
+		</concurrency>
+	</logical_link>
+	<logical_link>
+		<name>fir16e_results_channel</name>
+		<id>5</id>
+		<w_id>6</w_id>
+		<r_id>5</r_id>
+		<width>19</width>
+		<concurrency>
+			<channelId id="0" value="0" />
+			<channelId id="1" value="0" />
+			<channelId id="2" value="0" />
+			<channelId id="3" value="0" />
+			<channelId id="4" value="0" />
+			<channelId id="6" value="0.040336" />
+			<channelId id="7" value="0" />
+			<channelId id="8" value="0.040336" />
+			<channelId id="9" value="0" />
+			<channelId id="10" value="0.040336" />
+			<channelId id="11" value="0" />
+			<channelId id="12" value="0" />
+			<channelId id="13" value="0" />
+			<channelId id="14" value="0.040336" />
+		</concurrency>
+	</logical_link>
+	<logical_link>
+		<name>fir16s_parameters_channel</name>
+		<id>6</id>
+		<w_id>5</w_id>
+		<r_id>7</r_id>
+		<width>136</width>
+		<concurrency>
+			<channelId id="0" value="0" />
+			<channelId id="1" value="0" />
+			<channelId id="2" value="0" />
+			<channelId id="3" value="0" />
+			<channelId id="4" value="0" />
+			<channelId id="5" value="0" />
+			<channelId id="7" value="0" />
+			<channelId id="8" value="0.706521" />
+			<channelId id="9" value="0.0130908" />
+			<channelId id="10" value="0.831656" />
+			<channelId id="11" value="0.0208453" />
+			<channelId id="12" value="0.548031" />
+			<channelId id="13" value="0.532895" />
+			<channelId id="14" value="0.89201" />
+		</concurrency>
+	</logical_link>
+	<logical_link>
+		<name>fir16s_results_channel</name>
+		<id>7</id>
+		<w_id>7</w_id>
+		<r_id>5</r_id>
+		<width>128</width>
+		<concurrency>
+			<channelId id="0" value="0" />
+			<channelId id="1" value="0" />
+			<channelId id="2" value="0" />
+			<channelId id="3" value="0" />
+			<channelId id="4" value="0" />
+			<channelId id="5" value="0" />
+			<channelId id="6" value="0" />
+			<channelId id="8" value="0.0383724" />
+			<channelId id="9" value="0" />
+			<channelId id="10" value="0.0383724" />
+			<channelId id="11" value="0" />
+			<channelId id="12" value="0" />
+			<channelId id="13" value="0" />
+			<channelId id="14" value="0.0383724" />
+		</concurrency>
+	</logical_link>
+	<logical_link>
+		<name>result8_channel</name>
+		<id>8</id>
+		<w_id>2</w_id>
+		<r_id>8</r_id>
+		<width>8</width>
+		<concurrency>
+			<channelId id="0" value="0" />
+			<channelId id="1" value="0" />
+			<channelId id="2" value="0" />
+			<channelId id="3" value="0" />
+			<channelId id="4" value="0" />
+			<channelId id="5" value="0" />
+			<channelId id="6" value="0" />
+			<channelId id="7" value="0" />
+			<channelId id="9" value="0" />
+			<channelId id="10" value="0.80352" />
+			<channelId id="11" value="0" />
+			<channelId id="12" value="0.422514" />
+			<channelId id="13" value="0.422514" />
+			<channelId id="14" value="0.804784" />
+		</concurrency>
+	</logical_link>
+	<logical_link>
+		<name>result16_channel</name>
+		<id>9</id>
+		<w_id>5</w_id>
+		<r_id>8</r_id>
+		<width>8</width>
+		<concurrency>
+			<channelId id="0" value="0" />
+			<channelId id="1" value="0" />
+			<channelId id="2" value="0" />
+			<channelId id="3" value="0" />
+			<channelId id="4" value="0" />
+			<channelId id="5" value="0" />
+			<channelId id="6" value="0" />
+			<channelId id="7" value="0" />
+			<channelId id="8" value="0" />
+			<channelId id="10" value="0.0130908" />
+			<channelId id="11" value="0" />
+			<channelId id="12" value="0" />
+			<channelId id="13" value="0" />
+			<channelId id="14" value="0.0130908" />
+		</concurrency>
+	</logical_link>
+	<logical_link>
+		<name>gcde_parameters_channel</name>
+		<id>10</id>
+		<w_id>8</w_id>
+		<r_id>9</r_id>
+		<width>16</width>
+		<concurrency>
+			<channelId id="0" value="0" />
+			<channelId id="1" value="0" />
+			<channelId id="2" value="0" />
+			<channelId id="3" value="0" />
+			<channelId id="4" value="0" />
+			<channelId id="5" value="0" />
+			<channelId id="6" value="0" />
+			<channelId id="7" value="0" />
+			<channelId id="8" value="0" />
+			<channelId id="9" value="0" />
+			<channelId id="11" value="0" />
+			<channelId id="12" value="0.487677" />
+			<channelId id="13" value="0.472541" />
+			<channelId id="14" value="0.929919" />
+		</concurrency>
+	</logical_link>
+	<logical_link>
+		<name>gcde_results_channel</name>
+		<id>11</id>
+		<w_id>9</w_id>
+		<r_id>8</r_id>
+		<width>8</width>
+		<concurrency>
+			<channelId id="0" value="0" />
+			<channelId id="1" value="0" />
+			<channelId id="2" value="0" />
+			<channelId id="3" value="0" />
+			<channelId id="4" value="0" />
+			<channelId id="5" value="0" />
+			<channelId id="6" value="0" />
+			<channelId id="7" value="0" />
+			<channelId id="8" value="0" />
+			<channelId id="9" value="0" />
+			<channelId id="10" value="0" />
+			<channelId id="12" value="0.0208453" />
+			<channelId id="13" value="0.0208453" />
+			<channelId id="14" value="0.0208453" />
+		</concurrency>
+	</logical_link>
+	<logical_link>
+		<name>stim1_channel</name>
+		<id>12</id>
+		<w_id>0</w_id>
+		<r_id>2</r_id>
+		<width>8</width>
+		<concurrency>
+			<channelId id="0" value="0" />
+			<channelId id="1" value="0" />
+			<channelId id="2" value="0" />
+			<channelId id="3" value="0" />
+			<channelId id="4" value="0" />
+			<channelId id="5" value="0" />
+			<channelId id="6" value="0" />
+			<channelId id="7" value="0" />
+			<channelId id="8" value="0" />
+			<channelId id="9" value="0" />
+			<channelId id="10" value="0" />
+			<channelId id="11" value="0" />
+			<channelId id="13" value="0.534168" />
+			<channelId id="14" value="0.555922" />
+		</concurrency>
+	</logical_link>
+	<logical_link>
+		<name>stim2_channel</name>
+		<id>13</id>
+		<w_id>0</w_id>
+		<r_id>5</r_id>
+		<width>8</width>
+		<concurrency>
+			<channelId id="0" value="0" />
+			<channelId id="1" value="0" />
+			<channelId id="2" value="0" />
+			<channelId id="3" value="0" />
+			<channelId id="4" value="0" />
+			<channelId id="5" value="0" />
+			<channelId id="6" value="0" />
+			<channelId id="7" value="0" />
+			<channelId id="8" value="0" />
+			<channelId id="9" value="0" />
+			<channelId id="10" value="0" />
+			<channelId id="11" value="0" />
+			<channelId id="12" value="0" />
+			<channelId id="14" value="0.534168" />
+		</concurrency>
+	</logical_link>
+	<logical_link>
+		<name>result_channel</name>
+		<id>14</id>
+		<w_id>8</w_id>
+		<r_id>1</r_id>
+		<width>8</width>
+		<concurrency>
+			<channelId id="0" value="0" />
+			<channelId id="1" value="0" />
+			<channelId id="2" value="0" />
+			<channelId id="3" value="0" />
+			<channelId id="4" value="0" />
+			<channelId id="5" value="0" />
+			<channelId id="6" value="0" />
+			<channelId id="7" value="0" />
+			<channelId id="8" value="0" />
+			<channelId id="9" value="0" />
+			<channelId id="10" value="0" />
+			<channelId id="11" value="0" />
+			<channelId id="12" value="0" />
+			<channelId id="13" value="0" />
+		</concurrency>
+	</logical_link>
+</instancesLL>

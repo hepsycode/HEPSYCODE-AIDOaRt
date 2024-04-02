@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<mapping>
+	<allocation PSid="0">
+		<processId PSid="0" BBname="NA" value="NA" PUid="0" PTid="0" />
+	</allocation>
+	<allocation PSid="1">
+		<processId PSid="1" BBname="NA" value="NA" PUid="0" PTid="0" />
+	</allocation>
+	<allocation PSid="2">
+		<processId PSid="2" BBname="ARTIX7@200" value="4" PUid="0" PTid="0" />
+	</allocation>
+	<allocation PSid="3">
+		<processId PSid="3" BBname="ARTIX7@200" value="4" PUid="0" PTid="0" />
+	</allocation>
+	<allocation PSid="4">
+		<processId PSid="4" BBname="MPU8051@12_0" value="0" PUid="0" PTid="0" />
+	</allocation>
+	<allocation PSid="5">
+		<processId PSid="5" BBname="ARTIX7@200" value="4" PUid="0" PTid="0" />
+	</allocation>
+	<allocation PSid="6">
+		<processId PSid="6" BBname="ARTIX7@200" value="4" PUid="0" PTid="0" />
+	</allocation>
+	<allocation PSid="7">
+		<processId PSid="7" BBname="MPU8051@12_0" value="0" PUid="0" PTid="0" />
+	</allocation>
+	<allocation PSid="8">
+		<processId PSid="8" BBname="MPU8051@12_0" value="0" PUid="0" PTid="0" />
+	</allocation>
+	<allocation PSid="9">
+		<processId PSid="9" BBname="ARTIX7@200" value="4" PUid="0" PTid="0" />
+	</allocation>
+</mapping>

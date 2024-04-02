@@ -1,0 +1,587 @@
+\hypertarget{class_basic_block}{}\doxysection{Basic\+Block Class Reference}
+\label{class_basic_block}\index{BasicBlock@{BasicBlock}}
+
+
+{\ttfamily \#include $<$tl.\+h$>$}
+
+
+
+Collaboration diagram for Basic\+Block\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_basic_block__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_basic_block_ae1dead3b6fbfaaf11aa596013d9c3615}{get\+Name}} ()
+\item 
+void \mbox{\hyperlink{class_basic_block_a2be928b15c8a74a0f171f97c285791f2}{set\+Name}} (string x)
+\item 
+int \mbox{\hyperlink{class_basic_block_af7b05902e57ffd9e21fd582b3e49f29c}{get\+Id}} ()
+\item 
+void \mbox{\hyperlink{class_basic_block_a1abdc5c467f903b3bb6f51fb68283b21}{set\+Id}} (int x)
+\item 
+string \mbox{\hyperlink{class_basic_block_a42cf1d9e35e3f2ded6510a2f3f9d2c74}{get\+Type}} ()
+\item 
+void \mbox{\hyperlink{class_basic_block_ae33921bd8c15b268aba6f5b1526f893b}{set\+Type}} (string x)
+\item 
+int \mbox{\hyperlink{class_basic_block_a23d2e5aa36d0b173d7e662493dee7db0}{get\+Id\+PU}} ()
+\item 
+void \mbox{\hyperlink{class_basic_block_aae5e45d56ddfdd6c791f14fed105b544}{set\+Id\+PU}} (int x)
+\item 
+vector$<$ \mbox{\hyperlink{class_processing_unit}{Processing\+Unit}} $>$ \mbox{\hyperlink{class_basic_block_a5c247400a7e86e54f98bc5ea3a8b34d1}{get\+Processors}} ()
+\item 
+void \mbox{\hyperlink{class_basic_block_a4cbb966d0ce3b7364877cf6e46e33672}{set\+Processor}} (vector$<$ \mbox{\hyperlink{class_processing_unit}{Processing\+Unit}} $>$ pu)
+\item 
+unsigned int \mbox{\hyperlink{class_basic_block_a201f977359d366099f7e63708fc1db80}{get\+Code\+Size}} ()
+\item 
+void \mbox{\hyperlink{class_basic_block_a14bbb26476609a17b226400d2fd8ec05}{set\+Code\+Size}} (unsigned int c)
+\item 
+unsigned int \mbox{\hyperlink{class_basic_block_a2e49d14597098dee219b8b628ec332e2}{get\+Data\+Size}} ()
+\item 
+void \mbox{\hyperlink{class_basic_block_a9f71209e93288e8eb82311fe5961e2ff}{set\+Data\+Size}} (unsigned int c)
+\item 
+unsigned int \mbox{\hyperlink{class_basic_block_ab4ae1a868abfaeb6a4003a9332b357cc}{get\+EqG}} ()
+\item 
+void \mbox{\hyperlink{class_basic_block_aa3a9be4f5f76e76b91e5a3a009f95f44}{set\+EqG}} (unsigned int c)
+\item 
+float \mbox{\hyperlink{class_basic_block_aa7ce9d2bdf5d92bf86b3e1290134af93}{get\+F\+RT}} ()
+\item 
+void \mbox{\hyperlink{class_basic_block_aee9fb07de76f430ec78e48e85c3d5fd9}{set\+F\+RT}} (float x)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_basic_block_a4cad9fc9592145fea0335e694df17ebf}{name}}
+\item 
+unsigned int \mbox{\hyperlink{class_basic_block_a306c90076760a7ccd52ffab5cba5a2f5}{id}}
+\item 
+string \mbox{\hyperlink{class_basic_block_a730e1383a3247e3a456b6cea00575aed}{type}}
+\item 
+int \mbox{\hyperlink{class_basic_block_ae5d66a26435ab7c34ac15de59eafe7b3}{id\+PU}}
+\item 
+vector$<$ \mbox{\hyperlink{class_processing_unit}{Processing\+Unit}} $>$ \mbox{\hyperlink{class_basic_block_aaf3c4ccda26ba23923e66f1e77228f2c}{vpu}}
+\item 
+unsigned int \mbox{\hyperlink{class_basic_block_a298dcdfcc1736778a7262329d9204edd}{code\+Size}}
+\item 
+unsigned int \mbox{\hyperlink{class_basic_block_ab89eed26cc943dd972c686391d7bbc69}{data\+Size}}
+\item 
+unsigned int \mbox{\hyperlink{class_basic_block_a4c5622c7d3329c93c0bc39705bb19ff3}{eqG}}
+\item 
+float \mbox{\hyperlink{class_basic_block_a0cac9b02f5e385651a80c4469301a586}{F\+RT}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{tl_8h_source_l00219}{219}} of file \mbox{\hyperlink{tl_8h_source}{tl.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_basic_block_a201f977359d366099f7e63708fc1db80}\label{class_basic_block_a201f977359d366099f7e63708fc1db80}} 
+\index{BasicBlock@{BasicBlock}!getCodeSize@{getCodeSize}}
+\index{getCodeSize@{getCodeSize}!BasicBlock@{BasicBlock}}
+\doxysubsubsection{\texorpdfstring{getCodeSize()}{getCodeSize()}}
+{\footnotesize\ttfamily unsigned int Basic\+Block\+::get\+Code\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00277}{277}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00277                                     \{}
+\DoxyCodeLine{00278     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_basic_block_a298dcdfcc1736778a7262329d9204edd}{codeSize}};}
+\DoxyCodeLine{00279 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_basic_block_a2e49d14597098dee219b8b628ec332e2}\label{class_basic_block_a2e49d14597098dee219b8b628ec332e2}} 
+\index{BasicBlock@{BasicBlock}!getDataSize@{getDataSize}}
+\index{getDataSize@{getDataSize}!BasicBlock@{BasicBlock}}
+\doxysubsubsection{\texorpdfstring{getDataSize()}{getDataSize()}}
+{\footnotesize\ttfamily unsigned int Basic\+Block\+::get\+Data\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00285}{285}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00285                                     \{}
+\DoxyCodeLine{00286     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_basic_block_ab89eed26cc943dd972c686391d7bbc69}{dataSize}};}
+\DoxyCodeLine{00287 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_basic_block_ab4ae1a868abfaeb6a4003a9332b357cc}\label{class_basic_block_ab4ae1a868abfaeb6a4003a9332b357cc}} 
+\index{BasicBlock@{BasicBlock}!getEqG@{getEqG}}
+\index{getEqG@{getEqG}!BasicBlock@{BasicBlock}}
+\doxysubsubsection{\texorpdfstring{getEqG()}{getEqG()}}
+{\footnotesize\ttfamily unsigned int Basic\+Block\+::get\+EqG (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00293}{293}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00293                                \{}
+\DoxyCodeLine{00294     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_basic_block_a4c5622c7d3329c93c0bc39705bb19ff3}{eqG}};}
+\DoxyCodeLine{00295 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_basic_block_aa7ce9d2bdf5d92bf86b3e1290134af93}\label{class_basic_block_aa7ce9d2bdf5d92bf86b3e1290134af93}} 
+\index{BasicBlock@{BasicBlock}!getFRT@{getFRT}}
+\index{getFRT@{getFRT}!BasicBlock@{BasicBlock}}
+\doxysubsubsection{\texorpdfstring{getFRT()}{getFRT()}}
+{\footnotesize\ttfamily float Basic\+Block\+::get\+F\+RT (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00305}{305}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00305                          \{}
+\DoxyCodeLine{00306     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_basic_block_a0cac9b02f5e385651a80c4469301a586}{FRT}};}
+\DoxyCodeLine{00307 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_basic_block_af7b05902e57ffd9e21fd582b3e49f29c}\label{class_basic_block_af7b05902e57ffd9e21fd582b3e49f29c}} 
+\index{BasicBlock@{BasicBlock}!getId@{getId}}
+\index{getId@{getId}!BasicBlock@{BasicBlock}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily int Basic\+Block\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00229}{229}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00230 \{}
+\DoxyCodeLine{00231     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_basic_block_a306c90076760a7ccd52ffab5cba5a2f5}{id}};}
+\DoxyCodeLine{00232 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_basic_block_a23d2e5aa36d0b173d7e662493dee7db0}\label{class_basic_block_a23d2e5aa36d0b173d7e662493dee7db0}} 
+\index{BasicBlock@{BasicBlock}!getIdPU@{getIdPU}}
+\index{getIdPU@{getIdPU}!BasicBlock@{BasicBlock}}
+\doxysubsubsection{\texorpdfstring{getIdPU()}{getIdPU()}}
+{\footnotesize\ttfamily int Basic\+Block\+::get\+Id\+PU (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00250}{250}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00251 \{}
+\DoxyCodeLine{00252     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_basic_block_ae5d66a26435ab7c34ac15de59eafe7b3}{idPU}};}
+\DoxyCodeLine{00253 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_basic_block_ae1dead3b6fbfaaf11aa596013d9c3615}\label{class_basic_block_ae1dead3b6fbfaaf11aa596013d9c3615}} 
+\index{BasicBlock@{BasicBlock}!getName@{getName}}
+\index{getName@{getName}!BasicBlock@{BasicBlock}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily string Basic\+Block\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00219}{219}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00220 \{}
+\DoxyCodeLine{00221     \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_basic_block_a4cad9fc9592145fea0335e694df17ebf}{name}};}
+\DoxyCodeLine{00222 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_basic_block_a5c247400a7e86e54f98bc5ea3a8b34d1}\label{class_basic_block_a5c247400a7e86e54f98bc5ea3a8b34d1}} 
+\index{BasicBlock@{BasicBlock}!getProcessors@{getProcessors}}
+\index{getProcessors@{getProcessors}!BasicBlock@{BasicBlock}}
+\doxysubsubsection{\texorpdfstring{getProcessors()}{getProcessors()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_processing_unit}{Processing\+Unit}} $>$ Basic\+Block\+::get\+Processors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00271}{271}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00272 \{}
+\DoxyCodeLine{00273     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_basic_block_aaf3c4ccda26ba23923e66f1e77228f2c}{vpu}};}
+\DoxyCodeLine{00274 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_basic_block_a42cf1d9e35e3f2ded6510a2f3f9d2c74}\label{class_basic_block_a42cf1d9e35e3f2ded6510a2f3f9d2c74}} 
+\index{BasicBlock@{BasicBlock}!getType@{getType}}
+\index{getType@{getType}!BasicBlock@{BasicBlock}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily string Basic\+Block\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00239}{239}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00240 \{}
+\DoxyCodeLine{00241     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_basic_block_a730e1383a3247e3a456b6cea00575aed}{type}};}
+\DoxyCodeLine{00242 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_basic_block_a14bbb26476609a17b226400d2fd8ec05}\label{class_basic_block_a14bbb26476609a17b226400d2fd8ec05}} 
+\index{BasicBlock@{BasicBlock}!setCodeSize@{setCodeSize}}
+\index{setCodeSize@{setCodeSize}!BasicBlock@{BasicBlock}}
+\doxysubsubsection{\texorpdfstring{setCodeSize()}{setCodeSize()}}
+{\footnotesize\ttfamily void Basic\+Block\+::set\+Code\+Size (\begin{DoxyParamCaption}\item[{unsigned int}]{c }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00281}{281}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00281                                           \{}
+\DoxyCodeLine{00282     this-\/>\mbox{\hyperlink{class_basic_block_a298dcdfcc1736778a7262329d9204edd}{codeSize}} = c;}
+\DoxyCodeLine{00283 \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{_system_manager_8cpp_source_l00636}{System\+Manager\+::generate\+B\+B\+Instances()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_basic_block_a14bbb26476609a17b226400d2fd8ec05_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_basic_block_a9f71209e93288e8eb82311fe5961e2ff}\label{class_basic_block_a9f71209e93288e8eb82311fe5961e2ff}} 
+\index{BasicBlock@{BasicBlock}!setDataSize@{setDataSize}}
+\index{setDataSize@{setDataSize}!BasicBlock@{BasicBlock}}
+\doxysubsubsection{\texorpdfstring{setDataSize()}{setDataSize()}}
+{\footnotesize\ttfamily void Basic\+Block\+::set\+Data\+Size (\begin{DoxyParamCaption}\item[{unsigned int}]{c }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00289}{289}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00289                                           \{}
+\DoxyCodeLine{00290     this-\/>\mbox{\hyperlink{class_basic_block_ab89eed26cc943dd972c686391d7bbc69}{dataSize}} = d;}
+\DoxyCodeLine{00291 \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{_system_manager_8cpp_source_l00636}{System\+Manager\+::generate\+B\+B\+Instances()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_basic_block_a9f71209e93288e8eb82311fe5961e2ff_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_basic_block_aa3a9be4f5f76e76b91e5a3a009f95f44}\label{class_basic_block_aa3a9be4f5f76e76b91e5a3a009f95f44}} 
+\index{BasicBlock@{BasicBlock}!setEqG@{setEqG}}
+\index{setEqG@{setEqG}!BasicBlock@{BasicBlock}}
+\doxysubsubsection{\texorpdfstring{setEqG()}{setEqG()}}
+{\footnotesize\ttfamily void Basic\+Block\+::set\+EqG (\begin{DoxyParamCaption}\item[{unsigned int}]{c }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00297}{297}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00297                                      \{}
+\DoxyCodeLine{00298     this-\/>\mbox{\hyperlink{class_basic_block_a4c5622c7d3329c93c0bc39705bb19ff3}{eqG}} = e;}
+\DoxyCodeLine{00299 \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{_system_manager_8cpp_source_l00636}{System\+Manager\+::generate\+B\+B\+Instances()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_basic_block_aa3a9be4f5f76e76b91e5a3a009f95f44_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_basic_block_aee9fb07de76f430ec78e48e85c3d5fd9}\label{class_basic_block_aee9fb07de76f430ec78e48e85c3d5fd9}} 
+\index{BasicBlock@{BasicBlock}!setFRT@{setFRT}}
+\index{setFRT@{setFRT}!BasicBlock@{BasicBlock}}
+\doxysubsubsection{\texorpdfstring{setFRT()}{setFRT()}}
+{\footnotesize\ttfamily void Basic\+Block\+::set\+F\+RT (\begin{DoxyParamCaption}\item[{float}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00301}{301}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00301                                \{}
+\DoxyCodeLine{00302     \mbox{\hyperlink{class_basic_block_a0cac9b02f5e385651a80c4469301a586}{FRT}} = x;}
+\DoxyCodeLine{00303 \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{_system_manager_8cpp_source_l00636}{System\+Manager\+::generate\+B\+B\+Instances()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_basic_block_aee9fb07de76f430ec78e48e85c3d5fd9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_basic_block_a1abdc5c467f903b3bb6f51fb68283b21}\label{class_basic_block_a1abdc5c467f903b3bb6f51fb68283b21}} 
+\index{BasicBlock@{BasicBlock}!setId@{setId}}
+\index{setId@{setId}!BasicBlock@{BasicBlock}}
+\doxysubsubsection{\texorpdfstring{setId()}{setId()}}
+{\footnotesize\ttfamily void Basic\+Block\+::set\+Id (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00234}{234}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00235 \{}
+\DoxyCodeLine{00236     \textcolor{keywordtype}{id} = x;}
+\DoxyCodeLine{00237 \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{_system_manager_8cpp_source_l00636}{System\+Manager\+::generate\+B\+B\+Instances()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_basic_block_a1abdc5c467f903b3bb6f51fb68283b21_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_basic_block_aae5e45d56ddfdd6c791f14fed105b544}\label{class_basic_block_aae5e45d56ddfdd6c791f14fed105b544}} 
+\index{BasicBlock@{BasicBlock}!setIdPU@{setIdPU}}
+\index{setIdPU@{setIdPU}!BasicBlock@{BasicBlock}}
+\doxysubsubsection{\texorpdfstring{setIdPU()}{setIdPU()}}
+{\footnotesize\ttfamily void Basic\+Block\+::set\+Id\+PU (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00255}{255}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00256 \{}
+\DoxyCodeLine{00257     \mbox{\hyperlink{class_basic_block_ae5d66a26435ab7c34ac15de59eafe7b3}{idPU}} = x;}
+\DoxyCodeLine{00258 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_basic_block_a2be928b15c8a74a0f171f97c285791f2}\label{class_basic_block_a2be928b15c8a74a0f171f97c285791f2}} 
+\index{BasicBlock@{BasicBlock}!setName@{setName}}
+\index{setName@{setName}!BasicBlock@{BasicBlock}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily void Basic\+Block\+::set\+Name (\begin{DoxyParamCaption}\item[{string}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00224}{224}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00225 \{}
+\DoxyCodeLine{00226     \mbox{\hyperlink{class_basic_block_a4cad9fc9592145fea0335e694df17ebf}{name}} = x;}
+\DoxyCodeLine{00227 \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{_system_manager_8cpp_source_l00636}{System\+Manager\+::generate\+B\+B\+Instances()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_basic_block_a2be928b15c8a74a0f171f97c285791f2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_basic_block_a4cbb966d0ce3b7364877cf6e46e33672}\label{class_basic_block_a4cbb966d0ce3b7364877cf6e46e33672}} 
+\index{BasicBlock@{BasicBlock}!setProcessor@{setProcessor}}
+\index{setProcessor@{setProcessor}!BasicBlock@{BasicBlock}}
+\doxysubsubsection{\texorpdfstring{setProcessor()}{setProcessor()}}
+{\footnotesize\ttfamily void Basic\+Block\+::set\+Processor (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{class_processing_unit}{Processing\+Unit}} $>$}]{pu }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00260}{260}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00261 \{}
+\DoxyCodeLine{00262     \mbox{\hyperlink{class_basic_block_aaf3c4ccda26ba23923e66f1e77228f2c}{vpu}}= p;}
+\DoxyCodeLine{00263 \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{_system_manager_8cpp_source_l00636}{System\+Manager\+::generate\+B\+B\+Instances()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_basic_block_a4cbb966d0ce3b7364877cf6e46e33672_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_basic_block_ae33921bd8c15b268aba6f5b1526f893b}\label{class_basic_block_ae33921bd8c15b268aba6f5b1526f893b}} 
+\index{BasicBlock@{BasicBlock}!setType@{setType}}
+\index{setType@{setType}!BasicBlock@{BasicBlock}}
+\doxysubsubsection{\texorpdfstring{setType()}{setType()}}
+{\footnotesize\ttfamily void Basic\+Block\+::set\+Type (\begin{DoxyParamCaption}\item[{string}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8cpp_source_l00245}{245}} of file \mbox{\hyperlink{tl_8cpp_source}{tl.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00246 \{}
+\DoxyCodeLine{00247     \mbox{\hyperlink{class_basic_block_a730e1383a3247e3a456b6cea00575aed}{type}} = x;}
+\DoxyCodeLine{00248 \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{_system_manager_8cpp_source_l00636}{System\+Manager\+::generate\+B\+B\+Instances()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_basic_block_ae33921bd8c15b268aba6f5b1526f893b_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_basic_block_a298dcdfcc1736778a7262329d9204edd}\label{class_basic_block_a298dcdfcc1736778a7262329d9204edd}} 
+\index{BasicBlock@{BasicBlock}!codeSize@{codeSize}}
+\index{codeSize@{codeSize}!BasicBlock@{BasicBlock}}
+\doxysubsubsection{\texorpdfstring{codeSize}{codeSize}}
+{\footnotesize\ttfamily unsigned int Basic\+Block\+::code\+Size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8h_source_l00229}{229}} of file \mbox{\hyperlink{tl_8h_source}{tl.\+h}}.
+
+\mbox{\Hypertarget{class_basic_block_ab89eed26cc943dd972c686391d7bbc69}\label{class_basic_block_ab89eed26cc943dd972c686391d7bbc69}} 
+\index{BasicBlock@{BasicBlock}!dataSize@{dataSize}}
+\index{dataSize@{dataSize}!BasicBlock@{BasicBlock}}
+\doxysubsubsection{\texorpdfstring{dataSize}{dataSize}}
+{\footnotesize\ttfamily unsigned int Basic\+Block\+::data\+Size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8h_source_l00230}{230}} of file \mbox{\hyperlink{tl_8h_source}{tl.\+h}}.
+
+\mbox{\Hypertarget{class_basic_block_a4c5622c7d3329c93c0bc39705bb19ff3}\label{class_basic_block_a4c5622c7d3329c93c0bc39705bb19ff3}} 
+\index{BasicBlock@{BasicBlock}!eqG@{eqG}}
+\index{eqG@{eqG}!BasicBlock@{BasicBlock}}
+\doxysubsubsection{\texorpdfstring{eqG}{eqG}}
+{\footnotesize\ttfamily unsigned int Basic\+Block\+::eqG\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8h_source_l00231}{231}} of file \mbox{\hyperlink{tl_8h_source}{tl.\+h}}.
+
+\mbox{\Hypertarget{class_basic_block_a0cac9b02f5e385651a80c4469301a586}\label{class_basic_block_a0cac9b02f5e385651a80c4469301a586}} 
+\index{BasicBlock@{BasicBlock}!FRT@{FRT}}
+\index{FRT@{FRT}!BasicBlock@{BasicBlock}}
+\doxysubsubsection{\texorpdfstring{FRT}{FRT}}
+{\footnotesize\ttfamily float Basic\+Block\+::\+F\+RT\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8h_source_l00232}{232}} of file \mbox{\hyperlink{tl_8h_source}{tl.\+h}}.
+
+\mbox{\Hypertarget{class_basic_block_a306c90076760a7ccd52ffab5cba5a2f5}\label{class_basic_block_a306c90076760a7ccd52ffab5cba5a2f5}} 
+\index{BasicBlock@{BasicBlock}!id@{id}}
+\index{id@{id}!BasicBlock@{BasicBlock}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily unsigned int Basic\+Block\+::id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8h_source_l00223}{223}} of file \mbox{\hyperlink{tl_8h_source}{tl.\+h}}.
+
+\mbox{\Hypertarget{class_basic_block_ae5d66a26435ab7c34ac15de59eafe7b3}\label{class_basic_block_ae5d66a26435ab7c34ac15de59eafe7b3}} 
+\index{BasicBlock@{BasicBlock}!idPU@{idPU}}
+\index{idPU@{idPU}!BasicBlock@{BasicBlock}}
+\doxysubsubsection{\texorpdfstring{idPU}{idPU}}
+{\footnotesize\ttfamily int Basic\+Block\+::id\+PU\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8h_source_l00225}{225}} of file \mbox{\hyperlink{tl_8h_source}{tl.\+h}}.
+
+\mbox{\Hypertarget{class_basic_block_a4cad9fc9592145fea0335e694df17ebf}\label{class_basic_block_a4cad9fc9592145fea0335e694df17ebf}} 
+\index{BasicBlock@{BasicBlock}!name@{name}}
+\index{name@{name}!BasicBlock@{BasicBlock}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily string Basic\+Block\+::name\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8h_source_l00222}{222}} of file \mbox{\hyperlink{tl_8h_source}{tl.\+h}}.
+
+\mbox{\Hypertarget{class_basic_block_a730e1383a3247e3a456b6cea00575aed}\label{class_basic_block_a730e1383a3247e3a456b6cea00575aed}} 
+\index{BasicBlock@{BasicBlock}!type@{type}}
+\index{type@{type}!BasicBlock@{BasicBlock}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily string Basic\+Block\+::type\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8h_source_l00224}{224}} of file \mbox{\hyperlink{tl_8h_source}{tl.\+h}}.
+
+\mbox{\Hypertarget{class_basic_block_aaf3c4ccda26ba23923e66f1e77228f2c}\label{class_basic_block_aaf3c4ccda26ba23923e66f1e77228f2c}} 
+\index{BasicBlock@{BasicBlock}!vpu@{vpu}}
+\index{vpu@{vpu}!BasicBlock@{BasicBlock}}
+\doxysubsubsection{\texorpdfstring{vpu}{vpu}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{class_processing_unit}{Processing\+Unit}}$>$ Basic\+Block\+::vpu\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{tl_8h_source_l00226}{226}} of file \mbox{\hyperlink{tl_8h_source}{tl.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Hepsycode\+Design/src/\mbox{\hyperlink{tl_8h}{tl.\+h}}\item 
+Hepsycode\+Design/src/\mbox{\hyperlink{tl_8cpp}{tl.\+cpp}}\end{DoxyCompactItemize}

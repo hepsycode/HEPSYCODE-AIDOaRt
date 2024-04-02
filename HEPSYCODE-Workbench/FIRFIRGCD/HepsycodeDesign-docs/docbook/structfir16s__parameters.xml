@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structfir16s__parameters">
+<title>fir16s_parameters Struct Reference</title>
+<indexterm><primary>fir16s_parameters</primary></indexterm>
+<para>
+
+<para>Message from fir16m to fir16s. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;datatype.h&gt;</computeroutput>
+</para>
+Collaboration diagram for fir16s_parameters:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="structfir16s__parameters__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>sc_uint&lt; 8 &gt; <link linkend="_structfir16s__parameters_1ace4b801b0a54f27f7ad5f92b753a8175">shift</link> [16]</para>
+</listitem>
+            <listitem><para>sc_uint&lt; 8 &gt; <link linkend="_structfir16s__parameters_1a364563d85914eb0eba02828d309d994b">sample_tmp</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Message from fir16m to fir16s. </para>
+<para>
+Definition at line 159 of file datatype.h.</para>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_structfir16s__parameters_1a364563d85914eb0eba02828d309d994b"/>    <section>
+    <title>sample_tmp</title>
+<indexterm><primary>sample_tmp</primary><secondary>fir16s_parameters</secondary></indexterm>
+<indexterm><primary>fir16s_parameters</primary><secondary>sample_tmp</secondary></indexterm>
+<para><computeroutput>sc_uint&lt;8&gt; fir16s_parameters::sample_tmp</computeroutput></para><para>
+Definition at line 162 of file datatype.h.</para>
+    </section><anchor xml:id="_structfir16s__parameters_1ace4b801b0a54f27f7ad5f92b753a8175"/>    <section>
+    <title>shift</title>
+<indexterm><primary>shift</primary><secondary>fir16s_parameters</secondary></indexterm>
+<indexterm><primary>fir16s_parameters</primary><secondary>shift</secondary></indexterm>
+<para><computeroutput>sc_uint&lt;8&gt; fir16s_parameters::shift[16]</computeroutput></para><para>
+Definition at line 161 of file datatype.h.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+HepsycodeDesign/src/<link linkend="_datatype_8h">datatype.h</link></section>
+</section>

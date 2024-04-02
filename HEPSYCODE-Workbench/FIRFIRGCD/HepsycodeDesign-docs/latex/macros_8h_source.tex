@@ -1,0 +1,162 @@
+\hypertarget{macros_8h_source}{}\doxysection{macros.\+h}
+\label{macros_8h_source}\index{HepsycodeDesign/src/macros.h@{HepsycodeDesign/src/macros.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * University of L'Aquila -\/ HEPSYCODE Source Code License                       *}}
+\DoxyCodeLine{00003 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00004 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00005 \textcolor{comment}{ * (c) 2018-\/2019 Centre of Excellence DEWS All rights reserved                  *}}
+\DoxyCodeLine{00006 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00007 \textcolor{comment}{ * <one line to give the program's name and a brief idea of what it does.>      *}}
+\DoxyCodeLine{00008 \textcolor{comment}{ * Copyright (C) 2022  Vittoriano Muttillo, Luigi Pomante                       *                                    *}}
+\DoxyCodeLine{00009 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00010 \textcolor{comment}{ * This program is free software: you can redistribute it and/or modify         *}}
+\DoxyCodeLine{00011 \textcolor{comment}{ * it under the terms of the GNU General Public License as published by         *}}
+\DoxyCodeLine{00012 \textcolor{comment}{ * the Free Software Foundation, either version 3 of the License, or            *}}
+\DoxyCodeLine{00013 \textcolor{comment}{ * (at your option) any later version.                                          *}}
+\DoxyCodeLine{00014 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00015 \textcolor{comment}{ * This program is distributed in the hope that it will be useful,              *}}
+\DoxyCodeLine{00016 \textcolor{comment}{ * but WITHOUT ANY WARRANTY; without even the implied warranty of               *}}
+\DoxyCodeLine{00017 \textcolor{comment}{ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the                *}}
+\DoxyCodeLine{00018 \textcolor{comment}{ * GNU General Public License for more details.                                 *}}
+\DoxyCodeLine{00019 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00020 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00021 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00022 \textcolor{comment}{ * Created on: 09/May/2022                                                      *}}
+\DoxyCodeLine{00023 \textcolor{comment}{ * Authors: Vittoriano Muttillo, Luigi Pomante                                  *}}
+\DoxyCodeLine{00024 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00025 \textcolor{comment}{ * email: vittoriano.muttillo@guest.univaq.it                                   *}}
+\DoxyCodeLine{00026 \textcolor{comment}{ *        luigi.pomante@univaq.it                                               *}}
+\DoxyCodeLine{00027 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00028 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00029 \textcolor{comment}{ * This code has been developed from an HEPSYCODE model used as demonstrator by *}}
+\DoxyCodeLine{00030 \textcolor{comment}{ * University of L'Aquila.                                                      *}}
+\DoxyCodeLine{00031 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00032 \textcolor{comment}{ * The code is used as a working example in the 'Embedded Systems' course of    *}}
+\DoxyCodeLine{00033 \textcolor{comment}{ * the Master in Conputer Science Engineering offered by the                    *}}
+\DoxyCodeLine{00034 \textcolor{comment}{ * University of L'Aquila                                                       *}}
+\DoxyCodeLine{00035 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{00037 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00038 \textcolor{comment}{ * macros : FirFirGCD macros.}}
+\DoxyCodeLine{00039 \textcolor{comment}{ *}}
+\DoxyCodeLine{00040 \textcolor{comment}{ * Macros: Macros file}}
+\DoxyCodeLine{00041 \textcolor{comment}{ *}}
+\DoxyCodeLine{00042 \textcolor{comment}{********************************************************************************/}}
+\DoxyCodeLine{00043  \textcolor{comment}{// start firfirgcd\_macros\_group}}
+\DoxyCodeLine{00058 }
+\DoxyCodeLine{00059 \textcolor{preprocessor}{\#ifndef \_\_MACROS\_\_}}
+\DoxyCodeLine{00060 \textcolor{preprocessor}{\#define \_\_MACROS\_\_}}
+\DoxyCodeLine{00061 }
+\DoxyCodeLine{00062 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00063 \textcolor{comment}{ ***                                Includes                                  ***}}
+\DoxyCodeLine{00064 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00065 }
+\DoxyCodeLine{00066 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00067 \textcolor{comment}{ ***                                Macros                                    ***}}
+\DoxyCodeLine{00068 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00069 }
+\DoxyCodeLine{00071 }
+\DoxyCodeLine{00072 \textcolor{comment}{// Macro S for managing the inyercation with the scheduler and the increase of simulated time and estimated energy}}
+\DoxyCodeLine{00073 }
+\DoxyCodeLine{00074 \textcolor{preprocessor}{\#if defined(\_TIMING\_ENERGY\_)}}
+\DoxyCodeLine{00075 }
+\DoxyCodeLine{00076 \textcolor{preprocessor}{    \#define HEPSY\_S(X)                                                              \(\backslash\)}}
+\DoxyCodeLine{00077 \textcolor{preprocessor}{        pSystemManager-\/>increaseSimulatedTime(X);                                           \(\backslash\)}}
+\DoxyCodeLine{00078 \textcolor{preprocessor}{        pSystemManager-\/>increaseEstimatedEnergy(X);                                     \(\backslash\)}}
+\DoxyCodeLine{00079 \textcolor{preprocessor}{        if(!pSystemManager-\/>checkSPP(X)) wait(pSchedulingManager-\/>schedule[X]); \(\backslash\)}}
+\DoxyCodeLine{00080 \textcolor{preprocessor}{        wait(pSystemManager-\/>updateSimulatedTime(X));                                       \(\backslash\)}}
+\DoxyCodeLine{00081 \textcolor{preprocessor}{        if(!pSystemManager-\/>checkSPP(X)) pSchedulingManager-\/>release[X].notify(SC\_ZERO\_TIME);}}
+\DoxyCodeLine{00082 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00083 }
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00084}\mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{00084}} \textcolor{preprocessor}{    \#define HEPSY\_S(X)                                                              \(\backslash\)}}
+\DoxyCodeLine{00085 \textcolor{preprocessor}{        wait(pSchedulingManager-\/>schedule[X]);                  \(\backslash\)}}
+\DoxyCodeLine{00086 \textcolor{preprocessor}{        pSchedulingManager-\/>release[X].notify(SC\_ZERO\_TIME);}}
+\DoxyCodeLine{00087 }
+\DoxyCodeLine{00088 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00089 }
+\DoxyCodeLine{00090 \textcolor{comment}{// Macro P for Profiling (to be used at the end of while(1))}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00091}\mbox{\hyperlink{group__firfirgcd__macros__group_ga652f3387e2319f751a6459f9db47cc3a}{00091}} \textcolor{preprocessor}{\#define HEPSY\_P(X) pSystemManager-\/>PS\_Profiling(X);}}
+\DoxyCodeLine{00092 }
+\DoxyCodeLine{00093 \textcolor{comment}{// Macro HEPSY\_SCHED\_CS for managing the Overhead introduced by the scheduler ContextSwitch activities and the energy for CS}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00094}\mbox{\hyperlink{group__firfirgcd__macros__group_gab8ed6dfd8e9d61861b9aff28d6b7300f}{00094}} \textcolor{preprocessor}{\#define HEPSY\_SCHED\_CS(X, i)                                    \(\backslash\)}}
+\DoxyCodeLine{00095 \textcolor{preprocessor}{        wait(pSystemManager-\/>VBB[X].getProcessors()[0].getOverheadCS()*i);               \(\backslash\)}}
+\DoxyCodeLine{00096 \textcolor{preprocessor}{        this-\/>sched\_oh[X] += pSystemManager-\/>VBB[X].getProcessors()[0].getOverheadCS()*i;      \(\backslash\)}}
+\DoxyCodeLine{00097 \textcolor{preprocessor}{        this-\/>sched\_en[X]+= ((pSystemManager-\/>VBB[X].getProcessors()[0].getOverheadCS().to\_seconds() * pSystemManager-\/>VBB[X].getProcessors()[0].getPower())*1000000);}}
+\DoxyCodeLine{00098 }
+\DoxyCodeLine{00099 \textcolor{comment}{// Macro PRE\_WAIT to support the use of explicit wait (for ALT or timers) in the model}}
+\DoxyCodeLine{00100 \textcolor{comment}{// Since we are going to call a wait (without involving channels) we need to explicitly change the process status}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00101}\mbox{\hyperlink{group__firfirgcd__macros__group_ga64988c094471851711bcbbb5e1298616}{00101}} \textcolor{preprocessor}{\#define PRE\_WAIT(X)                                 \(\backslash\)}}
+\DoxyCodeLine{00102 \textcolor{preprocessor}{    pSchedulingManager-\/>process\_state[X]=waiting;   \(\backslash\)}}
+\DoxyCodeLine{00103 \textcolor{preprocessor}{    HEPSY\_TRACE\_PS\_STATE(X)}}
+\DoxyCodeLine{00104 }
+\DoxyCodeLine{00105 \textcolor{comment}{// Macro POST\_WAIT to support the use of explicit wait (for ALT or timers) in the model}}
+\DoxyCodeLine{00106 \textcolor{comment}{// Since we call a wait (without involving channels) we need to explicitly check BB mode}}
+\DoxyCodeLine{00107 \textcolor{comment}{// Since we call a wait (without involving channels) we need to explicitly change the process status}}
+\DoxyCodeLine{00108 \textcolor{comment}{// We nee also to avoid the block of schedulers if some changes in the processes state happened}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00109}\mbox{\hyperlink{group__firfirgcd__macros__group_ga521b4282fb564e25bc56196f1926ce30}{00109}} \textcolor{preprocessor}{\#define POST\_WAIT(X)                                                                                \(\backslash\)}}
+\DoxyCodeLine{00110 \textcolor{preprocessor}{    if (pSchedulingManager-\/>BB\_mode[pSystemManager-\/>allocationPS\_BB[X]]==suspended)                 \(\backslash\)}}
+\DoxyCodeLine{00111 \textcolor{preprocessor}{    \{                                                                                               \(\backslash\)}}
+\DoxyCodeLine{00112 \textcolor{preprocessor}{        if (pSystemManager-\/>checkSPP(X)==true)                                                      \(\backslash\)}}
+\DoxyCodeLine{00113 \textcolor{preprocessor}{        \{                                                                                           \(\backslash\)}}
+\DoxyCodeLine{00114 \textcolor{preprocessor}{            pSchedulingManager-\/>BB\_mode[pSystemManager-\/>allocationPS\_BB[X]]=active;                 \(\backslash\)}}
+\DoxyCodeLine{00115 \textcolor{preprocessor}{            HEPSY\_TRACE\_BB\_STATE(X)                                                                             \(\backslash\)}}
+\DoxyCodeLine{00116 \textcolor{preprocessor}{        \}                                                                                           \(\backslash\)}}
+\DoxyCodeLine{00117 \textcolor{preprocessor}{        else pSchedulingManager-\/>activate[pSystemManager-\/>allocationPS\_BB[X]].notify(SC\_ZERO\_TIME); \(\backslash\)}}
+\DoxyCodeLine{00118 \textcolor{preprocessor}{    \}                                                                                               \(\backslash\)}}
+\DoxyCodeLine{00119 \textcolor{preprocessor}{                                                                                                    \(\backslash\)}}
+\DoxyCodeLine{00120 \textcolor{preprocessor}{if (pSystemManager-\/>checkSPP(X)==true) pSchedulingManager-\/>process\_state[X]=running;                \(\backslash\)}}
+\DoxyCodeLine{00121 \textcolor{preprocessor}{    else pSchedulingManager-\/>process\_state[X]=ready;                                                \(\backslash\)}}
+\DoxyCodeLine{00122 \textcolor{preprocessor}{    HEPSY\_TRACE\_PS\_STATE(X)                                                                                     \(\backslash\)}}
+\DoxyCodeLine{00123 \textcolor{preprocessor}{                                                                                                    \(\backslash\)}}
+\DoxyCodeLine{00124 \textcolor{preprocessor}{if (pSystemManager-\/>checkSPP(X)==false)                                                             \(\backslash\)}}
+\DoxyCodeLine{00125 \textcolor{preprocessor}{    pSchedulingManager-\/>process\_status\_changed[pSystemManager-\/>allocationPS\_BB[X]]=true;}}
+\DoxyCodeLine{00126 }
+\DoxyCodeLine{00127 \textcolor{comment}{// Macro S for managing the increase of simulated time while also interacting with the scheduler}}
+\DoxyCodeLine{00128 \textcolor{comment}{// in case of explicit wait (timers)}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00129}\mbox{\hyperlink{group__firfirgcd__macros__group_gaa2252b3bddc89494975397ffc18b09f5}{00129}} \textcolor{preprocessor}{\#define HEPSY\_S\_TIMER(X,Y)                                                                      \(\backslash\)}}
+\DoxyCodeLine{00130 \textcolor{preprocessor}{        pSystemManager-\/>increaseTimer(X,Y);                                                     \(\backslash\)}}
+\DoxyCodeLine{00131 \textcolor{preprocessor}{        if(!pSystemManager-\/>checkSPP(X)) wait(pSchedulingManager-\/>schedule[X]);                 \(\backslash\)}}
+\DoxyCodeLine{00132 \textcolor{preprocessor}{        PRE\_WAIT(X)                                                                             \(\backslash\)}}
+\DoxyCodeLine{00133 \textcolor{preprocessor}{        wait(Y);                                                                                \(\backslash\)}}
+\DoxyCodeLine{00134 \textcolor{preprocessor}{        POST\_WAIT(X)                                                                            \(\backslash\)}}
+\DoxyCodeLine{00135 \textcolor{preprocessor}{        if(!pSystemManager-\/>checkSPP(X)) pSchedulingManager-\/>release[X].notify(SC\_ZERO\_TIME);}}
+\DoxyCodeLine{00136 }
+\DoxyCodeLine{00138 }
+\DoxyCodeLine{00139 \textcolor{comment}{// Macro for tracing of processes states}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00140}\mbox{\hyperlink{group__firfirgcd__macros__group_gaf1fe2324408cd29c1e2dcd55f2e4a9c1}{00140}} \textcolor{preprocessor}{\#define HEPSY\_TRACE\_PS\_STATE(X)                                                             \(\backslash\)}}
+\DoxyCodeLine{00141 \textcolor{preprocessor}{        pSchedulingManager-\/>LOG << "Execution Time;" << sc\_time\_stamp().to\_seconds() << "; Energy;" << pSystemManager-\/>VPS[X].getEnergy() << "; Process;" << X << "; State;" << pSchedulingManager-\/>process\_state[X] << endl;}}
+\DoxyCodeLine{00142 }
+\DoxyCodeLine{00143 \textcolor{comment}{// The same but used inside the scheduler}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00144}\mbox{\hyperlink{group__firfirgcd__macros__group_gadc2d4bfbe106f792246792d01d66d63c}{00144}} \textcolor{preprocessor}{\#define HEPSY\_TRACE\_PS\_STATE\_THIS(X)                                                                \(\backslash\)}}
+\DoxyCodeLine{00145 \textcolor{preprocessor}{        this-\/>LOG << "Execution Time;" << sc\_time\_stamp().to\_seconds() << "; Energy;" << pSystemManager-\/>VPS[X].getEnergy() << "; Process;" << X << "; State;" << this-\/>process\_state[X] << endl;}}
+\DoxyCodeLine{00146 }
+\DoxyCodeLine{00147 \textcolor{comment}{// Macro for tracing of channels states}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00148}\mbox{\hyperlink{group__firfirgcd__macros__group_ga139185aa9c10392aada97618a69ee2cd}{00148}} \textcolor{preprocessor}{\#define HEPSY\_TRACE\_CH\_STATE(X)                                                             \(\backslash\)}}
+\DoxyCodeLine{00149 \textcolor{preprocessor}{        pSchedulingManager-\/>LOG << "Execution Time;" << sc\_time\_stamp().to\_seconds() << "; Energy;" << pSystemManager-\/>VCH[X].working\_energy << "; Channel;" << X << "; State;" << pSchedulingManager-\/>channel\_state[X] << endl;}}
+\DoxyCodeLine{00150 }
+\DoxyCodeLine{00151 \textcolor{comment}{// The same but used inside the scheduler}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00152}\mbox{\hyperlink{group__firfirgcd__macros__group_ga24b6f3a385f702b3a63e0811a0f22e75}{00152}} \textcolor{preprocessor}{\#define HEPSY\_TRACE\_CH\_STATE\_THIS(X)                                                                \(\backslash\)}}
+\DoxyCodeLine{00153 \textcolor{preprocessor}{        this-\/>LOG << "Execution Time;" << sc\_time\_stamp().to\_seconds() << "; Energy;" << pSystemManager-\/>VCH[X].working\_energy << "; Channel;" << X << "; State;" << this-\/>channel\_state[X] << endl;}}
+\DoxyCodeLine{00154 }
+\DoxyCodeLine{00155 \textcolor{comment}{// Macro for tracing of BB states}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00156}\mbox{\hyperlink{group__firfirgcd__macros__group_ga0f83efd33ffbe62c58c798abb824fa94}{00156}} \textcolor{preprocessor}{\#define HEPSY\_TRACE\_BB\_STATE(X)                                                             \(\backslash\)}}
+\DoxyCodeLine{00157 \textcolor{preprocessor}{        pSchedulingManager-\/>LOG << "Execution Time;" << sc\_time\_stamp().to\_seconds() << "; Energy;" << 0 << "; BB;" << X << "; Mode;" << pSchedulingManager-\/>BB\_mode[X] << endl;}}
+\DoxyCodeLine{00158 }
+\DoxyCodeLine{00159 \textcolor{comment}{// The same but used inside the scheduler}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00160}\mbox{\hyperlink{group__firfirgcd__macros__group_ga0782cab9383550027672da286d54c931}{00160}} \textcolor{preprocessor}{\#define HEPSY\_TRACE\_BB\_STATE\_THIS(X)                                                                \(\backslash\)}}
+\DoxyCodeLine{00161 \textcolor{preprocessor}{        this-\/>LOG << "Execution Time;" << sc\_time\_stamp().to\_seconds() << "; Energy;" << 0 << "; BB;" << X << "; Mode;" << this-\/>BB\_mode[X] << endl;}}
+\DoxyCodeLine{00162 }
+\DoxyCodeLine{00163 \textcolor{comment}{// Macro for tracing of schedulers states}}
+\DoxyCodeLine{\Hypertarget{macros_8h_source_l00164}\mbox{\hyperlink{group__firfirgcd__macros__group_ga37921dae893594f3710d892f471de3cb}{00164}} \textcolor{preprocessor}{\#define HEPSY\_TRACE\_SCHED\_STATE(X)                                                              \(\backslash\)}}
+\DoxyCodeLine{00165 \textcolor{preprocessor}{        this-\/>LOG << "Execution Time;" << sc\_time\_stamp().to\_seconds() << "; Energy;" << this-\/>sched\_en[X] << "; Scheduler;" << X << "; State;" << this-\/>scheduler\_state[X] << endl;}}
+\DoxyCodeLine{00166  \textcolor{comment}{// end of firfirgcd\_macros\_group}}
+\DoxyCodeLine{00168 }
+\DoxyCodeLine{00169 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00170 }
+\DoxyCodeLine{00171 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00172 \textcolor{comment}{ ***                                  EOF                                     ***}}
+\DoxyCodeLine{00173 \textcolor{comment}{ ********************************************************************************/}}
+
+\end{DoxyCode}

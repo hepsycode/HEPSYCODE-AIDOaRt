@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group__firfirgcd__mainsystem__group">
+<title>FirFirGCD Mainsystem.</title>
+<indexterm><primary>FirFirGCD Mainsystem.</primary></indexterm>
+<para>
+
+<para>Mainsystem Implementation. </para>
+ 
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group__firfirgcd__mainsystem__group_1ga7ea2a25adbd29a5e326b5236d331bb22">SC_MODULE</link> (mainsystem)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Mainsystem Implementation. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>V. Muttillo, L. Pomante </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>Apr. 2022 </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_group__firfirgcd__mainsystem__group_1ga7ea2a25adbd29a5e326b5236d331bb22"/>    <section>
+    <title>SC_MODULE()</title>
+<indexterm><primary>SC_MODULE</primary><secondary>FirFirGCD Mainsystem.</secondary></indexterm>
+<indexterm><primary>FirFirGCD Mainsystem.</primary><secondary>SC_MODULE</secondary></indexterm>
+<para><computeroutput>SC_MODULE (mainsystem )</computeroutput></para><para>
+Definition at line 80 of file mainsystem.h.</para>
+<programlisting>81 {
+82 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Ports&#32;for&#32;testbench&#32;connections</emphasis>
+83 &#32;&#32;&#32;&#32;sc_port&lt;&#32;sc_csp_channel_in_if&lt;&#32;sc_uint&lt;8&gt;&#32;&gt;&#32;&gt;&#32;stim1_channel_port;
+84 &#32;&#32;&#32;&#32;sc_port&lt;&#32;sc_csp_channel_in_if&lt;&#32;sc_uint&lt;8&gt;&#32;&gt;&#32;&gt;&#32;stim2_channel_port;
+85 &#32;&#32;&#32;&#32;sc_port&lt;&#32;sc_csp_channel_out_if&lt;&#32;sc_uint&lt;8&gt;&#32;&gt;&#32;&gt;&#32;result_channel_port;
+86 
+87 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;PROCESSES</emphasis>
+88 
+89 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;fir8_main();
+90 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;fir8_evaluation();
+91 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;fir8_shifting();
+92 
+93 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;fir16_main();
+94 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;fir16_evaluation();
+95 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;fir16_shifting();
+96 
+97 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Process</emphasis>
+98 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;gcd_main();
+99 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;gcd_evaluation();
+100 
+101 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;CHANNELS</emphasis>
+102 
+103 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;fir8</emphasis>
+104 &#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel">sc_csp_channel&lt; fir8e_parameters &gt;</link>&#32;*fir8e_parameters_channel;
+105 &#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel">sc_csp_channel&lt; fir8e_results &gt;</link>&#32;*fir8e_results_channel;
+106 &#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel">sc_csp_channel&lt; fir8s_parameters &gt;</link>&#32;*fir8s_parameters_channel;
+107 &#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel">sc_csp_channel&lt; fir8s_results &gt;</link>&#32;*fir8s_results_channel;
+108 
+109 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;fir16</emphasis>
+110 &#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel">sc_csp_channel&lt; fir16e_parameters &gt;</link>&#32;*fir16e_parameters_channel;
+111 &#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel">sc_csp_channel&lt; fir16e_results &gt;</link>&#32;*fir16e_results_channel;
+112 &#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel">sc_csp_channel&lt; fir16s_parameters &gt;</link>&#32;*fir16s_parameters_channel;
+113 &#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel">sc_csp_channel&lt; fir16s_results &gt;</link>&#32;*fir16s_results_channel;
+114 
+115 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;gcd</emphasis>
+116 &#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel">sc_csp_channel&lt; gcde_parameters &gt;</link>&#32;*gcde_parameters_channel;
+117 &#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel">sc_csp_channel&lt; gcde_results &gt;</link>&#32;*gcde_results_channel;
+118 
+119 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Inter-process&#32;connections</emphasis>
+120 &#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel">sc_csp_channel&lt; sc_uint&lt;8&gt;</link>&#32;&gt;&#32;*results8_channel;
+121 &#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel">sc_csp_channel&lt; sc_uint&lt;8&gt;</link>&#32;&gt;&#32;&#32;&#32;*results16_channel;
+122 
+123 &#32;&#32;&#32;&#32;SC_CTOR(mainsystem)
+124 &#32;&#32;&#32;&#32;{
+125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;fir8e_parameters_channel=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_classsc__csp__channel">sc_csp_channel&lt; fir8e_parameters &gt;</link>&#32;(0);
+126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;fir8e_results_channel=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_classsc__csp__channel">sc_csp_channel&lt; fir8e_results &gt;</link>&#32;(1);
+127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;fir8s_parameters_channel=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_classsc__csp__channel">sc_csp_channel&lt; fir8s_parameters &gt;</link>&#32;(2);
+128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;fir8s_results_channel=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_classsc__csp__channel">sc_csp_channel&lt; fir8s_results &gt;</link>&#32;(3);
+129 
+130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;fir16e_parameters_channel=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_classsc__csp__channel">sc_csp_channel&lt; fir16e_parameters &gt;</link>&#32;(4);
+131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;fir16e_results_channel=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_classsc__csp__channel">sc_csp_channel&lt; fir16e_results &gt;</link>&#32;(5);
+132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;fir16s_parameters_channel=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_classsc__csp__channel">sc_csp_channel&lt; fir16s_parameters &gt;</link>&#32;(6);
+133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;fir16s_results_channel=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_classsc__csp__channel">sc_csp_channel&lt; fir16s_results &gt;</link>&#32;(7);
+134 
+135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;gcde_parameters_channel&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_classsc__csp__channel">sc_csp_channel&lt; gcde_parameters &gt;</link>&#32;(10);
+136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;gcde_results_channel&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_classsc__csp__channel">sc_csp_channel&lt; gcde_results &gt;</link>&#32;(11);
+137 
+138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;results8_channel=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_classsc__csp__channel">sc_csp_channel&lt; sc_uint&lt;8&gt;</link>&#32;&gt;&#32;(8);
+139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;results16_channel=&#32;<emphasis role="keyword">new</emphasis>&#32;<link linkend="_classsc__csp__channel">sc_csp_channel&lt; sc_uint&lt;8&gt;</link>&#32;&gt;&#32;(9);
+140 
+141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SC_THREAD(fir8_main);
+142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SC_THREAD(fir8_evaluation);
+143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SC_THREAD(fir8_shifting);
+144 
+145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SC_THREAD(fir16_main);
+146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SC_THREAD(fir16_evaluation);
+147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SC_THREAD(fir16_shifting);
+148 
+149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SC_THREAD(gcd_main);
+150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SC_THREAD(gcd_evaluation);
+151 &#32;&#32;&#32;&#32;}
+152 };
+</programlisting></section>
+</section>
+</section>

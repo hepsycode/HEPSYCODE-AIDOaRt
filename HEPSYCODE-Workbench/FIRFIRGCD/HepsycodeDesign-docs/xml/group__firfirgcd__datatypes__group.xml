@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="group__firfirgcd__datatypes__group" kind="group">
+    <compoundname>firfirgcd_datatypes_group</compoundname>
+    <title>FirFirGCD datatypes.</title>
+    <innerclass refid="structfir8e__parameters" prot="public">fir8e_parameters</innerclass>
+    <innerclass refid="structfir8e__results" prot="public">fir8e_results</innerclass>
+    <innerclass refid="structfir8s__parameters" prot="public">fir8s_parameters</innerclass>
+    <innerclass refid="structfir8s__results" prot="public">fir8s_results</innerclass>
+    <innerclass refid="structfir16e__parameters" prot="public">fir16e_parameters</innerclass>
+    <innerclass refid="structfir16e__results" prot="public">fir16e_results</innerclass>
+    <innerclass refid="structfir16s__parameters" prot="public">fir16s_parameters</innerclass>
+    <innerclass refid="structfir16s__results" prot="public">fir16s_results</innerclass>
+    <innerclass refid="structgcde__parameters" prot="public">gcde_parameters</innerclass>
+    <innerclass refid="structgcde__results" prot="public">gcde_results</innerclass>
+    <briefdescription>
+<para>DATATYPES (i.e., MESSAGES) USED BY THE CHANNELS. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Defines all the FirFirGCD related datatypes <simplesect kind="author"><para>V. Muttillo, L. Pomante </para>
+</simplesect>
+<simplesect kind="date"><para>Apr. 2022 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

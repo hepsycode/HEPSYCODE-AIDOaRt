@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/org.univaq.hepsy/src-gen" creationIcons="false"
+    editDirectory="/org.univaq.hepsy.edit/src-gen" editorDirectory="/org.univaq.hepsy.editor/src-gen"
+    modelPluginID="org.univaq.hepsy" modelName="Hepsy" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>hepsy.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Hepsy" basePackage="org.univaq" disposableProviderFactory="true"
+      ecorePackage="hepsy.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="hepsy.ecore#//DataType">
+      <genEnumLiterals ecoreEnumLiteral="hepsy.ecore#//DataType/sc_bit"/>
+      <genEnumLiterals ecoreEnumLiteral="hepsy.ecore#//DataType/sc_logic"/>
+      <genEnumLiterals ecoreEnumLiteral="hepsy.ecore#//DataType/sc_int"/>
+      <genEnumLiterals ecoreEnumLiteral="hepsy.ecore#//DataType/sc_uint"/>
+      <genEnumLiterals ecoreEnumLiteral="hepsy.ecore#//DataType/sc_bigint"/>
+      <genEnumLiterals ecoreEnumLiteral="hepsy.ecore#//DataType/sc_biguint"/>
+      <genEnumLiterals ecoreEnumLiteral="hepsy.ecore#//DataType/sc_bv"/>
+      <genEnumLiterals ecoreEnumLiteral="hepsy.ecore#//DataType/sc_lv"/>
+      <genEnumLiterals ecoreEnumLiteral="hepsy.ecore#//DataType/sc_fixed"/>
+      <genEnumLiterals ecoreEnumLiteral="hepsy.ecore#//DataType/sc_ufixed"/>
+      <genEnumLiterals ecoreEnumLiteral="hepsy.ecore#//DataType/sc_fix"/>
+      <genEnumLiterals ecoreEnumLiteral="hepsy.ecore#//DataType/sc_ufix"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="hepsy.ecore#//Direction">
+      <genEnumLiterals ecoreEnumLiteral="hepsy.ecore#//Direction/Unidirectional"/>
+      <genEnumLiterals ecoreEnumLiteral="hepsy.ecore#//Direction/Bidirectional"/>
+    </genEnums>
+    <genClasses ecoreClass="hepsy.ecore#//BehaviorSpecification">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hepsy.ecore#//BehaviorSpecification/nodes"/>
+    </genClasses>
+    <genClasses ecoreClass="hepsy.ecore#//Node">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hepsy.ecore#//Node/nChannels"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hepsy.ecore#//Node/ports"/>
+    </genClasses>
+    <genClasses ecoreClass="hepsy.ecore#//Channel">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hepsy.ecore#//Channel/nFrom"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hepsy.ecore#//Channel/nTo"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hepsy.ecore#//Channel/pFrom"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hepsy.ecore#//Channel/pTo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hepsy.ecore#//Channel/queueSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hepsy.ecore#//Channel/timeout"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hepsy.ecore#//Channel/rendezVous"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hepsy.ecore#//Channel/direction"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hepsy.ecore#//Channel/message"/>
+    </genClasses>
+    <genClasses ecoreClass="hepsy.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hepsy.ecore#//NamedElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="hepsy.ecore#//StructuredNode">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hepsy.ecore#//StructuredNode/processes"/>
+    </genClasses>
+    <genClasses ecoreClass="hepsy.ecore#//Port">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hepsy.ecore#//Port/pChannels"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hepsy.ecore#//Port/portExtension"/>
+    </genClasses>
+    <genClasses ecoreClass="hepsy.ecore#//Process">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hepsy.ecore#//Process/processExtension"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hepsy.ecore#//Process/priority"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hepsy.ecore#//Process/criticality"/>
+    </genClasses>
+    <genClasses ecoreClass="hepsy.ecore#//Display"/>
+    <genClasses ecoreClass="hepsy.ecore#//Stimulus"/>
+    <genClasses ecoreClass="hepsy.ecore#//Message">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hepsy.ecore#//Message/entry"/>
+    </genClasses>
+    <genClasses ecoreClass="hepsy.ecore#//Entry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hepsy.ecore#//Entry/type"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

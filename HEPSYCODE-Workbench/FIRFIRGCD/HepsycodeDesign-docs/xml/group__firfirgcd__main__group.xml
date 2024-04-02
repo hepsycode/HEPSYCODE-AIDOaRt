@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="group__firfirgcd__main__group" kind="group">
+    <compoundname>firfirgcd_main_group</compoundname>
+    <title>FirFirGCD Main.</title>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group__firfirgcd__main__group_1gaa604ac51b2579794e702367934dfb8ad" prot="public" static="no" mutable="no">
+        <type><ref refid="class_system_manager" kindref="compound">SystemManager</ref> *</type>
+        <definition>SystemManager* pSystemManager</definition>
+        <argsstring></argsstring>
+        <name>pSystemManager</name>
+        <initializer>= new <ref refid="class_system_manager" kindref="compound">SystemManager</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/main.cpp" line="163" column="14" bodyfile="HepsycodeDesign/src/main.cpp" bodystart="163" bodyend="-1"/>
+        <referencedby refid="group__firfirgcd__csp__channel__group_1ga8be7bf7ee4f0c35e684b3de9a5163705" compoundref="sc__csp__channel_8h" startline="442" endline="505">sc_csp_channel&lt; T &gt;::init</referencedby>
+        <referencedby refid="group__firfirgcd__csp__channel__group_1ga23046a4820dcf9ef26a75eba9cb7d49b" compoundref="sc__csp__channel_8h" startline="232" endline="305">sc_csp_channel&lt; T &gt;::read</referencedby>
+        <referencedby refid="classsc__csp__channel_1a18caf07ac6dda7298155bf5bee992f81" compoundref="sc__csp__channel_8h" startline="110" endline="127">sc_csp_channel&lt; T &gt;::sc_csp_channel</referencedby>
+        <referencedby refid="group__firfirgcd__main__group_1ga865e3def6cd1a641230218579d0a958f" compoundref="main_8cpp" startline="177" endline="850">sc_main</referencedby>
+        <referencedby refid="group__scheduling__manager__group_1ga8bb983276d3b9929ea5985632a3fa4e0" compoundref="_scheduling_manager_8h" startline="85" endline="295">SC_MODULE</referencedby>
+        <referencedby refid="group__firfirgcd__csp__channel__group_1gaf8a9ace576ff2e0462c8db276f9f388d" compoundref="sc__csp__channel_8h" startline="322" endline="428">sc_csp_channel&lt; T &gt;::write</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group__firfirgcd__main__group_1gad142acf1b36eb3c83c6e67364d257d48" prot="public" static="no" mutable="no">
+        <type>SchedulingManager *</type>
+        <definition>SchedulingManager* pSchedulingManager</definition>
+        <argsstring></argsstring>
+        <name>pSchedulingManager</name>
+        <initializer>= new SchedulingManager(&quot;SchedulingManager&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/main.cpp" line="166" column="18" bodyfile="HepsycodeDesign/src/main.cpp" bodystart="166" bodyend="-1"/>
+        <referencedby refid="group__firfirgcd__csp__channel__group_1ga23046a4820dcf9ef26a75eba9cb7d49b" compoundref="sc__csp__channel_8h" startline="232" endline="305">sc_csp_channel&lt; T &gt;::read</referencedby>
+        <referencedby refid="group__firfirgcd__main__group_1ga865e3def6cd1a641230218579d0a958f" compoundref="main_8cpp" startline="177" endline="850">sc_main</referencedby>
+        <referencedby refid="group__firfirgcd__csp__channel__group_1gaf8a9ace576ff2e0462c8db276f9f388d" compoundref="sc__csp__channel_8h" startline="322" endline="428">sc_csp_channel&lt; T &gt;::write</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group__firfirgcd__main__group_1gae8f25bd55b4a9f4801e99450be7d7423" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int sampling_period</definition>
+        <argsstring></argsstring>
+        <name>sampling_period</name>
+        <initializer>= 1000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/main.cpp" line="170" column="14" bodyfile="HepsycodeDesign/src/main.cpp" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__firfirgcd__main__group_1gaa8fde88a1a4ceac81a26274e6f38c4a4" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool stop_concurrency_sampling</definition>
+        <argsstring></argsstring>
+        <name>stop_concurrency_sampling</name>
+        <initializer>=false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/main.cpp" line="171" column="6" bodyfile="HepsycodeDesign/src/main.cpp" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__firfirgcd__main__group_1ga865e3def6cd1a641230218579d0a958f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sc_main</definition>
+        <argsstring>(int a, char *b[])</argsstring>
+        <name>sc_main</name>
+        <param>
+          <type>int</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>b</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Testbench and System (SBM dependent)</para>
+<para>Instantiation and connection of testbench and system</para>
+<para>Instantiation and connection of testbench and system</para>
+<para>Simulation management (maybe SBM dependent)</para>
+<para>Report (SBM independent)</para>
+<para>Timing DATA about simulation</para>
+<para>Communications</para>
+<para>ENERGY DATA</para>
+<para>LOAD DATA</para>
+<para>Report (concurrency)</para>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/main.cpp" line="177" column="5" bodyfile="HepsycodeDesign/src/main.cpp" bodystart="177" bodyend="850"/>
+        <references refid="class_system_manager_1ab75b55327c942c6950f67c14ba9dea08" compoundref="_system_manager_8h" startline="110">SystemManager::allocationCH_PL</references>
+        <references refid="class_system_manager_1abfd1d205fa299fa757e2b78d15724734" compoundref="_system_manager_8h" startline="107">SystemManager::allocationPS_BB</references>
+        <references refid="class_system_manager_1ab6efb1ee75ff2df870bd8e65480dc6e7" compoundref="_system_manager_8cpp" startline="286" endline="329">SystemManager::deleteConcXmlConCom</references>
+        <references refid="class_system_manager_1a9a32595149efd0a69d09c46387415aa0" compoundref="_system_manager_8cpp" startline="1104" endline="1157">SystemManager::deleteConcXmlEnergy</references>
+        <references refid="class_system_manager_1aa25f8e4f2e4460d9652875772f48bb0e" compoundref="_system_manager_8cpp" startline="1247" endline="1314">SystemManager::deleteConcXmlLoad</references>
+        <references refid="class_system_manager_1ae7fbae6170e9f5e8aca0c436221dcf41" compoundref="_system_manager_8cpp" startline="1241" endline="1243">SystemManager::getFRL</references>
+        <references refid="class_system_manager_1acf868dd1af35168e9e37a62b1a03780b" compoundref="_system_manager_8cpp" startline="1234" endline="1239">SystemManager::loadEst</references>
+        <references refid="group__firfirgcd__define__group_1ga498a2c2b57c15e562e939cccf28db094" compoundref="define_8h" startline="87">NBB</references>
+        <references refid="group__firfirgcd__define__group_1ga967ca22c6c7be038e1092147ce04f258" compoundref="define_8h" startline="79">NCH</references>
+        <references refid="group__firfirgcd__define__group_1gad258142492454320138f79a00101f1f8" compoundref="define_8h" startline="77">NPS</references>
+        <references refid="group__firfirgcd__main__group_1gad142acf1b36eb3c83c6e67364d257d48" compoundref="main_8cpp" startline="166">pSchedulingManager</references>
+        <references refid="group__firfirgcd__main__group_1gaa604ac51b2579794e702367934dfb8ad" compoundref="main_8cpp" startline="163">pSystemManager</references>
+        <references refid="class_system_manager_1a2babb39c1fc59e1d02782e3e39ea9412" compoundref="_system_manager_8cpp" startline="1230" endline="1232">SystemManager::setFRT</references>
+        <references refid="class_system_manager_1a5f16a17547d2cd543180e06e555304e7" compoundref="_system_manager_8cpp" startline="331" endline="424">SystemManager::updateXmlConCom</references>
+        <references refid="class_system_manager_1a99f32d48ffab81f6c16d86dedbede1e7" compoundref="_system_manager_8cpp" startline="1159" endline="1221">SystemManager::updateXmlEnergy</references>
+        <references refid="class_system_manager_1afb69c0fedadb6e806e6576ad07c51162" compoundref="_system_manager_8cpp" startline="1316" endline="1509">SystemManager::updateXmlLoad</references>
+        <references refid="class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32" compoundref="_system_manager_8h" startline="100">SystemManager::VBB</references>
+        <references refid="class_system_manager_1a7dcc3ae8736a6aad7e27f276706205a3" compoundref="_system_manager_8h" startline="97">SystemManager::VCH</references>
+        <references refid="class_system_manager_1af28a1744a2d964a7047c31c6a5f1644a" compoundref="_system_manager_8h" startline="103">SystemManager::VPL</references>
+        <references refid="class_system_manager_1adcd8ce799616b977c206401ebdefab86" compoundref="_system_manager_8h" startline="94">SystemManager::VPS</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>MAIN. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>V. Muttillo, L. Pomante </para>
+</simplesect>
+<simplesect kind="date"><para>Apr. 2022 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

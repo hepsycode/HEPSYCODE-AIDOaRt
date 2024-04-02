@@ -1,0 +1,253 @@
+.TH "Channel" 3 "Mon Mar 20 2023" "FirFirGCD Application" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Channel
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <tl\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "string \fBgetName\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetName\fP (string x)"
+.br
+.ti -1c
+.RI "int \fBgetId\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetId\fP (int x)"
+.br
+.ti -1c
+.RI "int \fBgetW_id\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetW_id\fP (int x)"
+.br
+.ti -1c
+.RI "int \fBgetR_id\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetR_id\fP (int x)"
+.br
+.ti -1c
+.RI "int \fBgetWidth\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetWidth\fP (int x)"
+.br
+.ti -1c
+.RI "int \fBgetNum\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetNum\fP (int x)"
+.br
+.in -1c
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "string \fBname\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBid\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBw_id\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBr_id\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBwidth\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBnum\fP"
+.br
+.ti -1c
+.RI "sc_time \fBworking_time\fP"
+.br
+.ti -1c
+.RI "double \fBworking_energy\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 312 of file tl\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "int Channel::getId ()"
+
+.PP
+Definition at line 559 of file tl\&.cpp\&.
+.PP
+.nf
+560 {
+561     return this->id;
+562 }
+.fi
+.SS "string Channel::getName ()"
+
+.PP
+Definition at line 554 of file tl\&.cpp\&.
+.PP
+.nf
+555 {
+556     return this->name;
+557 }
+.fi
+.SS "int Channel::getNum ()"
+
+.PP
+Definition at line 579 of file tl\&.cpp\&.
+.PP
+.nf
+580 {
+581     return this->num;
+582 }
+.fi
+.SS "int Channel::getR_id ()"
+
+.PP
+Definition at line 574 of file tl\&.cpp\&.
+.PP
+.nf
+575 {
+576     return this->r_id;
+577 }
+.fi
+.SS "int Channel::getW_id ()"
+
+.PP
+Definition at line 569 of file tl\&.cpp\&.
+.PP
+.nf
+570 {
+571     return this->w_id;
+572 }
+.fi
+.SS "int Channel::getWidth ()"
+
+.PP
+Definition at line 564 of file tl\&.cpp\&.
+.PP
+.nf
+565 {
+566     return this->width;
+567 }
+.fi
+.SS "void Channel::setId (int x)"
+
+.PP
+Definition at line 589 of file tl\&.cpp\&.
+.PP
+.nf
+590 {
+591     id = x;
+592 }
+.fi
+.PP
+Referenced by SystemManager::generateChannelInstances()\&.
+.SS "void Channel::setName (string x)"
+
+.PP
+Definition at line 584 of file tl\&.cpp\&.
+.PP
+.nf
+585 {
+586     name = x;
+587 }
+.fi
+.PP
+Referenced by SystemManager::generateChannelInstances()\&.
+.SS "void Channel::setNum (int x)"
+
+.PP
+Definition at line 609 of file tl\&.cpp\&.
+.PP
+.nf
+610 {
+611     num = x;
+612 }
+.fi
+.PP
+Referenced by SystemManager::generateChannelInstances()\&.
+.SS "void Channel::setR_id (int x)"
+
+.PP
+Definition at line 604 of file tl\&.cpp\&.
+.PP
+.nf
+605 {
+606     r_id = x;
+607 }
+.fi
+.PP
+Referenced by SystemManager::generateChannelInstances()\&.
+.SS "void Channel::setW_id (int x)"
+
+.PP
+Definition at line 599 of file tl\&.cpp\&.
+.PP
+.nf
+600 {
+601     w_id = x;
+602 }
+.fi
+.PP
+Referenced by SystemManager::generateChannelInstances()\&.
+.SS "void Channel::setWidth (int x)"
+
+.PP
+Definition at line 594 of file tl\&.cpp\&.
+.PP
+.nf
+595 {
+596     width = x;
+597 }
+.fi
+.PP
+Referenced by SystemManager::generateChannelInstances()\&.
+.SH "Field Documentation"
+.PP 
+.SS "unsigned int Channel::id"
+
+.PP
+Definition at line 316 of file tl\&.h\&.
+.SS "string Channel::name"
+
+.PP
+Definition at line 315 of file tl\&.h\&.
+.SS "unsigned int Channel::num"
+
+.PP
+Definition at line 320 of file tl\&.h\&.
+.SS "unsigned int Channel::r_id"
+
+.PP
+Definition at line 318 of file tl\&.h\&.
+.SS "unsigned int Channel::w_id"
+
+.PP
+Definition at line 317 of file tl\&.h\&.
+.SS "unsigned int Channel::width"
+
+.PP
+Definition at line 319 of file tl\&.h\&.
+.SS "double Channel::working_energy"
+
+.PP
+Definition at line 322 of file tl\&.h\&.
+.SS "sc_time Channel::working_time"
+
+.PP
+Definition at line 321 of file tl\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FirFirGCD Application from the source code\&.

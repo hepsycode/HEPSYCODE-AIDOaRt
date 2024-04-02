@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structfir8s__parameters" kind="struct" language="C++" prot="public">
+    <compoundname>fir8s_parameters</compoundname>
+    <includes refid="datatype_8h" local="yes">src/datatype.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structfir8s__parameters_1ac70dfc7970a004671d8e93000a3a1a8b" prot="public" static="no" mutable="no">
+        <type>sc_uint&lt; 8 &gt;</type>
+        <definition>sc_uint&lt;8&gt; fir8s_parameters::shift[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>shift</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/datatype.h" line="123" column="9" bodyfile="HepsycodeDesign/src/datatype.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfir8s__parameters_1a2e7beba5c105fe0936012d1b0b0d0fee" prot="public" static="no" mutable="no">
+        <type>sc_uint&lt; 8 &gt;</type>
+        <definition>sc_uint&lt;8&gt; fir8s_parameters::sample_tmp</definition>
+        <argsstring></argsstring>
+        <name>sample_tmp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/datatype.h" line="124" column="9" bodyfile="HepsycodeDesign/src/datatype.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>struct <ref refid="structfir8s__parameters" kindref="compound">fir8s_parameters</ref> </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Some details about the <ref refid="structfir8s__parameters" kindref="compound">fir8s_parameters</ref> struct. <linebreak/>
+Message from fir8m to fir8s </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>sc_uint&lt; 8 &gt;</label>
+      </node>
+      <node id="1">
+        <label>fir8s_parameters</label>
+        <link refid="structfir8s__parameters"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+shift</edgelabel>
+          <edgelabel>+sample_tmp</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HepsycodeDesign/src/datatype.h" line="122" column="1" bodyfile="HepsycodeDesign/src/datatype.h" bodystart="121" bodyend="125"/>
+    <listofallmembers>
+      <member refid="structfir8s__parameters_1a2e7beba5c105fe0936012d1b0b0d0fee" prot="public" virt="non-virtual"><scope>fir8s_parameters</scope><name>sample_tmp</name></member>
+      <member refid="structfir8s__parameters_1ac70dfc7970a004671d8e93000a3a1a8b" prot="public" virt="non-virtual"><scope>fir8s_parameters</scope><name>shift</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

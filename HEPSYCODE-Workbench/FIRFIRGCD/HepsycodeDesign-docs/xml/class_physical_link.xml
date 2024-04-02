@@ -1,0 +1,433 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_physical_link" kind="class" language="C++" prot="public">
+    <compoundname>PhysicalLink</compoundname>
+    <includes refid="tl_8h" local="no">tl.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_physical_link_1ab7d8e236c3a63063c48a572753f92455" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string PhysicalLink::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="276" column="8" bodyfile="HepsycodeDesign/src/tl.h" bodystart="276" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_physical_link_1a428c21ce3a75e45ac4e1da6967382f77" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int PhysicalLink::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="277" column="14" bodyfile="HepsycodeDesign/src/tl.h" bodystart="277" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_physical_link_1a38f205a4a97e9869b93944e0f820f11b" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int PhysicalLink::physical_width</definition>
+        <argsstring></argsstring>
+        <name>physical_width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="278" column="14" bodyfile="HepsycodeDesign/src/tl.h" bodystart="278" bodyend="-1"/>
+        <referencedby refid="class_system_manager_1a056fabdd037cf3a1c2e6e20764784159" compoundref="_system_manager_8cpp" startline="854" endline="877">SystemManager::generatePhysicalLinkInstances</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_physical_link_1a90cb0e1c2a0d9951899b587d6d2b247a" prot="public" static="no" mutable="no">
+        <type>sc_time</type>
+        <definition>sc_time PhysicalLink::tcomm</definition>
+        <argsstring></argsstring>
+        <name>tcomm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="279" column="9" bodyfile="HepsycodeDesign/src/tl.h" bodystart="279" bodyend="-1"/>
+        <referencedby refid="class_system_manager_1a056fabdd037cf3a1c2e6e20764784159" compoundref="_system_manager_8cpp" startline="854" endline="877">SystemManager::generatePhysicalLinkInstances</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_physical_link_1a2f2ff97a12a4c37da1892f0fc2e855b2" prot="public" static="no" mutable="no">
+        <type>sc_time</type>
+        <definition>sc_time PhysicalLink::tacomm</definition>
+        <argsstring></argsstring>
+        <name>tacomm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="280" column="9" bodyfile="HepsycodeDesign/src/tl.h" bodystart="280" bodyend="-1"/>
+        <referencedby refid="class_system_manager_1a056fabdd037cf3a1c2e6e20764784159" compoundref="_system_manager_8cpp" startline="854" endline="877">SystemManager::generatePhysicalLinkInstances</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_physical_link_1ac441e379b59ecb00c48ebef53f2d6b75" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int PhysicalLink::bandwidth</definition>
+        <argsstring></argsstring>
+        <name>bandwidth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="281" column="14" bodyfile="HepsycodeDesign/src/tl.h" bodystart="281" bodyend="-1"/>
+        <referencedby refid="class_system_manager_1a056fabdd037cf3a1c2e6e20764784159" compoundref="_system_manager_8cpp" startline="854" endline="877">SystemManager::generatePhysicalLinkInstances</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_physical_link_1a2c8e1cba265b4e099ac6b07c7839de0e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PhysicalLink::a2</definition>
+        <argsstring></argsstring>
+        <name>a2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="282" column="7" bodyfile="HepsycodeDesign/src/tl.h" bodystart="282" bodyend="-1"/>
+        <referencedby refid="class_system_manager_1a056fabdd037cf3a1c2e6e20764784159" compoundref="_system_manager_8cpp" startline="854" endline="877">SystemManager::generatePhysicalLinkInstances</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_physical_link_1a46367b48d7ab1d5c06dd2051a6d5a32f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PhysicalLink::a1</definition>
+        <argsstring></argsstring>
+        <name>a1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="283" column="7" bodyfile="HepsycodeDesign/src/tl.h" bodystart="283" bodyend="-1"/>
+        <referencedby refid="class_system_manager_1a056fabdd037cf3a1c2e6e20764784159" compoundref="_system_manager_8cpp" startline="854" endline="877">SystemManager::generatePhysicalLinkInstances</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_physical_link_1a38870d04d7877b9ebe3a3a9252745fa4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string PhysicalLink::getName</definition>
+        <argsstring>()</argsstring>
+        <name>getName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="286" column="8" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="477" bodyend="480"/>
+      </memberdef>
+      <memberdef kind="function" id="class_physical_link_1a720451548bfac94a60eca8c8f47d343b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PhysicalLink::setName</definition>
+        <argsstring>(string x)</argsstring>
+        <name>setName</name>
+        <param>
+          <type>string</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="287" column="6" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="507" bodyend="510"/>
+        <referencedby refid="class_system_manager_1a056fabdd037cf3a1c2e6e20764784159" compoundref="_system_manager_8cpp" startline="854" endline="877">SystemManager::generatePhysicalLinkInstances</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_physical_link_1a6b1247a6652918c90b4ae99b9f2f5b88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int PhysicalLink::getId</definition>
+        <argsstring>()</argsstring>
+        <name>getId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="289" column="5" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="472" bodyend="475"/>
+      </memberdef>
+      <memberdef kind="function" id="class_physical_link_1a4c1ca22f348862858653c4f02496218f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PhysicalLink::setId</definition>
+        <argsstring>(int x)</argsstring>
+        <name>setId</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="290" column="6" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="502" bodyend="505"/>
+        <referencedby refid="class_system_manager_1a056fabdd037cf3a1c2e6e20764784159" compoundref="_system_manager_8cpp" startline="854" endline="877">SystemManager::generatePhysicalLinkInstances</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_physical_link_1a5bd500fa155893a361f0884a3edefec7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int PhysicalLink::getPhysicalWidth</definition>
+        <argsstring>()</argsstring>
+        <name>getPhysicalWidth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="292" column="5" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="482" bodyend="485"/>
+      </memberdef>
+      <memberdef kind="function" id="class_physical_link_1aaed942eff035eb7f0a45e5cadc0200ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PhysicalLink::setPhysicalWidth</definition>
+        <argsstring>(int x)</argsstring>
+        <name>setPhysicalWidth</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="293" column="6" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="512" bodyend="515"/>
+      </memberdef>
+      <memberdef kind="function" id="class_physical_link_1ae83d2eca88f0999b1ea7c6ee72a788a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>sc_time</type>
+        <definition>sc_time PhysicalLink::getTcomm</definition>
+        <argsstring>()</argsstring>
+        <name>getTcomm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="295" column="9" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="487" bodyend="490"/>
+      </memberdef>
+      <memberdef kind="function" id="class_physical_link_1a5b75831c5c40358e35dac40e95abdd71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PhysicalLink::setTcomm</definition>
+        <argsstring>(sc_time x)</argsstring>
+        <name>setTcomm</name>
+        <param>
+          <type>sc_time</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="296" column="6" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="517" bodyend="520"/>
+      </memberdef>
+      <memberdef kind="function" id="class_physical_link_1acf0976c043aeef0e82b8482abf3bf4ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>sc_time</type>
+        <definition>sc_time PhysicalLink::getTAcomm</definition>
+        <argsstring>()</argsstring>
+        <name>getTAcomm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="298" column="9" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="492" bodyend="495"/>
+      </memberdef>
+      <memberdef kind="function" id="class_physical_link_1a9f72f16b0f7fa6b4976ab10c4988721c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PhysicalLink::setTAcomm</definition>
+        <argsstring>(sc_time x)</argsstring>
+        <name>setTAcomm</name>
+        <param>
+          <type>sc_time</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="299" column="6" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="522" bodyend="525"/>
+      </memberdef>
+      <memberdef kind="function" id="class_physical_link_1add09ffe313fb274e4ab886d87f5bef9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int PhysicalLink::getBandwidth</definition>
+        <argsstring>()</argsstring>
+        <name>getBandwidth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="301" column="5" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="497" bodyend="500"/>
+      </memberdef>
+      <memberdef kind="function" id="class_physical_link_1a8fcfa235def47bf09f6d3ae892dbb2c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PhysicalLink::setBandwidth</definition>
+        <argsstring>(int x)</argsstring>
+        <name>setBandwidth</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="302" column="6" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="527" bodyend="530"/>
+      </memberdef>
+      <memberdef kind="function" id="class_physical_link_1a162bd0bc2daadc05c98bf10844be6b36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float PhysicalLink::geta2</definition>
+        <argsstring>()</argsstring>
+        <name>geta2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="304" column="7" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="532" bodyend="535"/>
+      </memberdef>
+      <memberdef kind="function" id="class_physical_link_1ab4e2b4917f65eb53ae125b6adf0f30b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PhysicalLink::seta2</definition>
+        <argsstring>(float x)</argsstring>
+        <name>seta2</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="305" column="6" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="537" bodyend="540"/>
+      </memberdef>
+      <memberdef kind="function" id="class_physical_link_1aa7897d3d8c11c58b493388604fc4a07b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float PhysicalLink::geta1</definition>
+        <argsstring>()</argsstring>
+        <name>geta1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="307" column="7" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="542" bodyend="545"/>
+      </memberdef>
+      <memberdef kind="function" id="class_physical_link_1a3a4bc3e300cf94a0105798d28ff7b8f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PhysicalLink::seta1</definition>
+        <argsstring>(float x)</argsstring>
+        <name>seta1</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="308" column="6" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="547" bodyend="550"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>PhysicalLink</label>
+        <link refid="class_physical_link"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+a1</edgelabel>
+          <edgelabel>+a2</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+bandwidth</edgelabel>
+          <edgelabel>+id</edgelabel>
+          <edgelabel>+physical_width</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+name</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+tcomm</edgelabel>
+          <edgelabel>+tacomm</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>float</label>
+      </node>
+      <node id="5">
+        <label>std::basic_string&lt; char &gt;</label>
+      </node>
+      <node id="3">
+        <label>int</label>
+      </node>
+      <node id="6">
+        <label>sc_time</label>
+      </node>
+      <node id="4">
+        <label>std::string</label>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HepsycodeDesign/src/tl.h" line="274" column="1" bodyfile="HepsycodeDesign/src/tl.h" bodystart="273" bodyend="310"/>
+    <listofallmembers>
+      <member refid="class_physical_link_1a46367b48d7ab1d5c06dd2051a6d5a32f" prot="public" virt="non-virtual"><scope>PhysicalLink</scope><name>a1</name></member>
+      <member refid="class_physical_link_1a2c8e1cba265b4e099ac6b07c7839de0e" prot="public" virt="non-virtual"><scope>PhysicalLink</scope><name>a2</name></member>
+      <member refid="class_physical_link_1ac441e379b59ecb00c48ebef53f2d6b75" prot="public" virt="non-virtual"><scope>PhysicalLink</scope><name>bandwidth</name></member>
+      <member refid="class_physical_link_1aa7897d3d8c11c58b493388604fc4a07b" prot="public" virt="non-virtual"><scope>PhysicalLink</scope><name>geta1</name></member>
+      <member refid="class_physical_link_1a162bd0bc2daadc05c98bf10844be6b36" prot="public" virt="non-virtual"><scope>PhysicalLink</scope><name>geta2</name></member>
+      <member refid="class_physical_link_1add09ffe313fb274e4ab886d87f5bef9d" prot="public" virt="non-virtual"><scope>PhysicalLink</scope><name>getBandwidth</name></member>
+      <member refid="class_physical_link_1a6b1247a6652918c90b4ae99b9f2f5b88" prot="public" virt="non-virtual"><scope>PhysicalLink</scope><name>getId</name></member>
+      <member refid="class_physical_link_1a38870d04d7877b9ebe3a3a9252745fa4" prot="public" virt="non-virtual"><scope>PhysicalLink</scope><name>getName</name></member>
+      <member refid="class_physical_link_1a5bd500fa155893a361f0884a3edefec7" prot="public" virt="non-virtual"><scope>PhysicalLink</scope><name>getPhysicalWidth</name></member>
+      <member refid="class_physical_link_1acf0976c043aeef0e82b8482abf3bf4ec" prot="public" virt="non-virtual"><scope>PhysicalLink</scope><name>getTAcomm</name></member>
+      <member refid="class_physical_link_1ae83d2eca88f0999b1ea7c6ee72a788a8" prot="public" virt="non-virtual"><scope>PhysicalLink</scope><name>getTcomm</name></member>
+      <member refid="class_physical_link_1a428c21ce3a75e45ac4e1da6967382f77" prot="public" virt="non-virtual"><scope>PhysicalLink</scope><name>id</name></member>
+      <member refid="class_physical_link_1ab7d8e236c3a63063c48a572753f92455" prot="public" virt="non-virtual"><scope>PhysicalLink</scope><name>name</name></member>
+      <member refid="class_physical_link_1a38f205a4a97e9869b93944e0f820f11b" prot="public" virt="non-virtual"><scope>PhysicalLink</scope><name>physical_width</name></member>
+      <member refid="class_physical_link_1a3a4bc3e300cf94a0105798d28ff7b8f2" prot="public" virt="non-virtual"><scope>PhysicalLink</scope><name>seta1</name></member>
+      <member refid="class_physical_link_1ab4e2b4917f65eb53ae125b6adf0f30b9" prot="public" virt="non-virtual"><scope>PhysicalLink</scope><name>seta2</name></member>
+      <member refid="class_physical_link_1a8fcfa235def47bf09f6d3ae892dbb2c3" prot="public" virt="non-virtual"><scope>PhysicalLink</scope><name>setBandwidth</name></member>
+      <member refid="class_physical_link_1a4c1ca22f348862858653c4f02496218f" prot="public" virt="non-virtual"><scope>PhysicalLink</scope><name>setId</name></member>
+      <member refid="class_physical_link_1a720451548bfac94a60eca8c8f47d343b" prot="public" virt="non-virtual"><scope>PhysicalLink</scope><name>setName</name></member>
+      <member refid="class_physical_link_1aaed942eff035eb7f0a45e5cadc0200ab" prot="public" virt="non-virtual"><scope>PhysicalLink</scope><name>setPhysicalWidth</name></member>
+      <member refid="class_physical_link_1a9f72f16b0f7fa6b4976ab10c4988721c" prot="public" virt="non-virtual"><scope>PhysicalLink</scope><name>setTAcomm</name></member>
+      <member refid="class_physical_link_1a5b75831c5c40358e35dac40e95abdd71" prot="public" virt="non-virtual"><scope>PhysicalLink</scope><name>setTcomm</name></member>
+      <member refid="class_physical_link_1a2f2ff97a12a4c37da1892f0fc2e855b2" prot="public" virt="non-virtual"><scope>PhysicalLink</scope><name>tacomm</name></member>
+      <member refid="class_physical_link_1a90cb0e1c2a0d9951899b587d6d2b247a" prot="public" virt="non-virtual"><scope>PhysicalLink</scope><name>tcomm</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

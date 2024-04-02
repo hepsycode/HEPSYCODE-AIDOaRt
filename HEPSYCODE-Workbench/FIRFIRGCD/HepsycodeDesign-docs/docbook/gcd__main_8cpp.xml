@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_gcd__main_8cpp">
+<title>HepsycodeDesign/src/processesInstr/gcd_main.cpp File Reference</title>
+<indexterm><primary>HepsycodeDesign/src/processesInstr/gcd_main.cpp</primary></indexterm>
+<para>
+
+<para>GCD Documented file. </para>
+ 
+</para>
+<programlisting>#include &quot;../mainsystem.h&quot;
+</programlisting>Include dependency graph for gcd_main.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="gcd__main_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<section>
+<title>Detailed Description</title>
+
+<para>GCD Documented file. </para>
+
+<para>GCD process: CSP <link linkend="_class_process">Process</link> specifying the functionality of the GCD component. </para>
+</section>
+</section>

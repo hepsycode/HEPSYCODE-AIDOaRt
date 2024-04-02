@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="group__firfirgcd__csp__channel__ifs__group" kind="group">
+    <compoundname>firfirgcd_csp_channel_ifs_group</compoundname>
+    <title>FirFirGCD CSP Channel Interfaces.</title>
+    <innernamespace refid="namespacesc__core">sc_core</innernamespace>
+    <briefdescription>
+<para>CSP <ref refid="class_channel" kindref="compound">Channel</ref> Interfaces. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>V. Muttillo, L. Pomante </para>
+</simplesect>
+<simplesect kind="date"><para>Apr. 2022 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

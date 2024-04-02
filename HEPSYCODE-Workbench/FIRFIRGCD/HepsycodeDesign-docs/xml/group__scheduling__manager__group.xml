@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="group__scheduling__manager__group" kind="group">
+    <compoundname>scheduling_manager_group</compoundname>
+    <title>HEPSIM Scheduling Manager.</title>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group__scheduling__manager__group_1gaa604ac51b2579794e702367934dfb8ad" prot="public" static="no" mutable="no">
+        <type><ref refid="class_system_manager" kindref="compound">SystemManager</ref> *</type>
+        <definition>SystemManager* pSystemManager</definition>
+        <argsstring></argsstring>
+        <name>pSystemManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/SchedulingManager.h" line="76" column="22" bodyfile="HepsycodeDesign/src/main.cpp" bodystart="163" bodyend="-1" declfile="HepsycodeDesign/src/SchedulingManager.h" declline="76" declcolumn="22"/>
+        <referencedby refid="group__firfirgcd__main__group_1ga865e3def6cd1a641230218579d0a958f" compoundref="main_8cpp" startline="177" endline="850">sc_main</referencedby>
+        <referencedby refid="group__scheduling__manager__group_1ga8bb983276d3b9929ea5985632a3fa4e0" compoundref="_scheduling_manager_8h" startline="85" endline="295">SC_MODULE</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__scheduling__manager__group_1ga8bb983276d3b9929ea5985632a3fa4e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SC_MODULE</definition>
+        <argsstring>(SchedulingManager)</argsstring>
+        <name>SC_MODULE</name>
+        <param>
+          <type>SchedulingManager</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/SchedulingManager.h" line="85" column="1" bodyfile="HepsycodeDesign/src/SchedulingManager.h" bodystart="85" bodyend="295"/>
+        <references refid="group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a5d178ae2be9d93ea4cbf1a9f0a2d9cbe" compoundref="define_8h" startline="127">active</references>
+        <references refid="class_system_manager_1abfd1d205fa299fa757e2b78d15724734" compoundref="_system_manager_8h" startline="107">SystemManager::allocationPS_BB</references>
+        <references refid="class_system_manager_1a21d2bb74e4472f99ec04243168e7964e" compoundref="_system_manager_8cpp" startline="267" endline="270">SystemManager::checkSPP</references>
+        <references refid="group__firfirgcd__macros__group_1ga0782cab9383550027672da286d54c931" compoundref="macros_8h" startline="160">HEPSY_TRACE_BB_STATE_THIS</references>
+        <references refid="group__firfirgcd__macros__group_1ga24b6f3a385f702b3a63e0811a0f22e75" compoundref="macros_8h" startline="152">HEPSY_TRACE_CH_STATE_THIS</references>
+        <references refid="group__firfirgcd__macros__group_1gadc2d4bfbe106f792246792d01d66d63c" compoundref="macros_8h" startline="144">HEPSY_TRACE_PS_STATE_THIS</references>
+        <references refid="group__firfirgcd__macros__group_1ga37921dae893594f3710d892f471de3cb" compoundref="macros_8h" startline="164">HEPSY_TRACE_SCHED_STATE</references>
+        <references refid="group__firfirgcd__define__group_1ga498a2c2b57c15e562e939cccf28db094" compoundref="define_8h" startline="87">NBB</references>
+        <references refid="group__firfirgcd__define__group_1ga967ca22c6c7be038e1092147ce04f258" compoundref="define_8h" startline="79">NCH</references>
+        <references refid="group__firfirgcd__define__group_1gad258142492454320138f79a00101f1f8" compoundref="define_8h" startline="77">NPS</references>
+        <references refid="group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a53ace14c115e45153a1c9105accceb4c" compoundref="define_8h" startline="127">off</references>
+        <references refid="group__scheduling__manager__group_1gaa604ac51b2579794e702367934dfb8ad" compoundref="main_8cpp" startline="163">pSystemManager</references>
+        <references refid="group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473" compoundref="define_8h" startline="126">ready</references>
+        <references refid="group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c" compoundref="define_8h" startline="126">running</references>
+        <references refid="group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90af35387cab0e820dcf7df1ed4702043e1" compoundref="define_8h" startline="126">undefined</references>
+        <references refid="class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32" compoundref="_system_manager_8h" startline="100">SystemManager::VBB</references>
+        <references refid="class_system_manager_1adcd8ce799616b977c206401ebdefab86" compoundref="_system_manager_8h" startline="94">SystemManager::VPS</references>
+        <references refid="group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a4c97ffbad296d4a6b84b1c508fc5d32a" compoundref="define_8h" startline="126">waiting</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Scheduling Manager Implementation. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>V. Muttillo, L. Pomante </para>
+</simplesect>
+<simplesect kind="date"><para>Apr. 2022 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

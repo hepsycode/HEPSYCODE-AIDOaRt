@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_c8af0c9532c0ed7a01fcfb80e323da4c" kind="dir">
+    <compoundname>HepsycodeDesign</compoundname>
+    <innerdir refid="dir_d0ad28b65524201a249297d84afa8a64">HepsycodeDesign/src</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HepsycodeDesign/"/>
+  </compounddef>
+</doxygen>

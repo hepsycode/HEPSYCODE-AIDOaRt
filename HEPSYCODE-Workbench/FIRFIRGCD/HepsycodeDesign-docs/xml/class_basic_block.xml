@@ -1,0 +1,529 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_basic_block" kind="class" language="C++" prot="public">
+    <compoundname>BasicBlock</compoundname>
+    <includes refid="tl_8h" local="no">tl.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_basic_block_1a4cad9fc9592145fea0335e694df17ebf" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string BasicBlock::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="222" column="8" bodyfile="HepsycodeDesign/src/tl.h" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_basic_block_1a306c90076760a7ccd52ffab5cba5a2f5" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int BasicBlock::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="223" column="14" bodyfile="HepsycodeDesign/src/tl.h" bodystart="223" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_basic_block_1a730e1383a3247e3a456b6cea00575aed" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string BasicBlock::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="224" column="8" bodyfile="HepsycodeDesign/src/tl.h" bodystart="224" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_basic_block_1ae5d66a26435ab7c34ac15de59eafe7b3" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BasicBlock::idPU</definition>
+        <argsstring></argsstring>
+        <name>idPU</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="225" column="5" bodyfile="HepsycodeDesign/src/tl.h" bodystart="225" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_basic_block_1aaf3c4ccda26ba23923e66f1e77228f2c" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="class_processing_unit" kindref="compound">ProcessingUnit</ref> &gt;</type>
+        <definition>vector&lt;ProcessingUnit&gt; BasicBlock::vpu</definition>
+        <argsstring></argsstring>
+        <name>vpu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="226" column="9" bodyfile="HepsycodeDesign/src/tl.h" bodystart="226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_basic_block_1a298dcdfcc1736778a7262329d9204edd" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int BasicBlock::codeSize</definition>
+        <argsstring></argsstring>
+        <name>codeSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="229" column="14" bodyfile="HepsycodeDesign/src/tl.h" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_basic_block_1ab89eed26cc943dd972c686391d7bbc69" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int BasicBlock::dataSize</definition>
+        <argsstring></argsstring>
+        <name>dataSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="230" column="14" bodyfile="HepsycodeDesign/src/tl.h" bodystart="230" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_basic_block_1a4c5622c7d3329c93c0bc39705bb19ff3" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int BasicBlock::eqG</definition>
+        <argsstring></argsstring>
+        <name>eqG</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="231" column="14" bodyfile="HepsycodeDesign/src/tl.h" bodystart="231" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_basic_block_1a0cac9b02f5e385651a80c4469301a586" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float BasicBlock::FRT</definition>
+        <argsstring></argsstring>
+        <name>FRT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="232" column="8" bodyfile="HepsycodeDesign/src/tl.h" bodystart="232" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_basic_block_1ae1dead3b6fbfaaf11aa596013d9c3615" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string BasicBlock::getName</definition>
+        <argsstring>()</argsstring>
+        <name>getName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="239" column="8" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="219" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="function" id="class_basic_block_1a2be928b15c8a74a0f171f97c285791f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BasicBlock::setName</definition>
+        <argsstring>(string x)</argsstring>
+        <name>setName</name>
+        <param>
+          <type>string</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="240" column="6" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="224" bodyend="227"/>
+        <referencedby refid="class_system_manager_1a77bb622cef7c79dab7463d02a2125542" compoundref="_system_manager_8cpp" startline="636" endline="769">SystemManager::generateBBInstances</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_basic_block_1af7b05902e57ffd9e21fd582b3e49f29c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int BasicBlock::getId</definition>
+        <argsstring>()</argsstring>
+        <name>getId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="242" column="5" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="229" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="function" id="class_basic_block_1a1abdc5c467f903b3bb6f51fb68283b21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BasicBlock::setId</definition>
+        <argsstring>(int x)</argsstring>
+        <name>setId</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="243" column="6" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="234" bodyend="237"/>
+        <referencedby refid="class_system_manager_1a77bb622cef7c79dab7463d02a2125542" compoundref="_system_manager_8cpp" startline="636" endline="769">SystemManager::generateBBInstances</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_basic_block_1a42cf1d9e35e3f2ded6510a2f3f9d2c74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string BasicBlock::getType</definition>
+        <argsstring>()</argsstring>
+        <name>getType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="245" column="8" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="239" bodyend="242"/>
+      </memberdef>
+      <memberdef kind="function" id="class_basic_block_1ae33921bd8c15b268aba6f5b1526f893b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BasicBlock::setType</definition>
+        <argsstring>(string x)</argsstring>
+        <name>setType</name>
+        <param>
+          <type>string</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="246" column="6" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="245" bodyend="248"/>
+        <referencedby refid="class_system_manager_1a77bb622cef7c79dab7463d02a2125542" compoundref="_system_manager_8cpp" startline="636" endline="769">SystemManager::generateBBInstances</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_basic_block_1a23d2e5aa36d0b173d7e662493dee7db0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int BasicBlock::getIdPU</definition>
+        <argsstring>()</argsstring>
+        <name>getIdPU</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="248" column="5" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="250" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="function" id="class_basic_block_1aae5e45d56ddfdd6c791f14fed105b544" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BasicBlock::setIdPU</definition>
+        <argsstring>(int x)</argsstring>
+        <name>setIdPU</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="249" column="6" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="255" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="class_basic_block_1a5c247400a7e86e54f98bc5ea3a8b34d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="class_processing_unit" kindref="compound">ProcessingUnit</ref> &gt;</type>
+        <definition>vector&lt; ProcessingUnit &gt; BasicBlock::getProcessors</definition>
+        <argsstring>()</argsstring>
+        <name>getProcessors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="251" column="8" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="271" bodyend="274"/>
+      </memberdef>
+      <memberdef kind="function" id="class_basic_block_1a4cbb966d0ce3b7364877cf6e46e33672" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BasicBlock::setProcessor</definition>
+        <argsstring>(vector&lt; ProcessingUnit &gt; pu)</argsstring>
+        <name>setProcessor</name>
+        <param>
+          <type>vector&lt; <ref refid="class_processing_unit" kindref="compound">ProcessingUnit</ref> &gt;</type>
+          <declname>pu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="252" column="6" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="260" bodyend="263"/>
+        <referencedby refid="class_system_manager_1a77bb622cef7c79dab7463d02a2125542" compoundref="_system_manager_8cpp" startline="636" endline="769">SystemManager::generateBBInstances</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_basic_block_1a201f977359d366099f7e63708fc1db80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int BasicBlock::getCodeSize</definition>
+        <argsstring>()</argsstring>
+        <name>getCodeSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="257" column="18" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="277" bodyend="279"/>
+      </memberdef>
+      <memberdef kind="function" id="class_basic_block_1a14bbb26476609a17b226400d2fd8ec05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BasicBlock::setCodeSize</definition>
+        <argsstring>(unsigned int c)</argsstring>
+        <name>setCodeSize</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="258" column="10" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="281" bodyend="283"/>
+        <referencedby refid="class_system_manager_1a77bb622cef7c79dab7463d02a2125542" compoundref="_system_manager_8cpp" startline="636" endline="769">SystemManager::generateBBInstances</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_basic_block_1a2e49d14597098dee219b8b628ec332e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int BasicBlock::getDataSize</definition>
+        <argsstring>()</argsstring>
+        <name>getDataSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="260" column="18" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="285" bodyend="287"/>
+      </memberdef>
+      <memberdef kind="function" id="class_basic_block_1a9f71209e93288e8eb82311fe5961e2ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BasicBlock::setDataSize</definition>
+        <argsstring>(unsigned int c)</argsstring>
+        <name>setDataSize</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="261" column="10" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="289" bodyend="291"/>
+        <referencedby refid="class_system_manager_1a77bb622cef7c79dab7463d02a2125542" compoundref="_system_manager_8cpp" startline="636" endline="769">SystemManager::generateBBInstances</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_basic_block_1ab4ae1a868abfaeb6a4003a9332b357cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int BasicBlock::getEqG</definition>
+        <argsstring>()</argsstring>
+        <name>getEqG</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="264" column="18" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="293" bodyend="295"/>
+      </memberdef>
+      <memberdef kind="function" id="class_basic_block_1aa3a9be4f5f76e76b91e5a3a009f95f44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BasicBlock::setEqG</definition>
+        <argsstring>(unsigned int c)</argsstring>
+        <name>setEqG</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="265" column="10" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="297" bodyend="299"/>
+        <referencedby refid="class_system_manager_1a77bb622cef7c79dab7463d02a2125542" compoundref="_system_manager_8cpp" startline="636" endline="769">SystemManager::generateBBInstances</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_basic_block_1aa7ce9d2bdf5d92bf86b3e1290134af93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float BasicBlock::getFRT</definition>
+        <argsstring>()</argsstring>
+        <name>getFRT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="267" column="7" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="305" bodyend="307"/>
+      </memberdef>
+      <memberdef kind="function" id="class_basic_block_1aee9fb07de76f430ec78e48e85c3d5fd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BasicBlock::setFRT</definition>
+        <argsstring>(float x)</argsstring>
+        <name>setFRT</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="268" column="6" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="301" bodyend="303"/>
+        <referencedby refid="class_system_manager_1a77bb622cef7c79dab7463d02a2125542" compoundref="_system_manager_8cpp" startline="636" endline="769">SystemManager::generateBBInstances</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="10">
+        <label>T</label>
+      </node>
+      <node id="9">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="10" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>float</label>
+      </node>
+      <node id="1">
+        <label>BasicBlock</label>
+        <link refid="class_basic_block"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-vpu</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-FRT</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-dataSize</edgelabel>
+          <edgelabel>-codeSize</edgelabel>
+          <edgelabel>-idPU</edgelabel>
+          <edgelabel>-eqG</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-type</edgelabel>
+          <edgelabel>-name</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>-id</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>unsigned int</label>
+      </node>
+      <node id="7">
+        <label>std::basic_string&lt; char &gt;</label>
+      </node>
+      <node id="5">
+        <label>int</label>
+      </node>
+      <node id="2">
+        <label>std::vector&lt; ProcessingUnit &gt;</label>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="template-instance">
+          <edgelabel>&lt; ProcessingUnit &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>sc_time</label>
+      </node>
+      <node id="3">
+        <label>ProcessingUnit</label>
+        <link refid="class_processing_unit"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+I4CSmin</edgelabel>
+          <edgelabel>+frequency</edgelabel>
+          <edgelabel>+I4CSmax</edgelabel>
+          <edgelabel>+cost</edgelabel>
+          <edgelabel>+Power</edgelabel>
+          <edgelabel>+MIPS</edgelabel>
+          <edgelabel>+CC4CS</edgelabel>
+          <edgelabel>+Vdd</edgelabel>
+          <edgelabel>+Idd</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+id</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+processorType</edgelabel>
+          <edgelabel>+name</edgelabel>
+          <edgelabel>+ISA</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+overheadCS</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>std::string</label>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HepsycodeDesign/src/tl.h" line="219" column="17" bodyfile="HepsycodeDesign/src/tl.h" bodystart="219" bodyend="271"/>
+    <listofallmembers>
+      <member refid="class_basic_block_1a298dcdfcc1736778a7262329d9204edd" prot="private" virt="non-virtual"><scope>BasicBlock</scope><name>codeSize</name></member>
+      <member refid="class_basic_block_1ab89eed26cc943dd972c686391d7bbc69" prot="private" virt="non-virtual"><scope>BasicBlock</scope><name>dataSize</name></member>
+      <member refid="class_basic_block_1a4c5622c7d3329c93c0bc39705bb19ff3" prot="private" virt="non-virtual"><scope>BasicBlock</scope><name>eqG</name></member>
+      <member refid="class_basic_block_1a0cac9b02f5e385651a80c4469301a586" prot="private" virt="non-virtual"><scope>BasicBlock</scope><name>FRT</name></member>
+      <member refid="class_basic_block_1a201f977359d366099f7e63708fc1db80" prot="public" virt="non-virtual"><scope>BasicBlock</scope><name>getCodeSize</name></member>
+      <member refid="class_basic_block_1a2e49d14597098dee219b8b628ec332e2" prot="public" virt="non-virtual"><scope>BasicBlock</scope><name>getDataSize</name></member>
+      <member refid="class_basic_block_1ab4ae1a868abfaeb6a4003a9332b357cc" prot="public" virt="non-virtual"><scope>BasicBlock</scope><name>getEqG</name></member>
+      <member refid="class_basic_block_1aa7ce9d2bdf5d92bf86b3e1290134af93" prot="public" virt="non-virtual"><scope>BasicBlock</scope><name>getFRT</name></member>
+      <member refid="class_basic_block_1af7b05902e57ffd9e21fd582b3e49f29c" prot="public" virt="non-virtual"><scope>BasicBlock</scope><name>getId</name></member>
+      <member refid="class_basic_block_1a23d2e5aa36d0b173d7e662493dee7db0" prot="public" virt="non-virtual"><scope>BasicBlock</scope><name>getIdPU</name></member>
+      <member refid="class_basic_block_1ae1dead3b6fbfaaf11aa596013d9c3615" prot="public" virt="non-virtual"><scope>BasicBlock</scope><name>getName</name></member>
+      <member refid="class_basic_block_1a5c247400a7e86e54f98bc5ea3a8b34d1" prot="public" virt="non-virtual"><scope>BasicBlock</scope><name>getProcessors</name></member>
+      <member refid="class_basic_block_1a42cf1d9e35e3f2ded6510a2f3f9d2c74" prot="public" virt="non-virtual"><scope>BasicBlock</scope><name>getType</name></member>
+      <member refid="class_basic_block_1a306c90076760a7ccd52ffab5cba5a2f5" prot="private" virt="non-virtual"><scope>BasicBlock</scope><name>id</name></member>
+      <member refid="class_basic_block_1ae5d66a26435ab7c34ac15de59eafe7b3" prot="private" virt="non-virtual"><scope>BasicBlock</scope><name>idPU</name></member>
+      <member refid="class_basic_block_1a4cad9fc9592145fea0335e694df17ebf" prot="private" virt="non-virtual"><scope>BasicBlock</scope><name>name</name></member>
+      <member refid="class_basic_block_1a14bbb26476609a17b226400d2fd8ec05" prot="public" virt="non-virtual"><scope>BasicBlock</scope><name>setCodeSize</name></member>
+      <member refid="class_basic_block_1a9f71209e93288e8eb82311fe5961e2ff" prot="public" virt="non-virtual"><scope>BasicBlock</scope><name>setDataSize</name></member>
+      <member refid="class_basic_block_1aa3a9be4f5f76e76b91e5a3a009f95f44" prot="public" virt="non-virtual"><scope>BasicBlock</scope><name>setEqG</name></member>
+      <member refid="class_basic_block_1aee9fb07de76f430ec78e48e85c3d5fd9" prot="public" virt="non-virtual"><scope>BasicBlock</scope><name>setFRT</name></member>
+      <member refid="class_basic_block_1a1abdc5c467f903b3bb6f51fb68283b21" prot="public" virt="non-virtual"><scope>BasicBlock</scope><name>setId</name></member>
+      <member refid="class_basic_block_1aae5e45d56ddfdd6c791f14fed105b544" prot="public" virt="non-virtual"><scope>BasicBlock</scope><name>setIdPU</name></member>
+      <member refid="class_basic_block_1a2be928b15c8a74a0f171f97c285791f2" prot="public" virt="non-virtual"><scope>BasicBlock</scope><name>setName</name></member>
+      <member refid="class_basic_block_1a4cbb966d0ce3b7364877cf6e46e33672" prot="public" virt="non-virtual"><scope>BasicBlock</scope><name>setProcessor</name></member>
+      <member refid="class_basic_block_1ae33921bd8c15b268aba6f5b1526f893b" prot="public" virt="non-virtual"><scope>BasicBlock</scope><name>setType</name></member>
+      <member refid="class_basic_block_1a730e1383a3247e3a456b6cea00575aed" prot="private" virt="non-virtual"><scope>BasicBlock</scope><name>type</name></member>
+      <member refid="class_basic_block_1aaf3c4ccda26ba23923e66f1e77228f2c" prot="private" virt="non-virtual"><scope>BasicBlock</scope><name>vpu</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

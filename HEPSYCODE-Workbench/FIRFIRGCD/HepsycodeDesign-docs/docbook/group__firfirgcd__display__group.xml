@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group__firfirgcd__display__group">
+<title>FirFirGCD Display.</title>
+<indexterm><primary>FirFirGCD Display.</primary></indexterm>
+<para>
+
+<para>Display Implementation. </para>
+ 
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group__firfirgcd__display__group_1ga62f1837ecdb769140a861dbc2af2abdb">SC_MODULE</link> (display)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Display Implementation. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>V. Muttillo, L. Pomante </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>Apr. 2022 </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_group__firfirgcd__display__group_1ga62f1837ecdb769140a861dbc2af2abdb"/>    <section>
+    <title>SC_MODULE()</title>
+<indexterm><primary>SC_MODULE</primary><secondary>FirFirGCD Display.</secondary></indexterm>
+<indexterm><primary>FirFirGCD Display.</primary><secondary>SC_MODULE</secondary></indexterm>
+<para><computeroutput>SC_MODULE (display )</computeroutput></para><para>
+Definition at line 83 of file display.h.</para>
+<programlisting>84 {
+85 
+86 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Port&#32;for&#32;input&#32;by&#32;channel</emphasis>
+87 &#32;&#32;&#32;&#32;sc_port&lt;&#32;sc_csp_channel_in_if&lt;&#32;sc_uint&lt;8&gt;&#32;&gt;&#32;&gt;&#32;result_channel_port;
+88 
+89 &#32;&#32;&#32;&#32;SC_CTOR(display)
+90 &#32;&#32;&#32;&#32;{
+91 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SC_THREAD(output);
+92 &#32;&#32;&#32;&#32;}
+93 
+94 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Main&#32;method</emphasis>
+95 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;output();
+96 };
+</programlisting></section>
+</section>
+</section>

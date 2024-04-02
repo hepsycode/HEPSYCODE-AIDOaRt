@@ -1,0 +1,252 @@
+.TH "firfirgcd_define_group" 3 "Mon Mar 20 2023" "FirFirGCD Application" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+firfirgcd_define_group \- DEFINE USED BY HEPSIM2\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBNPS\fP   10"
+.br
+.RI "SBM DEPENDENT\&. "
+.ti -1c
+.RI "#define \fBNCH\fP   15"
+.br
+.ti -1c
+.RI "#define \fBTAP8\fP   8"
+.br
+.ti -1c
+.RI "#define \fBTAP16\fP   16"
+.br
+.ti -1c
+.RI "#define \fBNUMBER_OF_INPUTS\fP   10"
+.br
+.ti -1c
+.RI "#define \fBNBB\fP   5"
+.br
+.RI "FirFirGCD: constants related to the HW architecture\&. "
+.ti -1c
+.RI "#define \fBNPL\fP   3"
+.br
+.RI "BBs IDs (#id in the tag is starting from 0 to be aligned with istancesTL) "
+.ti -1c
+.RI "#define \fBAPPLICATION\fP   '\&./XML/application\&.xml'"
+.br
+.RI "SBM INDEPENDENT: DO NOT CHANGE\&. "
+.ti -1c
+.RI "#define \fBMAPPING_PS_BB\fP   '\&./XML/mappingPS\&.xml'"
+.br
+.ti -1c
+.RI "#define \fBMAPPING_LC_PL\fP   '\&./XML/mappingCH\&.xml'"
+.br
+.ti -1c
+.RI "#define \fBenergyComputation\fP   'EPC'"
+.br
+.RI "Costants related to energy consumption estimation\&. "
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBp_id\fP { \fBstimulus_id\fP, \fBdisplay_id\fP, \fBfir8m_id\fP, \fBfir8e_id\fP, \fBfir8s_id\fP, \fBfir16m_id\fP, \fBfir16e_id\fP, \fBfir16s_id\fP, \fBgcdm_id\fP, \fBgcde_id\fP, \fBs_fir8m_fir8e_id\fP }"
+.br
+.ti -1c
+.RI "enum \fBbb_id\fP { \fBBB8051_0_id\fP, \fBBB8051_1_id\fP, \fBBBleon3_0_id\fP, \fBBBleon3_1_id\fP, \fBBBArtix7_0_id\fP }"
+.br
+.ti -1c
+.RI "enum \fBstate\fP { \fBundefined\fP, \fBwaiting\fP, \fBready\fP, \fBrunning\fP }"
+.br
+.RI "Costants related to processes/schedulers states and BB/modes\&. "
+.ti -1c
+.RI "enum \fBmode\fP { \fBoff\fP, \fBsuspended\fP, \fBactive\fP }"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+DEFINE USED BY HEPSIM2\&. 
+
+All the FirFirGCD related define 
+.PP
+\fBAuthor\fP
+.RS 4
+V\&. Muttillo, L\&. Pomante 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+Apr\&. 2022 
+.RE
+.PP
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define APPLICATION   '\&./XML/application\&.xml'"
+
+.PP
+SBM INDEPENDENT: DO NOT CHANGE\&. Tags for conditionl compilation (LP: To be provided as flag to compiler) Possible options:
+.IP "\(bu" 2
+NO TAGS (Add only functional behavioral simulation?) or FUNCTIONAL?
+.IP "\(bu" 2
+NO TAGS (function alanalyzer = functional simulatoin + communications analysis + functional concurrency analysis)
+.IP "\(bu" 2
+TIMING_ENERGY (timing&energy simulation)
+.IP "\(bu" 2
+TIMING_ENERGY+CONCURRENCY (timing&energy simulation + timing concurrency analysis)
+.IP "\(bu" 2
+TIMING_ENERGY+LOAD (timing&energy simulation + load estimation)
+.IP "\(bu" 2
+TIMING_ENERGY+LOAD+CONCURRENCY (timing&energy simulation + load estimation + timing concurrency analysis) - WARNING: scheduler OVH is 0! #define \fITIMING_ENERGY\fP #define \fILOAD\fP #define \fICONCURRENCY\fP Tags for debug and log (LP: To be provided as flag to compiler) #define \fIDEBUG\fP #define \fISAVE_CSV\fP Costants related to mapping files 
+.PP
+
+.PP
+Definition at line 120 of file define\&.h\&.
+.SS "#define energyComputation   'EPC'"
+
+.PP
+Costants related to energy consumption estimation\&. Method used to compute energy consumption (possible values: EPI/EPC) //LP: check formule #define energyComputation 'EPI' 
+.PP
+Definition at line 135 of file define\&.h\&.
+.SS "#define MAPPING_LC_PL   '\&./XML/mappingCH\&.xml'"
+
+.PP
+Definition at line 122 of file define\&.h\&.
+.SS "#define MAPPING_PS_BB   '\&./XML/mappingPS\&.xml'"
+
+.PP
+Definition at line 121 of file define\&.h\&.
+.SS "#define NBB   5"
+
+.PP
+FirFirGCD: constants related to the HW architecture\&. 
+.PP
+Definition at line 87 of file define\&.h\&.
+.SS "#define NCH   15"
+
+.PP
+Definition at line 79 of file define\&.h\&.
+.SS "#define NPL   3"
+
+.PP
+BBs IDs (#id in the tag is starting from 0 to be aligned with istancesTL) 
+.PP
+Definition at line 89 of file define\&.h\&.
+.SS "#define NPS   10"
+
+.PP
+SBM DEPENDENT\&. FirFirGCD: constants related to the SBM 
+.PP
+Definition at line 77 of file define\&.h\&.
+.SS "#define NUMBER_OF_INPUTS   10"
+
+.PP
+Definition at line 83 of file define\&.h\&.
+.SS "#define TAP16   16"
+
+.PP
+Definition at line 82 of file define\&.h\&.
+.SS "#define TAP8   8"
+
+.PP
+Definition at line 81 of file define\&.h\&.
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBbb_id\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIBB8051_0_id \fP\fP
+.TP
+\fB\fIBB8051_1_id \fP\fP
+.TP
+\fB\fIBBleon3_0_id \fP\fP
+.TP
+\fB\fIBBleon3_1_id \fP\fP
+.TP
+\fB\fIBBArtix7_0_id \fP\fP
+.PP
+Definition at line 88 of file define\&.h\&.
+.PP
+.nf
+88 {BB8051_0_id, BB8051_1_id, BBleon3_0_id, BBleon3_1_id, BBArtix7_0_id}; 
+.fi
+.SS "enum \fBmode\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIoff \fP\fP
+.TP
+\fB\fIsuspended \fP\fP
+.TP
+\fB\fIactive \fP\fP
+.PP
+Definition at line 127 of file define\&.h\&.
+.PP
+.nf
+127 { off, suspended, active };
+.fi
+.SS "enum \fBp_id\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIstimulus_id \fP\fP
+.TP
+\fB\fIdisplay_id \fP\fP
+.TP
+\fB\fIfir8m_id \fP\fP
+.TP
+\fB\fIfir8e_id \fP\fP
+.TP
+\fB\fIfir8s_id \fP\fP
+.TP
+\fB\fIfir16m_id \fP\fP
+.TP
+\fB\fIfir16e_id \fP\fP
+.TP
+\fB\fIfir16s_id \fP\fP
+.TP
+\fB\fIgcdm_id \fP\fP
+.TP
+\fB\fIgcde_id \fP\fP
+.TP
+\fB\fIs_fir8m_fir8e_id \fP\fP
+.PP
+Definition at line 78 of file define\&.h\&.
+.PP
+.nf
+78 {stimulus_id, display_id, fir8m_id, fir8e_id, fir8s_id, fir16m_id, fir16e_id, fir16s_id, gcdm_id, gcde_id, s_fir8m_fir8e_id}; // Processes IDs
+.fi
+.SS "enum \fBstate\fP"
+
+.PP
+Costants related to processes/schedulers states and BB/modes\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIundefined \fP\fP
+.TP
+\fB\fIwaiting \fP\fP
+.TP
+\fB\fIready \fP\fP
+.TP
+\fB\fIrunning \fP\fP
+.PP
+Definition at line 126 of file define\&.h\&.
+.PP
+.nf
+126 { undefined, waiting, ready, running };
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FirFirGCD Application from the source code\&.

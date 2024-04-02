@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structfir16s__results" kind="struct" language="C++" prot="public">
+    <compoundname>fir16s_results</compoundname>
+    <includes refid="datatype_8h" local="no">datatype.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structfir16s__results_1a73616346673b8d61fb292bfc064eb6d2" prot="public" static="no" mutable="no">
+        <type>sc_uint&lt; 8 &gt;</type>
+        <definition>sc_uint&lt;8&gt; fir16s_results::shift[16]</definition>
+        <argsstring>[16]</argsstring>
+        <name>shift</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/datatype.h" line="168" column="9" bodyfile="HepsycodeDesign/src/datatype.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Message from fir16s to fir16m. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>fir16s_results</label>
+        <link refid="structfir16s__results"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+shift</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>sc_uint&lt; 8 &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="HepsycodeDesign/src/datatype.h" line="167" column="1" bodyfile="HepsycodeDesign/src/datatype.h" bodystart="166" bodyend="169"/>
+    <listofallmembers>
+      <member refid="structfir16s__results_1a73616346673b8d61fb292bfc064eb6d2" prot="public" virt="non-virtual"><scope>fir16s_results</scope><name>shift</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

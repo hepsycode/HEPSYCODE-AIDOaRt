@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group__firfirgcd__macros__group">
+<title>FirFirGCD Macros.</title>
+<indexterm><primary>FirFirGCD Macros.</primary></indexterm>
+<para>
+
+<para>Macros Implementation. </para>
+ 
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group__firfirgcd__macros__group_1ga09b182b87a0936087ba1ff3ce91755e7">HEPSY_S</link>(X)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group__firfirgcd__macros__group_1ga652f3387e2319f751a6459f9db47cc3a">HEPSY_P</link>(X)   <link linkend="_group__scheduling__manager__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;PS_Profiling(X);</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group__firfirgcd__macros__group_1gab8ed6dfd8e9d61861b9aff28d6b7300f">HEPSY_SCHED_CS</link>(X,  i)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group__firfirgcd__macros__group_1ga64988c094471851711bcbbb5e1298616">PRE_WAIT</link>(X)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group__firfirgcd__macros__group_1ga521b4282fb564e25bc56196f1926ce30">POST_WAIT</link>(X)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group__firfirgcd__macros__group_1gaa2252b3bddc89494975397ffc18b09f5">HEPSY_S_TIMER</link>(X,  Y)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group__firfirgcd__macros__group_1gaf1fe2324408cd29c1e2dcd55f2e4a9c1">HEPSY_TRACE_PS_STATE</link>(X)   <link linkend="_group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;LOG &lt;&lt; &quot;Execution Time;&quot; &lt;&lt; sc_time_stamp().to_seconds() &lt;&lt; &quot;; Energy;&quot; &lt;&lt; pSystemManager-&gt;VPS[X].getEnergy() &lt;&lt; &quot;; Process;&quot; &lt;&lt; X &lt;&lt; &quot;; State;&quot; &lt;&lt; pSchedulingManager-&gt;process_state[X] &lt;&lt; endl;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group__firfirgcd__macros__group_1gadc2d4bfbe106f792246792d01d66d63c">HEPSY_TRACE_PS_STATE_THIS</link>(X)   this-&gt;LOG &lt;&lt; &quot;Execution Time;&quot; &lt;&lt; sc_time_stamp().to_seconds() &lt;&lt; &quot;; Energy;&quot; &lt;&lt; pSystemManager-&gt;VPS[X].getEnergy() &lt;&lt; &quot;; Process;&quot; &lt;&lt; X &lt;&lt; &quot;; State;&quot; &lt;&lt; this-&gt;process_state[X] &lt;&lt; endl;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group__firfirgcd__macros__group_1ga139185aa9c10392aada97618a69ee2cd">HEPSY_TRACE_CH_STATE</link>(X)   <link linkend="_group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;LOG &lt;&lt; &quot;Execution Time;&quot; &lt;&lt; sc_time_stamp().to_seconds() &lt;&lt; &quot;; Energy;&quot; &lt;&lt; pSystemManager-&gt;VCH[X].working_energy &lt;&lt; &quot;; Channel;&quot; &lt;&lt; X &lt;&lt; &quot;; State;&quot; &lt;&lt; pSchedulingManager-&gt;channel_state[X] &lt;&lt; endl;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group__firfirgcd__macros__group_1ga24b6f3a385f702b3a63e0811a0f22e75">HEPSY_TRACE_CH_STATE_THIS</link>(X)   this-&gt;LOG &lt;&lt; &quot;Execution Time;&quot; &lt;&lt; sc_time_stamp().to_seconds() &lt;&lt; &quot;; Energy;&quot; &lt;&lt; pSystemManager-&gt;VCH[X].working_energy &lt;&lt; &quot;; Channel;&quot; &lt;&lt; X &lt;&lt; &quot;; State;&quot; &lt;&lt; this-&gt;channel_state[X] &lt;&lt; endl;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group__firfirgcd__macros__group_1ga0f83efd33ffbe62c58c798abb824fa94">HEPSY_TRACE_BB_STATE</link>(X)   <link linkend="_group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;LOG &lt;&lt; &quot;Execution Time;&quot; &lt;&lt; sc_time_stamp().to_seconds() &lt;&lt; &quot;; Energy;&quot; &lt;&lt; 0 &lt;&lt; &quot;; BB;&quot; &lt;&lt; X &lt;&lt; &quot;; Mode;&quot; &lt;&lt; pSchedulingManager-&gt;BB_mode[X] &lt;&lt; endl;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group__firfirgcd__macros__group_1ga0782cab9383550027672da286d54c931">HEPSY_TRACE_BB_STATE_THIS</link>(X)   this-&gt;LOG &lt;&lt; &quot;Execution Time;&quot; &lt;&lt; sc_time_stamp().to_seconds() &lt;&lt; &quot;; Energy;&quot; &lt;&lt; 0 &lt;&lt; &quot;; BB;&quot; &lt;&lt; X &lt;&lt; &quot;; Mode;&quot; &lt;&lt; this-&gt;BB_mode[X] &lt;&lt; endl;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group__firfirgcd__macros__group_1ga37921dae893594f3710d892f471de3cb">HEPSY_TRACE_SCHED_STATE</link>(X)   this-&gt;LOG &lt;&lt; &quot;Execution Time;&quot; &lt;&lt; sc_time_stamp().to_seconds() &lt;&lt; &quot;; Energy;&quot; &lt;&lt; this-&gt;sched_en[X] &lt;&lt; &quot;; Scheduler;&quot; &lt;&lt; X &lt;&lt; &quot;; State;&quot; &lt;&lt; this-&gt;scheduler_state[X] &lt;&lt; endl;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Macros Implementation. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>V. Muttillo, L. Pomante </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>Apr. 2022 </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group__firfirgcd__macros__group_1ga652f3387e2319f751a6459f9db47cc3a"/>    <section>
+    <title>HEPSY_P</title>
+<indexterm><primary>HEPSY_P</primary><secondary>FirFirGCD Macros.</secondary></indexterm>
+<indexterm><primary>FirFirGCD Macros.</primary><secondary>HEPSY_P</secondary></indexterm>
+<para><computeroutput>#define HEPSY_P( X)   <link linkend="_group__scheduling__manager__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;PS_Profiling(X);</computeroutput></para><para>
+Definition at line 91 of file macros.h.</para>
+    </section><anchor xml:id="_group__firfirgcd__macros__group_1ga09b182b87a0936087ba1ff3ce91755e7"/>    <section>
+    <title>HEPSY_S</title>
+<indexterm><primary>HEPSY_S</primary><secondary>FirFirGCD Macros.</secondary></indexterm>
+<indexterm><primary>FirFirGCD Macros.</primary><secondary>HEPSY_S</secondary></indexterm>
+<para><computeroutput>#define HEPSY_S( X)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;wait(<link linkend="_group__firfirgcd__main__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;schedule[X]);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pSchedulingManager-&gt;release[X].notify(SC_ZERO_TIME);
+</programlisting><para>
+Definition at line 84 of file macros.h.</para>
+    </section><anchor xml:id="_group__firfirgcd__macros__group_1gaa2252b3bddc89494975397ffc18b09f5"/>    <section>
+    <title>HEPSY_S_TIMER</title>
+<indexterm><primary>HEPSY_S_TIMER</primary><secondary>FirFirGCD Macros.</secondary></indexterm>
+<indexterm><primary>FirFirGCD Macros.</primary><secondary>HEPSY_S_TIMER</secondary></indexterm>
+<para><computeroutput>#define HEPSY_S_TIMER( X,  Y)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__main__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1a81c4c7415d63b21f9ae15fd5594b7692">increaseTimer</link>(X,Y);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;if(!<link linkend="_group__firfirgcd__main__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1a21d2bb74e4472f99ec04243168e7964e">checkSPP</link>(X))&#32;wait(<link linkend="_group__firfirgcd__main__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;schedule[X]);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PRE_WAIT(X)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;wait(Y);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;POST_WAIT(X)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;if(!<link linkend="_group__firfirgcd__main__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1a21d2bb74e4472f99ec04243168e7964e">checkSPP</link>(X))&#32;<link linkend="_group__firfirgcd__main__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;release[X].notify(SC_ZERO_TIME);
+</programlisting><para>
+Definition at line 129 of file macros.h.</para>
+    </section><anchor xml:id="_group__firfirgcd__macros__group_1gab8ed6dfd8e9d61861b9aff28d6b7300f"/>    <section>
+    <title>HEPSY_SCHED_CS</title>
+<indexterm><primary>HEPSY_SCHED_CS</primary><secondary>FirFirGCD Macros.</secondary></indexterm>
+<indexterm><primary>FirFirGCD Macros.</primary><secondary>HEPSY_SCHED_CS</secondary></indexterm>
+<para><computeroutput>#define HEPSY_SCHED_CS( X,  i)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;wait(<link linkend="_group__firfirgcd__main__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32">VBB</link>[X].getProcessors()[0].getOverheadCS()*i);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;sched_oh[X]&#32;+=&#32;<link linkend="_group__firfirgcd__main__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32">VBB</link>[X].getProcessors()[0].getOverheadCS()*i;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;sched_en[X]+=&#32;((<link linkend="_group__firfirgcd__main__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32">VBB</link>[X].getProcessors()[0].getOverheadCS().to_seconds()&#32;*&#32;<link linkend="_group__firfirgcd__main__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32">VBB</link>[X].getProcessors()[0].getPower())*1000000);
+</programlisting><para>
+Definition at line 94 of file macros.h.</para>
+    </section><anchor xml:id="_group__firfirgcd__macros__group_1ga0f83efd33ffbe62c58c798abb824fa94"/>    <section>
+    <title>HEPSY_TRACE_BB_STATE</title>
+<indexterm><primary>HEPSY_TRACE_BB_STATE</primary><secondary>FirFirGCD Macros.</secondary></indexterm>
+<indexterm><primary>FirFirGCD Macros.</primary><secondary>HEPSY_TRACE_BB_STATE</secondary></indexterm>
+<para><computeroutput>#define HEPSY_TRACE_BB_STATE( X)   <link linkend="_group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;LOG &lt;&lt; &quot;Execution Time;&quot; &lt;&lt; sc_time_stamp().to_seconds() &lt;&lt; &quot;; Energy;&quot; &lt;&lt; 0 &lt;&lt; &quot;; BB;&quot; &lt;&lt; X &lt;&lt; &quot;; Mode;&quot; &lt;&lt; pSchedulingManager-&gt;BB_mode[X] &lt;&lt; endl;</computeroutput></para><para>
+Definition at line 156 of file macros.h.</para>
+    </section><anchor xml:id="_group__firfirgcd__macros__group_1ga0782cab9383550027672da286d54c931"/>    <section>
+    <title>HEPSY_TRACE_BB_STATE_THIS</title>
+<indexterm><primary>HEPSY_TRACE_BB_STATE_THIS</primary><secondary>FirFirGCD Macros.</secondary></indexterm>
+<indexterm><primary>FirFirGCD Macros.</primary><secondary>HEPSY_TRACE_BB_STATE_THIS</secondary></indexterm>
+<para><computeroutput>#define HEPSY_TRACE_BB_STATE_THIS( X)   this-&gt;LOG &lt;&lt; &quot;Execution Time;&quot; &lt;&lt; sc_time_stamp().to_seconds() &lt;&lt; &quot;; Energy;&quot; &lt;&lt; 0 &lt;&lt; &quot;; BB;&quot; &lt;&lt; X &lt;&lt; &quot;; Mode;&quot; &lt;&lt; this-&gt;BB_mode[X] &lt;&lt; endl;</computeroutput></para><para>
+Definition at line 160 of file macros.h.</para>
+    </section><anchor xml:id="_group__firfirgcd__macros__group_1ga139185aa9c10392aada97618a69ee2cd"/>    <section>
+    <title>HEPSY_TRACE_CH_STATE</title>
+<indexterm><primary>HEPSY_TRACE_CH_STATE</primary><secondary>FirFirGCD Macros.</secondary></indexterm>
+<indexterm><primary>FirFirGCD Macros.</primary><secondary>HEPSY_TRACE_CH_STATE</secondary></indexterm>
+<para><computeroutput>#define HEPSY_TRACE_CH_STATE( X)   <link linkend="_group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;LOG &lt;&lt; &quot;Execution Time;&quot; &lt;&lt; sc_time_stamp().to_seconds() &lt;&lt; &quot;; Energy;&quot; &lt;&lt; pSystemManager-&gt;VCH[X].working_energy &lt;&lt; &quot;; Channel;&quot; &lt;&lt; X &lt;&lt; &quot;; State;&quot; &lt;&lt; pSchedulingManager-&gt;channel_state[X] &lt;&lt; endl;</computeroutput></para><para>
+Definition at line 148 of file macros.h.</para>
+    </section><anchor xml:id="_group__firfirgcd__macros__group_1ga24b6f3a385f702b3a63e0811a0f22e75"/>    <section>
+    <title>HEPSY_TRACE_CH_STATE_THIS</title>
+<indexterm><primary>HEPSY_TRACE_CH_STATE_THIS</primary><secondary>FirFirGCD Macros.</secondary></indexterm>
+<indexterm><primary>FirFirGCD Macros.</primary><secondary>HEPSY_TRACE_CH_STATE_THIS</secondary></indexterm>
+<para><computeroutput>#define HEPSY_TRACE_CH_STATE_THIS( X)   this-&gt;LOG &lt;&lt; &quot;Execution Time;&quot; &lt;&lt; sc_time_stamp().to_seconds() &lt;&lt; &quot;; Energy;&quot; &lt;&lt; pSystemManager-&gt;VCH[X].working_energy &lt;&lt; &quot;; Channel;&quot; &lt;&lt; X &lt;&lt; &quot;; State;&quot; &lt;&lt; this-&gt;channel_state[X] &lt;&lt; endl;</computeroutput></para><para>
+Definition at line 152 of file macros.h.</para>
+    </section><anchor xml:id="_group__firfirgcd__macros__group_1gaf1fe2324408cd29c1e2dcd55f2e4a9c1"/>    <section>
+    <title>HEPSY_TRACE_PS_STATE</title>
+<indexterm><primary>HEPSY_TRACE_PS_STATE</primary><secondary>FirFirGCD Macros.</secondary></indexterm>
+<indexterm><primary>FirFirGCD Macros.</primary><secondary>HEPSY_TRACE_PS_STATE</secondary></indexterm>
+<para><computeroutput>#define HEPSY_TRACE_PS_STATE( X)   <link linkend="_group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;LOG &lt;&lt; &quot;Execution Time;&quot; &lt;&lt; sc_time_stamp().to_seconds() &lt;&lt; &quot;; Energy;&quot; &lt;&lt; pSystemManager-&gt;VPS[X].getEnergy() &lt;&lt; &quot;; Process;&quot; &lt;&lt; X &lt;&lt; &quot;; State;&quot; &lt;&lt; pSchedulingManager-&gt;process_state[X] &lt;&lt; endl;</computeroutput></para><para>
+Definition at line 140 of file macros.h.</para>
+    </section><anchor xml:id="_group__firfirgcd__macros__group_1gadc2d4bfbe106f792246792d01d66d63c"/>    <section>
+    <title>HEPSY_TRACE_PS_STATE_THIS</title>
+<indexterm><primary>HEPSY_TRACE_PS_STATE_THIS</primary><secondary>FirFirGCD Macros.</secondary></indexterm>
+<indexterm><primary>FirFirGCD Macros.</primary><secondary>HEPSY_TRACE_PS_STATE_THIS</secondary></indexterm>
+<para><computeroutput>#define HEPSY_TRACE_PS_STATE_THIS( X)   this-&gt;LOG &lt;&lt; &quot;Execution Time;&quot; &lt;&lt; sc_time_stamp().to_seconds() &lt;&lt; &quot;; Energy;&quot; &lt;&lt; pSystemManager-&gt;VPS[X].getEnergy() &lt;&lt; &quot;; Process;&quot; &lt;&lt; X &lt;&lt; &quot;; State;&quot; &lt;&lt; this-&gt;process_state[X] &lt;&lt; endl;</computeroutput></para><para>
+Definition at line 144 of file macros.h.</para>
+    </section><anchor xml:id="_group__firfirgcd__macros__group_1ga37921dae893594f3710d892f471de3cb"/>    <section>
+    <title>HEPSY_TRACE_SCHED_STATE</title>
+<indexterm><primary>HEPSY_TRACE_SCHED_STATE</primary><secondary>FirFirGCD Macros.</secondary></indexterm>
+<indexterm><primary>FirFirGCD Macros.</primary><secondary>HEPSY_TRACE_SCHED_STATE</secondary></indexterm>
+<para><computeroutput>#define HEPSY_TRACE_SCHED_STATE( X)   this-&gt;LOG &lt;&lt; &quot;Execution Time;&quot; &lt;&lt; sc_time_stamp().to_seconds() &lt;&lt; &quot;; Energy;&quot; &lt;&lt; this-&gt;sched_en[X] &lt;&lt; &quot;; Scheduler;&quot; &lt;&lt; X &lt;&lt; &quot;; State;&quot; &lt;&lt; this-&gt;scheduler_state[X] &lt;&lt; endl;</computeroutput></para><para>
+Definition at line 164 of file macros.h.</para>
+    </section><anchor xml:id="_group__firfirgcd__macros__group_1ga521b4282fb564e25bc56196f1926ce30"/>    <section>
+    <title>POST_WAIT</title>
+<indexterm><primary>POST_WAIT</primary><secondary>FirFirGCD Macros.</secondary></indexterm>
+<indexterm><primary>FirFirGCD Macros.</primary><secondary>POST_WAIT</secondary></indexterm>
+<para><computeroutput>#define POST_WAIT( X)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_group__firfirgcd__main__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;BB_mode[<link linkend="_group__firfirgcd__main__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[X]]==<link linkend="_group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a66e84e235b9e03b6fdfc7ffe7e775de8">suspended</link>)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;if&#32;(<link linkend="_group__firfirgcd__main__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1a21d2bb74e4472f99ec04243168e7964e">checkSPP</link>(X)==<emphasis role="keyword">true</emphasis>)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pSchedulingManager-&gt;BB_mode[<link linkend="_group__firfirgcd__main__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[X]]=<link linkend="_group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a5d178ae2be9d93ea4cbf1a9f0a2d9cbe">active</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;HEPSY_TRACE_BB_STATE(X)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;else&#32;<link linkend="_group__firfirgcd__main__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;activate[<link linkend="_group__firfirgcd__main__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[X]].notify(SC_ZERO_TIME);&#32;\
+&#32;&#32;&#32;&#32;}&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+if&#32;(<link linkend="_group__firfirgcd__main__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1a21d2bb74e4472f99ec04243168e7964e">checkSPP</link>(X)==<emphasis role="keyword">true</emphasis>)&#32;<link linkend="_group__firfirgcd__main__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;process_state[X]=<link linkend="_group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c">running</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;else&#32;<link linkend="_group__firfirgcd__main__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;process_state[X]=<link linkend="_group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473">ready</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__macros__group_1gaf1fe2324408cd29c1e2dcd55f2e4a9c1">HEPSY_TRACE_PS_STATE</link>(X)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+if&#32;(<link linkend="_group__firfirgcd__main__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;checkSPP(X)==false)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__main__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;process_status_changed[<link linkend="_group__firfirgcd__main__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;allocationPS_BB[X]]=true;
+</programlisting><para>
+Definition at line 109 of file macros.h.</para>
+    </section><anchor xml:id="_group__firfirgcd__macros__group_1ga64988c094471851711bcbbb5e1298616"/>    <section>
+    <title>PRE_WAIT</title>
+<indexterm><primary>PRE_WAIT</primary><secondary>FirFirGCD Macros.</secondary></indexterm>
+<indexterm><primary>FirFirGCD Macros.</primary><secondary>PRE_WAIT</secondary></indexterm>
+<para><computeroutput>#define PRE_WAIT( X)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__main__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;process_state[X]=<link linkend="_group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a4c97ffbad296d4a6b84b1c508fc5d32a">waiting</link>;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;HEPSY_TRACE_PS_STATE(X)
+</programlisting><para>
+Definition at line 101 of file macros.h.</para>
+</section>
+</section>
+</section>

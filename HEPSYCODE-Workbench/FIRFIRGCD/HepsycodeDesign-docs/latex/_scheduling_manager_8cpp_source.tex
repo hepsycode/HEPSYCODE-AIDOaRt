@@ -1,0 +1,628 @@
+\hypertarget{_scheduling_manager_8cpp_source}{}\doxysection{Scheduling\+Manager.\+cpp}
+\label{_scheduling_manager_8cpp_source}\index{HepsycodeDesign/src/SchedulingManager.cpp@{HepsycodeDesign/src/SchedulingManager.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * University of L'Aquila -\/ HEPSYCODE Source Code License                       *}}
+\DoxyCodeLine{00003 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00004 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00005 \textcolor{comment}{ * (c) 2018-\/2019 Centre of Excellence DEWS All rights reserved                  *}}
+\DoxyCodeLine{00006 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00007 \textcolor{comment}{ * <one line to give the program's name and a brief idea of what it does.>      *}}
+\DoxyCodeLine{00008 \textcolor{comment}{ * Copyright (C) 2022  Vittoriano Muttillo, Luigi Pomante                       *                                    *}}
+\DoxyCodeLine{00009 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00010 \textcolor{comment}{ * This program is free software: you can redistribute it and/or modify         *}}
+\DoxyCodeLine{00011 \textcolor{comment}{ * it under the terms of the GNU General Public License as published by         *}}
+\DoxyCodeLine{00012 \textcolor{comment}{ * the Free Software Foundation, either version 3 of the License, or            *}}
+\DoxyCodeLine{00013 \textcolor{comment}{ * (at your option) any later version.                                          *}}
+\DoxyCodeLine{00014 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00015 \textcolor{comment}{ * This program is distributed in the hope that it will be useful,              *}}
+\DoxyCodeLine{00016 \textcolor{comment}{ * but WITHOUT ANY WARRANTY; without even the implied warranty of               *}}
+\DoxyCodeLine{00017 \textcolor{comment}{ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the                *}}
+\DoxyCodeLine{00018 \textcolor{comment}{ * GNU General Public License for more details.                                 *}}
+\DoxyCodeLine{00019 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00020 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00021 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00022 \textcolor{comment}{ * Created on: 09/May/2022                                                      *}}
+\DoxyCodeLine{00023 \textcolor{comment}{ * Authors: Vittoriano Muttillo, Luigi Pomante                                  *}}
+\DoxyCodeLine{00024 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00025 \textcolor{comment}{ * email: vittoriano.muttillo@guest.univaq.it                                   *}}
+\DoxyCodeLine{00026 \textcolor{comment}{ *        luigi.pomante@univaq.it                                               *}}
+\DoxyCodeLine{00027 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00028 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00029 \textcolor{comment}{ * This code has been developed from an HEPSYCODE model used as demonstrator by *}}
+\DoxyCodeLine{00030 \textcolor{comment}{ * University of L'Aquila.                                                      *}}
+\DoxyCodeLine{00031 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00032 \textcolor{comment}{ * The code is used as a working example in the 'Embedded Systems' course of    *}}
+\DoxyCodeLine{00033 \textcolor{comment}{ * the Master in Conputer Science Engineering offered by the                    *}}
+\DoxyCodeLine{00034 \textcolor{comment}{ * University of L'Aquila                                                       *}}
+\DoxyCodeLine{00035 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{00037 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00038 \textcolor{comment}{ * SchedulingManager : Scheduling Manager file.}}
+\DoxyCodeLine{00039 \textcolor{comment}{ *}}
+\DoxyCodeLine{00040 \textcolor{comment}{ * Scheduling Manager: HEPSIM Scheduling Manager}}
+\DoxyCodeLine{00041 \textcolor{comment}{ *}}
+\DoxyCodeLine{00042 \textcolor{comment}{********************************************************************************/}}
+\DoxyCodeLine{00043 }
+\DoxyCodeLine{00050 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00051 \textcolor{comment}{ ***                                Includes                                  ***}}
+\DoxyCodeLine{00052 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00053 }
+\DoxyCodeLine{00054 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{00055 \textcolor{preprocessor}{\#include <stdlib.h>}}
+\DoxyCodeLine{00056 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{00057 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{00058 }
+\DoxyCodeLine{00059 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{_scheduling_manager_8h}{SchedulingManager.h}}"}}
+\DoxyCodeLine{00060 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{_system_manager_8h}{SystemManager.h}}"}}
+\DoxyCodeLine{00061 }
+\DoxyCodeLine{00062 \textcolor{keyword}{extern} \mbox{\hyperlink{class_system_manager}{SystemManager}} *\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}};}
+\DoxyCodeLine{00063 \textcolor{keyword}{extern} \textcolor{keywordtype}{bool} \mbox{\hyperlink{group__firfirgcd__main__group_gaa8fde88a1a4ceac81a26274e6f38c4a4}{stop\_concurrency\_sampling}};}
+\DoxyCodeLine{00064 \textcolor{keyword}{extern} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{group__firfirgcd__main__group_gae8f25bd55b4a9f4801e99450be7d7423}{sampling\_period}};}
+\DoxyCodeLine{00065 }
+\DoxyCodeLine{00066 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00067 \textcolor{comment}{ ***                                Functions                                 ***}}
+\DoxyCodeLine{00068 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00069 }
+\DoxyCodeLine{00070 \textcolor{comment}{// Link among scheduler instances and scheduler policies}}
+\DoxyCodeLine{00071 }
+\DoxyCodeLine{00072 \textcolor{preprocessor}{\#if defined(\_TIMING\_ENERGY\_) \&\& defined(\_LOAD\_)}}
+\DoxyCodeLine{00073 }
+\DoxyCodeLine{00074     \textcolor{keywordtype}{void} SchedulingManager::scheduler\_8051\_0()}
+\DoxyCodeLine{00075     \{}
+\DoxyCodeLine{00076         policy\_SCHED\_FCFS(\mbox{\hyperlink{group__firfirgcd__define__group_ggaaa53553033df32820178982628a60caea2112514dc02bed6a625e425c0487a6ab}{BB8051\_0\_id}}, 0.0F, 0.0F);}
+\DoxyCodeLine{00077     \}}
+\DoxyCodeLine{00078 }
+\DoxyCodeLine{00079     \textcolor{keywordtype}{void} SchedulingManager::scheduler\_8051\_1()}
+\DoxyCodeLine{00080     \{}
+\DoxyCodeLine{00081         policy\_SCHED\_FCFS(\mbox{\hyperlink{group__firfirgcd__define__group_ggaaa53553033df32820178982628a60caea5487dd1d1d140792e1f0e2204299454c}{BB8051\_1\_id}}, 0.0F, 0.0F);}
+\DoxyCodeLine{00082     \}}
+\DoxyCodeLine{00083 }
+\DoxyCodeLine{00084     \textcolor{keywordtype}{void} SchedulingManager::scheduler\_leon3\_2()}
+\DoxyCodeLine{00085     \{}
+\DoxyCodeLine{00086         policy\_SCHED\_FCFS(\mbox{\hyperlink{group__firfirgcd__define__group_ggaaa53553033df32820178982628a60caeaa5912815fd96df44c5a5862aabfee096}{BBleon3\_0\_id}}, 0.0F, 0.0F);}
+\DoxyCodeLine{00087     \}}
+\DoxyCodeLine{00088 }
+\DoxyCodeLine{00089     \textcolor{keywordtype}{void} SchedulingManager::scheduler\_leon3\_3()}
+\DoxyCodeLine{00090     \{}
+\DoxyCodeLine{00091         policy\_SCHED\_FCFS(\mbox{\hyperlink{group__firfirgcd__define__group_ggaaa53553033df32820178982628a60caea375dd2456383ea5d0e048f3674a44671}{BBleon3\_1\_id}}, 0.0F, 0.0F);}
+\DoxyCodeLine{00092     \}}
+\DoxyCodeLine{00093 }
+\DoxyCodeLine{00094 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00095 }
+\DoxyCodeLine{00096 \textcolor{preprocessor}{\#if defined(\_TIMING\_ENERGY\_) \&\& !defined(\_LOAD\_)}}
+\DoxyCodeLine{00097 }
+\DoxyCodeLine{00098     \textcolor{keywordtype}{void} SchedulingManager::scheduler\_8051\_0()}
+\DoxyCodeLine{00099     \{}
+\DoxyCodeLine{00100         policy\_SCHED\_FCFS(\mbox{\hyperlink{group__firfirgcd__define__group_ggaaa53553033df32820178982628a60caea2112514dc02bed6a625e425c0487a6ab}{BB8051\_0\_id}}, 1.0F, 0.25F);}
+\DoxyCodeLine{00101     \}}
+\DoxyCodeLine{00102 }
+\DoxyCodeLine{00103     \textcolor{keywordtype}{void} SchedulingManager::scheduler\_8051\_1()}
+\DoxyCodeLine{00104     \{}
+\DoxyCodeLine{00105         policy\_SCHED\_FCFS(\mbox{\hyperlink{group__firfirgcd__define__group_ggaaa53553033df32820178982628a60caea5487dd1d1d140792e1f0e2204299454c}{BB8051\_1\_id}}, 1.0F, 0.25F);}
+\DoxyCodeLine{00106     \}}
+\DoxyCodeLine{00107 }
+\DoxyCodeLine{00108     \textcolor{keywordtype}{void} SchedulingManager::scheduler\_leon3\_2()}
+\DoxyCodeLine{00109     \{}
+\DoxyCodeLine{00110         policy\_SCHED\_FCFS(\mbox{\hyperlink{group__firfirgcd__define__group_ggaaa53553033df32820178982628a60caeaa5912815fd96df44c5a5862aabfee096}{BBleon3\_0\_id}}, 1.0F, 0.25F);}
+\DoxyCodeLine{00111     \}}
+\DoxyCodeLine{00112 }
+\DoxyCodeLine{00113     \textcolor{keywordtype}{void} SchedulingManager::scheduler\_leon3\_3()}
+\DoxyCodeLine{00114     \{}
+\DoxyCodeLine{00115         policy\_SCHED\_FCFS(\mbox{\hyperlink{group__firfirgcd__define__group_ggaaa53553033df32820178982628a60caea375dd2456383ea5d0e048f3674a44671}{BBleon3\_1\_id}}, 1.0F, 0.25F);}
+\DoxyCodeLine{00116     \}}
+\DoxyCodeLine{00117 }
+\DoxyCodeLine{00118 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00119 }
+\DoxyCodeLine{00120 \textcolor{preprocessor}{\#if !defined(\_TIMING\_ENERGY\_) \&\& !defined(\_LOAD\_)}}
+\DoxyCodeLine{00121 }
+\DoxyCodeLine{00122     \textcolor{keywordtype}{void} SchedulingManager::functional\_analyzer()}
+\DoxyCodeLine{00123     \{}
+\DoxyCodeLine{00124         policy\_SCHED\_RR(0, 0.0F, 0.0F);}
+\DoxyCodeLine{00125     \}}
+\DoxyCodeLine{00126 }
+\DoxyCodeLine{00127 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00128 }
+\DoxyCodeLine{00130 \textcolor{comment}{// Implementation of scheduling policies}}
+\DoxyCodeLine{00132 \textcolor{comment}{}}
+\DoxyCodeLine{00134 \textcolor{comment}{//Round Robin (RR) (used, without OVH, also for the functional analyzer)}}
+\DoxyCodeLine{00135 \textcolor{comment}{// The running process is changed after the execution of each statement wihthe next ready one (in a circular way)}}
+\DoxyCodeLine{00136 \textcolor{keywordtype}{void} SchedulingManager::policy\_SCHED\_RR(\textcolor{keywordtype}{int} pinstance, \textcolor{keywordtype}{float} full\_oh, \textcolor{keywordtype}{float} part\_oh)}
+\DoxyCodeLine{00137 \{}
+\DoxyCodeLine{00139 }
+\DoxyCodeLine{00140     \textcolor{comment}{// Used to manage processes and processing unit}}
+\DoxyCodeLine{00141     \mbox{\hyperlink{class_process}{Process}} ps;}
+\DoxyCodeLine{00142     \mbox{\hyperlink{class_basic_block}{BasicBlock}} bb;}
+\DoxyCodeLine{00143     \mbox{\hyperlink{class_processing_unit}{ProcessingUnit}} pu;}
+\DoxyCodeLine{00144 }
+\DoxyCodeLine{00145     \textcolor{comment}{// Get BB/PU with ID equal to pinstance}}
+\DoxyCodeLine{00146     bb = \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{VBB}}[pinstance];}
+\DoxyCodeLine{00147     pu = \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{VBB}}[pinstance].getProcessors()[0];  \textcolor{comment}{// Mono-\/core}}
+\DoxyCodeLine{00148 }
+\DoxyCodeLine{00149     \textcolor{comment}{// Get the processes allocated on the BB/PU}}
+\DoxyCodeLine{00150     vector<int> local\_PS = \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_af468620e73667d65dbb7db93b78712a9}{getAllocationPS\_BB}}(pinstance);}
+\DoxyCodeLine{00151 }
+\DoxyCodeLine{00152 \textcolor{preprocessor}{    \#if defined(\_DEBUG\_)}}
+\DoxyCodeLine{00153         \textcolor{keywordflow}{if} (local\_PS.size() != 0)}
+\DoxyCodeLine{00155         \{}
+\DoxyCodeLine{00156             cout << endl << \textcolor{stringliteral}{"Scheduler for BB: "} << bb.\mbox{\hyperlink{class_basic_block_ae1dead3b6fbfaaf11aa596013d9c3615}{getName}}() << \textcolor{stringliteral}{"["} << pinstance << \textcolor{stringliteral}{"] -\/ PU: "} << pu.\mbox{\hyperlink{class_processing_unit_a9d6d56e08d110b9a12c45f12ebff1d97}{getName}}() << \textcolor{stringliteral}{"["} << pu.\mbox{\hyperlink{class_processing_unit_a367aa0751e97e2562b64a50b4e4142dd}{getId}}() << \textcolor{stringliteral}{"]"} << endl;}
+\DoxyCodeLine{00157             cout << \textcolor{stringliteral}{"Processes["} << local\_PS.size() << \textcolor{stringliteral}{"]: "};}
+\DoxyCodeLine{00158             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < local\_PS.size(); i++) cout << local\_PS[i] << \textcolor{stringliteral}{" "};}
+\DoxyCodeLine{00159             cout << endl;}
+\DoxyCodeLine{00160             cout << \textcolor{stringliteral}{"Policy: Round-\/Robin"} << endl << endl;}
+\DoxyCodeLine{00161         \}}
+\DoxyCodeLine{00162         \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"No processes on BB: "} << bb.\mbox{\hyperlink{class_basic_block_ae1dead3b6fbfaaf11aa596013d9c3615}{getName}}() << \textcolor{stringliteral}{"["} << pinstance << \textcolor{stringliteral}{"] -\/ PU: "} << pu.\mbox{\hyperlink{class_processing_unit_a9d6d56e08d110b9a12c45f12ebff1d97}{getName}}() << \textcolor{stringliteral}{"["} << pu.\mbox{\hyperlink{class_processing_unit_a367aa0751e97e2562b64a50b4e4142dd}{getId}}() << \textcolor{stringliteral}{"] -\/ Scheduler terminated"} << endl << endl;}
+\DoxyCodeLine{00163 }
+\DoxyCodeLine{00164 \textcolor{preprocessor}{        \#if \_WIN32}}
+\DoxyCodeLine{00165             system(\textcolor{stringliteral}{"pause"});}
+\DoxyCodeLine{00166 \textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{00167 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{00168 }
+\DoxyCodeLine{00170 }
+\DoxyCodeLine{00171     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} current\_local\_ps\_id = 0;}
+\DoxyCodeLine{00172     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} last\_served\_local\_ps\_id = 0;}
+\DoxyCodeLine{00173 }
+\DoxyCodeLine{00174     \textcolor{comment}{// If no processes for this processing unit the scheduler self-\/quit}}
+\DoxyCodeLine{00175     \textcolor{keywordflow}{if} (local\_PS.size() == 0) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00176     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00177     \{}
+\DoxyCodeLine{00178         \textcolor{comment}{// Get the current process}}
+\DoxyCodeLine{00179         ps = \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[local\_PS[current\_local\_ps\_id]];}
+\DoxyCodeLine{00180 }
+\DoxyCodeLine{00181         \textcolor{keywordflow}{do}}
+\DoxyCodeLine{00182         \{}
+\DoxyCodeLine{00183 \textcolor{preprocessor}{            \#if !defined(\_TIMING\_ENERGY\_) // Only if functional analizer (only RR)}}
+\DoxyCodeLine{00184                 \textcolor{comment}{// Concurrency check at each loop (i.e., current\_local\_ps\_id == 0)}}
+\DoxyCodeLine{00185                 \textcolor{keywordflow}{if} (current\_local\_ps\_id == 0)}
+\DoxyCodeLine{00186                 \{}
+\DoxyCodeLine{00187                     checkStatesProcessesRR();}
+\DoxyCodeLine{00188                     checkStatesChannelsRR();}
+\DoxyCodeLine{00189                 \}}
+\DoxyCodeLine{00190 \textcolor{preprocessor}{            \#endif}}
+\DoxyCodeLine{00191 }
+\DoxyCodeLine{00192             \textcolor{comment}{// Change scheduler state}}
+\DoxyCodeLine{00193             scheduler\_state[pinstance] = \mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c}{running}};}
+\DoxyCodeLine{00194             \mbox{\hyperlink{group__firfirgcd__macros__group_ga37921dae893594f3710d892f471de3cb}{HEPSY\_TRACE\_SCHED\_STATE}}(pinstance)}
+\DoxyCodeLine{00195 }
+\DoxyCodeLine{00196             \textcolor{comment}{// Partial overhead to get info about the current process}}
+\DoxyCodeLine{00197             \mbox{\hyperlink{group__firfirgcd__macros__group_gab8ed6dfd8e9d61861b9aff28d6b7300f}{HEPSY\_SCHED\_CS}}(pinstance, part\_oh)}
+\DoxyCodeLine{00198 }
+\DoxyCodeLine{00199             \textcolor{keywordflow}{if} (process\_state[ps.\mbox{\hyperlink{class_process_af4fcdaeb47e30030e4d4877232b6c135}{id}}] == \mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473}{ready}})}
+\DoxyCodeLine{00200             \{}
+\DoxyCodeLine{00201 }
+\DoxyCodeLine{00202                 \textcolor{keywordflow}{if} (current\_local\_ps\_id != last\_served\_local\_ps\_id)}
+\DoxyCodeLine{00203                 \{}
+\DoxyCodeLine{00204                     \textcolor{comment}{// OVH to complete context switch}}
+\DoxyCodeLine{00205                     \mbox{\hyperlink{group__firfirgcd__macros__group_gab8ed6dfd8e9d61861b9aff28d6b7300f}{HEPSY\_SCHED\_CS}}(pinstance, full\_oh)}
+\DoxyCodeLine{00206                     last\_served\_local\_ps\_id = current\_local\_ps\_id;}
+\DoxyCodeLine{00207 }
+\DoxyCodeLine{00208                     sched\_CS[pinstance]++; \textcolor{comment}{// Number of CS}}
+\DoxyCodeLine{00209                 \}}
+\DoxyCodeLine{00210 }
+\DoxyCodeLine{00211                 \textcolor{comment}{// Exchange token with the current ready process and change its state in run}}
+\DoxyCodeLine{00212                 schedule[ps.\mbox{\hyperlink{class_process_af4fcdaeb47e30030e4d4877232b6c135}{id}}].notify(SC\_ZERO\_TIME);}
+\DoxyCodeLine{00213                 process\_state[ps.\mbox{\hyperlink{class_process_af4fcdaeb47e30030e4d4877232b6c135}{id}}] = \mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c}{running}};}
+\DoxyCodeLine{00214                 \mbox{\hyperlink{group__firfirgcd__macros__group_gadc2d4bfbe106f792246792d01d66d63c}{HEPSY\_TRACE\_PS\_STATE\_THIS}}(ps.\mbox{\hyperlink{class_process_af4fcdaeb47e30030e4d4877232b6c135}{id}})}
+\DoxyCodeLine{00215 }
+\DoxyCodeLine{00216                 \textcolor{comment}{// Change scheduler state}}
+\DoxyCodeLine{00217                 scheduler\_state[pinstance] = \mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473}{ready}};}
+\DoxyCodeLine{00218                 \mbox{\hyperlink{group__firfirgcd__macros__group_ga37921dae893594f3710d892f471de3cb}{HEPSY\_TRACE\_SCHED\_STATE}}(pinstance)}
+\DoxyCodeLine{00219 }
+\DoxyCodeLine{00220                 wait(release[ps.\textcolor{keywordtype}{id}]);}
+\DoxyCodeLine{00221 }
+\DoxyCodeLine{00222                 \textcolor{comment}{// Manage process state: if no blocked go in ready state}}
+\DoxyCodeLine{00223                 if (process\_state[ps.\textcolor{keywordtype}{id}] == \mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c}{running}}) process\_state[ps.\textcolor{keywordtype}{id}] = \mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473}{ready}};}
+\DoxyCodeLine{00224                 \mbox{\hyperlink{group__firfirgcd__macros__group_gadc2d4bfbe106f792246792d01d66d63c}{HEPSY\_TRACE\_PS\_STATE\_THIS}}(ps.\textcolor{keywordtype}{id})}
+\DoxyCodeLine{00225             \}}
+\DoxyCodeLine{00226 }
+\DoxyCodeLine{00227             \textcolor{comment}{//Move to next process in the round}}
+\DoxyCodeLine{00228             current\_local\_ps\_id = (current\_local\_ps\_id + 1) \% (local\_PS.size());}
+\DoxyCodeLine{00229             \textcolor{comment}{// Get the new current process}}
+\DoxyCodeLine{00230             ps = \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>VPS[local\_PS[current\_local\_ps\_id]];}
+\DoxyCodeLine{00231 }
+\DoxyCodeLine{00232             \textcolor{comment}{// if a "loop" on the allocated processes is completed without serving any process (and the new current is still waiting)}}
+\DoxyCodeLine{00233             \textcolor{comment}{// then check if it is possible to block the scheduler}}
+\DoxyCodeLine{00234             if ((current\_local\_ps\_id == last\_served\_local\_ps\_id) \&\& (process\_state[ps.\textcolor{keywordtype}{id}] == \mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a4c97ffbad296d4a6b84b1c508fc5d32a}{waiting}}))}
+\DoxyCodeLine{00235             \{}
+\DoxyCodeLine{00236                 \textcolor{keywordflow}{if} (process\_status\_changed[\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[ps.\mbox{\hyperlink{class_process_af4fcdaeb47e30030e4d4877232b6c135}{id}}]] == \textcolor{keyword}{false})}
+\DoxyCodeLine{00237                 \{}
+\DoxyCodeLine{00238                     scheduler\_state[pinstance] = \mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a4c97ffbad296d4a6b84b1c508fc5d32a}{waiting}};}
+\DoxyCodeLine{00239                     \mbox{\hyperlink{group__firfirgcd__macros__group_ga37921dae893594f3710d892f471de3cb}{HEPSY\_TRACE\_SCHED\_STATE}}(pinstance)}
+\DoxyCodeLine{00240 }
+\DoxyCodeLine{00241                     \textcolor{comment}{// If no changes during explicit wait, it is safe to block the sceduler}}
+\DoxyCodeLine{00242                     BB\_mode[\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[ps.\mbox{\hyperlink{class_process_af4fcdaeb47e30030e4d4877232b6c135}{id}}]] = \mbox{\hyperlink{group__firfirgcd__define__group_gga1a6b6fb557d8d37d59700faf4e4c9167a66e84e235b9e03b6fdfc7ffe7e775de8}{suspended}};}
+\DoxyCodeLine{00243                     \mbox{\hyperlink{group__firfirgcd__macros__group_ga0782cab9383550027672da286d54c931}{HEPSY\_TRACE\_BB\_STATE\_THIS}}(ps.\mbox{\hyperlink{class_process_af4fcdaeb47e30030e4d4877232b6c135}{id}})}
+\DoxyCodeLine{00244 }
+\DoxyCodeLine{00245                     wait(activate[\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>allocationPS\_BB[ps.\textcolor{keywordtype}{id}]]);}
+\DoxyCodeLine{00246 }
+\DoxyCodeLine{00247                     \textcolor{comment}{// Reactivate BB/PU (scheduler is reactivated at the beginning of the while loop)}}
+\DoxyCodeLine{00248                     BB\_mode[\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>allocationPS\_BB[ps.\textcolor{keywordtype}{id}]] = \mbox{\hyperlink{group__firfirgcd__define__group_gga1a6b6fb557d8d37d59700faf4e4c9167a5d178ae2be9d93ea4cbf1a9f0a2d9cbe}{active}};}
+\DoxyCodeLine{00249                     \mbox{\hyperlink{group__firfirgcd__macros__group_ga0782cab9383550027672da286d54c931}{HEPSY\_TRACE\_BB\_STATE\_THIS}}(ps.\textcolor{keywordtype}{id})}
+\DoxyCodeLine{00250 }
+\DoxyCodeLine{00251                 \}}
+\DoxyCodeLine{00252                 \textcolor{comment}{// Otherwise, it is NOT safe to block the sceduler, reset process\_status\_changed to false}}
+\DoxyCodeLine{00253                 else}
+\DoxyCodeLine{00254                 \{}
+\DoxyCodeLine{00255                     process\_status\_changed[\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[ps.\mbox{\hyperlink{class_process_af4fcdaeb47e30030e4d4877232b6c135}{id}}]] = \textcolor{keyword}{false};}
+\DoxyCodeLine{00256                 \}}
+\DoxyCodeLine{00257             \}}
+\DoxyCodeLine{00258 }
+\DoxyCodeLine{00259             \textcolor{comment}{// Increase the number of scheduler executions for the scheduler instance}}
+\DoxyCodeLine{00260             \textcolor{comment}{// associated to the processing unit with id = pinstance}}
+\DoxyCodeLine{00261             sched\_loops[pinstance]++;}
+\DoxyCodeLine{00262 }
+\DoxyCodeLine{00263         \}\textcolor{keywordflow}{while} (1);}
+\DoxyCodeLine{00264     \}}
+\DoxyCodeLine{00265 \}}
+\DoxyCodeLine{00266 }
+\DoxyCodeLine{00268 \textcolor{comment}{// Fist Come First Served (FCFS)}}
+\DoxyCodeLine{00269 \textcolor{comment}{// A process run without preemption until it is ready}}
+\DoxyCodeLine{00270 \textcolor{comment}{// It is blocked only when it start using a channel (i.e., a kind of system call)}}
+\DoxyCodeLine{00271 \textcolor{keywordtype}{void} SchedulingManager::policy\_SCHED\_FCFS(\textcolor{keywordtype}{int} pinstance, \textcolor{keywordtype}{float} full\_oh, \textcolor{keywordtype}{float} part\_oh)}
+\DoxyCodeLine{00272 \{}
+\DoxyCodeLine{00273 }
+\DoxyCodeLine{00275 }
+\DoxyCodeLine{00276     \textcolor{comment}{// Used to manage processes and processing unit}}
+\DoxyCodeLine{00277     \mbox{\hyperlink{class_process}{Process}} ps;}
+\DoxyCodeLine{00278     \mbox{\hyperlink{class_basic_block}{BasicBlock}} bb;}
+\DoxyCodeLine{00279     \mbox{\hyperlink{class_processing_unit}{ProcessingUnit}} pu;}
+\DoxyCodeLine{00280 }
+\DoxyCodeLine{00281     \textcolor{comment}{// Get BB/PU with ID equal to pinstance}}
+\DoxyCodeLine{00282     bb = \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{VBB}}[pinstance];}
+\DoxyCodeLine{00283     pu = \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{VBB}}[pinstance].getProcessors()[0];  \textcolor{comment}{// Mono-\/core}}
+\DoxyCodeLine{00284 }
+\DoxyCodeLine{00285     \textcolor{comment}{// Get the processes allocated on the BB/PU}}
+\DoxyCodeLine{00286     vector<int> local\_PS = \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_af468620e73667d65dbb7db93b78712a9}{getAllocationPS\_BB}}(pinstance);}
+\DoxyCodeLine{00287 }
+\DoxyCodeLine{00288 \textcolor{preprocessor}{    \#if defined(\_DEBUG\_)}}
+\DoxyCodeLine{00289         \textcolor{keywordflow}{if} (local\_PS.size() != 0)}
+\DoxyCodeLine{00291         \{}
+\DoxyCodeLine{00292             cout << endl << \textcolor{stringliteral}{"Scheduler for BB: "} << bb.\mbox{\hyperlink{class_basic_block_ae1dead3b6fbfaaf11aa596013d9c3615}{getName}}() << \textcolor{stringliteral}{"["} << pinstance << \textcolor{stringliteral}{"] -\/ PU: "} << pu.\mbox{\hyperlink{class_processing_unit_a9d6d56e08d110b9a12c45f12ebff1d97}{getName}}() << \textcolor{stringliteral}{"["} << pu.\mbox{\hyperlink{class_processing_unit_a367aa0751e97e2562b64a50b4e4142dd}{getId}}() << \textcolor{stringliteral}{"]"} << endl;}
+\DoxyCodeLine{00293             cout << \textcolor{stringliteral}{"Processes["} << local\_PS.size() << \textcolor{stringliteral}{"]: "};}
+\DoxyCodeLine{00294             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < local\_PS.size(); i++) cout << local\_PS[i] << \textcolor{stringliteral}{" "};}
+\DoxyCodeLine{00295             cout << endl;}
+\DoxyCodeLine{00296             cout << \textcolor{stringliteral}{"Policy: FCFS"} << endl << endl;}
+\DoxyCodeLine{00297         \}}
+\DoxyCodeLine{00298         \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"No processes on BB: "} << bb.\mbox{\hyperlink{class_basic_block_ae1dead3b6fbfaaf11aa596013d9c3615}{getName}}() << \textcolor{stringliteral}{"["} << pinstance << \textcolor{stringliteral}{"] -\/ PU: "} << pu.\mbox{\hyperlink{class_processing_unit_a9d6d56e08d110b9a12c45f12ebff1d97}{getName}}() << \textcolor{stringliteral}{"["} << pu.\mbox{\hyperlink{class_processing_unit_a367aa0751e97e2562b64a50b4e4142dd}{getId}}() << \textcolor{stringliteral}{"] -\/ Scheduler terminated"} << endl << endl;}
+\DoxyCodeLine{00299 }
+\DoxyCodeLine{00300 \textcolor{preprocessor}{        \#if \_WIN32}}
+\DoxyCodeLine{00301             system(\textcolor{stringliteral}{"pause"});}
+\DoxyCodeLine{00302 \textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{00303 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{00304 }
+\DoxyCodeLine{00306 }
+\DoxyCodeLine{00307     \textcolor{comment}{// Working variables}}
+\DoxyCodeLine{00308     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} current\_local\_ps\_id = 0; \textcolor{comment}{// Index of local processes}}
+\DoxyCodeLine{00309     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} last\_served\_local\_ps\_id = 0; \textcolor{comment}{// Keep the ID of the process tha has been run the last time}}
+\DoxyCodeLine{00310 }
+\DoxyCodeLine{00311     \textcolor{comment}{// If no processes for this processing unit the scheduler self-\/quit}}
+\DoxyCodeLine{00312     \textcolor{keywordflow}{if} (local\_PS.size()==0) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00313     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00314     \textcolor{comment}{// If there is at least one process execute selected one until is ready (by looping on current\_local\_ps\_id, index of local processes)}}
+\DoxyCodeLine{00315     \{}
+\DoxyCodeLine{00316 }
+\DoxyCodeLine{00317         \textcolor{comment}{// Get the current process}}
+\DoxyCodeLine{00318         ps = \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[local\_PS[current\_local\_ps\_id]];}
+\DoxyCodeLine{00319 }
+\DoxyCodeLine{00320         \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{00321 }
+\DoxyCodeLine{00322             \textcolor{comment}{// Change scheduler state in running}}
+\DoxyCodeLine{00323             scheduler\_state[pinstance] = \mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c}{running}};}
+\DoxyCodeLine{00324             \mbox{\hyperlink{group__firfirgcd__macros__group_ga37921dae893594f3710d892f471de3cb}{HEPSY\_TRACE\_SCHED\_STATE}}(pinstance)}
+\DoxyCodeLine{00325             }
+\DoxyCodeLine{00326             \textcolor{comment}{// Partial overhead to get info about the current process}}
+\DoxyCodeLine{00327             \mbox{\hyperlink{group__firfirgcd__macros__group_gab8ed6dfd8e9d61861b9aff28d6b7300f}{HEPSY\_SCHED\_CS}}(pinstance, part\_oh)}
+\DoxyCodeLine{00328 }
+\DoxyCodeLine{00329             \textcolor{comment}{// FCFS: Until the considerd local process is ready it will run without scheduling overhead}}
+\DoxyCodeLine{00330             \textcolor{keywordflow}{while}(process\_state[ps.\mbox{\hyperlink{class_process_af4fcdaeb47e30030e4d4877232b6c135}{id}}]==\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473}{ready}})}
+\DoxyCodeLine{00331             \{}
+\DoxyCodeLine{00332 }
+\DoxyCodeLine{00333                 \textcolor{comment}{// If the local process is different from the last one that has been run}}
+\DoxyCodeLine{00334                 \textcolor{comment}{// there is the need for a context switch so we need to pay an overhead}}
+\DoxyCodeLine{00335                 \textcolor{keywordflow}{if} (current\_local\_ps\_id != last\_served\_local\_ps\_id)}
+\DoxyCodeLine{00336                 \{}
+\DoxyCodeLine{00337                     \mbox{\hyperlink{group__firfirgcd__macros__group_gab8ed6dfd8e9d61861b9aff28d6b7300f}{HEPSY\_SCHED\_CS}}(pinstance, full\_oh)}
+\DoxyCodeLine{00338                     last\_served\_local\_ps\_id = current\_local\_ps\_id;}
+\DoxyCodeLine{00339 }
+\DoxyCodeLine{00340                     sched\_CS[pinstance]++; \textcolor{comment}{// Number of CS}}
+\DoxyCodeLine{00341                 \}}
+\DoxyCodeLine{00342 }
+\DoxyCodeLine{00343                 \textcolor{comment}{// Exchange token with the current ready process and change state in running}}
+\DoxyCodeLine{00344                 schedule[ps.\mbox{\hyperlink{class_process_af4fcdaeb47e30030e4d4877232b6c135}{id}}].notify(SC\_ZERO\_TIME);}
+\DoxyCodeLine{00345                 process\_state[ps.\mbox{\hyperlink{class_process_af4fcdaeb47e30030e4d4877232b6c135}{id}}]=\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c}{running}};}
+\DoxyCodeLine{00346                 \mbox{\hyperlink{group__firfirgcd__macros__group_gadc2d4bfbe106f792246792d01d66d63c}{HEPSY\_TRACE\_PS\_STATE\_THIS}}(ps.\mbox{\hyperlink{class_process_af4fcdaeb47e30030e4d4877232b6c135}{id}})}
+\DoxyCodeLine{00347 }
+\DoxyCodeLine{00348                 \textcolor{comment}{// Change scheduler state in ready}}
+\DoxyCodeLine{00349                 scheduler\_state[pinstance] = \mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473}{ready}};}
+\DoxyCodeLine{00350                 \mbox{\hyperlink{group__firfirgcd__macros__group_ga37921dae893594f3710d892f471de3cb}{HEPSY\_TRACE\_SCHED\_STATE}}(pinstance)}
+\DoxyCodeLine{00351 }
+\DoxyCodeLine{00352                 wait(release[ps.\textcolor{keywordtype}{id}]);}
+\DoxyCodeLine{00353 }
+\DoxyCodeLine{00354                 \textcolor{comment}{// If no blocked go in ready state}}
+\DoxyCodeLine{00355                 if (process\_state[ps.\textcolor{keywordtype}{id}]==\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c}{running}}) process\_state[ps.\textcolor{keywordtype}{id}]=\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473}{ready}};}
+\DoxyCodeLine{00356                 \mbox{\hyperlink{group__firfirgcd__macros__group_gadc2d4bfbe106f792246792d01d66d63c}{HEPSY\_TRACE\_PS\_STATE\_THIS}}(ps.\textcolor{keywordtype}{id})}
+\DoxyCodeLine{00357             \}}
+\DoxyCodeLine{00358 }
+\DoxyCodeLine{00359             \textcolor{comment}{//Move to next process}}
+\DoxyCodeLine{00360             current\_local\_ps\_id = (current\_local\_ps\_id + 1) \% (local\_PS.size());}
+\DoxyCodeLine{00361             \textcolor{comment}{// Get the new current process}}
+\DoxyCodeLine{00362             ps = \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>VPS[local\_PS[current\_local\_ps\_id]];}
+\DoxyCodeLine{00363 }
+\DoxyCodeLine{00364             \textcolor{comment}{// if a "loop" on the allocated processes is completed without serving any process}}
+\DoxyCodeLine{00365             \textcolor{comment}{// then check if it is possible to block the scheduler}}
+\DoxyCodeLine{00366             if ((current\_local\_ps\_id == last\_served\_local\_ps\_id) \&\& (process\_state[ps.\textcolor{keywordtype}{id}] == \mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a4c97ffbad296d4a6b84b1c508fc5d32a}{waiting}}))}
+\DoxyCodeLine{00367             \{}
+\DoxyCodeLine{00368                 \textcolor{keywordflow}{if} (process\_status\_changed[\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[ps.\mbox{\hyperlink{class_process_af4fcdaeb47e30030e4d4877232b6c135}{id}}]]==\textcolor{keyword}{false})}
+\DoxyCodeLine{00369                 \{}
+\DoxyCodeLine{00370                     scheduler\_state[pinstance]=\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a4c97ffbad296d4a6b84b1c508fc5d32a}{waiting}};}
+\DoxyCodeLine{00371                     \mbox{\hyperlink{group__firfirgcd__macros__group_ga37921dae893594f3710d892f471de3cb}{HEPSY\_TRACE\_SCHED\_STATE}}(pinstance)}
+\DoxyCodeLine{00372 }
+\DoxyCodeLine{00373                     \textcolor{comment}{// If no changes from explicit wait, it is safe to block the sceduler}}
+\DoxyCodeLine{00374                     BB\_mode[\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[ps.\mbox{\hyperlink{class_process_af4fcdaeb47e30030e4d4877232b6c135}{id}}]]=\mbox{\hyperlink{group__firfirgcd__define__group_gga1a6b6fb557d8d37d59700faf4e4c9167a66e84e235b9e03b6fdfc7ffe7e775de8}{suspended}};}
+\DoxyCodeLine{00375                     \mbox{\hyperlink{group__firfirgcd__macros__group_ga0782cab9383550027672da286d54c931}{HEPSY\_TRACE\_BB\_STATE\_THIS}}(ps.\mbox{\hyperlink{class_process_af4fcdaeb47e30030e4d4877232b6c135}{id}})}
+\DoxyCodeLine{00376 }
+\DoxyCodeLine{00377                     wait(activate[\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>allocationPS\_BB[ps.\textcolor{keywordtype}{id}]]);}
+\DoxyCodeLine{00378 }
+\DoxyCodeLine{00379                     \textcolor{comment}{// Reactivate BB/PU (scheduler is reactivated at the beginning of the while loop)}}
+\DoxyCodeLine{00380                     BB\_mode[\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>allocationPS\_BB[ps.\textcolor{keywordtype}{id}]] = \mbox{\hyperlink{group__firfirgcd__define__group_gga1a6b6fb557d8d37d59700faf4e4c9167a5d178ae2be9d93ea4cbf1a9f0a2d9cbe}{active}};}
+\DoxyCodeLine{00381                     \mbox{\hyperlink{group__firfirgcd__macros__group_ga0782cab9383550027672da286d54c931}{HEPSY\_TRACE\_BB\_STATE\_THIS}}(ps.\textcolor{keywordtype}{id})}
+\DoxyCodeLine{00382                 \}}
+\DoxyCodeLine{00383                 \textcolor{comment}{// Otherwise, it is NOT safe to block the sceduler, reset process\_status\_changed to false}}
+\DoxyCodeLine{00384                 else}
+\DoxyCodeLine{00385                 \{}
+\DoxyCodeLine{00386                     process\_status\_changed[\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[ps.\mbox{\hyperlink{class_process_af4fcdaeb47e30030e4d4877232b6c135}{id}}]]=\textcolor{keyword}{false};}
+\DoxyCodeLine{00387                 \}}
+\DoxyCodeLine{00388             \}}
+\DoxyCodeLine{00389 }
+\DoxyCodeLine{00390             \textcolor{comment}{// Increase the number of scheduler executions for the scheduler instance}}
+\DoxyCodeLine{00391             \textcolor{comment}{// associated to the processing unit with id = pinstance}}
+\DoxyCodeLine{00392             sched\_loops[pinstance]++;}
+\DoxyCodeLine{00393 }
+\DoxyCodeLine{00394         \}\textcolor{keywordflow}{while}(1);}
+\DoxyCodeLine{00395     \}}
+\DoxyCodeLine{00396 \}}
+\DoxyCodeLine{00397 }
+\DoxyCodeLine{00399 \textcolor{comment}{// Fixed Priority (FP)}}
+\DoxyCodeLine{00400 \textcolor{comment}{// It is run the ready process with max priority}}
+\DoxyCodeLine{00401 \textcolor{keywordtype}{void} SchedulingManager::policy\_SCHED\_FP(\textcolor{keywordtype}{int} pinstance, \textcolor{keywordtype}{float} full\_oh, \textcolor{keywordtype}{float} part\_oh)}
+\DoxyCodeLine{00402 \{}
+\DoxyCodeLine{00404 }
+\DoxyCodeLine{00405     \textcolor{comment}{// Used to manage processes and processing unit}}
+\DoxyCodeLine{00406     \mbox{\hyperlink{class_process}{Process}} ps;}
+\DoxyCodeLine{00407     \mbox{\hyperlink{class_basic_block}{BasicBlock}} bb;}
+\DoxyCodeLine{00408     \mbox{\hyperlink{class_processing_unit}{ProcessingUnit}} pu;}
+\DoxyCodeLine{00409 }
+\DoxyCodeLine{00410     \textcolor{comment}{// Get BB/PU with ID equal to pinstance}}
+\DoxyCodeLine{00411     bb = \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{VBB}}[pinstance];}
+\DoxyCodeLine{00412     pu = \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{VBB}}[pinstance].getProcessors()[0];  \textcolor{comment}{// Mono-\/core}}
+\DoxyCodeLine{00413 }
+\DoxyCodeLine{00414     \textcolor{comment}{// Get the processes allocated on the BB/PU}}
+\DoxyCodeLine{00415     vector<int> local\_PS = \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_af468620e73667d65dbb7db93b78712a9}{getAllocationPS\_BB}}(pinstance);}
+\DoxyCodeLine{00416 }
+\DoxyCodeLine{00417 \textcolor{preprocessor}{    \#if defined(\_DEBUG\_)}}
+\DoxyCodeLine{00418         \textcolor{keywordflow}{if} (local\_PS.size() != 0)}
+\DoxyCodeLine{00420         \{}
+\DoxyCodeLine{00421             cout << endl << \textcolor{stringliteral}{"Scheduler for BB: "} << bb.\mbox{\hyperlink{class_basic_block_ae1dead3b6fbfaaf11aa596013d9c3615}{getName}}() << \textcolor{stringliteral}{"["} << pinstance << \textcolor{stringliteral}{"] -\/ PU: "} << pu.\mbox{\hyperlink{class_processing_unit_a9d6d56e08d110b9a12c45f12ebff1d97}{getName}}() << \textcolor{stringliteral}{"["} << pu.\mbox{\hyperlink{class_processing_unit_a367aa0751e97e2562b64a50b4e4142dd}{getId}}() << \textcolor{stringliteral}{"]"} << endl;}
+\DoxyCodeLine{00422             cout << \textcolor{stringliteral}{"Processes["} << local\_PS.size() << \textcolor{stringliteral}{"]: "};}
+\DoxyCodeLine{00423             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < local\_PS.size(); i++) cout << local\_PS[i] << \textcolor{stringliteral}{" "};}
+\DoxyCodeLine{00424             cout << endl;}
+\DoxyCodeLine{00425             cout << \textcolor{stringliteral}{"Policy: FP"} << endl << endl;}
+\DoxyCodeLine{00426         \}}
+\DoxyCodeLine{00427         \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"No processes on BB: "} << bb.\mbox{\hyperlink{class_basic_block_ae1dead3b6fbfaaf11aa596013d9c3615}{getName}}() << \textcolor{stringliteral}{"["} << pinstance << \textcolor{stringliteral}{"] -\/ PU: "} << pu.\mbox{\hyperlink{class_processing_unit_a9d6d56e08d110b9a12c45f12ebff1d97}{getName}}() << \textcolor{stringliteral}{"["} << pu.\mbox{\hyperlink{class_processing_unit_a367aa0751e97e2562b64a50b4e4142dd}{getId}}() << \textcolor{stringliteral}{"] -\/ Scheduler terminated"} << endl << endl;}
+\DoxyCodeLine{00428 }
+\DoxyCodeLine{00429 \textcolor{preprocessor}{        \#if \_WIN32}}
+\DoxyCodeLine{00430             system(\textcolor{stringliteral}{"pause"});}
+\DoxyCodeLine{00431 \textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{00432 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{00433 }
+\DoxyCodeLine{00435 }
+\DoxyCodeLine{00436     \textcolor{comment}{// Working variables}}
+\DoxyCodeLine{00437     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} current\_local\_ps\_id = 0; \textcolor{comment}{// Index of local processes}}
+\DoxyCodeLine{00438     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} last\_served\_local\_ps\_id = 0; \textcolor{comment}{// Keep the ID of the process tha has been run the last time}}
+\DoxyCodeLine{00439 }
+\DoxyCodeLine{00440     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} max\_pri\_ready\_ps=0;}
+\DoxyCodeLine{00441     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} max\_pri\_ready\_ps\_id=0;}
+\DoxyCodeLine{00442     \textcolor{keywordtype}{bool} ready\_ps\_found;}
+\DoxyCodeLine{00443 }
+\DoxyCodeLine{00444     \textcolor{comment}{// If no processes for this processing unit the scheduler self-\/quit}}
+\DoxyCodeLine{00445     \textcolor{keywordflow}{if} (local\_PS.size()==0) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00446     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00447     \{}
+\DoxyCodeLine{00448 }
+\DoxyCodeLine{00449         \textcolor{keywordflow}{do}}
+\DoxyCodeLine{00450         \{}
+\DoxyCodeLine{00451             \textcolor{comment}{// Change scheduler state in running}}
+\DoxyCodeLine{00452             scheduler\_state[pinstance] = \mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c}{running}};}
+\DoxyCodeLine{00453             \mbox{\hyperlink{group__firfirgcd__macros__group_ga37921dae893594f3710d892f471de3cb}{HEPSY\_TRACE\_SCHED\_STATE}}(pinstance)}
+\DoxyCodeLine{00454 }
+\DoxyCodeLine{00455             max\_pri\_ready\_ps = 0;}
+\DoxyCodeLine{00456             ready\_ps\_found=\textcolor{keyword}{false};}
+\DoxyCodeLine{00457 }
+\DoxyCodeLine{00458             \textcolor{comment}{// Partial overhead to get info about the current process}}
+\DoxyCodeLine{00459             \mbox{\hyperlink{group__firfirgcd__macros__group_gab8ed6dfd8e9d61861b9aff28d6b7300f}{HEPSY\_SCHED\_CS}}(pinstance, part\_oh)}
+\DoxyCodeLine{00460 }
+\DoxyCodeLine{00461             \textcolor{keywordflow}{for} (current\_local\_ps\_id = 0; current\_local\_ps\_id<local\_PS.size(); current\_local\_ps\_id++)}
+\DoxyCodeLine{00462             \{}
+\DoxyCodeLine{00463                 \textcolor{comment}{// Get the current process}}
+\DoxyCodeLine{00464                 ps = \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[local\_PS[current\_local\_ps\_id]];}
+\DoxyCodeLine{00465 }
+\DoxyCodeLine{00466                 \textcolor{keywordflow}{if} ((process\_state[ps.\mbox{\hyperlink{class_process_af4fcdaeb47e30030e4d4877232b6c135}{id}}] == \mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473}{ready}}) \&\& (ps.\mbox{\hyperlink{class_process_ae03e5ff2b64628843a8436bea9703b70}{priority}} >= max\_pri\_ready\_ps))}
+\DoxyCodeLine{00467                 \{}
+\DoxyCodeLine{00468                     max\_pri\_ready\_ps = ps.\mbox{\hyperlink{class_process_ae03e5ff2b64628843a8436bea9703b70}{priority}};}
+\DoxyCodeLine{00469                     max\_pri\_ready\_ps\_id = current\_local\_ps\_id;}
+\DoxyCodeLine{00470                     ready\_ps\_found=\textcolor{keyword}{true};}
+\DoxyCodeLine{00471                 \}}
+\DoxyCodeLine{00472             \}}
+\DoxyCodeLine{00473             }
+\DoxyCodeLine{00474             \textcolor{keywordflow}{if} (ready\_ps\_found==\textcolor{keyword}{true})}
+\DoxyCodeLine{00475             \{}
+\DoxyCodeLine{00476 }
+\DoxyCodeLine{00477                 ps = \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[local\_PS[max\_pri\_ready\_ps\_id]];}
+\DoxyCodeLine{00478                 current\_local\_ps\_id = max\_pri\_ready\_ps\_id;}
+\DoxyCodeLine{00479 }
+\DoxyCodeLine{00480                 \textcolor{comment}{//OH x CS}}
+\DoxyCodeLine{00481                 \textcolor{keywordflow}{if} (current\_local\_ps\_id != last\_served\_local\_ps\_id)}
+\DoxyCodeLine{00482                 \{}
+\DoxyCodeLine{00483                     \mbox{\hyperlink{group__firfirgcd__macros__group_gab8ed6dfd8e9d61861b9aff28d6b7300f}{HEPSY\_SCHED\_CS}}(pinstance, full\_oh)}
+\DoxyCodeLine{00484                     last\_served\_local\_ps\_id = current\_local\_ps\_id;}
+\DoxyCodeLine{00485 }
+\DoxyCodeLine{00486                     sched\_CS[pinstance]++; \textcolor{comment}{// Number of CS}}
+\DoxyCodeLine{00487                 \}}
+\DoxyCodeLine{00488 }
+\DoxyCodeLine{00489                 \textcolor{comment}{// Exchange token with the current ready process and change state in run}}
+\DoxyCodeLine{00490                 schedule[ps.\mbox{\hyperlink{class_process_af4fcdaeb47e30030e4d4877232b6c135}{id}}].notify(SC\_ZERO\_TIME);}
+\DoxyCodeLine{00491                 process\_state[ps.\mbox{\hyperlink{class_process_af4fcdaeb47e30030e4d4877232b6c135}{id}}]=\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c}{running}};}
+\DoxyCodeLine{00492                 \mbox{\hyperlink{group__firfirgcd__macros__group_gadc2d4bfbe106f792246792d01d66d63c}{HEPSY\_TRACE\_PS\_STATE\_THIS}}(ps.\mbox{\hyperlink{class_process_af4fcdaeb47e30030e4d4877232b6c135}{id}})}
+\DoxyCodeLine{00493 }
+\DoxyCodeLine{00494                 \textcolor{comment}{// Change scheduler state in ready}}
+\DoxyCodeLine{00495                 scheduler\_state[pinstance] = \mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473}{ready}};}
+\DoxyCodeLine{00496                 \mbox{\hyperlink{group__firfirgcd__macros__group_ga37921dae893594f3710d892f471de3cb}{HEPSY\_TRACE\_SCHED\_STATE}}(pinstance)}
+\DoxyCodeLine{00497 }
+\DoxyCodeLine{00498                 wait(release[ps.\textcolor{keywordtype}{id}]);}
+\DoxyCodeLine{00499 }
+\DoxyCodeLine{00500                 \textcolor{comment}{// If no blocked go in ready state}}
+\DoxyCodeLine{00501                 if (process\_state[ps.\textcolor{keywordtype}{id}]==\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c}{running}}) process\_state[ps.\textcolor{keywordtype}{id}]=\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473}{ready}};}
+\DoxyCodeLine{00502                 \mbox{\hyperlink{group__firfirgcd__macros__group_gadc2d4bfbe106f792246792d01d66d63c}{HEPSY\_TRACE\_PS\_STATE\_THIS}}(ps.\textcolor{keywordtype}{id})}
+\DoxyCodeLine{00503             \}}
+\DoxyCodeLine{00504             else}
+\DoxyCodeLine{00505             \{}
+\DoxyCodeLine{00506                 \textcolor{keywordflow}{if} (process\_status\_changed[\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[ps.\mbox{\hyperlink{class_process_af4fcdaeb47e30030e4d4877232b6c135}{id}}]] == \textcolor{keyword}{false})}
+\DoxyCodeLine{00507                 \{}
+\DoxyCodeLine{00508                     scheduler\_state[pinstance] = \mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a4c97ffbad296d4a6b84b1c508fc5d32a}{waiting}};}
+\DoxyCodeLine{00509                     \mbox{\hyperlink{group__firfirgcd__macros__group_ga37921dae893594f3710d892f471de3cb}{HEPSY\_TRACE\_SCHED\_STATE}}(pinstance)}
+\DoxyCodeLine{00510 }
+\DoxyCodeLine{00511                     \textcolor{comment}{// If no changes from explicit wait, it is safe to block the sceduler}}
+\DoxyCodeLine{00512                     BB\_mode[\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[ps.\mbox{\hyperlink{class_process_af4fcdaeb47e30030e4d4877232b6c135}{id}}]] = \mbox{\hyperlink{group__firfirgcd__define__group_gga1a6b6fb557d8d37d59700faf4e4c9167a66e84e235b9e03b6fdfc7ffe7e775de8}{suspended}};}
+\DoxyCodeLine{00513                     \mbox{\hyperlink{group__firfirgcd__macros__group_ga0782cab9383550027672da286d54c931}{HEPSY\_TRACE\_BB\_STATE\_THIS}}(ps.\mbox{\hyperlink{class_process_af4fcdaeb47e30030e4d4877232b6c135}{id}})}
+\DoxyCodeLine{00514 }
+\DoxyCodeLine{00515                     wait(activate[\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>allocationPS\_BB[ps.\textcolor{keywordtype}{id}]]);}
+\DoxyCodeLine{00516 }
+\DoxyCodeLine{00517                     \textcolor{comment}{// Reactivate BB/PU (scheduler is reactivated at the beginning of the while loop)}}
+\DoxyCodeLine{00518                     BB\_mode[\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>allocationPS\_BB[ps.\textcolor{keywordtype}{id}]] = \mbox{\hyperlink{group__firfirgcd__define__group_gga1a6b6fb557d8d37d59700faf4e4c9167a5d178ae2be9d93ea4cbf1a9f0a2d9cbe}{active}};}
+\DoxyCodeLine{00519                     \mbox{\hyperlink{group__firfirgcd__macros__group_ga0782cab9383550027672da286d54c931}{HEPSY\_TRACE\_BB\_STATE\_THIS}}(ps.\textcolor{keywordtype}{id})}
+\DoxyCodeLine{00520                 \}}
+\DoxyCodeLine{00521                 \textcolor{comment}{// Otherwise, it is NOT safe to block the sceduler, reset process\_status\_changed to false}}
+\DoxyCodeLine{00522                 else}
+\DoxyCodeLine{00523                 \{}
+\DoxyCodeLine{00524                     process\_status\_changed[\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[ps.\mbox{\hyperlink{class_process_af4fcdaeb47e30030e4d4877232b6c135}{id}}]] = \textcolor{keyword}{false};}
+\DoxyCodeLine{00525                 \}}
+\DoxyCodeLine{00526             \}}
+\DoxyCodeLine{00527 }
+\DoxyCodeLine{00528             \textcolor{comment}{// Increase the number of scheduler executions for the scheduler instance}}
+\DoxyCodeLine{00529             \textcolor{comment}{// associated to the processing unit with id = pinstance}}
+\DoxyCodeLine{00530             sched\_loops[pinstance]++;}
+\DoxyCodeLine{00531 }
+\DoxyCodeLine{00532         \}\textcolor{keywordflow}{while}(1);}
+\DoxyCodeLine{00533     \}}
+\DoxyCodeLine{00534 \}}
+\DoxyCodeLine{00535 }
+\DoxyCodeLine{00537 }
+\DoxyCodeLine{00539 }
+\DoxyCodeLine{00540 \textcolor{keywordtype}{void} SchedulingManager:: checkStatesProcessesR()}
+\DoxyCodeLine{00541 \{}
+\DoxyCodeLine{00542     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i=0; i<\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}; i++)}
+\DoxyCodeLine{00543     \{}
+\DoxyCodeLine{00544         \textcolor{keywordflow}{if} (process\_state[i]==\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c}{running}})}
+\DoxyCodeLine{00545         \{}
+\DoxyCodeLine{00546             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} k=i+1; k<\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}; k++)}
+\DoxyCodeLine{00547             \{}
+\DoxyCodeLine{00548                 \textcolor{keywordflow}{if} (process\_state[k]==\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c}{running}}) matrixCONC\_PS\_R[i][k]++;}
+\DoxyCodeLine{00549             \}}
+\DoxyCodeLine{00550         \}}
+\DoxyCodeLine{00551     \}}
+\DoxyCodeLine{00552     num\_tests\_CONC\_PS\_R++;}
+\DoxyCodeLine{00553 \}}
+\DoxyCodeLine{00554 }
+\DoxyCodeLine{00555 \textcolor{keywordtype}{void} SchedulingManager:: checkStatesChannelsR()}
+\DoxyCodeLine{00556 \{}
+\DoxyCodeLine{00557     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i=0; i<\mbox{\hyperlink{group__firfirgcd__define__group_ga967ca22c6c7be038e1092147ce04f258}{NCH}}; i++)}
+\DoxyCodeLine{00558     \{}
+\DoxyCodeLine{00559         \textcolor{keywordflow}{if} (channel\_state[i]==\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c}{running}})}
+\DoxyCodeLine{00560         \{}
+\DoxyCodeLine{00561             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} k=i+1; k<\mbox{\hyperlink{group__firfirgcd__define__group_ga967ca22c6c7be038e1092147ce04f258}{NCH}}; k++)}
+\DoxyCodeLine{00562             \{}
+\DoxyCodeLine{00563                 \textcolor{keywordflow}{if} (channel\_state[k]==\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c}{running}}) matrixCONC\_CH\_R[i][k]++;}
+\DoxyCodeLine{00564             \}}
+\DoxyCodeLine{00565         \}}
+\DoxyCodeLine{00566     \}}
+\DoxyCodeLine{00567     num\_tests\_CONC\_CH\_R++;}
+\DoxyCodeLine{00568 \}}
+\DoxyCodeLine{00569 }
+\DoxyCodeLine{00571 }
+\DoxyCodeLine{00572 \textcolor{keywordtype}{void} SchedulingManager:: checkStatesProcessesRR()}
+\DoxyCodeLine{00573 \{}
+\DoxyCodeLine{00574     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i=0; i<\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}; i++)}
+\DoxyCodeLine{00575     \{}
+\DoxyCodeLine{00576         \textcolor{keywordflow}{if} ((process\_state[i]==\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473}{ready}})||(process\_state[i]==\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c}{running}}))}
+\DoxyCodeLine{00577         \{}
+\DoxyCodeLine{00578             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} k=i+1; k<\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}; k++)}
+\DoxyCodeLine{00579             \{}
+\DoxyCodeLine{00580                 \textcolor{keywordflow}{if} ((process\_state[k]==\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473}{ready}})||(process\_state[k]==\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c}{running}})) matrixCONC\_PS\_RR[i][k]++;}
+\DoxyCodeLine{00581             \}}
+\DoxyCodeLine{00582         \}}
+\DoxyCodeLine{00583     \}}
+\DoxyCodeLine{00584     num\_tests\_CONC\_PS\_RR++;}
+\DoxyCodeLine{00585 \}}
+\DoxyCodeLine{00586 }
+\DoxyCodeLine{00587 \textcolor{keywordtype}{void} SchedulingManager:: checkStatesChannelsRR()}
+\DoxyCodeLine{00588 \{}
+\DoxyCodeLine{00589     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i=0; i<\mbox{\hyperlink{group__firfirgcd__define__group_ga967ca22c6c7be038e1092147ce04f258}{NCH}}; i++)}
+\DoxyCodeLine{00590     \{}
+\DoxyCodeLine{00591         \textcolor{keywordflow}{if} ((channel\_state[i]==\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473}{ready}})||(channel\_state[i]==\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c}{running}}))}
+\DoxyCodeLine{00592         \{}
+\DoxyCodeLine{00593             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} k=i+1; k<\mbox{\hyperlink{group__firfirgcd__define__group_ga967ca22c6c7be038e1092147ce04f258}{NCH}}; k++)}
+\DoxyCodeLine{00594             \{}
+\DoxyCodeLine{00595                 \textcolor{keywordflow}{if} ((channel\_state[k]==\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473}{ready}})||(channel\_state[k]==\mbox{\hyperlink{group__firfirgcd__define__group_ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c}{running}})) matrixCONC\_CH\_RR[i][k]++;}
+\DoxyCodeLine{00596             \}}
+\DoxyCodeLine{00597         \}}
+\DoxyCodeLine{00598     \}}
+\DoxyCodeLine{00599     num\_tests\_CONC\_CH\_RR++;}
+\DoxyCodeLine{00600 \}}
+\DoxyCodeLine{00601 }
+\DoxyCodeLine{00603 }
+\DoxyCodeLine{00604 \textcolor{keywordtype}{void} SchedulingManager:: checkStatesBB()}
+\DoxyCodeLine{00605 \{}
+\DoxyCodeLine{00606     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i=0; i<\mbox{\hyperlink{group__firfirgcd__define__group_ga498a2c2b57c15e562e939cccf28db094}{NBB}}; i++)}
+\DoxyCodeLine{00607     \{}
+\DoxyCodeLine{00608         \textcolor{keywordflow}{if} (BB\_mode[i]==\mbox{\hyperlink{group__firfirgcd__define__group_gga1a6b6fb557d8d37d59700faf4e4c9167a5d178ae2be9d93ea4cbf1a9f0a2d9cbe}{active}})}
+\DoxyCodeLine{00609         \{}
+\DoxyCodeLine{00610             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} k=i+1; k<\mbox{\hyperlink{group__firfirgcd__define__group_ga498a2c2b57c15e562e939cccf28db094}{NBB}}; k++)}
+\DoxyCodeLine{00611             \{}
+\DoxyCodeLine{00612                 \textcolor{keywordflow}{if} (BB\_mode[k]==\mbox{\hyperlink{group__firfirgcd__define__group_gga1a6b6fb557d8d37d59700faf4e4c9167a5d178ae2be9d93ea4cbf1a9f0a2d9cbe}{active}}) matrixCONC\_BB[i][k]++;}
+\DoxyCodeLine{00613             \}}
+\DoxyCodeLine{00614         \}}
+\DoxyCodeLine{00615     \}}
+\DoxyCodeLine{00616 }
+\DoxyCodeLine{00617     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} k=0;}
+\DoxyCodeLine{00618 }
+\DoxyCodeLine{00619     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i=0; i<\mbox{\hyperlink{group__firfirgcd__define__group_ga498a2c2b57c15e562e939cccf28db094}{NBB}}; i++)}
+\DoxyCodeLine{00620     \{}
+\DoxyCodeLine{00621         \textcolor{keywordflow}{if} (BB\_mode[i]==\mbox{\hyperlink{group__firfirgcd__define__group_gga1a6b6fb557d8d37d59700faf4e4c9167a5d178ae2be9d93ea4cbf1a9f0a2d9cbe}{active}}) k++;}
+\DoxyCodeLine{00622     \}}
+\DoxyCodeLine{00623 }
+\DoxyCodeLine{00624     vectorCONC\_BB[k]++;}
+\DoxyCodeLine{00625     num\_tests\_CONC\_BB++;}
+\DoxyCodeLine{00626 \}}
+\DoxyCodeLine{00627 }
+\DoxyCodeLine{00629 \textcolor{keywordtype}{void} SchedulingManager::concurrency\_sampling()}
+\DoxyCodeLine{00630 \{}
+\DoxyCodeLine{00631     \textcolor{keywordflow}{while}(\mbox{\hyperlink{group__firfirgcd__main__group_gaa8fde88a1a4ceac81a26274e6f38c4a4}{stop\_concurrency\_sampling}}==\textcolor{keyword}{false})}
+\DoxyCodeLine{00632     \{}
+\DoxyCodeLine{00633         \textcolor{comment}{// Concurrency check (ad ogni statement eseguito) -\/ usare apposito sc\_thread?}}
+\DoxyCodeLine{00634         checkStatesProcessesR();}
+\DoxyCodeLine{00635         checkStatesProcessesRR();}
+\DoxyCodeLine{00636         checkStatesChannelsR();}
+\DoxyCodeLine{00637         checkStatesChannelsRR();}
+\DoxyCodeLine{00638         checkStatesBB();}
+\DoxyCodeLine{00639 }
+\DoxyCodeLine{00640         \textcolor{comment}{// Periodic sampling}}
+\DoxyCodeLine{00641         wait(\mbox{\hyperlink{group__firfirgcd__main__group_gae8f25bd55b4a9f4801e99450be7d7423}{sampling\_period}}, SC\_NS);}
+\DoxyCodeLine{00642     \}}
+\DoxyCodeLine{00643 \}}
+\DoxyCodeLine{00644 }
+\DoxyCodeLine{00645 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00646 \textcolor{comment}{ ***                                  EOF                                     ***}}
+\DoxyCodeLine{00647 \textcolor{comment}{ ********************************************************************************/}}
+
+\end{DoxyCode}

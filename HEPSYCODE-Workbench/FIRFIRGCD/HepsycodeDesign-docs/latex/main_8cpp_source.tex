@@ -1,0 +1,751 @@
+\hypertarget{main_8cpp_source}{}\doxysection{main.\+cpp}
+\label{main_8cpp_source}\index{HepsycodeDesign/src/main.cpp@{HepsycodeDesign/src/main.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * University of L'Aquila -\/ HEPSYCODE Source Code License                       *}}
+\DoxyCodeLine{00003 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00004 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00005 \textcolor{comment}{ * (c) 2018-\/2019 Centre of Excellence DEWS All rights reserved                  *}}
+\DoxyCodeLine{00006 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00007 \textcolor{comment}{ * <one line to give the program's name and a brief idea of what it does.>      *}}
+\DoxyCodeLine{00008 \textcolor{comment}{ * Copyright (C) 2022  Vittoriano Muttillo, Luigi Pomante                       *                                    *}}
+\DoxyCodeLine{00009 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00010 \textcolor{comment}{ * This program is free software: you can redistribute it and/or modify         *}}
+\DoxyCodeLine{00011 \textcolor{comment}{ * it under the terms of the GNU General Public License as published by         *}}
+\DoxyCodeLine{00012 \textcolor{comment}{ * the Free Software Foundation, either version 3 of the License, or            *}}
+\DoxyCodeLine{00013 \textcolor{comment}{ * (at your option) any later version.                                          *}}
+\DoxyCodeLine{00014 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00015 \textcolor{comment}{ * This program is distributed in the hope that it will be useful,              *}}
+\DoxyCodeLine{00016 \textcolor{comment}{ * but WITHOUT ANY WARRANTY; without even the implied warranty of               *}}
+\DoxyCodeLine{00017 \textcolor{comment}{ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the                *}}
+\DoxyCodeLine{00018 \textcolor{comment}{ * GNU General Public License for more details.                                 *}}
+\DoxyCodeLine{00019 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00020 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00021 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00022 \textcolor{comment}{ * Created on: 19/Aug/2019                                                      *}}
+\DoxyCodeLine{00023 \textcolor{comment}{ * Authors: Vittoriano Muttillo, Luigi Pomante                                  *}}
+\DoxyCodeLine{00024 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00025 \textcolor{comment}{ * email: vittoriano.muttillo@guest.univaq.it                                   *}}
+\DoxyCodeLine{00026 \textcolor{comment}{ *        luigi.pomante@univaq.it                                               *}}
+\DoxyCodeLine{00027 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00028 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00029 \textcolor{comment}{ * This code has been developed from an HEPSYCODE model used as demonstrator by *}}
+\DoxyCodeLine{00030 \textcolor{comment}{ * University of L'Aquila.                                                      *}}
+\DoxyCodeLine{00031 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00032 \textcolor{comment}{ * The code is used as a working example in the 'Embedded Systems' course of    *}}
+\DoxyCodeLine{00033 \textcolor{comment}{ * the Master in Conputer Science Engineering offered by the                    *}}
+\DoxyCodeLine{00034 \textcolor{comment}{ * University of L'Aquila                                                       *}}
+\DoxyCodeLine{00035 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{00037 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00038 \textcolor{comment}{ * main.cpp : FirFirGCD main file.                                              *}}
+\DoxyCodeLine{00039 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00040 }
+\DoxyCodeLine{00107 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00108 \textcolor{comment}{ * main.cpp : Defines the HEPSIM2 main file.                                    *}}
+\DoxyCodeLine{00109 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00110 \textcolor{comment}{ * HEPSIM2 main file                                                            *}}
+\DoxyCodeLine{00111 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00112 \textcolor{comment}{********************************************************************************/}}
+\DoxyCodeLine{00113  \textcolor{comment}{// start firfirgcd\_main\_group}}
+\DoxyCodeLine{00128 }
+\DoxyCodeLine{00129 }
+\DoxyCodeLine{00130 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00131 \textcolor{comment}{ ***                                Includes                                  ***}}
+\DoxyCodeLine{00132 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00133 }
+\DoxyCodeLine{00134 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{00135 \textcolor{preprocessor}{\#include <stdlib.h>}}
+\DoxyCodeLine{00136 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{00137 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{00138 \textcolor{preprocessor}{\#include <iomanip>}}
+\DoxyCodeLine{00139 \textcolor{preprocessor}{\#include <time.h>}}
+\DoxyCodeLine{00140 \textcolor{preprocessor}{\#include <string.h>}}
+\DoxyCodeLine{00141 }
+\DoxyCodeLine{00142 \textcolor{preprocessor}{\#include <systemc.h>}}
+\DoxyCodeLine{00143 }
+\DoxyCodeLine{00144 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{define_8h}{define.h}}"}}
+\DoxyCodeLine{00145 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{sc__csp__channel__ifs_8h}{sc\_csp\_channel\_ifs.h}}"}}
+\DoxyCodeLine{00146 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{datatype_8h}{datatype.h}}"}}
+\DoxyCodeLine{00147 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{stim__gen_8h}{stim\_gen.h}}"}}
+\DoxyCodeLine{00148 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{mainsystem_8h}{mainsystem.h}}"}}
+\DoxyCodeLine{00149 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{display_8h}{display.h}}"}}
+\DoxyCodeLine{00150 }
+\DoxyCodeLine{00151 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{sc__csp__channel_8h}{sc\_csp\_channel.h}}"}}
+\DoxyCodeLine{00152 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{_scheduling_manager_8h}{SchedulingManager.h}}"}}
+\DoxyCodeLine{00153 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{_system_manager_8h}{SystemManager.h}}"}}
+\DoxyCodeLine{00154 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{tl_8h}{tl.h}}"}}
+\DoxyCodeLine{00155 }
+\DoxyCodeLine{00156 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{00157 }
+\DoxyCodeLine{00158 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00159 \textcolor{comment}{ ***                                Functions                                 ***}}
+\DoxyCodeLine{00160 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00161 }
+\DoxyCodeLine{00162 \textcolor{comment}{// Allocation of global SystemManager}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00163}\mbox{\hyperlink{group__scheduling__manager__group_gaa604ac51b2579794e702367934dfb8ad}{00163}} \mbox{\hyperlink{class_system_manager}{SystemManager}}      *\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_system_manager}{SystemManager}}();}
+\DoxyCodeLine{00164 }
+\DoxyCodeLine{00165 \textcolor{comment}{// Allocation of global SchedulingManager}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00166}\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gad142acf1b36eb3c83c6e67364d257d48}{00166}} SchedulingManager   *\mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}} = \textcolor{keyword}{new} SchedulingManager(\textcolor{stringliteral}{"SchedulingManager"}); \textcolor{comment}{// It is a SC\_MODULE (beacuse we need SC\_THREADs) so the internal name is needed}}
+\DoxyCodeLine{00167 }
+\DoxyCodeLine{00168 \textcolor{comment}{// CONCURRENCY SAMPLING CONTROL (only for timing concurrency)}}
+\DoxyCodeLine{00169 \textcolor{comment}{// Used to stop sampling SC\_THREAD in SchedulingManager (in the future they will be external parameters)}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00170}\mbox{\hyperlink{group__firfirgcd__main__group_gae8f25bd55b4a9f4801e99450be7d7423}{00170}} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{group__firfirgcd__main__group_gae8f25bd55b4a9f4801e99450be7d7423}{sampling\_period}} = 1000; \textcolor{comment}{// HW architecture dependent: tipically in the interval 10-\/1000 SC\_NS}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00171}\mbox{\hyperlink{group__firfirgcd__main__group_gaa8fde88a1a4ceac81a26274e6f38c4a4}{00171}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{group__firfirgcd__main__group_gaa8fde88a1a4ceac81a26274e6f38c4a4}{stop\_concurrency\_sampling}}=\textcolor{keyword}{false}; \textcolor{comment}{// Used to stop sampling SC\_THREAD in SchedulingManager}}
+\DoxyCodeLine{00172 }
+\DoxyCodeLine{00174 \textcolor{comment}{// PARTIALLY SBM DEPENDENT}}
+\DoxyCodeLine{00176 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00177}\mbox{\hyperlink{group__firfirgcd__main__group_ga865e3def6cd1a641230218579d0a958f}{00177}} \textcolor{keywordtype}{int} \mbox{\hyperlink{group__firfirgcd__main__group_ga865e3def6cd1a641230218579d0a958f}{sc\_main}}(\textcolor{keywordtype}{int} a, \textcolor{keywordtype}{char}* b[])}
+\DoxyCodeLine{00178 \{}
+\DoxyCodeLine{00179 }
+\DoxyCodeLine{00183     }
+\DoxyCodeLine{00185 }
+\DoxyCodeLine{00186     \mbox{\hyperlink{classsc__csp__channel}{sc\_csp\_channel< sc\_uint<8>}} >   stim1\_channel(12);}
+\DoxyCodeLine{00187     \mbox{\hyperlink{classsc__csp__channel}{sc\_csp\_channel< sc\_uint<8>}} >   stim2\_channel(13);}
+\DoxyCodeLine{00188     \mbox{\hyperlink{classsc__csp__channel}{sc\_csp\_channel< sc\_uint<8>}} >   result\_channel(14);}
+\DoxyCodeLine{00189 }
+\DoxyCodeLine{00191 }
+\DoxyCodeLine{00192     stim\_gen mystimgen(\textcolor{stringliteral}{"mystimgen"});}
+\DoxyCodeLine{00193     mystimgen.stim1\_channel\_port(stim1\_channel);}
+\DoxyCodeLine{00194     mystimgen.stim2\_channel\_port(stim2\_channel);}
+\DoxyCodeLine{00195 }
+\DoxyCodeLine{00196     mainsystem mysystem(\textcolor{stringliteral}{"mysystem"});}
+\DoxyCodeLine{00197     mysystem.stim1\_channel\_port(stim1\_channel);}
+\DoxyCodeLine{00198     mysystem.stim2\_channel\_port(stim2\_channel);}
+\DoxyCodeLine{00199     mysystem.result\_channel\_port(result\_channel);}
+\DoxyCodeLine{00200 }
+\DoxyCodeLine{00201     display mydisplay(\textcolor{stringliteral}{"mydisplay"});}
+\DoxyCodeLine{00202     mydisplay.result\_channel\_port(result\_channel);}
+\DoxyCodeLine{00203 }
+\DoxyCodeLine{00207 }
+\DoxyCodeLine{00208     \textcolor{comment}{// Time info}}
+\DoxyCodeLine{00209     sc\_time end\_sim, tot=sc\_time(0, SC\_MS), tot\_sched\_oh=sc\_time(0, SC\_MS);}
+\DoxyCodeLine{00210 }
+\DoxyCodeLine{00211     clock\_t start = clock();}
+\DoxyCodeLine{00212 }
+\DoxyCodeLine{00213     \textcolor{comment}{// Start simulation}}
+\DoxyCodeLine{00214     cout << endl;}
+\DoxyCodeLine{00215     sc\_start();}
+\DoxyCodeLine{00216 }
+\DoxyCodeLine{00217     \textcolor{comment}{//  Total simulated and simulation times}}
+\DoxyCodeLine{00218     end\_sim=sc\_time\_stamp();}
+\DoxyCodeLine{00219     clock\_t end = clock();}
+\DoxyCodeLine{00220 }
+\DoxyCodeLine{00221 \textcolor{preprocessor}{    \#if \_WIN32}}
+\DoxyCodeLine{00222         system(\textcolor{stringliteral}{"pause"});}
+\DoxyCodeLine{00223 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{00224 }
+\DoxyCodeLine{00228 }
+\DoxyCodeLine{00229     \textcolor{comment}{//LP: check tutti i save\_csv, save\_xml e trace}}
+\DoxyCodeLine{00230 }
+\DoxyCodeLine{00231 \textcolor{preprocessor}{    \#if defined(\_SAVE\_CSV\_)}}
+\DoxyCodeLine{00232         \textcolor{comment}{// Initialize csv file for statistics storage}}
+\DoxyCodeLine{00233         ofstream myStatFile;}
+\DoxyCodeLine{00234         myStatFile.open (\textcolor{stringliteral}{"./Results.csv"},std::ofstream::out | std::ofstream::app);}
+\DoxyCodeLine{00235 }
+\DoxyCodeLine{00236         \textcolor{keywordtype}{string} scenario\_id;}
+\DoxyCodeLine{00237 }
+\DoxyCodeLine{00238         cout << \textcolor{stringliteral}{"Insert Scenario ID: "};}
+\DoxyCodeLine{00239 }
+\DoxyCodeLine{00240         \textcolor{comment}{// Take input using cin}}
+\DoxyCodeLine{00241         cin >> scenario\_id;}
+\DoxyCodeLine{00242 }
+\DoxyCodeLine{00243         myStatFile << \textcolor{stringliteral}{"Scenario ID,"};}
+\DoxyCodeLine{00244         myStatFile << scenario\_id +\textcolor{stringliteral}{","}; \textcolor{comment}{// @suppress("Function cannot be resolved")}}
+\DoxyCodeLine{00245 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{00246 }
+\DoxyCodeLine{00250         }
+\DoxyCodeLine{00251     cout << endl << \textcolor{stringliteral}{"FINAL SIMULATION TIME: "} << (((float)(end -\/ start)) / CLOCKS\_PER\_SEC) << endl;}
+\DoxyCodeLine{00252 }
+\DoxyCodeLine{00253 \textcolor{preprocessor}{    \#if defined \_SAVE\_CSV\_}}
+\DoxyCodeLine{00254         myStatFile << \textcolor{stringliteral}{"FINAL SIMULATION TIME,"};}
+\DoxyCodeLine{00255         myStatFile << to\_string((((\textcolor{keywordtype}{float})(end -\/ start)) / CLOCKS\_PER\_SEC)) +\textcolor{stringliteral}{","}; \textcolor{comment}{// @suppress("Function cannot be resolved")}}
+\DoxyCodeLine{00256 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{00257 }
+\DoxyCodeLine{00258     cout << endl << \textcolor{stringliteral}{"FINAL SIMULATED TIME: "} << end\_sim.to\_seconds() << endl;}
+\DoxyCodeLine{00259 }
+\DoxyCodeLine{00260 \textcolor{preprocessor}{    \#if defined \_SAVE\_CSV\_}}
+\DoxyCodeLine{00261         myStatFile << \textcolor{stringliteral}{"FINAL SIMULATED TIME,"};}
+\DoxyCodeLine{00262         myStatFile << to\_string(end\_sim.to\_seconds()) +\textcolor{stringliteral}{","};  \textcolor{comment}{// @suppress("Function cannot be resolved")}}
+\DoxyCodeLine{00263 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{00264 }
+\DoxyCodeLine{00266     \textcolor{comment}{// Processes DATA}}
+\DoxyCodeLine{00268 \textcolor{comment}{}}
+\DoxyCodeLine{00269 \textcolor{preprocessor}{    \#if defined(\_DEBUG\_)}}
+\DoxyCodeLine{00270         \textcolor{comment}{// Print process mapping for DEBUG}}
+\DoxyCodeLine{00271 }
+\DoxyCodeLine{00272         cout << endl << \textcolor{stringliteral}{"PROCESSES MAPPING"} << endl << endl;}
+\DoxyCodeLine{00273         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} j = 2; j<\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}; j++)}
+\DoxyCodeLine{00274         \{}
+\DoxyCodeLine{00275             cout << \textcolor{stringliteral}{"Process "} << \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[j].name << \textcolor{stringliteral}{"["} <<\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[j].id << \textcolor{stringliteral}{"] is on BB"} <<}
+\DoxyCodeLine{00276             \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{VBB}}[\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[j]].getName()<< \textcolor{stringliteral}{"["} << \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[j] << \textcolor{stringliteral}{"]"} << endl;}
+\DoxyCodeLine{00277         \}}
+\DoxyCodeLine{00278         cout << endl;}
+\DoxyCodeLine{00279 }
+\DoxyCodeLine{00280 \textcolor{preprocessor}{        \#if \_WIN32}}
+\DoxyCodeLine{00281                 system(\textcolor{stringliteral}{"pause"});}
+\DoxyCodeLine{00282 \textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{00283 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{00284 }
+\DoxyCodeLine{00285     \textcolor{comment}{// Number of times each process has been executed (i.e., number of loops)}}
+\DoxyCodeLine{00286     cout << endl << \textcolor{stringliteral}{"PROCESSES PROFILING"} << endl;}
+\DoxyCodeLine{00287 }
+\DoxyCodeLine{00288 \textcolor{preprocessor}{    \#if defined \_SAVE\_CSV\_}}
+\DoxyCodeLine{00289         myStatFile << \textcolor{stringliteral}{"PROCESSES PROFILING,"};}
+\DoxyCodeLine{00290 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{00291 }
+\DoxyCodeLine{00292     \textcolor{keywordflow}{for}( \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} j=2; j<\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}; j++)}
+\DoxyCodeLine{00293     \{}
+\DoxyCodeLine{00294         cout << \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[j].id << \textcolor{stringliteral}{": "} << \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[j].profiling << endl;}
+\DoxyCodeLine{00295 }
+\DoxyCodeLine{00296 \textcolor{preprocessor}{        \#if defined \_SAVE\_CSV\_}}
+\DoxyCodeLine{00297             myStatFile << to\_string(\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[j].profiling) +\textcolor{stringliteral}{","}; \textcolor{comment}{// @suppress("Function cannot be resolved")}}
+\DoxyCodeLine{00298 \textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{00299     \}}
+\DoxyCodeLine{00300     cout << endl;}
+\DoxyCodeLine{00301 }
+\DoxyCodeLine{00302 \textcolor{preprocessor}{    \#if \_WIN32}}
+\DoxyCodeLine{00303         system(\textcolor{stringliteral}{"pause"});}
+\DoxyCodeLine{00304 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{00305 }
+\DoxyCodeLine{00306     \textcolor{comment}{// Number of bytes exchanged among process}}
+\DoxyCodeLine{00307     cout << endl << \textcolor{stringliteral}{"PROCESSES COMMUNICATIONS MATRIX (\#written bits from W to R)"} << endl;}
+\DoxyCodeLine{00308     cout << \textcolor{stringliteral}{"   "};}
+\DoxyCodeLine{00309     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j<\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}; j++)}
+\DoxyCodeLine{00310     \{}
+\DoxyCodeLine{00311         cout << setw(4) << j;}
+\DoxyCodeLine{00312     \}}
+\DoxyCodeLine{00313     cout << endl;}
+\DoxyCodeLine{00314 }
+\DoxyCodeLine{00315     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i<\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}; i++)}
+\DoxyCodeLine{00316     \{}
+\DoxyCodeLine{00317         cout << setw(2) << i << \textcolor{stringliteral}{" "};}
+\DoxyCodeLine{00318         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j<\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}; j++)}
+\DoxyCodeLine{00319         \{}
+\DoxyCodeLine{00320             \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>matrixCOM[i][j] = 0;}
+\DoxyCodeLine{00321             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} k = 0; k<\mbox{\hyperlink{group__firfirgcd__define__group_ga967ca22c6c7be038e1092147ce04f258}{NCH}}; k++)}
+\DoxyCodeLine{00322             \{}
+\DoxyCodeLine{00323                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7dcc3ae8736a6aad7e27f276706205a3}{VCH}}[k].getW\_id() == i \&\& \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7dcc3ae8736a6aad7e27f276706205a3}{VCH}}[k].getR\_id() == j)}
+\DoxyCodeLine{00324                 \{}
+\DoxyCodeLine{00325                     \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>matrixCOM[i][j] += \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7dcc3ae8736a6aad7e27f276706205a3}{VCH}}[k].getWidth()*\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7dcc3ae8736a6aad7e27f276706205a3}{VCH}}[k].getNum();}
+\DoxyCodeLine{00326                 \}}
+\DoxyCodeLine{00327             \}}
+\DoxyCodeLine{00328             cout << setw(4) << \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>matrixCOM[i][j];}
+\DoxyCodeLine{00329         \}}
+\DoxyCodeLine{00330         cout << endl;}
+\DoxyCodeLine{00331     \}}
+\DoxyCodeLine{00332 }
+\DoxyCodeLine{00333 \textcolor{preprocessor}{    \#if \_WIN32}}
+\DoxyCodeLine{00334         system(\textcolor{stringliteral}{"pause"});}
+\DoxyCodeLine{00335 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{00336 }
+\DoxyCodeLine{00337 }
+\DoxyCodeLine{00338 \textcolor{preprocessor}{    \#if defined(\_TIMING\_ENERGY\_)}}
+\DoxyCodeLine{00339 }
+\DoxyCodeLine{00340         cout << endl << \textcolor{stringliteral}{"PROCESS TIME PROFILING"} << endl;}
+\DoxyCodeLine{00341 }
+\DoxyCodeLine{00342         cout << endl << \textcolor{stringliteral}{"Average NET TIME for each process:"} << endl << endl;}
+\DoxyCodeLine{00343 }
+\DoxyCodeLine{00344 \textcolor{preprocessor}{        \#if defined \_SAVE\_CSV\_}}
+\DoxyCodeLine{00345             myStatFile << \textcolor{stringliteral}{"Average NET TIME,"}; \textcolor{comment}{// @suppress("Function cannot be resolved")}}
+\DoxyCodeLine{00346 \textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{00347 }
+\DoxyCodeLine{00348         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} i =2; i<\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}.size(); i++)}
+\DoxyCodeLine{00349         \{}
+\DoxyCodeLine{00350             cout << \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[i].id << \textcolor{stringliteral}{" -\/ "} << \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[i].name << \textcolor{stringliteral}{"\(\backslash\)t\(\backslash\)t"} << (\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[i].processTime/\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[i].profiling).to\_seconds() << endl;}
+\DoxyCodeLine{00351             tot+=\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[i].processTime;}
+\DoxyCodeLine{00352 }
+\DoxyCodeLine{00353 \textcolor{preprocessor}{            \#if defined \_SAVE\_CSV\_}}
+\DoxyCodeLine{00354                 myStatFile << to\_string((\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[i].processTime/\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[i].profiling).to\_seconds()) +\textcolor{stringliteral}{","}; \textcolor{comment}{// @suppress("Function cannot be resolved")}}
+\DoxyCodeLine{00355 \textcolor{preprocessor}{            \#endif}}
+\DoxyCodeLine{00356         \}}
+\DoxyCodeLine{00357         cout << \textcolor{stringliteral}{"Total NET TIME for all the processes:"} << tot.to\_seconds() << endl;}
+\DoxyCodeLine{00358 }
+\DoxyCodeLine{00359 \textcolor{preprocessor}{        \#if defined \_SAVE\_CSV\_}}
+\DoxyCodeLine{00360             myStatFile << \textcolor{stringliteral}{"Total NET TIME,"}; \textcolor{comment}{// @suppress("Function cannot be resolved")}}
+\DoxyCodeLine{00361             myStatFile << to\_string(tot.to\_seconds()) +\textcolor{stringliteral}{","}; \textcolor{comment}{// @suppress("Function cannot be resolved")}}
+\DoxyCodeLine{00362 \textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{00363 }
+\DoxyCodeLine{00364             cout << endl << \textcolor{stringliteral}{"Schedulers Overhead [time -\/ \#loops/\#CS]"} << endl;}
+\DoxyCodeLine{00365 }
+\DoxyCodeLine{00366 \textcolor{preprocessor}{        \#if defined \_SAVE\_CSV\_}}
+\DoxyCodeLine{00367             myStatFile << \textcolor{stringliteral}{"Schedulers Overhead,"}; \textcolor{comment}{// @suppress("Function cannot be resolved")}}
+\DoxyCodeLine{00368 \textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{00369 }
+\DoxyCodeLine{00370         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i<\mbox{\hyperlink{group__firfirgcd__define__group_ga498a2c2b57c15e562e939cccf28db094}{NBB}}; i++) \textcolor{comment}{// Figures for SPP will be always 0}}
+\DoxyCodeLine{00371         \{}
+\DoxyCodeLine{00372             cout << \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>sched\_oh[i].to\_seconds() << \textcolor{stringliteral}{" -\/ "} << \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>sched\_loops[i] << \textcolor{stringliteral}{"/"} << \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>sched\_CS[i] << endl;}
+\DoxyCodeLine{00373             tot\_sched\_oh += \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>sched\_oh[i];}
+\DoxyCodeLine{00374 }
+\DoxyCodeLine{00375 \textcolor{preprocessor}{            \#if defined \_SAVE\_CSV\_}}
+\DoxyCodeLine{00376                 myStatFile << to\_string(\mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>sched\_oh[i].to\_seconds()) +\textcolor{stringliteral}{","}; \textcolor{comment}{// @suppress("Function cannot be resolved")}}
+\DoxyCodeLine{00377 \textcolor{preprocessor}{            \#endif}}
+\DoxyCodeLine{00378         \}}
+\DoxyCodeLine{00379 }
+\DoxyCodeLine{00380         cout << \textcolor{stringliteral}{"Total overhead for all the schedulers: "} << tot\_sched\_oh.to\_seconds() << endl;}
+\DoxyCodeLine{00381 }
+\DoxyCodeLine{00382 \textcolor{preprocessor}{        \#if defined \_SAVE\_CSV\_}}
+\DoxyCodeLine{00383             myStatFile << \textcolor{stringliteral}{"Tot Schedulers Overhead,"}; \textcolor{comment}{// @suppress("Function cannot be resolved")}}
+\DoxyCodeLine{00384             myStatFile << to\_string(tot\_sched\_oh.to\_seconds()) +\textcolor{stringliteral}{","}; \textcolor{comment}{// @suppress("Function cannot be resolved")}}
+\DoxyCodeLine{00385 \textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{00386 }
+\DoxyCodeLine{00387         cout << endl;}
+\DoxyCodeLine{00388 }
+\DoxyCodeLine{00389 \textcolor{preprocessor}{        \#if \_WIN32}}
+\DoxyCodeLine{00390                 system(\textcolor{stringliteral}{"pause"});}
+\DoxyCodeLine{00391 \textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{00392 }
+\DoxyCodeLine{00393 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{00394 }
+\DoxyCodeLine{00398 }
+\DoxyCodeLine{00399 \textcolor{preprocessor}{    \#if defined(\_DEBUG\_)}}
+\DoxyCodeLine{00400         cout << endl << \textcolor{stringliteral}{"CHANNELS MAPPING"} << endl << endl;}
+\DoxyCodeLine{00401         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} j=0; j<\mbox{\hyperlink{group__firfirgcd__define__group_ga967ca22c6c7be038e1092147ce04f258}{NCH}}; j++)}
+\DoxyCodeLine{00402         \{}
+\DoxyCodeLine{00403             cout << \textcolor{stringliteral}{"Channel "} << \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7dcc3ae8736a6aad7e27f276706205a3}{VCH}}[j].name <<\textcolor{stringliteral}{"["} <<\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7dcc3ae8736a6aad7e27f276706205a3}{VCH}}[j].id << \textcolor{stringliteral}{"] is on Physical Link "} << \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_af28a1744a2d964a7047c31c6a5f1644a}{VPL}}[\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_ab75b55327c942c6950f67c14ba9dea08}{allocationCH\_PL}}[j]].getName()<<\textcolor{stringliteral}{"["}<< \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_ab75b55327c942c6950f67c14ba9dea08}{allocationCH\_PL}}[j]<<\textcolor{stringliteral}{"]"}<<endl;}
+\DoxyCodeLine{00404         \}}
+\DoxyCodeLine{00405         cout << endl;}
+\DoxyCodeLine{00406 }
+\DoxyCodeLine{00407 \textcolor{preprocessor}{        \#if \_WIN32}}
+\DoxyCodeLine{00408                 system(\textcolor{stringliteral}{"pause"});}
+\DoxyCodeLine{00409 \textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{00410 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{00411 }
+\DoxyCodeLine{00412     cout << endl << \textcolor{stringliteral}{"COMMUNICATION PROFILING"} << endl << endl;}
+\DoxyCodeLine{00413 }
+\DoxyCodeLine{00414     \textcolor{comment}{// Info about data transfers on CSP channels}}
+\DoxyCodeLine{00415     cout << endl << \textcolor{stringliteral}{"CHANNELS PROFILING"} << endl << endl;}
+\DoxyCodeLine{00416 }
+\DoxyCodeLine{00417     cout << \textcolor{stringliteral}{"ID-\/W-\/R\(\backslash\)tBIT\(\backslash\)tNUM\(\backslash\)tBIT*NUM\(\backslash\)t[TIME(sec)]"} << endl << endl;}
+\DoxyCodeLine{00418     \textcolor{keywordflow}{for}( \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} j=0; j<\mbox{\hyperlink{group__firfirgcd__define__group_ga967ca22c6c7be038e1092147ce04f258}{NCH}}; j++)}
+\DoxyCodeLine{00419     \{}
+\DoxyCodeLine{00420             cout << \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7dcc3ae8736a6aad7e27f276706205a3}{VCH}}[j].id << \textcolor{stringliteral}{"-\/"} << \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7dcc3ae8736a6aad7e27f276706205a3}{VCH}}[j].w\_id << \textcolor{stringliteral}{"-\/"} << \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7dcc3ae8736a6aad7e27f276706205a3}{VCH}}[j].r\_id << \textcolor{stringliteral}{": "}}
+\DoxyCodeLine{00421                 << \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7dcc3ae8736a6aad7e27f276706205a3}{VCH}}[j].width << \textcolor{stringliteral}{"\(\backslash\)t"} << \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7dcc3ae8736a6aad7e27f276706205a3}{VCH}}[j].num << \textcolor{stringliteral}{"\(\backslash\)t"} << \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7dcc3ae8736a6aad7e27f276706205a3}{VCH}}[j].width*\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7dcc3ae8736a6aad7e27f276706205a3}{VCH}}[j].num}
+\DoxyCodeLine{00422                 }
+\DoxyCodeLine{00423 \textcolor{preprocessor}{                \#if defined(\_TIMING\_ENERGY\_)}}
+\DoxyCodeLine{00424                     << \textcolor{stringliteral}{"\(\backslash\)t"} << \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7dcc3ae8736a6aad7e27f276706205a3}{VCH}}[j].working\_time.to\_seconds()}
+\DoxyCodeLine{00425 \textcolor{preprocessor}{                \#endif}}
+\DoxyCodeLine{00426                 }
+\DoxyCodeLine{00427                 << endl;}
+\DoxyCodeLine{00428 }
+\DoxyCodeLine{00429     \}}
+\DoxyCodeLine{00430     cout << endl;}
+\DoxyCodeLine{00431 }
+\DoxyCodeLine{00432 \textcolor{preprocessor}{    \#if \_WIN32}}
+\DoxyCodeLine{00433         system(\textcolor{stringliteral}{"pause"});}
+\DoxyCodeLine{00434 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{00435 }
+\DoxyCodeLine{00439 }
+\DoxyCodeLine{00440 \textcolor{preprocessor}{    \#if defined(\_TIMING\_ENERGY\_)}}
+\DoxyCodeLine{00441         \textcolor{comment}{// Energy info}}
+\DoxyCodeLine{00442         \textcolor{keywordtype}{double} totEnergyProcesses = 0;}
+\DoxyCodeLine{00443         \textcolor{keywordtype}{double} totEnergyChannels = 0;}
+\DoxyCodeLine{00444         \textcolor{keywordtype}{double} totEnergySchedulers = 0;}
+\DoxyCodeLine{00445         \textcolor{keywordtype}{double} totEnergyPartSchedulers = 0;}
+\DoxyCodeLine{00446         \textcolor{keywordtype}{double} totEnergy = 0;}
+\DoxyCodeLine{00447 }
+\DoxyCodeLine{00448         cout << endl << \textcolor{stringliteral}{"Average ENERGY for each process:"} << endl;}
+\DoxyCodeLine{00449 }
+\DoxyCodeLine{00450 \textcolor{preprocessor}{        \#if defined \_SAVE\_CSV\_}}
+\DoxyCodeLine{00451             myStatFile << \textcolor{stringliteral}{"Energy For Processes,"}; \textcolor{comment}{// @suppress("Function cannot be resolved")}}
+\DoxyCodeLine{00452 \textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{00453 }
+\DoxyCodeLine{00454         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} i =2; i<\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}.size(); i++)}
+\DoxyCodeLine{00455         \{}
+\DoxyCodeLine{00456             cout << \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[i].id << \textcolor{stringliteral}{" -\/ "} << \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[i].name << \textcolor{stringliteral}{"\(\backslash\)t\(\backslash\)t"} << (\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[i].energy/\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[i].profiling) <<\textcolor{stringliteral}{" uJ"}<< endl;}
+\DoxyCodeLine{00457             totEnergyProcesses+=\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[i].getEnergy();}
+\DoxyCodeLine{00458 }
+\DoxyCodeLine{00459 \textcolor{preprocessor}{            \#if defined \_SAVE\_CSV\_}}
+\DoxyCodeLine{00460                 myStatFile << to\_string(\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[i].energy/\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[i].profiling) +\textcolor{stringliteral}{","}; \textcolor{comment}{// @suppress("Function cannot be resolved")}}
+\DoxyCodeLine{00461 \textcolor{preprocessor}{            \#endif}}
+\DoxyCodeLine{00462 }
+\DoxyCodeLine{00463         \}}
+\DoxyCodeLine{00464         cout<<endl;}
+\DoxyCodeLine{00465         cout << \textcolor{stringliteral}{"Total ENERGY for all the processes: "} << totEnergyProcesses <<\textcolor{stringliteral}{" uJ"} <<endl;}
+\DoxyCodeLine{00466 }
+\DoxyCodeLine{00467 \textcolor{preprocessor}{        \#if defined \_SAVE\_CSV\_}}
+\DoxyCodeLine{00468             myStatFile << \textcolor{stringliteral}{"Total Energy Processes,"}; \textcolor{comment}{// @suppress("Function cannot be resolved")}}
+\DoxyCodeLine{00469             myStatFile << to\_string(totEnergyProcesses) +\textcolor{stringliteral}{","}; \textcolor{comment}{// @suppress("Function cannot be resolved")}}
+\DoxyCodeLine{00470 \textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{00471 }
+\DoxyCodeLine{00472         cout << endl << \textcolor{stringliteral}{"CHANNEL ENERGY:"} << endl<<endl;}
+\DoxyCodeLine{00473         cout<<\textcolor{stringliteral}{"ID-\/W-\/R\(\backslash\)tENERGY (uJ)"}<<endl<<endl;}
+\DoxyCodeLine{00474         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i<\mbox{\hyperlink{group__firfirgcd__define__group_ga967ca22c6c7be038e1092147ce04f258}{NCH}}; i++)}
+\DoxyCodeLine{00475         \{}
+\DoxyCodeLine{00476             cout << \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7dcc3ae8736a6aad7e27f276706205a3}{VCH}}[i].id <<\textcolor{stringliteral}{"-\/"}<<\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7dcc3ae8736a6aad7e27f276706205a3}{VCH}}[i].w\_id << \textcolor{stringliteral}{"-\/"} << \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7dcc3ae8736a6aad7e27f276706205a3}{VCH}}[i].r\_id << \textcolor{stringliteral}{"\(\backslash\)t"}<< \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7dcc3ae8736a6aad7e27f276706205a3}{VCH}}[i].working\_energy <<\textcolor{stringliteral}{" uJ"}<< endl;}
+\DoxyCodeLine{00477             totEnergyChannels+=\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7dcc3ae8736a6aad7e27f276706205a3}{VCH}}[i].working\_energy;}
+\DoxyCodeLine{00478         \}}
+\DoxyCodeLine{00479         cout<<endl;}
+\DoxyCodeLine{00480         cout << \textcolor{stringliteral}{"Total ENERGY for all the channels: "} << totEnergyChannels <<\textcolor{stringliteral}{" uJ"} <<endl;}
+\DoxyCodeLine{00481 }
+\DoxyCodeLine{00482         cout << endl << \textcolor{stringliteral}{"SCHEDULERS ENERGY:"} << endl;}
+\DoxyCodeLine{00483 }
+\DoxyCodeLine{00484 \textcolor{preprocessor}{        \#if defined \_SAVE\_CSV\_}}
+\DoxyCodeLine{00485             myStatFile << \textcolor{stringliteral}{"SCHEDULERS ENERGY,"}; \textcolor{comment}{// @suppress("Function cannot be resolved")}}
+\DoxyCodeLine{00486 \textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{00487 }
+\DoxyCodeLine{00488         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i<\mbox{\hyperlink{group__firfirgcd__define__group_ga498a2c2b57c15e562e939cccf28db094}{NBB}}; i++) \textcolor{comment}{// Figures for SPP will be always 0}}
+\DoxyCodeLine{00489         \{}
+\DoxyCodeLine{00490             cout << \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>sched\_en[i] << \textcolor{stringliteral}{" uJ"}<<endl;}
+\DoxyCodeLine{00491             totEnergySchedulers+=\mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>sched\_en[i];}
+\DoxyCodeLine{00492 }
+\DoxyCodeLine{00493 \textcolor{preprocessor}{            \#if defined \_SAVE\_CSV\_}}
+\DoxyCodeLine{00494                 myStatFile << to\_string(\mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>sched\_en[i]) +\textcolor{stringliteral}{","}; \textcolor{comment}{// @suppress("Function cannot be resolved")}}
+\DoxyCodeLine{00495 \textcolor{preprocessor}{            \#endif}}
+\DoxyCodeLine{00496         \}}
+\DoxyCodeLine{00497 }
+\DoxyCodeLine{00498         cout<<endl;}
+\DoxyCodeLine{00499         cout << \textcolor{stringliteral}{"Total ENERGY for all the Schedulers: "} << totEnergySchedulers <<\textcolor{stringliteral}{" uJ"} <<endl;}
+\DoxyCodeLine{00500 }
+\DoxyCodeLine{00501 \textcolor{preprocessor}{        \#if defined \_SAVE\_CSV\_}}
+\DoxyCodeLine{00502             myStatFile << \textcolor{stringliteral}{"TOT SCHEDULERS ENERGY,"}; \textcolor{comment}{// @suppress("Function cannot be resolved")}}
+\DoxyCodeLine{00503             myStatFile << to\_string(totEnergySchedulers) +\textcolor{stringliteral}{","};}
+\DoxyCodeLine{00504 \textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{00505 }
+\DoxyCodeLine{00506         cout<<endl;}
+\DoxyCodeLine{00507 }
+\DoxyCodeLine{00508         totEnergy = totEnergyProcesses + totEnergyChannels + totEnergySchedulers + totEnergyPartSchedulers;}
+\DoxyCodeLine{00509 }
+\DoxyCodeLine{00510         cout << endl << \textcolor{stringliteral}{"Total Energy (processes + channels + schedulers):  "} << totEnergy <<\textcolor{stringliteral}{" uJ"}<<endl;}
+\DoxyCodeLine{00511 }
+\DoxyCodeLine{00512 \textcolor{preprocessor}{        \#if defined \_LOAD\_}}
+\DoxyCodeLine{00513             \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a9a32595149efd0a69d09c46387415aa0}{deleteConcXmlEnergy}}();}
+\DoxyCodeLine{00514             \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a99f32d48ffab81f6c16d86dedbede1e7}{updateXmlEnergy}}();}
+\DoxyCodeLine{00515 \textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{00516 }
+\DoxyCodeLine{00517 \textcolor{preprocessor}{        \#if defined \_SAVE\_CSV\_}}
+\DoxyCodeLine{00518             myStatFile << \textcolor{stringliteral}{"TOTAL ENERGY,"};}
+\DoxyCodeLine{00519             myStatFile << to\_string(totEnergy) +\textcolor{stringliteral}{","}; \textcolor{comment}{// @suppress("Function cannot be resolved")}}
+\DoxyCodeLine{00520 \textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{00521 }
+\DoxyCodeLine{00522 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{00523 }
+\DoxyCodeLine{00527 }
+\DoxyCodeLine{00528 \textcolor{preprocessor}{    \#if (defined(\_TIMING\_ENERGY\_) \&\& defined(\_LOAD\_))}}
+\DoxyCodeLine{00529 }
+\DoxyCodeLine{00530         cout << endl << \textcolor{stringliteral}{"LOAD ESTIMATION"} << endl;}
+\DoxyCodeLine{00531 }
+\DoxyCodeLine{00532         \textcolor{keywordtype}{double} tot\_proc\_load = 0;}
+\DoxyCodeLine{00533 }
+\DoxyCodeLine{00534         \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a2babb39c1fc59e1d02782e3e39ea9412}{setFRT}}(end\_sim);}
+\DoxyCodeLine{00535         \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_acf868dd1af35168e9e37a62b1a03780b}{loadEst}}(end\_sim);}
+\DoxyCodeLine{00536 }
+\DoxyCodeLine{00537         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} i =2; i<\mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}.size(); i++)}
+\DoxyCodeLine{00538         \{}
+\DoxyCodeLine{00539             cout <<endl<<\textcolor{stringliteral}{"FRL:"}<<\textcolor{stringliteral}{" "}<< \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[i].id << \textcolor{stringliteral}{"-\/"} << \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[i].name << \textcolor{stringliteral}{" "} << \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_ae7fbae6170e9f5e8aca0c436221dcf41}{getFRL}}()[i];}
+\DoxyCodeLine{00540             tot\_proc\_load += \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_ae7fbae6170e9f5e8aca0c436221dcf41}{getFRL}}()[i];}
+\DoxyCodeLine{00541         \}}
+\DoxyCodeLine{00542         cout << endl << endl << \textcolor{stringliteral}{"FINAL TOTAL LOAD: "} << tot\_proc\_load << endl << endl;}
+\DoxyCodeLine{00543 }
+\DoxyCodeLine{00544         \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_aa25f8e4f2e4460d9652875772f48bb0e}{deleteConcXmlLoad}}();}
+\DoxyCodeLine{00545         \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_afb69c0fedadb6e806e6576ad07c51162}{updateXmlLoad}}();}
+\DoxyCodeLine{00546 }
+\DoxyCodeLine{00547 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{00548 }
+\DoxyCodeLine{00552 }
+\DoxyCodeLine{00553 \textcolor{preprocessor}{    \#if ((!defined(\_TIMING\_ENERGY\_)) || (defined(\_TIMING\_ENERGY\_) \&\& defined(\_CONCURRENCY\_))) // Printed only if (1) functional analizer or (2) timing concurrency}}
+\DoxyCodeLine{00554         \textcolor{comment}{// Number of times each process has been concurrently working with the others}}
+\DoxyCodeLine{00555         cout << endl << \textcolor{stringliteral}{"POTENTIAL PROCESSES CONCURRENCY"} << endl;}
+\DoxyCodeLine{00556         cout << \textcolor{stringliteral}{"  "};}
+\DoxyCodeLine{00557         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=2; j<\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}; j++)}
+\DoxyCodeLine{00558         \{}
+\DoxyCodeLine{00559             cout<< setw(8) << j;}
+\DoxyCodeLine{00560         \}}
+\DoxyCodeLine{00561         cout<< endl;}
+\DoxyCodeLine{00562 }
+\DoxyCodeLine{00563         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=2; i<\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}; i++)}
+\DoxyCodeLine{00564         \{}
+\DoxyCodeLine{00565             cout << i << \textcolor{stringliteral}{" "} ;}
+\DoxyCodeLine{00566             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=2; j<\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}; j++)}
+\DoxyCodeLine{00567             \{}
+\DoxyCodeLine{00568                 cout<< setw(8) << \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>matrixCONC\_PS\_RR[i][j];}
+\DoxyCodeLine{00569             \}}
+\DoxyCodeLine{00570             cout<<endl;}
+\DoxyCodeLine{00571         \}}
+\DoxyCodeLine{00572 }
+\DoxyCodeLine{00573 \textcolor{preprocessor}{        \#if \_WIN32}}
+\DoxyCodeLine{00574             system(\textcolor{stringliteral}{"pause"});}
+\DoxyCodeLine{00575 \textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{00576 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00577 }
+\DoxyCodeLine{00578 \textcolor{preprocessor}{    \#if (defined(\_TIMING\_ENERGY\_) \&\& defined(\_CONCURRENCY\_)) // Printed only if timing concurrency}}
+\DoxyCodeLine{00579         \textcolor{comment}{// Number of times each process has been concurrently working with the others}}
+\DoxyCodeLine{00580         cout << endl << \textcolor{stringliteral}{"ACTUAL PROCESSES CONCURRENCY"} << endl;}
+\DoxyCodeLine{00581         cout << \textcolor{stringliteral}{"  "};}
+\DoxyCodeLine{00582         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=2; j<\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}; j++)}
+\DoxyCodeLine{00583         \{}
+\DoxyCodeLine{00584             cout<< setw(8) << j;}
+\DoxyCodeLine{00585         \}}
+\DoxyCodeLine{00586         cout<< endl;}
+\DoxyCodeLine{00587 }
+\DoxyCodeLine{00588         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=2; i<\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}; i++)}
+\DoxyCodeLine{00589         \{}
+\DoxyCodeLine{00590             cout << i << \textcolor{stringliteral}{" "} ;}
+\DoxyCodeLine{00591             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=2; j<\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}; j++)}
+\DoxyCodeLine{00592             \{}
+\DoxyCodeLine{00593                 cout<< setw(8) << \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>matrixCONC\_PS\_R[i][j];}
+\DoxyCodeLine{00594             \}}
+\DoxyCodeLine{00595             cout<<endl;}
+\DoxyCodeLine{00596         \}}
+\DoxyCodeLine{00597 }
+\DoxyCodeLine{00598 \textcolor{preprocessor}{        \#if \_WIN32}}
+\DoxyCodeLine{00599             system(\textcolor{stringliteral}{"pause"});}
+\DoxyCodeLine{00600 \textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{00601 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00602 }
+\DoxyCodeLine{00603 \textcolor{preprocessor}{    \#if ((!defined(\_TIMING\_ENERGY\_)) || (defined(\_TIMING\_ENERGY\_) \&\& defined(\_CONCURRENCY\_))) // Printed only if (1) functional analizer or (2) timing concurrency}}
+\DoxyCodeLine{00604         \textcolor{comment}{// Number of times each process has been concurrent with the others}}
+\DoxyCodeLine{00605         \textcolor{comment}{//with respect to the number of checks}}
+\DoxyCodeLine{00606         cout << endl << \textcolor{stringliteral}{"NORMALIZED POTENTIAL PROCESSES CONCURRENCY (\#TEST: "} << \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>num\_tests\_CONC\_PS\_RR << \textcolor{stringliteral}{")"} << endl;}
+\DoxyCodeLine{00607         cout<< \textcolor{stringliteral}{"   "};}
+\DoxyCodeLine{00608         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=2; j<\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}; j++)}
+\DoxyCodeLine{00609         \{}
+\DoxyCodeLine{00610             cout<< setw(8) << j;}
+\DoxyCodeLine{00611         \}}
+\DoxyCodeLine{00612         cout<< endl;}
+\DoxyCodeLine{00613 }
+\DoxyCodeLine{00614         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=2; i<\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}; i++)}
+\DoxyCodeLine{00615         \{}
+\DoxyCodeLine{00616             cout<< setw(2) << i << \textcolor{stringliteral}{" "} ;}
+\DoxyCodeLine{00617             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=2; j<\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}; j++)}
+\DoxyCodeLine{00618             \{}
+\DoxyCodeLine{00619                 \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>matrixCONC\_PS\_RR\_N[i][j] = \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>matrixCONC\_PS\_RR[i][j]/(float)\mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>num\_tests\_CONC\_PS\_RR;}
+\DoxyCodeLine{00620                 cout<< setw(8) << setprecision(2) << \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>matrixCONC\_PS\_RR\_N[i][j];}
+\DoxyCodeLine{00621             \}}
+\DoxyCodeLine{00622             cout<<endl;}
+\DoxyCodeLine{00623         \}}
+\DoxyCodeLine{00624 }
+\DoxyCodeLine{00625 \textcolor{preprocessor}{        \#if \_WIN32}}
+\DoxyCodeLine{00626             system(\textcolor{stringliteral}{"pause"});}
+\DoxyCodeLine{00627 \textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{00628 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00629 }
+\DoxyCodeLine{00630 \textcolor{preprocessor}{    \#if (defined(\_TIMING\_ENERGY\_) \&\& defined(\_CONCURRENCY\_)) // Printed only if timing concurrency}}
+\DoxyCodeLine{00631         \textcolor{comment}{// Number of times each process has been concurrent with the others}}
+\DoxyCodeLine{00632         \textcolor{comment}{//with respect to the number of checks}}
+\DoxyCodeLine{00633             cout << endl << \textcolor{stringliteral}{"NORMALIZED ACTUAL PROCESSES CONCURRENCY (\#TEST: "} << \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>num\_tests\_CONC\_PS\_R << \textcolor{stringliteral}{")"} << endl;}
+\DoxyCodeLine{00634         cout<< \textcolor{stringliteral}{"   "};}
+\DoxyCodeLine{00635         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=2; j<\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}; j++)}
+\DoxyCodeLine{00636         \{}
+\DoxyCodeLine{00637             cout<< setw(8) << j;}
+\DoxyCodeLine{00638         \}}
+\DoxyCodeLine{00639         cout<< endl;}
+\DoxyCodeLine{00640 }
+\DoxyCodeLine{00641         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=2; i<\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}; i++)}
+\DoxyCodeLine{00642         \{}
+\DoxyCodeLine{00643             cout<< setw(2) << i << \textcolor{stringliteral}{" "} ;}
+\DoxyCodeLine{00644             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=2; j<\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}; j++)}
+\DoxyCodeLine{00645             \{}
+\DoxyCodeLine{00646                 \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>matrixCONC\_PS\_R\_N[i][j] = \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>matrixCONC\_PS\_R[i][j]/(float)\mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>num\_tests\_CONC\_PS\_R;}
+\DoxyCodeLine{00647                 cout<< setw(8) << setprecision(2) << \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>matrixCONC\_PS\_R\_N[i][j];}
+\DoxyCodeLine{00648             \}}
+\DoxyCodeLine{00649             cout<<endl;}
+\DoxyCodeLine{00650         \}}
+\DoxyCodeLine{00651 }
+\DoxyCodeLine{00652 \textcolor{preprocessor}{        \#if \_WIN32}}
+\DoxyCodeLine{00653             system(\textcolor{stringliteral}{"pause"});}
+\DoxyCodeLine{00654 \textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{00655 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00656 }
+\DoxyCodeLine{00657 \textcolor{preprocessor}{    \#if ((!defined(\_TIMING\_ENERGY\_)) || (defined(\_TIMING\_ENERGY\_) \&\& defined(\_CONCURRENCY\_))) // Printed only if (1) functional analizer or (2) timing concurrency}}
+\DoxyCodeLine{00658         \textcolor{comment}{// Number of times each channels has been concurrently working with the others}}
+\DoxyCodeLine{00659         cout << endl << \textcolor{stringliteral}{"POTENTIAL CHANNELS CONCURRENCY"} << endl;}
+\DoxyCodeLine{00660         cout<< setw(2) << \textcolor{stringliteral}{"   "};}
+\DoxyCodeLine{00661         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0; j<\mbox{\hyperlink{group__firfirgcd__define__group_ga967ca22c6c7be038e1092147ce04f258}{NCH}}; j++)}
+\DoxyCodeLine{00662         \{}
+\DoxyCodeLine{00663             cout<< setw(8) << j;}
+\DoxyCodeLine{00664         \}}
+\DoxyCodeLine{00665         cout<< endl;}
+\DoxyCodeLine{00666 }
+\DoxyCodeLine{00667         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<\mbox{\hyperlink{group__firfirgcd__define__group_ga967ca22c6c7be038e1092147ce04f258}{NCH}}; i++)}
+\DoxyCodeLine{00668         \{}
+\DoxyCodeLine{00669             cout<< setw(2) << i << \textcolor{stringliteral}{" "} ;}
+\DoxyCodeLine{00670             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0; j<\mbox{\hyperlink{group__firfirgcd__define__group_ga967ca22c6c7be038e1092147ce04f258}{NCH}}; j++)}
+\DoxyCodeLine{00671             \{}
+\DoxyCodeLine{00672                 cout<< setw(8) << setprecision(2) << \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>matrixCONC\_CH\_RR[i][j];}
+\DoxyCodeLine{00673             \}}
+\DoxyCodeLine{00674             cout<<endl;}
+\DoxyCodeLine{00675         \}}
+\DoxyCodeLine{00676 }
+\DoxyCodeLine{00677 \textcolor{preprocessor}{        \#if \_WIN32}}
+\DoxyCodeLine{00678             system(\textcolor{stringliteral}{"pause"});}
+\DoxyCodeLine{00679 \textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{00680 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00681 }
+\DoxyCodeLine{00682 \textcolor{preprocessor}{    \#if (defined(\_TIMING\_ENERGY\_) \&\& defined(\_CONCURRENCY\_)) // Printed only if timing concurrency}}
+\DoxyCodeLine{00683         \textcolor{comment}{// Number of times each channels has been concurrently working with the others}}
+\DoxyCodeLine{00684         cout << endl << \textcolor{stringliteral}{"ACTUAL CHANNELS CONCURRENCY"} << endl;}
+\DoxyCodeLine{00685         cout<< setw(2) << \textcolor{stringliteral}{"   "};}
+\DoxyCodeLine{00686         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0; j<\mbox{\hyperlink{group__firfirgcd__define__group_ga967ca22c6c7be038e1092147ce04f258}{NCH}}; j++)}
+\DoxyCodeLine{00687         \{}
+\DoxyCodeLine{00688             cout<< setw(8) << j;}
+\DoxyCodeLine{00689         \}}
+\DoxyCodeLine{00690         cout<< endl;}
+\DoxyCodeLine{00691 }
+\DoxyCodeLine{00692         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<\mbox{\hyperlink{group__firfirgcd__define__group_ga967ca22c6c7be038e1092147ce04f258}{NCH}}; i++)}
+\DoxyCodeLine{00693         \{}
+\DoxyCodeLine{00694             cout<< setw(2) << i << \textcolor{stringliteral}{" "} ;}
+\DoxyCodeLine{00695             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0; j<\mbox{\hyperlink{group__firfirgcd__define__group_ga967ca22c6c7be038e1092147ce04f258}{NCH}}; j++)}
+\DoxyCodeLine{00696             \{}
+\DoxyCodeLine{00697                 cout<< setw(8) << setprecision(2) << \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>matrixCONC\_CH\_R[i][j];}
+\DoxyCodeLine{00698             \}}
+\DoxyCodeLine{00699             cout<<endl;}
+\DoxyCodeLine{00700         \}}
+\DoxyCodeLine{00701 }
+\DoxyCodeLine{00702 \textcolor{preprocessor}{        \#if \_WIN32}}
+\DoxyCodeLine{00703             system(\textcolor{stringliteral}{"pause"});}
+\DoxyCodeLine{00704 \textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{00705 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00706 }
+\DoxyCodeLine{00707 \textcolor{preprocessor}{    \#if ((!defined(\_TIMING\_ENERGY\_)) || (defined(\_TIMING\_ENERGY\_) \&\& defined(\_CONCURRENCY\_))) // Printed only if (1) functional analizer or (2) timing concurrency}}
+\DoxyCodeLine{00708         \textcolor{comment}{// Number of times each channels has been concurrently working with the others}}
+\DoxyCodeLine{00709         \textcolor{comment}{//with respect to the number of checks}}
+\DoxyCodeLine{00710         cout << endl << \textcolor{stringliteral}{"NORMALIZED POTENTIAL CHANNELS CONCURRENCY (\#TEST: "} << \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>num\_tests\_CONC\_CH\_RR << \textcolor{stringliteral}{")"} << endl;}
+\DoxyCodeLine{00711         cout<< setw(2) << \textcolor{stringliteral}{"   "};}
+\DoxyCodeLine{00712         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0; j<\mbox{\hyperlink{group__firfirgcd__define__group_ga967ca22c6c7be038e1092147ce04f258}{NCH}}; j++)}
+\DoxyCodeLine{00713         \{}
+\DoxyCodeLine{00714             cout<< setw(8) << j;}
+\DoxyCodeLine{00715         \}}
+\DoxyCodeLine{00716         cout<< endl;}
+\DoxyCodeLine{00717 }
+\DoxyCodeLine{00718         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<\mbox{\hyperlink{group__firfirgcd__define__group_ga967ca22c6c7be038e1092147ce04f258}{NCH}}; i++)}
+\DoxyCodeLine{00719         \{}
+\DoxyCodeLine{00720             cout<< setw(2) << i << \textcolor{stringliteral}{" "} ;}
+\DoxyCodeLine{00721             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0; j<\mbox{\hyperlink{group__firfirgcd__define__group_ga967ca22c6c7be038e1092147ce04f258}{NCH}}; j++)}
+\DoxyCodeLine{00722             \{}
+\DoxyCodeLine{00723                 \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>matrixCONC\_CH\_RR\_N[i][j] = \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>matrixCONC\_CH\_RR[i][j]/(float)\mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>num\_tests\_CONC\_CH\_RR;}
+\DoxyCodeLine{00724                 cout<< setw(8) << setprecision(2) << \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>matrixCONC\_CH\_RR\_N[i][j];}
+\DoxyCodeLine{00725             \}}
+\DoxyCodeLine{00726             cout<<endl;}
+\DoxyCodeLine{00727         \}}
+\DoxyCodeLine{00728 }
+\DoxyCodeLine{00729 \textcolor{preprocessor}{        \#if \_WIN32}}
+\DoxyCodeLine{00730             system(\textcolor{stringliteral}{"pause"});}
+\DoxyCodeLine{00731 \textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{00732 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00733 }
+\DoxyCodeLine{00734 \textcolor{preprocessor}{    \#if (defined(\_TIMING\_ENERGY\_) \&\& defined(\_CONCURRENCY\_)) // Printed only if timing concurrency}}
+\DoxyCodeLine{00735         \textcolor{comment}{// Number of times each channels has been concurrently working with the others}}
+\DoxyCodeLine{00736         \textcolor{comment}{//with respect to the number of checks}}
+\DoxyCodeLine{00737         cout << endl << \textcolor{stringliteral}{"NORMALIZED ACTUAL CHANNELS CONCURRENCY (\#TEST: "} << \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>num\_tests\_CONC\_CH\_R << \textcolor{stringliteral}{")"} << endl;}
+\DoxyCodeLine{00738         cout<< setw(2) << \textcolor{stringliteral}{"   "};}
+\DoxyCodeLine{00739         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0; j<\mbox{\hyperlink{group__firfirgcd__define__group_ga967ca22c6c7be038e1092147ce04f258}{NCH}}; j++)}
+\DoxyCodeLine{00740         \{}
+\DoxyCodeLine{00741             cout<< setw(8) << j;}
+\DoxyCodeLine{00742         \}}
+\DoxyCodeLine{00743         cout<< endl;}
+\DoxyCodeLine{00744 }
+\DoxyCodeLine{00745         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<\mbox{\hyperlink{group__firfirgcd__define__group_ga967ca22c6c7be038e1092147ce04f258}{NCH}}; i++)}
+\DoxyCodeLine{00746         \{}
+\DoxyCodeLine{00747             cout<< setw(2) << i << \textcolor{stringliteral}{" "} ;}
+\DoxyCodeLine{00748             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0; j<\mbox{\hyperlink{group__firfirgcd__define__group_ga967ca22c6c7be038e1092147ce04f258}{NCH}}; j++)}
+\DoxyCodeLine{00749             \{}
+\DoxyCodeLine{00750                 \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>matrixCONC\_CH\_R\_N[i][j] = \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>matrixCONC\_CH\_R[i][j]/(float)\mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>num\_tests\_CONC\_CH\_R;}
+\DoxyCodeLine{00751                 cout<< setw(8) << setprecision(2) << \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>matrixCONC\_CH\_R\_N[i][j];}
+\DoxyCodeLine{00752             \}}
+\DoxyCodeLine{00753             cout<<endl;}
+\DoxyCodeLine{00754         \}}
+\DoxyCodeLine{00755 }
+\DoxyCodeLine{00756 \textcolor{preprocessor}{        \#if \_WIN32}}
+\DoxyCodeLine{00757             system(\textcolor{stringliteral}{"pause"});}
+\DoxyCodeLine{00758 \textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{00759 }
+\DoxyCodeLine{00760         \textcolor{comment}{// Number of times each BB has been concurrently active with the others}}
+\DoxyCodeLine{00761         cout << endl << \textcolor{stringliteral}{"ACTUAL BB CONCURRENCY"} << endl;}
+\DoxyCodeLine{00762         cout<< setw(2) << \textcolor{stringliteral}{"   "};}
+\DoxyCodeLine{00763         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0; j<\mbox{\hyperlink{group__firfirgcd__define__group_ga498a2c2b57c15e562e939cccf28db094}{NBB}}; j++)}
+\DoxyCodeLine{00764         \{}
+\DoxyCodeLine{00765             cout<< setw(8) << j;}
+\DoxyCodeLine{00766         \}}
+\DoxyCodeLine{00767         cout<< endl;}
+\DoxyCodeLine{00768 }
+\DoxyCodeLine{00769         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<\mbox{\hyperlink{group__firfirgcd__define__group_ga498a2c2b57c15e562e939cccf28db094}{NBB}}; i++)}
+\DoxyCodeLine{00770         \{}
+\DoxyCodeLine{00771             cout<< setw(2) << i << \textcolor{stringliteral}{" "} ;}
+\DoxyCodeLine{00772             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0; j<\mbox{\hyperlink{group__firfirgcd__define__group_ga498a2c2b57c15e562e939cccf28db094}{NBB}}; j++)}
+\DoxyCodeLine{00773             \{}
+\DoxyCodeLine{00774                 cout<< setw(8) << setprecision(2) << \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>matrixCONC\_BB[i][j];}
+\DoxyCodeLine{00775             \}}
+\DoxyCodeLine{00776             cout<<endl;}
+\DoxyCodeLine{00777         \}}
+\DoxyCodeLine{00778 }
+\DoxyCodeLine{00779 \textcolor{preprocessor}{        \#if \_WIN32}}
+\DoxyCodeLine{00780             system(\textcolor{stringliteral}{"pause"});}
+\DoxyCodeLine{00781 \textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{00782 }
+\DoxyCodeLine{00783         \textcolor{comment}{// Number of times each BB has been concurrently active with the others}}
+\DoxyCodeLine{00784         \textcolor{comment}{//with respect to the number of checks}}
+\DoxyCodeLine{00785         cout << endl << \textcolor{stringliteral}{"NORMALIZED ACTUAL BB CONCURRENCY (\#TEST: "} << \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>num\_tests\_CONC\_BB << \textcolor{stringliteral}{")"} << endl;}
+\DoxyCodeLine{00786         cout<< setw(2) << \textcolor{stringliteral}{"   "};}
+\DoxyCodeLine{00787         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0; j<\mbox{\hyperlink{group__firfirgcd__define__group_ga498a2c2b57c15e562e939cccf28db094}{NBB}}; j++)}
+\DoxyCodeLine{00788         \{}
+\DoxyCodeLine{00789             cout<< setw(8) << j;}
+\DoxyCodeLine{00790         \}}
+\DoxyCodeLine{00791         cout<< endl;}
+\DoxyCodeLine{00792 }
+\DoxyCodeLine{00793         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<\mbox{\hyperlink{group__firfirgcd__define__group_ga498a2c2b57c15e562e939cccf28db094}{NBB}}; i++)}
+\DoxyCodeLine{00794         \{}
+\DoxyCodeLine{00795             cout<< setw(2) << i << \textcolor{stringliteral}{" "} ;}
+\DoxyCodeLine{00796             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0; j<\mbox{\hyperlink{group__firfirgcd__define__group_ga498a2c2b57c15e562e939cccf28db094}{NBB}}; j++)}
+\DoxyCodeLine{00797             \{}
+\DoxyCodeLine{00798                 \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>matrixCONC\_BB\_N[i][j] = \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>matrixCONC\_BB[i][j]/(float)\mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>num\_tests\_CONC\_BB;}
+\DoxyCodeLine{00799                 cout<< setw(8) << setprecision(2) << \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>matrixCONC\_BB\_N[i][j];}
+\DoxyCodeLine{00800             \}}
+\DoxyCodeLine{00801             cout<<endl;}
+\DoxyCodeLine{00802         \}}
+\DoxyCodeLine{00803 }
+\DoxyCodeLine{00804 \textcolor{preprocessor}{        \#if \_WIN32}}
+\DoxyCodeLine{00805             system(\textcolor{stringliteral}{"pause"});}
+\DoxyCodeLine{00806 \textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{00807 }
+\DoxyCodeLine{00808         \textcolor{comment}{// Number of times a group of BBs have been concurrently active}}
+\DoxyCodeLine{00809         cout << endl << \textcolor{stringliteral}{"ACTUAL BB GROUP CONCURRENCY"} << endl;}
+\DoxyCodeLine{00810         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0; j<\mbox{\hyperlink{group__firfirgcd__define__group_ga498a2c2b57c15e562e939cccf28db094}{NBB}}+1; j++)}
+\DoxyCodeLine{00811         \{}
+\DoxyCodeLine{00812                 cout << j << \textcolor{stringliteral}{" ACTIVE BBs: "} << \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>vectorCONC\_BB[j] << endl;}
+\DoxyCodeLine{00813         \}}
+\DoxyCodeLine{00814 }
+\DoxyCodeLine{00815         \textcolor{comment}{// Number of times a group of BBs have been concurrently active}}
+\DoxyCodeLine{00816         cout << endl << \textcolor{stringliteral}{"NORMALIZED ACTUAL BB GROUP CONCURRENCY (\#TEST: "} << \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>num\_tests\_CONC\_BB << \textcolor{stringliteral}{")"} << endl;}
+\DoxyCodeLine{00817         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0; j<\mbox{\hyperlink{group__firfirgcd__define__group_ga498a2c2b57c15e562e939cccf28db094}{NBB}}+1; j++)}
+\DoxyCodeLine{00818         \{}
+\DoxyCodeLine{00819                 \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>vectorCONC\_BB\_N[j] = \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>vectorCONC\_BB[j]/(float)\mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>num\_tests\_CONC\_BB;}
+\DoxyCodeLine{00820                 cout << j << \textcolor{stringliteral}{" ACTIVE BBs: "} << \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>vectorCONC\_BB\_N[j] << endl;}
+\DoxyCodeLine{00821         \}}
+\DoxyCodeLine{00822 }
+\DoxyCodeLine{00823 \textcolor{preprocessor}{        \#if \_WIN32}}
+\DoxyCodeLine{00824             system(\textcolor{stringliteral}{"pause"});}
+\DoxyCodeLine{00825 \textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{00826 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{00827 }
+\DoxyCodeLine{00828 \textcolor{preprocessor}{    \#if ((!defined(\_TIMING\_ENERGY\_))) // || (defined(\_TIMING\_ENERGY\_) \&\& defined(\_CONCURRENCY\_))) // Printed only if (1) functional analizer or (2) timing concurrency}}
+\DoxyCodeLine{00829         cout << \textcolor{stringliteral}{"Processes and Channels Concurrency, and Channels Communication XML update"} << endl;}
+\DoxyCodeLine{00830 }
+\DoxyCodeLine{00831         \textcolor{comment}{// LP: Da controllare}}
+\DoxyCodeLine{00832         \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_ab6efb1ee75ff2df870bd8e65480dc6e7}{deleteConcXmlConCom}}();}
+\DoxyCodeLine{00833 }
+\DoxyCodeLine{00834         \textcolor{comment}{// LP: da controllare}}
+\DoxyCodeLine{00835         \mbox{\hyperlink{group__firfirgcd__main__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a5f16a17547d2cd543180e06e555304e7}{updateXmlConCom}}(\mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>matrixCONC\_PS\_RR\_N, \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>matrixCOM, \mbox{\hyperlink{group__firfirgcd__main__group_gad142acf1b36eb3c83c6e67364d257d48}{pSchedulingManager}}-\/>matrixCONC\_CH\_RR\_N);}
+\DoxyCodeLine{00836 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{00837 }
+\DoxyCodeLine{00838 \textcolor{preprocessor}{    \#if defined \_SAVE\_CSV\_}}
+\DoxyCodeLine{00839         myStatFile << \textcolor{stringliteral}{"\(\backslash\)n"};;}
+\DoxyCodeLine{00840 }
+\DoxyCodeLine{00841         \textcolor{comment}{// Save information about final population statistics into csv file}}
+\DoxyCodeLine{00842         myStatFile.close();}
+\DoxyCodeLine{00843 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{00844 }
+\DoxyCodeLine{00845 \textcolor{preprocessor}{    \#if \_WIN32}}
+\DoxyCodeLine{00846         system(\textcolor{stringliteral}{"pause"});}
+\DoxyCodeLine{00847 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{00848 }
+\DoxyCodeLine{00849     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00850 \}}
+\DoxyCodeLine{00851  \textcolor{comment}{// end of firfirgcd\_main\_group}}
+\DoxyCodeLine{00853 }
+\DoxyCodeLine{00854 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00855 \textcolor{comment}{ ***                                  EOF                                     ***}}
+\DoxyCodeLine{00856 \textcolor{comment}{ ********************************************************************************/}}
+
+\end{DoxyCode}

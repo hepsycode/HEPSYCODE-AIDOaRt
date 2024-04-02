@@ -1,0 +1,62 @@
+.TH "HepsycodeDesign/src/macros.h" 3 "Mon Mar 20 2023" "FirFirGCD Application" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+HepsycodeDesign/src/macros.h \- Macros Documented file\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBHEPSY_S\fP(X)"
+.br
+.ti -1c
+.RI "#define \fBHEPSY_P\fP(X)   \fBpSystemManager\fP\->PS_Profiling(X);"
+.br
+.ti -1c
+.RI "#define \fBHEPSY_SCHED_CS\fP(X,  i)"
+.br
+.ti -1c
+.RI "#define \fBPRE_WAIT\fP(X)"
+.br
+.ti -1c
+.RI "#define \fBPOST_WAIT\fP(X)"
+.br
+.ti -1c
+.RI "#define \fBHEPSY_S_TIMER\fP(X,  Y)"
+.br
+.ti -1c
+.RI "#define \fBHEPSY_TRACE_PS_STATE\fP(X)   \fBpSchedulingManager\fP\->LOG << 'Execution Time;' << sc_time_stamp()\&.to_seconds() << '; Energy;' << pSystemManager\->VPS[X]\&.getEnergy() << '; Process;' << X << '; State;' << pSchedulingManager\->process_state[X] << endl;"
+.br
+.ti -1c
+.RI "#define \fBHEPSY_TRACE_PS_STATE_THIS\fP(X)   this\->LOG << 'Execution Time;' << sc_time_stamp()\&.to_seconds() << '; Energy;' << pSystemManager\->VPS[X]\&.getEnergy() << '; Process;' << X << '; State;' << this\->process_state[X] << endl;"
+.br
+.ti -1c
+.RI "#define \fBHEPSY_TRACE_CH_STATE\fP(X)   \fBpSchedulingManager\fP\->LOG << 'Execution Time;' << sc_time_stamp()\&.to_seconds() << '; Energy;' << pSystemManager\->VCH[X]\&.working_energy << '; Channel;' << X << '; State;' << pSchedulingManager\->channel_state[X] << endl;"
+.br
+.ti -1c
+.RI "#define \fBHEPSY_TRACE_CH_STATE_THIS\fP(X)   this\->LOG << 'Execution Time;' << sc_time_stamp()\&.to_seconds() << '; Energy;' << pSystemManager\->VCH[X]\&.working_energy << '; Channel;' << X << '; State;' << this\->channel_state[X] << endl;"
+.br
+.ti -1c
+.RI "#define \fBHEPSY_TRACE_BB_STATE\fP(X)   \fBpSchedulingManager\fP\->LOG << 'Execution Time;' << sc_time_stamp()\&.to_seconds() << '; Energy;' << 0 << '; BB;' << X << '; Mode;' << pSchedulingManager\->BB_mode[X] << endl;"
+.br
+.ti -1c
+.RI "#define \fBHEPSY_TRACE_BB_STATE_THIS\fP(X)   this\->LOG << 'Execution Time;' << sc_time_stamp()\&.to_seconds() << '; Energy;' << 0 << '; BB;' << X << '; Mode;' << this\->BB_mode[X] << endl;"
+.br
+.ti -1c
+.RI "#define \fBHEPSY_TRACE_SCHED_STATE\fP(X)   this\->LOG << 'Execution Time;' << sc_time_stamp()\&.to_seconds() << '; Energy;' << this\->sched_en[X] << '; Scheduler;' << X << '; State;' << this\->scheduler_state[X] << endl;"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Macros Documented file\&. 
+
+Macros: Macros file 
+.PP
+Definition in file \fBmacros\&.h\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FirFirGCD Application from the source code\&.

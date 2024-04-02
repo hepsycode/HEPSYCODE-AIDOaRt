@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group__firfirgcd__datatypes__group">
+<title>FirFirGCD datatypes.</title>
+<indexterm><primary>FirFirGCD datatypes.</primary></indexterm>
+<para>
+
+<para>DATATYPES (i.e., MESSAGES) USED BY THE CHANNELS. </para>
+ 
+</para>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structfir8e__parameters">fir8e_parameters</link></para>
+
+<para>Message from fir8m to fir8e. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_structfir8e__results">fir8e_results</link></para>
+
+<para>struct <link linkend="_structfir8e__results">fir8e_results</link> </para>
+</listitem>
+            <listitem><para>struct <link linkend="_structfir8s__parameters">fir8s_parameters</link></para>
+
+<para>struct <link linkend="_structfir8s__parameters">fir8s_parameters</link> </para>
+</listitem>
+            <listitem><para>struct <link linkend="_structfir8s__results">fir8s_results</link></para>
+
+<para>struct <link linkend="_structfir8s__results">fir8s_results</link> </para>
+</listitem>
+            <listitem><para>struct <link linkend="_structfir16e__parameters">fir16e_parameters</link></para>
+
+<para>Message from fir16m to fir16e. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_structfir16e__results">fir16e_results</link></para>
+
+<para>Message from fir16e to fir16m. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_structfir16s__parameters">fir16s_parameters</link></para>
+
+<para>Message from fir16m to fir16s. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_structfir16s__results">fir16s_results</link></para>
+
+<para>Message from fir16s to fir16m. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_structgcde__parameters">gcde_parameters</link></para>
+
+<para>Message from gcdm to gcde. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_structgcde__results">gcde_results</link></para>
+
+<para>Message from gcde to gcdm. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>DATATYPES (i.e., MESSAGES) USED BY THE CHANNELS. </para>
+
+<para>Defines all the FirFirGCD related datatypes <formalpara><title>Author</title>
+
+<para>V. Muttillo, L. Pomante </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>Apr. 2022 </para>
+</formalpara>
+</para>
+</section>
+</section>

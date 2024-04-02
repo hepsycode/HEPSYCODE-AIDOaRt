@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hml:BehaviorSpecification xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hml="org.univaq.hepsy">
+  <nodes xsi:type="hml:StructuredNode" name="System">
+    <nChannels name="ch2" nFrom="//@nodes.0/@processes.0" nTo="//@nodes.0/@processes.2" queueSize="123" timeout="123" rendezVous="true">
+      <message name="ms2">
+        <entry name="mx2" type="sc_uint"/>
+      </message>
+    </nChannels>
+    <nChannels name="ch3" nFrom="//@nodes.0/@processes.2" nTo="//@nodes.0/@processes.1" queueSize="123" timeout="123" rendezVous="true">
+      <message name="ms3">
+        <entry name="mx3" type="sc_int"/>
+      </message>
+    </nChannels>
+    <ports name="sy_out" portExtension="//@nodes.0/@processes.0"/>
+    <ports name="disp_out"/>
+    <processes name="p1" criticality="1"/>
+    <processes name="p3" processExtension="//@nodes.0/@ports.1" priority="123" criticality="123"/>
+    <processes name="p2" priority="2" criticality="23"/>
+  </nodes>
+  <nodes xsi:type="hml:Display" name="Display">
+    <ports name="disp_in">
+      <pChannels name="ch4" pFrom="//@nodes.1/@ports.0" pTo="//@nodes.0/@ports.1" queueSize="132" timeout="123" rendezVous="true">
+        <message name="ms5">
+          <entry name="mx5" type="sc_bigint"/>
+        </message>
+      </pChannels>
+    </ports>
+  </nodes>
+  <nodes xsi:type="hml:Stimulus" name="System">
+    <ports name="sy_in">
+      <pChannels name="ch1" pFrom="//@nodes.2/@ports.0" pTo="//@nodes.0/@ports.0" queueSize="21" timeout="122" rendezVous="true">
+        <message name="ms1">
+          <entry name="en1" type="sc_int"/>
+        </message>
+      </pChannels>
+    </ports>
+  </nodes>
+</hml:BehaviorSpecification>

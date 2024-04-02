@@ -1,0 +1,461 @@
+\hypertarget{classsc__csp__channel}{}\doxysection{sc\+\_\+csp\+\_\+channel$<$ T $>$ Class Template Reference}
+\label{classsc__csp__channel}\index{sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}}
+
+
+{\ttfamily \#include $<$sc\+\_\+csp\+\_\+channel.\+h$>$}
+
+
+
+Inheritance diagram for sc\+\_\+csp\+\_\+channel$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsc__csp__channel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for sc\+\_\+csp\+\_\+channel$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classsc__csp__channel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsc__csp__channel_a18caf07ac6dda7298155bf5bee992f81}{sc\+\_\+csp\+\_\+channel}} (unsigned int channel\+\_\+id=0)
+\item 
+virtual void \mbox{\hyperlink{group__firfirgcd__csp__channel__group_ga5bbbddcd88383d3ed9ee425ad87ee58c}{register\+\_\+port}} (sc\+\_\+port\+\_\+base \&, const char $\ast$)
+\item 
+virtual void \mbox{\hyperlink{group__firfirgcd__csp__channel__group_ga23046a4820dcf9ef26a75eba9cb7d49b}{read}} (T \&)
+\item 
+virtual T \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaf3eb60ce6aecbe88c0e72fdb19a1f7af}{read}} ()
+\item 
+virtual void \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaf8a9ace576ff2e0462c8db276f9f388d}{write}} (const T \&)
+\item 
+virtual bool \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gab1a08e5d4129f9647e573af0c4ca4f30}{read\+\_\+test}} ()
+\item 
+virtual bool \mbox{\hyperlink{group__firfirgcd__csp__channel__group_ga3566fb8ed3dc3ba7ab7d6dbe17787153}{write\+\_\+test}} ()
+\item 
+virtual void \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaaed132e73280fe2a46b14604240832bc}{register\+\_\+alt}} ()
+\item 
+virtual const sc\+\_\+event \& \mbox{\hyperlink{group__firfirgcd__csp__channel__group_ga40cb801a3a15df214563c89160c6d19c}{get\+\_\+alt\+\_\+event}} ()
+\item 
+\mbox{\hyperlink{classsc__csp__channel_a189b4ad7e6190ef15dde076380ff157f}{operator T}} ()
+\item 
+\mbox{\hyperlink{classsc__csp__channel}{sc\+\_\+csp\+\_\+channel}}$<$ T $>$ \& \mbox{\hyperlink{classsc__csp__channel_af613528dfec5c1d151cce1c5349d16a4}{operator=}} (const T \&a)
+\item 
+void \mbox{\hyperlink{group__firfirgcd__csp__channel__group_ga216706630fbd1f222b428cc4e6aa523d}{trace}} (sc\+\_\+trace\+\_\+file $\ast$tf) const
+\item 
+virtual const char $\ast$ \mbox{\hyperlink{classsc__csp__channel_a60ae57ddb1ebd031e4ed21094a49a48b}{kind}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{classsc__csp__channel_aed1aa9cb465c4a9c7751169994408c72}{id}}
+\item 
+unsigned int \mbox{\hyperlink{classsc__csp__channel_a5bef0234cd8c0762891d104dd4e7b68a}{w\+\_\+id}}
+\item 
+unsigned int \mbox{\hyperlink{classsc__csp__channel_ae16790111d142e48baf4563eb5e44069}{r\+\_\+id}}
+\item 
+unsigned int \mbox{\hyperlink{classsc__csp__channel_affca8dbc03ca31ac85f54766040aba41}{width}}
+\item 
+unsigned int \mbox{\hyperlink{classsc__csp__channel_a36b454aeb9b50a4094f31801a6976b0f}{num}}
+\item 
+bool \mbox{\hyperlink{classsc__csp__channel_a6508172b749b9dadf1824f5e816a32ed}{I\+PC}}
+\item 
+sc\+\_\+time \mbox{\hyperlink{classsc__csp__channel_a5cd83229e038e07f237512df3df4adf9}{waiting\+\_\+time}}
+\item 
+sc\+\_\+time \mbox{\hyperlink{classsc__csp__channel_ab0977c6aab0732a7946a73aa4b2e6de8}{working\+\_\+time}}
+\item 
+double \mbox{\hyperlink{classsc__csp__channel_a58737a4adf049b01ddce1acbbb7c5115}{partial\+\_\+energy}}
+\item 
+double \mbox{\hyperlink{classsc__csp__channel_a97c55d92a3c04d41300ffdb208eabc92}{working\+\_\+energy}}
+\item 
+sc\+\_\+time \mbox{\hyperlink{classsc__csp__channel_a4609ce8351fc80bfa9041292f6722d3c}{tcomm}}
+\item 
+sc\+\_\+time \mbox{\hyperlink{classsc__csp__channel_a87dc80bcdbac9e16d542da60040795df}{tacomm}}
+\item 
+unsigned int \mbox{\hyperlink{classsc__csp__channel_aae2e852312f70713be417eec3bd51b25}{physical\+\_\+width}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__firfirgcd__csp__channel__group_ga8be7bf7ee4f0c35e684b3de9a5163705}{init}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sc\+\_\+event \mbox{\hyperlink{classsc__csp__channel_a014541bbd872463dd525b35e951ee9ba}{ready\+\_\+to\+\_\+read\+\_\+event}}
+\item 
+sc\+\_\+event \mbox{\hyperlink{classsc__csp__channel_aab17ea7d52d31f39e68eb4472cb27a4a}{ready\+\_\+to\+\_\+write\+\_\+event}}
+\item 
+sc\+\_\+event \mbox{\hyperlink{classsc__csp__channel_acf1aadf77836e165d8b7672500bd2dc7}{ready\+\_\+alt\+\_\+event}}
+\item 
+bool \mbox{\hyperlink{classsc__csp__channel_ae716d02584a29463adb04def170fce8e}{ready\+\_\+to\+\_\+read}}
+\item 
+bool \mbox{\hyperlink{classsc__csp__channel_ab7c20a9236f789c6e64d8c83ae19967f}{ready\+\_\+to\+\_\+write}}
+\item 
+bool \mbox{\hyperlink{classsc__csp__channel_aaeef06ac96bbb3468f9aa907c5b39253}{enable\+\_\+alt\+\_\+events}}
+\item 
+T \mbox{\hyperlink{classsc__csp__channel_aa4ab2439d490053e231a59dd9b77e6d6}{csp\+\_\+buf}}
+\item 
+sc\+\_\+port\+\_\+base $\ast$ \mbox{\hyperlink{classsc__csp__channel_a03a5aa44e377fea90b93e68e481ad1e1}{m\+\_\+reader}}
+\item 
+sc\+\_\+port\+\_\+base $\ast$ \mbox{\hyperlink{classsc__csp__channel_ad4a06e1cfab0e87829b914b4230d2acb}{m\+\_\+writer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class sc\+\_\+csp\+\_\+channel$<$ T $>$}
+
+
+
+Definition at line \mbox{\hyperlink{sc__csp__channel_8h_source_l00101}{101}} of file \mbox{\hyperlink{sc__csp__channel_8h_source}{sc\+\_\+csp\+\_\+channel.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsc__csp__channel_a18caf07ac6dda7298155bf5bee992f81}\label{classsc__csp__channel_a18caf07ac6dda7298155bf5bee992f81}} 
+\index{sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}!sc\_csp\_channel@{sc\_csp\_channel}}
+\index{sc\_csp\_channel@{sc\_csp\_channel}!sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sc\_csp\_channel()}{sc\_csp\_channel()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classsc__csp__channel}{sc\+\_\+csp\+\_\+channel}}$<$ T $>$\+::\mbox{\hyperlink{classsc__csp__channel}{sc\+\_\+csp\+\_\+channel}} (\begin{DoxyParamCaption}\item[{unsigned int}]{channel\+\_\+id = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Definition at line \mbox{\hyperlink{sc__csp__channel_8h_source_l00110}{110}} of file \mbox{\hyperlink{sc__csp__channel_8h_source}{sc\+\_\+csp\+\_\+channel.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00110                          :\mbox{\hyperlink{classsc__prim__channel}{sc\_prim\_channel}}( sc\_gen\_unique\_name( \textcolor{stringliteral}{"csp\_channel"} ) ),}
+\DoxyCodeLine{00111                           \mbox{\hyperlink{classsc__csp__channel_a014541bbd872463dd525b35e951ee9ba}{ready\_to\_read\_event}}(sc\_gen\_unique\_name( \textcolor{stringliteral}{"read\_event"} )),}
+\DoxyCodeLine{00112                           \mbox{\hyperlink{classsc__csp__channel_aab17ea7d52d31f39e68eb4472cb27a4a}{ready\_to\_write\_event}}(sc\_gen\_unique\_name(\textcolor{stringliteral}{"write\_event"} )),}
+\DoxyCodeLine{00113                           \mbox{\hyperlink{classsc__csp__channel_acf1aadf77836e165d8b7672500bd2dc7}{ready\_alt\_event}}(sc\_gen\_unique\_name(\textcolor{stringliteral}{"alt\_event"}))}
+\DoxyCodeLine{00114                     \{}
+\DoxyCodeLine{00115                         \textcolor{keywordtype}{id}=channel\_id;}
+\DoxyCodeLine{00116                         \mbox{\hyperlink{classsc__csp__channel_a5bef0234cd8c0762891d104dd4e7b68a}{w\_id}}= \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7dcc3ae8736a6aad7e27f276706205a3}{VCH}}[\mbox{\hyperlink{classsc__csp__channel_aed1aa9cb465c4a9c7751169994408c72}{id}}].getW\_id();}
+\DoxyCodeLine{00117                         \mbox{\hyperlink{classsc__csp__channel_ae16790111d142e48baf4563eb5e44069}{r\_id}}= \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7dcc3ae8736a6aad7e27f276706205a3}{VCH}}[\mbox{\hyperlink{classsc__csp__channel_aed1aa9cb465c4a9c7751169994408c72}{id}}].getR\_id();}
+\DoxyCodeLine{00118                         \mbox{\hyperlink{classsc__csp__channel_affca8dbc03ca31ac85f54766040aba41}{width}}= \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_a7dcc3ae8736a6aad7e27f276706205a3}{VCH}}[\mbox{\hyperlink{classsc__csp__channel_aed1aa9cb465c4a9c7751169994408c72}{id}}].getWidth();}
+\DoxyCodeLine{00119 }
+\DoxyCodeLine{00120                         \mbox{\hyperlink{classsc__csp__channel_a4609ce8351fc80bfa9041292f6722d3c}{tcomm}}= \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_af28a1744a2d964a7047c31c6a5f1644a}{VPL}}[\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_ab75b55327c942c6950f67c14ba9dea08}{allocationCH\_PL}}[\mbox{\hyperlink{classsc__csp__channel_aed1aa9cb465c4a9c7751169994408c72}{id}}]].getTcomm();}
+\DoxyCodeLine{00121                         \mbox{\hyperlink{classsc__csp__channel_a87dc80bcdbac9e16d542da60040795df}{tacomm}}= \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_af28a1744a2d964a7047c31c6a5f1644a}{VPL}}[\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_ab75b55327c942c6950f67c14ba9dea08}{allocationCH\_PL}}[\mbox{\hyperlink{classsc__csp__channel_aed1aa9cb465c4a9c7751169994408c72}{id}}]].getTAcomm();}
+\DoxyCodeLine{00122                         \mbox{\hyperlink{classsc__csp__channel_aae2e852312f70713be417eec3bd51b25}{physical\_width}}= \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_af28a1744a2d964a7047c31c6a5f1644a}{VPL}}[\mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaa604ac51b2579794e702367934dfb8ad}{pSystemManager}}-\/>\mbox{\hyperlink{class_system_manager_ab75b55327c942c6950f67c14ba9dea08}{allocationCH\_PL}}[\mbox{\hyperlink{classsc__csp__channel_aed1aa9cb465c4a9c7751169994408c72}{id}}]].getPhysicalWidth();}
+\DoxyCodeLine{00123 }
+\DoxyCodeLine{00124                         \mbox{\hyperlink{group__firfirgcd__csp__channel__group_ga8be7bf7ee4f0c35e684b3de9a5163705}{init}}();}
+\DoxyCodeLine{00125                     \}}
+\DoxyCodeLine{00126 }
+\DoxyCodeLine{00127 }
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{_system_manager_8h_source_l00110}{System\+Manager\+::allocation\+C\+H\+\_\+\+PL}}, \mbox{\hyperlink{main_8cpp_source_l00163}{p\+System\+Manager}}, \mbox{\hyperlink{_system_manager_8h_source_l00097}{System\+Manager\+::\+V\+CH}}, and \mbox{\hyperlink{_system_manager_8h_source_l00103}{System\+Manager\+::\+V\+PL}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classsc__csp__channel_a60ae57ddb1ebd031e4ed21094a49a48b}\label{classsc__csp__channel_a60ae57ddb1ebd031e4ed21094a49a48b}} 
+\index{sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}!kind@{kind}}
+\index{kind@{kind}!sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{kind()}{kind()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+virtual const char$\ast$ \mbox{\hyperlink{classsc__csp__channel}{sc\+\_\+csp\+\_\+channel}}$<$ T $>$\+::kind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line \mbox{\hyperlink{sc__csp__channel_8h_source_l00156}{156}} of file \mbox{\hyperlink{sc__csp__channel_8h_source}{sc\+\_\+csp\+\_\+channel.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00157              :}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsc__csp__channel_a189b4ad7e6190ef15dde076380ff157f}\label{classsc__csp__channel_a189b4ad7e6190ef15dde076380ff157f}} 
+\index{sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}!operator T@{operator T}}
+\index{operator T@{operator T}!sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator T()}{operator T()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classsc__csp__channel}{sc\+\_\+csp\+\_\+channel}}$<$ T $>$\+::operator T (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{sc__csp__channel_8h_source_l00148}{148}} of file \mbox{\hyperlink{sc__csp__channel_8h_source}{sc\+\_\+csp\+\_\+channel.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00150         \{ \mbox{\hyperlink{group__firfirgcd__csp__channel__group_gaf8a9ace576ff2e0462c8db276f9f388d}{write}}( a ); \textcolor{keywordflow}{return} *\textcolor{keyword}{this}; \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classsc__csp__channel_af613528dfec5c1d151cce1c5349d16a4}\label{classsc__csp__channel_af613528dfec5c1d151cce1c5349d16a4}} 
+\index{sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classsc__csp__channel}{sc\+\_\+csp\+\_\+channel}}$<$T$>$\& \mbox{\hyperlink{classsc__csp__channel}{sc\+\_\+csp\+\_\+channel}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const T \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{sc__csp__channel_8h_source_l00151}{151}} of file \mbox{\hyperlink{sc__csp__channel_8h_source}{sc\+\_\+csp\+\_\+channel.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00155         \{ \textcolor{keywordflow}{return} \textcolor{stringliteral}{"sc\_csp\_channel"}; \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{classsc__csp__channel_aa4ab2439d490053e231a59dd9b77e6d6}\label{classsc__csp__channel_aa4ab2439d490053e231a59dd9b77e6d6}} 
+\index{sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}!csp\_buf@{csp\_buf}}
+\index{csp\_buf@{csp\_buf}!sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{csp\_buf}{csp\_buf}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T \mbox{\hyperlink{classsc__csp__channel}{sc\+\_\+csp\+\_\+channel}}$<$ T $>$\+::csp\+\_\+buf\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{sc__csp__channel_8h_source_l00171}{171}} of file \mbox{\hyperlink{sc__csp__channel_8h_source}{sc\+\_\+csp\+\_\+channel.\+h}}.
+
+\mbox{\Hypertarget{classsc__csp__channel_aaeef06ac96bbb3468f9aa907c5b39253}\label{classsc__csp__channel_aaeef06ac96bbb3468f9aa907c5b39253}} 
+\index{sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}!enable\_alt\_events@{enable\_alt\_events}}
+\index{enable\_alt\_events@{enable\_alt\_events}!sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{enable\_alt\_events}{enable\_alt\_events}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{classsc__csp__channel}{sc\+\_\+csp\+\_\+channel}}$<$ T $>$\+::enable\+\_\+alt\+\_\+events\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{sc__csp__channel_8h_source_l00169}{169}} of file \mbox{\hyperlink{sc__csp__channel_8h_source}{sc\+\_\+csp\+\_\+channel.\+h}}.
+
+\mbox{\Hypertarget{classsc__csp__channel_aed1aa9cb465c4a9c7751169994408c72}\label{classsc__csp__channel_aed1aa9cb465c4a9c7751169994408c72}} 
+\index{sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}!id@{id}}
+\index{id@{id}!sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+unsigned int \mbox{\hyperlink{classsc__csp__channel}{sc\+\_\+csp\+\_\+channel}}$<$ T $>$\+::id}
+
+
+
+Definition at line \mbox{\hyperlink{sc__csp__channel_8h_source_l00174}{174}} of file \mbox{\hyperlink{sc__csp__channel_8h_source}{sc\+\_\+csp\+\_\+channel.\+h}}.
+
+\mbox{\Hypertarget{classsc__csp__channel_a6508172b749b9dadf1824f5e816a32ed}\label{classsc__csp__channel_a6508172b749b9dadf1824f5e816a32ed}} 
+\index{sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}!IPC@{IPC}}
+\index{IPC@{IPC}!sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{IPC}{IPC}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{classsc__csp__channel}{sc\+\_\+csp\+\_\+channel}}$<$ T $>$\+::I\+PC}
+
+
+
+Definition at line \mbox{\hyperlink{sc__csp__channel_8h_source_l00179}{179}} of file \mbox{\hyperlink{sc__csp__channel_8h_source}{sc\+\_\+csp\+\_\+channel.\+h}}.
+
+\mbox{\Hypertarget{classsc__csp__channel_a03a5aa44e377fea90b93e68e481ad1e1}\label{classsc__csp__channel_a03a5aa44e377fea90b93e68e481ad1e1}} 
+\index{sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}!m\_reader@{m\_reader}}
+\index{m\_reader@{m\_reader}!sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{m\_reader}{m\_reader}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+sc\+\_\+port\+\_\+base$\ast$ \mbox{\hyperlink{classsc__csp__channel}{sc\+\_\+csp\+\_\+channel}}$<$ T $>$\+::m\+\_\+reader\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{sc__csp__channel_8h_source_l00192}{192}} of file \mbox{\hyperlink{sc__csp__channel_8h_source}{sc\+\_\+csp\+\_\+channel.\+h}}.
+
+\mbox{\Hypertarget{classsc__csp__channel_ad4a06e1cfab0e87829b914b4230d2acb}\label{classsc__csp__channel_ad4a06e1cfab0e87829b914b4230d2acb}} 
+\index{sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}!m\_writer@{m\_writer}}
+\index{m\_writer@{m\_writer}!sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{m\_writer}{m\_writer}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+sc\+\_\+port\+\_\+base$\ast$ \mbox{\hyperlink{classsc__csp__channel}{sc\+\_\+csp\+\_\+channel}}$<$ T $>$\+::m\+\_\+writer\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{sc__csp__channel_8h_source_l00193}{193}} of file \mbox{\hyperlink{sc__csp__channel_8h_source}{sc\+\_\+csp\+\_\+channel.\+h}}.
+
+\mbox{\Hypertarget{classsc__csp__channel_a36b454aeb9b50a4094f31801a6976b0f}\label{classsc__csp__channel_a36b454aeb9b50a4094f31801a6976b0f}} 
+\index{sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}!num@{num}}
+\index{num@{num}!sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{num}{num}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+unsigned int \mbox{\hyperlink{classsc__csp__channel}{sc\+\_\+csp\+\_\+channel}}$<$ T $>$\+::num}
+
+
+
+Definition at line \mbox{\hyperlink{sc__csp__channel_8h_source_l00178}{178}} of file \mbox{\hyperlink{sc__csp__channel_8h_source}{sc\+\_\+csp\+\_\+channel.\+h}}.
+
+\mbox{\Hypertarget{classsc__csp__channel_a58737a4adf049b01ddce1acbbb7c5115}\label{classsc__csp__channel_a58737a4adf049b01ddce1acbbb7c5115}} 
+\index{sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}!partial\_energy@{partial\_energy}}
+\index{partial\_energy@{partial\_energy}!sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{partial\_energy}{partial\_energy}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+double \mbox{\hyperlink{classsc__csp__channel}{sc\+\_\+csp\+\_\+channel}}$<$ T $>$\+::partial\+\_\+energy}
+
+
+
+Definition at line \mbox{\hyperlink{sc__csp__channel_8h_source_l00184}{184}} of file \mbox{\hyperlink{sc__csp__channel_8h_source}{sc\+\_\+csp\+\_\+channel.\+h}}.
+
+\mbox{\Hypertarget{classsc__csp__channel_aae2e852312f70713be417eec3bd51b25}\label{classsc__csp__channel_aae2e852312f70713be417eec3bd51b25}} 
+\index{sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}!physical\_width@{physical\_width}}
+\index{physical\_width@{physical\_width}!sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{physical\_width}{physical\_width}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+unsigned int \mbox{\hyperlink{classsc__csp__channel}{sc\+\_\+csp\+\_\+channel}}$<$ T $>$\+::physical\+\_\+width}
+
+
+
+Definition at line \mbox{\hyperlink{sc__csp__channel_8h_source_l00189}{189}} of file \mbox{\hyperlink{sc__csp__channel_8h_source}{sc\+\_\+csp\+\_\+channel.\+h}}.
+
+\mbox{\Hypertarget{classsc__csp__channel_ae16790111d142e48baf4563eb5e44069}\label{classsc__csp__channel_ae16790111d142e48baf4563eb5e44069}} 
+\index{sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}!r\_id@{r\_id}}
+\index{r\_id@{r\_id}!sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{r\_id}{r\_id}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+unsigned int \mbox{\hyperlink{classsc__csp__channel}{sc\+\_\+csp\+\_\+channel}}$<$ T $>$\+::r\+\_\+id}
+
+
+
+Definition at line \mbox{\hyperlink{sc__csp__channel_8h_source_l00176}{176}} of file \mbox{\hyperlink{sc__csp__channel_8h_source}{sc\+\_\+csp\+\_\+channel.\+h}}.
+
+\mbox{\Hypertarget{classsc__csp__channel_acf1aadf77836e165d8b7672500bd2dc7}\label{classsc__csp__channel_acf1aadf77836e165d8b7672500bd2dc7}} 
+\index{sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}!ready\_alt\_event@{ready\_alt\_event}}
+\index{ready\_alt\_event@{ready\_alt\_event}!sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ready\_alt\_event}{ready\_alt\_event}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+sc\+\_\+event \mbox{\hyperlink{classsc__csp__channel}{sc\+\_\+csp\+\_\+channel}}$<$ T $>$\+::ready\+\_\+alt\+\_\+event\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{sc__csp__channel_8h_source_l00165}{165}} of file \mbox{\hyperlink{sc__csp__channel_8h_source}{sc\+\_\+csp\+\_\+channel.\+h}}.
+
+\mbox{\Hypertarget{classsc__csp__channel_ae716d02584a29463adb04def170fce8e}\label{classsc__csp__channel_ae716d02584a29463adb04def170fce8e}} 
+\index{sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}!ready\_to\_read@{ready\_to\_read}}
+\index{ready\_to\_read@{ready\_to\_read}!sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ready\_to\_read}{ready\_to\_read}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{classsc__csp__channel}{sc\+\_\+csp\+\_\+channel}}$<$ T $>$\+::ready\+\_\+to\+\_\+read\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{sc__csp__channel_8h_source_l00167}{167}} of file \mbox{\hyperlink{sc__csp__channel_8h_source}{sc\+\_\+csp\+\_\+channel.\+h}}.
+
+\mbox{\Hypertarget{classsc__csp__channel_a014541bbd872463dd525b35e951ee9ba}\label{classsc__csp__channel_a014541bbd872463dd525b35e951ee9ba}} 
+\index{sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}!ready\_to\_read\_event@{ready\_to\_read\_event}}
+\index{ready\_to\_read\_event@{ready\_to\_read\_event}!sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ready\_to\_read\_event}{ready\_to\_read\_event}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+sc\+\_\+event \mbox{\hyperlink{classsc__csp__channel}{sc\+\_\+csp\+\_\+channel}}$<$ T $>$\+::ready\+\_\+to\+\_\+read\+\_\+event\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{sc__csp__channel_8h_source_l00163}{163}} of file \mbox{\hyperlink{sc__csp__channel_8h_source}{sc\+\_\+csp\+\_\+channel.\+h}}.
+
+\mbox{\Hypertarget{classsc__csp__channel_ab7c20a9236f789c6e64d8c83ae19967f}\label{classsc__csp__channel_ab7c20a9236f789c6e64d8c83ae19967f}} 
+\index{sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}!ready\_to\_write@{ready\_to\_write}}
+\index{ready\_to\_write@{ready\_to\_write}!sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ready\_to\_write}{ready\_to\_write}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{classsc__csp__channel}{sc\+\_\+csp\+\_\+channel}}$<$ T $>$\+::ready\+\_\+to\+\_\+write\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{sc__csp__channel_8h_source_l00168}{168}} of file \mbox{\hyperlink{sc__csp__channel_8h_source}{sc\+\_\+csp\+\_\+channel.\+h}}.
+
+\mbox{\Hypertarget{classsc__csp__channel_aab17ea7d52d31f39e68eb4472cb27a4a}\label{classsc__csp__channel_aab17ea7d52d31f39e68eb4472cb27a4a}} 
+\index{sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}!ready\_to\_write\_event@{ready\_to\_write\_event}}
+\index{ready\_to\_write\_event@{ready\_to\_write\_event}!sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ready\_to\_write\_event}{ready\_to\_write\_event}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+sc\+\_\+event \mbox{\hyperlink{classsc__csp__channel}{sc\+\_\+csp\+\_\+channel}}$<$ T $>$\+::ready\+\_\+to\+\_\+write\+\_\+event\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{sc__csp__channel_8h_source_l00164}{164}} of file \mbox{\hyperlink{sc__csp__channel_8h_source}{sc\+\_\+csp\+\_\+channel.\+h}}.
+
+\mbox{\Hypertarget{classsc__csp__channel_a87dc80bcdbac9e16d542da60040795df}\label{classsc__csp__channel_a87dc80bcdbac9e16d542da60040795df}} 
+\index{sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}!tacomm@{tacomm}}
+\index{tacomm@{tacomm}!sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{tacomm}{tacomm}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+sc\+\_\+time \mbox{\hyperlink{classsc__csp__channel}{sc\+\_\+csp\+\_\+channel}}$<$ T $>$\+::tacomm}
+
+
+
+Definition at line \mbox{\hyperlink{sc__csp__channel_8h_source_l00188}{188}} of file \mbox{\hyperlink{sc__csp__channel_8h_source}{sc\+\_\+csp\+\_\+channel.\+h}}.
+
+\mbox{\Hypertarget{classsc__csp__channel_a4609ce8351fc80bfa9041292f6722d3c}\label{classsc__csp__channel_a4609ce8351fc80bfa9041292f6722d3c}} 
+\index{sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}!tcomm@{tcomm}}
+\index{tcomm@{tcomm}!sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{tcomm}{tcomm}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+sc\+\_\+time \mbox{\hyperlink{classsc__csp__channel}{sc\+\_\+csp\+\_\+channel}}$<$ T $>$\+::tcomm}
+
+
+
+Definition at line \mbox{\hyperlink{sc__csp__channel_8h_source_l00187}{187}} of file \mbox{\hyperlink{sc__csp__channel_8h_source}{sc\+\_\+csp\+\_\+channel.\+h}}.
+
+\mbox{\Hypertarget{classsc__csp__channel_a5bef0234cd8c0762891d104dd4e7b68a}\label{classsc__csp__channel_a5bef0234cd8c0762891d104dd4e7b68a}} 
+\index{sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}!w\_id@{w\_id}}
+\index{w\_id@{w\_id}!sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{w\_id}{w\_id}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+unsigned int \mbox{\hyperlink{classsc__csp__channel}{sc\+\_\+csp\+\_\+channel}}$<$ T $>$\+::w\+\_\+id}
+
+
+
+Definition at line \mbox{\hyperlink{sc__csp__channel_8h_source_l00175}{175}} of file \mbox{\hyperlink{sc__csp__channel_8h_source}{sc\+\_\+csp\+\_\+channel.\+h}}.
+
+\mbox{\Hypertarget{classsc__csp__channel_a5cd83229e038e07f237512df3df4adf9}\label{classsc__csp__channel_a5cd83229e038e07f237512df3df4adf9}} 
+\index{sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}!waiting\_time@{waiting\_time}}
+\index{waiting\_time@{waiting\_time}!sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{waiting\_time}{waiting\_time}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+sc\+\_\+time \mbox{\hyperlink{classsc__csp__channel}{sc\+\_\+csp\+\_\+channel}}$<$ T $>$\+::waiting\+\_\+time}
+
+
+
+Definition at line \mbox{\hyperlink{sc__csp__channel_8h_source_l00181}{181}} of file \mbox{\hyperlink{sc__csp__channel_8h_source}{sc\+\_\+csp\+\_\+channel.\+h}}.
+
+\mbox{\Hypertarget{classsc__csp__channel_affca8dbc03ca31ac85f54766040aba41}\label{classsc__csp__channel_affca8dbc03ca31ac85f54766040aba41}} 
+\index{sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}!width@{width}}
+\index{width@{width}!sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+unsigned int \mbox{\hyperlink{classsc__csp__channel}{sc\+\_\+csp\+\_\+channel}}$<$ T $>$\+::width}
+
+
+
+Definition at line \mbox{\hyperlink{sc__csp__channel_8h_source_l00177}{177}} of file \mbox{\hyperlink{sc__csp__channel_8h_source}{sc\+\_\+csp\+\_\+channel.\+h}}.
+
+\mbox{\Hypertarget{classsc__csp__channel_a97c55d92a3c04d41300ffdb208eabc92}\label{classsc__csp__channel_a97c55d92a3c04d41300ffdb208eabc92}} 
+\index{sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}!working\_energy@{working\_energy}}
+\index{working\_energy@{working\_energy}!sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{working\_energy}{working\_energy}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+double \mbox{\hyperlink{classsc__csp__channel}{sc\+\_\+csp\+\_\+channel}}$<$ T $>$\+::working\+\_\+energy}
+
+
+
+Definition at line \mbox{\hyperlink{sc__csp__channel_8h_source_l00185}{185}} of file \mbox{\hyperlink{sc__csp__channel_8h_source}{sc\+\_\+csp\+\_\+channel.\+h}}.
+
+\mbox{\Hypertarget{classsc__csp__channel_ab0977c6aab0732a7946a73aa4b2e6de8}\label{classsc__csp__channel_ab0977c6aab0732a7946a73aa4b2e6de8}} 
+\index{sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}!working\_time@{working\_time}}
+\index{working\_time@{working\_time}!sc\_csp\_channel$<$ T $>$@{sc\_csp\_channel$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{working\_time}{working\_time}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+sc\+\_\+time \mbox{\hyperlink{classsc__csp__channel}{sc\+\_\+csp\+\_\+channel}}$<$ T $>$\+::working\+\_\+time}
+
+
+
+Definition at line \mbox{\hyperlink{sc__csp__channel_8h_source_l00182}{182}} of file \mbox{\hyperlink{sc__csp__channel_8h_source}{sc\+\_\+csp\+\_\+channel.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hepsycode\+Design/src/\mbox{\hyperlink{sc__csp__channel_8h}{sc\+\_\+csp\+\_\+channel.\+h}}\end{DoxyCompactItemize}

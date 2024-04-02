@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structfir8e__results">
+<title>fir8e_results Struct Reference</title>
+<indexterm><primary>fir8e_results</primary></indexterm>
+<para>
+
+<para>struct <link linkend="_structfir8e__results">fir8e_results</link> </para>
+ 
+</para>
+<para>
+<computeroutput>#include &quot;src/datatype.h&quot;</computeroutput>
+</para>
+Collaboration diagram for fir8e_results:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="structfir8e__results__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>sc_uint&lt; 19 &gt; <link linkend="_structfir8e__results_1a96690c57e8968fb79bbcf0736b919d74">acc</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>struct <link linkend="_structfir8e__results">fir8e_results</link> </para>
+
+
+
+<para>Some details about the <link linkend="_structfir8e__results">fir8e_results</link> struct. 
+<literallayout>&#160;&#xa;</literallayout>
+Message from fir8e to fir8m </para>
+<para>
+Definition at line 109 of file datatype.h.</para>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_structfir8e__results_1a96690c57e8968fb79bbcf0736b919d74"/>    <section>
+    <title>acc</title>
+<indexterm><primary>acc</primary><secondary>fir8e_results</secondary></indexterm>
+<indexterm><primary>fir8e_results</primary><secondary>acc</secondary></indexterm>
+<para><computeroutput>sc_uint&lt;19&gt; fir8e_results::acc</computeroutput></para><para>
+Definition at line 111 of file datatype.h.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+HepsycodeDesign/src/<link linkend="_datatype_8h">datatype.h</link></section>
+</section>

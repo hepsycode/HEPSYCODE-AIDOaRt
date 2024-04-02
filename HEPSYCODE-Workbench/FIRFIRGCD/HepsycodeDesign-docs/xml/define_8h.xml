@@ -1,0 +1,609 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="define_8h" kind="file" language="C++">
+    <compoundname>define.h</compoundname>
+    <includedby refid="display_8cpp" local="yes">HepsycodeDesign/src/display.cpp</includedby>
+    <includedby refid="main_8cpp" local="yes">HepsycodeDesign/src/main.cpp</includedby>
+    <includedby refid="stim__gen_8h" local="yes">HepsycodeDesign/src/stim_gen.h</includedby>
+    <includedby refid="mainsystem_8h" local="yes">HepsycodeDesign/src/mainsystem.h</includedby>
+    <includedby refid="sc__csp__channel_8h" local="yes">HepsycodeDesign/src/sc_csp_channel.h</includedby>
+    <includedby refid="_system_manager_8h" local="yes">HepsycodeDesign/src/SystemManager.h</includedby>
+    <includedby refid="_scheduling_manager_8h" local="yes">HepsycodeDesign/src/SchedulingManager.h</includedby>
+    <invincdepgraph>
+      <node id="17">
+        <label>HepsycodeDesign/src/SchedulingManager.h</label>
+        <link refid="_scheduling_manager_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>HepsycodeDesign/src/processesInstr/fir16_shifting.cpp</label>
+        <link refid="fir16__shifting_8cpp"/>
+      </node>
+      <node id="13">
+        <label>HepsycodeDesign/src/processesInstr/gcd_evaluation.cpp</label>
+        <link refid="gcd__evaluation_8cpp"/>
+      </node>
+      <node id="3">
+        <label>HepsycodeDesign/src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="11">
+        <label>HepsycodeDesign/src/processesInstr/fir8_main.cpp</label>
+        <link refid="fir8__main_8cpp"/>
+      </node>
+      <node id="16">
+        <label>HepsycodeDesign/src/SystemManager.h</label>
+        <link refid="_system_manager_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>HepsycodeDesign/src/stim_gen.cpp</label>
+        <link refid="stim__gen_8cpp"/>
+      </node>
+      <node id="12">
+        <label>HepsycodeDesign/src/processesInstr/fir8_shifting.cpp</label>
+        <link refid="fir8__shifting_8cpp"/>
+      </node>
+      <node id="14">
+        <label>HepsycodeDesign/src/processesInstr/gcd_main.cpp</label>
+        <link refid="gcd__main_8cpp"/>
+      </node>
+      <node id="2">
+        <label>HepsycodeDesign/src/display.cpp</label>
+        <link refid="display_8cpp"/>
+      </node>
+      <node id="8">
+        <label>HepsycodeDesign/src/processesInstr/fir16_main.cpp</label>
+        <link refid="fir16__main_8cpp"/>
+      </node>
+      <node id="1">
+        <label>HepsycodeDesign/src/define.h</label>
+        <link refid="define_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>HepsycodeDesign/src/processesInstr/fir8_evaluation.cpp</label>
+        <link refid="fir8__evaluation_8cpp"/>
+      </node>
+      <node id="4">
+        <label>HepsycodeDesign/src/stim_gen.h</label>
+        <link refid="stim__gen_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>HepsycodeDesign/src/processesInstr/fir16_evaluation.cpp</label>
+        <link refid="fir16__evaluation_8cpp"/>
+      </node>
+      <node id="18">
+        <label>HepsycodeDesign/src/SchedulingManager.cpp</label>
+        <link refid="_scheduling_manager_8cpp"/>
+      </node>
+      <node id="15">
+        <label>HepsycodeDesign/src/sc_csp_channel.h</label>
+        <link refid="sc__csp__channel_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>HepsycodeDesign/src/mainsystem.h</label>
+        <link refid="mainsystem_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>HepsycodeDesign/src/SystemManager.cpp</label>
+        <link refid="_system_manager_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__firfirgcd__define__group_1gad258142492454320138f79a00101f1f8" prot="public" static="no">
+        <name>NPS</name>
+        <initializer>10</initializer>
+        <briefdescription>
+<para>SBM DEPENDENT. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>FirFirGCD: constants related to the SBM </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/define.h" line="77" column="9" bodyfile="HepsycodeDesign/src/define.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__firfirgcd__define__group_1ga967ca22c6c7be038e1092147ce04f258" prot="public" static="no">
+        <name>NCH</name>
+        <initializer>15</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/define.h" line="79" column="9" bodyfile="HepsycodeDesign/src/define.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__firfirgcd__define__group_1ga67e7d9a59126e595e10a78e11df73b39" prot="public" static="no">
+        <name>TAP8</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/define.h" line="81" column="9" bodyfile="HepsycodeDesign/src/define.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__firfirgcd__define__group_1gaf2addfbdf98c5e76c823edde9336370f" prot="public" static="no">
+        <name>TAP16</name>
+        <initializer>16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/define.h" line="82" column="9" bodyfile="HepsycodeDesign/src/define.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__firfirgcd__define__group_1ga41078393655c31f01ef880a0492a776f" prot="public" static="no">
+        <name>NUMBER_OF_INPUTS</name>
+        <initializer>10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/define.h" line="83" column="9" bodyfile="HepsycodeDesign/src/define.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__firfirgcd__define__group_1ga498a2c2b57c15e562e939cccf28db094" prot="public" static="no">
+        <name>NBB</name>
+        <initializer>5</initializer>
+        <briefdescription>
+<para>FirFirGCD: constants related to the HW architecture. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/define.h" line="87" column="9" bodyfile="HepsycodeDesign/src/define.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__firfirgcd__define__group_1ga76cc414b5d33950d0cb6ceea199d93de" prot="public" static="no">
+        <name>NPL</name>
+        <initializer>3</initializer>
+        <briefdescription>
+<para>BBs IDs (#id in the tag is starting from 0 to be aligned with istancesTL) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/define.h" line="89" column="9" bodyfile="HepsycodeDesign/src/define.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__firfirgcd__define__group_1ga796bd7c6ba2e59281760fb155c6287e8" prot="public" static="no">
+        <name>APPLICATION</name>
+        <initializer>&quot;./XML/application.xml&quot;</initializer>
+        <briefdescription>
+<para>SBM INDEPENDENT: DO NOT CHANGE. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Tags for conditionl compilation (LP: To be provided as flag to compiler) Possible options:<itemizedlist>
+<listitem><para>NO TAGS (Add only functional behavioral simulation?) or FUNCTIONAL?</para>
+</listitem><listitem><para>NO TAGS (function alanalyzer = functional simulatoin + communications analysis + functional concurrency analysis)</para>
+</listitem><listitem><para>TIMING_ENERGY (timing&amp;energy simulation)</para>
+</listitem><listitem><para>TIMING_ENERGY+CONCURRENCY (timing&amp;energy simulation + timing concurrency analysis)</para>
+</listitem><listitem><para>TIMING_ENERGY+LOAD (timing&amp;energy simulation + load estimation)</para>
+</listitem><listitem><para>TIMING_ENERGY+LOAD+CONCURRENCY (timing&amp;energy simulation + load estimation + timing concurrency analysis) - WARNING: scheduler OVH is 0! #define <emphasis>TIMING_ENERGY</emphasis> #define <emphasis>LOAD</emphasis> #define <emphasis>CONCURRENCY</emphasis> Tags for debug and log (LP: To be provided as flag to compiler) #define <emphasis>DEBUG</emphasis> #define <emphasis>SAVE_CSV</emphasis> Costants related to mapping files </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/define.h" line="120" column="9" bodyfile="HepsycodeDesign/src/define.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__firfirgcd__define__group_1ga2398f91d2717d5cbd17f9f16c22d08ca" prot="public" static="no">
+        <name>MAPPING_PS_BB</name>
+        <initializer>&quot;./XML/mappingPS.xml&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/define.h" line="121" column="9" bodyfile="HepsycodeDesign/src/define.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__firfirgcd__define__group_1ga91657813bcfecb4c86e83b46e338364c" prot="public" static="no">
+        <name>MAPPING_LC_PL</name>
+        <initializer>&quot;./XML/mappingCH.xml&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/define.h" line="122" column="9" bodyfile="HepsycodeDesign/src/define.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__firfirgcd__define__group_1gacf471d2e884ab94235db48a5fd3ce252" prot="public" static="no">
+        <name>energyComputation</name>
+        <initializer>&quot;EPC&quot;</initializer>
+        <briefdescription>
+<para>Costants related to energy consumption estimation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Method used to compute energy consumption (possible values: EPI/EPC) //LP: check formule #define energyComputation &quot;EPI&quot; </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/define.h" line="135" column="9" bodyfile="HepsycodeDesign/src/define.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__firfirgcd__define__group_1ga8cfe71cc954d3c9e38dec20b50392b8d" prot="public" static="no" strong="no">
+        <type></type>
+        <name>p_id</name>
+        <enumvalue id="group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8da6a6acb823daa9d2547901e1e253f1a92" prot="public">
+          <name>stimulus_id</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8dab8bd51b016c7432eb1d0071f9677defe" prot="public">
+          <name>display_id</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8dada3380943e162c7dd92aee66f5d435ba" prot="public">
+          <name>fir8m_id</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8da183d4292fa4f5b3de92414e6f8c25157" prot="public">
+          <name>fir8e_id</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8daa1ce57908cd201f98c47ce27d9b6525c" prot="public">
+          <name>fir8s_id</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a" prot="public">
+          <name>fir16m_id</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8dab5eeffe958b1dca772bc9e6938f8e136" prot="public">
+          <name>fir16e_id</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8da4748eb52ab89dc23136a3e13b8e34d43" prot="public">
+          <name>fir16s_id</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8daa65866ff68063f414a6009f2bb6b5373" prot="public">
+          <name>gcdm_id</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8dadf90e6465f134074619ec58b5467394d" prot="public">
+          <name>gcde_id</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8daeb10f3005217e64d69d70e771e681c66" prot="public">
+          <name>s_fir8m_fir8e_id</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/define.h" line="78" column="10" bodyfile="HepsycodeDesign/src/define.h" bodystart="78" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__firfirgcd__define__group_1gaaa53553033df32820178982628a60cae" prot="public" static="no" strong="no">
+        <type></type>
+        <name>bb_id</name>
+        <enumvalue id="group__firfirgcd__define__group_1ggaaa53553033df32820178982628a60caea2112514dc02bed6a625e425c0487a6ab" prot="public">
+          <name>BB8051_0_id</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__firfirgcd__define__group_1ggaaa53553033df32820178982628a60caea5487dd1d1d140792e1f0e2204299454c" prot="public">
+          <name>BB8051_1_id</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__firfirgcd__define__group_1ggaaa53553033df32820178982628a60caeaa5912815fd96df44c5a5862aabfee096" prot="public">
+          <name>BBleon3_0_id</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__firfirgcd__define__group_1ggaaa53553033df32820178982628a60caea375dd2456383ea5d0e048f3674a44671" prot="public">
+          <name>BBleon3_1_id</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__firfirgcd__define__group_1ggaaa53553033df32820178982628a60caeabc53b9d75ec1bb7143ccae00479642a8" prot="public">
+          <name>BBArtix7_0_id</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/define.h" line="88" column="11" bodyfile="HepsycodeDesign/src/define.h" bodystart="88" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__firfirgcd__define__group_1gadc6e5733fc3c22f0a7b2914188c49c90" prot="public" static="no" strong="no">
+        <type></type>
+        <name>state</name>
+        <enumvalue id="group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90af35387cab0e820dcf7df1ed4702043e1" prot="public">
+          <name>undefined</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a4c97ffbad296d4a6b84b1c508fc5d32a" prot="public">
+          <name>waiting</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473" prot="public">
+          <name>ready</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c" prot="public">
+          <name>running</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Costants related to processes/schedulers states and BB/modes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/define.h" line="126" column="11" bodyfile="HepsycodeDesign/src/define.h" bodystart="126" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__firfirgcd__define__group_1ga1a6b6fb557d8d37d59700faf4e4c9167" prot="public" static="no" strong="no">
+        <type></type>
+        <name>mode</name>
+        <enumvalue id="group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a53ace14c115e45153a1c9105accceb4c" prot="public">
+          <name>off</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a66e84e235b9e03b6fdfc7ffe7e775de8" prot="public">
+          <name>suspended</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a5d178ae2be9d93ea4cbf1a9f0a2d9cbe" prot="public">
+          <name>active</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/define.h" line="127" column="10" bodyfile="HepsycodeDesign/src/define.h" bodystart="127" bodyend="127"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Define Documented file. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Defines all the FirFirGCD related defines. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/********************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>University<sp/>of<sp/>L&apos;Aquila<sp/>-<sp/>HEPSYCODE<sp/>Source<sp/>Code<sp/>License<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>(c)<sp/>2018-2019<sp/>Centre<sp/>of<sp/>Excellence<sp/>DEWS<sp/>All<sp/>rights<sp/>reserved<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>********************************************************************************</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>&lt;one<sp/>line<sp/>to<sp/>give<sp/>the<sp/>program&apos;s<sp/>name<sp/>and<sp/>a<sp/>brief<sp/>idea<sp/>of<sp/>what<sp/>it<sp/>does.&gt;<sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(C)<sp/>2022<sp/><sp/>Vittoriano<sp/>Muttillo,<sp/>Luigi<sp/>Pomante<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>This<sp/>program<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>either<sp/>version<sp/>3<sp/>of<sp/>the<sp/>License,<sp/>or<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>This<sp/>program<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>********************************************************************************</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/>Created<sp/>on:<sp/>09/May/2022<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/>Authors:<sp/>Vittoriano<sp/>Muttillo,<sp/>Luigi<sp/>Pomante<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>email:<sp/>vittoriano.muttillo@guest.univaq.it<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>luigi.pomante@univaq.it<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>********************************************************************************</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/>This<sp/>code<sp/>has<sp/>been<sp/>developed<sp/>from<sp/>an<sp/>HEPSYCODE<sp/>model<sp/>used<sp/>as<sp/>demonstrator<sp/>by<sp/>*</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/>University<sp/>of<sp/>L&apos;Aquila.<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*<sp/>The<sp/>code<sp/>is<sp/>used<sp/>as<sp/>a<sp/>working<sp/>example<sp/>in<sp/>the<sp/>&apos;Embedded<sp/>Systems&apos;<sp/>course<sp/>of<sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>*<sp/>the<sp/>Master<sp/>in<sp/>Conputer<sp/>Science<sp/>Engineering<sp/>offered<sp/>by<sp/>the<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/>*<sp/>University<sp/>of<sp/>L&apos;Aquila<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/>*******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">/********************************************************************************</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/>*<sp/>datatypes.h<sp/>:<sp/>Defines<sp/>the<sp/>FirFirGCD<sp/>defines.<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/>*<sp/>Defines<sp/>all<sp/>the<sp/>FirFirGCD<sp/>related<sp/>defines<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="42"><highlight class="comment">********************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>start<sp/>firfirgcd_define_group</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__DEFINE__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__DEFINE__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="comment">/********************************************************************************</highlight></codeline>
+<codeline lineno="64"><highlight class="comment"><sp/>***<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Includes<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>***</highlight></codeline>
+<codeline lineno="65"><highlight class="comment"><sp/>*******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">/********************************************************************************</highlight></codeline>
+<codeline lineno="68"><highlight class="comment"><sp/>***<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Defines<sp/>and<sp/>Enum<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>***</highlight></codeline>
+<codeline lineno="69"><highlight class="comment"><sp/>*******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="group__firfirgcd__define__group_1gad258142492454320138f79a00101f1f8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NPS<sp/>10<sp/></highlight></codeline>
+<codeline lineno="78" refid="group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8da6a6acb823daa9d2547901e1e253f1a92" refkind="member"><highlight class="preprocessor">enum<sp/>p_id<sp/>{stimulus_id,<sp/>display_id,<sp/>fir8m_id,<sp/>fir8e_id,<sp/>fir8s_id,<sp/>fir16m_id,<sp/>fir16e_id,<sp/>fir16s_id,<sp/>gcdm_id,<sp/>gcde_id,<sp/>s_fir8m_fir8e_id};<sp/>//<sp/>Processes<sp/>IDs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="group__firfirgcd__define__group_1ga967ca22c6c7be038e1092147ce04f258" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NCH<sp/>15<sp/></highlight></codeline>
+<codeline lineno="80"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="group__firfirgcd__define__group_1ga67e7d9a59126e595e10a78e11df73b39" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TAP8<sp/>8<sp/></highlight></codeline>
+<codeline lineno="82" refid="group__firfirgcd__define__group_1gaf2addfbdf98c5e76c823edde9336370f" refkind="member"><highlight class="preprocessor">#define<sp/>TAP16<sp/>16<sp/></highlight></codeline>
+<codeline lineno="83" refid="group__firfirgcd__define__group_1ga41078393655c31f01ef880a0492a776f" refkind="member"><highlight class="preprocessor">#define<sp/>NUMBER_OF_INPUTS<sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="group__firfirgcd__define__group_1ga498a2c2b57c15e562e939cccf28db094" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NBB<sp/>5<sp/></highlight></codeline>
+<codeline lineno="88" refid="group__firfirgcd__define__group_1ggaaa53553033df32820178982628a60caea375dd2456383ea5d0e048f3674a44671" refkind="member"><highlight class="preprocessor">enum<sp/>bb_id<sp/>{BB8051_0_id,<sp/>BB8051_1_id,<sp/>BBleon3_0_id,<sp/>BBleon3_1_id,<sp/>BBArtix7_0_id};<sp/></highlight></codeline>
+<codeline lineno="89" refid="group__firfirgcd__define__group_1ga76cc414b5d33950d0cb6ceea199d93de" refkind="member"><highlight class="preprocessor">#define<sp/>NPL<sp/>3<sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"></codeline>
+<codeline lineno="98"></codeline>
+<codeline lineno="107"></codeline>
+<codeline lineno="111"></codeline>
+<codeline lineno="115"></codeline>
+<codeline lineno="117"></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="group__firfirgcd__define__group_1ga796bd7c6ba2e59281760fb155c6287e8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>APPLICATION<sp/>&quot;./XML/application.xml&quot;<sp/></highlight></codeline>
+<codeline lineno="121" refid="group__firfirgcd__define__group_1ga2398f91d2717d5cbd17f9f16c22d08ca" refkind="member"><highlight class="preprocessor">#define<sp/>MAPPING_PS_BB<sp/>&quot;./XML/mappingPS.xml&quot;<sp/></highlight></codeline>
+<codeline lineno="122" refid="group__firfirgcd__define__group_1ga91657813bcfecb4c86e83b46e338364c" refkind="member"><highlight class="preprocessor">#define<sp/>MAPPING_LC_PL<sp/>&quot;./XML/mappingCH.xml&quot;<sp/></highlight></codeline>
+<codeline lineno="123"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a4c97ffbad296d4a6b84b1c508fc5d32a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__firfirgcd__define__group_1gadc6e5733fc3c22f0a7b2914188c49c90" kindref="member">state</ref><sp/>{<sp/><ref refid="group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90af35387cab0e820dcf7df1ed4702043e1" kindref="member">undefined</ref>,<sp/><ref refid="group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a4c97ffbad296d4a6b84b1c508fc5d32a" kindref="member">waiting</ref>,<sp/><ref refid="group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473" kindref="member">ready</ref>,<sp/><ref refid="group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c" kindref="member">running</ref><sp/>};</highlight></codeline>
+<codeline lineno="127" refid="group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a66e84e235b9e03b6fdfc7ffe7e775de8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__firfirgcd__define__group_1ga1a6b6fb557d8d37d59700faf4e4c9167" kindref="member">mode</ref><sp/>{<sp/><ref refid="group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a53ace14c115e45153a1c9105accceb4c" kindref="member">off</ref>,<sp/><ref refid="group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a66e84e235b9e03b6fdfc7ffe7e775de8" kindref="member">suspended</ref>,<sp/><ref refid="group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a5d178ae2be9d93ea4cbf1a9f0a2d9cbe" kindref="member">active</ref><sp/>};</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"></codeline>
+<codeline lineno="132"></codeline>
+<codeline lineno="135" refid="group__firfirgcd__define__group_1gacf471d2e884ab94235db48a5fd3ce252" refkind="member"><highlight class="preprocessor">#define<sp/>energyComputation<sp/>&quot;EPC&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="comment">/********************************************************************************</highlight></codeline>
+<codeline lineno="138"><highlight class="comment"><sp/>***<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Typedefs<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>***</highlight></codeline>
+<codeline lineno="139"><highlight class="comment"><sp/>*******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="comment">/********************************************************************************</highlight></codeline>
+<codeline lineno="142"><highlight class="comment"><sp/>***<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Struct<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>***</highlight></codeline>
+<codeline lineno="143"><highlight class="comment"><sp/>*******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>end<sp/>of<sp/>firfirgcd_define_group</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="comment">/********************************************************************************</highlight></codeline>
+<codeline lineno="150"><highlight class="comment"><sp/>***<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EOF<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>***</highlight></codeline>
+<codeline lineno="151"><highlight class="comment"><sp/>********************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="HepsycodeDesign/src/define.h"/>
+  </compounddef>
+</doxygen>

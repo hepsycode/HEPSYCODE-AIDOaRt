@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structfir16s__parameters" kind="struct" language="C++" prot="public">
+    <compoundname>fir16s_parameters</compoundname>
+    <includes refid="datatype_8h" local="no">datatype.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structfir16s__parameters_1ace4b801b0a54f27f7ad5f92b753a8175" prot="public" static="no" mutable="no">
+        <type>sc_uint&lt; 8 &gt;</type>
+        <definition>sc_uint&lt;8&gt; fir16s_parameters::shift[16]</definition>
+        <argsstring>[16]</argsstring>
+        <name>shift</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/datatype.h" line="161" column="9" bodyfile="HepsycodeDesign/src/datatype.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfir16s__parameters_1a364563d85914eb0eba02828d309d994b" prot="public" static="no" mutable="no">
+        <type>sc_uint&lt; 8 &gt;</type>
+        <definition>sc_uint&lt;8&gt; fir16s_parameters::sample_tmp</definition>
+        <argsstring></argsstring>
+        <name>sample_tmp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/datatype.h" line="162" column="9" bodyfile="HepsycodeDesign/src/datatype.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Message from fir16m to fir16s. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>fir16s_parameters</label>
+        <link refid="structfir16s__parameters"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+shift</edgelabel>
+          <edgelabel>+sample_tmp</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>sc_uint&lt; 8 &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="HepsycodeDesign/src/datatype.h" line="160" column="1" bodyfile="HepsycodeDesign/src/datatype.h" bodystart="159" bodyend="163"/>
+    <listofallmembers>
+      <member refid="structfir16s__parameters_1a364563d85914eb0eba02828d309d994b" prot="public" virt="non-virtual"><scope>fir16s_parameters</scope><name>sample_tmp</name></member>
+      <member refid="structfir16s__parameters_1ace4b801b0a54f27f7ad5f92b753a8175" prot="public" virt="non-virtual"><scope>fir16s_parameters</scope><name>shift</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

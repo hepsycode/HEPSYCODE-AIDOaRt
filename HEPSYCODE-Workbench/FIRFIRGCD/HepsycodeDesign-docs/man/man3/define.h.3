@@ -1,0 +1,78 @@
+.TH "HepsycodeDesign/src/define.h" 3 "Mon Mar 20 2023" "FirFirGCD Application" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+HepsycodeDesign/src/define.h \- Define Documented file\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBNPS\fP   10"
+.br
+.RI "SBM DEPENDENT\&. "
+.ti -1c
+.RI "#define \fBNCH\fP   15"
+.br
+.ti -1c
+.RI "#define \fBTAP8\fP   8"
+.br
+.ti -1c
+.RI "#define \fBTAP16\fP   16"
+.br
+.ti -1c
+.RI "#define \fBNUMBER_OF_INPUTS\fP   10"
+.br
+.ti -1c
+.RI "#define \fBNBB\fP   5"
+.br
+.RI "FirFirGCD: constants related to the HW architecture\&. "
+.ti -1c
+.RI "#define \fBNPL\fP   3"
+.br
+.RI "BBs IDs (#id in the tag is starting from 0 to be aligned with istancesTL) "
+.ti -1c
+.RI "#define \fBAPPLICATION\fP   '\&./XML/application\&.xml'"
+.br
+.RI "SBM INDEPENDENT: DO NOT CHANGE\&. "
+.ti -1c
+.RI "#define \fBMAPPING_PS_BB\fP   '\&./XML/mappingPS\&.xml'"
+.br
+.ti -1c
+.RI "#define \fBMAPPING_LC_PL\fP   '\&./XML/mappingCH\&.xml'"
+.br
+.ti -1c
+.RI "#define \fBenergyComputation\fP   'EPC'"
+.br
+.RI "Costants related to energy consumption estimation\&. "
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBp_id\fP { \fBstimulus_id\fP, \fBdisplay_id\fP, \fBfir8m_id\fP, \fBfir8e_id\fP, \fBfir8s_id\fP, \fBfir16m_id\fP, \fBfir16e_id\fP, \fBfir16s_id\fP, \fBgcdm_id\fP, \fBgcde_id\fP, \fBs_fir8m_fir8e_id\fP }"
+.br
+.ti -1c
+.RI "enum \fBbb_id\fP { \fBBB8051_0_id\fP, \fBBB8051_1_id\fP, \fBBBleon3_0_id\fP, \fBBBleon3_1_id\fP, \fBBBArtix7_0_id\fP }"
+.br
+.ti -1c
+.RI "enum \fBstate\fP { \fBundefined\fP, \fBwaiting\fP, \fBready\fP, \fBrunning\fP }"
+.br
+.RI "Costants related to processes/schedulers states and BB/modes\&. "
+.ti -1c
+.RI "enum \fBmode\fP { \fBoff\fP, \fBsuspended\fP, \fBactive\fP }"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Define Documented file\&. 
+
+Defines all the FirFirGCD related defines\&. 
+.PP
+Definition in file \fBdefine\&.h\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FirFirGCD Application from the source code\&.

@@ -1,0 +1,917 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_system_manager" kind="class" language="C++" prot="public">
+    <compoundname>SystemManager</compoundname>
+    <includes refid="_system_manager_8h" local="no">SystemManager.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_system_manager_1adcd8ce799616b977c206401ebdefab86" prot="public" static="no" mutable="no">
+        <type>vector&lt; <ref refid="class_process" kindref="compound">Process</ref> &gt;</type>
+        <definition>vector&lt;Process&gt; SystemManager::VPS</definition>
+        <argsstring></argsstring>
+        <name>VPS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/SystemManager.h" line="94" column="8" bodyfile="HepsycodeDesign/src/SystemManager.h" bodystart="94" bodyend="-1"/>
+        <referencedby refid="group__firfirgcd__main__group_1ga865e3def6cd1a641230218579d0a958f" compoundref="main_8cpp" startline="177" endline="850">sc_main</referencedby>
+        <referencedby refid="group__scheduling__manager__group_1ga8bb983276d3b9929ea5985632a3fa4e0" compoundref="_scheduling_manager_8h" startline="85" endline="295">SC_MODULE</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_system_manager_1a7dcc3ae8736a6aad7e27f276706205a3" prot="public" static="no" mutable="no">
+        <type>vector&lt; <ref refid="class_channel" kindref="compound">Channel</ref> &gt;</type>
+        <definition>vector&lt;Channel&gt; SystemManager::VCH</definition>
+        <argsstring></argsstring>
+        <name>VCH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/SystemManager.h" line="97" column="8" bodyfile="HepsycodeDesign/src/SystemManager.h" bodystart="97" bodyend="-1"/>
+        <referencedby refid="classsc__csp__channel_1a18caf07ac6dda7298155bf5bee992f81" compoundref="sc__csp__channel_8h" startline="110" endline="127">sc_csp_channel&lt; T &gt;::sc_csp_channel</referencedby>
+        <referencedby refid="group__firfirgcd__main__group_1ga865e3def6cd1a641230218579d0a958f" compoundref="main_8cpp" startline="177" endline="850">sc_main</referencedby>
+        <referencedby refid="group__firfirgcd__csp__channel__group_1gaf8a9ace576ff2e0462c8db276f9f388d" compoundref="sc__csp__channel_8h" startline="322" endline="428">sc_csp_channel&lt; T &gt;::write</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32" prot="public" static="no" mutable="no">
+        <type>vector&lt; <ref refid="class_basic_block" kindref="compound">BasicBlock</ref> &gt;</type>
+        <definition>vector&lt;BasicBlock&gt; SystemManager::VBB</definition>
+        <argsstring></argsstring>
+        <name>VBB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/SystemManager.h" line="100" column="8" bodyfile="HepsycodeDesign/src/SystemManager.h" bodystart="100" bodyend="-1"/>
+        <referencedby refid="group__firfirgcd__csp__channel__group_1ga8be7bf7ee4f0c35e684b3de9a5163705" compoundref="sc__csp__channel_8h" startline="442" endline="505">sc_csp_channel&lt; T &gt;::init</referencedby>
+        <referencedby refid="group__firfirgcd__main__group_1ga865e3def6cd1a641230218579d0a958f" compoundref="main_8cpp" startline="177" endline="850">sc_main</referencedby>
+        <referencedby refid="group__scheduling__manager__group_1ga8bb983276d3b9929ea5985632a3fa4e0" compoundref="_scheduling_manager_8h" startline="85" endline="295">SC_MODULE</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_system_manager_1af28a1744a2d964a7047c31c6a5f1644a" prot="public" static="no" mutable="no">
+        <type>vector&lt; <ref refid="class_physical_link" kindref="compound">PhysicalLink</ref> &gt;</type>
+        <definition>vector&lt;PhysicalLink&gt; SystemManager::VPL</definition>
+        <argsstring></argsstring>
+        <name>VPL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/SystemManager.h" line="103" column="8" bodyfile="HepsycodeDesign/src/SystemManager.h" bodystart="103" bodyend="-1"/>
+        <referencedby refid="group__firfirgcd__csp__channel__group_1ga8be7bf7ee4f0c35e684b3de9a5163705" compoundref="sc__csp__channel_8h" startline="442" endline="505">sc_csp_channel&lt; T &gt;::init</referencedby>
+        <referencedby refid="classsc__csp__channel_1a18caf07ac6dda7298155bf5bee992f81" compoundref="sc__csp__channel_8h" startline="110" endline="127">sc_csp_channel&lt; T &gt;::sc_csp_channel</referencedby>
+        <referencedby refid="group__firfirgcd__main__group_1ga865e3def6cd1a641230218579d0a958f" compoundref="main_8cpp" startline="177" endline="850">sc_main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_system_manager_1abfd1d205fa299fa757e2b78d15724734" prot="public" static="no" mutable="no">
+        <type>vector&lt; int &gt;</type>
+        <definition>vector&lt;int&gt; SystemManager::allocationPS_BB</definition>
+        <argsstring></argsstring>
+        <name>allocationPS_BB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/SystemManager.h" line="107" column="8" bodyfile="HepsycodeDesign/src/SystemManager.h" bodystart="107" bodyend="-1"/>
+        <referencedby refid="group__firfirgcd__csp__channel__group_1ga8be7bf7ee4f0c35e684b3de9a5163705" compoundref="sc__csp__channel_8h" startline="442" endline="505">sc_csp_channel&lt; T &gt;::init</referencedby>
+        <referencedby refid="group__firfirgcd__csp__channel__group_1ga23046a4820dcf9ef26a75eba9cb7d49b" compoundref="sc__csp__channel_8h" startline="232" endline="305">sc_csp_channel&lt; T &gt;::read</referencedby>
+        <referencedby refid="group__firfirgcd__main__group_1ga865e3def6cd1a641230218579d0a958f" compoundref="main_8cpp" startline="177" endline="850">sc_main</referencedby>
+        <referencedby refid="group__scheduling__manager__group_1ga8bb983276d3b9929ea5985632a3fa4e0" compoundref="_scheduling_manager_8h" startline="85" endline="295">SC_MODULE</referencedby>
+        <referencedby refid="group__firfirgcd__csp__channel__group_1gaf8a9ace576ff2e0462c8db276f9f388d" compoundref="sc__csp__channel_8h" startline="322" endline="428">sc_csp_channel&lt; T &gt;::write</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_system_manager_1ab75b55327c942c6950f67c14ba9dea08" prot="public" static="no" mutable="no">
+        <type>vector&lt; int &gt;</type>
+        <definition>vector&lt;int&gt; SystemManager::allocationCH_PL</definition>
+        <argsstring></argsstring>
+        <name>allocationCH_PL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/SystemManager.h" line="110" column="8" bodyfile="HepsycodeDesign/src/SystemManager.h" bodystart="110" bodyend="-1"/>
+        <referencedby refid="group__firfirgcd__csp__channel__group_1ga8be7bf7ee4f0c35e684b3de9a5163705" compoundref="sc__csp__channel_8h" startline="442" endline="505">sc_csp_channel&lt; T &gt;::init</referencedby>
+        <referencedby refid="classsc__csp__channel_1a18caf07ac6dda7298155bf5bee992f81" compoundref="sc__csp__channel_8h" startline="110" endline="127">sc_csp_channel&lt; T &gt;::sc_csp_channel</referencedby>
+        <referencedby refid="group__firfirgcd__main__group_1ga865e3def6cd1a641230218579d0a958f" compoundref="main_8cpp" startline="177" endline="850">sc_main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_system_manager_1a7f06326402d0738cb87a1c03bf57f5c7" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SystemManager::FRL[10]</definition>
+        <argsstring>[10]</argsstring>
+        <name>FRL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/SystemManager.h" line="172" column="7" bodyfile="HepsycodeDesign/src/SystemManager.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_system_manager_1a69ec2821a8a92a69fbb5cb0f789a64ca" prot="public" static="no" mutable="no">
+        <type>sc_time</type>
+        <definition>sc_time SystemManager::FRT</definition>
+        <argsstring></argsstring>
+        <name>FRT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/SystemManager.h" line="175" column="9" bodyfile="HepsycodeDesign/src/SystemManager.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_system_manager_1a2f8a3e2e1929be50ef8702629f50bb94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SystemManager::SystemManager</definition>
+        <argsstring>()</argsstring>
+        <name>SystemManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/SystemManager.h" line="113" column="1" bodyfile="HepsycodeDesign/src/SystemManager.cpp" bodystart="78" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class_system_manager_1a545df7d9bd60c4d42797a7233a1f4d61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="class_process" kindref="compound">Process</ref> &gt;</type>
+        <definition>vector&lt; Process &gt; SystemManager::generateProcessInstances</definition>
+        <argsstring>()</argsstring>
+        <name>generateProcessInstances</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/SystemManager.h" line="117" column="8" bodyfile="HepsycodeDesign/src/SystemManager.cpp" bodystart="91" bodyend="195"/>
+        <references refid="group__firfirgcd__define__group_1ga796bd7c6ba2e59281760fb155c6287e8" compoundref="define_8h" startline="120">APPLICATION</references>
+        <references refid="group__firfirgcd__define__group_1gad258142492454320138f79a00101f1f8" compoundref="define_8h" startline="77">NPS</references>
+        <references refid="class_process_1a47be8c61a3a5460452753dc98b68389f" compoundref="tl_8h" startline="177">Process::processTime</references>
+        <references refid="class_process_1a6f1fdb3ef348ebe19f1fd44671edfed8" compoundref="tl_8cpp" startline="414" endline="419">Process::setAffinity</references>
+        <references refid="class_process_1af55a4774a1519b84988e4e3ec3fcc7a2" compoundref="tl_8cpp" startline="390" endline="394">Process::setCodeSize</references>
+        <references refid="class_process_1a8fb82ba026f5530a9f9724fbf1142aba" compoundref="tl_8cpp" startline="421" endline="426">Process::setConcurrency</references>
+        <references refid="class_process_1a43c73ef0483b869e4231830eeff46d48" compoundref="tl_8cpp" startline="365" endline="368">Process::setCriticality</references>
+        <references refid="class_process_1a268bc20c1c875e94e50c5d6d1ad9ec06" compoundref="tl_8cpp" startline="396" endline="400">Process::setDataSize</references>
+        <references refid="class_process_1a3aaefcd2768bd481e22228851b161546" compoundref="tl_8cpp" startline="385" endline="388">Process::setDataType</references>
+        <references refid="class_process_1a2991ac041e868df69f3f394ee91791cb" compoundref="tl_8cpp" startline="346" endline="348">Process::setEnergy</references>
+        <references refid="class_process_1a74caf223f4391e3145eee5899b30a09b" compoundref="tl_8cpp" startline="375" endline="378">Process::setEqGate</references>
+        <references refid="class_process_1ac2d4d655dc9fe6317889938783ec2848" compoundref="tl_8cpp" startline="337" endline="340">Process::setId</references>
+        <references refid="class_process_1a9d9cfc179387b12e2bb1cdc214b6a9d8" compoundref="tl_8cpp" startline="428" endline="432">Process::setLoad</references>
+        <references refid="class_process_1ad1d3a2fd1af703ff1b986512d675660b" compoundref="tl_8cpp" startline="327" endline="330">Process::setName</references>
+        <references refid="class_process_1a011879a0a11d6bacd3a6d768293ab0d2" compoundref="tl_8cpp" startline="355" endline="358">Process::setPriority</references>
+      </memberdef>
+      <memberdef kind="function" id="class_system_manager_1a98b6400619bc75fc9333426b38b1d24b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="class_channel" kindref="compound">Channel</ref> &gt;</type>
+        <definition>vector&lt; Channel &gt; SystemManager::generateChannelInstances</definition>
+        <argsstring>()</argsstring>
+        <name>generateChannelInstances</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/SystemManager.h" line="121" column="8" bodyfile="HepsycodeDesign/src/SystemManager.cpp" bodystart="198" bodyend="255"/>
+        <references refid="group__firfirgcd__define__group_1ga796bd7c6ba2e59281760fb155c6287e8" compoundref="define_8h" startline="120">APPLICATION</references>
+        <references refid="class_channel_1a12e1cdd1b9887f1ed483d778772bfc53" compoundref="tl_8cpp" startline="589" endline="592">Channel::setId</references>
+        <references refid="class_channel_1a0a74f31ad2fd5c1bb1af019313e510c6" compoundref="tl_8cpp" startline="584" endline="587">Channel::setName</references>
+        <references refid="class_channel_1adb8356f7bba44722ed6923684b8fdd7f" compoundref="tl_8cpp" startline="609" endline="612">Channel::setNum</references>
+        <references refid="class_channel_1a87fe96b999c9503c2a8839ee6498f256" compoundref="tl_8cpp" startline="604" endline="607">Channel::setR_id</references>
+        <references refid="class_channel_1af9e34fe60361f6e0c234e691d9d2824d" compoundref="tl_8cpp" startline="599" endline="602">Channel::setW_id</references>
+        <references refid="class_channel_1a448e2f0beb2b7ce2a02a19e2eaf17d55" compoundref="tl_8cpp" startline="594" endline="597">Channel::setWidth</references>
+      </memberdef>
+      <memberdef kind="function" id="class_system_manager_1abb13ab99346bb9a9633852a797e03cf7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SystemManager::PS_Profiling</definition>
+        <argsstring>(int processId)</argsstring>
+        <name>PS_Profiling</name>
+        <param>
+          <type>int</type>
+          <declname>processId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/SystemManager.h" line="124" column="6" bodyfile="HepsycodeDesign/src/SystemManager.cpp" bodystart="261" bodyend="264"/>
+      </memberdef>
+      <memberdef kind="function" id="class_system_manager_1a21d2bb74e4472f99ec04243168e7964e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SystemManager::checkSPP</definition>
+        <argsstring>(int processId)</argsstring>
+        <name>checkSPP</name>
+        <param>
+          <type>int</type>
+          <declname>processId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/SystemManager.h" line="127" column="6" bodyfile="HepsycodeDesign/src/SystemManager.cpp" bodystart="267" bodyend="270"/>
+        <referencedby refid="group__firfirgcd__csp__channel__group_1ga23046a4820dcf9ef26a75eba9cb7d49b" compoundref="sc__csp__channel_8h" startline="232" endline="305">sc_csp_channel&lt; T &gt;::read</referencedby>
+        <referencedby refid="group__scheduling__manager__group_1ga8bb983276d3b9929ea5985632a3fa4e0" compoundref="_scheduling_manager_8h" startline="85" endline="295">SC_MODULE</referencedby>
+        <referencedby refid="group__firfirgcd__csp__channel__group_1gaf8a9ace576ff2e0462c8db276f9f388d" compoundref="sc__csp__channel_8h" startline="322" endline="428">sc_csp_channel&lt; T &gt;::write</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_system_manager_1ab6efb1ee75ff2df870bd8e65480dc6e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SystemManager::deleteConcXmlConCom</definition>
+        <argsstring>()</argsstring>
+        <name>deleteConcXmlConCom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/SystemManager.h" line="130" column="6" bodyfile="HepsycodeDesign/src/SystemManager.cpp" bodystart="286" bodyend="329"/>
+        <references refid="group__firfirgcd__define__group_1ga967ca22c6c7be038e1092147ce04f258" compoundref="define_8h" startline="79">NCH</references>
+        <references refid="group__firfirgcd__define__group_1gad258142492454320138f79a00101f1f8" compoundref="define_8h" startline="77">NPS</references>
+        <referencedby refid="group__firfirgcd__main__group_1ga865e3def6cd1a641230218579d0a958f" compoundref="main_8cpp" startline="177" endline="850">sc_main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_system_manager_1a5f16a17547d2cd543180e06e555304e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SystemManager::updateXmlConCom</definition>
+        <argsstring>(float matrixCONC_PS_N[10][10], unsigned int matrixCOM[10][10], float matrixCONC_CH_N[15][15])</argsstring>
+        <name>updateXmlConCom</name>
+        <param>
+          <type>float</type>
+          <declname>matrixCONC_PS_N</declname>
+          <array>[10][10]</array>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>matrixCOM</declname>
+          <array>[10][10]</array>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>matrixCONC_CH_N</declname>
+          <array>[15][15]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/SystemManager.h" line="133" column="6" bodyfile="HepsycodeDesign/src/SystemManager.cpp" bodystart="331" bodyend="424"/>
+        <references refid="group__firfirgcd__define__group_1ga967ca22c6c7be038e1092147ce04f258" compoundref="define_8h" startline="79">NCH</references>
+        <references refid="group__firfirgcd__define__group_1gad258142492454320138f79a00101f1f8" compoundref="define_8h" startline="77">NPS</references>
+        <referencedby refid="group__firfirgcd__main__group_1ga865e3def6cd1a641230218579d0a958f" compoundref="main_8cpp" startline="177" endline="850">sc_main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_system_manager_1af468620e73667d65dbb7db93b78712a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; int &gt;</type>
+        <definition>vector&lt; int &gt; SystemManager::getAllocationPS_BB</definition>
+        <argsstring>(int bb_id)</argsstring>
+        <name>getAllocationPS_BB</name>
+        <param>
+          <type>int</type>
+          <declname>bb_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/SystemManager.h" line="136" column="8" bodyfile="HepsycodeDesign/src/SystemManager.cpp" bodystart="273" bodyend="281"/>
+      </memberdef>
+      <memberdef kind="function" id="class_system_manager_1aeaf3506efda2897408fd8d5273e871aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>sc_time</type>
+        <definition>sc_time SystemManager::updateSimulatedTime</definition>
+        <argsstring>(int processId)</argsstring>
+        <name>updateSimulatedTime</name>
+        <param>
+          <type>int</type>
+          <declname>processId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/SystemManager.h" line="139" column="9" bodyfile="HepsycodeDesign/src/SystemManager.cpp" bodystart="985" bodyend="1002"/>
+      </memberdef>
+      <memberdef kind="function" id="class_system_manager_1a0d692288dbf1e1a75a331408cd4f2210" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SystemManager::increaseSimulatedTime</definition>
+        <argsstring>(int processId)</argsstring>
+        <name>increaseSimulatedTime</name>
+        <param>
+          <type>int</type>
+          <declname>processId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/SystemManager.h" line="142" column="6" bodyfile="HepsycodeDesign/src/SystemManager.cpp" bodystart="1085" bodyend="1088"/>
+      </memberdef>
+      <memberdef kind="function" id="class_system_manager_1a81c4c7415d63b21f9ae15fd5594b7692" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SystemManager::increaseTimer</definition>
+        <argsstring>(int processId, sc_time delta)</argsstring>
+        <name>increaseTimer</name>
+        <param>
+          <type>int</type>
+          <declname>processId</declname>
+        </param>
+        <param>
+          <type>sc_time</type>
+          <declname>delta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/SystemManager.h" line="145" column="6" bodyfile="HepsycodeDesign/src/SystemManager.cpp" bodystart="1097" bodyend="1100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_system_manager_1aa7e8eba2c8c064bc7e7df6ed9e9e1f53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float SystemManager::updateEstimatedEnergy</definition>
+        <argsstring>(int processId)</argsstring>
+        <name>updateEstimatedEnergy</name>
+        <param>
+          <type>int</type>
+          <declname>processId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/SystemManager.h" line="148" column="7" bodyfile="HepsycodeDesign/src/SystemManager.cpp" bodystart="1005" bodyend="1082"/>
+        <references refid="group__firfirgcd__define__group_1gacf471d2e884ab94235db48a5fd3ce252" compoundref="define_8h" startline="135">energyComputation</references>
+      </memberdef>
+      <memberdef kind="function" id="class_system_manager_1a96ab5341b1af75dfcd59b14b02fa0bc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SystemManager::increaseEstimatedEnergy</definition>
+        <argsstring>(int processId)</argsstring>
+        <name>increaseEstimatedEnergy</name>
+        <param>
+          <type>int</type>
+          <declname>processId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/SystemManager.h" line="151" column="6" bodyfile="HepsycodeDesign/src/SystemManager.cpp" bodystart="1091" bodyend="1094"/>
+      </memberdef>
+      <memberdef kind="function" id="class_system_manager_1a9a32595149efd0a69d09c46387415aa0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SystemManager::deleteConcXmlEnergy</definition>
+        <argsstring>()</argsstring>
+        <name>deleteConcXmlEnergy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/SystemManager.h" line="154" column="6" bodyfile="HepsycodeDesign/src/SystemManager.cpp" bodystart="1104" bodyend="1157"/>
+        <references refid="group__firfirgcd__define__group_1ga498a2c2b57c15e562e939cccf28db094" compoundref="define_8h" startline="87">NBB</references>
+        <references refid="group__firfirgcd__define__group_1gad258142492454320138f79a00101f1f8" compoundref="define_8h" startline="77">NPS</references>
+        <referencedby refid="group__firfirgcd__main__group_1ga865e3def6cd1a641230218579d0a958f" compoundref="main_8cpp" startline="177" endline="850">sc_main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_system_manager_1a99f32d48ffab81f6c16d86dedbede1e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SystemManager::updateXmlEnergy</definition>
+        <argsstring>()</argsstring>
+        <name>updateXmlEnergy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/SystemManager.h" line="157" column="6" bodyfile="HepsycodeDesign/src/SystemManager.cpp" bodystart="1159" bodyend="1221"/>
+        <referencedby refid="group__firfirgcd__main__group_1ga865e3def6cd1a641230218579d0a958f" compoundref="main_8cpp" startline="177" endline="850">sc_main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_system_manager_1a77bb622cef7c79dab7463d02a2125542" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="class_basic_block" kindref="compound">BasicBlock</ref> &gt;</type>
+        <definition>vector&lt; BasicBlock &gt; SystemManager::generateBBInstances</definition>
+        <argsstring>()</argsstring>
+        <name>generateBBInstances</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/SystemManager.h" line="160" column="8" bodyfile="HepsycodeDesign/src/SystemManager.cpp" bodystart="636" bodyend="769"/>
+        <references refid="group__firfirgcd__define__group_1ga498a2c2b57c15e562e939cccf28db094" compoundref="define_8h" startline="87">NBB</references>
+        <references refid="class_processing_unit_1a0878e37abdc168f31758d4df208c6663" compoundref="tl_8cpp" startline="134" endline="137">ProcessingUnit::setCC4S</references>
+        <references refid="class_basic_block_1a14bbb26476609a17b226400d2fd8ec05" compoundref="tl_8cpp" startline="281" endline="283">BasicBlock::setCodeSize</references>
+        <references refid="class_basic_block_1a9f71209e93288e8eb82311fe5961e2ff" compoundref="tl_8cpp" startline="289" endline="291">BasicBlock::setDataSize</references>
+        <references refid="class_basic_block_1aa3a9be4f5f76e76b91e5a3a009f95f44" compoundref="tl_8cpp" startline="297" endline="299">BasicBlock::setEqG</references>
+        <references refid="class_processing_unit_1a48a63b09d626c9563d36404b5f95a04a" compoundref="tl_8cpp" startline="124" endline="127">ProcessingUnit::setFrequency</references>
+        <references refid="class_basic_block_1aee9fb07de76f430ec78e48e85c3d5fd9" compoundref="tl_8cpp" startline="301" endline="303">BasicBlock::setFRT</references>
+        <references refid="class_processing_unit_1a9995278db81888144089791e7eef8b71" compoundref="tl_8cpp" startline="174" endline="177">ProcessingUnit::setI4CSmax</references>
+        <references refid="class_processing_unit_1afb3bb2c3b1421dfabf867ff1bd084968" compoundref="tl_8cpp" startline="164" endline="167">ProcessingUnit::setI4CSmin</references>
+        <references refid="class_processing_unit_1a95737a4e4a2bd424cb4455f0c4a84cf5" compoundref="tl_8cpp" startline="75" endline="77">ProcessingUnit::setId</references>
+        <references refid="class_basic_block_1a1abdc5c467f903b3bb6f51fb68283b21" compoundref="tl_8cpp" startline="234" endline="237">BasicBlock::setId</references>
+        <references refid="class_processing_unit_1a12212762fb57a5b582782c66861443fc" compoundref="tl_8cpp" startline="194" endline="197">ProcessingUnit::setIdd</references>
+        <references refid="class_processing_unit_1a32aac7fd512cb23a8cc629d87ce317d8" compoundref="tl_8cpp" startline="114" endline="117">ProcessingUnit::setISA</references>
+        <references refid="class_processing_unit_1af91c01d3a84acf6f310949e80906e824" compoundref="tl_8cpp" startline="154" endline="157">ProcessingUnit::setMIPS</references>
+        <references refid="class_processing_unit_1a24c691bffdbf8b79fa8301ba6493e0e5" compoundref="tl_8cpp" startline="84" endline="87">ProcessingUnit::setName</references>
+        <references refid="class_basic_block_1a2be928b15c8a74a0f171f97c285791f2" compoundref="tl_8cpp" startline="224" endline="227">BasicBlock::setName</references>
+        <references refid="class_processing_unit_1a4c38556d47f2cd40adc4092b09dba992" compoundref="tl_8cpp" startline="204" endline="207">ProcessingUnit::setOverheadCS</references>
+        <references refid="class_processing_unit_1a4994085fb506708d4c0f1c27565ffe2b" compoundref="tl_8cpp" startline="144" endline="147">ProcessingUnit::setPower</references>
+        <references refid="class_basic_block_1a4cbb966d0ce3b7364877cf6e46e33672" compoundref="tl_8cpp" startline="260" endline="263">BasicBlock::setProcessor</references>
+        <references refid="class_processing_unit_1a11749a7a862ab46b771844fddc373ed6" compoundref="tl_8cpp" startline="94" endline="97">ProcessingUnit::setProcessorType</references>
+        <references refid="class_basic_block_1ae33921bd8c15b268aba6f5b1526f893b" compoundref="tl_8cpp" startline="245" endline="248">BasicBlock::setType</references>
+        <references refid="class_processing_unit_1ac4ef8b2cafc7e379b4cb05e463840128" compoundref="tl_8cpp" startline="184" endline="187">ProcessingUnit::setVdd</references>
+      </memberdef>
+      <memberdef kind="function" id="class_system_manager_1a056fabdd037cf3a1c2e6e20764784159" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="class_physical_link" kindref="compound">PhysicalLink</ref> &gt;</type>
+        <definition>vector&lt; PhysicalLink &gt; SystemManager::generatePhysicalLinkInstances</definition>
+        <argsstring>()</argsstring>
+        <name>generatePhysicalLinkInstances</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/SystemManager.h" line="163" column="8" bodyfile="HepsycodeDesign/src/SystemManager.cpp" bodystart="854" bodyend="877"/>
+        <references refid="class_physical_link_1a46367b48d7ab1d5c06dd2051a6d5a32f" compoundref="tl_8h" startline="283">PhysicalLink::a1</references>
+        <references refid="class_physical_link_1a2c8e1cba265b4e099ac6b07c7839de0e" compoundref="tl_8h" startline="282">PhysicalLink::a2</references>
+        <references refid="class_physical_link_1ac441e379b59ecb00c48ebef53f2d6b75" compoundref="tl_8h" startline="281">PhysicalLink::bandwidth</references>
+        <references refid="group__firfirgcd__define__group_1ga76cc414b5d33950d0cb6ceea199d93de" compoundref="define_8h" startline="89">NPL</references>
+        <references refid="class_physical_link_1a38f205a4a97e9869b93944e0f820f11b" compoundref="tl_8h" startline="278">PhysicalLink::physical_width</references>
+        <references refid="class_physical_link_1a4c1ca22f348862858653c4f02496218f" compoundref="tl_8cpp" startline="502" endline="505">PhysicalLink::setId</references>
+        <references refid="class_physical_link_1a720451548bfac94a60eca8c8f47d343b" compoundref="tl_8cpp" startline="507" endline="510">PhysicalLink::setName</references>
+        <references refid="class_physical_link_1a2f2ff97a12a4c37da1892f0fc2e855b2" compoundref="tl_8h" startline="280">PhysicalLink::tacomm</references>
+        <references refid="class_physical_link_1a90cb0e1c2a0d9951899b587d6d2b247a" compoundref="tl_8h" startline="279">PhysicalLink::tcomm</references>
+      </memberdef>
+      <memberdef kind="function" id="class_system_manager_1a03ae9f4865c6ba14f9212ca4711d30a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SystemManager::mappingPS</definition>
+        <argsstring>()</argsstring>
+        <name>mappingPS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/SystemManager.h" line="166" column="6" bodyfile="HepsycodeDesign/src/SystemManager.cpp" bodystart="921" bodyend="926"/>
+        <references refid="group__firfirgcd__define__group_1gad258142492454320138f79a00101f1f8" compoundref="define_8h" startline="77">NPS</references>
+      </memberdef>
+      <memberdef kind="function" id="class_system_manager_1a027f130077f51033fad36ccaaeda2c57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SystemManager::mappingCH</definition>
+        <argsstring>()</argsstring>
+        <name>mappingCH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/SystemManager.h" line="169" column="6" bodyfile="HepsycodeDesign/src/SystemManager.cpp" bodystart="967" bodyend="972"/>
+        <references refid="group__firfirgcd__define__group_1ga967ca22c6c7be038e1092147ce04f258" compoundref="define_8h" startline="79">NCH</references>
+      </memberdef>
+      <memberdef kind="function" id="class_system_manager_1ae0465f057cd9ac9f5c6d05befc85ff15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>sc_time</type>
+        <definition>sc_time SystemManager::getFRT</definition>
+        <argsstring>()</argsstring>
+        <name>getFRT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/SystemManager.h" line="178" column="9" bodyfile="HepsycodeDesign/src/SystemManager.cpp" bodystart="1226" bodyend="1228"/>
+      </memberdef>
+      <memberdef kind="function" id="class_system_manager_1a2babb39c1fc59e1d02782e3e39ea9412" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SystemManager::setFRT</definition>
+        <argsstring>(sc_time x)</argsstring>
+        <name>setFRT</name>
+        <param>
+          <type>sc_time</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/SystemManager.h" line="180" column="6" bodyfile="HepsycodeDesign/src/SystemManager.cpp" bodystart="1230" bodyend="1232"/>
+        <referencedby refid="group__firfirgcd__main__group_1ga865e3def6cd1a641230218579d0a958f" compoundref="main_8cpp" startline="177" endline="850">sc_main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_system_manager_1acf868dd1af35168e9e37a62b1a03780b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float *</type>
+        <definition>float * SystemManager::loadEst</definition>
+        <argsstring>(sc_time FRT_n)</argsstring>
+        <name>loadEst</name>
+        <param>
+          <type>sc_time</type>
+          <declname>FRT_n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/SystemManager.h" line="184" column="7" bodyfile="HepsycodeDesign/src/SystemManager.cpp" bodystart="1234" bodyend="1239"/>
+        <referencedby refid="group__firfirgcd__main__group_1ga865e3def6cd1a641230218579d0a958f" compoundref="main_8cpp" startline="177" endline="850">sc_main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_system_manager_1ae7fbae6170e9f5e8aca0c436221dcf41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float *</type>
+        <definition>float * SystemManager::getFRL</definition>
+        <argsstring>()</argsstring>
+        <name>getFRL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/SystemManager.h" line="187" column="7" bodyfile="HepsycodeDesign/src/SystemManager.cpp" bodystart="1241" bodyend="1243"/>
+        <referencedby refid="group__firfirgcd__main__group_1ga865e3def6cd1a641230218579d0a958f" compoundref="main_8cpp" startline="177" endline="850">sc_main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_system_manager_1aa25f8e4f2e4460d9652875772f48bb0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SystemManager::deleteConcXmlLoad</definition>
+        <argsstring>()</argsstring>
+        <name>deleteConcXmlLoad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/SystemManager.h" line="190" column="6" bodyfile="HepsycodeDesign/src/SystemManager.cpp" bodystart="1247" bodyend="1314"/>
+        <references refid="group__firfirgcd__define__group_1ga498a2c2b57c15e562e939cccf28db094" compoundref="define_8h" startline="87">NBB</references>
+        <references refid="group__firfirgcd__define__group_1gad258142492454320138f79a00101f1f8" compoundref="define_8h" startline="77">NPS</references>
+        <referencedby refid="group__firfirgcd__main__group_1ga865e3def6cd1a641230218579d0a958f" compoundref="main_8cpp" startline="177" endline="850">sc_main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_system_manager_1afb69c0fedadb6e806e6576ad07c51162" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SystemManager::updateXmlLoad</definition>
+        <argsstring>()</argsstring>
+        <name>updateXmlLoad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/SystemManager.h" line="192" column="6" bodyfile="HepsycodeDesign/src/SystemManager.cpp" bodystart="1316" bodyend="1509"/>
+        <referencedby refid="group__firfirgcd__main__group_1ga865e3def6cd1a641230218579d0a958f" compoundref="main_8cpp" startline="177" endline="850">sc_main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="20">
+        <label>PhysicalLink</label>
+        <link refid="class_physical_link"/>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+a1</edgelabel>
+          <edgelabel>+a2</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+bandwidth</edgelabel>
+          <edgelabel>+id</edgelabel>
+          <edgelabel>+physical_width</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+name</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>+tcomm</edgelabel>
+          <edgelabel>+tacomm</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>K</label>
+      </node>
+      <node id="10">
+        <label>T</label>
+      </node>
+      <node id="4">
+        <label>std::map&lt; string, unsigned int &gt;</label>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+keys</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="template-instance">
+          <edgelabel>&lt; string, unsigned int &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>std::vector&lt; T &gt;</label>
+        <childnode refid="10" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::vector&lt; Process &gt;</label>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="template-instance">
+          <edgelabel>&lt; Process &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>std::map&lt; K, T &gt;</label>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+keys</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>float</label>
+      </node>
+      <node id="22">
+        <label>std::vector&lt; BasicBlock &gt;</label>
+        <childnode refid="23" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="template-instance">
+          <edgelabel>&lt; BasicBlock &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>std::map&lt; string, float &gt;</label>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+keys</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="template-instance">
+          <edgelabel>&lt; string, float &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="17">
+        <label>Channel</label>
+        <link refid="class_channel"/>
+        <childnode refid="18" relation="usage">
+          <edgelabel>+working_energy</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+r_id</edgelabel>
+          <edgelabel>+id</edgelabel>
+          <edgelabel>+num</edgelabel>
+          <edgelabel>+width</edgelabel>
+          <edgelabel>+w_id</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+name</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>+working_time</edgelabel>
+        </childnode>
+      </node>
+      <node id="23">
+        <label>BasicBlock</label>
+        <link refid="class_basic_block"/>
+        <childnode refid="24" relation="usage">
+          <edgelabel>-vpu</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>-FRT</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-dataSize</edgelabel>
+          <edgelabel>-codeSize</edgelabel>
+          <edgelabel>-idPU</edgelabel>
+          <edgelabel>-eqG</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-type</edgelabel>
+          <edgelabel>-name</edgelabel>
+        </childnode>
+        <childnode refid="26" relation="usage">
+          <edgelabel>-id</edgelabel>
+        </childnode>
+      </node>
+      <node id="26">
+        <label>unsigned int</label>
+      </node>
+      <node id="7">
+        <label>std::basic_string&lt; char &gt;</label>
+      </node>
+      <node id="5">
+        <label>int</label>
+      </node>
+      <node id="24">
+        <label>std::vector&lt; ProcessingUnit &gt;</label>
+        <childnode refid="25" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="template-instance">
+          <edgelabel>&lt; ProcessingUnit &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="18">
+        <label>double</label>
+      </node>
+      <node id="14">
+        <label>sc_time</label>
+      </node>
+      <node id="3">
+        <label>Process</label>
+        <link refid="class_process"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+dataSizeMap</edgelabel>
+          <edgelabel>+codeSizeMap</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+energy</edgelabel>
+          <edgelabel>+eqGate</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+priority</edgelabel>
+          <edgelabel>+id</edgelabel>
+          <edgelabel>+dataType</edgelabel>
+          <edgelabel>+profiling</edgelabel>
+          <edgelabel>+criticality</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>+concurrency</edgelabel>
+          <edgelabel>+load</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+name</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>+affinity</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>+processTime</edgelabel>
+        </childnode>
+      </node>
+      <node id="19">
+        <label>std::vector&lt; PhysicalLink &gt;</label>
+        <childnode refid="20" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="template-instance">
+          <edgelabel>&lt; PhysicalLink &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="25">
+        <label>ProcessingUnit</label>
+        <link refid="class_processing_unit"/>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+I4CSmin</edgelabel>
+          <edgelabel>+frequency</edgelabel>
+          <edgelabel>+I4CSmax</edgelabel>
+          <edgelabel>+cost</edgelabel>
+          <edgelabel>+Power</edgelabel>
+          <edgelabel>+MIPS</edgelabel>
+          <edgelabel>+CC4CS</edgelabel>
+          <edgelabel>+Vdd</edgelabel>
+          <edgelabel>+Idd</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+id</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+processorType</edgelabel>
+          <edgelabel>+name</edgelabel>
+          <edgelabel>+ISA</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>+overheadCS</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>SystemManager</label>
+        <link refid="class_system_manager"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+VPS</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>+VCH</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+FRL</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>+VPL</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>+allocationCH_PL</edgelabel>
+          <edgelabel>+allocationPS_BB</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>+FRT</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>+VBB</edgelabel>
+        </childnode>
+      </node>
+      <node id="16">
+        <label>std::vector&lt; Channel &gt;</label>
+        <childnode refid="17" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="template-instance">
+          <edgelabel>&lt; Channel &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>std::map&lt; int, float &gt;</label>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+keys</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="template-instance">
+          <edgelabel>&lt; int, float &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="21">
+        <label>std::vector&lt; int &gt;</label>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="template-instance">
+          <edgelabel>&lt; int &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>std::string</label>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HepsycodeDesign/src/SystemManager.h" line="87" column="1" bodyfile="HepsycodeDesign/src/SystemManager.h" bodystart="86" bodyend="191"/>
+    <listofallmembers>
+      <member refid="class_system_manager_1ab75b55327c942c6950f67c14ba9dea08" prot="public" virt="non-virtual"><scope>SystemManager</scope><name>allocationCH_PL</name></member>
+      <member refid="class_system_manager_1abfd1d205fa299fa757e2b78d15724734" prot="public" virt="non-virtual"><scope>SystemManager</scope><name>allocationPS_BB</name></member>
+      <member refid="class_system_manager_1a21d2bb74e4472f99ec04243168e7964e" prot="public" virt="non-virtual"><scope>SystemManager</scope><name>checkSPP</name></member>
+      <member refid="class_system_manager_1ab6efb1ee75ff2df870bd8e65480dc6e7" prot="public" virt="non-virtual"><scope>SystemManager</scope><name>deleteConcXmlConCom</name></member>
+      <member refid="class_system_manager_1a9a32595149efd0a69d09c46387415aa0" prot="public" virt="non-virtual"><scope>SystemManager</scope><name>deleteConcXmlEnergy</name></member>
+      <member refid="class_system_manager_1aa25f8e4f2e4460d9652875772f48bb0e" prot="public" virt="non-virtual"><scope>SystemManager</scope><name>deleteConcXmlLoad</name></member>
+      <member refid="class_system_manager_1a7f06326402d0738cb87a1c03bf57f5c7" prot="public" virt="non-virtual"><scope>SystemManager</scope><name>FRL</name></member>
+      <member refid="class_system_manager_1a69ec2821a8a92a69fbb5cb0f789a64ca" prot="public" virt="non-virtual"><scope>SystemManager</scope><name>FRT</name></member>
+      <member refid="class_system_manager_1a77bb622cef7c79dab7463d02a2125542" prot="public" virt="non-virtual"><scope>SystemManager</scope><name>generateBBInstances</name></member>
+      <member refid="class_system_manager_1a98b6400619bc75fc9333426b38b1d24b" prot="public" virt="non-virtual"><scope>SystemManager</scope><name>generateChannelInstances</name></member>
+      <member refid="class_system_manager_1a056fabdd037cf3a1c2e6e20764784159" prot="public" virt="non-virtual"><scope>SystemManager</scope><name>generatePhysicalLinkInstances</name></member>
+      <member refid="class_system_manager_1a545df7d9bd60c4d42797a7233a1f4d61" prot="public" virt="non-virtual"><scope>SystemManager</scope><name>generateProcessInstances</name></member>
+      <member refid="class_system_manager_1af468620e73667d65dbb7db93b78712a9" prot="public" virt="non-virtual"><scope>SystemManager</scope><name>getAllocationPS_BB</name></member>
+      <member refid="class_system_manager_1ae7fbae6170e9f5e8aca0c436221dcf41" prot="public" virt="non-virtual"><scope>SystemManager</scope><name>getFRL</name></member>
+      <member refid="class_system_manager_1ae0465f057cd9ac9f5c6d05befc85ff15" prot="public" virt="non-virtual"><scope>SystemManager</scope><name>getFRT</name></member>
+      <member refid="class_system_manager_1a96ab5341b1af75dfcd59b14b02fa0bc7" prot="public" virt="non-virtual"><scope>SystemManager</scope><name>increaseEstimatedEnergy</name></member>
+      <member refid="class_system_manager_1a0d692288dbf1e1a75a331408cd4f2210" prot="public" virt="non-virtual"><scope>SystemManager</scope><name>increaseSimulatedTime</name></member>
+      <member refid="class_system_manager_1a81c4c7415d63b21f9ae15fd5594b7692" prot="public" virt="non-virtual"><scope>SystemManager</scope><name>increaseTimer</name></member>
+      <member refid="class_system_manager_1acf868dd1af35168e9e37a62b1a03780b" prot="public" virt="non-virtual"><scope>SystemManager</scope><name>loadEst</name></member>
+      <member refid="class_system_manager_1a027f130077f51033fad36ccaaeda2c57" prot="public" virt="non-virtual"><scope>SystemManager</scope><name>mappingCH</name></member>
+      <member refid="class_system_manager_1a03ae9f4865c6ba14f9212ca4711d30a9" prot="public" virt="non-virtual"><scope>SystemManager</scope><name>mappingPS</name></member>
+      <member refid="class_system_manager_1abb13ab99346bb9a9633852a797e03cf7" prot="public" virt="non-virtual"><scope>SystemManager</scope><name>PS_Profiling</name></member>
+      <member refid="class_system_manager_1a2babb39c1fc59e1d02782e3e39ea9412" prot="public" virt="non-virtual"><scope>SystemManager</scope><name>setFRT</name></member>
+      <member refid="class_system_manager_1a2f8a3e2e1929be50ef8702629f50bb94" prot="public" virt="non-virtual"><scope>SystemManager</scope><name>SystemManager</name></member>
+      <member refid="class_system_manager_1aa7e8eba2c8c064bc7e7df6ed9e9e1f53" prot="public" virt="non-virtual"><scope>SystemManager</scope><name>updateEstimatedEnergy</name></member>
+      <member refid="class_system_manager_1aeaf3506efda2897408fd8d5273e871aa" prot="public" virt="non-virtual"><scope>SystemManager</scope><name>updateSimulatedTime</name></member>
+      <member refid="class_system_manager_1a5f16a17547d2cd543180e06e555304e7" prot="public" virt="non-virtual"><scope>SystemManager</scope><name>updateXmlConCom</name></member>
+      <member refid="class_system_manager_1a99f32d48ffab81f6c16d86dedbede1e7" prot="public" virt="non-virtual"><scope>SystemManager</scope><name>updateXmlEnergy</name></member>
+      <member refid="class_system_manager_1afb69c0fedadb6e806e6576ad07c51162" prot="public" virt="non-virtual"><scope>SystemManager</scope><name>updateXmlLoad</name></member>
+      <member refid="class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32" prot="public" virt="non-virtual"><scope>SystemManager</scope><name>VBB</name></member>
+      <member refid="class_system_manager_1a7dcc3ae8736a6aad7e27f276706205a3" prot="public" virt="non-virtual"><scope>SystemManager</scope><name>VCH</name></member>
+      <member refid="class_system_manager_1af28a1744a2d964a7047c31c6a5f1644a" prot="public" virt="non-virtual"><scope>SystemManager</scope><name>VPL</name></member>
+      <member refid="class_system_manager_1adcd8ce799616b977c206401ebdefab86" prot="public" virt="non-virtual"><scope>SystemManager</scope><name>VPS</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

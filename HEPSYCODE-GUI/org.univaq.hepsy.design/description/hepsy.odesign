@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:properties-ext-widgets-reference="http://www.eclipse.org/sirius/properties/1.0.0/ext/widgets/reference" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="hepsy" version="12.0.0.2017041100">
+  <ownedViewpoints name="behaviors" modelFileExtension="hepsy">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="hepsycode" domainClass="hepsy::BehaviorSpecification" enablePopupBars="true">
+      <metamodel href="file:/home/xeder/Desktop/projects/HEPSYCODE/hepsyWorkspace/org.univaq.hepsy/model/hepsy.ecore#/"/>
+      <defaultLayer name="Behavior">
+        <nodeMappings name="Stimulus" semanticCandidatesExpression="feature:nodes" doubleClickDescription="//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@toolSections.1/@ownedTools[name='Properties']" domainClass="hepsy::Stimulus">
+          <borderedNodeMappings name="Port" semanticCandidatesExpression="feature:ports" doubleClickDescription="//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@toolSections.1/@ownedTools[name='Properties']" domainClass="hepsy::Port">
+            <style xsi:type="style:SquareDescription" borderSizeComputationExpression="2" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </borderedNodeMappings>
+          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="2" borderLineStyle="dash" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Display" semanticCandidatesExpression="feature:nodes" doubleClickDescription="//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@toolSections.1/@ownedTools[name='Properties']" domainClass="hepsy::Display">
+          <borderedNodeMappings name="Port" semanticCandidatesExpression="feature:ports" doubleClickDescription="//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@toolSections.1/@ownedTools[name='Properties']" domainClass="hepsy::Port">
+            <style xsi:type="style:SquareDescription" borderSizeComputationExpression="2" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </borderedNodeMappings>
+          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="2" borderLineStyle="dash" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="Channel" semanticCandidatesExpression="aql:self.nodes.nChannels" doubleClickDescription="//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@toolSections.1/@ownedTools[name='ChannelProp']" sourceMapping="//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@containerMappings[name='Node']/@subNodeMappings[name='Process']" targetMapping="//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@containerMappings[name='Node']/@subNodeMappings[name='Process']" targetFinderExpression="feature:nTo" sourceFinderExpression="feature:nFrom" domainClass="hepsy::Channel" useDomainElement="true">
+          <style targetArrow="NoDecoration" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:name">
+              <labelFormat>strike_through</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+          <conditionnalStyles predicateExpression="aql:self.nTo.oclIsTypeOf(hepsy::Process)">
+            <style sizeComputationExpression="2">
+              <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+              <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:name">
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              </centerLabelStyleDescription>
+            </style>
+          </conditionnalStyles>
+        </edgeMappings>
+        <edgeMappings name="Connector" semanticCandidatesExpression="aql:self.nodes.ports.pChannels" doubleClickDescription="//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@toolSections.1/@ownedTools[name='ChannelProp']" sourceMapping="//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@nodeMappings[name='Display']/@borderedNodeMappings[name='Port'] //@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@nodeMappings[name='Stimulus']/@borderedNodeMappings[name='Port'] //@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@containerMappings[name='Node']/@borderedNodeMappings[name='Port']" targetMapping="//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@containerMappings[name='Node']/@borderedNodeMappings[name='Port']" targetFinderExpression="feature:pTo" sourceFinderExpression="feature:pFrom" domainClass="hepsy::Channel" useDomainElement="true">
+          <style targetArrow="NoDecoration" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:name">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="ExtensionProcPort" doubleClickDescription="//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@toolSections.1/@ownedTools[name='Properties']" sourceMapping="//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@containerMappings[name='Node']/@subNodeMappings[name='Process']" targetMapping="//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@containerMappings[name='Node']/@borderedNodeMappings[name='Port']" targetFinderExpression="feature:processExtension">
+          <style lineStyle="dash" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="ExtensionPortProc" doubleClickDescription="//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@toolSections.1/@ownedTools[name='Properties']" sourceMapping="//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@containerMappings[name='Node']/@borderedNodeMappings[name='Port']" targetMapping="//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@containerMappings[name='Node']/@subNodeMappings[name='Process']" targetFinderExpression="feature:portExtension">
+          <style lineStyle="dash" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="Node" semanticCandidatesExpression="feature:nodes" doubleClickDescription="//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@toolSections.1/@ownedTools[name='Properties']" domainClass="hepsy::StructuredNode">
+          <borderedNodeMappings name="Port" semanticCandidatesExpression="feature:ports" doubleClickDescription="//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@toolSections.1/@ownedTools[name='Properties']" domainClass="hepsy::Port">
+            <style xsi:type="style:SquareDescription" borderSizeComputationExpression="2" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </borderedNodeMappings>
+          <subNodeMappings name="Process" semanticCandidatesExpression="feature:processes" doubleClickDescription="//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@toolSections.0/@ownedTools[name='Process']" domainClass="hepsy::Process">
+            <style xsi:type="style:EllipseNodeDescription" borderSizeComputationExpression="2" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="2" borderLineStyle="dash" labelSize="12" showIcon="false">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="Nodes">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="System" containerMappings="//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@containerMappings[name='Node']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="hepsy::StructuredNode" referenceName="nodes"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Port" nodeMappings="//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@nodeMappings[name='Stimulus']/@borderedNodeMappings[name='Port'] //@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@nodeMappings[name='Display']/@borderedNodeMappings[name='Port'] //@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@containerMappings[name='Node']/@borderedNodeMappings[name='Port']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="hepsy::Port" referenceName="ports"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="Process" mappings="//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@containerMappings[name='Node']/@subNodeMappings[name='Process']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="properties:DialogModelOperation" titleExpression="Edit Properties">
+                <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                  <initialOperation/>
+                </buttons>
+                <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                  <initialOperation/>
+                </buttons>
+                <page name="Properties" labelExpression="Properties" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@toolSections.0/@ownedTools[name='Process']/@initialOperation/@firstModelOperations/@groups.0"/>
+                <groups name="Properties" labelExpression="Properties">
+                  <controls xsi:type="properties:TextDescription" name="Name" labelExpression="Name">
+                    <initialOperation>
+                      <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+                      </firstModelOperations>
+                    </initialOperation>
+                  </controls>
+                  <controls xsi:type="properties:TextDescription" name="Priority" labelExpression="Priority">
+                    <initialOperation>
+                      <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="priority" valueExpression="var:newValue"/>
+                      </firstModelOperations>
+                    </initialOperation>
+                  </controls>
+                  <controls xsi:type="properties:TextDescription" name="Criticality" labelExpression="Criticality">
+                    <initialOperation>
+                      <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="criticality" valueExpression="var:newValue"/>
+                      </firstModelOperations>
+                    </initialOperation>
+                  </controls>
+                </groups>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Stimulus" nodeMappings="//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@nodeMappings[name='Stimulus']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="hepsy::Stimulus" referenceName="nodes"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Display" nodeMappings="//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@nodeMappings[name='Display']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="hepsy::Display" referenceName="nodes"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Process" nodeMappings="//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@containerMappings[name='Node']/@subNodeMappings[name='Process']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="hepsy::Process" referenceName="processes"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="Edges">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Connector" edgeMappings="//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@edgeMappings[name='Connector']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="hepsy::Channel" referenceName="pChannels">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="pFrom" valueExpression="var:source"/>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="pTo" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Channel" edgeMappings="//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@edgeMappings[name='Channel']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="feature:eContainer">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="hepsy::Channel" referenceName="nChannels">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="nFrom" valueExpression="var:source"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="nTo" valueExpression="var:target"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="ChannelProp" mappings="//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@edgeMappings[name='Channel'] //@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@edgeMappings[name='Connector']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="Edit Channel">
+                  <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                    <initialOperation/>
+                  </buttons>
+                  <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                    <initialOperation/>
+                  </buttons>
+                  <page name="Properties" labelExpression="Properties" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@toolSections.1/@ownedTools[name='ChannelProp']/@initialOperation/@firstModelOperations/@subModelOperations.0/@groups.0 //@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@toolSections.1/@ownedTools[name='ChannelProp']/@initialOperation/@firstModelOperations/@subModelOperations.0/@groups.1"/>
+                  <groups name="Attributes" labelExpression="Attributes">
+                    <controls xsi:type="properties:TextDescription" name="Name" labelExpression="Name">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                          <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+                        </firstModelOperations>
+                      </initialOperation>
+                    </controls>
+                    <controls xsi:type="properties:TextDescription" name="queueSize" labelExpression="Queue Size">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                          <subModelOperations xsi:type="tool_1:SetValue" featureName="queueSize" valueExpression="var:newValue"/>
+                        </firstModelOperations>
+                      </initialOperation>
+                    </controls>
+                    <controls xsi:type="properties:TextDescription" name="timeout" labelExpression="Timeout">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:SetValue" featureName="timeout" valueExpression="var:newValue"/>
+                      </initialOperation>
+                    </controls>
+                    <controls xsi:type="properties:RadioDescription" name="Direction" labelExpression="Direction" candidatesExpression="aql:hepsy::Direction.eContents()" candidateDisplayExpression="aql:candidate.toString()" numberOfColumns="2">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:SetValue" featureName="direction" valueExpression="aql:newValue->toString()"/>
+                      </initialOperation>
+                    </controls>
+                    <controls xsi:type="properties:CheckboxDescription" name="rendezVous" labelExpression="rendezVous" valueExpression="feature:rendezVous">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:SetValue" featureName="rendezVous" valueExpression="aql:newValue"/>
+                      </initialOperation>
+                    </controls>
+                  </groups>
+                  <groups name="Message" labelExpression="Messages">
+                    <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="Message" labelExpression="Message" referenceNameExpression="message"/>
+                    <controls xsi:type="properties:ButtonDescription" name="Edit" buttonLabelExpression="Edit Message">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:Let" valueExpression="feature:message">
+                          <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                            <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="MessageProp">
+                              <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                                <initialOperation/>
+                              </buttons>
+                              <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                                <initialOperation/>
+                              </buttons>
+                              <page name="Message" labelExpression="Properties" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@toolSections.1/@ownedTools[name='ChannelProp']/@initialOperation/@firstModelOperations/@subModelOperations.0/@groups.1/@controls.1/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@groups.0 //@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@toolSections.1/@ownedTools[name='ChannelProp']/@initialOperation/@firstModelOperations/@subModelOperations.0/@groups.1/@controls.1/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@groups.1"/>
+                              <groups name="Attributes" labelExpression="Attributes">
+                                <controls xsi:type="properties:TextDescription" name="Name" labelExpression="Name">
+                                  <initialOperation>
+                                    <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+                                  </initialOperation>
+                                </controls>
+                              </groups>
+                              <groups name="Entry" labelExpression="Entries">
+                                <controls xsi:type="properties:ListDescription" name="Entries" labelExpression="Entries" valueExpression="feature:entry" displayExpression="aql:value.eClass().name + ' ' + value.type + ' : ' + value.name">
+                                  <actions labelExpression="Add">
+                                    <initialOperation>
+                                      <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="hepsy::Entry" referenceName="entry">
+                                        <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
+                                          <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="Entries">
+                                            <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                                              <initialOperation/>
+                                            </buttons>
+                                            <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                                              <initialOperation/>
+                                            </buttons>
+                                            <page name="Entry Attr" labelExpression="Entry Attributes" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@toolSections.1/@ownedTools[name='ChannelProp']/@initialOperation/@firstModelOperations/@subModelOperations.0/@groups.1/@controls.1/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@groups.1/@controls.0/@actions.0/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
+                                            <groups name="Attributes" labelExpression="Attributes">
+                                              <controls xsi:type="properties:TextDescription" name="Name" labelExpression="Name">
+                                                <initialOperation>
+                                                  <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+                                                </initialOperation>
+                                              </controls>
+                                              <controls xsi:type="properties:SelectDescription" name="Type" labelExpression="Type" candidatesExpression="aql:hepsy::DataType.eContents()" candidateDisplayExpression="aql:candidate.name">
+                                                <initialOperation>
+                                                  <firstModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="aql:newValue->toString()"/>
+                                                </initialOperation>
+                                              </controls>
+                                            </groups>
+                                          </subModelOperations>
+                                        </subModelOperations>
+                                      </firstModelOperations>
+                                    </initialOperation>
+                                  </actions>
+                                  <actions labelExpression="Remove">
+                                    <initialOperation>
+                                      <firstModelOperations xsi:type="tool_1:Unset" featureName="entry" elementExpression="aql:self.entry->last()"/>
+                                    </initialOperation>
+                                  </actions>
+                                </controls>
+                              </groups>
+                            </subModelOperations>
+                          </subModelOperations>
+                        </firstModelOperations>
+                      </initialOperation>
+                    </controls>
+                  </groups>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="Properties" mappings="//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@nodeMappings[name='Display'] //@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@nodeMappings[name='Display']/@borderedNodeMappings[name='Port'] //@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@edgeMappings[name='ExtensionPortProc'] //@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@edgeMappings[name='ExtensionProcPort'] //@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@containerMappings[name='Node'] //@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@containerMappings[name='Node']/@borderedNodeMappings[name='Port'] //@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@nodeMappings[name='Stimulus'] //@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@nodeMappings[name='Stimulus']/@borderedNodeMappings[name='Port']">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="properties:DialogModelOperation" titleExpression="Edit Properties">
+                <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                  <initialOperation/>
+                </buttons>
+                <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                  <initialOperation/>
+                </buttons>
+                <page name="Properties" labelExpression="Properties" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@toolSections.1/@ownedTools[name='Properties']/@initialOperation/@firstModelOperations/@groups.0"/>
+                <groups name="Properties" labelExpression="Properties">
+                  <controls xsi:type="properties:TextDescription" name="Name" labelExpression="Name">
+                    <initialOperation>
+                      <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+                      </firstModelOperations>
+                    </initialOperation>
+                  </controls>
+                </groups>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="OutputSystemExtension" edgeMappings="//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@edgeMappings[name='ExtensionProcPort']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="processExtension" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="InputSystemExtension" edgeMappings="//@ownedViewpoints[name='behaviors']/@ownedRepresentations[name='hepsycode']/@defaultLayer/@edgeMappings[name='ExtensionPortProc']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="portExtension" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="org.univaq.hepsy.design.Services"/>
+  </ownedViewpoints>
+</description:Group>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<constraints>
+	<numberProcesses>8</numberProcesses>
+	<numberLogicalLinks>15</numberLogicalLinks>
+	<numberInstancesBB>5</numberInstancesBB>
+	<numberInstancesLinks>3</numberInstancesLinks>
+	<numberMaxInstancesBB>5</numberMaxInstancesBB>
+	<TTC>30.00</TTC> <!-- ms -->
+	<loadMax>0.7</loadMax>
+  <ETC>15000</ETC>
+</constraints>

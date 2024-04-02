@@ -1,0 +1,166 @@
+\hypertarget{fir16__main_8cpp_source}{}\doxysection{fir16\+\_\+main.\+cpp}
+\label{fir16__main_8cpp_source}\index{HepsycodeDesign/src/processesInstr/fir16\_main.cpp@{HepsycodeDesign/src/processesInstr/fir16\_main.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * University of L'Aquila -\/ HEPSYCODE Source Code License                       *}}
+\DoxyCodeLine{00003 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00004 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00005 \textcolor{comment}{ * (c) 2018-\/2019 Centre of Excellence DEWS All rights reserved                  *}}
+\DoxyCodeLine{00006 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00007 \textcolor{comment}{ * <one line to give the program's name and a brief idea of what it does.>      *}}
+\DoxyCodeLine{00008 \textcolor{comment}{ * Copyright (C) 2022  Vittoriano Muttillo, Luigi Pomante                       *                                    *}}
+\DoxyCodeLine{00009 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00010 \textcolor{comment}{ * This program is free software: you can redistribute it and/or modify         *}}
+\DoxyCodeLine{00011 \textcolor{comment}{ * it under the terms of the GNU General Public License as published by         *}}
+\DoxyCodeLine{00012 \textcolor{comment}{ * the Free Software Foundation, either version 3 of the License, or            *}}
+\DoxyCodeLine{00013 \textcolor{comment}{ * (at your option) any later version.                                          *}}
+\DoxyCodeLine{00014 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00015 \textcolor{comment}{ * This program is distributed in the hope that it will be useful,              *}}
+\DoxyCodeLine{00016 \textcolor{comment}{ * but WITHOUT ANY WARRANTY; without even the implied warranty of               *}}
+\DoxyCodeLine{00017 \textcolor{comment}{ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the                *}}
+\DoxyCodeLine{00018 \textcolor{comment}{ * GNU General Public License for more details.                                 *}}
+\DoxyCodeLine{00019 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00020 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00021 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00022 \textcolor{comment}{ * Created on: 09/May/2022                                                      *}}
+\DoxyCodeLine{00023 \textcolor{comment}{ * Authors: Vittoriano Muttillo, Luigi Pomante                                  *}}
+\DoxyCodeLine{00024 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00025 \textcolor{comment}{ * email: vittoriano.muttillo@guest.univaq.it                                   *}}
+\DoxyCodeLine{00026 \textcolor{comment}{ *        luigi.pomante@univaq.it                                               *}}
+\DoxyCodeLine{00027 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00028 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00029 \textcolor{comment}{ * This code has been developed from an HEPSYCODE model used as demonstrator by *}}
+\DoxyCodeLine{00030 \textcolor{comment}{ * University of L'Aquila.                                                      *}}
+\DoxyCodeLine{00031 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00032 \textcolor{comment}{ * The code is used as a working example in the 'Embedded Systems' course of    *}}
+\DoxyCodeLine{00033 \textcolor{comment}{ * the Master in Conputer Science Engineering offered by the                    *}}
+\DoxyCodeLine{00034 \textcolor{comment}{ * University of L'Aquila                                                       *}}
+\DoxyCodeLine{00035 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{00037 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00038 \textcolor{comment}{ * fir16\_main : FirFirGCD FIR16 process.}}
+\DoxyCodeLine{00039 \textcolor{comment}{ *}}
+\DoxyCodeLine{00040 \textcolor{comment}{ * FIR\_16 process: CSP Process specifying the functionality of the FIR16 component}}
+\DoxyCodeLine{00041 \textcolor{comment}{ *}}
+\DoxyCodeLine{00042 \textcolor{comment}{********************************************************************************/}}
+\DoxyCodeLine{00043 }
+\DoxyCodeLine{00050 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00051 \textcolor{comment}{ ***                                Includes                                  ***}}
+\DoxyCodeLine{00052 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00053 }
+\DoxyCodeLine{00054 \textcolor{preprocessor}{\#include "../mainsystem.h"}}
+\DoxyCodeLine{00055 }
+\DoxyCodeLine{00056 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00057 \textcolor{comment}{ ***                                Functions                                 ***}}
+\DoxyCodeLine{00058 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00059 }
+\DoxyCodeLine{00061 \textcolor{comment}{// SBM DEPENDENT}}
+\DoxyCodeLine{00063 \textcolor{comment}{}}
+\DoxyCodeLine{00064 \textcolor{comment}{//f16m}}
+\DoxyCodeLine{00065 \textcolor{keywordtype}{void} mainsystem::fir16\_main()}
+\DoxyCodeLine{00066 \{}
+\DoxyCodeLine{00067     \textcolor{comment}{// datatype for channels}}
+\DoxyCodeLine{00068     \mbox{\hyperlink{structfir16e__parameters}{fir16e\_parameters}} fir16e\_p;}
+\DoxyCodeLine{00069     \mbox{\hyperlink{structfir16e__results}{fir16e\_results}} fir16e\_r;}
+\DoxyCodeLine{00070     \mbox{\hyperlink{structfir16s__parameters}{fir16s\_parameters}} fir16s\_p;}
+\DoxyCodeLine{00071     \mbox{\hyperlink{structfir16s__results}{fir16s\_results}} fir16s\_r;}
+\DoxyCodeLine{00072 }
+\DoxyCodeLine{00073     \textcolor{comment}{// local variables}}
+\DoxyCodeLine{00074     sc\_uint<8>  sample\_tmp;}
+\DoxyCodeLine{00075     sc\_uint<19> acc;}
+\DoxyCodeLine{00076     sc\_uint<9> coef[16];}
+\DoxyCodeLine{00077     sc\_uint<8> shift[16];}
+\DoxyCodeLine{00078 }
+\DoxyCodeLine{00079     \textcolor{comment}{// init}}
+\DoxyCodeLine{00080     \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}}) coef[0] = 6;}
+\DoxyCodeLine{00081     \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}}) coef[1] = 4;}
+\DoxyCodeLine{00082     \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}}) coef[2] = 13;}
+\DoxyCodeLine{00083     \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}}) coef[3] = 16;}
+\DoxyCodeLine{00084     \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}}) coef[4] = 18;}
+\DoxyCodeLine{00085     \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}}) coef[5] = 41;}
+\DoxyCodeLine{00086     \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}}) coef[6] = 23;}
+\DoxyCodeLine{00087     \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}}) coef[7] = 154;}
+\DoxyCodeLine{00088     \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}}) coef[8] = 222;}
+\DoxyCodeLine{00089     \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}}) coef[9] = 154;}
+\DoxyCodeLine{00090     \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}}) coef[10] = 23;}
+\DoxyCodeLine{00091     \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}}) coef[11] = 41;}
+\DoxyCodeLine{00092     \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}}) coef[12] = 18;}
+\DoxyCodeLine{00093     \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}}) coef[13] = 16;}
+\DoxyCodeLine{00094     \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}}) coef[14] = 13;}
+\DoxyCodeLine{00095     \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}}) coef[15] = 4;}
+\DoxyCodeLine{00096 }
+\DoxyCodeLine{00097     \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}}) \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i=0; i<\mbox{\hyperlink{group__firfirgcd__define__group_gaf2addfbdf98c5e76c823edde9336370f}{TAP16}}; i++)}
+\DoxyCodeLine{00098     \{\mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}})}
+\DoxyCodeLine{00099         \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}}) shift[i] = 0;}
+\DoxyCodeLine{00100     \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}})\}}
+\DoxyCodeLine{00101 }
+\DoxyCodeLine{00102     \textcolor{comment}{// main functionality}}
+\DoxyCodeLine{00103 }
+\DoxyCodeLine{00104     \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}}) \textcolor{keywordflow}{while}(1)}
+\DoxyCodeLine{00105     \{\mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}})}
+\DoxyCodeLine{00106 }
+\DoxyCodeLine{00107         \textcolor{comment}{// Main input from channel}}
+\DoxyCodeLine{00108         \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}}) sample\_tmp=stim2\_channel\_port-\/>read();}
+\DoxyCodeLine{00109         }
+\DoxyCodeLine{00110         \textcolor{comment}{//fir16e}}
+\DoxyCodeLine{00111 }
+\DoxyCodeLine{00112         \textcolor{comment}{// fill datatype}}
+\DoxyCodeLine{00113         \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}}) fir16e\_p.\mbox{\hyperlink{structfir16e__parameters_aaf9c21d0921a75d9528f3afe73c4efbc}{acc}}=acc;}
+\DoxyCodeLine{00114 }
+\DoxyCodeLine{00115         \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}}) \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} j = 0; j < \mbox{\hyperlink{group__firfirgcd__define__group_gaf2addfbdf98c5e76c823edde9336370f}{TAP16}}; j++)}
+\DoxyCodeLine{00116         \{\mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}})}
+\DoxyCodeLine{00117             \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}}) fir16e\_p.\mbox{\hyperlink{structfir16e__parameters_a2e9179d705c294bf1e699545da5d26ed}{coef}}[j] = coef[j];}
+\DoxyCodeLine{00118         \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}})\}}
+\DoxyCodeLine{00119 }
+\DoxyCodeLine{00120         \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}}) fir16e\_p.\mbox{\hyperlink{structfir16e__parameters_a233235a05f5c75a7470c4e23aa279102}{sample\_tmp}}=sample\_tmp;}
+\DoxyCodeLine{00121 }
+\DoxyCodeLine{00122         \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}}) \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} j = 0; j < \mbox{\hyperlink{group__firfirgcd__define__group_gaf2addfbdf98c5e76c823edde9336370f}{TAP16}}; j++)}
+\DoxyCodeLine{00123         \{\mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}})}
+\DoxyCodeLine{00124             \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}}) fir16e\_p.\mbox{\hyperlink{structfir16e__parameters_ae02a5c0f568ad52190d1585205337494}{shift}}[j] = shift[j];}
+\DoxyCodeLine{00125         \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}})\}}
+\DoxyCodeLine{00126 }
+\DoxyCodeLine{00127         \textcolor{comment}{// send parameters and receive results}}
+\DoxyCodeLine{00128         \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}}) fir16e\_parameters\_channel-\/>write(fir16e\_p);}
+\DoxyCodeLine{00129         \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}}) fir16e\_r=fir16e\_results\_channel-\/>read();}
+\DoxyCodeLine{00130 }
+\DoxyCodeLine{00131         \textcolor{comment}{// fill local variables}}
+\DoxyCodeLine{00132         \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}}) acc=fir16e\_r.\mbox{\hyperlink{structfir16e__results_a5b758c23c1cf7b9904536e4b4fdc9213}{acc}};}
+\DoxyCodeLine{00133 }
+\DoxyCodeLine{00134         \textcolor{comment}{//fir16s}}
+\DoxyCodeLine{00135 }
+\DoxyCodeLine{00136         \textcolor{comment}{// fill datatype}}
+\DoxyCodeLine{00137         \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}}) fir16s\_p.\mbox{\hyperlink{structfir16s__parameters_a364563d85914eb0eba02828d309d994b}{sample\_tmp}}=sample\_tmp;}
+\DoxyCodeLine{00138 }
+\DoxyCodeLine{00139         \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}}) \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} j = 0; j < \mbox{\hyperlink{group__firfirgcd__define__group_gaf2addfbdf98c5e76c823edde9336370f}{TAP16}}; j++)}
+\DoxyCodeLine{00140         \{\mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}})}
+\DoxyCodeLine{00141             \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}}) fir16s\_p.\mbox{\hyperlink{structfir16s__parameters_ace4b801b0a54f27f7ad5f92b753a8175}{shift}}[j] = shift[j];}
+\DoxyCodeLine{00142         \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}})\}}
+\DoxyCodeLine{00143 }
+\DoxyCodeLine{00144         \textcolor{comment}{// send parameters and receive results}}
+\DoxyCodeLine{00145         \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}}) fir16s\_parameters\_channel-\/>write(fir16s\_p);}
+\DoxyCodeLine{00146         \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}}) fir16s\_r=fir16s\_results\_channel-\/>read();}
+\DoxyCodeLine{00147 }
+\DoxyCodeLine{00148         \textcolor{comment}{// fill local variables}}
+\DoxyCodeLine{00149         \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}}) \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} j = 0; j < \mbox{\hyperlink{group__firfirgcd__define__group_gaf2addfbdf98c5e76c823edde9336370f}{TAP16}}; j++)}
+\DoxyCodeLine{00150         \{\mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}})}
+\DoxyCodeLine{00151             \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}}) shift[j] = fir16s\_r.\mbox{\hyperlink{structfir16s__results_a73616346673b8d61fb292bfc064eb6d2}{shift}}[j];}
+\DoxyCodeLine{00152         \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}})\}}
+\DoxyCodeLine{00153 }
+\DoxyCodeLine{00154         \textcolor{comment}{// write output values on channel}}
+\DoxyCodeLine{00155         \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}}) results16\_channel-\/>write(acc);}
+\DoxyCodeLine{00156         }
+\DoxyCodeLine{00157 \textcolor{preprocessor}{        \#if defined(\_DEBUG\_)}}
+\DoxyCodeLine{00158         cout << \textcolor{stringliteral}{"FIR16: \(\backslash\)t\(\backslash\)t"} << acc << \textcolor{stringliteral}{"\(\backslash\)t at time \(\backslash\)t"} << sc\_time\_stamp() << endl;}
+\DoxyCodeLine{00159 \textcolor{preprocessor}{        \#endif}}
+\DoxyCodeLine{00160 }
+\DoxyCodeLine{00161         \textcolor{comment}{// Profiling}}
+\DoxyCodeLine{00162         \mbox{\hyperlink{group__firfirgcd__macros__group_ga652f3387e2319f751a6459f9db47cc3a}{HEPSY\_P}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8da6df2781bb8c650fa24d1c717bfe2170a}{fir16m\_id}})}
+\DoxyCodeLine{00163     \}}
+\DoxyCodeLine{00164 \}}
+\DoxyCodeLine{00165 }
+\DoxyCodeLine{00166 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00167 \textcolor{comment}{ ***                                  EOF                                     ***}}
+\DoxyCodeLine{00168 \textcolor{comment}{ ********************************************************************************/}}
+
+\end{DoxyCode}

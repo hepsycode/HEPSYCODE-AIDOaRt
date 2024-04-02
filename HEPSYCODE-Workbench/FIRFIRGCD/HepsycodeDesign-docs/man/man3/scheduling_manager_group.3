@@ -1,0 +1,272 @@
+.TH "scheduling_manager_group" 3 "Mon Mar 20 2023" "FirFirGCD Application" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+scheduling_manager_group \- Scheduling Manager Implementation\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSC_MODULE\fP (SchedulingManager)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBSystemManager\fP * \fBpSystemManager\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Scheduling Manager Implementation\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+V\&. Muttillo, L\&. Pomante 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+Apr\&. 2022 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "SC_MODULE (SchedulingManager)"
+
+.PP
+Definition at line 85 of file SchedulingManager\&.h\&.
+.PP
+.nf
+86 {
+87     public:
+88 
+89     // Data structure to manage scheduling and analysis
+90 
+91     state process_state[NPS]; // Status of processes: ready (waiting for PU), run, waiting (when a process is waiting to complete a communication over a channel)
+92     state channel_state[NCH]; // Status of channels: ready (1 process is arrived), run (data transfer), waiting (0 processes)
+93     state scheduler_state[NBB]; // Status of schedulers: run (scheduler is performing ContextSwitch activities), ready (waiting for token from a process), waiting (if BB suspended)
+94 
+95     unsigned int matrixCOM[NPS][NPS]; //Communication Matrix
+96 
+97     // Check READY&RUN - Potential concurrency
+98     unsigned int matrixCONC_PS_RR[NPS][NPS]; //Processes Concurrency matrix
+99     float matrixCONC_PS_RR_N[NPS][NPS]; //Normalized Processes Concurrency matrix (with respect to the number of tests)
+100     unsigned int matrixCONC_CH_RR[NCH][NCH]; //Channels Concurrency matrix
+101     float matrixCONC_CH_RR_N[NCH][NCH]; //Normalized Channels Concurrency matrix (with respect to the number of tests)
+102 
+103     void checkStatesProcessesRR(); // Check processes pairs
+104     void checkStatesChannelsRR(); // Check channels pairs
+105 
+106     // Check only RUN - Actual concurrency
+107     unsigned int matrixCONC_PS_R[NPS][NPS]; //Processes Concurrency matrix
+108     float matrixCONC_PS_R_N[NPS][NPS]; //Normalized Processes Concurrency matrix (with respect to the number of tests)
+109     unsigned int matrixCONC_CH_R[NCH][NCH]; //Channels Concurrency matrix
+110     float matrixCONC_CH_R_N[NCH][NCH]; //Normalized Channels Concurrency matrix (with respect to the number of tests)
+111 
+112     void checkStatesProcessesR(); // Check processes pairs
+113     void checkStatesChannelsR(); // Check channels pairs
+114 
+115     // Check BB (actual) concurrency
+116     unsigned int matrixCONC_BB[NBB][NBB]; //BB Concurrency matrix
+117     float matrixCONC_BB_N[NBB][NBB]; //Normalized BB Concurrency matrix (number of tests?)
+118     unsigned int vectorCONC_BB[NBB+1]; //Number of BBs concurrenty active
+119     float vectorCONC_BB_N[NBB+1]; //Normalized number of BBs concurrenty active (number of tests?)
+120 
+121     void checkStatesBB(); // Check BB pairs
+122 
+123     //Number of concurrency tests: used to normalize the concurrency matrixes
+124     unsigned int num_tests_CONC_PS_RR;
+125     unsigned int num_tests_CONC_PS_R;
+126     unsigned int num_tests_CONC_CH_RR;
+127     unsigned int num_tests_CONC_CH_R;
+128     unsigned int num_tests_CONC_BB;
+129 
+130     // Events exchanged by scheduler and processes on the base of process IDs
+131     sc_event schedule[NPS], release[NPS];
+132 
+133     // Functional Analyzer
+134     sc_event unblock;
+135     bool blocked;
+136     bool process_status_changed[NBB]; // Used to avoid the block of schedulers if some changes in the processes state happened
+137 
+138     // Items used to manage state of BB/PU
+139     mode BB_mode[NBB]; // Mode of BB (suspended, active)
+140     sc_event activate[NBB];
+141 
+142     // Data structure to keep track of scheduler timing overhead (the array is of NBB elements, the one related to SPP will not be used)
+143     sc_time sched_oh[NBB];
+144 
+145     // Data structure to keep track of scheduler energy consumption (the array is of NBB elements, the one related to SPP will not be used)
+146     double sched_en[NBB];
+147 
+148     // Data structure to keep track of the number of scheduler executions (i\&.e\&., scheduler SC_THREAD loops)
+149     unsigned int sched_loops[NBB]; // (the array is of NBB elements, the one related to SPP will not be used)
+150     // Data structure to keep track of the number of Context Switches
+151     unsigned int sched_CS[NBB]; // (the array is of NBB elements, the one related to SPP will not be used)
+152 
+153     ofstream LOG; // File to log each stat change (PSs, CHs, BBs, and schedulers)
+154 
+155     //Scheduler instances assigned to SC_THREADs, one for each possible instance of of SW-PU (see instanceTL\&.xml)
+156     void scheduler_8051_0();
+157     void scheduler_8051_1();
+158     void scheduler_leon3_2();
+159     void scheduler_leon3_3();
+160     void functional_analyzer();
+161 
+162     // Timing concurrency analysis
+163     void concurrency_sampling();
+164 
+165     //Scheduling policies that can be used by scheduler instances
+166     // pinstance: ID of BB/SW-PU
+167     // full_oh: weight for context switch time (normally 1)
+168     // part_oh: weight for activities of the scheduler that doesn't imply a context switch (normally 0\&.25)
+169 
+170     void policy_SCHED_RR(int pinstance, float full_oh, float part_oh);
+171     void policy_SCHED_FCFS(int pinstance, float full_oh, float part_oh);
+172     void policy_SCHED_FP(int pinstance, float full_oh, float part_oh);
+173 
+174     SC_CTOR(SchedulingManager)
+175     {
+176         LOG\&.open("LOG\&.csv"); // Open file (closed in the destructor)
+177 
+178         // Creation of a scheduler instance for each possible instance of of SW-PU (as listed in instanceTL\&.xml) 
+179         // The NOT needed ones (i\&.e\&., no processes alocated on them) will self-quit
+180 
+181         #if defined(_TIMING_ENERGY_)
+182 
+183             SC_THREAD(scheduler_8051_0);
+184             SC_THREAD(scheduler_8051_1);
+185             SC_THREAD(scheduler_leon3_2);
+186             SC_THREAD(scheduler_leon3_3);
+187 
+188         #else
+189 
+190             SC_THREAD(functional_analyzer);
+191 
+192         #endif
+193 
+194         #if defined(_TIMING_ENERGY_) && defined(_CONCURRENCY_)
+195 
+196             // Thread for concurrency analysis (if activated)
+197             SC_THREAD(concurrency_sampling);
+198 
+199         #endif
+200 
+201         LOG << "sep=;" << endl; // LP: ???
+202 
+203         // Init
+204 
+205         for(unsigned int j=0; j<NBB; j++)
+206         {
+207             scheduler_state[j] = undefined;
+208             if(pSystemManager->VBB[j]\&.getProcessors()[0]\&.getProcessorType() != "SPP")
+209             {
+210                 HEPSY_TRACE_SCHED_STATE(j)                                                              \
+211             }
+212 
+213             sched_oh[j]=sc_time(0, SC_MS);
+214             sched_en[j]=0;
+215             sched_loops[j]=0;
+216             sched_CS[j]=0;
+217 
+218             BB_mode[j]=off;
+219             HEPSY_TRACE_BB_STATE_THIS(j)
+220 
+221             process_status_changed[j]=false;
+222         }
+223 
+224         for (unsigned int j = 0; j<NBB+1; j++)
+225         {
+226             vectorCONC_BB[j] = 0;
+227             vectorCONC_BB_N[j] = 0;
+228         }
+229 
+230         // Init
+231         for(unsigned int j=0; j<pSystemManager->VPS\&.size(); j++)
+232         {
+233             if (pSystemManager->checkSPP(j)==true) process_state[j]=running;
+234             else if (j==0) process_state[j]=running;
+235             else if (j==1) process_state[j]=running;
+236             else process_state[j]=ready;
+237             HEPSY_TRACE_PS_STATE_THIS(j)
+238 
+239             // BB with processes are activated
+240             if (BB_mode[pSystemManager->allocationPS_BB[j]]!=active)
+241             {
+242                 BB_mode[pSystemManager->allocationPS_BB[j]]=active;             
+243                 HEPSY_TRACE_BB_STATE_THIS(j)
+244             }
+245         }
+246 
+247         for (int i=0; i<NPS; i++)
+248         {
+249             for (int j=0; j<NPS; j++)
+250             {
+251                 matrixCONC_PS_RR[i][j]=0;
+252                 matrixCONC_PS_RR_N[i][j]=0;
+253                 matrixCONC_PS_R[i][j]=0;
+254                 matrixCONC_PS_R_N[i][j]=0;
+255                 matrixCOM[i][j]=0;
+256             }
+257         }
+258 
+259         for (int i=0; i<NBB; i++)
+260         {
+261             for (int j=0; j<NBB; j++)
+262             {
+263                 matrixCONC_BB[i][j]=0;
+264             }
+265         }
+266 
+267         for (int i=0; i<NCH; i++)
+268         {
+269             channel_state[i]=waiting;
+270             HEPSY_TRACE_CH_STATE_THIS(i)
+271 
+272             for (int j=0; j<NCH; j++)
+273             {
+274                 matrixCONC_CH_RR[i][j]=0;
+275                 matrixCONC_CH_RR_N[i][j]=0;
+276                 matrixCONC_CH_R[i][j]=0;
+277                 matrixCONC_CH_R_N[i][j]=0;
+278             }
+279         }
+280 
+281         blocked = false;
+282         num_tests_CONC_PS_RR=0;
+283         num_tests_CONC_CH_RR=0;
+284         num_tests_CONC_PS_R=0;
+285         num_tests_CONC_CH_R=0;
+286         num_tests_CONC_BB=0;
+287 
+288     }  
+289 
+290     ~SchedulingManager()
+291     {
+292         LOG\&.close(); // Close file
+293     }
+294 
+295 };
+.fi
+.PP
+References active, SystemManager::allocationPS_BB, SystemManager::checkSPP(), HEPSY_TRACE_BB_STATE_THIS, HEPSY_TRACE_CH_STATE_THIS, HEPSY_TRACE_PS_STATE_THIS, HEPSY_TRACE_SCHED_STATE, NBB, NCH, NPS, off, pSystemManager, ready, running, undefined, SystemManager::VBB, SystemManager::VPS, and waiting\&.
+.SH "Variable Documentation"
+.PP 
+.SS "\fBSystemManager\fP* pSystemManager"
+
+.PP
+Definition at line 163 of file main\&.cpp\&.
+.PP
+Referenced by sc_main(), and SC_MODULE()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FirFirGCD Application from the source code\&.

@@ -1,0 +1,1073 @@
+<?xml version="1.0"?>
+<instancesPS>
+	<process>
+		<name>stimulus</name>
+		<id>0</id>
+		<priority>1</priority>
+		<criticality>0</criticality>
+		<eqGate value="0" />
+		<dataType>NA</dataType>
+		<memSize>
+			<codeSize>
+				<processorModel name="NA" id="NA" value="0" />
+				<processorModel name="NA" id="NA" value="0" />
+			</codeSize>
+			<dataSize>
+				<processorModel name="NA" id="NA" value="0" />
+				<processorModel name="NA" id="NA" value="0" />
+			</dataSize>
+		</memSize>
+		<affinity>
+			<processorType name="NA" value="0" />
+			<processorType name="NA" value="0" />
+			<processorType name="NA" value="0" />
+		</affinity>
+		<concurrency>
+			<processId id="1" value="0" />
+			<processId id="2" value="0" />
+			<processId id="3" value="0" />
+			<processId id="4" value="0" />
+			<processId id="5" value="0" />
+			<processId id="6" value="0" />
+			<processId id="7" value="0" />
+			<processId id="8" value="0" />
+			<processId id="9" value="0" />
+			<processId id="10" value="0" />
+			<processId id="11" value="0" />
+		</concurrency>
+		<comunication>
+			<rec idRec="1" value="0" />
+			<rec idRec="2" value="800" />
+			<rec idRec="3" value="0" />
+			<rec idRec="4" value="0" />
+			<rec idRec="5" value="0" />
+			<rec idRec="6" value="0" />
+			<rec idRec="7" value="0" />
+			<rec idRec="8" value="0" />
+			<rec idRec="9" value="0" />
+			<rec idRec="10" value="0" />
+			<rec idRec="11" value="0" />
+		</comunication>
+		<energy>
+			<processorId id="0" value="0" />
+		</energy>
+		<load>
+			<processorId id="0" value="0" />
+		</load>
+	</process>
+	<process>
+		<name>display</name>
+		<id>1</id>
+		<priority>1</priority>
+		<criticality>0</criticality>
+		<eqGate value="0" />
+		<dataType>NA</dataType>
+		<memSize>
+			<codeSize>
+				<processorModel name="NA" id="NA" value="0" />
+				<processorModel name="NA" id="NA" value="0" />
+			</codeSize>
+			<dataSize>
+				<processorModel name="NA" id="NA" value="0" />
+				<processorModel name="NA" id="NA" value="0" />
+			</dataSize>
+		</memSize>
+		<affinity>
+			<processorType name="NA" value="0" />
+			<processorType name="NA" value="0" />
+			<processorType name="NA" value="0" />
+		</affinity>
+		<concurrency>
+			<processId id="0" value="0" />
+			<processId id="2" value="0" />
+			<processId id="3" value="0" />
+			<processId id="4" value="0" />
+			<processId id="5" value="0" />
+			<processId id="6" value="0" />
+			<processId id="7" value="0" />
+			<processId id="8" value="0" />
+			<processId id="9" value="0" />
+			<processId id="10" value="0" />
+			<processId id="11" value="0" />
+		</concurrency>
+		<comunication>
+			<rec idRec="0" value="0" />
+			<rec idRec="2" value="0" />
+			<rec idRec="3" value="0" />
+			<rec idRec="4" value="0" />
+			<rec idRec="5" value="0" />
+			<rec idRec="6" value="0" />
+			<rec idRec="7" value="0" />
+			<rec idRec="8" value="0" />
+			<rec idRec="9" value="0" />
+			<rec idRec="10" value="0" />
+			<rec idRec="11" value="0" />
+		</comunication>
+		<energy>
+			<processorId id="0" value="0" />
+		</energy>
+		<load>
+			<processorId id="0" value="0" />
+		</load>
+	</process>
+	<process>
+		<name>sampleTimCord</name>
+		<id>2</id>
+		<priority>1</priority>
+		<criticality>0</criticality>
+		<eqGate value="50" />
+		<dataType>0</dataType>
+		<memSize>
+			<codeSize>
+				<processorModel name="MPU8051" id="0" value="740" />
+				<processorModel name="MPU8051" id="1" value="740" />
+				<processorModel name="MPULEON3" id="2" value="740" />
+				<processorModel name="MPULEON3" id="3" value="740" />
+			</codeSize>
+			<dataSize>
+				<processorModel name="MPU8051" id="0" value="60" />
+				<processorModel name="MPU8051" id="1" value="60" />
+				<processorModel name="MPULEON3" id="2" value="60" />
+				<processorModel name="MPULEON3" id="3" value="60" />
+			</dataSize>
+		</memSize>
+		<affinity>
+			<processorType name="GPP" value="0.25" />
+			<processorType name="DSP" value="0.5" />
+			<processorType name="SPP" value="1" />
+		</affinity>
+		<concurrency>
+			<processId id="0" value="0" />
+			<processId id="1" value="0" />
+			<processId id="3" value="0.0803958" />
+			<processId id="4" value="0.0764481" />
+			<processId id="5" value="0.0506491" />
+			<processId id="6" value="0.00256851" />
+			<processId id="7" value="0.068983" />
+			<processId id="8" value="0.0248501" />
+			<processId id="9" value="3.79583e-05" />
+			<processId id="10" value="3.79583e-05" />
+			<processId id="11" value="3.79583e-05" />
+		</concurrency>
+		<comunication>
+			<rec idRec="0" value="0" />
+			<rec idRec="1" value="0" />
+			<rec idRec="3" value="3200" />
+			<rec idRec="4" value="6400" />
+			<rec idRec="5" value="12800" />
+			<rec idRec="6" value="25600" />
+			<rec idRec="7" value="0" />
+			<rec idRec="8" value="0" />
+			<rec idRec="9" value="0" />
+			<rec idRec="10" value="0" />
+			<rec idRec="11" value="0" />
+		</comunication>
+		<energy>
+			<processorId id="0" value="99000" />
+			<processorId id="1" value="99000" />
+			<processorId id="3" value="29107.4" />
+			<processorId id="2" value="29107.4" />
+		</energy>
+		<load>
+			<processorId id="0" value="0.0597296" />
+			<processorId id="1" value="0.0597296" />
+			<processorId id="3" value="0.0362034" />
+			<processorId id="2" value="0.0362034" />
+		</load>
+	</process>
+	<process>
+		<name>cleanData_01</name>
+		<id>3</id>
+		<priority>1</priority>
+		<criticality>0</criticality>
+		<eqGate value="50" />
+		<dataType>0</dataType>
+		<memSize>
+			<codeSize>
+				<processorModel name="MPU8051" id="0" value="740" />
+				<processorModel name="MPU8051" id="1" value="740" />
+				<processorModel name="MPULEON3" id="2" value="740" />
+				<processorModel name="MPULEON3" id="3" value="740" />
+			</codeSize>
+			<dataSize>
+				<processorModel name="MPU8051" id="0" value="60" />
+				<processorModel name="MPU8051" id="1" value="60" />
+				<processorModel name="MPULEON3" id="2" value="60" />
+				<processorModel name="MPULEON3" id="3" value="60" />
+			</dataSize>
+		</memSize>
+		<affinity>
+			<processorType name="GPP" value="0.25" />
+			<processorType name="DSP" value="0.5" />
+			<processorType name="SPP" value="1" />
+		</affinity>
+		<concurrency>
+			<processId id="0" value="0" />
+			<processId id="1" value="0" />
+			<processId id="2" value="0" />
+			<processId id="4" value="0.0323279" />
+			<processId id="5" value="7.59167e-05" />
+			<processId id="6" value="7.59167e-05" />
+			<processId id="7" value="0.00260647" />
+			<processId id="8" value="7.59167e-05" />
+			<processId id="9" value="7.59167e-05" />
+			<processId id="10" value="7.59167e-05" />
+			<processId id="11" value="7.59167e-05" />
+		</concurrency>
+		<comunication>
+			<rec idRec="0" value="0" />
+			<rec idRec="1" value="0" />
+			<rec idRec="2" value="0" />
+			<rec idRec="4" value="0" />
+			<rec idRec="5" value="0" />
+			<rec idRec="6" value="0" />
+			<rec idRec="7" value="3400" />
+			<rec idRec="8" value="0" />
+			<rec idRec="9" value="0" />
+			<rec idRec="10" value="0" />
+			<rec idRec="11" value="0" />
+		</comunication>
+		<energy>
+			<processorId id="0" value="40076.4" />
+			<processorId id="1" value="40076.4" />
+			<processorId id="3" value="11784.4" />
+			<processorId id="2" value="11784.4" />
+		</energy>
+		<load>
+			<processorId id="0" value="0.0241802" />
+			<processorId id="1" value="0.0241802" />
+			<processorId id="3" value="0.0146561" />
+			<processorId id="2" value="0.0146561" />
+		</load>
+	</process>
+	<process>
+		<name>cleanData_02</name>
+		<id>4</id>
+		<priority>1</priority>
+		<criticality>0</criticality>
+		<eqGate value="50" />
+		<dataType>0</dataType>
+		<memSize>
+			<codeSize>
+				<processorModel name="MPU8051" id="0" value="740" />
+				<processorModel name="MPU8051" id="1" value="740" />
+				<processorModel name="MPULEON3" id="2" value="740" />
+				<processorModel name="MPULEON3" id="3" value="740" />
+			</codeSize>
+			<dataSize>
+				<processorModel name="MPU8051" id="0" value="60" />
+				<processorModel name="MPU8051" id="1" value="60" />
+				<processorModel name="MPULEON3" id="2" value="60" />
+				<processorModel name="MPULEON3" id="3" value="60" />
+			</dataSize>
+		</memSize>
+		<affinity>
+			<processorType name="GPP" value="0.25" />
+			<processorType name="DSP" value="0.5" />
+			<processorType name="SPP" value="1" />
+		</affinity>
+		<concurrency>
+			<processId id="0" value="0" />
+			<processId id="1" value="0" />
+			<processId id="2" value="0" />
+			<processId id="3" value="0" />
+			<processId id="5" value="0.0283802" />
+			<processId id="6" value="5.06111e-05" />
+			<processId id="7" value="0.0467141" />
+			<processId id="8" value="0.00258117" />
+			<processId id="9" value="5.06111e-05" />
+			<processId id="10" value="5.06111e-05" />
+			<processId id="11" value="5.06111e-05" />
+		</concurrency>
+		<comunication>
+			<rec idRec="0" value="0" />
+			<rec idRec="1" value="0" />
+			<rec idRec="2" value="0" />
+			<rec idRec="3" value="0" />
+			<rec idRec="5" value="0" />
+			<rec idRec="6" value="0" />
+			<rec idRec="7" value="0" />
+			<rec idRec="8" value="6600" />
+			<rec idRec="9" value="0" />
+			<rec idRec="10" value="0" />
+			<rec idRec="11" value="0" />
+		</comunication>
+		<energy>
+			<processorId id="0" value="38727.2" />
+			<processorId id="1" value="38727.2" />
+			<processorId id="3" value="11387.8" />
+			<processorId id="2" value="11387.8" />
+		</energy>
+		<load>
+			<processorId id="0" value="0.0233662" />
+			<processorId id="1" value="0.0233662" />
+			<processorId id="3" value="0.0141627" />
+			<processorId id="2" value="0.0141627" />
+		</load>
+	</process>
+	<process>
+		<name>cleanData_03</name>
+		<id>5</id>
+		<priority>1</priority>
+		<criticality>0</criticality>
+		<eqGate value="50" />
+		<dataType>0</dataType>
+		<memSize>
+			<codeSize>
+				<processorModel name="MPU8051" id="0" value="740" />
+				<processorModel name="MPU8051" id="1" value="740" />
+				<processorModel name="MPULEON3" id="2" value="740" />
+				<processorModel name="MPULEON3" id="3" value="740" />
+			</codeSize>
+			<dataSize>
+				<processorModel name="MPU8051" id="0" value="60" />
+				<processorModel name="MPU8051" id="1" value="60" />
+				<processorModel name="MPULEON3" id="2" value="60" />
+				<processorModel name="MPULEON3" id="3" value="60" />
+			</dataSize>
+		</memSize>
+		<affinity>
+			<processorType name="GPP" value="0.25" />
+			<processorType name="DSP" value="0.5" />
+			<processorType name="SPP" value="1" />
+		</affinity>
+		<concurrency>
+			<processId id="0" value="0" />
+			<processId id="1" value="0" />
+			<processId id="2" value="0" />
+			<processId id="3" value="0" />
+			<processId id="4" value="0" />
+			<processId id="6" value="0.0311258" />
+			<processId id="7" value="0.0792064" />
+			<processId id="8" value="0.0534074" />
+			<processId id="9" value="0.00260647" />
+			<processId id="10" value="7.59167e-05" />
+			<processId id="11" value="7.59167e-05" />
+		</concurrency>
+		<comunication>
+			<rec idRec="0" value="0" />
+			<rec idRec="1" value="0" />
+			<rec idRec="2" value="0" />
+			<rec idRec="3" value="0" />
+			<rec idRec="4" value="0" />
+			<rec idRec="6" value="0" />
+			<rec idRec="7" value="0" />
+			<rec idRec="8" value="0" />
+			<rec idRec="9" value="13000" />
+			<rec idRec="10" value="0" />
+			<rec idRec="11" value="0" />
+		</comunication>
+		<energy>
+			<processorId id="0" value="40095.3" />
+			<processorId id="1" value="40095.3" />
+			<processorId id="3" value="11790" />
+			<processorId id="2" value="11790" />
+		</energy>
+		<load>
+			<processorId id="0" value="0.0241916" />
+			<processorId id="1" value="0.0241916" />
+			<processorId id="3" value="0.014663" />
+			<processorId id="2" value="0.014663" />
+		</load>
+	</process>
+	<process>
+		<name>cleanData_04</name>
+		<id>6</id>
+		<priority>1</priority>
+		<criticality>0</criticality>
+		<eqGate value="50" />
+		<dataType>0</dataType>
+		<memSize>
+			<codeSize>
+				<processorModel name="MPU8051" id="0" value="740" />
+				<processorModel name="MPU8051" id="1" value="740" />
+				<processorModel name="MPULEON3" id="2" value="740" />
+				<processorModel name="MPULEON3" id="3" value="740" />
+			</codeSize>
+			<dataSize>
+				<processorModel name="MPU8051" id="0" value="60" />
+				<processorModel name="MPU8051" id="1" value="60" />
+				<processorModel name="MPULEON3" id="2" value="60" />
+				<processorModel name="MPULEON3" id="3" value="60" />
+			</dataSize>
+		</memSize>
+		<affinity>
+			<processorType name="GPP" value="0.25" />
+			<processorType name="DSP" value="0.5" />
+			<processorType name="SPP" value="1" />
+		</affinity>
+		<concurrency>
+			<processId id="0" value="0" />
+			<processId id="1" value="0" />
+			<processId id="2" value="0" />
+			<processId id="3" value="0" />
+			<processId id="4" value="0" />
+			<processId id="5" value="0" />
+			<processId id="7" value="0.0664398" />
+			<processId id="8" value="0.0664398" />
+			<processId id="9" value="0.0379204" />
+			<processId id="10" value="0.00260647" />
+			<processId id="11" value="7.59167e-05" />
+		</concurrency>
+		<comunication>
+			<rec idRec="0" value="0" />
+			<rec idRec="1" value="0" />
+			<rec idRec="2" value="0" />
+			<rec idRec="3" value="0" />
+			<rec idRec="4" value="0" />
+			<rec idRec="5" value="0" />
+			<rec idRec="7" value="0" />
+			<rec idRec="8" value="0" />
+			<rec idRec="9" value="0" />
+			<rec idRec="10" value="25800" />
+			<rec idRec="11" value="0" />
+		</comunication>
+		<energy>
+			<processorId id="0" value="33733.9" />
+			<processorId id="1" value="33733.9" />
+			<processorId id="3" value="9919.81" />
+			<processorId id="2" value="9919.81" />
+		</energy>
+		<load>
+			<processorId id="0" value="0.0203536" />
+			<processorId id="1" value="0.0203536" />
+			<processorId id="3" value="0.0123368" />
+			<processorId id="2" value="0.0123368" />
+		</load>
+	</process>
+	<process>
+		<name>ann_01</name>
+		<id>7</id>
+		<priority>1</priority>
+		<criticality>0</criticality>
+		<eqGate value="50" />
+		<dataType>0</dataType>
+		<memSize>
+			<codeSize>
+				<processorModel name="MPU8051" id="0" value="740" />
+				<processorModel name="MPU8051" id="1" value="740" />
+				<processorModel name="MPULEON3" id="2" value="740" />
+				<processorModel name="MPULEON3" id="3" value="740" />
+			</codeSize>
+			<dataSize>
+				<processorModel name="MPU8051" id="0" value="60" />
+				<processorModel name="MPU8051" id="1" value="60" />
+				<processorModel name="MPULEON3" id="2" value="60" />
+				<processorModel name="MPULEON3" id="3" value="60" />
+			</dataSize>
+		</memSize>
+		<affinity>
+			<processorType name="GPP" value="0.25" />
+			<processorType name="DSP" value="0.5" />
+			<processorType name="SPP" value="1" />
+		</affinity>
+		<concurrency>
+			<processId id="0" value="0" />
+			<processId id="1" value="0" />
+			<processId id="2" value="0" />
+			<processId id="3" value="0" />
+			<processId id="4" value="0" />
+			<processId id="5" value="0" />
+			<processId id="6" value="0" />
+			<processId id="8" value="0.511299" />
+			<processId id="9" value="0.460498" />
+			<processId id="10" value="0.425184" />
+			<processId id="11" value="0.00277096" />
+		</concurrency>
+		<comunication>
+			<rec idRec="0" value="0" />
+			<rec idRec="1" value="0" />
+			<rec idRec="2" value="0" />
+			<rec idRec="3" value="0" />
+			<rec idRec="4" value="0" />
+			<rec idRec="5" value="0" />
+			<rec idRec="6" value="0" />
+			<rec idRec="8" value="0" />
+			<rec idRec="9" value="0" />
+			<rec idRec="10" value="0" />
+			<rec idRec="11" value="4000" />
+		</comunication>
+		<energy>
+			<processorId id="0" value="277247" />
+			<processorId id="1" value="277247" />
+			<processorId id="3" value="81570.2" />
+			<processorId id="2" value="81570.2" />
+		</energy>
+		<load>
+			<processorId id="0" value="0.167356" />
+			<processorId id="1" value="0.167356" />
+			<processorId id="3" value="0.101438" />
+			<processorId id="2" value="0.101438" />
+		</load>
+	</process>
+	<process>
+		<name>ann_02</name>
+		<id>8</id>
+		<priority>1</priority>
+		<criticality>0</criticality>
+		<eqGate value="50" />
+		<dataType>0</dataType>
+		<memSize>
+			<codeSize>
+				<processorModel name="MPU8051" id="0" value="740" />
+				<processorModel name="MPU8051" id="1" value="740" />
+				<processorModel name="MPULEON3" id="2" value="740" />
+				<processorModel name="MPULEON3" id="3" value="740" />
+			</codeSize>
+			<dataSize>
+				<processorModel name="MPU8051" id="0" value="60" />
+				<processorModel name="MPU8051" id="1" value="60" />
+				<processorModel name="MPULEON3" id="2" value="60" />
+				<processorModel name="MPULEON3" id="3" value="60" />
+			</dataSize>
+		</memSize>
+		<affinity>
+			<processorType name="GPP" value="0.25" />
+			<processorType name="DSP" value="0.5" />
+			<processorType name="SPP" value="1" />
+		</affinity>
+		<concurrency>
+			<processId id="0" value="0" />
+			<processId id="1" value="0" />
+			<processId id="2" value="0" />
+			<processId id="3" value="0" />
+			<processId id="4" value="0" />
+			<processId id="5" value="0" />
+			<processId id="6" value="0" />
+			<processId id="7" value="0" />
+			<processId id="9" value="0.656338" />
+			<processId id="10" value="0.621024" />
+			<processId id="11" value="0.0230154" />
+		</concurrency>
+		<comunication>
+			<rec idRec="0" value="0" />
+			<rec idRec="1" value="0" />
+			<rec idRec="2" value="0" />
+			<rec idRec="3" value="0" />
+			<rec idRec="4" value="0" />
+			<rec idRec="5" value="0" />
+			<rec idRec="6" value="0" />
+			<rec idRec="7" value="0" />
+			<rec idRec="9" value="0" />
+			<rec idRec="10" value="0" />
+			<rec idRec="11" value="7000" />
+		</comunication>
+		<energy>
+			<processorId id="0" value="352934" />
+			<processorId id="1" value="352934" />
+			<processorId id="3" value="103770" />
+			<processorId id="2" value="103770" />
+		</energy>
+		<load>
+			<processorId id="0" value="0.212962" />
+			<processorId id="1" value="0.212962" />
+			<processorId id="3" value="0.129081" />
+			<processorId id="2" value="0.129081" />
+		</load>
+	</process>
+	<process>
+		<name>ann_03</name>
+		<id>9</id>
+		<priority>1</priority>
+		<criticality>0</criticality>
+		<eqGate value="50" />
+		<dataType>0</dataType>
+		<memSize>
+			<codeSize>
+				<processorModel name="MPU8051" id="0" value="740" />
+				<processorModel name="MPU8051" id="1" value="740" />
+				<processorModel name="MPULEON3" id="2" value="740" />
+				<processorModel name="MPULEON3" id="3" value="740" />
+			</codeSize>
+			<dataSize>
+				<processorModel name="MPU8051" id="0" value="60" />
+				<processorModel name="MPU8051" id="1" value="60" />
+				<processorModel name="MPULEON3" id="2" value="60" />
+				<processorModel name="MPULEON3" id="3" value="60" />
+			</dataSize>
+		</memSize>
+		<affinity>
+			<processorType name="GPP" value="0.25" />
+			<processorType name="DSP" value="0.5" />
+			<processorType name="SPP" value="1" />
+		</affinity>
+		<concurrency>
+			<processId id="0" value="0" />
+			<processId id="1" value="0" />
+			<processId id="2" value="0" />
+			<processId id="3" value="0" />
+			<processId id="4" value="0" />
+			<processId id="5" value="0" />
+			<processId id="6" value="0" />
+			<processId id="7" value="0" />
+			<processId id="8" value="0" />
+			<processId id="10" value="0.683187" />
+			<processId id="11" value="0.0421717" />
+		</concurrency>
+		<comunication>
+			<rec idRec="0" value="0" />
+			<rec idRec="1" value="0" />
+			<rec idRec="2" value="0" />
+			<rec idRec="3" value="0" />
+			<rec idRec="4" value="0" />
+			<rec idRec="5" value="0" />
+			<rec idRec="6" value="0" />
+			<rec idRec="7" value="0" />
+			<rec idRec="8" value="0" />
+			<rec idRec="10" value="0" />
+			<rec idRec="11" value="14000" />
+		</comunication>
+		<energy>
+			<processorId id="0" value="361197" />
+			<processorId id="1" value="361197" />
+			<processorId id="3" value="106194" />
+			<processorId id="2" value="106194" />
+		</energy>
+		<load>
+			<processorId id="0" value="0.217941" />
+			<processorId id="1" value="0.217941" />
+			<processorId id="3" value="0.132099" />
+			<processorId id="2" value="0.132099" />
+		</load>
+	</process>
+	<process>
+		<name>ann_04</name>
+		<id>10</id>
+		<priority>1</priority>
+		<criticality>0</criticality>
+		<eqGate value="50" />
+		<dataType>0</dataType>
+		<memSize>
+			<codeSize>
+				<processorModel name="MPU8051" id="0" value="740" />
+				<processorModel name="MPU8051" id="1" value="740" />
+				<processorModel name="MPULEON3" id="2" value="740" />
+				<processorModel name="MPULEON3" id="3" value="740" />
+			</codeSize>
+			<dataSize>
+				<processorModel name="MPU8051" id="0" value="60" />
+				<processorModel name="MPU8051" id="1" value="60" />
+				<processorModel name="MPULEON3" id="2" value="60" />
+				<processorModel name="MPULEON3" id="3" value="60" />
+			</dataSize>
+		</memSize>
+		<affinity>
+			<processorType name="GPP" value="0.25" />
+			<processorType name="DSP" value="0.5" />
+			<processorType name="SPP" value="1" />
+		</affinity>
+		<concurrency>
+			<processId id="0" value="0" />
+			<processId id="1" value="0" />
+			<processId id="2" value="0" />
+			<processId id="3" value="0" />
+			<processId id="4" value="0" />
+			<processId id="5" value="0" />
+			<processId id="6" value="0" />
+			<processId id="7" value="0" />
+			<processId id="8" value="0" />
+			<processId id="9" value="0" />
+			<processId id="11" value="0.0421717" />
+		</concurrency>
+		<comunication>
+			<rec idRec="0" value="0" />
+			<rec idRec="1" value="0" />
+			<rec idRec="2" value="0" />
+			<rec idRec="3" value="0" />
+			<rec idRec="4" value="0" />
+			<rec idRec="5" value="0" />
+			<rec idRec="6" value="0" />
+			<rec idRec="7" value="0" />
+			<rec idRec="8" value="0" />
+			<rec idRec="9" value="0" />
+			<rec idRec="11" value="30000" />
+		</comunication>
+		<energy>
+			<processorId id="0" value="342247" />
+			<processorId id="1" value="342247" />
+			<processorId id="3" value="100636" />
+			<processorId id="2" value="100636" />
+		</energy>
+		<load>
+			<processorId id="0" value="0.206522" />
+			<processorId id="1" value="0.206522" />
+			<processorId id="3" value="0.125178" />
+			<processorId id="2" value="0.125178" />
+		</load>
+	</process>
+	<process>
+		<name>dataCollector</name>
+		<id>11</id>
+		<priority>1</priority>
+		<criticality>0</criticality>
+		<eqGate value="50" />
+		<dataType>0</dataType>
+		<memSize>
+			<codeSize>
+				<processorModel name="MPU8051" id="0" value="740" />
+				<processorModel name="MPU8051" id="1" value="740" />
+				<processorModel name="MPULEON3" id="2" value="740" />
+				<processorModel name="MPULEON3" id="3" value="740" />
+			</codeSize>
+			<dataSize>
+				<processorModel name="MPU8051" id="0" value="60" />
+				<processorModel name="MPU8051" id="1" value="60" />
+				<processorModel name="MPULEON3" id="2" value="60" />
+				<processorModel name="MPULEON3" id="3" value="60" />
+			</dataSize>
+		</memSize>
+		<affinity>
+			<processorType name="GPP" value="0.25" />
+			<processorType name="DSP" value="0.5" />
+			<processorType name="SPP" value="1" />
+		</affinity>
+		<concurrency>
+			<processId id="0" value="0" />
+			<processId id="1" value="0" />
+			<processId id="2" value="0" />
+			<processId id="3" value="0" />
+			<processId id="4" value="0" />
+			<processId id="5" value="0" />
+			<processId id="6" value="0" />
+			<processId id="7" value="0" />
+			<processId id="8" value="0" />
+			<processId id="9" value="0" />
+			<processId id="10" value="0" />
+		</concurrency>
+		<comunication>
+			<rec idRec="0" value="0" />
+			<rec idRec="1" value="800" />
+			<rec idRec="2" value="0" />
+			<rec idRec="3" value="0" />
+			<rec idRec="4" value="0" />
+			<rec idRec="5" value="0" />
+			<rec idRec="6" value="0" />
+			<rec idRec="7" value="0" />
+			<rec idRec="8" value="0" />
+			<rec idRec="9" value="0" />
+			<rec idRec="10" value="0" />
+		</comunication>
+		<energy>
+			<processorId id="0" value="47389.8" />
+			<processorId id="1" value="47389.8" />
+			<processorId id="3" value="13934.5" />
+			<processorId id="2" value="13934.5" />
+		</energy>
+		<load>
+			<processorId id="0" value="0.0285925" />
+			<processorId id="1" value="0.0285925" />
+			<processorId id="3" value="0.0173305" />
+			<processorId id="2" value="0.0173305" />
+		</load>
+	</process>
+</instancesPS>
+<instancesLL>
+	<logical_link>
+		<name>stimulus_system_channel</name>
+		<id>0</id>
+		<w_id>0</w_id>
+		<r_id>2</r_id>
+		<width>8</width>
+		<concurrency>
+			<channelId id="1" value="0.801313" />
+			<channelId id="2" value="0.801275" />
+			<channelId id="3" value="0.801301" />
+			<channelId id="4" value="0.772756" />
+			<channelId id="5" value="0.737442" />
+			<channelId id="6" value="0.314864" />
+			<channelId id="7" value="0.119025" />
+			<channelId id="8" value="0.0776501" />
+			<channelId id="9" value="0.0916568" />
+			<channelId id="10" value="0.64185" />
+			<channelId id="11" value="0.0200926" />
+			<channelId id="12" value="0.0470051" />
+			<channelId id="13" value="0.0252423" />
+		</concurrency>
+	</logical_link>
+	<logical_link>
+		<name>system_display_channel</name>
+		<id>1</id>
+		<w_id>11</w_id>
+		<r_id>1</r_id>
+		<width>8</width>
+		<concurrency>
+			<channelId id="0" value="0" />
+			<channelId id="2" value="0.919566" />
+			<channelId id="3" value="0.923539" />
+			<channelId id="4" value="0.920794" />
+			<channelId id="5" value="0.93356" />
+			<channelId id="6" value="0.444568" />
+			<channelId id="7" value="0.292861" />
+			<channelId id="8" value="0.276299" />
+			<channelId id="9" value="0.290305" />
+			<channelId id="10" value="0.840499" />
+			<channelId id="11" value="0.0200926" />
+			<channelId id="12" value="0.0470051" />
+			<channelId id="13" value="0.0252423" />
+		</concurrency>
+	</logical_link>
+	<logical_link>
+		<name>sampleTimCord_cleanData_01_channel</name>
+		<id>2</id>
+		<w_id>2</w_id>
+		<r_id>3</r_id>
+		<width>32</width>
+		<concurrency>
+			<channelId id="0" value="0" />
+			<channelId id="1" value="0" />
+			<channelId id="3" value="0.875433" />
+			<channelId id="4" value="0.840436" />
+			<channelId id="5" value="0.853202" />
+			<channelId id="6" value="0.366741" />
+			<channelId id="7" value="0.212503" />
+			<channelId id="8" value="0.195941" />
+			<channelId id="9" value="0.209948" />
+			<channelId id="10" value="0.760141" />
+			<channelId id="11" value="0.0200926" />
+			<channelId id="12" value="0.0470051" />
+			<channelId id="13" value="0.0252423" />
+		</concurrency>
+	</logical_link>
+	<logical_link>
+		<name>sampleTimCord_cleanData_02_channel</name>
+		<id>3</id>
+		<w_id>2</w_id>
+		<r_id>4</r_id>
+		<width>64</width>
+		<concurrency>
+			<channelId id="0" value="0" />
+			<channelId id="1" value="0" />
+			<channelId id="2" value="0" />
+			<channelId id="4" value="0.872713" />
+			<channelId id="5" value="0.85715" />
+			<channelId id="6" value="0.414821" />
+			<channelId id="7" value="0.218982" />
+			<channelId id="8" value="0.199889" />
+			<channelId id="9" value="0.213895" />
+			<channelId id="10" value="0.764089" />
+			<channelId id="11" value="0.0200926" />
+			<channelId id="12" value="0.0470051" />
+			<channelId id="13" value="0.0252423" />
+		</concurrency>
+	</logical_link>
+	<logical_link>
+		<name>sampleTimCord_cleanData_03_channel</name>
+		<id>4</id>
+		<w_id>2</w_id>
+		<r_id>5</r_id>
+		<width>128</width>
+		<concurrency>
+			<channelId id="0" value="0" />
+			<channelId id="1" value="0" />
+			<channelId id="2" value="0" />
+			<channelId id="3" value="0" />
+			<channelId id="5" value="0.88548" />
+			<channelId id="6" value="0.444568" />
+			<channelId id="7" value="0.267062" />
+			<channelId id="8" value="0.199699" />
+			<channelId id="9" value="0.211175" />
+			<channelId id="10" value="0.761369" />
+			<channelId id="11" value="0.0200926" />
+			<channelId id="12" value="0.0470051" />
+			<channelId id="13" value="0.0252423" />
+		</concurrency>
+	</logical_link>
+	<logical_link>
+		<name>sampleTimCord_cleanData_04_channel</name>
+		<id>5</id>
+		<w_id>2</w_id>
+		<r_id>6</r_id>
+		<width>256</width>
+		<concurrency>
+			<channelId id="0" value="0" />
+			<channelId id="1" value="0" />
+			<channelId id="2" value="0" />
+			<channelId id="3" value="0" />
+			<channelId id="4" value="0" />
+			<channelId id="6" value="0.444568" />
+			<channelId id="7" value="0.292861" />
+			<channelId id="8" value="0.247779" />
+			<channelId id="9" value="0.226472" />
+			<channelId id="10" value="0.774135" />
+			<channelId id="11" value="0.0200926" />
+			<channelId id="12" value="0.0470051" />
+			<channelId id="13" value="0.0252423" />
+		</concurrency>
+	</logical_link>
+	<logical_link>
+		<name>cleanData_01_ann_01_channel</name>
+		<id>6</id>
+		<w_id>3</w_id>
+		<r_id>7</r_id>
+		<width>34</width>
+		<concurrency>
+			<channelId id="0" value="0" />
+			<channelId id="1" value="0" />
+			<channelId id="2" value="0" />
+			<channelId id="3" value="0" />
+			<channelId id="4" value="0" />
+			<channelId id="5" value="0" />
+			<channelId id="7" value="0.248728" />
+			<channelId id="8" value="0.181365" />
+			<channelId id="9" value="0.160058" />
+			<channelId id="10" value="0.287838" />
+			<channelId id="11" value="0.0200926" />
+			<channelId id="12" value="0.0470051" />
+			<channelId id="13" value="0.0252423" />
+		</concurrency>
+	</logical_link>
+	<logical_link>
+		<name>cleanData_02_ann_02_channel</name>
+		<id>7</id>
+		<w_id>4</w_id>
+		<r_id>8</r_id>
+		<width>66</width>
+		<concurrency>
+			<channelId id="0" value="0" />
+			<channelId id="1" value="0" />
+			<channelId id="2" value="0" />
+			<channelId id="3" value="0" />
+			<channelId id="4" value="0" />
+			<channelId id="5" value="0" />
+			<channelId id="6" value="0" />
+			<channelId id="8" value="0.225498" />
+			<channelId id="9" value="0.204191" />
+			<channelId id="10" value="0.176468" />
+			<channelId id="11" value="0" />
+			<channelId id="12" value="0.0470051" />
+			<channelId id="13" value="0.0252423" />
+		</concurrency>
+	</logical_link>
+	<logical_link>
+		<name>cleanData_03_ann_03_channel</name>
+		<id>8</id>
+		<w_id>5</w_id>
+		<r_id>9</r_id>
+		<width>130</width>
+		<concurrency>
+			<channelId id="0" value="0" />
+			<channelId id="1" value="0" />
+			<channelId id="2" value="0" />
+			<channelId id="3" value="0" />
+			<channelId id="4" value="0" />
+			<channelId id="5" value="0" />
+			<channelId id="6" value="0" />
+			<channelId id="7" value="0" />
+			<channelId id="9" value="0.254966" />
+			<channelId id="10" value="0.227155" />
+			<channelId id="11" value="0" />
+			<channelId id="12" value="0" />
+			<channelId id="13" value="0.0200673" />
+		</concurrency>
+	</logical_link>
+	<logical_link>
+		<name>cleanData_04_ann_04_channel</name>
+		<id>9</id>
+		<w_id>6</w_id>
+		<r_id>10</r_id>
+		<width>258</width>
+		<concurrency>
+			<channelId id="0" value="0" />
+			<channelId id="1" value="0" />
+			<channelId id="2" value="0" />
+			<channelId id="3" value="0" />
+			<channelId id="4" value="0" />
+			<channelId id="5" value="0" />
+			<channelId id="6" value="0" />
+			<channelId id="7" value="0" />
+			<channelId id="8" value="0" />
+			<channelId id="10" value="0.262495" />
+			<channelId id="11" value="0" />
+			<channelId id="12" value="0" />
+			<channelId id="13" value="0" />
+		</concurrency>
+	</logical_link>
+	<logical_link>
+		<name>ann_01_dataCollector_channel</name>
+		<id>10</id>
+		<w_id>7</w_id>
+		<r_id>11</r_id>
+		<width>40</width>
+		<concurrency>
+			<channelId id="0" value="0" />
+			<channelId id="1" value="0" />
+			<channelId id="2" value="0" />
+			<channelId id="3" value="0" />
+			<channelId id="4" value="0" />
+			<channelId id="5" value="0" />
+			<channelId id="6" value="0" />
+			<channelId id="7" value="0" />
+			<channelId id="8" value="0" />
+			<channelId id="9" value="0" />
+			<channelId id="11" value="0" />
+			<channelId id="12" value="0" />
+			<channelId id="13" value="0" />
+		</concurrency>
+	</logical_link>
+	<logical_link>
+		<name>ann_02_dataCollector_channel</name>
+		<id>11</id>
+		<w_id>8</w_id>
+		<r_id>11</r_id>
+		<width>70</width>
+		<concurrency>
+			<channelId id="0" value="0" />
+			<channelId id="1" value="0" />
+			<channelId id="2" value="0" />
+			<channelId id="3" value="0" />
+			<channelId id="4" value="0" />
+			<channelId id="5" value="0" />
+			<channelId id="6" value="0" />
+			<channelId id="7" value="0" />
+			<channelId id="8" value="0" />
+			<channelId id="9" value="0" />
+			<channelId id="10" value="0" />
+			<channelId id="12" value="0" />
+			<channelId id="13" value="0" />
+		</concurrency>
+	</logical_link>
+	<logical_link>
+		<name>ann_03_dataCollector_channel</name>
+		<id>12</id>
+		<w_id>9</w_id>
+		<r_id>11</r_id>
+		<width>140</width>
+		<concurrency>
+			<channelId id="0" value="0" />
+			<channelId id="1" value="0" />
+			<channelId id="2" value="0" />
+			<channelId id="3" value="0" />
+			<channelId id="4" value="0" />
+			<channelId id="5" value="0" />
+			<channelId id="6" value="0" />
+			<channelId id="7" value="0" />
+			<channelId id="8" value="0" />
+			<channelId id="9" value="0" />
+			<channelId id="10" value="0" />
+			<channelId id="11" value="0" />
+			<channelId id="13" value="0.00282157" />
+		</concurrency>
+	</logical_link>
+	<logical_link>
+		<name>ann_04_dataCollector_channel</name>
+		<id>13</id>
+		<w_id>10</w_id>
+		<r_id>11</r_id>
+		<width>300</width>
+		<concurrency>
+			<channelId id="0" value="0" />
+			<channelId id="1" value="0" />
+			<channelId id="2" value="0" />
+			<channelId id="3" value="0" />
+			<channelId id="4" value="0" />
+			<channelId id="5" value="0" />
+			<channelId id="6" value="0" />
+			<channelId id="7" value="0" />
+			<channelId id="8" value="0" />
+			<channelId id="9" value="0" />
+			<channelId id="10" value="0" />
+			<channelId id="11" value="0" />
+			<channelId id="12" value="0" />
+		</concurrency>
+	</logical_link>
+</instancesLL>

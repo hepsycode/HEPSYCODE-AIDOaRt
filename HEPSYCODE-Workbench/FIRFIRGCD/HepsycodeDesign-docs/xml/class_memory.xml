@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_memory" kind="class" language="C++" prot="public">
+    <compoundname>Memory</compoundname>
+    <includes refid="tl_8h" local="no">tl.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_memory_1ab9700fb68b6db81bed6115794f9d0c22" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Memory::codeSize</definition>
+        <argsstring></argsstring>
+        <name>codeSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="147" column="14" bodyfile="HepsycodeDesign/src/tl.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_memory_1a46b899813a58e32a87d04599d63ca163" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Memory::dataSize</definition>
+        <argsstring></argsstring>
+        <name>dataSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="148" column="14" bodyfile="HepsycodeDesign/src/tl.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_memory_1a9f8f1bf0bd47994bf6e2d64ddcdf9302" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Memory::Memory</definition>
+        <argsstring>(unsigned int code, unsigned int data)</argsstring>
+        <name>Memory</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>code</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="152" column="1" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="448" bodyend="451"/>
+      </memberdef>
+      <memberdef kind="function" id="class_memory_1a6c9d8edd683dbae1f59f0a9aa3ef2424" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Memory::getCodeSize</definition>
+        <argsstring>()</argsstring>
+        <name>getCodeSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="154" column="14" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="454" bodyend="456"/>
+      </memberdef>
+      <memberdef kind="function" id="class_memory_1a1f00ca41f42ada4525f9bae30e1bced4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Memory::setCodeSize</definition>
+        <argsstring>(unsigned int c)</argsstring>
+        <name>setCodeSize</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="155" column="6" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="458" bodyend="460"/>
+      </memberdef>
+      <memberdef kind="function" id="class_memory_1ab361eff2cef17729f170bb94e431efbb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Memory::getDataSize</definition>
+        <argsstring>()</argsstring>
+        <name>getDataSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="157" column="14" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="462" bodyend="464"/>
+      </memberdef>
+      <memberdef kind="function" id="class_memory_1a50da769112b9a636b5fd0b8194bbb1cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Memory::setDataSize</definition>
+        <argsstring>(unsigned int c)</argsstring>
+        <name>setDataSize</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="158" column="6" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="466" bodyend="468"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>int</label>
+      </node>
+      <node id="1">
+        <label>Memory</label>
+        <link refid="class_memory"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-dataSize</edgelabel>
+          <edgelabel>-codeSize</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HepsycodeDesign/src/tl.h" line="145" column="1" bodyfile="HepsycodeDesign/src/tl.h" bodystart="144" bodyend="159"/>
+    <listofallmembers>
+      <member refid="class_memory_1ab9700fb68b6db81bed6115794f9d0c22" prot="private" virt="non-virtual"><scope>Memory</scope><name>codeSize</name></member>
+      <member refid="class_memory_1a46b899813a58e32a87d04599d63ca163" prot="private" virt="non-virtual"><scope>Memory</scope><name>dataSize</name></member>
+      <member refid="class_memory_1a6c9d8edd683dbae1f59f0a9aa3ef2424" prot="public" virt="non-virtual"><scope>Memory</scope><name>getCodeSize</name></member>
+      <member refid="class_memory_1ab361eff2cef17729f170bb94e431efbb" prot="public" virt="non-virtual"><scope>Memory</scope><name>getDataSize</name></member>
+      <member refid="class_memory_1a9f8f1bf0bd47994bf6e2d64ddcdf9302" prot="public" virt="non-virtual"><scope>Memory</scope><name>Memory</name></member>
+      <member refid="class_memory_1a1f00ca41f42ada4525f9bae30e1bced4" prot="public" virt="non-virtual"><scope>Memory</scope><name>setCodeSize</name></member>
+      <member refid="class_memory_1a50da769112b9a636b5fd0b8194bbb1cc" prot="public" virt="non-virtual"><scope>Memory</scope><name>setDataSize</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

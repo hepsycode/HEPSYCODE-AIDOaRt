@@ -1,0 +1,472 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group__firfirgcd__csp__channel__group">
+<title>FirFirGCD CSP Channel.</title>
+<indexterm><primary>FirFirGCD CSP Channel.</primary></indexterm>
+<para>
+
+<para>CSP <link linkend="_class_channel">Channel</link> Implementation. </para>
+ 
+</para>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classsc__csp__channel">sc_csp_channel&lt; T &gt;</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_group__firfirgcd__csp__channel__group_1ga5bbbddcd88383d3ed9ee425ad87ee58c">sc_csp_channel&lt; T &gt;::register_port</link> (sc_port_base &amp;, const char *)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_group__firfirgcd__csp__channel__group_1ga23046a4820dcf9ef26a75eba9cb7d49b">sc_csp_channel&lt; T &gt;::read</link> (T &amp;)</para>
+</listitem>
+            <listitem><para>virtual T <link linkend="_group__firfirgcd__csp__channel__group_1gaf3eb60ce6aecbe88c0e72fdb19a1f7af">sc_csp_channel&lt; T &gt;::read</link> ()</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_group__firfirgcd__csp__channel__group_1gaf8a9ace576ff2e0462c8db276f9f388d">sc_csp_channel&lt; T &gt;::write</link> (const T &amp;)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group__firfirgcd__csp__channel__group_1ga216706630fbd1f222b428cc4e6aa523d">sc_csp_channel&lt; T &gt;::trace</link> (sc_trace_file *tf) const</para>
+</listitem>
+            <listitem><para>void <link linkend="_group__firfirgcd__csp__channel__group_1ga8be7bf7ee4f0c35e684b3de9a5163705">sc_csp_channel&lt; T &gt;::init</link> ()</para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_group__firfirgcd__csp__channel__group_1gab1a08e5d4129f9647e573af0c4ca4f30">sc_csp_channel&lt; T &gt;::read_test</link> ()</para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_group__firfirgcd__csp__channel__group_1ga3566fb8ed3dc3ba7ab7d6dbe17787153">sc_csp_channel&lt; T &gt;::write_test</link> ()</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_group__firfirgcd__csp__channel__group_1gaaed132e73280fe2a46b14604240832bc">sc_csp_channel&lt; T &gt;::register_alt</link> ()</para>
+</listitem>
+            <listitem><para>virtual const sc_event &amp; <link linkend="_group__firfirgcd__csp__channel__group_1ga40cb801a3a15df214563c89160c6d19c">sc_csp_channel&lt; T &gt;::get_alt_event</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_system_manager">SystemManager</link> * <link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link></para>
+</listitem>
+            <listitem><para>SchedulingManager * <link linkend="_group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>CSP <link linkend="_class_channel">Channel</link> Implementation. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>V. Muttillo, L. Pomante </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>Apr. 2022 </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_group__firfirgcd__csp__channel__group_1ga40cb801a3a15df214563c89160c6d19c"/>    <section>
+    <title>get_alt_event()</title>
+<indexterm><primary>get_alt_event</primary><secondary>FirFirGCD CSP Channel.</secondary></indexterm>
+<indexterm><primary>FirFirGCD CSP Channel.</primary><secondary>get_alt_event</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>const sc_event &amp; <link linkend="_classsc__csp__channel">sc_csp_channel</link>&lt; T &gt;::get_alt_event<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_classsc__core_1_1sc__csp__channel__in__if_1acf52a1d31829961428e7205a835f8973">sc_core::sc_csp_channel_in_if&lt; T &gt;</link>.</para>
+<para>
+Definition at line 540 of file sc_csp_channel.h.</para>
+<programlisting>541 {
+542 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_classsc__csp__channel_1acf1aadf77836e165d8b7672500bd2dc7">ready_alt_event</link>;
+543 }
+</programlisting>    </section><anchor xml:id="_group__firfirgcd__csp__channel__group_1ga8be7bf7ee4f0c35e684b3de9a5163705"/>    <section>
+    <title>init()</title>
+<indexterm><primary>init</primary><secondary>FirFirGCD CSP Channel.</secondary></indexterm>
+<indexterm><primary>FirFirGCD CSP Channel.</primary><secondary>init</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>void <link linkend="_classsc__csp__channel">sc_csp_channel</link>&lt; T &gt;::init<computeroutput>[inline]</computeroutput>, <computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line 442 of file sc_csp_channel.h.</para>
+<programlisting>443 {
+444 &#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1a03a5aa44e377fea90b93e68e481ad1e1">m_reader</link>&#32;=&#32;0;
+445 &#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1ad4a06e1cfab0e87829b914b4230d2acb">m_writer</link>&#32;=&#32;0;
+446 
+447 &#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1a36b454aeb9b50a4094f31801a6976b0f">num</link>=0;
+448 &#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1ae716d02584a29463adb04def170fce8e">ready_to_read</link>=<emphasis role="keyword">false</emphasis>;
+449 &#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1ab7c20a9236f789c6e64d8c83ae19967f">ready_to_write</link>=<emphasis role="keyword">false</emphasis>;
+450 &#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1aaeef06ac96bbb3468f9aa907c5b39253">enable_alt_events</link>&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+451 
+452 &#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1ab0977c6aab0732a7946a73aa4b2e6de8">working_time</link>&#32;=&#32;sc_time(0,&#32;SC_MS);
+453 &#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1a97c55d92a3c04d41300ffdb208eabc92">working_energy</link>=0;
+454 
+455 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;verify&#32;if&#32;the&#32;processes&#32;are&#32;allocated&#32;on&#32;the&#32;same&#32;BB&#32;(then&#32;IPC=false)</emphasis>
+456 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;((<link linkend="_classsc__csp__channel_1a5bef0234cd8c0762891d104dd4e7b68a">w_id</link>==<link linkend="_group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8da6a6acb823daa9d2547901e1e253f1a92">stimulus_id</link>)&#32;||&#32;(<link linkend="_classsc__csp__channel_1a5bef0234cd8c0762891d104dd4e7b68a">w_id</link>==<link linkend="_group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8dab8bd51b016c7432eb1d0071f9677defe">display_id</link>)&#32;||&#32;(<link linkend="_classsc__csp__channel_1ae16790111d142e48baf4563eb5e44069">r_id</link>==<link linkend="_group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8da6a6acb823daa9d2547901e1e253f1a92">stimulus_id</link>)&#32;||&#32;(<link linkend="_classsc__csp__channel_1ae16790111d142e48baf4563eb5e44069">r_id</link>==<link linkend="_group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8dab8bd51b016c7432eb1d0071f9677defe">display_id</link>))
+457 &#32;&#32;&#32;&#32;{
+458 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Communications&#32;toward&#32;testbench&#32;are&#32;always&#32;considered</emphasis>
+459 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1a6508172b749b9dadf1824f5e816a32ed">IPC</link>&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+460 &#32;&#32;&#32;&#32;}
+461 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32">VBB</link>[<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[<link linkend="_classsc__csp__channel_1a5bef0234cd8c0762891d104dd4e7b68a">w_id</link>]].getProcessors()[0].getName()&#32;!=
+462 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32">VBB</link>[<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[<link linkend="_classsc__csp__channel_1ae16790111d142e48baf4563eb5e44069">r_id</link>]].getProcessors()[0].getName())
+463 &#32;&#32;&#32;&#32;{
+464 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Different&#32;BB&#32;names</emphasis>
+465 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1a6508172b749b9dadf1824f5e816a32ed">IPC</link>&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+466 &#32;&#32;&#32;&#32;}
+467 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32">VBB</link>[<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[<link linkend="_classsc__csp__channel_1a5bef0234cd8c0762891d104dd4e7b68a">w_id</link>]].getId()&#32;!=
+468 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32">VBB</link>[<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[<link linkend="_classsc__csp__channel_1ae16790111d142e48baf4563eb5e44069">r_id</link>]].getId())
+469 &#32;&#32;&#32;&#32;{
+470 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Different&#32;BB&#32;instances</emphasis>
+471 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1a6508172b749b9dadf1824f5e816a32ed">IPC</link>&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+472 &#32;&#32;&#32;&#32;}
+473 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<link linkend="_classsc__csp__channel_1a6508172b749b9dadf1824f5e816a32ed">IPC</link>=<emphasis role="keyword">false</emphasis>;
+474 
+475 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_classsc__csp__channel_1a6508172b749b9dadf1824f5e816a32ed">IPC</link>==<emphasis role="keyword">true</emphasis>)
+476 &#32;&#32;&#32;&#32;{
+477 
+478 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;compute&#32;the&#32;time&#32;needed&#32;for&#32;the&#32;communication</emphasis>
+479 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1a5cd83229e038e07f237512df3df4adf9">waiting_time</link>&#32;=&#32;(ceil((<emphasis role="keywordtype">float</emphasis>)<link linkend="_classsc__csp__channel_1affca8dbc03ca31ac85f54766040aba41">width</link>/<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1af28a1744a2d964a7047c31c6a5f1644a">VPL</link>[<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1ab75b55327c942c6950f67c14ba9dea08">allocationCH_PL</link>[<emphasis role="keywordtype">id</emphasis>]].getPhysicalWidth())*<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1af28a1744a2d964a7047c31c6a5f1644a">VPL</link>[<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1ab75b55327c942c6950f67c14ba9dea08">allocationCH_PL</link>[<link linkend="_classsc__csp__channel_1aed1aa9cb465c4a9c7751169994408c72">id</link>]].getTcomm()+<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1af28a1744a2d964a7047c31c6a5f1644a">VPL</link>[<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1ab75b55327c942c6950f67c14ba9dea08">allocationCH_PL</link>[<link linkend="_classsc__csp__channel_1aed1aa9cb465c4a9c7751169994408c72">id</link>]].getTAcomm());
+480 
+481 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;LP:&#32;non&#32;mi&#32;torna&#32;la&#32;trasmissione&#32;seriale&#32;di&#32;pi�&#32;bit&#32;dato&#32;che&#32;ne&#32;consideriamo&#32;sempre&#32;solo&#32;uno&#32;alla&#32;volta&#32;(check&#32;tesi&#32;Marinella)</emphasis>
+482 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;compute&#32;the&#32;energy&#32;needed&#32;for&#32;the&#32;communication&#32;</emphasis>
+483 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;energy&#32;for&#32;x&#32;bit&#32;is:&#32;a2&#32;*&#32;x^2&#32;+&#32;a1&#32;*&#32;x</emphasis>
+484 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;en_bit&#32;=&#32;energy&#32;for&#32;1&#32;bit&#32;=&#32;a2&#32;+&#32;a1</emphasis>
+485 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;en_bit&#32;=&#32;&#32;<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1af28a1744a2d964a7047c31c6a5f1644a">VPL</link>[<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1ab75b55327c942c6950f67c14ba9dea08">allocationCH_PL</link>[<link linkend="_classsc__csp__channel_1aed1aa9cb465c4a9c7751169994408c72">id</link>]].geta2()&#32;+&#32;<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1af28a1744a2d964a7047c31c6a5f1644a">VPL</link>[<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1ab75b55327c942c6950f67c14ba9dea08">allocationCH_PL</link>[<link linkend="_classsc__csp__channel_1aed1aa9cb465c4a9c7751169994408c72">id</link>]].geta1();
+486 
+487 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;energy&#32;for&#32;1&#32;transmission&#32;is:&#32;en_bit&#32;*&#32;PhysicalWidth</emphasis>
+488 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;en_trans&#32;=&#32;en_bit&#32;*&#32;<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1af28a1744a2d964a7047c31c6a5f1644a">VPL</link>[<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1ab75b55327c942c6950f67c14ba9dea08">allocationCH_PL</link>[<link linkend="_classsc__csp__channel_1aed1aa9cb465c4a9c7751169994408c72">id</link>]].getPhysicalWidth();
+489 
+490 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;energy&#32;for&#32;communication&#32;is:&#32;energy&#32;for&#32;1&#32;transmission&#32;*&#32;#transmissions</emphasis>
+491 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1a58737a4adf049b01ddce1acbbb7c5115">partial_energy</link>&#32;=&#32;ceil((<emphasis role="keywordtype">float</emphasis>)<link linkend="_classsc__csp__channel_1affca8dbc03ca31ac85f54766040aba41">width</link>/<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1af28a1744a2d964a7047c31c6a5f1644a">VPL</link>[<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1ab75b55327c942c6950f67c14ba9dea08">allocationCH_PL</link>[<emphasis role="keywordtype">id</emphasis>]].getPhysicalWidth())&#32;*&#32;en_trans;
+492 
+493 &#32;&#32;&#32;&#32;}
+494 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+495 &#32;&#32;&#32;&#32;{
+496 
+497 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Zero&#32;for&#32;processes&#32;on&#32;the&#32;same&#32;BB/PU</emphasis>
+498 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1a5cd83229e038e07f237512df3df4adf9">waiting_time</link>&#32;=&#32;sc_time(0,&#32;SC_MS);
+499 
+500 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Zero&#32;for&#32;processes&#32;on&#32;the&#32;same&#32;BB/PU</emphasis>
+501 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1a58737a4adf049b01ddce1acbbb7c5115">partial_energy</link>&#32;=&#32;0;
+502 
+503 &#32;&#32;&#32;&#32;}
+504 
+505 }
+</programlisting><para>
+References SystemManager::allocationCH_PL, SystemManager::allocationPS_BB, display_id, pSystemManager, stimulus_id, SystemManager::VBB, and SystemManager::VPL.</para>
+    </section><anchor xml:id="_group__firfirgcd__csp__channel__group_1gaf3eb60ce6aecbe88c0e72fdb19a1f7af"/>    <section>
+    <title>read()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>read</primary><secondary>FirFirGCD CSP Channel.</secondary></indexterm>
+<indexterm><primary>FirFirGCD CSP Channel.</primary><secondary>read</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>T <link linkend="_classsc__csp__channel">sc_csp_channel</link>&lt; T &gt;::read<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_classsc__core_1_1sc__csp__channel__in__if_1a5e8076fced231d716900901e5d60f080">sc_core::sc_csp_channel_in_if&lt; T &gt;</link>.</para>
+<para>
+Definition at line 310 of file sc_csp_channel.h.</para>
+<programlisting>311 {
+312 &#32;&#32;&#32;&#32;T&#32;tmp;
+313 &#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__csp__channel__group_1gaf3eb60ce6aecbe88c0e72fdb19a1f7af">read</link>(&#32;tmp&#32;);
+314 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;tmp;
+315 }
+</programlisting>    </section><anchor xml:id="_group__firfirgcd__csp__channel__group_1ga23046a4820dcf9ef26a75eba9cb7d49b"/>    <section>
+    <title>read()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>read</primary><secondary>FirFirGCD CSP Channel.</secondary></indexterm>
+<indexterm><primary>FirFirGCD CSP Channel.</primary><secondary>read</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>void <link linkend="_classsc__csp__channel">sc_csp_channel</link>&lt; T &gt;::read (T &amp; val_)<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_classsc__core_1_1sc__csp__channel__in__if_1a2649054eea07eb61937ea38891162e85">sc_core::sc_csp_channel_in_if&lt; T &gt;</link>.</para>
+<para>
+Definition at line 232 of file sc_csp_channel.h.</para>
+<programlisting>233 {
+234 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;Update&#32;process&#32;status&#32;(also&#32;testbench&#32;processes)</emphasis>
+235 &#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;process_state[<link linkend="_classsc__csp__channel_1ae16790111d142e48baf4563eb5e44069">r_id</link>]=<link linkend="_group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a4c97ffbad296d4a6b84b1c508fc5d32a">waiting</link>;
+236 &#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__macros__group_1gaf1fe2324408cd29c1e2dcd55f2e4a9c1">HEPSY_TRACE_PS_STATE</link>(<link linkend="_classsc__csp__channel_1ae16790111d142e48baf4563eb5e44069">r_id</link>)
+237 
+238 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Update&#32;channel&#32;status&#32;(if&#32;needed)</emphasis>
+239 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;channel_state[<emphasis role="keywordtype">id</emphasis>]==<link linkend="_group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a4c97ffbad296d4a6b84b1c508fc5d32a">waiting</link>)
+240 &#32;&#32;&#32;&#32;{
+241 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;channel_state[<link linkend="_classsc__csp__channel_1aed1aa9cb465c4a9c7751169994408c72">id</link>]=<link linkend="_group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473">ready</link>;
+242 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__macros__group_1ga139185aa9c10392aada97618a69ee2cd">HEPSY_TRACE_CH_STATE</link>(<emphasis role="keywordtype">id</emphasis>)
+243 &#32;&#32;&#32;&#32;}
+244 
+245 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Update&#32;BB&#32;mode&#32;(only&#32;for&#32;SPP,&#32;the&#32;others&#32;PUs&#32;are&#32;managed&#32;in&#32;the&#32;schedulers)</emphasis>
+246 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1a21d2bb74e4472f99ec04243168e7964e">checkSPP</link>(<link linkend="_classsc__csp__channel_1ae16790111d142e48baf4563eb5e44069">r_id</link>)==<emphasis role="keyword">true</emphasis>)
+247 &#32;&#32;&#32;&#32;{
+248 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;BB_mode[<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[<link linkend="_classsc__csp__channel_1ae16790111d142e48baf4563eb5e44069">r_id</link>]]=<link linkend="_group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a66e84e235b9e03b6fdfc7ffe7e775de8">suspended</link>;
+249 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__macros__group_1ga0f83efd33ffbe62c58c798abb824fa94">HEPSY_TRACE_BB_STATE</link>(<link linkend="_classsc__csp__channel_1ae16790111d142e48baf4563eb5e44069">r_id</link>)
+250 &#32;&#32;&#32;&#32;}
+251 
+252 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(<link linkend="_classsc__csp__channel_1ab7c20a9236f789c6e64d8c83ae19967f">ready_to_write</link>==<emphasis role="keyword">true</emphasis>)
+253 &#32;&#32;&#32;&#32;{
+254 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1ae716d02584a29463adb04def170fce8e">ready_to_read</link>=<emphasis role="keyword">true</emphasis>;
+255 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1a014541bbd872463dd525b35e951ee9ba">ready_to_read_event</link>.notify(SC_ZERO_TIME);
+256 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sc_core::wait(<link linkend="_classsc__csp__channel_1aab17ea7d52d31f39e68eb4472cb27a4a">ready_to_write_event</link>);
+257 
+258 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;val_=<link linkend="_classsc__csp__channel_1aa4ab2439d490053e231a59dd9b77e6d6">csp_buf</link>;
+259 
+260 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1ae716d02584a29463adb04def170fce8e">ready_to_read</link>=<emphasis role="keyword">false</emphasis>;
+261 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1a014541bbd872463dd525b35e951ee9ba">ready_to_read_event</link>.notify(SC_ZERO_TIME);
+262 &#32;&#32;&#32;&#32;}
+263 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+264 &#32;&#32;&#32;&#32;{
+265 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1ae716d02584a29463adb04def170fce8e">ready_to_read</link>=<emphasis role="keyword">true</emphasis>;
+266 
+267 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_classsc__csp__channel_1aaeef06ac96bbb3468f9aa907c5b39253">enable_alt_events</link>)&#32;<link linkend="_classsc__csp__channel_1acf1aadf77836e165d8b7672500bd2dc7">ready_alt_event</link>.notify(SC_ZERO_TIME);&#32;<emphasis role="comment">//&#32;added&#32;for&#32;ALT</emphasis>
+268 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sc_core::wait(<link linkend="_classsc__csp__channel_1aab17ea7d52d31f39e68eb4472cb27a4a">ready_to_write_event</link>);
+269 
+270 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;val_=<link linkend="_classsc__csp__channel_1aa4ab2439d490053e231a59dd9b77e6d6">csp_buf</link>;
+271 
+272 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1ae716d02584a29463adb04def170fce8e">ready_to_read</link>=<emphasis role="keyword">false</emphasis>;
+273 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1a014541bbd872463dd525b35e951ee9ba">ready_to_read_event</link>.notify(SC_ZERO_TIME);
+274 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sc_core::wait(<link linkend="_classsc__csp__channel_1aab17ea7d52d31f39e68eb4472cb27a4a">ready_to_write_event</link>);
+275 &#32;&#32;&#32;&#32;}
+276 
+277 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Update&#32;BB&#32;mode</emphasis>
+278 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;BB_mode[<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[<link linkend="_classsc__csp__channel_1ae16790111d142e48baf4563eb5e44069">r_id</link>]]==<link linkend="_group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a66e84e235b9e03b6fdfc7ffe7e775de8">suspended</link>)
+279 &#32;&#32;&#32;&#32;{
+280 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1a21d2bb74e4472f99ec04243168e7964e">checkSPP</link>(<link linkend="_classsc__csp__channel_1ae16790111d142e48baf4563eb5e44069">r_id</link>)==<emphasis role="keyword">true</emphasis>)
+281 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+282 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;BB_mode[<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[<link linkend="_classsc__csp__channel_1ae16790111d142e48baf4563eb5e44069">r_id</link>]]=<link linkend="_group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a5d178ae2be9d93ea4cbf1a9f0a2d9cbe">active</link>;
+283 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__macros__group_1ga0f83efd33ffbe62c58c798abb824fa94">HEPSY_TRACE_BB_STATE</link>(<link linkend="_classsc__csp__channel_1ae16790111d142e48baf4563eb5e44069">r_id</link>)
+284 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+285 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<link linkend="_group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;activate[<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[<link linkend="_classsc__csp__channel_1ae16790111d142e48baf4563eb5e44069">r_id</link>]].notify(SC_ZERO_TIME);&#32;<emphasis role="comment">//&#32;Ask&#32;to&#32;the&#32;scheduler&#32;to&#32;reactivate&#32;BB</emphasis>
+286 &#32;&#32;&#32;&#32;}
+287 
+288 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Update&#32;channel&#32;status&#32;(if&#32;needed)</emphasis>
+289 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;channel_state[<emphasis role="keywordtype">id</emphasis>]==<link linkend="_group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473">ready</link>)
+290 &#32;&#32;&#32;&#32;{
+291 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;channel_state[<link linkend="_classsc__csp__channel_1aed1aa9cb465c4a9c7751169994408c72">id</link>]=<link linkend="_group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a4c97ffbad296d4a6b84b1c508fc5d32a">waiting</link>;
+292 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__macros__group_1ga139185aa9c10392aada97618a69ee2cd">HEPSY_TRACE_CH_STATE</link>(<emphasis role="keywordtype">id</emphasis>)
+293 &#32;&#32;&#32;&#32;}
+294 
+295 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;Update&#32;process&#32;status&#32;(also&#32;testbench&#32;processes)</emphasis>
+296 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1a21d2bb74e4472f99ec04243168e7964e">checkSPP</link>(<link linkend="_classsc__csp__channel_1ae16790111d142e48baf4563eb5e44069">r_id</link>)==<emphasis role="keyword">true</emphasis>)&#32;<link linkend="_group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;process_state[<link linkend="_classsc__csp__channel_1ae16790111d142e48baf4563eb5e44069">r_id</link>]=<link linkend="_group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c">running</link>;
+297 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+298 &#32;&#32;&#32;&#32;{
+299 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;process_state[<link linkend="_classsc__csp__channel_1ae16790111d142e48baf4563eb5e44069">r_id</link>]=<link linkend="_group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473">ready</link>;
+300 
+301 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//WARNING:&#32;needed&#32;to&#32;correctly&#32;perform&#32;the&#32;round&#32;check&#32;(see&#32;WARNING&#32;in&#32;scheduler)</emphasis>
+302 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;process_status_changed[<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[<link linkend="_classsc__csp__channel_1ae16790111d142e48baf4563eb5e44069">r_id</link>]]=<emphasis role="keyword">true</emphasis>;
+303 &#32;&#32;&#32;&#32;}
+304 &#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__macros__group_1gaf1fe2324408cd29c1e2dcd55f2e4a9c1">HEPSY_TRACE_PS_STATE</link>(<link linkend="_classsc__csp__channel_1ae16790111d142e48baf4563eb5e44069">r_id</link>)
+305 }
+</programlisting><para>
+References active, SystemManager::allocationPS_BB, SystemManager::checkSPP(), HEPSY_TRACE_BB_STATE, HEPSY_TRACE_CH_STATE, HEPSY_TRACE_PS_STATE, pSchedulingManager, pSystemManager, ready, running, suspended, and waiting.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="group__firfirgcd__csp__channel__group_ga23046a4820dcf9ef26a75eba9cb7d49b_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_group__firfirgcd__csp__channel__group_1gab1a08e5d4129f9647e573af0c4ca4f30"/>    <section>
+    <title>read_test()</title>
+<indexterm><primary>read_test</primary><secondary>FirFirGCD CSP Channel.</secondary></indexterm>
+<indexterm><primary>FirFirGCD CSP Channel.</primary><secondary>read_test</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>bool <link linkend="_classsc__csp__channel">sc_csp_channel</link>&lt; T &gt;::read_test<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_classsc__core_1_1sc__csp__channel__in__if_1ad7139da842ceebdc4c64d4cf2b02d371">sc_core::sc_csp_channel_in_if&lt; T &gt;</link>.</para>
+<para>
+Definition at line 513 of file sc_csp_channel.h.</para>
+<programlisting>514 {
+515 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_classsc__csp__channel_1ab7c20a9236f789c6e64d8c83ae19967f">ready_to_write</link>;
+516 }
+</programlisting>    </section><anchor xml:id="_group__firfirgcd__csp__channel__group_1gaaed132e73280fe2a46b14604240832bc"/>    <section>
+    <title>register_alt()</title>
+<indexterm><primary>register_alt</primary><secondary>FirFirGCD CSP Channel.</secondary></indexterm>
+<indexterm><primary>FirFirGCD CSP Channel.</primary><secondary>register_alt</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>void <link linkend="_classsc__csp__channel">sc_csp_channel</link>&lt; T &gt;::register_alt<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_classsc__core_1_1sc__csp__channel__in__if_1a163aae4bbe4ad9f8dcee26b330e929d1">sc_core::sc_csp_channel_in_if&lt; T &gt;</link>.</para>
+<para>
+Definition at line 531 of file sc_csp_channel.h.</para>
+<programlisting>532 {
+533 &#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1aaeef06ac96bbb3468f9aa907c5b39253">enable_alt_events</link>&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+534 }
+</programlisting>    </section><anchor xml:id="_group__firfirgcd__csp__channel__group_1ga5bbbddcd88383d3ed9ee425ad87ee58c"/>    <section>
+    <title>register_port()</title>
+<indexterm><primary>register_port</primary><secondary>FirFirGCD CSP Channel.</secondary></indexterm>
+<indexterm><primary>FirFirGCD CSP Channel.</primary><secondary>register_port</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>void <link linkend="_classsc__csp__channel">sc_csp_channel</link>&lt; T &gt;::register_port (sc_port_base &amp; port_, const char * if_typename_)<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Definition at line 202 of file sc_csp_channel.h.</para>
+<programlisting>204 {
+205 &#32;&#32;&#32;&#32;std::string&#32;nm(&#32;if_typename_&#32;);
+206 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(&#32;nm&#32;==&#32;<emphasis role="keyword">typeid</emphasis>(&#32;<link linkend="_classsc__core_1_1sc__csp__channel__in__if">sc_csp_channel_in_if&lt;T&gt;</link>&#32;).name())
+207 &#32;&#32;&#32;&#32;{
+208 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;only&#32;one&#32;reader&#32;can&#32;be&#32;connected</emphasis>
+209 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(&#32;<link linkend="_classsc__csp__channel_1a03a5aa44e377fea90b93e68e481ad1e1">m_reader</link>&#32;!=&#32;0&#32;)&#32;{
+210 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SC_REPORT_ERROR(<emphasis role="stringliteral">&quot;sc_csp_channel&lt;T&gt;&#32;cannot&#32;have&#32;more&#32;than&#32;one&#32;reader&quot;</emphasis>,&#32;0&#32;);
+211 &#32;&#32;&#32;&#32;}
+212 &#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1a03a5aa44e377fea90b93e68e481ad1e1">m_reader</link>&#32;=&#32;&amp;port_;
+213 &#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>(&#32;nm&#32;==&#32;<emphasis role="keyword">typeid</emphasis>(&#32;<link linkend="_classsc__core_1_1sc__csp__channel__out__if">sc_csp_channel_out_if&lt;T&gt;</link>&#32;).name())&#32;{
+214 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;only&#32;one&#32;writer&#32;can&#32;be&#32;connected</emphasis>
+215 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(&#32;<link linkend="_classsc__csp__channel_1ad4a06e1cfab0e87829b914b4230d2acb">m_writer</link>&#32;!=&#32;0&#32;)&#32;{
+216 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SC_REPORT_ERROR(<emphasis role="stringliteral">&quot;sc_csp_channel&lt;T&gt;&#32;cannot&#32;have&#32;more&#32;than&#32;one&#32;writer&quot;</emphasis>,&#32;0&#32;);
+217 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+218 &#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1ad4a06e1cfab0e87829b914b4230d2acb">m_writer</link>&#32;=&#32;&amp;port_;
+219 &#32;&#32;&#32;&#32;}
+220 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+221 &#32;&#32;&#32;&#32;{
+222 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SC_REPORT_ERROR(&#32;SC_ID_BIND_IF_TO_PORT_,&#32;
+223 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;sc_csp_channel&lt;T&gt;&#32;port&#32;not&#32;recognized&quot;</emphasis>&#32;);
+224 &#32;&#32;&#32;&#32;}
+225 }
+</programlisting>    </section><anchor xml:id="_group__firfirgcd__csp__channel__group_1ga216706630fbd1f222b428cc4e6aa523d"/>    <section>
+    <title>trace()</title>
+<indexterm><primary>trace</primary><secondary>FirFirGCD CSP Channel.</secondary></indexterm>
+<indexterm><primary>FirFirGCD CSP Channel.</primary><secondary>trace</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>void <link linkend="_classsc__csp__channel">sc_csp_channel</link>&lt; T &gt;::trace (sc_trace_file * tf) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line 433 of file sc_csp_channel.h.</para>
+<programlisting>434 {
+435 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;WIP</emphasis>
+436 }
+</programlisting>    </section><anchor xml:id="_group__firfirgcd__csp__channel__group_1gaf8a9ace576ff2e0462c8db276f9f388d"/>    <section>
+    <title>write()</title>
+<indexterm><primary>write</primary><secondary>FirFirGCD CSP Channel.</secondary></indexterm>
+<indexterm><primary>FirFirGCD CSP Channel.</primary><secondary>write</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>void <link linkend="_classsc__csp__channel">sc_csp_channel</link>&lt; T &gt;::write (const T &amp; val_)<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_classsc__core_1_1sc__csp__channel__out__if_1ae0da34a87857ef8c638455cb6484004b">sc_core::sc_csp_channel_out_if&lt; T &gt;</link>.</para>
+<para>
+Definition at line 322 of file sc_csp_channel.h.</para>
+<programlisting>323 {
+324 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;Update&#32;process&#32;status&#32;(also&#32;testbench&#32;processes)</emphasis>
+325 &#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;process_state[<link linkend="_classsc__csp__channel_1a5bef0234cd8c0762891d104dd4e7b68a">w_id</link>]=<link linkend="_group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a4c97ffbad296d4a6b84b1c508fc5d32a">waiting</link>;
+326 &#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__macros__group_1gaf1fe2324408cd29c1e2dcd55f2e4a9c1">HEPSY_TRACE_PS_STATE</link>(<link linkend="_classsc__csp__channel_1a5bef0234cd8c0762891d104dd4e7b68a">w_id</link>)
+327 
+328 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Update&#32;channel&#32;status&#32;(if&#32;needed)</emphasis>
+329 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;channel_state[<emphasis role="keywordtype">id</emphasis>]==<link linkend="_group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a4c97ffbad296d4a6b84b1c508fc5d32a">waiting</link>)
+330 &#32;&#32;&#32;&#32;{
+331 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;channel_state[<link linkend="_classsc__csp__channel_1aed1aa9cb465c4a9c7751169994408c72">id</link>]=<link linkend="_group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473">ready</link>;
+332 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__macros__group_1ga139185aa9c10392aada97618a69ee2cd">HEPSY_TRACE_CH_STATE</link>(<emphasis role="keywordtype">id</emphasis>)
+333 &#32;&#32;&#32;&#32;}
+334 
+335 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Update&#32;BB&#32;mode&#32;(only&#32;for&#32;SPP,&#32;the&#32;others&#32;PUs&#32;are&#32;managed&#32;in&#32;the&#32;schedulers)</emphasis>
+336 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1a21d2bb74e4472f99ec04243168e7964e">checkSPP</link>(<link linkend="_classsc__csp__channel_1a5bef0234cd8c0762891d104dd4e7b68a">w_id</link>)==<emphasis role="keyword">true</emphasis>)
+337 &#32;&#32;&#32;&#32;{
+338 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;BB_mode[<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[<link linkend="_classsc__csp__channel_1a5bef0234cd8c0762891d104dd4e7b68a">w_id</link>]]=<link linkend="_group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a66e84e235b9e03b6fdfc7ffe7e775de8">suspended</link>;
+339 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__macros__group_1ga0f83efd33ffbe62c58c798abb824fa94">HEPSY_TRACE_BB_STATE</link>(<link linkend="_classsc__csp__channel_1a5bef0234cd8c0762891d104dd4e7b68a">w_id</link>)
+340 &#32;&#32;&#32;&#32;}
+341 
+342 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(&#32;<link linkend="_classsc__csp__channel_1ae716d02584a29463adb04def170fce8e">ready_to_read</link>==<emphasis role="keyword">true</emphasis>)
+343 &#32;&#32;&#32;&#32;{
+344 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1aa4ab2439d490053e231a59dd9b77e6d6">csp_buf</link>=val_;
+345 
+346 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1ab7c20a9236f789c6e64d8c83ae19967f">ready_to_write</link>=<emphasis role="keyword">true</emphasis>;
+347 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1aab17ea7d52d31f39e68eb4472cb27a4a">ready_to_write_event</link>.notify(SC_ZERO_TIME);
+348 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sc_core::wait(<link linkend="_classsc__csp__channel_1a014541bbd872463dd525b35e951ee9ba">ready_to_read_event</link>);
+349 
+350 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Update&#32;channel&#32;status</emphasis>
+351 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;channel_state[<link linkend="_classsc__csp__channel_1aed1aa9cb465c4a9c7751169994408c72">id</link>]=<link linkend="_group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c">running</link>;
+352 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__macros__group_1ga139185aa9c10392aada97618a69ee2cd">HEPSY_TRACE_CH_STATE</link>(<emphasis role="keywordtype">id</emphasis>)
+353 
+354 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Manage&#32;simulated&#32;time&#32;and&#32;energy</emphasis>
+355 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;wait(<link linkend="_classsc__csp__channel_1a5cd83229e038e07f237512df3df4adf9">waiting_time</link>);
+356 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1ab0977c6aab0732a7946a73aa4b2e6de8">working_time</link>+=&#32;<link linkend="_classsc__csp__channel_1a5cd83229e038e07f237512df3df4adf9">waiting_time</link>;
+357 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1a97c55d92a3c04d41300ffdb208eabc92">working_energy</link>+=<link linkend="_classsc__csp__channel_1a58737a4adf049b01ddce1acbbb7c5115">partial_energy</link>;
+358 
+359 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Update&#32;channel&#32;status</emphasis>
+360 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;channel_state[<link linkend="_classsc__csp__channel_1aed1aa9cb465c4a9c7751169994408c72">id</link>]=<link linkend="_group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473">ready</link>;
+361 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__macros__group_1ga139185aa9c10392aada97618a69ee2cd">HEPSY_TRACE_CH_STATE</link>(<emphasis role="keywordtype">id</emphasis>)
+362 
+363 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1ab7c20a9236f789c6e64d8c83ae19967f">ready_to_write</link>=<emphasis role="keyword">false</emphasis>;
+364 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1aab17ea7d52d31f39e68eb4472cb27a4a">ready_to_write_event</link>.notify(SC_ZERO_TIME);
+365 &#32;&#32;&#32;&#32;}
+366 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+367 &#32;&#32;&#32;&#32;{
+368 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1ab7c20a9236f789c6e64d8c83ae19967f">ready_to_write</link>=<emphasis role="keyword">true</emphasis>;
+369 
+370 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_classsc__csp__channel_1aaeef06ac96bbb3468f9aa907c5b39253">enable_alt_events</link>)&#32;<link linkend="_classsc__csp__channel_1acf1aadf77836e165d8b7672500bd2dc7">ready_alt_event</link>.notify(SC_ZERO_TIME);&#32;<emphasis role="comment">//&#32;added&#32;for&#32;ALT</emphasis>
+371 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sc_core::wait(<link linkend="_classsc__csp__channel_1a014541bbd872463dd525b35e951ee9ba">ready_to_read_event</link>);
+372 
+373 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1aa4ab2439d490053e231a59dd9b77e6d6">csp_buf</link>=val_;
+374 
+375 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Update&#32;channel&#32;status</emphasis>
+376 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;channel_state[<link linkend="_classsc__csp__channel_1aed1aa9cb465c4a9c7751169994408c72">id</link>]=<link linkend="_group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c">running</link>;
+377 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__macros__group_1ga139185aa9c10392aada97618a69ee2cd">HEPSY_TRACE_CH_STATE</link>(<emphasis role="keywordtype">id</emphasis>)
+378 
+379 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Manage&#32;simulated&#32;time&#32;and&#32;energy</emphasis>
+380 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;wait(<link linkend="_classsc__csp__channel_1a5cd83229e038e07f237512df3df4adf9">waiting_time</link>);
+381 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1ab0977c6aab0732a7946a73aa4b2e6de8">working_time</link>+=&#32;<link linkend="_classsc__csp__channel_1a5cd83229e038e07f237512df3df4adf9">waiting_time</link>;
+382 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1a97c55d92a3c04d41300ffdb208eabc92">working_energy</link>+=<link linkend="_classsc__csp__channel_1a58737a4adf049b01ddce1acbbb7c5115">partial_energy</link>;
+383 
+384 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Update&#32;channel&#32;status</emphasis>
+385 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;channel_state[<link linkend="_classsc__csp__channel_1aed1aa9cb465c4a9c7751169994408c72">id</link>]=<link linkend="_group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473">ready</link>;
+386 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__macros__group_1ga139185aa9c10392aada97618a69ee2cd">HEPSY_TRACE_CH_STATE</link>(<emphasis role="keywordtype">id</emphasis>)
+387 
+388 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1ab7c20a9236f789c6e64d8c83ae19967f">ready_to_write</link>=<emphasis role="keyword">false</emphasis>;
+389 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1aab17ea7d52d31f39e68eb4472cb27a4a">ready_to_write_event</link>.notify(SC_ZERO_TIME);
+390 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sc_core::wait(<link linkend="_classsc__csp__channel_1a014541bbd872463dd525b35e951ee9ba">ready_to_read_event</link>);
+391 &#32;&#32;&#32;&#32;}&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+392 
+393 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Update&#32;BB&#32;mode</emphasis>
+394 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;BB_mode[<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[<link linkend="_classsc__csp__channel_1a5bef0234cd8c0762891d104dd4e7b68a">w_id</link>]]==<link linkend="_group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a66e84e235b9e03b6fdfc7ffe7e775de8">suspended</link>)
+395 &#32;&#32;&#32;&#32;{
+396 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1a21d2bb74e4472f99ec04243168e7964e">checkSPP</link>(<link linkend="_classsc__csp__channel_1a5bef0234cd8c0762891d104dd4e7b68a">w_id</link>)==<emphasis role="keyword">true</emphasis>)
+397 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+398 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;BB_mode[<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[<link linkend="_classsc__csp__channel_1a5bef0234cd8c0762891d104dd4e7b68a">w_id</link>]]=<link linkend="_group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a5d178ae2be9d93ea4cbf1a9f0a2d9cbe">active</link>;
+399 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__macros__group_1ga0f83efd33ffbe62c58c798abb824fa94">HEPSY_TRACE_BB_STATE</link>(<link linkend="_classsc__csp__channel_1a5bef0234cd8c0762891d104dd4e7b68a">w_id</link>)
+400 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+401 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+402 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;activate[<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[<link linkend="_classsc__csp__channel_1a5bef0234cd8c0762891d104dd4e7b68a">w_id</link>]].notify(SC_ZERO_TIME);
+403 &#32;&#32;&#32;&#32;}
+404 
+405 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Update&#32;channel&#32;status&#32;(if&#32;needed)</emphasis>
+406 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;channel_state[<emphasis role="keywordtype">id</emphasis>]==<link linkend="_group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473">ready</link>)
+407 &#32;&#32;&#32;&#32;{
+408 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;channel_state[<link linkend="_classsc__csp__channel_1aed1aa9cb465c4a9c7751169994408c72">id</link>]=<link linkend="_group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a4c97ffbad296d4a6b84b1c508fc5d32a">waiting</link>;
+409 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__macros__group_1ga139185aa9c10392aada97618a69ee2cd">HEPSY_TRACE_CH_STATE</link>(<emphasis role="keywordtype">id</emphasis>)
+410 &#32;&#32;&#32;&#32;}
+411 
+412 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;Update&#32;process&#32;status</emphasis>
+413 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1a21d2bb74e4472f99ec04243168e7964e">checkSPP</link>(<link linkend="_classsc__csp__channel_1a5bef0234cd8c0762891d104dd4e7b68a">w_id</link>)==<emphasis role="keyword">true</emphasis>)&#32;<link linkend="_group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;process_state[<link linkend="_classsc__csp__channel_1a5bef0234cd8c0762891d104dd4e7b68a">w_id</link>]=<link linkend="_group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c">running</link>;
+414 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+415 &#32;&#32;&#32;&#32;{
+416 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;process_state[<link linkend="_classsc__csp__channel_1a5bef0234cd8c0762891d104dd4e7b68a">w_id</link>]=<link linkend="_group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473">ready</link>;
+417 
+418 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//WARNING:&#32;needed&#32;to&#32;correctly&#32;perform&#32;the&#32;round&#32;check&#32;(see&#32;WARNING&#32;in&#32;scheduler)</emphasis>
+419 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48">pSchedulingManager</link>-&gt;process_status_changed[<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1abfd1d205fa299fa757e2b78d15724734">allocationPS_BB</link>[<link linkend="_classsc__csp__channel_1a5bef0234cd8c0762891d104dd4e7b68a">w_id</link>]]=<emphasis role="keyword">true</emphasis>;
+420 &#32;&#32;&#32;&#32;}
+421 &#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__macros__group_1gaf1fe2324408cd29c1e2dcd55f2e4a9c1">HEPSY_TRACE_PS_STATE</link>(<link linkend="_classsc__csp__channel_1a5bef0234cd8c0762891d104dd4e7b68a">w_id</link>)
+422 
+423 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Channel&#32;profiling&#32;(done&#32;only&#32;in&#32;write&#32;metod)</emphasis>
+424 &#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1a36b454aeb9b50a4094f31801a6976b0f">num</link>++;
+425 &#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1a7dcc3ae8736a6aad7e27f276706205a3">VCH</link>[<link linkend="_classsc__csp__channel_1aed1aa9cb465c4a9c7751169994408c72">id</link>].setNum(<link linkend="_classsc__csp__channel_1a36b454aeb9b50a4094f31801a6976b0f">num</link>);
+426 &#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1a7dcc3ae8736a6aad7e27f276706205a3">VCH</link>[<link linkend="_classsc__csp__channel_1aed1aa9cb465c4a9c7751169994408c72">id</link>].working_time&#32;=&#32;<link linkend="_classsc__csp__channel_1ab0977c6aab0732a7946a73aa4b2e6de8">working_time</link>;
+427 &#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1a7dcc3ae8736a6aad7e27f276706205a3">VCH</link>[<link linkend="_classsc__csp__channel_1aed1aa9cb465c4a9c7751169994408c72">id</link>].working_energy&#32;=&#32;<link linkend="_classsc__csp__channel_1a97c55d92a3c04d41300ffdb208eabc92">working_energy</link>;
+428 }
+</programlisting><para>
+References active, SystemManager::allocationPS_BB, SystemManager::checkSPP(), HEPSY_TRACE_BB_STATE, HEPSY_TRACE_CH_STATE, HEPSY_TRACE_PS_STATE, pSchedulingManager, pSystemManager, ready, running, suspended, SystemManager::VCH, and waiting.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="group__firfirgcd__csp__channel__group_gaf8a9ace576ff2e0462c8db276f9f388d_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_group__firfirgcd__csp__channel__group_1ga3566fb8ed3dc3ba7ab7d6dbe17787153"/>    <section>
+    <title>write_test()</title>
+<indexterm><primary>write_test</primary><secondary>FirFirGCD CSP Channel.</secondary></indexterm>
+<indexterm><primary>FirFirGCD CSP Channel.</primary><secondary>write_test</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>bool <link linkend="_classsc__csp__channel">sc_csp_channel</link>&lt; T &gt;::write_test<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_classsc__core_1_1sc__csp__channel__out__if_1af4f0e8a520cdb556754743a056fa4e37">sc_core::sc_csp_channel_out_if&lt; T &gt;</link>.</para>
+<para>
+Definition at line 522 of file sc_csp_channel.h.</para>
+<programlisting>523 {
+524 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_classsc__csp__channel_1ae716d02584a29463adb04def170fce8e">ready_to_read</link>;
+525 }
+</programlisting></section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48"/>    <section>
+    <title>pSchedulingManager</title>
+<indexterm><primary>pSchedulingManager</primary><secondary>FirFirGCD CSP Channel.</secondary></indexterm>
+<indexterm><primary>FirFirGCD CSP Channel.</primary><secondary>pSchedulingManager</secondary></indexterm>
+<para><computeroutput>SchedulingManager* pSchedulingManager</computeroutput></para><para>
+Definition at line 166 of file main.cpp.</para>
+<para>
+Referenced by sc_csp_channel&lt; T &gt;::read(), sc_main(), and sc_csp_channel&lt; T &gt;::write().</para>
+    </section><anchor xml:id="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad"/>    <section>
+    <title>pSystemManager</title>
+<indexterm><primary>pSystemManager</primary><secondary>FirFirGCD CSP Channel.</secondary></indexterm>
+<indexterm><primary>FirFirGCD CSP Channel.</primary><secondary>pSystemManager</secondary></indexterm>
+<para><computeroutput><link linkend="_class_system_manager">SystemManager</link>* pSystemManager</computeroutput></para><para>
+Definition at line 163 of file main.cpp.</para>
+<para>
+Referenced by sc_csp_channel&lt; T &gt;::init(), sc_csp_channel&lt; T &gt;::read(), sc_csp_channel&lt; T &gt;::sc_csp_channel(), and sc_csp_channel&lt; T &gt;::write().</para>
+</section>
+</section>
+</section>

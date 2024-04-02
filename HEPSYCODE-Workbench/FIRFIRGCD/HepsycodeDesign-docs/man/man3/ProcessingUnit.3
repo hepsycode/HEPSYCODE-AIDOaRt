@@ -1,0 +1,517 @@
+.TH "ProcessingUnit" 3 "Mon Mar 20 2023" "FirFirGCD Application" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ProcessingUnit
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <tl\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "unsigned int \fBgetId\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetId\fP (unsigned int c)"
+.br
+.ti -1c
+.RI "string \fBgetName\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetName\fP (string x)"
+.br
+.ti -1c
+.RI "string \fBgetProcessorType\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetProcessorType\fP (string x)"
+.br
+.ti -1c
+.RI "float \fBgetCost\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetCost\fP (float x)"
+.br
+.ti -1c
+.RI "string \fBgetISA\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetISA\fP (string x)"
+.br
+.ti -1c
+.RI "float \fBgetFrequency\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetFrequency\fP (float x)"
+.br
+.ti -1c
+.RI "float ** \fBgetCC4S\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetCC4S\fP (float **x)"
+.br
+.ti -1c
+.RI "float \fBgetPower\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetPower\fP (float x)"
+.br
+.ti -1c
+.RI "float \fBgetMIPS\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetMIPS\fP (float x)"
+.br
+.ti -1c
+.RI "float \fBgetI4CSmin\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetI4CSmin\fP (float x)"
+.br
+.ti -1c
+.RI "float \fBgetI4CSmax\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetI4CSmax\fP (float x)"
+.br
+.ti -1c
+.RI "float \fBgetVdd\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetVdd\fP (float x)"
+.br
+.ti -1c
+.RI "float \fBgetIdd\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetIdd\fP (float x)"
+.br
+.ti -1c
+.RI "sc_time \fBgetOverheadCS\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetOverheadCS\fP (sc_time x)"
+.br
+.in -1c
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "string \fBname\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBid\fP"
+.br
+.ti -1c
+.RI "string \fBprocessorType\fP"
+.br
+.ti -1c
+.RI "float \fBcost\fP"
+.br
+.ti -1c
+.RI "string \fBISA\fP"
+.br
+.ti -1c
+.RI "float \fBfrequency\fP"
+.br
+.ti -1c
+.RI "float ** \fBCC4CS\fP"
+.br
+.ti -1c
+.RI "float \fBPower\fP"
+.br
+.ti -1c
+.RI "float \fBMIPS\fP"
+.br
+.ti -1c
+.RI "float \fBI4CSmin\fP"
+.br
+.ti -1c
+.RI "float \fBI4CSmax\fP"
+.br
+.ti -1c
+.RI "float \fBVdd\fP"
+.br
+.ti -1c
+.RI "float \fBIdd\fP"
+.br
+.ti -1c
+.RI "sc_time \fBoverheadCS\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 80 of file tl\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "float ** ProcessingUnit::getCC4S ()"
+
+.PP
+Definition at line 129 of file tl\&.cpp\&.
+.PP
+.nf
+130 {
+131     return this->CC4CS;
+132 }
+.fi
+.SS "float ProcessingUnit::getCost ()"
+
+.PP
+Definition at line 99 of file tl\&.cpp\&.
+.PP
+.nf
+100 {
+101     return this->cost;
+102 }
+.fi
+.SS "float ProcessingUnit::getFrequency ()"
+
+.PP
+Definition at line 119 of file tl\&.cpp\&.
+.PP
+.nf
+120 {
+121     return this->frequency;
+122 }
+.fi
+.SS "float ProcessingUnit::getI4CSmax ()"
+
+.PP
+Definition at line 169 of file tl\&.cpp\&.
+.PP
+.nf
+170 {
+171     return this->I4CSmax;
+172 }
+.fi
+.SS "float ProcessingUnit::getI4CSmin ()"
+
+.PP
+Definition at line 159 of file tl\&.cpp\&.
+.PP
+.nf
+160 {
+161     return this->I4CSmin;
+162 }
+.fi
+.SS "unsigned int ProcessingUnit::getId ()"
+
+.PP
+Definition at line 71 of file tl\&.cpp\&.
+.PP
+.nf
+71                                   {
+72     return this->id;
+73 }
+.fi
+.SS "float ProcessingUnit::getIdd ()"
+
+.PP
+Definition at line 189 of file tl\&.cpp\&.
+.PP
+.nf
+190 {
+191     return this->Idd;
+192 }
+.fi
+.SS "string ProcessingUnit::getISA ()"
+
+.PP
+Definition at line 109 of file tl\&.cpp\&.
+.PP
+.nf
+110 {
+111     return this->ISA;
+112 }
+.fi
+.SS "float ProcessingUnit::getMIPS ()"
+
+.PP
+Definition at line 149 of file tl\&.cpp\&.
+.PP
+.nf
+150 {
+151     return this->MIPS;
+152 }
+.fi
+.SS "string ProcessingUnit::getName ()"
+
+.PP
+Definition at line 79 of file tl\&.cpp\&.
+.PP
+.nf
+80 {
+81     return this->name;
+82 }
+.fi
+.SS "sc_time ProcessingUnit::getOverheadCS ()"
+
+.PP
+Definition at line 199 of file tl\&.cpp\&.
+.PP
+.nf
+200 {
+201     return this->overheadCS;
+202 }
+.fi
+.SS "float ProcessingUnit::getPower ()"
+
+.PP
+Definition at line 139 of file tl\&.cpp\&.
+.PP
+.nf
+140 {
+141     return this->Power;
+142 }
+.fi
+.SS "string ProcessingUnit::getProcessorType ()"
+
+.PP
+Definition at line 89 of file tl\&.cpp\&.
+.PP
+.nf
+90 {
+91     return this->processorType;
+92 }
+.fi
+.SS "float ProcessingUnit::getVdd ()"
+
+.PP
+Definition at line 179 of file tl\&.cpp\&.
+.PP
+.nf
+180 {
+181     return this->Vdd;
+182 }
+.fi
+.SS "void ProcessingUnit::setCC4S (float ** x)"
+
+.PP
+Definition at line 134 of file tl\&.cpp\&.
+.PP
+.nf
+135 {
+136     CC4CS = x;
+137 }
+.fi
+.PP
+Referenced by SystemManager::generateBBInstances()\&.
+.SS "void ProcessingUnit::setCost (float x)"
+
+.PP
+Definition at line 104 of file tl\&.cpp\&.
+.PP
+.nf
+105 {
+106     cost = x;
+107 }
+.fi
+.SS "void ProcessingUnit::setFrequency (float x)"
+
+.PP
+Definition at line 124 of file tl\&.cpp\&.
+.PP
+.nf
+125 {
+126     frequency = x;
+127 }
+.fi
+.PP
+Referenced by SystemManager::generateBBInstances()\&.
+.SS "void ProcessingUnit::setI4CSmax (float x)"
+
+.PP
+Definition at line 174 of file tl\&.cpp\&.
+.PP
+.nf
+175 {
+176     I4CSmax = x;
+177 }
+.fi
+.PP
+Referenced by SystemManager::generateBBInstances()\&.
+.SS "void ProcessingUnit::setI4CSmin (float x)"
+
+.PP
+Definition at line 164 of file tl\&.cpp\&.
+.PP
+.nf
+165 {
+166     I4CSmin = x;
+167 }
+.fi
+.PP
+Referenced by SystemManager::generateBBInstances()\&.
+.SS "void ProcessingUnit::setId (unsigned int c)"
+
+.PP
+Definition at line 75 of file tl\&.cpp\&.
+.PP
+.nf
+75                                         {
+76     this->id = c;
+77 }
+.fi
+.PP
+Referenced by SystemManager::generateBBInstances()\&.
+.SS "void ProcessingUnit::setIdd (float x)"
+
+.PP
+Definition at line 194 of file tl\&.cpp\&.
+.PP
+.nf
+195 {
+196     Idd = x;
+197 }
+.fi
+.PP
+Referenced by SystemManager::generateBBInstances()\&.
+.SS "void ProcessingUnit::setISA (string x)"
+
+.PP
+Definition at line 114 of file tl\&.cpp\&.
+.PP
+.nf
+115 {
+116     ISA = x;
+117 }
+.fi
+.PP
+Referenced by SystemManager::generateBBInstances()\&.
+.SS "void ProcessingUnit::setMIPS (float x)"
+
+.PP
+Definition at line 154 of file tl\&.cpp\&.
+.PP
+.nf
+155 {
+156     MIPS = x;
+157 }
+.fi
+.PP
+Referenced by SystemManager::generateBBInstances()\&.
+.SS "void ProcessingUnit::setName (string x)"
+
+.PP
+Definition at line 84 of file tl\&.cpp\&.
+.PP
+.nf
+85 {
+86     name = x;
+87 }
+.fi
+.PP
+Referenced by SystemManager::generateBBInstances()\&.
+.SS "void ProcessingUnit::setOverheadCS (sc_time x)"
+
+.PP
+Definition at line 204 of file tl\&.cpp\&.
+.PP
+.nf
+205 {
+206     overheadCS = x;
+207 }
+.fi
+.PP
+Referenced by SystemManager::generateBBInstances()\&.
+.SS "void ProcessingUnit::setPower (float x)"
+
+.PP
+Definition at line 144 of file tl\&.cpp\&.
+.PP
+.nf
+145 {
+146     Power = x;
+147 }
+.fi
+.PP
+Referenced by SystemManager::generateBBInstances()\&.
+.SS "void ProcessingUnit::setProcessorType (string x)"
+
+.PP
+Definition at line 94 of file tl\&.cpp\&.
+.PP
+.nf
+95 {
+96     processorType = x;
+97 }
+.fi
+.PP
+Referenced by SystemManager::generateBBInstances()\&.
+.SS "void ProcessingUnit::setVdd (float x)"
+
+.PP
+Definition at line 184 of file tl\&.cpp\&.
+.PP
+.nf
+185 {
+186     Vdd = x;
+187 }
+.fi
+.PP
+Referenced by SystemManager::generateBBInstances()\&.
+.SH "Field Documentation"
+.PP 
+.SS "float** ProcessingUnit::CC4CS"
+
+.PP
+Definition at line 92 of file tl\&.h\&.
+.SS "float ProcessingUnit::cost"
+
+.PP
+Definition at line 89 of file tl\&.h\&.
+.SS "float ProcessingUnit::frequency"
+
+.PP
+Definition at line 91 of file tl\&.h\&.
+.SS "float ProcessingUnit::I4CSmax"
+
+.PP
+Definition at line 96 of file tl\&.h\&.
+.SS "float ProcessingUnit::I4CSmin"
+
+.PP
+Definition at line 95 of file tl\&.h\&.
+.SS "unsigned int ProcessingUnit::id"
+
+.PP
+Definition at line 87 of file tl\&.h\&.
+.SS "float ProcessingUnit::Idd"
+
+.PP
+Definition at line 98 of file tl\&.h\&.
+.SS "string ProcessingUnit::ISA"
+
+.PP
+Definition at line 90 of file tl\&.h\&.
+.SS "float ProcessingUnit::MIPS"
+
+.PP
+Definition at line 94 of file tl\&.h\&.
+.SS "string ProcessingUnit::name"
+
+.PP
+Definition at line 86 of file tl\&.h\&.
+.SS "sc_time ProcessingUnit::overheadCS"
+
+.PP
+Definition at line 99 of file tl\&.h\&.
+.SS "float ProcessingUnit::Power"
+
+.PP
+Definition at line 93 of file tl\&.h\&.
+.SS "string ProcessingUnit::processorType"
+
+.PP
+Definition at line 88 of file tl\&.h\&.
+.SS "float ProcessingUnit::Vdd"
+
+.PP
+Definition at line 97 of file tl\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FirFirGCD Application from the source code\&.

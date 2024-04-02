@@ -1,0 +1,367 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_channel" kind="class" language="C++" prot="public">
+    <compoundname>Channel</compoundname>
+    <includes refid="tl_8h" local="no">tl.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_channel_1ada27be4a604630621c5de998c7f4a418" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Channel::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="315" column="8" bodyfile="HepsycodeDesign/src/tl.h" bodystart="315" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_channel_1afc927ef6eb5c4facb2bed6f9c74594b3" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Channel::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="316" column="14" bodyfile="HepsycodeDesign/src/tl.h" bodystart="316" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_channel_1a4150fdc6d32d1046ce353fead3a03859" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Channel::w_id</definition>
+        <argsstring></argsstring>
+        <name>w_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="317" column="14" bodyfile="HepsycodeDesign/src/tl.h" bodystart="317" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_channel_1a9b6254aa7b5a479acc5c06e121d60541" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Channel::r_id</definition>
+        <argsstring></argsstring>
+        <name>r_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="318" column="14" bodyfile="HepsycodeDesign/src/tl.h" bodystart="318" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_channel_1a8b61c56e572c25da10769f2391c5ca90" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Channel::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="319" column="14" bodyfile="HepsycodeDesign/src/tl.h" bodystart="319" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_channel_1a5aae410ad04998a0605d5e5f5aea6f67" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Channel::num</definition>
+        <argsstring></argsstring>
+        <name>num</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="320" column="14" bodyfile="HepsycodeDesign/src/tl.h" bodystart="320" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_channel_1ae59cca5ceecbf1eab184500c71f13e4c" prot="public" static="no" mutable="no">
+        <type>sc_time</type>
+        <definition>sc_time Channel::working_time</definition>
+        <argsstring></argsstring>
+        <name>working_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="321" column="9" bodyfile="HepsycodeDesign/src/tl.h" bodystart="321" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_channel_1ab19bcd2871b10a8a86029e7fd7ea022c" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Channel::working_energy</definition>
+        <argsstring></argsstring>
+        <name>working_energy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="322" column="8" bodyfile="HepsycodeDesign/src/tl.h" bodystart="322" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_channel_1a53361b01056aea15c93053feb470b715" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string Channel::getName</definition>
+        <argsstring>()</argsstring>
+        <name>getName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="325" column="8" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="554" bodyend="557"/>
+      </memberdef>
+      <memberdef kind="function" id="class_channel_1a0a74f31ad2fd5c1bb1af019313e510c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Channel::setName</definition>
+        <argsstring>(string x)</argsstring>
+        <name>setName</name>
+        <param>
+          <type>string</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="326" column="6" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="584" bodyend="587"/>
+        <referencedby refid="class_system_manager_1a98b6400619bc75fc9333426b38b1d24b" compoundref="_system_manager_8cpp" startline="198" endline="255">SystemManager::generateChannelInstances</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_channel_1a88e3cbfff29cf57b724e3bbd83f01a86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Channel::getId</definition>
+        <argsstring>()</argsstring>
+        <name>getId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="328" column="5" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="559" bodyend="562"/>
+      </memberdef>
+      <memberdef kind="function" id="class_channel_1a12e1cdd1b9887f1ed483d778772bfc53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Channel::setId</definition>
+        <argsstring>(int x)</argsstring>
+        <name>setId</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="329" column="6" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="589" bodyend="592"/>
+        <referencedby refid="class_system_manager_1a98b6400619bc75fc9333426b38b1d24b" compoundref="_system_manager_8cpp" startline="198" endline="255">SystemManager::generateChannelInstances</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_channel_1a6cc16d8f4b627251f9de609a62fa4d22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Channel::getW_id</definition>
+        <argsstring>()</argsstring>
+        <name>getW_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="331" column="5" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="569" bodyend="572"/>
+      </memberdef>
+      <memberdef kind="function" id="class_channel_1af9e34fe60361f6e0c234e691d9d2824d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Channel::setW_id</definition>
+        <argsstring>(int x)</argsstring>
+        <name>setW_id</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="332" column="6" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="599" bodyend="602"/>
+        <referencedby refid="class_system_manager_1a98b6400619bc75fc9333426b38b1d24b" compoundref="_system_manager_8cpp" startline="198" endline="255">SystemManager::generateChannelInstances</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_channel_1a30a7fcde287743584d466cf092143bac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Channel::getR_id</definition>
+        <argsstring>()</argsstring>
+        <name>getR_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="334" column="5" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="574" bodyend="577"/>
+      </memberdef>
+      <memberdef kind="function" id="class_channel_1a87fe96b999c9503c2a8839ee6498f256" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Channel::setR_id</definition>
+        <argsstring>(int x)</argsstring>
+        <name>setR_id</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="335" column="6" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="604" bodyend="607"/>
+        <referencedby refid="class_system_manager_1a98b6400619bc75fc9333426b38b1d24b" compoundref="_system_manager_8cpp" startline="198" endline="255">SystemManager::generateChannelInstances</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_channel_1ab1496219d9f8b32b49b8df0ab86c4e9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Channel::getWidth</definition>
+        <argsstring>()</argsstring>
+        <name>getWidth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="337" column="5" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="564" bodyend="567"/>
+      </memberdef>
+      <memberdef kind="function" id="class_channel_1a448e2f0beb2b7ce2a02a19e2eaf17d55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Channel::setWidth</definition>
+        <argsstring>(int x)</argsstring>
+        <name>setWidth</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="338" column="6" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="594" bodyend="597"/>
+        <referencedby refid="class_system_manager_1a98b6400619bc75fc9333426b38b1d24b" compoundref="_system_manager_8cpp" startline="198" endline="255">SystemManager::generateChannelInstances</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_channel_1a39aa69b49124b74185a3408af6ccfc43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Channel::getNum</definition>
+        <argsstring>()</argsstring>
+        <name>getNum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="340" column="5" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="579" bodyend="582"/>
+      </memberdef>
+      <memberdef kind="function" id="class_channel_1adb8356f7bba44722ed6923684b8fdd7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Channel::setNum</definition>
+        <argsstring>(int x)</argsstring>
+        <name>setNum</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="341" column="6" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="609" bodyend="612"/>
+        <referencedby refid="class_system_manager_1a98b6400619bc75fc9333426b38b1d24b" compoundref="_system_manager_8cpp" startline="198" endline="255">SystemManager::generateChannelInstances</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Channel</label>
+        <link refid="class_channel"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+working_energy</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+r_id</edgelabel>
+          <edgelabel>+id</edgelabel>
+          <edgelabel>+num</edgelabel>
+          <edgelabel>+width</edgelabel>
+          <edgelabel>+w_id</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+name</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+working_time</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>std::basic_string&lt; char &gt;</label>
+      </node>
+      <node id="3">
+        <label>int</label>
+      </node>
+      <node id="2">
+        <label>double</label>
+      </node>
+      <node id="6">
+        <label>sc_time</label>
+      </node>
+      <node id="4">
+        <label>std::string</label>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HepsycodeDesign/src/tl.h" line="313" column="1" bodyfile="HepsycodeDesign/src/tl.h" bodystart="312" bodyend="343"/>
+    <listofallmembers>
+      <member refid="class_channel_1a88e3cbfff29cf57b724e3bbd83f01a86" prot="public" virt="non-virtual"><scope>Channel</scope><name>getId</name></member>
+      <member refid="class_channel_1a53361b01056aea15c93053feb470b715" prot="public" virt="non-virtual"><scope>Channel</scope><name>getName</name></member>
+      <member refid="class_channel_1a39aa69b49124b74185a3408af6ccfc43" prot="public" virt="non-virtual"><scope>Channel</scope><name>getNum</name></member>
+      <member refid="class_channel_1a30a7fcde287743584d466cf092143bac" prot="public" virt="non-virtual"><scope>Channel</scope><name>getR_id</name></member>
+      <member refid="class_channel_1a6cc16d8f4b627251f9de609a62fa4d22" prot="public" virt="non-virtual"><scope>Channel</scope><name>getW_id</name></member>
+      <member refid="class_channel_1ab1496219d9f8b32b49b8df0ab86c4e9d" prot="public" virt="non-virtual"><scope>Channel</scope><name>getWidth</name></member>
+      <member refid="class_channel_1afc927ef6eb5c4facb2bed6f9c74594b3" prot="public" virt="non-virtual"><scope>Channel</scope><name>id</name></member>
+      <member refid="class_channel_1ada27be4a604630621c5de998c7f4a418" prot="public" virt="non-virtual"><scope>Channel</scope><name>name</name></member>
+      <member refid="class_channel_1a5aae410ad04998a0605d5e5f5aea6f67" prot="public" virt="non-virtual"><scope>Channel</scope><name>num</name></member>
+      <member refid="class_channel_1a9b6254aa7b5a479acc5c06e121d60541" prot="public" virt="non-virtual"><scope>Channel</scope><name>r_id</name></member>
+      <member refid="class_channel_1a12e1cdd1b9887f1ed483d778772bfc53" prot="public" virt="non-virtual"><scope>Channel</scope><name>setId</name></member>
+      <member refid="class_channel_1a0a74f31ad2fd5c1bb1af019313e510c6" prot="public" virt="non-virtual"><scope>Channel</scope><name>setName</name></member>
+      <member refid="class_channel_1adb8356f7bba44722ed6923684b8fdd7f" prot="public" virt="non-virtual"><scope>Channel</scope><name>setNum</name></member>
+      <member refid="class_channel_1a87fe96b999c9503c2a8839ee6498f256" prot="public" virt="non-virtual"><scope>Channel</scope><name>setR_id</name></member>
+      <member refid="class_channel_1af9e34fe60361f6e0c234e691d9d2824d" prot="public" virt="non-virtual"><scope>Channel</scope><name>setW_id</name></member>
+      <member refid="class_channel_1a448e2f0beb2b7ce2a02a19e2eaf17d55" prot="public" virt="non-virtual"><scope>Channel</scope><name>setWidth</name></member>
+      <member refid="class_channel_1a4150fdc6d32d1046ce353fead3a03859" prot="public" virt="non-virtual"><scope>Channel</scope><name>w_id</name></member>
+      <member refid="class_channel_1a8b61c56e572c25da10769f2391c5ca90" prot="public" virt="non-virtual"><scope>Channel</scope><name>width</name></member>
+      <member refid="class_channel_1ab19bcd2871b10a8a86029e7fd7ea022c" prot="public" virt="non-virtual"><scope>Channel</scope><name>working_energy</name></member>
+      <member refid="class_channel_1ae59cca5ceecbf1eab184500c71f13e4c" prot="public" virt="non-virtual"><scope>Channel</scope><name>working_time</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

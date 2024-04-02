@@ -1,0 +1,572 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_process">
+<title>Process Class Reference</title>
+<indexterm><primary>Process</primary></indexterm>
+<para>
+<computeroutput>#include &lt;tl.h&gt;</computeroutput>
+</para>
+Collaboration diagram for Process:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_process__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_process_1a9f4553eac74c657bb451f390c17d6bea">Process</link> ()</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_process_1aae530d36427cb0c1fe817cb339bd7691">getName</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_process_1ad1d3a2fd1af703ff1b986512d675660b">setName</link> (string x)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_process_1a4a5b2f6a945300fd6ecd243bc14e8073">getId</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_process_1ac2d4d655dc9fe6317889938783ec2848">setId</link> (int x)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_process_1af5103e08c032d9247110f0a7655bf37c">getPriority</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_process_1a011879a0a11d6bacd3a6d768293ab0d2">setPriority</link> (int x)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_process_1a8eaeeedaf35ee19fcadf52b99e957aac">getCriticality</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_process_1a43c73ef0483b869e4231830eeff46d48">setCriticality</link> (int x)</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_process_1a7653e5156ed113e2a030ba0188350363">getEqGate</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_process_1a74caf223f4391e3145eee5899b30a09b">setEqGate</link> (float g)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_process_1a1a52596c85f381905b97b858cbc8c145">getDataType</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_process_1a3aaefcd2768bd481e22228851b161546">setDataType</link> (int x)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_process_1af196d2bb3cb88dbf0c517428e7b09538">setMemSize</link> (<link linkend="_class_memory">Memory</link> m)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_process_1af55a4774a1519b84988e4e3ec3fcc7a2">setCodeSize</link> (string procName, unsigned int value)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_process_1a268bc20c1c875e94e50c5d6d1ad9ec06">setDataSize</link> (string procName, unsigned int value)</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_process_1a5dffdfeba3879c5e032db1c168d898be">getAffinityByName</link> (string processorName)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_process_1a6f1fdb3ef348ebe19f1fd44671edfed8">setAffinity</link> (string processorName, float <link linkend="_class_process_1a86e0eaba322501bf13bd8138324a1a23">affinity</link>)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_process_1a8fb82ba026f5530a9f9724fbf1142aba">setConcurrency</link> (int procId, float conc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_process_1a9d9cfc179387b12e2bb1cdc214b6a9d8">setLoad</link> (int procId, float value)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_process_1a73a66495ca1da4ba176cf2d04104acef">getPS_Profiling</link> ()</para>
+</listitem>
+            <listitem><para>sc_time <link linkend="_class_process_1ad766d35cd91ef755abdc5df596980923">getProcessTime</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_process_1a2991ac041e868df69f3f394ee91791cb">setEnergy</link> (float <link linkend="_class_process_1a04c66e1f8802aa8528226df19a5d9516">energy</link>)</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_process_1ad854bd9c327eff4b2f0a06cf184081b5">getEnergy</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_class_process_1a8458c9ab0528b0f5fccb56968c1eb577">name</link></para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_class_process_1af4fcdaeb47e30030e4d4877232b6c135">id</link></para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_class_process_1ae03e5ff2b64628843a8436bea9703b70">priority</link></para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_class_process_1af97a7745a37113e0d5b4ca9b17aed729">criticality</link></para>
+</listitem>
+            <listitem><para>float <link linkend="_class_process_1a70972fe640d0989f28bd451af196615c">eqGate</link></para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_class_process_1aa4ff148aceb9f05d1d5a5152e610a322">dataType</link></para>
+</listitem>
+            <listitem><para>map&lt; string, unsigned int &gt; <link linkend="_class_process_1a3fbb956251eecb4b438c640fd8c1a12d">codeSizeMap</link></para>
+</listitem>
+            <listitem><para>map&lt; string, unsigned int &gt; <link linkend="_class_process_1a125e902953b35206d7d2979e11b56d86">dataSizeMap</link></para>
+</listitem>
+            <listitem><para>map&lt; string, float &gt; <link linkend="_class_process_1a86e0eaba322501bf13bd8138324a1a23">affinity</link></para>
+</listitem>
+            <listitem><para>map&lt; int, float &gt; <link linkend="_class_process_1a6147d0be2c050cb4669640e7076e1241">concurrency</link></para>
+</listitem>
+            <listitem><para>map&lt; int, float &gt; <link linkend="_class_process_1ab18c69089c09584e0d78630fa782ee93">load</link></para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_class_process_1ab824045bdc37b05cd9182fda746610b5">profiling</link></para>
+</listitem>
+            <listitem><para>sc_time <link linkend="_class_process_1a47be8c61a3a5460452753dc98b68389f">processTime</link></para>
+</listitem>
+            <listitem><para>float <link linkend="_class_process_1a04c66e1f8802aa8528226df19a5d9516">energy</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 161 of file tl.h.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_process_1a9f4553eac74c657bb451f390c17d6bea"/>    <section>
+    <title>Process()</title>
+<indexterm><primary>Process</primary><secondary>Process</secondary></indexterm>
+<indexterm><primary>Process</primary><secondary>Process</secondary></indexterm>
+<para><computeroutput>Process::Process ( )</computeroutput></para><para>
+Definition at line 311 of file tl.cpp.</para>
+<programlisting>311 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+312 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">id</emphasis>&#32;=&#32;0;
+313 &#32;&#32;&#32;&#32;<link linkend="_class_process_1a70972fe640d0989f28bd451af196615c">eqGate</link>&#32;=&#32;0;
+314 &#32;&#32;&#32;&#32;<link linkend="_class_process_1aa4ff148aceb9f05d1d5a5152e610a322">dataType</link>&#32;=&#32;0;
+315 &#32;&#32;&#32;&#32;<link linkend="_class_process_1af97a7745a37113e0d5b4ca9b17aed729">criticality</link>&#32;=&#32;0;
+316 &#32;&#32;&#32;&#32;<link linkend="_class_process_1ab824045bdc37b05cd9182fda746610b5">profiling</link>&#32;=&#32;0;
+317 &#32;&#32;&#32;&#32;<link linkend="_class_process_1a47be8c61a3a5460452753dc98b68389f">processTime</link>&#32;=&#32;sc_time(0,&#32;SC_MS);
+318 &#32;&#32;&#32;&#32;<link linkend="_class_process_1ae03e5ff2b64628843a8436bea9703b70">priority</link>&#32;=&#32;0;
+319 &#32;&#32;&#32;&#32;<link linkend="_class_process_1a04c66e1f8802aa8528226df19a5d9516">energy</link>&#32;=&#32;0;
+320 }
+</programlisting></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_process_1a5dffdfeba3879c5e032db1c168d898be"/>    <section>
+    <title>getAffinityByName()</title>
+<indexterm><primary>getAffinityByName</primary><secondary>Process</secondary></indexterm>
+<indexterm><primary>Process</primary><secondary>getAffinityByName</secondary></indexterm>
+<para><computeroutput>float Process::getAffinityByName (string processorName)</computeroutput></para><para>
+Definition at line 406 of file tl.cpp.</para>
+<programlisting>406 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+407 &#32;&#32;&#32;&#32;map&lt;string,&#32;float&gt;::iterator&#32;it&#32;=&#32;this-&gt;<link linkend="_class_process_1a86e0eaba322501bf13bd8138324a1a23">affinity</link>.find(processorName);
+408 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(&#32;it&#32;!=&#32;this-&gt;<link linkend="_class_process_1a86e0eaba322501bf13bd8138324a1a23">affinity</link>.end()&#32;)
+409 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;it-&gt;second;
+410 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+411 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;0;
+412 }
+</programlisting>    </section><anchor xml:id="_class_process_1a8eaeeedaf35ee19fcadf52b99e957aac"/>    <section>
+    <title>getCriticality()</title>
+<indexterm><primary>getCriticality</primary><secondary>Process</secondary></indexterm>
+<indexterm><primary>Process</primary><secondary>getCriticality</secondary></indexterm>
+<para><computeroutput>int Process::getCriticality ( )</computeroutput></para><para>
+Definition at line 360 of file tl.cpp.</para>
+<programlisting>361 {
+362 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_process_1af97a7745a37113e0d5b4ca9b17aed729">criticality</link>;
+363 }
+</programlisting>    </section><anchor xml:id="_class_process_1a1a52596c85f381905b97b858cbc8c145"/>    <section>
+    <title>getDataType()</title>
+<indexterm><primary>getDataType</primary><secondary>Process</secondary></indexterm>
+<indexterm><primary>Process</primary><secondary>getDataType</secondary></indexterm>
+<para><computeroutput>int Process::getDataType ( )</computeroutput></para><para>
+Definition at line 380 of file tl.cpp.</para>
+<programlisting>381 {
+382 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_process_1aa4ff148aceb9f05d1d5a5152e610a322">dataType</link>;
+383 }
+</programlisting>    </section><anchor xml:id="_class_process_1ad854bd9c327eff4b2f0a06cf184081b5"/>    <section>
+    <title>getEnergy()</title>
+<indexterm><primary>getEnergy</primary><secondary>Process</secondary></indexterm>
+<indexterm><primary>Process</primary><secondary>getEnergy</secondary></indexterm>
+<para><computeroutput>float Process::getEnergy ( )</computeroutput></para><para>
+Definition at line 342 of file tl.cpp.</para>
+<programlisting>342 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+343 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_process_1a04c66e1f8802aa8528226df19a5d9516">energy</link>;
+344 }
+</programlisting>    </section><anchor xml:id="_class_process_1a7653e5156ed113e2a030ba0188350363"/>    <section>
+    <title>getEqGate()</title>
+<indexterm><primary>getEqGate</primary><secondary>Process</secondary></indexterm>
+<indexterm><primary>Process</primary><secondary>getEqGate</secondary></indexterm>
+<para><computeroutput>float Process::getEqGate ( )</computeroutput></para><para>
+Definition at line 370 of file tl.cpp.</para>
+<programlisting>371 {
+372 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_process_1a70972fe640d0989f28bd451af196615c">eqGate</link>;
+373 }
+</programlisting>    </section><anchor xml:id="_class_process_1a4a5b2f6a945300fd6ecd243bc14e8073"/>    <section>
+    <title>getId()</title>
+<indexterm><primary>getId</primary><secondary>Process</secondary></indexterm>
+<indexterm><primary>Process</primary><secondary>getId</secondary></indexterm>
+<para><computeroutput>int Process::getId ( )</computeroutput></para><para>
+Definition at line 332 of file tl.cpp.</para>
+<programlisting>333 {
+334 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_process_1af4fcdaeb47e30030e4d4877232b6c135">id</link>;
+335 }
+</programlisting>    </section><anchor xml:id="_class_process_1aae530d36427cb0c1fe817cb339bd7691"/>    <section>
+    <title>getName()</title>
+<indexterm><primary>getName</primary><secondary>Process</secondary></indexterm>
+<indexterm><primary>Process</primary><secondary>getName</secondary></indexterm>
+<para><computeroutput>string Process::getName ( )</computeroutput></para><para>
+Definition at line 322 of file tl.cpp.</para>
+<programlisting>323 {
+324 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_process_1a8458c9ab0528b0f5fccb56968c1eb577">name</link>;
+325 }
+</programlisting>    </section><anchor xml:id="_class_process_1af5103e08c032d9247110f0a7655bf37c"/>    <section>
+    <title>getPriority()</title>
+<indexterm><primary>getPriority</primary><secondary>Process</secondary></indexterm>
+<indexterm><primary>Process</primary><secondary>getPriority</secondary></indexterm>
+<para><computeroutput>int Process::getPriority ( )</computeroutput></para><para>
+Definition at line 350 of file tl.cpp.</para>
+<programlisting>351 {
+352 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_process_1ae03e5ff2b64628843a8436bea9703b70">priority</link>;
+353 }
+</programlisting>    </section><anchor xml:id="_class_process_1ad766d35cd91ef755abdc5df596980923"/>    <section>
+    <title>getProcessTime()</title>
+<indexterm><primary>getProcessTime</primary><secondary>Process</secondary></indexterm>
+<indexterm><primary>Process</primary><secondary>getProcessTime</secondary></indexterm>
+<para><computeroutput>sc_time Process::getProcessTime ( )</computeroutput></para><para>
+Definition at line 440 of file tl.cpp.</para>
+<programlisting>441 {
+442 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_process_1a47be8c61a3a5460452753dc98b68389f">processTime</link>;
+443 }
+</programlisting>    </section><anchor xml:id="_class_process_1a73a66495ca1da4ba176cf2d04104acef"/>    <section>
+    <title>getPS_Profiling()</title>
+<indexterm><primary>getPS_Profiling</primary><secondary>Process</secondary></indexterm>
+<indexterm><primary>Process</primary><secondary>getPS_Profiling</secondary></indexterm>
+<para><computeroutput>int Process::getPS_Profiling ( )</computeroutput></para><para>
+Definition at line 435 of file tl.cpp.</para>
+<programlisting>436 {
+437 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_process_1ab824045bdc37b05cd9182fda746610b5">profiling</link>;
+438 }
+</programlisting>    </section><anchor xml:id="_class_process_1a6f1fdb3ef348ebe19f1fd44671edfed8"/>    <section>
+    <title>setAffinity()</title>
+<indexterm><primary>setAffinity</primary><secondary>Process</secondary></indexterm>
+<indexterm><primary>Process</primary><secondary>setAffinity</secondary></indexterm>
+<para><computeroutput>void Process::setAffinity (string processorName, float affinity)</computeroutput></para><para>
+Definition at line 414 of file tl.cpp.</para>
+<programlisting>415 {
+416 &#32;&#32;&#32;&#32;map&#32;&lt;string,&#32;float&gt;::iterator&#32;end&#32;=&#32;this-&gt;<link linkend="_class_process_1a86e0eaba322501bf13bd8138324a1a23">affinity</link>.end();
+417 &#32;&#32;&#32;&#32;pair&lt;string,&#32;float&gt;&#32;item&#32;(x,&#32;y);
+418 &#32;&#32;&#32;&#32;this-&gt;<link linkend="_class_process_1a86e0eaba322501bf13bd8138324a1a23">affinity</link>.insert(end,&#32;item);
+419 }
+</programlisting><para>
+Referenced by SystemManager::generateProcessInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_process_a6f1fdb3ef348ebe19f1fd44671edfed8_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_process_1af55a4774a1519b84988e4e3ec3fcc7a2"/>    <section>
+    <title>setCodeSize()</title>
+<indexterm><primary>setCodeSize</primary><secondary>Process</secondary></indexterm>
+<indexterm><primary>Process</primary><secondary>setCodeSize</secondary></indexterm>
+<para><computeroutput>void Process::setCodeSize (string procName, unsigned int value)</computeroutput></para><para>
+Definition at line 390 of file tl.cpp.</para>
+<programlisting>390 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+391 &#32;&#32;&#32;&#32;map&#32;&lt;string,&#32;unsigned&#32;int&gt;::iterator&#32;end&#32;=&#32;this-&gt;<link linkend="_class_process_1a3fbb956251eecb4b438c640fd8c1a12d">codeSizeMap</link>.end();
+392 &#32;&#32;&#32;&#32;pair&lt;string,&#32;unsigned&#32;int&gt;&#32;item&#32;(p,&#32;mem);
+393 &#32;&#32;&#32;&#32;this-&gt;<link linkend="_class_process_1a3fbb956251eecb4b438c640fd8c1a12d">codeSizeMap</link>.insert(end,&#32;item);
+394 }
+</programlisting><para>
+Referenced by SystemManager::generateProcessInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_process_af55a4774a1519b84988e4e3ec3fcc7a2_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_process_1a8fb82ba026f5530a9f9724fbf1142aba"/>    <section>
+    <title>setConcurrency()</title>
+<indexterm><primary>setConcurrency</primary><secondary>Process</secondary></indexterm>
+<indexterm><primary>Process</primary><secondary>setConcurrency</secondary></indexterm>
+<para><computeroutput>void Process::setConcurrency (int procId, float conc)</computeroutput></para><para>
+Definition at line 421 of file tl.cpp.</para>
+<programlisting>422 {
+423 &#32;&#32;&#32;&#32;map&#32;&lt;int,&#32;float&gt;::iterator&#32;end&#32;=&#32;this-&gt;<link linkend="_class_process_1a6147d0be2c050cb4669640e7076e1241">concurrency</link>.end();
+424 &#32;&#32;&#32;&#32;pair&lt;int,&#32;float&gt;&#32;item&#32;(p,&#32;c);
+425 &#32;&#32;&#32;&#32;this-&gt;<link linkend="_class_process_1a6147d0be2c050cb4669640e7076e1241">concurrency</link>.insert(end,&#32;item);
+426 }
+</programlisting><para>
+Referenced by SystemManager::generateProcessInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_process_a8fb82ba026f5530a9f9724fbf1142aba_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_process_1a43c73ef0483b869e4231830eeff46d48"/>    <section>
+    <title>setCriticality()</title>
+<indexterm><primary>setCriticality</primary><secondary>Process</secondary></indexterm>
+<indexterm><primary>Process</primary><secondary>setCriticality</secondary></indexterm>
+<para><computeroutput>void Process::setCriticality (int x)</computeroutput></para><para>
+Definition at line 365 of file tl.cpp.</para>
+<programlisting>366 {
+367 &#32;&#32;&#32;&#32;<link linkend="_class_process_1af97a7745a37113e0d5b4ca9b17aed729">criticality</link>&#32;=&#32;x;
+368 }
+</programlisting><para>
+Referenced by SystemManager::generateProcessInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_process_a43c73ef0483b869e4231830eeff46d48_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_process_1a268bc20c1c875e94e50c5d6d1ad9ec06"/>    <section>
+    <title>setDataSize()</title>
+<indexterm><primary>setDataSize</primary><secondary>Process</secondary></indexterm>
+<indexterm><primary>Process</primary><secondary>setDataSize</secondary></indexterm>
+<para><computeroutput>void Process::setDataSize (string procName, unsigned int value)</computeroutput></para><para>
+Definition at line 396 of file tl.cpp.</para>
+<programlisting>396 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+397 &#32;&#32;&#32;&#32;map&#32;&lt;string,&#32;unsigned&#32;int&gt;::iterator&#32;end&#32;=&#32;this-&gt;<link linkend="_class_process_1a125e902953b35206d7d2979e11b56d86">dataSizeMap</link>.end();
+398 &#32;&#32;&#32;&#32;pair&lt;string,&#32;unsigned&#32;int&gt;&#32;item&#32;(p,&#32;mem);
+399 &#32;&#32;&#32;&#32;this-&gt;<link linkend="_class_process_1a125e902953b35206d7d2979e11b56d86">dataSizeMap</link>.insert(end,&#32;item);
+400 }
+</programlisting><para>
+Referenced by SystemManager::generateProcessInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_process_a268bc20c1c875e94e50c5d6d1ad9ec06_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_process_1a3aaefcd2768bd481e22228851b161546"/>    <section>
+    <title>setDataType()</title>
+<indexterm><primary>setDataType</primary><secondary>Process</secondary></indexterm>
+<indexterm><primary>Process</primary><secondary>setDataType</secondary></indexterm>
+<para><computeroutput>void Process::setDataType (int x)</computeroutput></para><para>
+Definition at line 385 of file tl.cpp.</para>
+<programlisting>386 {
+387 &#32;&#32;&#32;&#32;<link linkend="_class_process_1aa4ff148aceb9f05d1d5a5152e610a322">dataType</link>&#32;=&#32;x;
+388 }
+</programlisting><para>
+Referenced by SystemManager::generateProcessInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_process_a3aaefcd2768bd481e22228851b161546_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_process_1a2991ac041e868df69f3f394ee91791cb"/>    <section>
+    <title>setEnergy()</title>
+<indexterm><primary>setEnergy</primary><secondary>Process</secondary></indexterm>
+<indexterm><primary>Process</primary><secondary>setEnergy</secondary></indexterm>
+<para><computeroutput>void Process::setEnergy (float energy)</computeroutput></para><para>
+Definition at line 346 of file tl.cpp.</para>
+<programlisting>346 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+347 &#32;&#32;&#32;&#32;<link linkend="_class_process_1a04c66e1f8802aa8528226df19a5d9516">energy</link>&#32;=&#32;en;
+348 }
+</programlisting><para>
+Referenced by SystemManager::generateProcessInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_process_a2991ac041e868df69f3f394ee91791cb_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_process_1a74caf223f4391e3145eee5899b30a09b"/>    <section>
+    <title>setEqGate()</title>
+<indexterm><primary>setEqGate</primary><secondary>Process</secondary></indexterm>
+<indexterm><primary>Process</primary><secondary>setEqGate</secondary></indexterm>
+<para><computeroutput>void Process::setEqGate (float g)</computeroutput></para><para>
+Definition at line 375 of file tl.cpp.</para>
+<programlisting>376 {
+377 &#32;&#32;&#32;&#32;<link linkend="_class_process_1a70972fe640d0989f28bd451af196615c">eqGate</link>&#32;=&#32;g;
+378 }
+</programlisting><para>
+Referenced by SystemManager::generateProcessInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_process_a74caf223f4391e3145eee5899b30a09b_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_process_1ac2d4d655dc9fe6317889938783ec2848"/>    <section>
+    <title>setId()</title>
+<indexterm><primary>setId</primary><secondary>Process</secondary></indexterm>
+<indexterm><primary>Process</primary><secondary>setId</secondary></indexterm>
+<para><computeroutput>void Process::setId (int x)</computeroutput></para><para>
+Definition at line 337 of file tl.cpp.</para>
+<programlisting>338 {
+339 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">id</emphasis>&#32;=&#32;x;
+340 }
+</programlisting><para>
+Referenced by SystemManager::generateProcessInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_process_ac2d4d655dc9fe6317889938783ec2848_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_process_1a9d9cfc179387b12e2bb1cdc214b6a9d8"/>    <section>
+    <title>setLoad()</title>
+<indexterm><primary>setLoad</primary><secondary>Process</secondary></indexterm>
+<indexterm><primary>Process</primary><secondary>setLoad</secondary></indexterm>
+<para><computeroutput>void Process::setLoad (int procId, float value)</computeroutput></para><para>
+Definition at line 428 of file tl.cpp.</para>
+<programlisting>428 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+429 &#32;&#32;&#32;&#32;map&#32;&lt;int,&#32;float&gt;::iterator&#32;end&#32;=&#32;this-&gt;<link linkend="_class_process_1ab18c69089c09584e0d78630fa782ee93">load</link>.end();
+430 &#32;&#32;&#32;&#32;pair&lt;int,&#32;float&gt;&#32;item&#32;(p,&#32;value);
+431 &#32;&#32;&#32;&#32;this-&gt;<link linkend="_class_process_1ab18c69089c09584e0d78630fa782ee93">load</link>.insert(end,&#32;item);
+432 }
+</programlisting><para>
+Referenced by SystemManager::generateProcessInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_process_a9d9cfc179387b12e2bb1cdc214b6a9d8_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_process_1af196d2bb3cb88dbf0c517428e7b09538"/>    <section>
+    <title>setMemSize()</title>
+<indexterm><primary>setMemSize</primary><secondary>Process</secondary></indexterm>
+<indexterm><primary>Process</primary><secondary>setMemSize</secondary></indexterm>
+<para><computeroutput>void Process::setMemSize (<link linkend="_class_memory">Memory</link> m)</computeroutput></para>    </section><anchor xml:id="_class_process_1ad1d3a2fd1af703ff1b986512d675660b"/>    <section>
+    <title>setName()</title>
+<indexterm><primary>setName</primary><secondary>Process</secondary></indexterm>
+<indexterm><primary>Process</primary><secondary>setName</secondary></indexterm>
+<para><computeroutput>void Process::setName (string x)</computeroutput></para><para>
+Definition at line 327 of file tl.cpp.</para>
+<programlisting>328 {
+329 &#32;&#32;&#32;&#32;<link linkend="_class_process_1a8458c9ab0528b0f5fccb56968c1eb577">name</link>&#32;=&#32;x;
+330 }
+</programlisting><para>
+Referenced by SystemManager::generateProcessInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_process_ad1d3a2fd1af703ff1b986512d675660b_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_process_1a011879a0a11d6bacd3a6d768293ab0d2"/>    <section>
+    <title>setPriority()</title>
+<indexterm><primary>setPriority</primary><secondary>Process</secondary></indexterm>
+<indexterm><primary>Process</primary><secondary>setPriority</secondary></indexterm>
+<para><computeroutput>void Process::setPriority (int x)</computeroutput></para><para>
+Definition at line 355 of file tl.cpp.</para>
+<programlisting>356 {
+357 &#32;&#32;&#32;&#32;<link linkend="_class_process_1ae03e5ff2b64628843a8436bea9703b70">priority</link>&#32;=&#32;x;
+358 }
+</programlisting><para>
+Referenced by SystemManager::generateProcessInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_process_a011879a0a11d6bacd3a6d768293ab0d2_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_class_process_1a86e0eaba322501bf13bd8138324a1a23"/>    <section>
+    <title>affinity</title>
+<indexterm><primary>affinity</primary><secondary>Process</secondary></indexterm>
+<indexterm><primary>Process</primary><secondary>affinity</secondary></indexterm>
+<para><computeroutput>map&lt;string,float&gt; Process::affinity</computeroutput></para><para>
+Definition at line 173 of file tl.h.</para>
+    </section><anchor xml:id="_class_process_1a3fbb956251eecb4b438c640fd8c1a12d"/>    <section>
+    <title>codeSizeMap</title>
+<indexterm><primary>codeSizeMap</primary><secondary>Process</secondary></indexterm>
+<indexterm><primary>Process</primary><secondary>codeSizeMap</secondary></indexterm>
+<para><computeroutput>map&lt;string, unsigned int&gt; Process::codeSizeMap</computeroutput></para><para>
+Definition at line 170 of file tl.h.</para>
+    </section><anchor xml:id="_class_process_1a6147d0be2c050cb4669640e7076e1241"/>    <section>
+    <title>concurrency</title>
+<indexterm><primary>concurrency</primary><secondary>Process</secondary></indexterm>
+<indexterm><primary>Process</primary><secondary>concurrency</secondary></indexterm>
+<para><computeroutput>map&lt;int,float&gt; Process::concurrency</computeroutput></para><para>
+Definition at line 174 of file tl.h.</para>
+    </section><anchor xml:id="_class_process_1af97a7745a37113e0d5b4ca9b17aed729"/>    <section>
+    <title>criticality</title>
+<indexterm><primary>criticality</primary><secondary>Process</secondary></indexterm>
+<indexterm><primary>Process</primary><secondary>criticality</secondary></indexterm>
+<para><computeroutput>unsigned int Process::criticality</computeroutput></para><para>
+Definition at line 167 of file tl.h.</para>
+    </section><anchor xml:id="_class_process_1a125e902953b35206d7d2979e11b56d86"/>    <section>
+    <title>dataSizeMap</title>
+<indexterm><primary>dataSizeMap</primary><secondary>Process</secondary></indexterm>
+<indexterm><primary>Process</primary><secondary>dataSizeMap</secondary></indexterm>
+<para><computeroutput>map&lt;string, unsigned int&gt; Process::dataSizeMap</computeroutput></para><para>
+Definition at line 171 of file tl.h.</para>
+    </section><anchor xml:id="_class_process_1aa4ff148aceb9f05d1d5a5152e610a322"/>    <section>
+    <title>dataType</title>
+<indexterm><primary>dataType</primary><secondary>Process</secondary></indexterm>
+<indexterm><primary>Process</primary><secondary>dataType</secondary></indexterm>
+<para><computeroutput>unsigned int Process::dataType</computeroutput></para><para>
+Definition at line 169 of file tl.h.</para>
+    </section><anchor xml:id="_class_process_1a04c66e1f8802aa8528226df19a5d9516"/>    <section>
+    <title>energy</title>
+<indexterm><primary>energy</primary><secondary>Process</secondary></indexterm>
+<indexterm><primary>Process</primary><secondary>energy</secondary></indexterm>
+<para><computeroutput>float Process::energy</computeroutput></para><para>
+Definition at line 178 of file tl.h.</para>
+    </section><anchor xml:id="_class_process_1a70972fe640d0989f28bd451af196615c"/>    <section>
+    <title>eqGate</title>
+<indexterm><primary>eqGate</primary><secondary>Process</secondary></indexterm>
+<indexterm><primary>Process</primary><secondary>eqGate</secondary></indexterm>
+<para><computeroutput>float Process::eqGate</computeroutput></para><para>
+Definition at line 168 of file tl.h.</para>
+    </section><anchor xml:id="_class_process_1af4fcdaeb47e30030e4d4877232b6c135"/>    <section>
+    <title>id</title>
+<indexterm><primary>id</primary><secondary>Process</secondary></indexterm>
+<indexterm><primary>Process</primary><secondary>id</secondary></indexterm>
+<para><computeroutput>unsigned int Process::id</computeroutput></para><para>
+Definition at line 165 of file tl.h.</para>
+    </section><anchor xml:id="_class_process_1ab18c69089c09584e0d78630fa782ee93"/>    <section>
+    <title>load</title>
+<indexterm><primary>load</primary><secondary>Process</secondary></indexterm>
+<indexterm><primary>Process</primary><secondary>load</secondary></indexterm>
+<para><computeroutput>map&lt;int,float&gt; Process::load</computeroutput></para><para>
+Definition at line 175 of file tl.h.</para>
+    </section><anchor xml:id="_class_process_1a8458c9ab0528b0f5fccb56968c1eb577"/>    <section>
+    <title>name</title>
+<indexterm><primary>name</primary><secondary>Process</secondary></indexterm>
+<indexterm><primary>Process</primary><secondary>name</secondary></indexterm>
+<para><computeroutput>string Process::name</computeroutput></para><para>
+Definition at line 164 of file tl.h.</para>
+    </section><anchor xml:id="_class_process_1ae03e5ff2b64628843a8436bea9703b70"/>    <section>
+    <title>priority</title>
+<indexterm><primary>priority</primary><secondary>Process</secondary></indexterm>
+<indexterm><primary>Process</primary><secondary>priority</secondary></indexterm>
+<para><computeroutput>unsigned int Process::priority</computeroutput></para><para>
+Definition at line 166 of file tl.h.</para>
+    </section><anchor xml:id="_class_process_1a47be8c61a3a5460452753dc98b68389f"/>    <section>
+    <title>processTime</title>
+<indexterm><primary>processTime</primary><secondary>Process</secondary></indexterm>
+<indexterm><primary>Process</primary><secondary>processTime</secondary></indexterm>
+<para><computeroutput>sc_time Process::processTime</computeroutput></para><para>
+Definition at line 177 of file tl.h.</para>
+<para>
+Referenced by SystemManager::generateProcessInstances().</para>
+    </section><anchor xml:id="_class_process_1ab824045bdc37b05cd9182fda746610b5"/>    <section>
+    <title>profiling</title>
+<indexterm><primary>profiling</primary><secondary>Process</secondary></indexterm>
+<indexterm><primary>Process</primary><secondary>profiling</secondary></indexterm>
+<para><computeroutput>unsigned int Process::profiling</computeroutput></para><para>
+Definition at line 176 of file tl.h.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+HepsycodeDesign/src/<link linkend="_tl_8h">tl.h</link>HepsycodeDesign/src/<link linkend="_tl_8cpp">tl.cpp</link></section>
+</section>

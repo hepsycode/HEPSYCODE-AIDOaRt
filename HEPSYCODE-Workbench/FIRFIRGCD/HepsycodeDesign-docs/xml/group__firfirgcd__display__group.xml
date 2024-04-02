@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="group__firfirgcd__display__group" kind="group">
+    <compoundname>firfirgcd_display_group</compoundname>
+    <title>FirFirGCD Display.</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__firfirgcd__display__group_1ga62f1837ecdb769140a861dbc2af2abdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SC_MODULE</definition>
+        <argsstring>(display)</argsstring>
+        <name>SC_MODULE</name>
+        <param>
+          <type>display</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/display.h" line="83" column="1" bodyfile="HepsycodeDesign/src/display.h" bodystart="83" bodyend="96"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Display Implementation. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>V. Muttillo, L. Pomante </para>
+</simplesect>
+<simplesect kind="date"><para>Apr. 2022 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

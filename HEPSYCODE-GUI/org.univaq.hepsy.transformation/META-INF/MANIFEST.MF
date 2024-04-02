@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: transformation
+Bundle-SymbolicName: org.univaq.hepsy.transformation;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Export-Package: transformationTest
+Require-Bundle: org.eclipse.emf.ecore.xmi,
+ com.google.guava,
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.xtend.lib,
+ org.eclipse.xtend.lib.macro,
+ org.eclipse.ui;bundle-version="3.108.1",
+ org.univaq.hepsy;bundle-version="0.1.0"
+

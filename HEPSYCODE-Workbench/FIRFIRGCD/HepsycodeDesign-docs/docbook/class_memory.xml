@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_memory">
+<title>Memory Class Reference</title>
+<indexterm><primary>Memory</primary></indexterm>
+<para>
+<computeroutput>#include &lt;tl.h&gt;</computeroutput>
+</para>
+Collaboration diagram for Memory:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_memory__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_memory_1a9f8f1bf0bd47994bf6e2d64ddcdf9302">Memory</link> (unsigned int code, unsigned int data)</para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_class_memory_1a6c9d8edd683dbae1f59f0a9aa3ef2424">getCodeSize</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_memory_1a1f00ca41f42ada4525f9bae30e1bced4">setCodeSize</link> (unsigned int c)</para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_class_memory_1ab361eff2cef17729f170bb94e431efbb">getDataSize</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_memory_1a50da769112b9a636b5fd0b8194bbb1cc">setDataSize</link> (unsigned int c)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>unsigned int <link linkend="_class_memory_1ab9700fb68b6db81bed6115794f9d0c22">codeSize</link></para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_class_memory_1a46b899813a58e32a87d04599d63ca163">dataSize</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 144 of file tl.h.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_memory_1a9f8f1bf0bd47994bf6e2d64ddcdf9302"/>    <section>
+    <title>Memory()</title>
+<indexterm><primary>Memory</primary><secondary>Memory</secondary></indexterm>
+<indexterm><primary>Memory</primary><secondary>Memory</secondary></indexterm>
+<para><computeroutput>Memory::Memory (unsigned int code, unsigned int data)</computeroutput></para><para>
+Definition at line 448 of file tl.cpp.</para>
+<programlisting>448 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+449 &#32;&#32;&#32;&#32;this-&gt;<link linkend="_class_memory_1ab9700fb68b6db81bed6115794f9d0c22">codeSize</link>&#32;=&#32;c;
+450 &#32;&#32;&#32;&#32;this-&gt;<link linkend="_class_memory_1a46b899813a58e32a87d04599d63ca163">dataSize</link>&#32;=&#32;d;
+451 }
+</programlisting></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_memory_1a6c9d8edd683dbae1f59f0a9aa3ef2424"/>    <section>
+    <title>getCodeSize()</title>
+<indexterm><primary>getCodeSize</primary><secondary>Memory</secondary></indexterm>
+<indexterm><primary>Memory</primary><secondary>getCodeSize</secondary></indexterm>
+<para><computeroutput>unsigned int Memory::getCodeSize ( )</computeroutput></para><para>
+Definition at line 454 of file tl.cpp.</para>
+<programlisting>454 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+455 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_memory_1ab9700fb68b6db81bed6115794f9d0c22">codeSize</link>;
+456 }
+</programlisting>    </section><anchor xml:id="_class_memory_1ab361eff2cef17729f170bb94e431efbb"/>    <section>
+    <title>getDataSize()</title>
+<indexterm><primary>getDataSize</primary><secondary>Memory</secondary></indexterm>
+<indexterm><primary>Memory</primary><secondary>getDataSize</secondary></indexterm>
+<para><computeroutput>unsigned int Memory::getDataSize ( )</computeroutput></para><para>
+Definition at line 462 of file tl.cpp.</para>
+<programlisting>462 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+463 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_memory_1a46b899813a58e32a87d04599d63ca163">dataSize</link>;
+464 }
+</programlisting>    </section><anchor xml:id="_class_memory_1a1f00ca41f42ada4525f9bae30e1bced4"/>    <section>
+    <title>setCodeSize()</title>
+<indexterm><primary>setCodeSize</primary><secondary>Memory</secondary></indexterm>
+<indexterm><primary>Memory</primary><secondary>setCodeSize</secondary></indexterm>
+<para><computeroutput>void Memory::setCodeSize (unsigned int c)</computeroutput></para><para>
+Definition at line 458 of file tl.cpp.</para>
+<programlisting>458 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+459 &#32;&#32;&#32;&#32;this-&gt;<link linkend="_class_memory_1ab9700fb68b6db81bed6115794f9d0c22">codeSize</link>&#32;=&#32;c;
+460 }
+</programlisting>    </section><anchor xml:id="_class_memory_1a50da769112b9a636b5fd0b8194bbb1cc"/>    <section>
+    <title>setDataSize()</title>
+<indexterm><primary>setDataSize</primary><secondary>Memory</secondary></indexterm>
+<indexterm><primary>Memory</primary><secondary>setDataSize</secondary></indexterm>
+<para><computeroutput>void Memory::setDataSize (unsigned int c)</computeroutput></para><para>
+Definition at line 466 of file tl.cpp.</para>
+<programlisting>466 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+467 &#32;&#32;&#32;&#32;this-&gt;<link linkend="_class_memory_1a46b899813a58e32a87d04599d63ca163">dataSize</link>&#32;=&#32;d;
+468 }
+</programlisting></section>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_class_memory_1ab9700fb68b6db81bed6115794f9d0c22"/>    <section>
+    <title>codeSize</title>
+<indexterm><primary>codeSize</primary><secondary>Memory</secondary></indexterm>
+<indexterm><primary>Memory</primary><secondary>codeSize</secondary></indexterm>
+<para><computeroutput>unsigned int Memory::codeSize<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 147 of file tl.h.</para>
+    </section><anchor xml:id="_class_memory_1a46b899813a58e32a87d04599d63ca163"/>    <section>
+    <title>dataSize</title>
+<indexterm><primary>dataSize</primary><secondary>Memory</secondary></indexterm>
+<indexterm><primary>Memory</primary><secondary>dataSize</secondary></indexterm>
+<para><computeroutput>unsigned int Memory::dataSize<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 148 of file tl.h.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+HepsycodeDesign/src/<link linkend="_tl_8h">tl.h</link>HepsycodeDesign/src/<link linkend="_tl_8cpp">tl.cpp</link></section>
+</section>

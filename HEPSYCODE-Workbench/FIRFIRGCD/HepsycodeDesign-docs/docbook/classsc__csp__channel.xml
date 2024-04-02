@@ -1,0 +1,320 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classsc__csp__channel">
+<title>sc_csp_channel&lt; T &gt; Class Template Reference</title>
+<indexterm><primary>sc_csp_channel&lt; T &gt;</primary></indexterm>
+<para>
+<computeroutput>#include &lt;sc_csp_channel.h&gt;</computeroutput>
+</para>
+Inheritance diagram for sc_csp_channel&lt; T &gt;:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classsc__csp__channel__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for sc_csp_channel&lt; T &gt;:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classsc__csp__channel__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classsc__csp__channel_1a18caf07ac6dda7298155bf5bee992f81">sc_csp_channel</link> (unsigned int channel_id=0)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_group__firfirgcd__csp__channel__group_1ga5bbbddcd88383d3ed9ee425ad87ee58c">register_port</link> (sc_port_base &amp;, const char *)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_group__firfirgcd__csp__channel__group_1ga23046a4820dcf9ef26a75eba9cb7d49b">read</link> (T &amp;)</para>
+</listitem>
+            <listitem><para>virtual T <link linkend="_group__firfirgcd__csp__channel__group_1gaf3eb60ce6aecbe88c0e72fdb19a1f7af">read</link> ()</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_group__firfirgcd__csp__channel__group_1gaf8a9ace576ff2e0462c8db276f9f388d">write</link> (const T &amp;)</para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_group__firfirgcd__csp__channel__group_1gab1a08e5d4129f9647e573af0c4ca4f30">read_test</link> ()</para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_group__firfirgcd__csp__channel__group_1ga3566fb8ed3dc3ba7ab7d6dbe17787153">write_test</link> ()</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_group__firfirgcd__csp__channel__group_1gaaed132e73280fe2a46b14604240832bc">register_alt</link> ()</para>
+</listitem>
+            <listitem><para>virtual const sc_event &amp; <link linkend="_group__firfirgcd__csp__channel__group_1ga40cb801a3a15df214563c89160c6d19c">get_alt_event</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_classsc__csp__channel_1a189b4ad7e6190ef15dde076380ff157f">operator T</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_classsc__csp__channel">sc_csp_channel</link>&lt; T &gt; &amp; <link linkend="_classsc__csp__channel_1af613528dfec5c1d151cce1c5349d16a4">operator=</link> (const T &amp;a)</para>
+</listitem>
+            <listitem><para>void <link linkend="_group__firfirgcd__csp__channel__group_1ga216706630fbd1f222b428cc4e6aa523d">trace</link> (sc_trace_file *tf) const</para>
+</listitem>
+            <listitem><para>virtual const char * <link linkend="_classsc__csp__channel_1a60ae57ddb1ebd031e4ed21094a49a48b">kind</link> () const</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>unsigned int <link linkend="_classsc__csp__channel_1aed1aa9cb465c4a9c7751169994408c72">id</link></para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_classsc__csp__channel_1a5bef0234cd8c0762891d104dd4e7b68a">w_id</link></para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_classsc__csp__channel_1ae16790111d142e48baf4563eb5e44069">r_id</link></para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_classsc__csp__channel_1affca8dbc03ca31ac85f54766040aba41">width</link></para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_classsc__csp__channel_1a36b454aeb9b50a4094f31801a6976b0f">num</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_classsc__csp__channel_1a6508172b749b9dadf1824f5e816a32ed">IPC</link></para>
+</listitem>
+            <listitem><para>sc_time <link linkend="_classsc__csp__channel_1a5cd83229e038e07f237512df3df4adf9">waiting_time</link></para>
+</listitem>
+            <listitem><para>sc_time <link linkend="_classsc__csp__channel_1ab0977c6aab0732a7946a73aa4b2e6de8">working_time</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_classsc__csp__channel_1a58737a4adf049b01ddce1acbbb7c5115">partial_energy</link></para>
+</listitem>
+            <listitem><para>double <link linkend="_classsc__csp__channel_1a97c55d92a3c04d41300ffdb208eabc92">working_energy</link></para>
+</listitem>
+            <listitem><para>sc_time <link linkend="_classsc__csp__channel_1a4609ce8351fc80bfa9041292f6722d3c">tcomm</link></para>
+</listitem>
+            <listitem><para>sc_time <link linkend="_classsc__csp__channel_1a87dc80bcdbac9e16d542da60040795df">tacomm</link></para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_classsc__csp__channel_1aae2e852312f70713be417eec3bd51b25">physical_width</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_group__firfirgcd__csp__channel__group_1ga8be7bf7ee4f0c35e684b3de9a5163705">init</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para>sc_event <link linkend="_classsc__csp__channel_1a014541bbd872463dd525b35e951ee9ba">ready_to_read_event</link></para>
+</listitem>
+            <listitem><para>sc_event <link linkend="_classsc__csp__channel_1aab17ea7d52d31f39e68eb4472cb27a4a">ready_to_write_event</link></para>
+</listitem>
+            <listitem><para>sc_event <link linkend="_classsc__csp__channel_1acf1aadf77836e165d8b7672500bd2dc7">ready_alt_event</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_classsc__csp__channel_1ae716d02584a29463adb04def170fce8e">ready_to_read</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_classsc__csp__channel_1ab7c20a9236f789c6e64d8c83ae19967f">ready_to_write</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_classsc__csp__channel_1aaeef06ac96bbb3468f9aa907c5b39253">enable_alt_events</link></para>
+</listitem>
+            <listitem><para>T <link linkend="_classsc__csp__channel_1aa4ab2439d490053e231a59dd9b77e6d6">csp_buf</link></para>
+</listitem>
+            <listitem><para>sc_port_base * <link linkend="_classsc__csp__channel_1a03a5aa44e377fea90b93e68e481ad1e1">m_reader</link></para>
+</listitem>
+            <listitem><para>sc_port_base * <link linkend="_classsc__csp__channel_1ad4a06e1cfab0e87829b914b4230d2acb">m_writer</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;class T&gt;
+class sc_csp_channel&lt; T &gt;</title></simplesect>
+
+<para>
+Definition at line 101 of file sc_csp_channel.h.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classsc__csp__channel_1a18caf07ac6dda7298155bf5bee992f81"/>    <section>
+    <title>sc_csp_channel()</title>
+<indexterm><primary>sc_csp_channel</primary><secondary>sc_csp_channel&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>sc_csp_channel&lt; T &gt;</primary><secondary>sc_csp_channel</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput><link linkend="_classsc__csp__channel">sc_csp_channel</link>&lt; T &gt;::<link linkend="_classsc__csp__channel">sc_csp_channel</link> (unsigned int channel_id = <computeroutput>0</computeroutput>
+)<computeroutput>[inline]</computeroutput>, <computeroutput>[explicit]</computeroutput></computeroutput></para><para>
+Definition at line 110 of file sc_csp_channel.h.</para>
+<programlisting>110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:<link linkend="_classsc__prim__channel">sc_prim_channel</link>(&#32;sc_gen_unique_name(&#32;<emphasis role="stringliteral">&quot;csp_channel&quot;</emphasis>&#32;)&#32;),
+111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1a014541bbd872463dd525b35e951ee9ba">ready_to_read_event</link>(sc_gen_unique_name(&#32;<emphasis role="stringliteral">&quot;read_event&quot;</emphasis>&#32;)),
+112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1aab17ea7d52d31f39e68eb4472cb27a4a">ready_to_write_event</link>(sc_gen_unique_name(<emphasis role="stringliteral">&quot;write_event&quot;</emphasis>&#32;)),
+113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1acf1aadf77836e165d8b7672500bd2dc7">ready_alt_event</link>(sc_gen_unique_name(<emphasis role="stringliteral">&quot;alt_event&quot;</emphasis>))
+114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">id</emphasis>=channel_id;
+116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1a5bef0234cd8c0762891d104dd4e7b68a">w_id</link>=&#32;<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1a7dcc3ae8736a6aad7e27f276706205a3">VCH</link>[<link linkend="_classsc__csp__channel_1aed1aa9cb465c4a9c7751169994408c72">id</link>].getW_id();
+117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1ae16790111d142e48baf4563eb5e44069">r_id</link>=&#32;<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1a7dcc3ae8736a6aad7e27f276706205a3">VCH</link>[<link linkend="_classsc__csp__channel_1aed1aa9cb465c4a9c7751169994408c72">id</link>].getR_id();
+118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1affca8dbc03ca31ac85f54766040aba41">width</link>=&#32;<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1a7dcc3ae8736a6aad7e27f276706205a3">VCH</link>[<link linkend="_classsc__csp__channel_1aed1aa9cb465c4a9c7751169994408c72">id</link>].getWidth();
+119 
+120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1a4609ce8351fc80bfa9041292f6722d3c">tcomm</link>=&#32;<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1af28a1744a2d964a7047c31c6a5f1644a">VPL</link>[<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1ab75b55327c942c6950f67c14ba9dea08">allocationCH_PL</link>[<link linkend="_classsc__csp__channel_1aed1aa9cb465c4a9c7751169994408c72">id</link>]].getTcomm();
+121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1a87dc80bcdbac9e16d542da60040795df">tacomm</link>=&#32;<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1af28a1744a2d964a7047c31c6a5f1644a">VPL</link>[<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1ab75b55327c942c6950f67c14ba9dea08">allocationCH_PL</link>[<link linkend="_classsc__csp__channel_1aed1aa9cb465c4a9c7751169994408c72">id</link>]].getTAcomm();
+122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classsc__csp__channel_1aae2e852312f70713be417eec3bd51b25">physical_width</link>=&#32;<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1af28a1744a2d964a7047c31c6a5f1644a">VPL</link>[<link linkend="_group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad">pSystemManager</link>-&gt;<link linkend="_class_system_manager_1ab75b55327c942c6950f67c14ba9dea08">allocationCH_PL</link>[<link linkend="_classsc__csp__channel_1aed1aa9cb465c4a9c7751169994408c72">id</link>]].getPhysicalWidth();
+123 
+124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_group__firfirgcd__csp__channel__group_1ga8be7bf7ee4f0c35e684b3de9a5163705">init</link>();
+125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+126 
+127 
+</programlisting><para>
+References SystemManager::allocationCH_PL, pSystemManager, SystemManager::VCH, and SystemManager::VPL.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classsc__csp__channel_1a60ae57ddb1ebd031e4ed21094a49a48b"/>    <section>
+    <title>kind()</title>
+<indexterm><primary>kind</primary><secondary>sc_csp_channel&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>sc_csp_channel&lt; T &gt;</primary><secondary>kind</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>virtual const char* <link linkend="_classsc__csp__channel">sc_csp_channel</link>&lt; T &gt;::kind ( ) const<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Definition at line 156 of file sc_csp_channel.h.</para>
+<programlisting>157 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:
+</programlisting>    </section><anchor xml:id="_classsc__csp__channel_1a189b4ad7e6190ef15dde076380ff157f"/>    <section>
+    <title>operator T()</title>
+<indexterm><primary>operator T</primary><secondary>sc_csp_channel&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>sc_csp_channel&lt; T &gt;</primary><secondary>operator T</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput><link linkend="_classsc__csp__channel">sc_csp_channel</link>&lt; T &gt;::operator T ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line 148 of file sc_csp_channel.h.</para>
+<programlisting>150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<link linkend="_group__firfirgcd__csp__channel__group_1gaf8a9ace576ff2e0462c8db276f9f388d">write</link>(&#32;a&#32;);&#32;<emphasis role="keywordflow">return</emphasis>&#32;*<emphasis role="keyword">this</emphasis>;&#32;}
+</programlisting>    </section><anchor xml:id="_classsc__csp__channel_1af613528dfec5c1d151cce1c5349d16a4"/>    <section>
+    <title>operator=()</title>
+<indexterm><primary>operator=</primary><secondary>sc_csp_channel&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>sc_csp_channel&lt; T &gt;</primary><secondary>operator=</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput><link linkend="_classsc__csp__channel">sc_csp_channel</link>&lt;T&gt;&amp; <link linkend="_classsc__csp__channel">sc_csp_channel</link>&lt; T &gt;::operator= (const T &amp; a)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line 151 of file sc_csp_channel.h.</para>
+<programlisting>155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;sc_csp_channel&quot;</emphasis>;&#32;}
+</programlisting></section>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_classsc__csp__channel_1aa4ab2439d490053e231a59dd9b77e6d6"/>    <section>
+    <title>csp_buf</title>
+<indexterm><primary>csp_buf</primary><secondary>sc_csp_channel&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>sc_csp_channel&lt; T &gt;</primary><secondary>csp_buf</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>T <link linkend="_classsc__csp__channel">sc_csp_channel</link>&lt; T &gt;::csp_buf<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line 171 of file sc_csp_channel.h.</para>
+    </section><anchor xml:id="_classsc__csp__channel_1aaeef06ac96bbb3468f9aa907c5b39253"/>    <section>
+    <title>enable_alt_events</title>
+<indexterm><primary>enable_alt_events</primary><secondary>sc_csp_channel&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>sc_csp_channel&lt; T &gt;</primary><secondary>enable_alt_events</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>bool <link linkend="_classsc__csp__channel">sc_csp_channel</link>&lt; T &gt;::enable_alt_events<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line 169 of file sc_csp_channel.h.</para>
+    </section><anchor xml:id="_classsc__csp__channel_1aed1aa9cb465c4a9c7751169994408c72"/>    <section>
+    <title>id</title>
+<indexterm><primary>id</primary><secondary>sc_csp_channel&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>sc_csp_channel&lt; T &gt;</primary><secondary>id</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>unsigned int <link linkend="_classsc__csp__channel">sc_csp_channel</link>&lt; T &gt;::id</computeroutput></para><para>
+Definition at line 174 of file sc_csp_channel.h.</para>
+    </section><anchor xml:id="_classsc__csp__channel_1a6508172b749b9dadf1824f5e816a32ed"/>    <section>
+    <title>IPC</title>
+<indexterm><primary>IPC</primary><secondary>sc_csp_channel&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>sc_csp_channel&lt; T &gt;</primary><secondary>IPC</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>bool <link linkend="_classsc__csp__channel">sc_csp_channel</link>&lt; T &gt;::IPC</computeroutput></para><para>
+Definition at line 179 of file sc_csp_channel.h.</para>
+    </section><anchor xml:id="_classsc__csp__channel_1a03a5aa44e377fea90b93e68e481ad1e1"/>    <section>
+    <title>m_reader</title>
+<indexterm><primary>m_reader</primary><secondary>sc_csp_channel&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>sc_csp_channel&lt; T &gt;</primary><secondary>m_reader</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>sc_port_base* <link linkend="_classsc__csp__channel">sc_csp_channel</link>&lt; T &gt;::m_reader<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line 192 of file sc_csp_channel.h.</para>
+    </section><anchor xml:id="_classsc__csp__channel_1ad4a06e1cfab0e87829b914b4230d2acb"/>    <section>
+    <title>m_writer</title>
+<indexterm><primary>m_writer</primary><secondary>sc_csp_channel&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>sc_csp_channel&lt; T &gt;</primary><secondary>m_writer</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>sc_port_base* <link linkend="_classsc__csp__channel">sc_csp_channel</link>&lt; T &gt;::m_writer<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line 193 of file sc_csp_channel.h.</para>
+    </section><anchor xml:id="_classsc__csp__channel_1a36b454aeb9b50a4094f31801a6976b0f"/>    <section>
+    <title>num</title>
+<indexterm><primary>num</primary><secondary>sc_csp_channel&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>sc_csp_channel&lt; T &gt;</primary><secondary>num</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>unsigned int <link linkend="_classsc__csp__channel">sc_csp_channel</link>&lt; T &gt;::num</computeroutput></para><para>
+Definition at line 178 of file sc_csp_channel.h.</para>
+    </section><anchor xml:id="_classsc__csp__channel_1a58737a4adf049b01ddce1acbbb7c5115"/>    <section>
+    <title>partial_energy</title>
+<indexterm><primary>partial_energy</primary><secondary>sc_csp_channel&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>sc_csp_channel&lt; T &gt;</primary><secondary>partial_energy</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>double <link linkend="_classsc__csp__channel">sc_csp_channel</link>&lt; T &gt;::partial_energy</computeroutput></para><para>
+Definition at line 184 of file sc_csp_channel.h.</para>
+    </section><anchor xml:id="_classsc__csp__channel_1aae2e852312f70713be417eec3bd51b25"/>    <section>
+    <title>physical_width</title>
+<indexterm><primary>physical_width</primary><secondary>sc_csp_channel&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>sc_csp_channel&lt; T &gt;</primary><secondary>physical_width</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>unsigned int <link linkend="_classsc__csp__channel">sc_csp_channel</link>&lt; T &gt;::physical_width</computeroutput></para><para>
+Definition at line 189 of file sc_csp_channel.h.</para>
+    </section><anchor xml:id="_classsc__csp__channel_1ae16790111d142e48baf4563eb5e44069"/>    <section>
+    <title>r_id</title>
+<indexterm><primary>r_id</primary><secondary>sc_csp_channel&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>sc_csp_channel&lt; T &gt;</primary><secondary>r_id</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>unsigned int <link linkend="_classsc__csp__channel">sc_csp_channel</link>&lt; T &gt;::r_id</computeroutput></para><para>
+Definition at line 176 of file sc_csp_channel.h.</para>
+    </section><anchor xml:id="_classsc__csp__channel_1acf1aadf77836e165d8b7672500bd2dc7"/>    <section>
+    <title>ready_alt_event</title>
+<indexterm><primary>ready_alt_event</primary><secondary>sc_csp_channel&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>sc_csp_channel&lt; T &gt;</primary><secondary>ready_alt_event</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>sc_event <link linkend="_classsc__csp__channel">sc_csp_channel</link>&lt; T &gt;::ready_alt_event<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line 165 of file sc_csp_channel.h.</para>
+    </section><anchor xml:id="_classsc__csp__channel_1ae716d02584a29463adb04def170fce8e"/>    <section>
+    <title>ready_to_read</title>
+<indexterm><primary>ready_to_read</primary><secondary>sc_csp_channel&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>sc_csp_channel&lt; T &gt;</primary><secondary>ready_to_read</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>bool <link linkend="_classsc__csp__channel">sc_csp_channel</link>&lt; T &gt;::ready_to_read<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line 167 of file sc_csp_channel.h.</para>
+    </section><anchor xml:id="_classsc__csp__channel_1a014541bbd872463dd525b35e951ee9ba"/>    <section>
+    <title>ready_to_read_event</title>
+<indexterm><primary>ready_to_read_event</primary><secondary>sc_csp_channel&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>sc_csp_channel&lt; T &gt;</primary><secondary>ready_to_read_event</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>sc_event <link linkend="_classsc__csp__channel">sc_csp_channel</link>&lt; T &gt;::ready_to_read_event<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line 163 of file sc_csp_channel.h.</para>
+    </section><anchor xml:id="_classsc__csp__channel_1ab7c20a9236f789c6e64d8c83ae19967f"/>    <section>
+    <title>ready_to_write</title>
+<indexterm><primary>ready_to_write</primary><secondary>sc_csp_channel&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>sc_csp_channel&lt; T &gt;</primary><secondary>ready_to_write</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>bool <link linkend="_classsc__csp__channel">sc_csp_channel</link>&lt; T &gt;::ready_to_write<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line 168 of file sc_csp_channel.h.</para>
+    </section><anchor xml:id="_classsc__csp__channel_1aab17ea7d52d31f39e68eb4472cb27a4a"/>    <section>
+    <title>ready_to_write_event</title>
+<indexterm><primary>ready_to_write_event</primary><secondary>sc_csp_channel&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>sc_csp_channel&lt; T &gt;</primary><secondary>ready_to_write_event</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>sc_event <link linkend="_classsc__csp__channel">sc_csp_channel</link>&lt; T &gt;::ready_to_write_event<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line 164 of file sc_csp_channel.h.</para>
+    </section><anchor xml:id="_classsc__csp__channel_1a87dc80bcdbac9e16d542da60040795df"/>    <section>
+    <title>tacomm</title>
+<indexterm><primary>tacomm</primary><secondary>sc_csp_channel&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>sc_csp_channel&lt; T &gt;</primary><secondary>tacomm</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>sc_time <link linkend="_classsc__csp__channel">sc_csp_channel</link>&lt; T &gt;::tacomm</computeroutput></para><para>
+Definition at line 188 of file sc_csp_channel.h.</para>
+    </section><anchor xml:id="_classsc__csp__channel_1a4609ce8351fc80bfa9041292f6722d3c"/>    <section>
+    <title>tcomm</title>
+<indexterm><primary>tcomm</primary><secondary>sc_csp_channel&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>sc_csp_channel&lt; T &gt;</primary><secondary>tcomm</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>sc_time <link linkend="_classsc__csp__channel">sc_csp_channel</link>&lt; T &gt;::tcomm</computeroutput></para><para>
+Definition at line 187 of file sc_csp_channel.h.</para>
+    </section><anchor xml:id="_classsc__csp__channel_1a5bef0234cd8c0762891d104dd4e7b68a"/>    <section>
+    <title>w_id</title>
+<indexterm><primary>w_id</primary><secondary>sc_csp_channel&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>sc_csp_channel&lt; T &gt;</primary><secondary>w_id</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>unsigned int <link linkend="_classsc__csp__channel">sc_csp_channel</link>&lt; T &gt;::w_id</computeroutput></para><para>
+Definition at line 175 of file sc_csp_channel.h.</para>
+    </section><anchor xml:id="_classsc__csp__channel_1a5cd83229e038e07f237512df3df4adf9"/>    <section>
+    <title>waiting_time</title>
+<indexterm><primary>waiting_time</primary><secondary>sc_csp_channel&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>sc_csp_channel&lt; T &gt;</primary><secondary>waiting_time</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>sc_time <link linkend="_classsc__csp__channel">sc_csp_channel</link>&lt; T &gt;::waiting_time</computeroutput></para><para>
+Definition at line 181 of file sc_csp_channel.h.</para>
+    </section><anchor xml:id="_classsc__csp__channel_1affca8dbc03ca31ac85f54766040aba41"/>    <section>
+    <title>width</title>
+<indexterm><primary>width</primary><secondary>sc_csp_channel&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>sc_csp_channel&lt; T &gt;</primary><secondary>width</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>unsigned int <link linkend="_classsc__csp__channel">sc_csp_channel</link>&lt; T &gt;::width</computeroutput></para><para>
+Definition at line 177 of file sc_csp_channel.h.</para>
+    </section><anchor xml:id="_classsc__csp__channel_1a97c55d92a3c04d41300ffdb208eabc92"/>    <section>
+    <title>working_energy</title>
+<indexterm><primary>working_energy</primary><secondary>sc_csp_channel&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>sc_csp_channel&lt; T &gt;</primary><secondary>working_energy</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>double <link linkend="_classsc__csp__channel">sc_csp_channel</link>&lt; T &gt;::working_energy</computeroutput></para><para>
+Definition at line 185 of file sc_csp_channel.h.</para>
+    </section><anchor xml:id="_classsc__csp__channel_1ab0977c6aab0732a7946a73aa4b2e6de8"/>    <section>
+    <title>working_time</title>
+<indexterm><primary>working_time</primary><secondary>sc_csp_channel&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>sc_csp_channel&lt; T &gt;</primary><secondary>working_time</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>sc_time <link linkend="_classsc__csp__channel">sc_csp_channel</link>&lt; T &gt;::working_time</computeroutput></para><para>
+Definition at line 182 of file sc_csp_channel.h.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+HepsycodeDesign/src/<link linkend="_sc__csp__channel_8h">sc_csp_channel.h</link></section>
+</section>

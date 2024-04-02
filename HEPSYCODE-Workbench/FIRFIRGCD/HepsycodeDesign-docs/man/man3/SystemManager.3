@@ -1,0 +1,1365 @@
+.TH "SystemManager" 3 "Mon Mar 20 2023" "FirFirGCD Application" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SystemManager
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SystemManager\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSystemManager\fP ()"
+.br
+.ti -1c
+.RI "vector< \fBProcess\fP > \fBgenerateProcessInstances\fP ()"
+.br
+.ti -1c
+.RI "vector< \fBChannel\fP > \fBgenerateChannelInstances\fP ()"
+.br
+.ti -1c
+.RI "void \fBPS_Profiling\fP (int processId)"
+.br
+.ti -1c
+.RI "bool \fBcheckSPP\fP (int processId)"
+.br
+.ti -1c
+.RI "void \fBdeleteConcXmlConCom\fP ()"
+.br
+.ti -1c
+.RI "void \fBupdateXmlConCom\fP (float matrixCONC_PS_N[10][10], unsigned int matrixCOM[10][10], float matrixCONC_CH_N[15][15])"
+.br
+.ti -1c
+.RI "vector< int > \fBgetAllocationPS_BB\fP (int \fBbb_id\fP)"
+.br
+.ti -1c
+.RI "sc_time \fBupdateSimulatedTime\fP (int processId)"
+.br
+.ti -1c
+.RI "void \fBincreaseSimulatedTime\fP (int processId)"
+.br
+.ti -1c
+.RI "void \fBincreaseTimer\fP (int processId, sc_time delta)"
+.br
+.ti -1c
+.RI "float \fBupdateEstimatedEnergy\fP (int processId)"
+.br
+.ti -1c
+.RI "void \fBincreaseEstimatedEnergy\fP (int processId)"
+.br
+.ti -1c
+.RI "void \fBdeleteConcXmlEnergy\fP ()"
+.br
+.ti -1c
+.RI "void \fBupdateXmlEnergy\fP ()"
+.br
+.ti -1c
+.RI "vector< \fBBasicBlock\fP > \fBgenerateBBInstances\fP ()"
+.br
+.ti -1c
+.RI "vector< \fBPhysicalLink\fP > \fBgeneratePhysicalLinkInstances\fP ()"
+.br
+.ti -1c
+.RI "void \fBmappingPS\fP ()"
+.br
+.ti -1c
+.RI "void \fBmappingCH\fP ()"
+.br
+.ti -1c
+.RI "sc_time \fBgetFRT\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetFRT\fP (sc_time x)"
+.br
+.ti -1c
+.RI "float * \fBloadEst\fP (sc_time FRT_n)"
+.br
+.ti -1c
+.RI "float * \fBgetFRL\fP ()"
+.br
+.ti -1c
+.RI "void \fBdeleteConcXmlLoad\fP ()"
+.br
+.ti -1c
+.RI "void \fBupdateXmlLoad\fP ()"
+.br
+.in -1c
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "vector< \fBProcess\fP > \fBVPS\fP"
+.br
+.ti -1c
+.RI "vector< \fBChannel\fP > \fBVCH\fP"
+.br
+.ti -1c
+.RI "vector< \fBBasicBlock\fP > \fBVBB\fP"
+.br
+.ti -1c
+.RI "vector< \fBPhysicalLink\fP > \fBVPL\fP"
+.br
+.ti -1c
+.RI "vector< int > \fBallocationPS_BB\fP"
+.br
+.ti -1c
+.RI "vector< int > \fBallocationCH_PL\fP"
+.br
+.ti -1c
+.RI "float \fBFRL\fP [10]"
+.br
+.ti -1c
+.RI "sc_time \fBFRT\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 86 of file SystemManager\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "SystemManager::SystemManager ()"
+
+.PP
+Definition at line 78 of file SystemManager\&.cpp\&.
+.PP
+.nf
+79 {
+80 
+81     VPS = generateProcessInstances();
+82     VCH = generateChannelInstances();
+83 
+84     VBB = generateBBInstances();
+85     VPL = generatePhysicalLinkInstances();
+86     mappingPS();
+87     mappingCH();
+88 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "bool SystemManager::checkSPP (int processId)"
+
+.PP
+Definition at line 267 of file SystemManager\&.cpp\&.
+.PP
+.nf
+268 {
+269     return VBB[allocationPS_BB[processId]]\&.getProcessors()[0]\&.getProcessorType() == "SPP";
+270 }
+.fi
+.PP
+Referenced by sc_csp_channel< T >::read(), SC_MODULE(), and sc_csp_channel< T >::write()\&.
+.SS "void SystemManager::deleteConcXmlConCom ()"
+
+.PP
+Definition at line 286 of file SystemManager\&.cpp\&.
+.PP
+.nf
+287 {
+288 
+289     pugi::xml_document myDoc;
+290     pugi::xml_parse_result myResult = myDoc\&.load_file("\&./XML/application\&.xml");
+291     cout << "XML Delete result: " << myResult\&.description() << endl;
+292 
+293     //method 2: use object/node structure
+294     pugi::xml_node instancesPS = myDoc\&.child("instancesPS");
+295     xml_node processes = instancesPS\&.child("process");
+296 
+297     for (int i = 0; i < NPS; i++){
+298 
+299         xml_node concom = processes\&.child("concurrency");
+300         for (pugi::xml_node processorId = concom\&.child("processId"); processorId; processorId = processorId\&.next_sibling()) {
+301             concom\&.remove_child(processorId);
+302         }
+303 
+304         xml_node concom2 = processes\&.child("comunication");
+305         for (pugi::xml_node processorId = concom2\&.child("rec"); processorId; processorId = processorId\&.next_sibling()) {
+306             concom2\&.remove_child(processorId);
+307         }
+308 
+309         processes = processes\&.next_sibling();
+310 
+311     }
+312 
+313     xml_node instancesCH = myDoc\&.child("instancesLL");
+314     xml_node processesCH = instancesCH\&.child("logical_link");
+315 
+316     for (int i = 0; i < NCH; i++){
+317 
+318         xml_node concom3 = processesCH\&.child("concurrency");
+319         for (pugi::xml_node processorId = concom3\&.child("channelId"); processorId; processorId = processorId\&.next_sibling()) {
+320             concom3\&.remove_child(processorId);
+321         }
+322 
+323         processesCH = processesCH\&.next_sibling();
+324 
+325     }
+326 
+327     myDoc\&.save_file("\&./XML/application\&.xml");
+328     cout << endl;
+329 }
+.fi
+.PP
+References NCH, and NPS\&.
+.PP
+Referenced by sc_main()\&.
+.SS "void SystemManager::deleteConcXmlEnergy ()"
+
+.PP
+Definition at line 1104 of file SystemManager\&.cpp\&.
+.PP
+.nf
+1104                                            {
+1105         char* temp;
+1106         int Id;
+1107 
+1108         pugi::xml_document myDoc;
+1109         pugi::xml_parse_result myResult = myDoc\&.load_file("\&./XML/application\&.xml");
+1110         cout << "XML Delete result: " << myResult\&.description() << endl;
+1111 
+1112         //method 2: use object/node structure
+1113         pugi::xml_node instancesPS = myDoc\&.child("instancesPS");
+1114         xml_node processes = instancesPS\&.child("process");
+1115         for(int i = 0; i < NPS; i++){
+1116             temp = (char*) processes\&.child_value("id");
+1117             Id = atoi(temp); //id process
+1118 
+1119             xml_node energy = processes\&.child("energy");
+1120             for (pugi::xml_node processorId = energy\&.child("processorId"); processorId; processorId = processorId\&.next_sibling()) {
+1121                 unsigned int processor_id_n = processorId\&.attribute("id")\&.as_int();//
+1122                 float process_load_value = processorId\&.attribute("value")\&.as_float();//
+1123                 if(allocationPS_BB[Id] == processor_id_n){
+1124                     energy\&.remove_child(processorId);
+1125                 }
+1126             }
+1127             processes = processes\&.next_sibling();
+1128         }
+1129         myDoc\&.save_file("\&./XML/application\&.xml");
+1130         cout<<endl;
+1131 
+1133 
+1134         pugi::xml_document myDoc2;
+1135         pugi::xml_parse_result myResult2 = myDoc2\&.load_file("\&./XML/instancesTL\&.xml");
+1136         cout << "XML result: " << myResult2\&.description() << endl;
+1137 
+1138         pugi::xml_node instancesBB = myDoc2\&.child("instancesBB");
+1139         xml_node basicBlock = instancesBB\&.child("basicBlock");
+1140         for(int i = 0; i < NBB; i++){
+1141             temp = (char*) basicBlock\&.child_value("id");
+1142             Id = atoi(temp); //id process
+1143 
+1144             xml_node energyEst = basicBlock\&.child("energyEstimation");
+1145             for (pugi::xml_node energyTOT = energyEst\&.child("energyTOT"); energyTOT; energyTOT = energyTOT\&.next_sibling()) {
+1146                 unsigned int processor_id_n = energyTOT\&.attribute("id")\&.as_int();//
+1147                 float energy_value = energyTOT\&.attribute("value")\&.as_float();//
+1148                 if(Id == allocationPS_BB[2]){
+1149                     energyEst\&.remove_child(energyTOT);
+1150                 }
+1151             }
+1152             basicBlock = basicBlock\&.next_sibling();
+1153         }
+1154         cout << "Saving result: " << myDoc2\&.save_file("\&./XML/instancesTL\&.xml") << endl;
+1155         cout<<endl;
+1156 
+1157     }
+.fi
+.PP
+References NBB, and NPS\&.
+.PP
+Referenced by sc_main()\&.
+.SS "void SystemManager::deleteConcXmlLoad ()"
+
+.PP
+Definition at line 1247 of file SystemManager\&.cpp\&.
+.PP
+.nf
+1247                                          {
+1248         char* temp;
+1249         int Id;
+1250 
+1251         pugi::xml_document myDoc;
+1252         pugi::xml_parse_result myResult = myDoc\&.load_file("\&./XML/application\&.xml");
+1253         cout << "XML Delete result: " << myResult\&.description() << endl;
+1254 
+1255         //method 2: use object/node structure
+1256         pugi::xml_node instancesPS = myDoc\&.child("instancesPS");
+1257         xml_node processes = instancesPS\&.child("process");
+1258             for(int i = 0; i < NPS; i++){
+1259                 temp = (char*) processes\&.child_value("id");
+1260                 Id = atoi(temp); //id process
+1261                 xml_node load = processes\&.child("load");
+1262                 for (pugi::xml_node processorId = load\&.child("processorId"); processorId; processorId = processorId\&.next_sibling()) {
+1263                         unsigned int processor_id_n = processorId\&.attribute("id")\&.as_int();//
+1264                         float process_load_value = processorId\&.attribute("value")\&.as_float();//
+1265                         if(allocationPS_BB[Id] == processor_id_n){
+1266                             load\&.remove_child(processorId);
+1267                         }
+1268                 }
+1269 
+1270                 /*  xml_node WCET = processes\&.child("WCET");
+1271                 for (pugi::xml_node processorId = WCET\&.child("processorId"); processorId; processorId = processorId\&.next_sibling()) {
+1272                     WCET\&.remove_child(processorId);
+1273                 }
+1274 
+1275                 xml_node Period = processes\&.child("Period");
+1276                 for (pugi::xml_node processorId = Period\&.child("processorId"); processorId; processorId = processorId\&.next_sibling()) {
+1277                     Period\&.remove_child(processorId);
+1278                 }
+1279 
+1280                 xml_node Deadline = processes\&.child("Deadline");
+1281                 for (pugi::xml_node processorId = Deadline\&.child("processorId"); processorId; processorId = processorId\&.next_sibling()) {
+1282                     Deadline\&.remove_child(processorId);
+1283                 } */
+1284 
+1285                 processes = processes\&.next_sibling();
+1286             }
+1287         myDoc\&.save_file("\&./XML/application\&.xml");
+1288         cout<<endl;
+1289 
+1290         pugi::xml_document myDoc2;
+1291         pugi::xml_parse_result myResult2 = myDoc2\&.load_file("\&./XML/instancesTL\&.xml");
+1292         cout << "XML result: " << myResult2\&.description() << endl;
+1293 
+1294         pugi::xml_node instancesBB = myDoc2\&.child("instancesBB");
+1295         xml_node basicBlock = instancesBB\&.child("basicBlock");
+1296         for(int i = 0; i < NBB; i++){
+1297             temp = (char*) basicBlock\&.child_value("id");
+1298             Id = atoi(temp); //id process
+1299 
+1300             xml_node loadEst = basicBlock\&.child("loadEstimation");
+1301             for (pugi::xml_node loadTOT = loadEst\&.child("FreeRunningTime"); loadTOT; loadTOT = loadTOT\&.next_sibling()) {
+1302                     unsigned int processor_id_n = loadTOT\&.attribute("id")\&.as_int();//
+1303                     float energy_value = loadTOT\&.attribute("value")\&.as_float();//
+1304                     if(Id == allocationPS_BB[2]){
+1305                         loadEst\&.remove_child(loadTOT);
+1306                     }
+1307             }
+1308             basicBlock = basicBlock\&.next_sibling();
+1309         }
+1310         cout << "Saving result: " << myDoc2\&.save_file("\&./XML/instancesTL\&.xml") << endl;
+1311         myDoc2\&.reset();
+1312         cout<<endl;
+1313 
+1314     }
+.fi
+.PP
+References NBB, and NPS\&.
+.PP
+Referenced by sc_main()\&.
+.SS "vector< \fBBasicBlock\fP > SystemManager::generateBBInstances ()"
+
+.PP
+Definition at line 636 of file SystemManager\&.cpp\&.
+.PP
+.nf
+636                                                      {
+637 
+638     vector<BasicBlock> vbb;
+639 
+640     for (int i = 0; i < NBB; i++){
+641 
+642         BasicBlock bb;
+643 
+644         //BB-ID
+645         bb\&.setId(i);
+646 
+647         //BB-NAME
+648         bb\&.setName("dummy");
+649 
+650         //BB-TYPE
+651         bb\&.setType("dummy");
+652 
+653         // PROCESSING UNIT
+654 
+655         vector<ProcessingUnit> vpu;
+656 
+657         for (int j = 0; j < 4; j++){       // each block contains at most 4 pu
+658 
+659 
+660             ProcessingUnit pu;
+661 
+662             //PU-NAME
+663 
+664             pu\&.setName("dummy");
+665 
+666             //PU-ID
+667             int idPU = j;
+668 
+669             pu\&.setId(idPU);
+670 
+671             //Processor Type
+672             pu\&.setProcessorType("dummy");
+673 
+675             //pu\&.setCost(0);
+676 
+677             //PU-ISA
+678             pu\&.setISA("dummy");
+679 
+680             // PU-Frequency (MHz)
+681             pu\&.setFrequency(0);
+682 
+683             // PU-CC4CS
+684             float** array = new float*[5]; //TODO: eliminare **?
+685 
+686             //Int8
+687             float idCC4CSminint8 = 0;
+688             float idCC4CSmaxint8 = 0;
+689             //Int16
+690 
+691             float idCC4CSminint16 = 0;
+692             float idCC4CSmaxint16 = 0;
+693             //Int32
+694             float idCC4CSminint32 = 0;
+695             float idCC4CSmaxint32 = 0;
+696             //Float
+697             float idCC4CSminfloat = 0;
+698             float idCC4CSmaxfloat = 0;
+699             //Tot
+700             float idCC4CSmin = 0;
+701             float idCC4CSmax = 0;
+702 
+703             //TODO: ciclo con tutti 0!
+704             array[0] = new float[2];
+705             array[0][0] = idCC4CSminint8;
+706             array[0][1] = idCC4CSmaxint8;
+707             array[1] = new float[2];
+708             array[1][0] = idCC4CSminint16;
+709             array[1][1] = idCC4CSmaxint16;
+710             array[2] = new float[2];
+711             array[2][0] = idCC4CSminint32;
+712             array[2][1] = idCC4CSmaxint32;
+713             array[3] = new float[2];
+714             array[3][0] = idCC4CSminfloat;
+715             array[3][1] = idCC4CSmaxfloat;
+716             array[4] = new float[2];
+717             array[4][0] = idCC4CSmin;
+718             array[4][1] = idCC4CSmax;
+719             pu\&.setCC4S(array);
+720 
+721             // PU-Power (W)
+722             pu\&.setPower(0);
+723 
+724             // PU-MIPS
+725             float idMIPS = 0;
+726             pu\&.setMIPS(idMIPS);
+727 
+728             // PU-I4CS
+729             float idI4CSmin = 0;
+730             pu\&.setI4CSmin(idI4CSmin);
+731             float idI4CSmax = 0;
+732             pu\&.setI4CSmax(idI4CSmax);
+733 
+734             // PU-Vdd (V)
+735             float idVdd = 0;
+736             pu\&.setVdd(idVdd);
+737 
+738             // PU-Idd (A)
+739             float idIdd = 0;
+740             pu\&.setIdd(idIdd);
+741 
+742             // PU-overheadCS (us)
+743             float idOver = 0;
+744             pu\&.setOverheadCS(sc_time((int)idOver, SC_US));
+745 
+746             vpu\&.push_back(pu);
+747 
+748         }
+749         bb\&.setProcessor(vpu);
+750 
+751         // LOCAL MEMORY
+752 
+753         //CODE SIZE
+754         bb\&.setCodeSize(0);
+755 
+756         //DATA SIZE
+757         bb\&.setDataSize(0);
+758 
+759         //eQG
+760         bb\&.setEqG(0);
+761 
+762         // Free Running time
+763         float lmFreeRunningTime = 0;
+764         bb\&.setFRT(lmFreeRunningTime);
+765         vbb\&.push_back(bb);
+766     }
+767 
+768     return vbb;
+769 }
+.fi
+.PP
+References NBB, ProcessingUnit::setCC4S(), BasicBlock::setCodeSize(), BasicBlock::setDataSize(), BasicBlock::setEqG(), ProcessingUnit::setFrequency(), BasicBlock::setFRT(), ProcessingUnit::setI4CSmax(), ProcessingUnit::setI4CSmin(), ProcessingUnit::setId(), BasicBlock::setId(), ProcessingUnit::setIdd(), ProcessingUnit::setISA(), ProcessingUnit::setMIPS(), ProcessingUnit::setName(), BasicBlock::setName(), ProcessingUnit::setOverheadCS(), ProcessingUnit::setPower(), BasicBlock::setProcessor(), ProcessingUnit::setProcessorType(), BasicBlock::setType(), and ProcessingUnit::setVdd()\&.
+.SS "vector< \fBChannel\fP > SystemManager::generateChannelInstances ()"
+
+.PP
+Definition at line 198 of file SystemManager\&.cpp\&.
+.PP
+.nf
+199 {
+200     vector<Channel> vch;
+201 
+202     // parsing xml file
+203 
+204     xml_document myDoc;
+205     xml_parse_result myResult = myDoc\&.load_file(APPLICATION);
+206     xml_node instancesLL = myDoc\&.child("instancesLL");
+207 
+208     //channel parameters
+209 
+210     xml_node_iterator seqChannel_it;
+211 
+212     for (seqChannel_it=instancesLL\&.begin(); seqChannel_it!=instancesLL\&.end(); ++seqChannel_it){
+213 
+214         xml_node_iterator channel_node_it = seqChannel_it->begin();
+215 
+216         Channel ch;
+217 
+218         char* temp;
+219 
+220         // CH-NAME
+221         string name = channel_node_it->child_value();
+222         ch\&.setName(name);
+223 
+224         // CH-ID
+225         channel_node_it++;
+226         temp = (char*) channel_node_it->child_value();
+227         int  id = atoi(temp);
+228         ch\&.setId(id);
+229 
+230         // writer ID
+231         channel_node_it++;
+232         temp = (char*) channel_node_it->child_value();
+233         int  w_id = atoi(temp);
+234         ch\&.setW_id(w_id);
+235 
+236         // reader ID
+237         channel_node_it++;
+238         temp = (char*) channel_node_it->child_value();
+239         int  r_id = atoi(temp);
+240         ch\&.setR_id(r_id);
+241 
+242         // CH-width (logical width)
+243         channel_node_it++;
+244         temp = (char*) channel_node_it->child_value();
+245         int  width = atoi(temp);
+246         ch\&.setWidth(width);
+247 
+248         ch\&.setNum(0);
+249 
+250         vch\&.push_back(ch);
+251 
+252     }
+253 
+254     return vch;
+255 }
+.fi
+.PP
+References APPLICATION, Channel::setId(), Channel::setName(), Channel::setNum(), Channel::setR_id(), Channel::setW_id(), and Channel::setWidth()\&.
+.SS "vector< \fBPhysicalLink\fP > SystemManager::generatePhysicalLinkInstances ()"
+
+.PP
+Definition at line 854 of file SystemManager\&.cpp\&.
+.PP
+.nf
+855 {
+856     vector<PhysicalLink> VPL;
+857 
+858     for (int i = 0; i < NPL; i++){
+859 
+860         PhysicalLink pl;
+861 
+862         pl\&.setId(i);
+863 
+864         pl\&.setName("dummy");
+865 
+866         pl\&.physical_width=1; // width of the physical link
+867         pl\&.tcomm=sc_time(0, SC_MS); // LP: (bandwidth / phisycal_widht = 1/sec=hz (inverto)) ( per 1000)  (non sforare i 5 ms)
+868         pl\&.tacomm=sc_time(0, SC_MS); // LP: tcomm * K (es:K=1)
+869         pl\&.bandwidth=0; // bandwidth in bit/s
+870         pl\&.a2=0; // a2 coefficient of energy curve
+871         pl\&.a1=0; // a1 coefficient of energy curve
+872 
+873         VPL\&.push_back(pl);
+874     }
+875 
+876     return VPL;
+877 }
+.fi
+.PP
+References PhysicalLink::a1, PhysicalLink::a2, PhysicalLink::bandwidth, NPL, PhysicalLink::physical_width, PhysicalLink::setId(), PhysicalLink::setName(), PhysicalLink::tacomm, and PhysicalLink::tcomm\&.
+.SS "vector< \fBProcess\fP > SystemManager::generateProcessInstances ()"
+
+.PP
+Definition at line 91 of file SystemManager\&.cpp\&.
+.PP
+.nf
+91                                                         {
+92 
+93     vector<Process> vps2;
+94 
+95     int exp_id = 0;
+96 
+97     int processId;
+98 
+99     pugi::xml_document doc;
+100     pugi::xml_parse_result result = doc\&.load_file(APPLICATION);
+101 
+102     xml_node instancesPS2 = doc\&.child("instancesPS");
+103 
+104     for (pugi::xml_node xn_process = instancesPS2\&.first_child(); !xn_process\&.empty(); xn_process = xn_process\&.next_sibling()){
+105 
+106         Process pi;
+107 
+108         // Process Name
+109         pi\&.setName(xn_process\&.child_value("name"));
+110 
+111         // Process id
+112         processId = atoi((char*) xn_process\&.child_value("id"));
+113         pi\&.setId(processId);
+114 
+115         // Process Priority
+116         pi\&.setPriority(atoi((char*) xn_process\&.child_value("priority")));
+117 
+118         // Process Criticality
+119         pi\&.setCriticality(atoi((char*) xn_process\&.child_value("criticality")));
+120 
+121         // Process eqGate (HW size)
+122         xml_node eqGate = xn_process\&.child("eqGate");
+123         pi\&.setEqGate((float)eqGate\&.attribute("value")\&.as_int());
+124 
+125         // Process dataType
+126         pi\&.setDataType(atoi((char*) xn_process\&.child_value("dataType")));
+127 
+128         // Process MemSize (SW Size)
+129         xml_node memSize = xn_process\&.child("memSize");
+130 
+131         xml_node codeSize = memSize\&.child("codeSize");
+132         for (pugi::xml_node processorModel = codeSize\&.child("processorModel"); processorModel; processorModel = processorModel\&.next_sibling()) {
+133             pi\&.setCodeSize( processorModel\&.attribute("name")\&.as_string(), processorModel\&.attribute("value")\&.as_int() );
+134         }
+135 
+136         xml_node dataSize = memSize\&.child("dataSize");
+137         for (pugi::xml_node processorModel = dataSize\&.child("processorModel"); processorModel; processorModel = processorModel\&.next_sibling()) {
+138             pi\&.setDataSize( processorModel\&.attribute("name")\&.as_string(), processorModel\&.attribute("value")\&.as_int() );
+139         }
+140 
+141         // Process Affinity
+142 
+143         xml_node affinity = xn_process\&.child("affinity");
+144         for (pugi::xml_node processorType = affinity\&.child("processorType"); processorType; processorType = processorType\&.next_sibling()) {
+145             string processorType_name = processorType\&.attribute("name")\&.as_string();
+146             float affinity_value = processorType\&.attribute("value")\&.as_float();
+147             pi\&.setAffinity(processorType_name, affinity_value);
+148         }
+149 
+150         // Process Concurrency
+151 
+152         xml_node concurrency = xn_process\&.child("concurrency");
+153         for (pugi::xml_node xn_cprocessId = concurrency\&.child("processId"); xn_cprocessId; xn_cprocessId = xn_cprocessId\&.next_sibling()) {
+154             unsigned int process_id_n = xn_cprocessId\&.attribute("id")\&.as_int();
+155             float process_concurrency_value = xn_cprocessId\&.attribute("value")\&.as_float();
+156             pi\&.setConcurrency(process_id_n, process_concurrency_value);
+157         }
+158 
+159         // Process Load
+160 
+161         xml_node load = xn_process\&.child("load");
+162         for (pugi::xml_node processorId = load\&.child("processorId"); processorId; processorId = processorId\&.next_sibling()) {
+163             unsigned int processor_id_n = processorId\&.attribute("id")\&.as_int();
+164             float process_load_value = processorId\&.attribute("value")\&.as_float();
+165             pi\&.setLoad(processor_id_n, process_load_value);
+166         }
+167 
+168         // Process time (init)
+169         pi\&.processTime = sc_time(0, SC_MS);
+170 
+171         // Process energy (init)
+172         pi\&.setEnergy(0);
+173 
+174         // Process Communication
+175         // TO DO
+176 
+177         if(processId == exp_id){
+178             vps2\&.push_back(pi);
+179             exp_id++;
+180         } else {
+181             cout << "XML for application is corrupted\n";
+182             exit(11);
+183         }
+184 
+185     }
+186     if(exp_id != NPS){
+187         cout << "XML for application is corrupted (NPS)\n";
+188         exit(11);
+189     }
+190 
+191     doc\&.reset();
+192 
+193     return vps2;
+194 
+195 }
+.fi
+.PP
+References APPLICATION, NPS, Process::processTime, Process::setAffinity(), Process::setCodeSize(), Process::setConcurrency(), Process::setCriticality(), Process::setDataSize(), Process::setDataType(), Process::setEnergy(), Process::setEqGate(), Process::setId(), Process::setLoad(), Process::setName(), and Process::setPriority()\&.
+.SS "vector< int > SystemManager::getAllocationPS_BB (int bb_id)"
+
+.PP
+Definition at line 273 of file SystemManager\&.cpp\&.
+.PP
+.nf
+274 {
+275     vector<int> pu_alloc;
+276     for (unsigned int j = 2; j < allocationPS_BB\&.size(); j++) // 0 and 1 are the testbench
+277     {
+278         if (allocationPS_BB[j] == bb_id) pu_alloc\&.push_back(j);
+279     }
+280     return pu_alloc;
+281 }
+.fi
+.SS "float * SystemManager::getFRL ()"
+
+.PP
+Definition at line 1241 of file SystemManager\&.cpp\&.
+.PP
+.nf
+1241                                  {
+1242         return this->FRL;
+1243     }
+.fi
+.PP
+Referenced by sc_main()\&.
+.SS "sc_time SystemManager::getFRT ()"
+
+.PP
+Definition at line 1226 of file SystemManager\&.cpp\&.
+.PP
+.nf
+1226                                  {
+1227         return this->FRT;
+1228     }
+.fi
+.SS "void SystemManager::increaseEstimatedEnergy (int processId)"
+
+.PP
+Definition at line 1091 of file SystemManager\&.cpp\&.
+.PP
+.nf
+1092     {
+1093         VPS[processId]\&.energy += updateEstimatedEnergy(processId); // Cumulated sum of the statement execution energy
+1094     }
+.fi
+.SS "void SystemManager::increaseSimulatedTime (int processId)"
+
+.PP
+Definition at line 1085 of file SystemManager\&.cpp\&.
+.PP
+.nf
+1086     {
+1087         VPS[processId]\&.processTime += updateSimulatedTime(processId); // Cumulated sum of the statement execution time
+1088     }
+.fi
+.SS "void SystemManager::increaseTimer (int processId, sc_time delta)"
+
+.PP
+Definition at line 1097 of file SystemManager\&.cpp\&.
+.PP
+.nf
+1098     {
+1099         VPS[processId]\&.processTime += delta; // Cumulated sum of the statement execution time
+1100     }
+.fi
+.SS "float * SystemManager::loadEst (sc_time FRT_n)"
+
+.PP
+Definition at line 1234 of file SystemManager\&.cpp\&.
+.PP
+.nf
+1234                                                {
+1235     for(unsigned i =2; i<VPS\&.size(); i++){
+1236             FRL[i] = (float) ((VPS[i]\&.processTime/VPS[i]\&.profiling)/(FRT_n/VPS[i]\&.profiling)); //
+1237     }
+1238     return FRL;
+1239     }
+.fi
+.PP
+Referenced by sc_main()\&.
+.SS "void SystemManager::mappingCH ()"
+
+.PP
+Definition at line 967 of file SystemManager\&.cpp\&.
+.PP
+.nf
+967                              {
+968     for (int j = 0; j < NCH; j++){
+969         int linkId = 0;
+970         allocationCH_PL\&.push_back(linkId);
+971     }
+972 }
+.fi
+.PP
+References NCH\&.
+.SS "void SystemManager::mappingPS ()"
+
+.PP
+Definition at line 921 of file SystemManager\&.cpp\&.
+.PP
+.nf
+921                              {
+922     for (int j = 0; j<NPS; j++){
+923         int bbId = 0;
+924         allocationPS_BB\&.push_back(bbId);
+925     }
+926 }
+.fi
+.PP
+References NPS\&.
+.SS "void SystemManager::PS_Profiling (int processId)"
+
+.PP
+Definition at line 261 of file SystemManager\&.cpp\&.
+.PP
+.nf
+262 {
+263     VPS[processId]\&.profiling++;
+264 }
+.fi
+.SS "void SystemManager::setFRT (sc_time x)"
+
+.PP
+Definition at line 1230 of file SystemManager\&.cpp\&.
+.PP
+.nf
+1230                                        {
+1231         FRT = x;
+1232     }
+.fi
+.PP
+Referenced by sc_main()\&.
+.SS "float SystemManager::updateEstimatedEnergy (int processId)"
+
+.PP
+Definition at line 1005 of file SystemManager\&.cpp\&.
+.PP
+.nf
+1006     {
+1007         float J4CS;
+1008         float P;
+1009         if(energyComputation == "EPC") {
+1010             // EPC --> J4CS = CC4CSaff * EPC = CC4CSaff * (P/f)
+1011 
+1012             // Id representing process dominant datatype 
+1013             int dataType = VPS[processId]\&.getDataType();
+1014 
+1015 
+1016             //I HAVE TO ADD A LOOP IN ORDER TO TAKE THE PARAMETERS OF EACH PROCESSOR (?) **********************
+1017 
+1018             float CC4Smin = VBB[allocationPS_BB[processId]]\&.getProcessors()[0]\&.getCC4S()[dataType][0]; // Average/min number of clock cycles needed by the PU to execute a C statement
+1019 
+1020             //float CC4Smin = VBB[allocationPS_BB[processId]]\&.getCC4S()[dataType][0]; // Average/min number of clock cycles needed by the PU to execute a C statement
+1021 
+1022             //float CC4Smax = VBB[allocationPS_BB[processId]]\&.getCC4S()[dataType][1];
+1023             float CC4Smax = VBB[allocationPS_BB[processId]]\&.getProcessors()[0]\&.getCC4S()[dataType][1];// Average/max number of clock cycles needed by the PU to execute a C statement
+1024 
+1025             // Affinity-based interpolation 
+1026             float CC4Saff = CC4Smin + ((CC4Smax-CC4Smin)*(1-VPS[processId]\&.getAffinityByName(VBB[allocationPS_BB[processId]]\&.getProcessors()[0]\&.getProcessorType())));
+1027 
+1028             if(this->checkSPP(processId)) {
+1029                 // if the process is on a SPP (HW) --> P = Vdd * Idd (V*A = W)
+1030 
+1031                 P = VBB[allocationPS_BB[processId]]\&.getProcessors()[0]\&.getVdd() * VBB[allocationPS_BB[processId]]\&.getProcessors()[0]\&.getIdd();
+1032 
+1033             } else {
+1034                 // if the process is on a GPP/DSP (SW) --> P (W)
+1035 
+1036                 P = VBB[allocationPS_BB[processId]]\&.getProcessors()[0]\&.getPower();
+1037 
+1038             }
+1039             // EPC = P/f (W/MHz = uJ)
+1040             float EPC = P / VBB[allocationPS_BB[processId]]\&.getProcessors()[0]\&.getFrequency();
+1041 
+1042             J4CS = CC4Saff * EPC; // uJ
+1043         } else { 
+1044             // EPI 
+1045 
+1046             if(this->checkSPP(processId)) {
+1047                 // if the process is on a SPP (HW) --> J4CS = CC4CSaff * P * (1/f)
+1048 
+1049                 // Id representing process dominant datatype 
+1050                 int dataType = VPS[processId]\&.getDataType(); 
+1051 
+1052                 float CC4Smin = VBB[allocationPS_BB[processId]]\&.getProcessors()[0]\&.getCC4S()[dataType][0]; // Average/min number of clock cycles needed by the PU to execute a C statement
+1053 
+1054                 float CC4Smax = VBB[allocationPS_BB[processId]]\&.getProcessors()[0]\&.getCC4S()[dataType][1]; // Average/max number of clock cycles needed by the PU to execute a C statement
+1055 
+1056                 // Affinity-based interpolation 
+1057                 float CC4Saff = CC4Smin + ((CC4Smax-CC4Smin)*(1-VPS[processId]\&.getAffinityByName(VBB[allocationPS_BB[processId]]\&.getProcessors()[0]\&.getProcessorType())));
+1058 
+1059                 // P = Vdd * Idd (V*A = W)
+1060                 P = VBB[allocationPS_BB[processId]]\&.getProcessors()[0]\&.getVdd() * VBB[allocationPS_BB[processId]]\&.getProcessors()[0]\&.getIdd();
+1061 
+1062                 J4CS = CC4Saff * (P / VBB[allocationPS_BB[processId]]\&.getProcessors()[0]\&.getFrequency()); // uJ
+1063             } else {
+1064                 // if the process is on a GPP/DSP (SW) --> J4CS = I4CSaff * EPI = I4CSaff * (P/MIPS)
+1065 
+1066                 float I4CSmin = VBB[allocationPS_BB[processId]]\&.getProcessors()[0]\&.getI4CSmin(); // Average/min number of assembly instructions to execute a C statement
+1067 
+1068                 float I4CSmax = VBB[allocationPS_BB[processId]]\&.getProcessors()[0]\&.getI4CSmax(); // Average/max number of assembly instructions to execute a C statement
+1069 
+1070                 // Affinity-based interpolation 
+1071                 float I4CSaff = I4CSmin + ((I4CSmax-I4CSmin)*(1-VPS[processId]\&.getAffinityByName(VBB[allocationPS_BB[processId]]\&.getProcessors()[0]\&.getProcessorType())));
+1072 
+1073                 P = VBB[allocationPS_BB[processId]]\&.getProcessors()[0]\&.getPower(); // Watt
+1074 
+1075                 // EPI = P/MIPS (uJ/instr)
+1076                 float EPI = P / VBB[allocationPS_BB[processId]]\&.getProcessors()[0]\&.getMIPS();
+1077 
+1078                 J4CS = I4CSaff * EPI; // uJ
+1079             }
+1080         } 
+1081         return J4CS;
+1082     }
+.fi
+.PP
+References energyComputation\&.
+.SS "sc_time SystemManager::updateSimulatedTime (int processId)"
+
+.PP
+Definition at line 985 of file SystemManager\&.cpp\&.
+.PP
+.nf
+986     {   
+987         // Id representing process dominant datatype 
+988         int dataType = VPS[processId]\&.getDataType();
+989 
+990 
+991         //*********************VPU WAS CHANGED IN VBB**********************
+992         float CC4Smin = VBB[allocationPS_BB[processId]]\&.getProcessors()[0]\&.getCC4S()[dataType][0]; // Average/min number of clock cycles needed by the PU to execute a C statement
+993         float CC4Smax = VBB[allocationPS_BB[processId]]\&.getProcessors()[0]\&.getCC4S()[dataType][1]; // Average/max number of clock cycles needed by the PU to execute a C statement
+994 
+995         // Affinity-based interpolation and round up of CC4CSaff
+996         unsigned int CC4Saff = (unsigned int) ceil(CC4Smin + ((CC4Smax-CC4Smin)*(1-VPS[processId]\&.getAffinityByName(VBB[allocationPS_BB[processId]]\&.getProcessors()[0]\&.getProcessorType()))));
+997 
+998         float frequency = VBB[allocationPS_BB[processId]]\&.getProcessors()[0]\&.getFrequency(); // Frequency of the processor (MHz)
+999         sc_time value((CC4Saff/(frequency*1000)), SC_MS); // Average time (ms) needed to execute a C statement
+1000 
+1001         return value;
+1002     }
+.fi
+.SS "void SystemManager::updateXmlConCom (float matrixCONC_PS_N[10][10], unsigned int matrixCOM[10][10], float matrixCONC_CH_N[15][15])"
+
+.PP
+Definition at line 331 of file SystemManager\&.cpp\&.
+.PP
+.nf
+332 {
+333     pugi::xml_document myDoc;
+334     pugi::xml_parse_result myResult = myDoc\&.load_file("\&./XML/application\&.xml");
+335     cout << "XML result: " << myResult\&.description() << endl;
+336 
+337     //method 2: use object/node structure
+338     pugi::xml_node instancesPS = myDoc\&.child("instancesPS");
+339 
+340     for (xml_node_iterator seqProcess_it = instancesPS\&.begin(); seqProcess_it != instancesPS\&.end(); ++seqProcess_it){
+341         int Id = atoi(seqProcess_it->child_value("id"));
+342 
+343         if (seqProcess_it->child("concurrency")){
+344             pugi::xml_node concurrency = seqProcess_it->child("concurrency");
+345             for (int i = 0; i<NPS; i++){
+346                 if (i != Id){
+347                     pugi::xml_node conc_it = concurrency\&.append_child("processId");
+348                     conc_it\&.append_attribute("id")\&.set_value(i);
+349                     conc_it\&.append_attribute("value")\&.set_value(matrixCONC_PS_N[Id][i]);
+350                 }
+351             }
+352         }
+353         else{
+354             pugi::xml_node concurrency = seqProcess_it->append_child("concurrency");
+355             for (int i = 0; i<NPS; i++){
+356                 if (i != Id){
+357                     pugi::xml_node conc_it = concurrency\&.append_child("processId");
+358                     conc_it\&.append_attribute("id")\&.set_value(i);
+359                     conc_it\&.append_attribute("value")\&.set_value(matrixCONC_PS_N[Id][i]);
+360                 }
+361             }
+362         }
+363     }
+364 
+365     //method 2: use object/node structure
+366     pugi::xml_node instancesCOM = myDoc\&.child("instancesPS");
+367 
+368     for (pugi::xml_node_iterator seqProcess_it = instancesCOM\&.begin(); seqProcess_it != instancesCOM\&.end(); ++seqProcess_it){
+369         int Id = atoi(seqProcess_it->child_value("id"));
+370 
+371         if (seqProcess_it->child("comunication")){
+372             pugi::xml_node comunication = seqProcess_it->child("comunication");
+373             for (int i = 0; i<NPS; i++){
+374                 if (i != Id){
+375                     pugi::xml_node com_it = comunication\&.append_child("rec");
+376                     com_it\&.append_attribute("idRec")\&.set_value(i);
+377                     com_it\&.append_attribute("value")\&.set_value(matrixCOM[Id][i]);
+378                 }
+379             }
+380         }
+381         else{
+382             pugi::xml_node comunication = seqProcess_it->append_child("comunication");
+383             for (int i = 0; i<NPS; i++){
+384                 if (i != Id){
+385                     pugi::xml_node com_it = comunication\&.append_child("rec");
+386                     com_it\&.append_attribute("idRec")\&.set_value(i);
+387                     com_it\&.append_attribute("value")\&.set_value(matrixCOM[Id][i]);
+388                 }
+389             }
+390         }
+391 
+392     }
+393 
+394     pugi::xml_node instancesLL = myDoc\&.child("instancesLL");
+395 
+396     for (xml_node_iterator seqLink_it = instancesLL\&.begin(); seqLink_it != instancesLL\&.end(); ++seqLink_it){
+397         int Id = atoi(seqLink_it->child_value("id"));
+398 
+399         if (seqLink_it->child("concurrency")){
+400             pugi::xml_node concurrencyL = seqLink_it->child("concurrency");
+401             for (int i = 0; i<NCH; i++){
+402                 if (i != Id){
+403                     pugi::xml_node concL_it = concurrencyL\&.append_child("channelId");
+404                     concL_it\&.append_attribute("id")\&.set_value(i);
+405                     concL_it\&.append_attribute("value")\&.set_value(matrixCONC_CH_N[Id][i]);
+406                 }
+407             }
+408         }
+409         else{
+410             pugi::xml_node concurrencyL = seqLink_it->append_child("concurrency");
+411             for (int i = 0; i<NCH; i++){
+412                 if (i != Id){
+413                     pugi::xml_node concL_it = concurrencyL\&.append_child("channelId");
+414                     concL_it\&.append_attribute("id")\&.set_value(i);
+415                     concL_it\&.append_attribute("value")\&.set_value(matrixCONC_CH_N[Id][i]);
+416                 }
+417             }
+418         }
+419     }
+420 
+421     cout << "Saving result: " << myDoc\&.save_file("\&./XML/application\&.xml") << endl;
+422     myDoc\&.reset();
+423     cout << endl;
+424 }
+.fi
+.PP
+References NCH, and NPS\&.
+.PP
+Referenced by sc_main()\&.
+.SS "void SystemManager::updateXmlEnergy ()"
+
+.PP
+Definition at line 1159 of file SystemManager\&.cpp\&.
+.PP
+.nf
+1160     {
+1161 
+1162         pugi::xml_document myDoc;
+1163         pugi::xml_parse_result myResult = myDoc\&.load_file("\&./XML/application\&.xml");
+1164         cout << "XML result: " << myResult\&.description() << endl;
+1165 
+1166         //method 2: use object/node structure
+1167         pugi::xml_node instancesPS = myDoc\&.child("instancesPS");
+1168 
+1170 
+1171         pugi::xml_node instancesPS2 = myDoc\&.child("instancesPS");
+1172         float sumEnergyTot=0;
+1173         for (xml_node_iterator seqProcess_it2=instancesPS2\&.begin(); seqProcess_it2!=instancesPS2\&.end(); ++seqProcess_it2){
+1174             int Id = atoi(seqProcess_it2->child_value("id"));
+1175             if(seqProcess_it2->child("energy")){
+1176                 pugi::xml_node energy = seqProcess_it2->child("energy");
+1177                 pugi::xml_node energy_it = energy\&.append_child("processorId");
+1178                 energy_it\&.append_attribute("id")\&.set_value(allocationPS_BB[Id]);
+1179                 energy_it\&.append_attribute("value")\&.set_value(VPS[Id]\&.getEnergy());
+1180             }else{
+1181                 pugi::xml_node energy = seqProcess_it2->append_child("energy");
+1182                 pugi::xml_node energy_it = energy\&.append_child("processorId");
+1183                 energy_it\&.append_attribute("id")\&.set_value(allocationPS_BB[Id]);
+1184                 energy_it\&.append_attribute("value")\&.set_value(VPS[Id]\&.getEnergy());
+1185             }
+1186 
+1187             sumEnergyTot+=VPS[Id]\&.getEnergy();
+1188         }
+1189 
+1190         cout << "Saving result: " << myDoc\&.save_file("\&./XML/application\&.xml") << endl;
+1191         myDoc\&.reset();
+1192         cout<<endl;
+1193 
+1194         pugi::xml_document myDoc2;
+1195         pugi::xml_parse_result myResult2 = myDoc2\&.load_file("\&./XML/instancesTL\&.xml");
+1196         cout << "XML result: " << myResult2\&.description() << endl;
+1197 
+1198         xml_node instancesBB = myDoc2\&.child("instancesBB");
+1199 
+1200         for (xml_node_iterator seqBB_it=instancesBB\&.begin(); seqBB_it!=instancesBB\&.end(); ++seqBB_it){
+1201             int Id = atoi(seqBB_it->child_value("id"));
+1203             if(Id == allocationPS_BB[2]){
+1204                 if(seqBB_it->child("energyEstimation")){
+1205                     pugi::xml_node energyEstimation = seqBB_it->child("energyEstimation");
+1206                     xml_node entot_node = energyEstimation\&.append_child("energyTOT");
+1207                     entot_node\&.append_attribute("id")\&.set_value(allocationPS_BB[2]);
+1208                     entot_node\&.append_attribute("value")\&.set_value(sumEnergyTot);
+1209                 }else{
+1210                     pugi::xml_node energyEstimation = seqBB_it->append_child("energyEstimation");
+1211                     xml_node entot_node = energyEstimation\&.append_child("energyTOT");
+1212                     entot_node\&.append_attribute("id")\&.set_value(allocationPS_BB[2]);
+1213                     entot_node\&.append_attribute("value")\&.set_value(sumEnergyTot);
+1214                 }
+1215             }
+1216         }
+1217         cout << "Saving result: " << myDoc2\&.save_file("\&./XML/instancesTL\&.xml") << endl;
+1218         myDoc2\&.reset();
+1219         cout<<endl;
+1220 
+1221     }
+.fi
+.PP
+Referenced by sc_main()\&.
+.SS "void SystemManager::updateXmlLoad ()"
+
+.PP
+Definition at line 1316 of file SystemManager\&.cpp\&.
+.PP
+.nf
+1317     {
+1318         pugi::xml_document myDoc;
+1319         pugi::xml_parse_result myResult = myDoc\&.load_file("\&./XML/application\&.xml");
+1320         cout << "XML result: " << myResult\&.description() << endl;
+1321 
+1322         //method 2: use object/node structure
+1323         pugi::xml_node instancesPS = myDoc\&.child("instancesPS");
+1324 
+1325         for (xml_node_iterator seqProcess_it=instancesPS\&.begin(); seqProcess_it!=instancesPS\&.end(); ++seqProcess_it){
+1326             int Id = atoi(seqProcess_it->child_value("id"));
+1327 
+1329 
+1330             if(seqProcess_it->child("load")){
+1331                 pugi::xml_node load = seqProcess_it->child("load");
+1332                 pugi::xml_node load_it = load\&.append_child("processorId");
+1333                 load_it\&.append_attribute("id")\&.set_value(allocationPS_BB[Id]);
+1334                 load_it\&.append_attribute("value")\&.set_value(FRL[Id]);
+1335             }else{
+1336                 pugi::xml_node load = seqProcess_it->append_child("load");
+1337                 pugi::xml_node load_it = load\&.append_child("processorId");
+1338                 load_it\&.append_attribute("id")\&.set_value(allocationPS_BB[Id]);
+1339                 load_it\&.append_attribute("value")\&.set_value(FRL[Id]);
+1340             }
+1341         }
+1342 
+1344 
+1346     //pugi::xml_node instancesPS2 = myDoc\&.child("instancesPS");
+1347 
+1348     //for (pugi::xml_node_iterator seqProcess_it=instancesPS2\&.begin(); seqProcess_it!=instancesPS2\&.end(); ++seqProcess_it){
+1349     //  int Id = atoi(seqProcess_it->child_value("id"));
+1350     //
+1351     //  if(seqProcess_it->child("WCET")){
+1352     //      pugi::xml_node comunication = seqProcess_it->child("WCET");
+1353     //      for (int i=0; i<NPS; i++){
+1354     //          if(i!=Id){
+1355     //              pugi::xml_node wcet_it = comunication\&.append_child("processorId");
+1356     //              double wcet_task = (VPS[Id]\&.processTime\&.to_seconds());
+1357     //              wcet_it\&.append_attribute("id")\&.set_value(i);
+1358     //              wcet_it\&.append_attribute("value")\&.set_value((wcet_task/VPS[Id]\&.profiling)*1000000\&.0);
+1359     //          }
+1360     //      }
+1361     //  }else{
+1362     //      pugi::xml_node WCET = seqProcess_it->append_child("WCET");
+1363     //      for (int i=0; i<VPU\&.size(); i++){
+1364     //          if(i!=Id){
+1365     //              pugi::xml_node wcet_it = WCET\&.append_child("processorId");
+1366     //              double wcet_task = (VPS[Id]\&.processTime\&.to_seconds());
+1367     //              wcet_it\&.append_attribute("id")\&.set_value(i);
+1368     //              wcet_it\&.append_attribute("value")\&.set_value((wcet_task/VPS[Id]\&.profiling)*1000000\&.0);
+1369     //          }
+1370     //      }
+1371     //  }
+1372     //}
+1373 
+1375 
+1376     //pugi::xml_node instancesPS3 = myDoc\&.child("instancesPS");
+1377 
+1378     //for (xml_node_iterator seqLink_it=instancesPS3\&.begin(); seqLink_it!=instancesPS3\&.end(); ++seqLink_it){
+1379     //  int Id = atoi(seqLink_it->child_value("id"));
+1380     //
+1381     //  if(seqLink_it->child("Period")){
+1382     //      pugi::xml_node Period = seqLink_it->child("Period");
+1383     //      for (int i=0; i<NPS; i++){
+1384     //          if(i!=Id){
+1385     //              pugi::xml_node period_it = Period\&.append_child("processorId");
+1386     //              period_it\&.append_attribute("id")\&.set_value(i);
+1387     //              double period_value = (FRT\&.to_seconds());
+1388     //              period_it\&.append_attribute("value")\&.set_value((period_value/VPS[Id]\&.profiling)*1000000\&.0);
+1389     //          }
+1390     //      }
+1391     //  }else{
+1392     //      pugi::xml_node Period = seqLink_it->append_child("Period");
+1393     //      for (int i=0; i<NPS; i++){
+1394     //          if(i!=Id){
+1395     //              pugi::xml_node period_it = Period\&.append_child("processorId");
+1396     //              period_it\&.append_attribute("id")\&.set_value(i);
+1397     //              double period_value = (FRT\&.to_seconds());
+1398     //              period_it\&.append_attribute("value")\&.set_value((period_value/VPS[Id]\&.profiling)*1000000\&.0);
+1399     //          }
+1400     //      }
+1401     //  }
+1402     //}
+1403 
+1405 
+1406     //  pugi::xml_node instancesPS4 = myDoc\&.child("instancesPS");
+1407 
+1408     //for (xml_node_iterator seqLink_it=instancesPS4\&.begin(); seqLink_it!=instancesPS4\&.end(); ++seqLink_it){
+1409     //  int Id = atoi(seqLink_it->child_value("id"));
+1410 
+1411     //  if(seqLink_it->child("Deadline")){
+1412     //      pugi::xml_node Deadline = seqLink_it->child("Deadline");
+1413     //      for (int i=0; i<NPS; i++){
+1414     //          if(i!=Id){
+1415     //              pugi::xml_node dead_it = Deadline\&.append_child("processorId");
+1416     //              dead_it\&.append_attribute("id")\&.set_value(i);
+1417     //              double deadline_value = (FRT\&.to_seconds());
+1418     //              double dead_tot = (deadline_value/VPS[Id]\&.profiling)*1000000\&.0;
+1419     //              cout<<"VPS["<<Id<<"]\&.profiling -->  "<<VPS[Id]\&.profiling<<endl;
+1420     //              dead_it\&.append_attribute("value")\&.set_value(dead_tot);
+1421     //          }
+1422     //      }
+1423     //  }else{
+1424     //      pugi::xml_node Deadline = seqLink_it->append_child("Deadline");
+1425     //      for (int i=0; i<NPS; i++){
+1426     //          if(i!=Id){
+1427     //              pugi::xml_node dead_it = Deadline\&.append_child("processorId");
+1428     //              dead_it\&.append_attribute("id")\&.set_value(i);
+1429     //              double deadline_value = (FRT\&.to_seconds());
+1430     //              double dead_tot = (deadline_value/VPS[Id]\&.profiling)*1000000\&.0;
+1431     //              dead_it\&.append_attribute("value")\&.set_value(dead_tot);
+1432     //          }
+1433     //      }
+1434     //  }
+1435     //}
+1436 
+1437     cout << "Saving result: " << myDoc\&.save_file("\&./XML/application\&.xml") << endl;
+1438     myDoc\&.reset();
+1439     cout<<endl;
+1440 
+1441     /* pugi::xml_document myDoc2;
+1442     pugi::xml_parse_result myResult2 = myDoc2\&.load_file("\&./XML/instancesTL\&.xml");
+1443     cout << "XML result: " << myResult2\&.description() << endl;
+1444 
+1445     xml_node instancesBB = myDoc2\&.child("instancesBB");
+1446 
+1447     for (xml_node_iterator seqBB_it=instancesBB\&.begin(); seqBB_it!=instancesBB\&.end(); ++seqBB_it){
+1448         int Id = atoi(seqBB_it->child_value("id"));
+1449 
+1451 
+1452         if(seqBB_it->child("loadEstimation")){
+1453             pugi::xml_node loadEstimation = seqBB_it->child("loadEstimation");
+1454             xml_node frl_node = loadEstimation\&.child("FreeRunningTime");
+1455             if(!(allocationPS_BB[Id] != Id))
+1456             {
+1457                 sc_time local_frt = FRT;
+1458                 //frl_node\&.attribute("value")=(local_frt\&.to_double()*1000); //another solution for the number conversion
+1459                 frl_node\&.attribute("value")=(local_frt\&.to_seconds()*1000);
+1460             }
+1461         }else{
+1462                 pugi::xml_node loadEstimation = seqBB_it->append_child("loadEstimation");
+1463                 xml_node frl_node = loadEstimation\&.append_child("FreeRunningTime");
+1464                 if(allocationPS_BB[Id] == Id)
+1465                 {
+1466                     sc_time local_frt = FRT;
+1467                     //frl_node\&.attribute("value")=(local_frt\&.to_double()*1000);  //another solution for the number conversion
+1468                     frl_node\&.attribute("value")=(local_frt\&.to_seconds()*1000);
+1469                 }
+1470 
+1471             }
+1472     }
+1473 
+1474     cout << "Saving result: " << myDoc2\&.save_file("\&./XML/instancesTL\&.xml") << endl;
+1475     myDoc2\&.reset();
+1476     cout<<endl; */
+1477 
+1479 
+1480     pugi::xml_document myDoc2;
+1481     pugi::xml_parse_result myResult2 = myDoc2\&.load_file("\&./XML/instancesTL\&.xml");
+1482     cout << "XML result: " << myResult2\&.description() << endl;
+1483 
+1484     xml_node instancesBB = myDoc2\&.child("instancesBB");
+1485 
+1486     for (xml_node_iterator seqBB_it=instancesBB\&.begin(); seqBB_it!=instancesBB\&.end(); ++seqBB_it){
+1487         int Id = atoi(seqBB_it->child_value("id"));
+1489         if(Id == allocationPS_BB[2]){
+1490             if(seqBB_it->child("loadEstimation")){
+1491                 pugi::xml_node energyEstimation = seqBB_it->child("loadEstimation");
+1492                 xml_node entot_node = energyEstimation\&.append_child("FreeRunningTime");
+1493                 entot_node\&.append_attribute("id")\&.set_value(allocationPS_BB[2]);
+1494                 sc_time local_frt = FRT;
+1495                 entot_node\&.append_attribute("value")\&.set_value(local_frt\&.to_seconds()*1000);
+1496             }else{
+1497                 pugi::xml_node energyEstimation = seqBB_it->append_child("energyEstimation");
+1498                 xml_node entot_node = energyEstimation\&.append_child("energyTOT");
+1499                 entot_node\&.append_attribute("id")\&.set_value(allocationPS_BB[2]);
+1500                 sc_time local_frt = FRT;
+1501                 entot_node\&.append_attribute("value")\&.set_value(local_frt\&.to_seconds()*1000);
+1502             }
+1503         }
+1504     }
+1505     cout << "Saving result: " << myDoc2\&.save_file("\&./XML/instancesTL\&.xml") << endl;
+1506     myDoc2\&.reset();
+1507     cout<<endl;
+1508 
+1509 }
+.fi
+.PP
+Referenced by sc_main()\&.
+.SH "Field Documentation"
+.PP 
+.SS "vector<int> SystemManager::allocationCH_PL"
+
+.PP
+Definition at line 110 of file SystemManager\&.h\&.
+.PP
+Referenced by sc_csp_channel< T >::init(), sc_csp_channel< T >::sc_csp_channel(), and sc_main()\&.
+.SS "vector<int> SystemManager::allocationPS_BB"
+
+.PP
+Definition at line 107 of file SystemManager\&.h\&.
+.PP
+Referenced by sc_csp_channel< T >::init(), sc_csp_channel< T >::read(), sc_main(), SC_MODULE(), and sc_csp_channel< T >::write()\&.
+.SS "float SystemManager::FRL[10]"
+
+.PP
+Definition at line 172 of file SystemManager\&.h\&.
+.SS "sc_time SystemManager::FRT"
+
+.PP
+Definition at line 175 of file SystemManager\&.h\&.
+.SS "vector<\fBBasicBlock\fP> SystemManager::VBB"
+
+.PP
+Definition at line 100 of file SystemManager\&.h\&.
+.PP
+Referenced by sc_csp_channel< T >::init(), sc_main(), and SC_MODULE()\&.
+.SS "vector<\fBChannel\fP> SystemManager::VCH"
+
+.PP
+Definition at line 97 of file SystemManager\&.h\&.
+.PP
+Referenced by sc_csp_channel< T >::sc_csp_channel(), sc_main(), and sc_csp_channel< T >::write()\&.
+.SS "vector<\fBPhysicalLink\fP> SystemManager::VPL"
+
+.PP
+Definition at line 103 of file SystemManager\&.h\&.
+.PP
+Referenced by sc_csp_channel< T >::init(), sc_csp_channel< T >::sc_csp_channel(), and sc_main()\&.
+.SS "vector<\fBProcess\fP> SystemManager::VPS"
+
+.PP
+Definition at line 94 of file SystemManager\&.h\&.
+.PP
+Referenced by sc_main(), and SC_MODULE()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FirFirGCD Application from the source code\&.

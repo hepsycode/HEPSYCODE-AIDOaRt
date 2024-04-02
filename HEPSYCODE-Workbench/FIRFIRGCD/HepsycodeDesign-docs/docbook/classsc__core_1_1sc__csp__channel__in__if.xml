@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classsc__core_1_1sc__csp__channel__in__if">
+<title>sc_core::sc_csp_channel_in_if&lt; T &gt; Class Template Reference</title>
+<indexterm><primary>sc_core::sc_csp_channel_in_if&lt; T &gt;</primary></indexterm>
+<para>
+<computeroutput>#include &lt;sc_csp_channel_ifs.h&gt;</computeroutput>
+</para>
+Inheritance diagram for sc_core::sc_csp_channel_in_if&lt; T &gt;:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classsc__core_1_1sc__csp__channel__in__if__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for sc_core::sc_csp_channel_in_if&lt; T &gt;:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classsc__core_1_1sc__csp__channel__in__if__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_classsc__core_1_1sc__csp__channel__in__if_1a2649054eea07eb61937ea38891162e85">read</link> (T &amp;)=0</para>
+</listitem>
+            <listitem><para>virtual T <link linkend="_classsc__core_1_1sc__csp__channel__in__if_1a5e8076fced231d716900901e5d60f080">read</link> ()=0</para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_classsc__core_1_1sc__csp__channel__in__if_1ad7139da842ceebdc4c64d4cf2b02d371">read_test</link> ()=0</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classsc__core_1_1sc__csp__channel__in__if_1a163aae4bbe4ad9f8dcee26b330e929d1">register_alt</link> ()=0</para>
+</listitem>
+            <listitem><para>virtual const sc_event &amp; <link linkend="_classsc__core_1_1sc__csp__channel__in__if_1acf52a1d31829961428e7205a835f8973">get_alt_event</link> ()=0</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classsc__core_1_1sc__csp__channel__in__if_1a63016ae797a557ea1abffb6a3688ad9e">sc_csp_channel_in_if</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;class T&gt;
+class sc_core::sc_csp_channel_in_if&lt; T &gt;</title></simplesect>
+
+<para>
+Definition at line 86 of file sc_csp_channel_ifs.h.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classsc__core_1_1sc__csp__channel__in__if_1a63016ae797a557ea1abffb6a3688ad9e"/>    <section>
+    <title>sc_csp_channel_in_if()</title>
+<indexterm><primary>sc_csp_channel_in_if</primary><secondary>sc_core::sc_csp_channel_in_if&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>sc_core::sc_csp_channel_in_if&lt; T &gt;</primary><secondary>sc_csp_channel_in_if</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput><link linkend="_classsc__core_1_1sc__csp__channel__in__if">sc_core::sc_csp_channel_in_if</link>&lt; T &gt;::<link linkend="_classsc__core_1_1sc__csp__channel__in__if">sc_csp_channel_in_if</link> ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line 107 of file sc_csp_channel_ifs.h.</para>
+<programlisting>111 :<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_classsc__interface">sc_interface</link>&#32;
+</programlisting></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classsc__core_1_1sc__csp__channel__in__if_1acf52a1d31829961428e7205a835f8973"/>    <section>
+    <title>get_alt_event()</title>
+<indexterm><primary>get_alt_event</primary><secondary>sc_core::sc_csp_channel_in_if&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>sc_core::sc_csp_channel_in_if&lt; T &gt;</primary><secondary>get_alt_event</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>virtual const sc_event&amp; <link linkend="_classsc__core_1_1sc__csp__channel__in__if">sc_core::sc_csp_channel_in_if</link>&lt; T &gt;::get_alt_event ( )<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+Implemented in <link linkend="_group__firfirgcd__csp__channel__group_1ga40cb801a3a15df214563c89160c6d19c">sc_csp_channel&lt; T &gt;</link>.</para>
+    </section><anchor xml:id="_classsc__core_1_1sc__csp__channel__in__if_1a5e8076fced231d716900901e5d60f080"/>    <section>
+    <title>read()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>read</primary><secondary>sc_core::sc_csp_channel_in_if&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>sc_core::sc_csp_channel_in_if&lt; T &gt;</primary><secondary>read</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>virtual T <link linkend="_classsc__core_1_1sc__csp__channel__in__if">sc_core::sc_csp_channel_in_if</link>&lt; T &gt;::read ( )<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+Implemented in <link linkend="_group__firfirgcd__csp__channel__group_1gaf3eb60ce6aecbe88c0e72fdb19a1f7af">sc_csp_channel&lt; T &gt;</link>.</para>
+    </section><anchor xml:id="_classsc__core_1_1sc__csp__channel__in__if_1a2649054eea07eb61937ea38891162e85"/>    <section>
+    <title>read()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>read</primary><secondary>sc_core::sc_csp_channel_in_if&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>sc_core::sc_csp_channel_in_if&lt; T &gt;</primary><secondary>read</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>virtual void <link linkend="_classsc__core_1_1sc__csp__channel__in__if">sc_core::sc_csp_channel_in_if</link>&lt; T &gt;::read (T &amp; )<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+Implemented in <link linkend="_group__firfirgcd__csp__channel__group_1ga23046a4820dcf9ef26a75eba9cb7d49b">sc_csp_channel&lt; T &gt;</link>.</para>
+    </section><anchor xml:id="_classsc__core_1_1sc__csp__channel__in__if_1ad7139da842ceebdc4c64d4cf2b02d371"/>    <section>
+    <title>read_test()</title>
+<indexterm><primary>read_test</primary><secondary>sc_core::sc_csp_channel_in_if&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>sc_core::sc_csp_channel_in_if&lt; T &gt;</primary><secondary>read_test</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>virtual bool <link linkend="_classsc__core_1_1sc__csp__channel__in__if">sc_core::sc_csp_channel_in_if</link>&lt; T &gt;::read_test ( )<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+Implemented in <link linkend="_group__firfirgcd__csp__channel__group_1gab1a08e5d4129f9647e573af0c4ca4f30">sc_csp_channel&lt; T &gt;</link>.</para>
+    </section><anchor xml:id="_classsc__core_1_1sc__csp__channel__in__if_1a163aae4bbe4ad9f8dcee26b330e929d1"/>    <section>
+    <title>register_alt()</title>
+<indexterm><primary>register_alt</primary><secondary>sc_core::sc_csp_channel_in_if&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>sc_core::sc_csp_channel_in_if&lt; T &gt;</primary><secondary>register_alt</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>virtual void <link linkend="_classsc__core_1_1sc__csp__channel__in__if">sc_core::sc_csp_channel_in_if</link>&lt; T &gt;::register_alt ( )<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+Implemented in <link linkend="_group__firfirgcd__csp__channel__group_1gaaed132e73280fe2a46b14604240832bc">sc_csp_channel&lt; T &gt;</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+HepsycodeDesign/src/<link linkend="_sc__csp__channel__ifs_8h">sc_csp_channel_ifs.h</link></section>
+</section>

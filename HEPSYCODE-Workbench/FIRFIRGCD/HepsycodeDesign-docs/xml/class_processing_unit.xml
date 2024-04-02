@@ -1,0 +1,720 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_processing_unit" kind="class" language="C++" prot="public">
+    <compoundname>ProcessingUnit</compoundname>
+    <includes refid="tl_8h" local="no">tl.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_processing_unit_1a39c59ae9752a23c906d91528b32d6ca2" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ProcessingUnit::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="86" column="8" bodyfile="HepsycodeDesign/src/tl.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_processing_unit_1a7c79d395aec1489d72e8deb11e81bcc3" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int ProcessingUnit::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="87" column="14" bodyfile="HepsycodeDesign/src/tl.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_processing_unit_1a1798129379e63325bc45484193334d35" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ProcessingUnit::processorType</definition>
+        <argsstring></argsstring>
+        <name>processorType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="88" column="16" bodyfile="HepsycodeDesign/src/tl.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_processing_unit_1a82138ac0886f2af91a81e5c68e4ea375" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ProcessingUnit::cost</definition>
+        <argsstring></argsstring>
+        <name>cost</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="89" column="15" bodyfile="HepsycodeDesign/src/tl.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_processing_unit_1a53d94f4cc03f4dad1fdef142ddacbfee" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ProcessingUnit::ISA</definition>
+        <argsstring></argsstring>
+        <name>ISA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="90" column="16" bodyfile="HepsycodeDesign/src/tl.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_processing_unit_1a01ebb7abce840e8b996956228832e65e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ProcessingUnit::frequency</definition>
+        <argsstring></argsstring>
+        <name>frequency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="91" column="15" bodyfile="HepsycodeDesign/src/tl.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_processing_unit_1a01bb4de07428d71da7b004594ff336bd" prot="public" static="no" mutable="no">
+        <type>float **</type>
+        <definition>float** ProcessingUnit::CC4CS</definition>
+        <argsstring></argsstring>
+        <name>CC4CS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="92" column="15" bodyfile="HepsycodeDesign/src/tl.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_processing_unit_1ab19b7aaa350746fa5d57e8cf70f0da3c" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ProcessingUnit::Power</definition>
+        <argsstring></argsstring>
+        <name>Power</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="93" column="7" bodyfile="HepsycodeDesign/src/tl.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_processing_unit_1a3d61b59933aa4703740546137478fdde" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ProcessingUnit::MIPS</definition>
+        <argsstring></argsstring>
+        <name>MIPS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="94" column="7" bodyfile="HepsycodeDesign/src/tl.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_processing_unit_1aa9f158e72fea6e416f3c1de0e8a62320" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ProcessingUnit::I4CSmin</definition>
+        <argsstring></argsstring>
+        <name>I4CSmin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="95" column="7" bodyfile="HepsycodeDesign/src/tl.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_processing_unit_1a8e68ace97807e113397794847ba13a37" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ProcessingUnit::I4CSmax</definition>
+        <argsstring></argsstring>
+        <name>I4CSmax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="96" column="7" bodyfile="HepsycodeDesign/src/tl.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_processing_unit_1a946073849ecb4e68173fc843658114dd" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ProcessingUnit::Vdd</definition>
+        <argsstring></argsstring>
+        <name>Vdd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="97" column="7" bodyfile="HepsycodeDesign/src/tl.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_processing_unit_1a30f2cae8129e6d834a95a9c0778e955d" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ProcessingUnit::Idd</definition>
+        <argsstring></argsstring>
+        <name>Idd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="98" column="7" bodyfile="HepsycodeDesign/src/tl.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_processing_unit_1a19c1e33d59378a6db80ec7bffaa72d22" prot="public" static="no" mutable="no">
+        <type>sc_time</type>
+        <definition>sc_time ProcessingUnit::overheadCS</definition>
+        <argsstring></argsstring>
+        <name>overheadCS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="99" column="17" bodyfile="HepsycodeDesign/src/tl.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_processing_unit_1a367aa0751e97e2562b64a50b4e4142dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int ProcessingUnit::getId</definition>
+        <argsstring>()</argsstring>
+        <name>getId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="102" column="22" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="71" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_processing_unit_1a95737a4e4a2bd424cb4455f0c4a84cf5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProcessingUnit::setId</definition>
+        <argsstring>(unsigned int c)</argsstring>
+        <name>setId</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="103" column="14" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="75" bodyend="77"/>
+        <referencedby refid="class_system_manager_1a77bb622cef7c79dab7463d02a2125542" compoundref="_system_manager_8cpp" startline="636" endline="769">SystemManager::generateBBInstances</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_processing_unit_1a9d6d56e08d110b9a12c45f12ebff1d97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ProcessingUnit::getName</definition>
+        <argsstring>()</argsstring>
+        <name>getName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="105" column="16" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="79" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_processing_unit_1a24c691bffdbf8b79fa8301ba6493e0e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProcessingUnit::setName</definition>
+        <argsstring>(string x)</argsstring>
+        <name>setName</name>
+        <param>
+          <type>string</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="106" column="14" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="84" bodyend="87"/>
+        <referencedby refid="class_system_manager_1a77bb622cef7c79dab7463d02a2125542" compoundref="_system_manager_8cpp" startline="636" endline="769">SystemManager::generateBBInstances</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_processing_unit_1ab0655a56bb59cad8ece761abbbc65cdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ProcessingUnit::getProcessorType</definition>
+        <argsstring>()</argsstring>
+        <name>getProcessorType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="108" column="16" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="89" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="class_processing_unit_1a11749a7a862ab46b771844fddc373ed6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProcessingUnit::setProcessorType</definition>
+        <argsstring>(string x)</argsstring>
+        <name>setProcessorType</name>
+        <param>
+          <type>string</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="109" column="14" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="94" bodyend="97"/>
+        <referencedby refid="class_system_manager_1a77bb622cef7c79dab7463d02a2125542" compoundref="_system_manager_8cpp" startline="636" endline="769">SystemManager::generateBBInstances</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_processing_unit_1a165cc1bf37c9a782333ede90806442d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float ProcessingUnit::getCost</definition>
+        <argsstring>()</argsstring>
+        <name>getCost</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="111" column="15" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="99" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="class_processing_unit_1aa3dae99a84415455a6db52ce06268ee6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProcessingUnit::setCost</definition>
+        <argsstring>(float x)</argsstring>
+        <name>setCost</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="112" column="14" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="104" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_processing_unit_1a05972e9632c4beca6a20454d06a07aef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ProcessingUnit::getISA</definition>
+        <argsstring>()</argsstring>
+        <name>getISA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="114" column="16" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="109" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="class_processing_unit_1a32aac7fd512cb23a8cc629d87ce317d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProcessingUnit::setISA</definition>
+        <argsstring>(string x)</argsstring>
+        <name>setISA</name>
+        <param>
+          <type>string</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="115" column="14" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="114" bodyend="117"/>
+        <referencedby refid="class_system_manager_1a77bb622cef7c79dab7463d02a2125542" compoundref="_system_manager_8cpp" startline="636" endline="769">SystemManager::generateBBInstances</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_processing_unit_1a050cc3064600765a2c5b28f6a4034875" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float ProcessingUnit::getFrequency</definition>
+        <argsstring>()</argsstring>
+        <name>getFrequency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="117" column="15" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="119" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="class_processing_unit_1a48a63b09d626c9563d36404b5f95a04a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProcessingUnit::setFrequency</definition>
+        <argsstring>(float x)</argsstring>
+        <name>setFrequency</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="118" column="14" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="124" bodyend="127"/>
+        <referencedby refid="class_system_manager_1a77bb622cef7c79dab7463d02a2125542" compoundref="_system_manager_8cpp" startline="636" endline="769">SystemManager::generateBBInstances</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_processing_unit_1a01cb30925eeacbecd284554bef40f1e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float **</type>
+        <definition>float ** ProcessingUnit::getCC4S</definition>
+        <argsstring>()</argsstring>
+        <name>getCC4S</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="120" column="15" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="129" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="class_processing_unit_1a0878e37abdc168f31758d4df208c6663" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProcessingUnit::setCC4S</definition>
+        <argsstring>(float **x)</argsstring>
+        <name>setCC4S</name>
+        <param>
+          <type>float **</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="121" column="14" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="134" bodyend="137"/>
+        <referencedby refid="class_system_manager_1a77bb622cef7c79dab7463d02a2125542" compoundref="_system_manager_8cpp" startline="636" endline="769">SystemManager::generateBBInstances</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_processing_unit_1abd0118180953341e203b988f6430c72c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float ProcessingUnit::getPower</definition>
+        <argsstring>()</argsstring>
+        <name>getPower</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="123" column="7" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="139" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="class_processing_unit_1a4994085fb506708d4c0f1c27565ffe2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProcessingUnit::setPower</definition>
+        <argsstring>(float x)</argsstring>
+        <name>setPower</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="124" column="6" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="144" bodyend="147"/>
+        <referencedby refid="class_system_manager_1a77bb622cef7c79dab7463d02a2125542" compoundref="_system_manager_8cpp" startline="636" endline="769">SystemManager::generateBBInstances</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_processing_unit_1afe2c892fcd7e24ced8de933eb7078265" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float ProcessingUnit::getMIPS</definition>
+        <argsstring>()</argsstring>
+        <name>getMIPS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="126" column="7" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="149" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="class_processing_unit_1af91c01d3a84acf6f310949e80906e824" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProcessingUnit::setMIPS</definition>
+        <argsstring>(float x)</argsstring>
+        <name>setMIPS</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="127" column="6" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="154" bodyend="157"/>
+        <referencedby refid="class_system_manager_1a77bb622cef7c79dab7463d02a2125542" compoundref="_system_manager_8cpp" startline="636" endline="769">SystemManager::generateBBInstances</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_processing_unit_1a0d5c74b4ca7b117ec84b7ed1cd897840" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float ProcessingUnit::getI4CSmin</definition>
+        <argsstring>()</argsstring>
+        <name>getI4CSmin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="129" column="7" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="159" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="class_processing_unit_1afb3bb2c3b1421dfabf867ff1bd084968" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProcessingUnit::setI4CSmin</definition>
+        <argsstring>(float x)</argsstring>
+        <name>setI4CSmin</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="130" column="6" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="164" bodyend="167"/>
+        <referencedby refid="class_system_manager_1a77bb622cef7c79dab7463d02a2125542" compoundref="_system_manager_8cpp" startline="636" endline="769">SystemManager::generateBBInstances</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_processing_unit_1a6ce43383c58fd2c1ef0b0320c0936543" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float ProcessingUnit::getI4CSmax</definition>
+        <argsstring>()</argsstring>
+        <name>getI4CSmax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="132" column="7" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="169" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="class_processing_unit_1a9995278db81888144089791e7eef8b71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProcessingUnit::setI4CSmax</definition>
+        <argsstring>(float x)</argsstring>
+        <name>setI4CSmax</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="133" column="6" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="174" bodyend="177"/>
+        <referencedby refid="class_system_manager_1a77bb622cef7c79dab7463d02a2125542" compoundref="_system_manager_8cpp" startline="636" endline="769">SystemManager::generateBBInstances</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_processing_unit_1a22cde43de69c7d230446ea3a45ad2107" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float ProcessingUnit::getVdd</definition>
+        <argsstring>()</argsstring>
+        <name>getVdd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="135" column="7" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="179" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="class_processing_unit_1ac4ef8b2cafc7e379b4cb05e463840128" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProcessingUnit::setVdd</definition>
+        <argsstring>(float x)</argsstring>
+        <name>setVdd</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="136" column="6" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="184" bodyend="187"/>
+        <referencedby refid="class_system_manager_1a77bb622cef7c79dab7463d02a2125542" compoundref="_system_manager_8cpp" startline="636" endline="769">SystemManager::generateBBInstances</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_processing_unit_1aff68b527f86f27ea0b373c27406f6281" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float ProcessingUnit::getIdd</definition>
+        <argsstring>()</argsstring>
+        <name>getIdd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="138" column="7" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="189" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="class_processing_unit_1a12212762fb57a5b582782c66861443fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProcessingUnit::setIdd</definition>
+        <argsstring>(float x)</argsstring>
+        <name>setIdd</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="139" column="6" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="194" bodyend="197"/>
+        <referencedby refid="class_system_manager_1a77bb622cef7c79dab7463d02a2125542" compoundref="_system_manager_8cpp" startline="636" endline="769">SystemManager::generateBBInstances</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_processing_unit_1aac8677c23e3d151d9994c863c817327a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>sc_time</type>
+        <definition>sc_time ProcessingUnit::getOverheadCS</definition>
+        <argsstring>()</argsstring>
+        <name>getOverheadCS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="141" column="17" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="199" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="class_processing_unit_1a4c38556d47f2cd40adc4092b09dba992" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProcessingUnit::setOverheadCS</definition>
+        <argsstring>(sc_time x)</argsstring>
+        <name>setOverheadCS</name>
+        <param>
+          <type>sc_time</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="142" column="14" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="204" bodyend="207"/>
+        <referencedby refid="class_system_manager_1a77bb622cef7c79dab7463d02a2125542" compoundref="_system_manager_8cpp" startline="636" endline="769">SystemManager::generateBBInstances</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>float</label>
+      </node>
+      <node id="5">
+        <label>std::basic_string&lt; char &gt;</label>
+      </node>
+      <node id="3">
+        <label>int</label>
+      </node>
+      <node id="6">
+        <label>sc_time</label>
+      </node>
+      <node id="1">
+        <label>ProcessingUnit</label>
+        <link refid="class_processing_unit"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+I4CSmin</edgelabel>
+          <edgelabel>+frequency</edgelabel>
+          <edgelabel>+I4CSmax</edgelabel>
+          <edgelabel>+cost</edgelabel>
+          <edgelabel>+Power</edgelabel>
+          <edgelabel>+MIPS</edgelabel>
+          <edgelabel>+CC4CS</edgelabel>
+          <edgelabel>+Vdd</edgelabel>
+          <edgelabel>+Idd</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+id</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+processorType</edgelabel>
+          <edgelabel>+name</edgelabel>
+          <edgelabel>+ISA</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+overheadCS</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>std::string</label>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HepsycodeDesign/src/tl.h" line="81" column="1" bodyfile="HepsycodeDesign/src/tl.h" bodystart="80" bodyend="142"/>
+    <listofallmembers>
+      <member refid="class_processing_unit_1a01bb4de07428d71da7b004594ff336bd" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>CC4CS</name></member>
+      <member refid="class_processing_unit_1a82138ac0886f2af91a81e5c68e4ea375" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>cost</name></member>
+      <member refid="class_processing_unit_1a01ebb7abce840e8b996956228832e65e" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>frequency</name></member>
+      <member refid="class_processing_unit_1a01cb30925eeacbecd284554bef40f1e2" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>getCC4S</name></member>
+      <member refid="class_processing_unit_1a165cc1bf37c9a782333ede90806442d5" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>getCost</name></member>
+      <member refid="class_processing_unit_1a050cc3064600765a2c5b28f6a4034875" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>getFrequency</name></member>
+      <member refid="class_processing_unit_1a6ce43383c58fd2c1ef0b0320c0936543" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>getI4CSmax</name></member>
+      <member refid="class_processing_unit_1a0d5c74b4ca7b117ec84b7ed1cd897840" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>getI4CSmin</name></member>
+      <member refid="class_processing_unit_1a367aa0751e97e2562b64a50b4e4142dd" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>getId</name></member>
+      <member refid="class_processing_unit_1aff68b527f86f27ea0b373c27406f6281" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>getIdd</name></member>
+      <member refid="class_processing_unit_1a05972e9632c4beca6a20454d06a07aef" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>getISA</name></member>
+      <member refid="class_processing_unit_1afe2c892fcd7e24ced8de933eb7078265" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>getMIPS</name></member>
+      <member refid="class_processing_unit_1a9d6d56e08d110b9a12c45f12ebff1d97" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>getName</name></member>
+      <member refid="class_processing_unit_1aac8677c23e3d151d9994c863c817327a" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>getOverheadCS</name></member>
+      <member refid="class_processing_unit_1abd0118180953341e203b988f6430c72c" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>getPower</name></member>
+      <member refid="class_processing_unit_1ab0655a56bb59cad8ece761abbbc65cdc" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>getProcessorType</name></member>
+      <member refid="class_processing_unit_1a22cde43de69c7d230446ea3a45ad2107" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>getVdd</name></member>
+      <member refid="class_processing_unit_1a8e68ace97807e113397794847ba13a37" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>I4CSmax</name></member>
+      <member refid="class_processing_unit_1aa9f158e72fea6e416f3c1de0e8a62320" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>I4CSmin</name></member>
+      <member refid="class_processing_unit_1a7c79d395aec1489d72e8deb11e81bcc3" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>id</name></member>
+      <member refid="class_processing_unit_1a30f2cae8129e6d834a95a9c0778e955d" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>Idd</name></member>
+      <member refid="class_processing_unit_1a53d94f4cc03f4dad1fdef142ddacbfee" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>ISA</name></member>
+      <member refid="class_processing_unit_1a3d61b59933aa4703740546137478fdde" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>MIPS</name></member>
+      <member refid="class_processing_unit_1a39c59ae9752a23c906d91528b32d6ca2" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>name</name></member>
+      <member refid="class_processing_unit_1a19c1e33d59378a6db80ec7bffaa72d22" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>overheadCS</name></member>
+      <member refid="class_processing_unit_1ab19b7aaa350746fa5d57e8cf70f0da3c" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>Power</name></member>
+      <member refid="class_processing_unit_1a1798129379e63325bc45484193334d35" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>processorType</name></member>
+      <member refid="class_processing_unit_1a0878e37abdc168f31758d4df208c6663" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>setCC4S</name></member>
+      <member refid="class_processing_unit_1aa3dae99a84415455a6db52ce06268ee6" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>setCost</name></member>
+      <member refid="class_processing_unit_1a48a63b09d626c9563d36404b5f95a04a" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>setFrequency</name></member>
+      <member refid="class_processing_unit_1a9995278db81888144089791e7eef8b71" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>setI4CSmax</name></member>
+      <member refid="class_processing_unit_1afb3bb2c3b1421dfabf867ff1bd084968" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>setI4CSmin</name></member>
+      <member refid="class_processing_unit_1a95737a4e4a2bd424cb4455f0c4a84cf5" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>setId</name></member>
+      <member refid="class_processing_unit_1a12212762fb57a5b582782c66861443fc" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>setIdd</name></member>
+      <member refid="class_processing_unit_1a32aac7fd512cb23a8cc629d87ce317d8" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>setISA</name></member>
+      <member refid="class_processing_unit_1af91c01d3a84acf6f310949e80906e824" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>setMIPS</name></member>
+      <member refid="class_processing_unit_1a24c691bffdbf8b79fa8301ba6493e0e5" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>setName</name></member>
+      <member refid="class_processing_unit_1a4c38556d47f2cd40adc4092b09dba992" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>setOverheadCS</name></member>
+      <member refid="class_processing_unit_1a4994085fb506708d4c0f1c27565ffe2b" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>setPower</name></member>
+      <member refid="class_processing_unit_1a11749a7a862ab46b771844fddc373ed6" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>setProcessorType</name></member>
+      <member refid="class_processing_unit_1ac4ef8b2cafc7e379b4cb05e463840128" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>setVdd</name></member>
+      <member refid="class_processing_unit_1a946073849ecb4e68173fc843658114dd" prot="public" virt="non-virtual"><scope>ProcessingUnit</scope><name>Vdd</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

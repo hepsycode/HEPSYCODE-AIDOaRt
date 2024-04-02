@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classsc__core_1_1sc__csp__channel__out__if">
+<title>sc_core::sc_csp_channel_out_if&lt; T &gt; Class Template Reference</title>
+<indexterm><primary>sc_core::sc_csp_channel_out_if&lt; T &gt;</primary></indexterm>
+<para>
+<computeroutput>#include &lt;sc_csp_channel_ifs.h&gt;</computeroutput>
+</para>
+Inheritance diagram for sc_core::sc_csp_channel_out_if&lt; T &gt;:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classsc__core_1_1sc__csp__channel__out__if__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for sc_core::sc_csp_channel_out_if&lt; T &gt;:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classsc__core_1_1sc__csp__channel__out__if__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_classsc__core_1_1sc__csp__channel__out__if_1ae0da34a87857ef8c638455cb6484004b">write</link> (const T &amp;)=0</para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_classsc__core_1_1sc__csp__channel__out__if_1af4f0e8a520cdb556754743a056fa4e37">write_test</link> ()=0</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classsc__core_1_1sc__csp__channel__out__if_1a057d067cc18ad4887d53627ff8f5ba5a">register_alt</link> ()=0</para>
+</listitem>
+            <listitem><para>virtual const sc_event &amp; <link linkend="_classsc__core_1_1sc__csp__channel__out__if_1ad5cd0e709df419262e3714e91509d3d3">get_alt_event</link> ()=0</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classsc__core_1_1sc__csp__channel__out__if_1afa1c0785fcb46ce78d4749b4ff28ff08">sc_csp_channel_out_if</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;class T&gt;
+class sc_core::sc_csp_channel_out_if&lt; T &gt;</title></simplesect>
+
+<para>
+Definition at line 114 of file sc_csp_channel_ifs.h.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classsc__core_1_1sc__csp__channel__out__if_1afa1c0785fcb46ce78d4749b4ff28ff08"/>    <section>
+    <title>sc_csp_channel_out_if()</title>
+<indexterm><primary>sc_csp_channel_out_if</primary><secondary>sc_core::sc_csp_channel_out_if&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>sc_core::sc_csp_channel_out_if&lt; T &gt;</primary><secondary>sc_csp_channel_out_if</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput><link linkend="_classsc__core_1_1sc__csp__channel__out__if">sc_core::sc_csp_channel_out_if</link>&lt; T &gt;::<link linkend="_classsc__core_1_1sc__csp__channel__out__if">sc_csp_channel_out_if</link> ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line 130 of file sc_csp_channel_ifs.h.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classsc__core_1_1sc__csp__channel__out__if_1ad5cd0e709df419262e3714e91509d3d3"/>    <section>
+    <title>get_alt_event()</title>
+<indexterm><primary>get_alt_event</primary><secondary>sc_core::sc_csp_channel_out_if&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>sc_core::sc_csp_channel_out_if&lt; T &gt;</primary><secondary>get_alt_event</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>virtual const sc_event&amp; <link linkend="_classsc__core_1_1sc__csp__channel__out__if">sc_core::sc_csp_channel_out_if</link>&lt; T &gt;::get_alt_event ( )<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+Implemented in <link linkend="_group__firfirgcd__csp__channel__group_1ga40cb801a3a15df214563c89160c6d19c">sc_csp_channel&lt; T &gt;</link>.</para>
+    </section><anchor xml:id="_classsc__core_1_1sc__csp__channel__out__if_1a057d067cc18ad4887d53627ff8f5ba5a"/>    <section>
+    <title>register_alt()</title>
+<indexterm><primary>register_alt</primary><secondary>sc_core::sc_csp_channel_out_if&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>sc_core::sc_csp_channel_out_if&lt; T &gt;</primary><secondary>register_alt</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>virtual void <link linkend="_classsc__core_1_1sc__csp__channel__out__if">sc_core::sc_csp_channel_out_if</link>&lt; T &gt;::register_alt ( )<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+Implemented in <link linkend="_group__firfirgcd__csp__channel__group_1gaaed132e73280fe2a46b14604240832bc">sc_csp_channel&lt; T &gt;</link>.</para>
+    </section><anchor xml:id="_classsc__core_1_1sc__csp__channel__out__if_1ae0da34a87857ef8c638455cb6484004b"/>    <section>
+    <title>write()</title>
+<indexterm><primary>write</primary><secondary>sc_core::sc_csp_channel_out_if&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>sc_core::sc_csp_channel_out_if&lt; T &gt;</primary><secondary>write</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>virtual void <link linkend="_classsc__core_1_1sc__csp__channel__out__if">sc_core::sc_csp_channel_out_if</link>&lt; T &gt;::write (const T &amp; )<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+Implemented in <link linkend="_group__firfirgcd__csp__channel__group_1gaf8a9ace576ff2e0462c8db276f9f388d">sc_csp_channel&lt; T &gt;</link>.</para>
+    </section><anchor xml:id="_classsc__core_1_1sc__csp__channel__out__if_1af4f0e8a520cdb556754743a056fa4e37"/>    <section>
+    <title>write_test()</title>
+<indexterm><primary>write_test</primary><secondary>sc_core::sc_csp_channel_out_if&lt; T &gt;</secondary></indexterm>
+<indexterm><primary>sc_core::sc_csp_channel_out_if&lt; T &gt;</primary><secondary>write_test</secondary></indexterm>
+<computeroutput>template&lt;class T &gt; </computeroutput><para><computeroutput>virtual bool <link linkend="_classsc__core_1_1sc__csp__channel__out__if">sc_core::sc_csp_channel_out_if</link>&lt; T &gt;::write_test ( )<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+Implemented in <link linkend="_group__firfirgcd__csp__channel__group_1ga3566fb8ed3dc3ba7ab7d6dbe17787153">sc_csp_channel&lt; T &gt;</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+HepsycodeDesign/src/<link linkend="_sc__csp__channel__ifs_8h">sc_csp_channel_ifs.h</link></section>
+</section>

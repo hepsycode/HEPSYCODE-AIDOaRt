@@ -1,0 +1,91 @@
+\hypertarget{display_8h_source}{}\doxysection{display.\+h}
+\label{display_8h_source}\index{HepsycodeDesign/src/display.h@{HepsycodeDesign/src/display.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * University of L'Aquila -\/ HEPSYCODE Source Code License                       *}}
+\DoxyCodeLine{00003 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00004 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00005 \textcolor{comment}{ * (c) 2018-\/2019 Centre of Excellence DEWS All rights reserved                  *}}
+\DoxyCodeLine{00006 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00007 \textcolor{comment}{ * <one line to give the program's name and a brief idea of what it does.>      *}}
+\DoxyCodeLine{00008 \textcolor{comment}{ * Copyright (C) 2022  Vittoriano Muttillo, Luigi Pomante                       *                                    *}}
+\DoxyCodeLine{00009 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00010 \textcolor{comment}{ * This program is free software: you can redistribute it and/or modify         *}}
+\DoxyCodeLine{00011 \textcolor{comment}{ * it under the terms of the GNU General Public License as published by         *}}
+\DoxyCodeLine{00012 \textcolor{comment}{ * the Free Software Foundation, either version 3 of the License, or            *}}
+\DoxyCodeLine{00013 \textcolor{comment}{ * (at your option) any later version.                                          *}}
+\DoxyCodeLine{00014 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00015 \textcolor{comment}{ * This program is distributed in the hope that it will be useful,              *}}
+\DoxyCodeLine{00016 \textcolor{comment}{ * but WITHOUT ANY WARRANTY; without even the implied warranty of               *}}
+\DoxyCodeLine{00017 \textcolor{comment}{ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the                *}}
+\DoxyCodeLine{00018 \textcolor{comment}{ * GNU General Public License for more details.                                 *}}
+\DoxyCodeLine{00019 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00020 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00021 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00022 \textcolor{comment}{ * Created on: 09/May/2022                                                      *}}
+\DoxyCodeLine{00023 \textcolor{comment}{ * Authors: Vittoriano Muttillo, Luigi Pomante                                  *}}
+\DoxyCodeLine{00024 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00025 \textcolor{comment}{ * email: vittoriano.muttillo@guest.univaq.it                                   *}}
+\DoxyCodeLine{00026 \textcolor{comment}{ *        luigi.pomante@univaq.it                                               *}}
+\DoxyCodeLine{00027 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00028 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00029 \textcolor{comment}{ * This code has been developed from an HEPSYCODE model used as demonstrator by *}}
+\DoxyCodeLine{00030 \textcolor{comment}{ * University of L'Aquila.                                                      *}}
+\DoxyCodeLine{00031 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00032 \textcolor{comment}{ * The code is used as a working example in the 'Embedded Systems' course of    *}}
+\DoxyCodeLine{00033 \textcolor{comment}{ * the Master in Conputer Science Engineering offered by the                    *}}
+\DoxyCodeLine{00034 \textcolor{comment}{ * University of L'Aquila                                                       *}}
+\DoxyCodeLine{00035 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{00037 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00038 \textcolor{comment}{ * display : FirFirGCD Display.}}
+\DoxyCodeLine{00039 \textcolor{comment}{ *}}
+\DoxyCodeLine{00040 \textcolor{comment}{ * Display: Display (feedback) file}}
+\DoxyCodeLine{00041 \textcolor{comment}{ *}}
+\DoxyCodeLine{00042 \textcolor{comment}{********************************************************************************/}}
+\DoxyCodeLine{00043  \textcolor{comment}{// start firfirgcd\_display\_group}}
+\DoxyCodeLine{00058 }
+\DoxyCodeLine{00059 \textcolor{preprocessor}{\#ifndef \_\_DISPLAY\_H\_\_}}
+\DoxyCodeLine{00060 \textcolor{preprocessor}{\#define \_\_DISPLAY\_H\_\_}}
+\DoxyCodeLine{00061 }
+\DoxyCodeLine{00062 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00063 \textcolor{comment}{ ***                                Includes                                  ***}}
+\DoxyCodeLine{00064 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00065 }
+\DoxyCodeLine{00066 \textcolor{preprocessor}{\#include <systemc.h>}}
+\DoxyCodeLine{00067 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{sc__csp__channel__ifs_8h}{sc\_csp\_channel\_ifs.h}}"}}
+\DoxyCodeLine{00068 }
+\DoxyCodeLine{00069 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00070 \textcolor{comment}{ ***                                Functions                                 ***}}
+\DoxyCodeLine{00071 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00072 }
+\DoxyCodeLine{00074 \textcolor{comment}{// SBM DEPENDENT}}
+\DoxyCodeLine{00076 \textcolor{comment}{}}
+\DoxyCodeLine{00078 }
+\DoxyCodeLine{00079 \textcolor{comment}{// DISPLAY: PRINTS TO THE SCREEN DATA FROM THE SYSTEM}}
+\DoxyCodeLine{00080 }
+\DoxyCodeLine{00082 }
+\DoxyCodeLine{\Hypertarget{display_8h_source_l00083}\mbox{\hyperlink{group__firfirgcd__display__group_ga62f1837ecdb769140a861dbc2af2abdb}{00083}} \mbox{\hyperlink{group__firfirgcd__display__group_ga62f1837ecdb769140a861dbc2af2abdb}{SC\_MODULE}}(display)}
+\DoxyCodeLine{00084 \{}
+\DoxyCodeLine{00085 }
+\DoxyCodeLine{00086     \textcolor{comment}{// Port for input by channel}}
+\DoxyCodeLine{00087     sc\_port< sc\_csp\_channel\_in\_if< sc\_uint<8> > > result\_channel\_port;}
+\DoxyCodeLine{00088 }
+\DoxyCodeLine{00089     SC\_CTOR(display)}
+\DoxyCodeLine{00090     \{}
+\DoxyCodeLine{00091         SC\_THREAD(output);}
+\DoxyCodeLine{00092     \}}
+\DoxyCodeLine{00093 }
+\DoxyCodeLine{00094     \textcolor{comment}{// Main method}}
+\DoxyCodeLine{00095     \textcolor{keywordtype}{void} output();}
+\DoxyCodeLine{00096 \};}
+\DoxyCodeLine{00097  \textcolor{comment}{// end of firfirgcd\_display\_group}}
+\DoxyCodeLine{00099 }
+\DoxyCodeLine{00100 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00101 }
+\DoxyCodeLine{00102 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00103 \textcolor{comment}{ ***                                  EOF                                     ***}}
+\DoxyCodeLine{00104 \textcolor{comment}{ ********************************************************************************/}}
+
+\end{DoxyCode}

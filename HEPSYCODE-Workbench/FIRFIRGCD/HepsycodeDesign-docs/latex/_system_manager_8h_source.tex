@@ -1,0 +1,188 @@
+\hypertarget{_system_manager_8h_source}{}\doxysection{System\+Manager.\+h}
+\label{_system_manager_8h_source}\index{HepsycodeDesign/src/SystemManager.h@{HepsycodeDesign/src/SystemManager.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * University of L'Aquila -\/ HEPSYCODE Source Code License                       *}}
+\DoxyCodeLine{00003 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00004 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00005 \textcolor{comment}{ * (c) 2018-\/2019 Centre of Excellence DEWS All rights reserved                  *}}
+\DoxyCodeLine{00006 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00007 \textcolor{comment}{ * <one line to give the program's name and a brief idea of what it does.>      *}}
+\DoxyCodeLine{00008 \textcolor{comment}{ * Copyright (C) 2022  Vittoriano Muttillo, Luigi Pomante                       *                                    *}}
+\DoxyCodeLine{00009 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00010 \textcolor{comment}{ * This program is free software: you can redistribute it and/or modify         *}}
+\DoxyCodeLine{00011 \textcolor{comment}{ * it under the terms of the GNU General Public License as published by         *}}
+\DoxyCodeLine{00012 \textcolor{comment}{ * the Free Software Foundation, either version 3 of the License, or            *}}
+\DoxyCodeLine{00013 \textcolor{comment}{ * (at your option) any later version.                                          *}}
+\DoxyCodeLine{00014 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00015 \textcolor{comment}{ * This program is distributed in the hope that it will be useful,              *}}
+\DoxyCodeLine{00016 \textcolor{comment}{ * but WITHOUT ANY WARRANTY; without even the implied warranty of               *}}
+\DoxyCodeLine{00017 \textcolor{comment}{ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the                *}}
+\DoxyCodeLine{00018 \textcolor{comment}{ * GNU General Public License for more details.                                 *}}
+\DoxyCodeLine{00019 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00020 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00021 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00022 \textcolor{comment}{ * Created on: 09/May/2022                                                      *}}
+\DoxyCodeLine{00023 \textcolor{comment}{ * Authors: Vittoriano Muttillo, Luigi Pomante                                  *}}
+\DoxyCodeLine{00024 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00025 \textcolor{comment}{ * email: vittoriano.muttillo@guest.univaq.it                                   *}}
+\DoxyCodeLine{00026 \textcolor{comment}{ *        luigi.pomante@univaq.it                                               *}}
+\DoxyCodeLine{00027 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00028 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00029 \textcolor{comment}{ * This code has been developed from an HEPSYCODE model used as demonstrator by *}}
+\DoxyCodeLine{00030 \textcolor{comment}{ * University of L'Aquila.                                                      *}}
+\DoxyCodeLine{00031 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00032 \textcolor{comment}{ * The code is used as a working example in the 'Embedded Systems' course of    *}}
+\DoxyCodeLine{00033 \textcolor{comment}{ * the Master in Conputer Science Engineering offered by the                    *}}
+\DoxyCodeLine{00034 \textcolor{comment}{ * University of L'Aquila                                                       *}}
+\DoxyCodeLine{00035 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{00037 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00038 \textcolor{comment}{ * System Manager: HEPSIM System Manager.}}
+\DoxyCodeLine{00039 \textcolor{comment}{ *}}
+\DoxyCodeLine{00040 \textcolor{comment}{ * System Manager: HEPSIM System Manager file}}
+\DoxyCodeLine{00041 \textcolor{comment}{ *}}
+\DoxyCodeLine{00042 \textcolor{comment}{********************************************************************************/}}
+\DoxyCodeLine{00043  \textcolor{comment}{// start system\_manager\_group}}
+\DoxyCodeLine{00058 }
+\DoxyCodeLine{00059 \textcolor{preprocessor}{\#ifndef \_\_SYSTEMMANAGER\_\_}}
+\DoxyCodeLine{00060 \textcolor{preprocessor}{\#define \_\_SYSTEMMANAGER\_\_}}
+\DoxyCodeLine{00061 }
+\DoxyCodeLine{00062 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00063 \textcolor{comment}{ ***                                Includes                                  ***}}
+\DoxyCodeLine{00064 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00065 }
+\DoxyCodeLine{00066 \textcolor{preprocessor}{\#include <systemc.h>}}
+\DoxyCodeLine{00067 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{00068 \textcolor{preprocessor}{\#include <stdlib.h>}}
+\DoxyCodeLine{00069 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{00070 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{00071 }
+\DoxyCodeLine{00072 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{tl_8h}{tl.h}}"}}
+\DoxyCodeLine{00073 }
+\DoxyCodeLine{00074 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{define_8h}{define.h}}"}}
+\DoxyCodeLine{00075 }
+\DoxyCodeLine{00076 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{00077 }
+\DoxyCodeLine{00078 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00079 \textcolor{comment}{ ***                                Functions                                 ***}}
+\DoxyCodeLine{00080 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00081 }
+\DoxyCodeLine{00083 \textcolor{comment}{// SBM INDEPENDENT}}
+\DoxyCodeLine{00085 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_system_manager_8h_source_l00086}\mbox{\hyperlink{class_system_manager}{00086}} \textcolor{keyword}{class }\mbox{\hyperlink{class_system_manager}{SystemManager}}}
+\DoxyCodeLine{00087 \{}
+\DoxyCodeLine{00088 }
+\DoxyCodeLine{00089     \textcolor{keyword}{public}:}
+\DoxyCodeLine{00090 }
+\DoxyCodeLine{00091         \textcolor{comment}{// Vector of processes}}
+\DoxyCodeLine{00092         vector<Process> VPS;}
+\DoxyCodeLine{00093 }
+\DoxyCodeLine{\Hypertarget{_system_manager_8h_source_l00094}\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{00094}}         \textcolor{comment}{// Vector of channels}}
+\DoxyCodeLine{00095         vector<Channel> VCH; }
+\DoxyCodeLine{00096 }
+\DoxyCodeLine{\Hypertarget{_system_manager_8h_source_l00097}\mbox{\hyperlink{class_system_manager_a7dcc3ae8736a6aad7e27f276706205a3}{00097}}         \textcolor{comment}{// Vector of basic blocks}}
+\DoxyCodeLine{00098         vector<BasicBlock> VBB; }
+\DoxyCodeLine{00099 }
+\DoxyCodeLine{\Hypertarget{_system_manager_8h_source_l00100}\mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{00100}}         \textcolor{comment}{// Vector of physical link}}
+\DoxyCodeLine{00101         vector<PhysicalLink> VPL; }
+\DoxyCodeLine{00102 }
+\DoxyCodeLine{\Hypertarget{_system_manager_8h_source_l00103}\mbox{\hyperlink{class_system_manager_af28a1744a2d964a7047c31c6a5f1644a}{00103}}         \textcolor{comment}{// Allocation of PS to BB instances}}
+\DoxyCodeLine{00104         \textcolor{comment}{// (IDs of BB and PUs instances are possibly different by construction)}}
+\DoxyCodeLine{00105         vector<int> allocationPS\_BB;}
+\DoxyCodeLine{00106 }
+\DoxyCodeLine{\Hypertarget{_system_manager_8h_source_l00107}\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{00107}}         \textcolor{comment}{// Allocation of CH to physical inks instances}}
+\DoxyCodeLine{00108         vector<int> allocationCH\_PL; }
+\DoxyCodeLine{00109 }
+\DoxyCodeLine{\Hypertarget{_system_manager_8h_source_l00110}\mbox{\hyperlink{class_system_manager_ab75b55327c942c6950f67c14ba9dea08}{00110}}         \textcolor{comment}{// Constructor}}
+\DoxyCodeLine{00111         \mbox{\hyperlink{class_system_manager}{SystemManager}}();}
+\DoxyCodeLine{00112 }
+\DoxyCodeLine{00113         \textcolor{comment}{// Used to fill VPS by reading application.xml}}
+\DoxyCodeLine{00114         \textcolor{comment}{//(process IDs are supposed to be incremental from 0 to NPS-\/1 where 0 is for stimulus and 1 is for display)}}
+\DoxyCodeLine{00115         vector<Process> generateProcessInstances(); }
+\DoxyCodeLine{00116         }
+\DoxyCodeLine{00117         \textcolor{comment}{// Used to fill VCH by reading application.xml}}
+\DoxyCodeLine{00118         \textcolor{comment}{//(channel IDs, called logical links in the xml, are supposed to be incremental from 0 to NCH-\/1)}}
+\DoxyCodeLine{00119         vector<Channel> generateChannelInstances();}
+\DoxyCodeLine{00120 }
+\DoxyCodeLine{00121         \textcolor{comment}{// Update the profiling of a process}}
+\DoxyCodeLine{00122         \textcolor{keywordtype}{void} PS\_Profiling(\textcolor{keywordtype}{int} processId);}
+\DoxyCodeLine{00123 }
+\DoxyCodeLine{00124         \textcolor{comment}{// Check if a process is allocated on a SPP}}
+\DoxyCodeLine{00125         \textcolor{keywordtype}{bool} checkSPP(\textcolor{keywordtype}{int} processId);}
+\DoxyCodeLine{00126 }
+\DoxyCodeLine{00127         \textcolor{comment}{// Delete XML concurrency and communication instances}}
+\DoxyCodeLine{00128         \textcolor{keywordtype}{void} deleteConcXmlConCom();}
+\DoxyCodeLine{00129 }
+\DoxyCodeLine{00130         \textcolor{comment}{// Update XML concurrency and communication instances}}
+\DoxyCodeLine{00131         \textcolor{keywordtype}{void} updateXmlConCom(\textcolor{keywordtype}{float} matrixCONC\_PS\_N[\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}][\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}], \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} matrixCOM[\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}][\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}], \textcolor{keywordtype}{float} matrixCONC\_CH\_N[\mbox{\hyperlink{group__firfirgcd__define__group_ga967ca22c6c7be038e1092147ce04f258}{NCH}}][\mbox{\hyperlink{group__firfirgcd__define__group_ga967ca22c6c7be038e1092147ce04f258}{NCH}}]);}
+\DoxyCodeLine{00132 }
+\DoxyCodeLine{00133         \textcolor{comment}{// Return a subset of allocationPS\_BB by considering only processes mapped to BB with ID equal to bb\_id}}
+\DoxyCodeLine{00134         vector<int> getAllocationPS\_BB(\textcolor{keywordtype}{int} \mbox{\hyperlink{group__firfirgcd__define__group_gaaa53553033df32820178982628a60cae}{bb\_id}});}
+\DoxyCodeLine{00135 }
+\DoxyCodeLine{00136         \textcolor{comment}{// Evaluate the simulated time for the execution of a statement}}
+\DoxyCodeLine{00137         sc\_time updateSimulatedTime(\textcolor{keywordtype}{int} processId);}
+\DoxyCodeLine{00138 }
+\DoxyCodeLine{00139         \textcolor{comment}{// Increase time for each statement}}
+\DoxyCodeLine{00140         \textcolor{keywordtype}{void} increaseSimulatedTime(\textcolor{keywordtype}{int} processId);}
+\DoxyCodeLine{00141 }
+\DoxyCodeLine{00142         \textcolor{comment}{// Increase processTime for the wait of the timers}}
+\DoxyCodeLine{00143         \textcolor{keywordtype}{void} increaseTimer(\textcolor{keywordtype}{int} processId, sc\_time delta);}
+\DoxyCodeLine{00144 }
+\DoxyCodeLine{00145         \textcolor{comment}{// Evaluate the energy for the execution of a statement}}
+\DoxyCodeLine{00146         \textcolor{keywordtype}{float} updateEstimatedEnergy(\textcolor{keywordtype}{int} processId);}
+\DoxyCodeLine{00147 }
+\DoxyCodeLine{00148         \textcolor{comment}{// Increase Energy for each statement}}
+\DoxyCodeLine{00149         \textcolor{keywordtype}{void} increaseEstimatedEnergy(\textcolor{keywordtype}{int} processId);}
+\DoxyCodeLine{00150 }
+\DoxyCodeLine{00151         \textcolor{comment}{// Delete XML Energy instances}}
+\DoxyCodeLine{00152         \textcolor{keywordtype}{void} deleteConcXmlEnergy();}
+\DoxyCodeLine{00153 }
+\DoxyCodeLine{00154         \textcolor{comment}{// Update XML Energy instances}}
+\DoxyCodeLine{00155         \textcolor{keywordtype}{void} updateXmlEnergy();}
+\DoxyCodeLine{00156 }
+\DoxyCodeLine{00157         \textcolor{comment}{// Used to fill VBB by reading instancesTL.xml}}
+\DoxyCodeLine{00158         vector<BasicBlock> generateBBInstances();}
+\DoxyCodeLine{00159 }
+\DoxyCodeLine{00160         \textcolor{comment}{// Used to fill VPL by reading instancesTL.xml}}
+\DoxyCodeLine{00161         vector<PhysicalLink> generatePhysicalLinkInstances();  }
+\DoxyCodeLine{00162 }
+\DoxyCodeLine{00163         \textcolor{comment}{// Fill allocationPS\_BB by reading mappingPS.xml}}
+\DoxyCodeLine{00164         \textcolor{keywordtype}{void} mappingPS();}
+\DoxyCodeLine{00165 }
+\DoxyCodeLine{00166         \textcolor{comment}{// Fill allocationCH\_PL by reading mappingCH.xml}}
+\DoxyCodeLine{00167         \textcolor{keywordtype}{void} mappingCH();}
+\DoxyCodeLine{00168 }
+\DoxyCodeLine{00169         \textcolor{comment}{// Free Running Load for Processes}}
+\DoxyCodeLine{00170         \textcolor{keywordtype}{float} FRL[\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}];}
+\DoxyCodeLine{00171 }
+\DoxyCodeLine{\Hypertarget{_system_manager_8h_source_l00172}\mbox{\hyperlink{class_system_manager_a7f06326402d0738cb87a1c03bf57f5c7}{00172}}         \textcolor{comment}{//Free Running Time}}
+\DoxyCodeLine{00173         sc\_time FRT;}
+\DoxyCodeLine{00174 }
+\DoxyCodeLine{\Hypertarget{_system_manager_8h_source_l00175}\mbox{\hyperlink{class_system_manager_a69ec2821a8a92a69fbb5cb0f789a64ca}{00175}}         \textcolor{comment}{// Get Free Running Time}}
+\DoxyCodeLine{00176         sc\_time getFRT();}
+\DoxyCodeLine{00177         \textcolor{comment}{// Set Free Running Time}}
+\DoxyCodeLine{00178         \textcolor{keywordtype}{void} setFRT(sc\_time x);}
+\DoxyCodeLine{00179 }
+\DoxyCodeLine{00180         \textcolor{comment}{//TODO: check float*}}
+\DoxyCodeLine{00181         \textcolor{comment}{// Load Estimation}}
+\DoxyCodeLine{00182         \textcolor{keywordtype}{float}* loadEst(sc\_time FRT\_n);}
+\DoxyCodeLine{00183         \textcolor{comment}{//TODO: check float*}}
+\DoxyCodeLine{00184         \textcolor{comment}{// Get Free Running Load}}
+\DoxyCodeLine{00185         \textcolor{keywordtype}{float}* getFRL();}
+\DoxyCodeLine{00186 }
+\DoxyCodeLine{00187         \textcolor{comment}{// Delete XML Load instances}}
+\DoxyCodeLine{00188         \textcolor{keywordtype}{void} deleteConcXmlLoad();}
+\DoxyCodeLine{00189         \textcolor{comment}{// Update XML Load instances}}
+\DoxyCodeLine{00190         \textcolor{keywordtype}{void} updateXmlLoad();}
+\DoxyCodeLine{00191 \};}
+\DoxyCodeLine{00192  \textcolor{comment}{// end of system\_manager\_group}}
+\DoxyCodeLine{00194 }
+\DoxyCodeLine{00195 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00196 }
+\DoxyCodeLine{00197 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00198 \textcolor{comment}{ ***                                  EOF                                     ***}}
+\DoxyCodeLine{00199 \textcolor{comment}{ ********************************************************************************/}}
+
+\end{DoxyCode}

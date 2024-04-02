@@ -1,0 +1,1734 @@
+\hypertarget{class_system_manager}{}\doxysection{System\+Manager Class Reference}
+\label{class_system_manager}\index{SystemManager@{SystemManager}}
+
+
+{\ttfamily \#include $<$System\+Manager.\+h$>$}
+
+
+
+Collaboration diagram for System\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_system_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_system_manager_a2f8a3e2e1929be50ef8702629f50bb94}{System\+Manager}} ()
+\item 
+vector$<$ \mbox{\hyperlink{class_process}{Process}} $>$ \mbox{\hyperlink{class_system_manager_a545df7d9bd60c4d42797a7233a1f4d61}{generate\+Process\+Instances}} ()
+\item 
+vector$<$ \mbox{\hyperlink{class_channel}{Channel}} $>$ \mbox{\hyperlink{class_system_manager_a98b6400619bc75fc9333426b38b1d24b}{generate\+Channel\+Instances}} ()
+\item 
+void \mbox{\hyperlink{class_system_manager_abb13ab99346bb9a9633852a797e03cf7}{P\+S\+\_\+\+Profiling}} (int process\+Id)
+\item 
+bool \mbox{\hyperlink{class_system_manager_a21d2bb74e4472f99ec04243168e7964e}{check\+S\+PP}} (int process\+Id)
+\item 
+void \mbox{\hyperlink{class_system_manager_ab6efb1ee75ff2df870bd8e65480dc6e7}{delete\+Conc\+Xml\+Con\+Com}} ()
+\item 
+void \mbox{\hyperlink{class_system_manager_a5f16a17547d2cd543180e06e555304e7}{update\+Xml\+Con\+Com}} (float matrix\+C\+O\+N\+C\+\_\+\+P\+S\+\_\+N\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, unsigned int matrix\+C\+OM\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}, float matrix\+C\+O\+N\+C\+\_\+\+C\+H\+\_\+N\mbox{[}15\mbox{]}\mbox{[}15\mbox{]})
+\item 
+vector$<$ int $>$ \mbox{\hyperlink{class_system_manager_af468620e73667d65dbb7db93b78712a9}{get\+Allocation\+P\+S\+\_\+\+BB}} (int \mbox{\hyperlink{group__firfirgcd__define__group_gaaa53553033df32820178982628a60cae}{bb\+\_\+id}})
+\item 
+sc\+\_\+time \mbox{\hyperlink{class_system_manager_aeaf3506efda2897408fd8d5273e871aa}{update\+Simulated\+Time}} (int process\+Id)
+\item 
+void \mbox{\hyperlink{class_system_manager_a0d692288dbf1e1a75a331408cd4f2210}{increase\+Simulated\+Time}} (int process\+Id)
+\item 
+void \mbox{\hyperlink{class_system_manager_a81c4c7415d63b21f9ae15fd5594b7692}{increase\+Timer}} (int process\+Id, sc\+\_\+time delta)
+\item 
+float \mbox{\hyperlink{class_system_manager_aa7e8eba2c8c064bc7e7df6ed9e9e1f53}{update\+Estimated\+Energy}} (int process\+Id)
+\item 
+void \mbox{\hyperlink{class_system_manager_a96ab5341b1af75dfcd59b14b02fa0bc7}{increase\+Estimated\+Energy}} (int process\+Id)
+\item 
+void \mbox{\hyperlink{class_system_manager_a9a32595149efd0a69d09c46387415aa0}{delete\+Conc\+Xml\+Energy}} ()
+\item 
+void \mbox{\hyperlink{class_system_manager_a99f32d48ffab81f6c16d86dedbede1e7}{update\+Xml\+Energy}} ()
+\item 
+vector$<$ \mbox{\hyperlink{class_basic_block}{Basic\+Block}} $>$ \mbox{\hyperlink{class_system_manager_a77bb622cef7c79dab7463d02a2125542}{generate\+B\+B\+Instances}} ()
+\item 
+vector$<$ \mbox{\hyperlink{class_physical_link}{Physical\+Link}} $>$ \mbox{\hyperlink{class_system_manager_a056fabdd037cf3a1c2e6e20764784159}{generate\+Physical\+Link\+Instances}} ()
+\item 
+void \mbox{\hyperlink{class_system_manager_a03ae9f4865c6ba14f9212ca4711d30a9}{mapping\+PS}} ()
+\item 
+void \mbox{\hyperlink{class_system_manager_a027f130077f51033fad36ccaaeda2c57}{mapping\+CH}} ()
+\item 
+sc\+\_\+time \mbox{\hyperlink{class_system_manager_ae0465f057cd9ac9f5c6d05befc85ff15}{get\+F\+RT}} ()
+\item 
+void \mbox{\hyperlink{class_system_manager_a2babb39c1fc59e1d02782e3e39ea9412}{set\+F\+RT}} (sc\+\_\+time x)
+\item 
+float $\ast$ \mbox{\hyperlink{class_system_manager_acf868dd1af35168e9e37a62b1a03780b}{load\+Est}} (sc\+\_\+time F\+R\+T\+\_\+n)
+\item 
+float $\ast$ \mbox{\hyperlink{class_system_manager_ae7fbae6170e9f5e8aca0c436221dcf41}{get\+F\+RL}} ()
+\item 
+void \mbox{\hyperlink{class_system_manager_aa25f8e4f2e4460d9652875772f48bb0e}{delete\+Conc\+Xml\+Load}} ()
+\item 
+void \mbox{\hyperlink{class_system_manager_afb69c0fedadb6e806e6576ad07c51162}{update\+Xml\+Load}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \mbox{\hyperlink{class_process}{Process}} $>$ \mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{V\+PS}}
+\item 
+vector$<$ \mbox{\hyperlink{class_channel}{Channel}} $>$ \mbox{\hyperlink{class_system_manager_a7dcc3ae8736a6aad7e27f276706205a3}{V\+CH}}
+\item 
+vector$<$ \mbox{\hyperlink{class_basic_block}{Basic\+Block}} $>$ \mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{V\+BB}}
+\item 
+vector$<$ \mbox{\hyperlink{class_physical_link}{Physical\+Link}} $>$ \mbox{\hyperlink{class_system_manager_af28a1744a2d964a7047c31c6a5f1644a}{V\+PL}}
+\item 
+vector$<$ int $>$ \mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocation\+P\+S\+\_\+\+BB}}
+\item 
+vector$<$ int $>$ \mbox{\hyperlink{class_system_manager_ab75b55327c942c6950f67c14ba9dea08}{allocation\+C\+H\+\_\+\+PL}}
+\item 
+float \mbox{\hyperlink{class_system_manager_a7f06326402d0738cb87a1c03bf57f5c7}{F\+RL}} \mbox{[}10\mbox{]}
+\item 
+sc\+\_\+time \mbox{\hyperlink{class_system_manager_a69ec2821a8a92a69fbb5cb0f789a64ca}{F\+RT}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_system_manager_8h_source_l00086}{86}} of file \mbox{\hyperlink{_system_manager_8h_source}{System\+Manager.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_system_manager_a2f8a3e2e1929be50ef8702629f50bb94}\label{class_system_manager_a2f8a3e2e1929be50ef8702629f50bb94}} 
+\index{SystemManager@{SystemManager}!SystemManager@{SystemManager}}
+\index{SystemManager@{SystemManager}!SystemManager@{SystemManager}}
+\doxysubsubsection{\texorpdfstring{SystemManager()}{SystemManager()}}
+{\footnotesize\ttfamily System\+Manager\+::\+System\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_system_manager_8cpp_source_l00078}{78}} of file \mbox{\hyperlink{_system_manager_8cpp_source}{System\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00079 \{}
+\DoxyCodeLine{00080 }
+\DoxyCodeLine{00081     \mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}} = \mbox{\hyperlink{class_system_manager_a545df7d9bd60c4d42797a7233a1f4d61}{generateProcessInstances}}();}
+\DoxyCodeLine{00082     \mbox{\hyperlink{class_system_manager_a7dcc3ae8736a6aad7e27f276706205a3}{VCH}} = \mbox{\hyperlink{class_system_manager_a98b6400619bc75fc9333426b38b1d24b}{generateChannelInstances}}();}
+\DoxyCodeLine{00083 }
+\DoxyCodeLine{00084     \mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{VBB}} = \mbox{\hyperlink{class_system_manager_a77bb622cef7c79dab7463d02a2125542}{generateBBInstances}}();}
+\DoxyCodeLine{00085     \mbox{\hyperlink{class_system_manager_af28a1744a2d964a7047c31c6a5f1644a}{VPL}} = \mbox{\hyperlink{class_system_manager_a056fabdd037cf3a1c2e6e20764784159}{generatePhysicalLinkInstances}}();}
+\DoxyCodeLine{00086     \mbox{\hyperlink{class_system_manager_a03ae9f4865c6ba14f9212ca4711d30a9}{mappingPS}}();}
+\DoxyCodeLine{00087     \mbox{\hyperlink{class_system_manager_a027f130077f51033fad36ccaaeda2c57}{mappingCH}}();}
+\DoxyCodeLine{00088 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_system_manager_a21d2bb74e4472f99ec04243168e7964e}\label{class_system_manager_a21d2bb74e4472f99ec04243168e7964e}} 
+\index{SystemManager@{SystemManager}!checkSPP@{checkSPP}}
+\index{checkSPP@{checkSPP}!SystemManager@{SystemManager}}
+\doxysubsubsection{\texorpdfstring{checkSPP()}{checkSPP()}}
+{\footnotesize\ttfamily bool System\+Manager\+::check\+S\+PP (\begin{DoxyParamCaption}\item[{int}]{process\+Id }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_system_manager_8cpp_source_l00267}{267}} of file \mbox{\hyperlink{_system_manager_8cpp_source}{System\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00268 \{}
+\DoxyCodeLine{00269     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{VBB}}[\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[processId]].getProcessors()[0].getProcessorType() == \textcolor{stringliteral}{"SPP"};}
+\DoxyCodeLine{00270 \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{sc__csp__channel_8h_source_l00232}{sc\+\_\+csp\+\_\+channel$<$ T $>$\+::read()}}, \mbox{\hyperlink{_scheduling_manager_8h_source_l00085}{S\+C\+\_\+\+M\+O\+D\+U\+L\+E()}}, and \mbox{\hyperlink{sc__csp__channel_8h_source_l00322}{sc\+\_\+csp\+\_\+channel$<$ T $>$\+::write()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_system_manager_a21d2bb74e4472f99ec04243168e7964e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_system_manager_ab6efb1ee75ff2df870bd8e65480dc6e7}\label{class_system_manager_ab6efb1ee75ff2df870bd8e65480dc6e7}} 
+\index{SystemManager@{SystemManager}!deleteConcXmlConCom@{deleteConcXmlConCom}}
+\index{deleteConcXmlConCom@{deleteConcXmlConCom}!SystemManager@{SystemManager}}
+\doxysubsubsection{\texorpdfstring{deleteConcXmlConCom()}{deleteConcXmlConCom()}}
+{\footnotesize\ttfamily void System\+Manager\+::delete\+Conc\+Xml\+Con\+Com (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_system_manager_8cpp_source_l00286}{286}} of file \mbox{\hyperlink{_system_manager_8cpp_source}{System\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00287 \{}
+\DoxyCodeLine{00288 }
+\DoxyCodeLine{00289     pugi::xml\_document myDoc;}
+\DoxyCodeLine{00290     pugi::xml\_parse\_result myResult = myDoc.load\_file(\textcolor{stringliteral}{"./XML/application.xml"});}
+\DoxyCodeLine{00291     cout << \textcolor{stringliteral}{"XML Delete result: "} << myResult.description() << endl;}
+\DoxyCodeLine{00292 }
+\DoxyCodeLine{00293     \textcolor{comment}{//method 2: use object/node structure}}
+\DoxyCodeLine{00294     pugi::xml\_node instancesPS = myDoc.child(\textcolor{stringliteral}{"instancesPS"});}
+\DoxyCodeLine{00295     xml\_node processes = instancesPS.child(\textcolor{stringliteral}{"process"});}
+\DoxyCodeLine{00296 }
+\DoxyCodeLine{00297     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}; i++)\{}
+\DoxyCodeLine{00298 }
+\DoxyCodeLine{00299         xml\_node concom = processes.child(\textcolor{stringliteral}{"concurrency"});}
+\DoxyCodeLine{00300         \textcolor{keywordflow}{for} (pugi::xml\_node processorId = concom.child(\textcolor{stringliteral}{"processId"}); processorId; processorId = processorId.next\_sibling()) \{}
+\DoxyCodeLine{00301             concom.remove\_child(processorId);}
+\DoxyCodeLine{00302         \}}
+\DoxyCodeLine{00303 }
+\DoxyCodeLine{00304         xml\_node concom2 = processes.child(\textcolor{stringliteral}{"comunication"});}
+\DoxyCodeLine{00305         \textcolor{keywordflow}{for} (pugi::xml\_node processorId = concom2.child(\textcolor{stringliteral}{"rec"}); processorId; processorId = processorId.next\_sibling()) \{}
+\DoxyCodeLine{00306             concom2.remove\_child(processorId);}
+\DoxyCodeLine{00307         \}}
+\DoxyCodeLine{00308 }
+\DoxyCodeLine{00309         processes = processes.next\_sibling();}
+\DoxyCodeLine{00310 }
+\DoxyCodeLine{00311     \}}
+\DoxyCodeLine{00312 }
+\DoxyCodeLine{00313     xml\_node instancesCH = myDoc.child(\textcolor{stringliteral}{"instancesLL"});}
+\DoxyCodeLine{00314     xml\_node processesCH = instancesCH.child(\textcolor{stringliteral}{"logical\_link"});}
+\DoxyCodeLine{00315 }
+\DoxyCodeLine{00316     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{group__firfirgcd__define__group_ga967ca22c6c7be038e1092147ce04f258}{NCH}}; i++)\{}
+\DoxyCodeLine{00317 }
+\DoxyCodeLine{00318         xml\_node concom3 = processesCH.child(\textcolor{stringliteral}{"concurrency"});}
+\DoxyCodeLine{00319         \textcolor{keywordflow}{for} (pugi::xml\_node processorId = concom3.child(\textcolor{stringliteral}{"channelId"}); processorId; processorId = processorId.next\_sibling()) \{}
+\DoxyCodeLine{00320             concom3.remove\_child(processorId);}
+\DoxyCodeLine{00321         \}}
+\DoxyCodeLine{00322 }
+\DoxyCodeLine{00323         processesCH = processesCH.next\_sibling();}
+\DoxyCodeLine{00324 }
+\DoxyCodeLine{00325     \}}
+\DoxyCodeLine{00326 }
+\DoxyCodeLine{00327     myDoc.save\_file(\textcolor{stringliteral}{"./XML/application.xml"});}
+\DoxyCodeLine{00328     cout << endl;}
+\DoxyCodeLine{00329 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{define_8h_source_l00079}{N\+CH}}, and \mbox{\hyperlink{define_8h_source_l00077}{N\+PS}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_source_l00177}{sc\+\_\+main()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{class_system_manager_ab6efb1ee75ff2df870bd8e65480dc6e7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_system_manager_a9a32595149efd0a69d09c46387415aa0}\label{class_system_manager_a9a32595149efd0a69d09c46387415aa0}} 
+\index{SystemManager@{SystemManager}!deleteConcXmlEnergy@{deleteConcXmlEnergy}}
+\index{deleteConcXmlEnergy@{deleteConcXmlEnergy}!SystemManager@{SystemManager}}
+\doxysubsubsection{\texorpdfstring{deleteConcXmlEnergy()}{deleteConcXmlEnergy()}}
+{\footnotesize\ttfamily void System\+Manager\+::delete\+Conc\+Xml\+Energy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_system_manager_8cpp_source_l01104}{1104}} of file \mbox{\hyperlink{_system_manager_8cpp_source}{System\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{01104                                            \{}
+\DoxyCodeLine{01105         \textcolor{keywordtype}{char}* temp;}
+\DoxyCodeLine{01106         \textcolor{keywordtype}{int} Id;}
+\DoxyCodeLine{01107 }
+\DoxyCodeLine{01108         pugi::xml\_document myDoc;}
+\DoxyCodeLine{01109         pugi::xml\_parse\_result myResult = myDoc.load\_file(\textcolor{stringliteral}{"./XML/application.xml"});}
+\DoxyCodeLine{01110         cout << \textcolor{stringliteral}{"XML Delete result: "} << myResult.description() << endl;}
+\DoxyCodeLine{01111 }
+\DoxyCodeLine{01112         \textcolor{comment}{//method 2: use object/node structure}}
+\DoxyCodeLine{01113         pugi::xml\_node instancesPS = myDoc.child(\textcolor{stringliteral}{"instancesPS"});}
+\DoxyCodeLine{01114         xml\_node processes = instancesPS.child(\textcolor{stringliteral}{"process"});}
+\DoxyCodeLine{01115         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}; i++)\{}
+\DoxyCodeLine{01116             temp = (\textcolor{keywordtype}{char}*) processes.child\_value(\textcolor{stringliteral}{"id"});}
+\DoxyCodeLine{01117             Id = atoi(temp); \textcolor{comment}{//id process}}
+\DoxyCodeLine{01118 }
+\DoxyCodeLine{01119             xml\_node energy = processes.child(\textcolor{stringliteral}{"energy"});}
+\DoxyCodeLine{01120             \textcolor{keywordflow}{for} (pugi::xml\_node processorId = energy.child(\textcolor{stringliteral}{"processorId"}); processorId; processorId = processorId.next\_sibling()) \{}
+\DoxyCodeLine{01121                 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} processor\_id\_n = processorId.attribute(\textcolor{stringliteral}{"id"}).as\_int();\textcolor{comment}{//}}
+\DoxyCodeLine{01122                 \textcolor{keywordtype}{float} process\_load\_value = processorId.attribute(\textcolor{stringliteral}{"value"}).as\_float();\textcolor{comment}{//}}
+\DoxyCodeLine{01123                 \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[Id] == processor\_id\_n)\{}
+\DoxyCodeLine{01124                     energy.remove\_child(processorId);}
+\DoxyCodeLine{01125                 \}}
+\DoxyCodeLine{01126             \}}
+\DoxyCodeLine{01127             processes = processes.next\_sibling();}
+\DoxyCodeLine{01128         \}}
+\DoxyCodeLine{01129         myDoc.save\_file(\textcolor{stringliteral}{"./XML/application.xml"});}
+\DoxyCodeLine{01130         cout<<endl;}
+\DoxyCodeLine{01131 }
+\DoxyCodeLine{01133 }
+\DoxyCodeLine{01134         pugi::xml\_document myDoc2;}
+\DoxyCodeLine{01135         pugi::xml\_parse\_result myResult2 = myDoc2.load\_file(\textcolor{stringliteral}{"./XML/instancesTL.xml"});}
+\DoxyCodeLine{01136         cout << \textcolor{stringliteral}{"XML result: "} << myResult2.description() << endl;}
+\DoxyCodeLine{01137 }
+\DoxyCodeLine{01138         pugi::xml\_node instancesBB = myDoc2.child(\textcolor{stringliteral}{"instancesBB"});}
+\DoxyCodeLine{01139         xml\_node basicBlock = instancesBB.child(\textcolor{stringliteral}{"basicBlock"});}
+\DoxyCodeLine{01140         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{group__firfirgcd__define__group_ga498a2c2b57c15e562e939cccf28db094}{NBB}}; i++)\{}
+\DoxyCodeLine{01141             temp = (\textcolor{keywordtype}{char}*) basicBlock.child\_value(\textcolor{stringliteral}{"id"});}
+\DoxyCodeLine{01142             Id = atoi(temp); \textcolor{comment}{//id process}}
+\DoxyCodeLine{01143 }
+\DoxyCodeLine{01144             xml\_node energyEst = basicBlock.child(\textcolor{stringliteral}{"energyEstimation"});}
+\DoxyCodeLine{01145             \textcolor{keywordflow}{for} (pugi::xml\_node energyTOT = energyEst.child(\textcolor{stringliteral}{"energyTOT"}); energyTOT; energyTOT = energyTOT.next\_sibling()) \{}
+\DoxyCodeLine{01146                 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} processor\_id\_n = energyTOT.attribute(\textcolor{stringliteral}{"id"}).as\_int();\textcolor{comment}{//}}
+\DoxyCodeLine{01147                 \textcolor{keywordtype}{float} energy\_value = energyTOT.attribute(\textcolor{stringliteral}{"value"}).as\_float();\textcolor{comment}{//}}
+\DoxyCodeLine{01148                 \textcolor{keywordflow}{if}(Id == \mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[2])\{}
+\DoxyCodeLine{01149                     energyEst.remove\_child(energyTOT);}
+\DoxyCodeLine{01150                 \}}
+\DoxyCodeLine{01151             \}}
+\DoxyCodeLine{01152             basicBlock = basicBlock.next\_sibling();}
+\DoxyCodeLine{01153         \}}
+\DoxyCodeLine{01154         cout << \textcolor{stringliteral}{"Saving result: "} << myDoc2.save\_file(\textcolor{stringliteral}{"./XML/instancesTL.xml"}) << endl;}
+\DoxyCodeLine{01155         cout<<endl;}
+\DoxyCodeLine{01156 }
+\DoxyCodeLine{01157     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{define_8h_source_l00087}{N\+BB}}, and \mbox{\hyperlink{define_8h_source_l00077}{N\+PS}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_source_l00177}{sc\+\_\+main()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{class_system_manager_a9a32595149efd0a69d09c46387415aa0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_system_manager_aa25f8e4f2e4460d9652875772f48bb0e}\label{class_system_manager_aa25f8e4f2e4460d9652875772f48bb0e}} 
+\index{SystemManager@{SystemManager}!deleteConcXmlLoad@{deleteConcXmlLoad}}
+\index{deleteConcXmlLoad@{deleteConcXmlLoad}!SystemManager@{SystemManager}}
+\doxysubsubsection{\texorpdfstring{deleteConcXmlLoad()}{deleteConcXmlLoad()}}
+{\footnotesize\ttfamily void System\+Manager\+::delete\+Conc\+Xml\+Load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_system_manager_8cpp_source_l01247}{1247}} of file \mbox{\hyperlink{_system_manager_8cpp_source}{System\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{01247                                          \{}
+\DoxyCodeLine{01248         \textcolor{keywordtype}{char}* temp;}
+\DoxyCodeLine{01249         \textcolor{keywordtype}{int} Id;}
+\DoxyCodeLine{01250 }
+\DoxyCodeLine{01251         pugi::xml\_document myDoc;}
+\DoxyCodeLine{01252         pugi::xml\_parse\_result myResult = myDoc.load\_file(\textcolor{stringliteral}{"./XML/application.xml"});}
+\DoxyCodeLine{01253         cout << \textcolor{stringliteral}{"XML Delete result: "} << myResult.description() << endl;}
+\DoxyCodeLine{01254 }
+\DoxyCodeLine{01255         \textcolor{comment}{//method 2: use object/node structure}}
+\DoxyCodeLine{01256         pugi::xml\_node instancesPS = myDoc.child(\textcolor{stringliteral}{"instancesPS"});}
+\DoxyCodeLine{01257         xml\_node processes = instancesPS.child(\textcolor{stringliteral}{"process"});}
+\DoxyCodeLine{01258             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}; i++)\{}
+\DoxyCodeLine{01259                 temp = (\textcolor{keywordtype}{char}*) processes.child\_value(\textcolor{stringliteral}{"id"});}
+\DoxyCodeLine{01260                 Id = atoi(temp); \textcolor{comment}{//id process}}
+\DoxyCodeLine{01261                 xml\_node load = processes.child(\textcolor{stringliteral}{"load"});}
+\DoxyCodeLine{01262                 \textcolor{keywordflow}{for} (pugi::xml\_node processorId = load.child(\textcolor{stringliteral}{"processorId"}); processorId; processorId = processorId.next\_sibling()) \{}
+\DoxyCodeLine{01263                         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} processor\_id\_n = processorId.attribute(\textcolor{stringliteral}{"id"}).as\_int();\textcolor{comment}{//}}
+\DoxyCodeLine{01264                         \textcolor{keywordtype}{float} process\_load\_value = processorId.attribute(\textcolor{stringliteral}{"value"}).as\_float();\textcolor{comment}{//}}
+\DoxyCodeLine{01265                         \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[Id] == processor\_id\_n)\{}
+\DoxyCodeLine{01266                             load.remove\_child(processorId);}
+\DoxyCodeLine{01267                         \}}
+\DoxyCodeLine{01268                 \}}
+\DoxyCodeLine{01269 }
+\DoxyCodeLine{01270                 \textcolor{comment}{/*  xml\_node WCET = processes.child("WCET");}}
+\DoxyCodeLine{01271 \textcolor{comment}{                for (pugi::xml\_node processorId = WCET.child("processorId"); processorId; processorId = processorId.next\_sibling()) \{}}
+\DoxyCodeLine{01272 \textcolor{comment}{                    WCET.remove\_child(processorId);}}
+\DoxyCodeLine{01273 \textcolor{comment}{                \}}}
+\DoxyCodeLine{01274 \textcolor{comment}{}}
+\DoxyCodeLine{01275 \textcolor{comment}{                xml\_node Period = processes.child("Period");}}
+\DoxyCodeLine{01276 \textcolor{comment}{                for (pugi::xml\_node processorId = Period.child("processorId"); processorId; processorId = processorId.next\_sibling()) \{}}
+\DoxyCodeLine{01277 \textcolor{comment}{                    Period.remove\_child(processorId);}}
+\DoxyCodeLine{01278 \textcolor{comment}{                \}}}
+\DoxyCodeLine{01279 \textcolor{comment}{}}
+\DoxyCodeLine{01280 \textcolor{comment}{                xml\_node Deadline = processes.child("Deadline");}}
+\DoxyCodeLine{01281 \textcolor{comment}{                for (pugi::xml\_node processorId = Deadline.child("processorId"); processorId; processorId = processorId.next\_sibling()) \{}}
+\DoxyCodeLine{01282 \textcolor{comment}{                    Deadline.remove\_child(processorId);}}
+\DoxyCodeLine{01283 \textcolor{comment}{                \} */}}
+\DoxyCodeLine{01284 }
+\DoxyCodeLine{01285                 processes = processes.next\_sibling();}
+\DoxyCodeLine{01286             \}}
+\DoxyCodeLine{01287         myDoc.save\_file(\textcolor{stringliteral}{"./XML/application.xml"});}
+\DoxyCodeLine{01288         cout<<endl;}
+\DoxyCodeLine{01289 }
+\DoxyCodeLine{01290         pugi::xml\_document myDoc2;}
+\DoxyCodeLine{01291         pugi::xml\_parse\_result myResult2 = myDoc2.load\_file(\textcolor{stringliteral}{"./XML/instancesTL.xml"});}
+\DoxyCodeLine{01292         cout << \textcolor{stringliteral}{"XML result: "} << myResult2.description() << endl;}
+\DoxyCodeLine{01293 }
+\DoxyCodeLine{01294         pugi::xml\_node instancesBB = myDoc2.child(\textcolor{stringliteral}{"instancesBB"});}
+\DoxyCodeLine{01295         xml\_node basicBlock = instancesBB.child(\textcolor{stringliteral}{"basicBlock"});}
+\DoxyCodeLine{01296         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{group__firfirgcd__define__group_ga498a2c2b57c15e562e939cccf28db094}{NBB}}; i++)\{}
+\DoxyCodeLine{01297             temp = (\textcolor{keywordtype}{char}*) basicBlock.child\_value(\textcolor{stringliteral}{"id"});}
+\DoxyCodeLine{01298             Id = atoi(temp); \textcolor{comment}{//id process}}
+\DoxyCodeLine{01299 }
+\DoxyCodeLine{01300             xml\_node \mbox{\hyperlink{class_system_manager_acf868dd1af35168e9e37a62b1a03780b}{loadEst}} = basicBlock.child(\textcolor{stringliteral}{"loadEstimation"});}
+\DoxyCodeLine{01301             \textcolor{keywordflow}{for} (pugi::xml\_node loadTOT = \mbox{\hyperlink{class_system_manager_acf868dd1af35168e9e37a62b1a03780b}{loadEst}}.child(\textcolor{stringliteral}{"FreeRunningTime"}); loadTOT; loadTOT = loadTOT.next\_sibling()) \{}
+\DoxyCodeLine{01302                     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} processor\_id\_n = loadTOT.attribute(\textcolor{stringliteral}{"id"}).as\_int();\textcolor{comment}{//}}
+\DoxyCodeLine{01303                     \textcolor{keywordtype}{float} energy\_value = loadTOT.attribute(\textcolor{stringliteral}{"value"}).as\_float();\textcolor{comment}{//}}
+\DoxyCodeLine{01304                     \textcolor{keywordflow}{if}(Id == \mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[2])\{}
+\DoxyCodeLine{01305                         \mbox{\hyperlink{class_system_manager_acf868dd1af35168e9e37a62b1a03780b}{loadEst}}.remove\_child(loadTOT);}
+\DoxyCodeLine{01306                     \}}
+\DoxyCodeLine{01307             \}}
+\DoxyCodeLine{01308             basicBlock = basicBlock.next\_sibling();}
+\DoxyCodeLine{01309         \}}
+\DoxyCodeLine{01310         cout << \textcolor{stringliteral}{"Saving result: "} << myDoc2.save\_file(\textcolor{stringliteral}{"./XML/instancesTL.xml"}) << endl;}
+\DoxyCodeLine{01311         myDoc2.reset();}
+\DoxyCodeLine{01312         cout<<endl;}
+\DoxyCodeLine{01313 }
+\DoxyCodeLine{01314     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{define_8h_source_l00087}{N\+BB}}, and \mbox{\hyperlink{define_8h_source_l00077}{N\+PS}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_source_l00177}{sc\+\_\+main()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{class_system_manager_aa25f8e4f2e4460d9652875772f48bb0e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_system_manager_a77bb622cef7c79dab7463d02a2125542}\label{class_system_manager_a77bb622cef7c79dab7463d02a2125542}} 
+\index{SystemManager@{SystemManager}!generateBBInstances@{generateBBInstances}}
+\index{generateBBInstances@{generateBBInstances}!SystemManager@{SystemManager}}
+\doxysubsubsection{\texorpdfstring{generateBBInstances()}{generateBBInstances()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_basic_block}{Basic\+Block}} $>$ System\+Manager\+::generate\+B\+B\+Instances (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_system_manager_8cpp_source_l00636}{636}} of file \mbox{\hyperlink{_system_manager_8cpp_source}{System\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00636                                                      \{}
+\DoxyCodeLine{00637 }
+\DoxyCodeLine{00638     vector<BasicBlock> vbb;}
+\DoxyCodeLine{00639 }
+\DoxyCodeLine{00640     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{group__firfirgcd__define__group_ga498a2c2b57c15e562e939cccf28db094}{NBB}}; i++)\{}
+\DoxyCodeLine{00641 }
+\DoxyCodeLine{00642         \mbox{\hyperlink{class_basic_block}{BasicBlock}} bb;}
+\DoxyCodeLine{00643 }
+\DoxyCodeLine{00644         \textcolor{comment}{//BB-\/ID}}
+\DoxyCodeLine{00645         bb.\mbox{\hyperlink{class_basic_block_a1abdc5c467f903b3bb6f51fb68283b21}{setId}}(i);}
+\DoxyCodeLine{00646 }
+\DoxyCodeLine{00647         \textcolor{comment}{//BB-\/NAME}}
+\DoxyCodeLine{00648         bb.\mbox{\hyperlink{class_basic_block_a2be928b15c8a74a0f171f97c285791f2}{setName}}(\textcolor{stringliteral}{"dummy"});}
+\DoxyCodeLine{00649 }
+\DoxyCodeLine{00650         \textcolor{comment}{//BB-\/TYPE}}
+\DoxyCodeLine{00651         bb.\mbox{\hyperlink{class_basic_block_ae33921bd8c15b268aba6f5b1526f893b}{setType}}(\textcolor{stringliteral}{"dummy"});}
+\DoxyCodeLine{00652 }
+\DoxyCodeLine{00653         \textcolor{comment}{// PROCESSING UNIT}}
+\DoxyCodeLine{00654 }
+\DoxyCodeLine{00655         vector<ProcessingUnit> vpu;}
+\DoxyCodeLine{00656 }
+\DoxyCodeLine{00657         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < 4; j++)\{       \textcolor{comment}{// each block contains at most 4 pu}}
+\DoxyCodeLine{00658 }
+\DoxyCodeLine{00659 }
+\DoxyCodeLine{00660             \mbox{\hyperlink{class_processing_unit}{ProcessingUnit}} pu;}
+\DoxyCodeLine{00661 }
+\DoxyCodeLine{00662             \textcolor{comment}{//PU-\/NAME}}
+\DoxyCodeLine{00663 }
+\DoxyCodeLine{00664             pu.\mbox{\hyperlink{class_processing_unit_a24c691bffdbf8b79fa8301ba6493e0e5}{setName}}(\textcolor{stringliteral}{"dummy"});}
+\DoxyCodeLine{00665 }
+\DoxyCodeLine{00666             \textcolor{comment}{//PU-\/ID}}
+\DoxyCodeLine{00667             \textcolor{keywordtype}{int} idPU = j;}
+\DoxyCodeLine{00668 }
+\DoxyCodeLine{00669             pu.\mbox{\hyperlink{class_processing_unit_a95737a4e4a2bd424cb4455f0c4a84cf5}{setId}}(idPU);}
+\DoxyCodeLine{00670 }
+\DoxyCodeLine{00671             \textcolor{comment}{//Processor Type}}
+\DoxyCodeLine{00672             pu.\mbox{\hyperlink{class_processing_unit_a11749a7a862ab46b771844fddc373ed6}{setProcessorType}}(\textcolor{stringliteral}{"dummy"});}
+\DoxyCodeLine{00673 }
+\DoxyCodeLine{00675             \textcolor{comment}{//pu.setCost(0);}}
+\DoxyCodeLine{00676 }
+\DoxyCodeLine{00677             \textcolor{comment}{//PU-\/ISA}}
+\DoxyCodeLine{00678             pu.\mbox{\hyperlink{class_processing_unit_a32aac7fd512cb23a8cc629d87ce317d8}{setISA}}(\textcolor{stringliteral}{"dummy"});}
+\DoxyCodeLine{00679 }
+\DoxyCodeLine{00680             \textcolor{comment}{// PU-\/Frequency (MHz)}}
+\DoxyCodeLine{00681             pu.\mbox{\hyperlink{class_processing_unit_a48a63b09d626c9563d36404b5f95a04a}{setFrequency}}(0);}
+\DoxyCodeLine{00682 }
+\DoxyCodeLine{00683             \textcolor{comment}{// PU-\/CC4CS}}
+\DoxyCodeLine{00684             \textcolor{keywordtype}{float}** array = \textcolor{keyword}{new} \textcolor{keywordtype}{float}*[5]; \textcolor{comment}{//TODO: eliminare **?}}
+\DoxyCodeLine{00685 }
+\DoxyCodeLine{00686             \textcolor{comment}{//Int8}}
+\DoxyCodeLine{00687             \textcolor{keywordtype}{float} idCC4CSminint8 = 0;}
+\DoxyCodeLine{00688             \textcolor{keywordtype}{float} idCC4CSmaxint8 = 0;}
+\DoxyCodeLine{00689             \textcolor{comment}{//Int16}}
+\DoxyCodeLine{00690 }
+\DoxyCodeLine{00691             \textcolor{keywordtype}{float} idCC4CSminint16 = 0;}
+\DoxyCodeLine{00692             \textcolor{keywordtype}{float} idCC4CSmaxint16 = 0;}
+\DoxyCodeLine{00693             \textcolor{comment}{//Int32}}
+\DoxyCodeLine{00694             \textcolor{keywordtype}{float} idCC4CSminint32 = 0;}
+\DoxyCodeLine{00695             \textcolor{keywordtype}{float} idCC4CSmaxint32 = 0;}
+\DoxyCodeLine{00696             \textcolor{comment}{//Float}}
+\DoxyCodeLine{00697             \textcolor{keywordtype}{float} idCC4CSminfloat = 0;}
+\DoxyCodeLine{00698             \textcolor{keywordtype}{float} idCC4CSmaxfloat = 0;}
+\DoxyCodeLine{00699             \textcolor{comment}{//Tot}}
+\DoxyCodeLine{00700             \textcolor{keywordtype}{float} idCC4CSmin = 0;}
+\DoxyCodeLine{00701             \textcolor{keywordtype}{float} idCC4CSmax = 0;}
+\DoxyCodeLine{00702 }
+\DoxyCodeLine{00703             \textcolor{comment}{//TODO: ciclo con tutti 0!}}
+\DoxyCodeLine{00704             array[0] = \textcolor{keyword}{new} \textcolor{keywordtype}{float}[2];}
+\DoxyCodeLine{00705             array[0][0] = idCC4CSminint8;}
+\DoxyCodeLine{00706             array[0][1] = idCC4CSmaxint8;}
+\DoxyCodeLine{00707             array[1] = \textcolor{keyword}{new} \textcolor{keywordtype}{float}[2];}
+\DoxyCodeLine{00708             array[1][0] = idCC4CSminint16;}
+\DoxyCodeLine{00709             array[1][1] = idCC4CSmaxint16;}
+\DoxyCodeLine{00710             array[2] = \textcolor{keyword}{new} \textcolor{keywordtype}{float}[2];}
+\DoxyCodeLine{00711             array[2][0] = idCC4CSminint32;}
+\DoxyCodeLine{00712             array[2][1] = idCC4CSmaxint32;}
+\DoxyCodeLine{00713             array[3] = \textcolor{keyword}{new} \textcolor{keywordtype}{float}[2];}
+\DoxyCodeLine{00714             array[3][0] = idCC4CSminfloat;}
+\DoxyCodeLine{00715             array[3][1] = idCC4CSmaxfloat;}
+\DoxyCodeLine{00716             array[4] = \textcolor{keyword}{new} \textcolor{keywordtype}{float}[2];}
+\DoxyCodeLine{00717             array[4][0] = idCC4CSmin;}
+\DoxyCodeLine{00718             array[4][1] = idCC4CSmax;}
+\DoxyCodeLine{00719             pu.\mbox{\hyperlink{class_processing_unit_a0878e37abdc168f31758d4df208c6663}{setCC4S}}(array);}
+\DoxyCodeLine{00720 }
+\DoxyCodeLine{00721             \textcolor{comment}{// PU-\/Power (W)}}
+\DoxyCodeLine{00722             pu.\mbox{\hyperlink{class_processing_unit_a4994085fb506708d4c0f1c27565ffe2b}{setPower}}(0);}
+\DoxyCodeLine{00723 }
+\DoxyCodeLine{00724             \textcolor{comment}{// PU-\/MIPS}}
+\DoxyCodeLine{00725             \textcolor{keywordtype}{float} idMIPS = 0;}
+\DoxyCodeLine{00726             pu.\mbox{\hyperlink{class_processing_unit_af91c01d3a84acf6f310949e80906e824}{setMIPS}}(idMIPS);}
+\DoxyCodeLine{00727 }
+\DoxyCodeLine{00728             \textcolor{comment}{// PU-\/I4CS}}
+\DoxyCodeLine{00729             \textcolor{keywordtype}{float} idI4CSmin = 0;}
+\DoxyCodeLine{00730             pu.\mbox{\hyperlink{class_processing_unit_afb3bb2c3b1421dfabf867ff1bd084968}{setI4CSmin}}(idI4CSmin);}
+\DoxyCodeLine{00731             \textcolor{keywordtype}{float} idI4CSmax = 0;}
+\DoxyCodeLine{00732             pu.\mbox{\hyperlink{class_processing_unit_a9995278db81888144089791e7eef8b71}{setI4CSmax}}(idI4CSmax);}
+\DoxyCodeLine{00733 }
+\DoxyCodeLine{00734             \textcolor{comment}{// PU-\/Vdd (V)}}
+\DoxyCodeLine{00735             \textcolor{keywordtype}{float} idVdd = 0;}
+\DoxyCodeLine{00736             pu.\mbox{\hyperlink{class_processing_unit_ac4ef8b2cafc7e379b4cb05e463840128}{setVdd}}(idVdd);}
+\DoxyCodeLine{00737 }
+\DoxyCodeLine{00738             \textcolor{comment}{// PU-\/Idd (A)}}
+\DoxyCodeLine{00739             \textcolor{keywordtype}{float} idIdd = 0;}
+\DoxyCodeLine{00740             pu.\mbox{\hyperlink{class_processing_unit_a12212762fb57a5b582782c66861443fc}{setIdd}}(idIdd);}
+\DoxyCodeLine{00741 }
+\DoxyCodeLine{00742             \textcolor{comment}{// PU-\/overheadCS (us)}}
+\DoxyCodeLine{00743             \textcolor{keywordtype}{float} idOver = 0;}
+\DoxyCodeLine{00744             pu.\mbox{\hyperlink{class_processing_unit_a4c38556d47f2cd40adc4092b09dba992}{setOverheadCS}}(sc\_time((\textcolor{keywordtype}{int})idOver, SC\_US));}
+\DoxyCodeLine{00745 }
+\DoxyCodeLine{00746             vpu.push\_back(pu);}
+\DoxyCodeLine{00747 }
+\DoxyCodeLine{00748         \}}
+\DoxyCodeLine{00749         bb.\mbox{\hyperlink{class_basic_block_a4cbb966d0ce3b7364877cf6e46e33672}{setProcessor}}(vpu);}
+\DoxyCodeLine{00750 }
+\DoxyCodeLine{00751         \textcolor{comment}{// LOCAL MEMORY}}
+\DoxyCodeLine{00752 }
+\DoxyCodeLine{00753         \textcolor{comment}{//CODE SIZE}}
+\DoxyCodeLine{00754         bb.\mbox{\hyperlink{class_basic_block_a14bbb26476609a17b226400d2fd8ec05}{setCodeSize}}(0);}
+\DoxyCodeLine{00755 }
+\DoxyCodeLine{00756         \textcolor{comment}{//DATA SIZE}}
+\DoxyCodeLine{00757         bb.\mbox{\hyperlink{class_basic_block_a9f71209e93288e8eb82311fe5961e2ff}{setDataSize}}(0);}
+\DoxyCodeLine{00758 }
+\DoxyCodeLine{00759         \textcolor{comment}{//eQG}}
+\DoxyCodeLine{00760         bb.\mbox{\hyperlink{class_basic_block_aa3a9be4f5f76e76b91e5a3a009f95f44}{setEqG}}(0);}
+\DoxyCodeLine{00761 }
+\DoxyCodeLine{00762         \textcolor{comment}{// Free Running time}}
+\DoxyCodeLine{00763         \textcolor{keywordtype}{float} lmFreeRunningTime = 0;}
+\DoxyCodeLine{00764         bb.\mbox{\hyperlink{class_basic_block_aee9fb07de76f430ec78e48e85c3d5fd9}{setFRT}}(lmFreeRunningTime);}
+\DoxyCodeLine{00765         vbb.push\_back(bb);}
+\DoxyCodeLine{00766     \}}
+\DoxyCodeLine{00767 }
+\DoxyCodeLine{00768     \textcolor{keywordflow}{return} vbb;}
+\DoxyCodeLine{00769 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{define_8h_source_l00087}{N\+BB}}, \mbox{\hyperlink{tl_8cpp_source_l00134}{Processing\+Unit\+::set\+C\+C4\+S()}}, \mbox{\hyperlink{tl_8cpp_source_l00281}{Basic\+Block\+::set\+Code\+Size()}}, \mbox{\hyperlink{tl_8cpp_source_l00289}{Basic\+Block\+::set\+Data\+Size()}}, \mbox{\hyperlink{tl_8cpp_source_l00297}{Basic\+Block\+::set\+Eq\+G()}}, \mbox{\hyperlink{tl_8cpp_source_l00124}{Processing\+Unit\+::set\+Frequency()}}, \mbox{\hyperlink{tl_8cpp_source_l00301}{Basic\+Block\+::set\+F\+R\+T()}}, \mbox{\hyperlink{tl_8cpp_source_l00174}{Processing\+Unit\+::set\+I4\+C\+Smax()}}, \mbox{\hyperlink{tl_8cpp_source_l00164}{Processing\+Unit\+::set\+I4\+C\+Smin()}}, \mbox{\hyperlink{tl_8cpp_source_l00075}{Processing\+Unit\+::set\+Id()}}, \mbox{\hyperlink{tl_8cpp_source_l00234}{Basic\+Block\+::set\+Id()}}, \mbox{\hyperlink{tl_8cpp_source_l00194}{Processing\+Unit\+::set\+Idd()}}, \mbox{\hyperlink{tl_8cpp_source_l00114}{Processing\+Unit\+::set\+I\+S\+A()}}, \mbox{\hyperlink{tl_8cpp_source_l00154}{Processing\+Unit\+::set\+M\+I\+P\+S()}}, \mbox{\hyperlink{tl_8cpp_source_l00084}{Processing\+Unit\+::set\+Name()}}, \mbox{\hyperlink{tl_8cpp_source_l00224}{Basic\+Block\+::set\+Name()}}, \mbox{\hyperlink{tl_8cpp_source_l00204}{Processing\+Unit\+::set\+Overhead\+C\+S()}}, \mbox{\hyperlink{tl_8cpp_source_l00144}{Processing\+Unit\+::set\+Power()}}, \mbox{\hyperlink{tl_8cpp_source_l00260}{Basic\+Block\+::set\+Processor()}}, \mbox{\hyperlink{tl_8cpp_source_l00094}{Processing\+Unit\+::set\+Processor\+Type()}}, \mbox{\hyperlink{tl_8cpp_source_l00245}{Basic\+Block\+::set\+Type()}}, and \mbox{\hyperlink{tl_8cpp_source_l00184}{Processing\+Unit\+::set\+Vdd()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_system_manager_a77bb622cef7c79dab7463d02a2125542_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_system_manager_a98b6400619bc75fc9333426b38b1d24b}\label{class_system_manager_a98b6400619bc75fc9333426b38b1d24b}} 
+\index{SystemManager@{SystemManager}!generateChannelInstances@{generateChannelInstances}}
+\index{generateChannelInstances@{generateChannelInstances}!SystemManager@{SystemManager}}
+\doxysubsubsection{\texorpdfstring{generateChannelInstances()}{generateChannelInstances()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_channel}{Channel}} $>$ System\+Manager\+::generate\+Channel\+Instances (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_system_manager_8cpp_source_l00198}{198}} of file \mbox{\hyperlink{_system_manager_8cpp_source}{System\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00199 \{}
+\DoxyCodeLine{00200     vector<Channel> vch;}
+\DoxyCodeLine{00201 }
+\DoxyCodeLine{00202     \textcolor{comment}{// parsing xml file}}
+\DoxyCodeLine{00203 }
+\DoxyCodeLine{00204     xml\_document myDoc;}
+\DoxyCodeLine{00205     xml\_parse\_result myResult = myDoc.load\_file(\mbox{\hyperlink{group__firfirgcd__define__group_ga796bd7c6ba2e59281760fb155c6287e8}{APPLICATION}});}
+\DoxyCodeLine{00206     xml\_node instancesLL = myDoc.child(\textcolor{stringliteral}{"instancesLL"});}
+\DoxyCodeLine{00207 }
+\DoxyCodeLine{00208     \textcolor{comment}{//channel parameters}}
+\DoxyCodeLine{00209 }
+\DoxyCodeLine{00210     xml\_node\_iterator seqChannel\_it;}
+\DoxyCodeLine{00211 }
+\DoxyCodeLine{00212     \textcolor{keywordflow}{for} (seqChannel\_it=instancesLL.begin(); seqChannel\_it!=instancesLL.end(); ++seqChannel\_it)\{}
+\DoxyCodeLine{00213 }
+\DoxyCodeLine{00214         xml\_node\_iterator channel\_node\_it = seqChannel\_it-\/>begin();}
+\DoxyCodeLine{00215 }
+\DoxyCodeLine{00216         \mbox{\hyperlink{class_channel}{Channel}} ch;}
+\DoxyCodeLine{00217 }
+\DoxyCodeLine{00218         \textcolor{keywordtype}{char}* temp;}
+\DoxyCodeLine{00219 }
+\DoxyCodeLine{00220         \textcolor{comment}{// CH-\/NAME}}
+\DoxyCodeLine{00221         \textcolor{keywordtype}{string} name = channel\_node\_it-\/>child\_value();}
+\DoxyCodeLine{00222         ch.\mbox{\hyperlink{class_channel_a0a74f31ad2fd5c1bb1af019313e510c6}{setName}}(name);}
+\DoxyCodeLine{00223 }
+\DoxyCodeLine{00224         \textcolor{comment}{// CH-\/ID}}
+\DoxyCodeLine{00225         channel\_node\_it++;}
+\DoxyCodeLine{00226         temp = (\textcolor{keywordtype}{char}*) channel\_node\_it-\/>child\_value();}
+\DoxyCodeLine{00227         \textcolor{keywordtype}{int}  \textcolor{keywordtype}{id} = atoi(temp);}
+\DoxyCodeLine{00228         ch.\mbox{\hyperlink{class_channel_a12e1cdd1b9887f1ed483d778772bfc53}{setId}}(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{00229 }
+\DoxyCodeLine{00230         \textcolor{comment}{// writer ID}}
+\DoxyCodeLine{00231         channel\_node\_it++;}
+\DoxyCodeLine{00232         temp = (\textcolor{keywordtype}{char}*) channel\_node\_it-\/>child\_value();}
+\DoxyCodeLine{00233         \textcolor{keywordtype}{int}  w\_id = atoi(temp);}
+\DoxyCodeLine{00234         ch.\mbox{\hyperlink{class_channel_af9e34fe60361f6e0c234e691d9d2824d}{setW\_id}}(w\_id);}
+\DoxyCodeLine{00235 }
+\DoxyCodeLine{00236         \textcolor{comment}{// reader ID}}
+\DoxyCodeLine{00237         channel\_node\_it++;}
+\DoxyCodeLine{00238         temp = (\textcolor{keywordtype}{char}*) channel\_node\_it-\/>child\_value();}
+\DoxyCodeLine{00239         \textcolor{keywordtype}{int}  r\_id = atoi(temp);}
+\DoxyCodeLine{00240         ch.\mbox{\hyperlink{class_channel_a87fe96b999c9503c2a8839ee6498f256}{setR\_id}}(r\_id);}
+\DoxyCodeLine{00241 }
+\DoxyCodeLine{00242         \textcolor{comment}{// CH-\/width (logical width)}}
+\DoxyCodeLine{00243         channel\_node\_it++;}
+\DoxyCodeLine{00244         temp = (\textcolor{keywordtype}{char}*) channel\_node\_it-\/>child\_value();}
+\DoxyCodeLine{00245         \textcolor{keywordtype}{int}  width = atoi(temp);}
+\DoxyCodeLine{00246         ch.\mbox{\hyperlink{class_channel_a448e2f0beb2b7ce2a02a19e2eaf17d55}{setWidth}}(width);}
+\DoxyCodeLine{00247 }
+\DoxyCodeLine{00248         ch.\mbox{\hyperlink{class_channel_adb8356f7bba44722ed6923684b8fdd7f}{setNum}}(0);}
+\DoxyCodeLine{00249 }
+\DoxyCodeLine{00250         vch.push\_back(ch);}
+\DoxyCodeLine{00251 }
+\DoxyCodeLine{00252     \}}
+\DoxyCodeLine{00253 }
+\DoxyCodeLine{00254     \textcolor{keywordflow}{return} vch;}
+\DoxyCodeLine{00255 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{define_8h_source_l00120}{A\+P\+P\+L\+I\+C\+A\+T\+I\+ON}}, \mbox{\hyperlink{tl_8cpp_source_l00589}{Channel\+::set\+Id()}}, \mbox{\hyperlink{tl_8cpp_source_l00584}{Channel\+::set\+Name()}}, \mbox{\hyperlink{tl_8cpp_source_l00609}{Channel\+::set\+Num()}}, \mbox{\hyperlink{tl_8cpp_source_l00604}{Channel\+::set\+R\+\_\+id()}}, \mbox{\hyperlink{tl_8cpp_source_l00599}{Channel\+::set\+W\+\_\+id()}}, and \mbox{\hyperlink{tl_8cpp_source_l00594}{Channel\+::set\+Width()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_system_manager_a98b6400619bc75fc9333426b38b1d24b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_system_manager_a056fabdd037cf3a1c2e6e20764784159}\label{class_system_manager_a056fabdd037cf3a1c2e6e20764784159}} 
+\index{SystemManager@{SystemManager}!generatePhysicalLinkInstances@{generatePhysicalLinkInstances}}
+\index{generatePhysicalLinkInstances@{generatePhysicalLinkInstances}!SystemManager@{SystemManager}}
+\doxysubsubsection{\texorpdfstring{generatePhysicalLinkInstances()}{generatePhysicalLinkInstances()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_physical_link}{Physical\+Link}} $>$ System\+Manager\+::generate\+Physical\+Link\+Instances (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_system_manager_8cpp_source_l00854}{854}} of file \mbox{\hyperlink{_system_manager_8cpp_source}{System\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00855 \{}
+\DoxyCodeLine{00856     vector<PhysicalLink> \mbox{\hyperlink{class_system_manager_af28a1744a2d964a7047c31c6a5f1644a}{VPL}};}
+\DoxyCodeLine{00857 }
+\DoxyCodeLine{00858     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{group__firfirgcd__define__group_ga76cc414b5d33950d0cb6ceea199d93de}{NPL}}; i++)\{}
+\DoxyCodeLine{00859 }
+\DoxyCodeLine{00860         \mbox{\hyperlink{class_physical_link}{PhysicalLink}} pl;}
+\DoxyCodeLine{00861 }
+\DoxyCodeLine{00862         pl.\mbox{\hyperlink{class_physical_link_a4c1ca22f348862858653c4f02496218f}{setId}}(i);}
+\DoxyCodeLine{00863 }
+\DoxyCodeLine{00864         pl.\mbox{\hyperlink{class_physical_link_a720451548bfac94a60eca8c8f47d343b}{setName}}(\textcolor{stringliteral}{"dummy"});}
+\DoxyCodeLine{00865 }
+\DoxyCodeLine{00866         pl.\mbox{\hyperlink{class_physical_link_a38f205a4a97e9869b93944e0f820f11b}{physical\_width}}=1; \textcolor{comment}{// width of the physical link}}
+\DoxyCodeLine{00867         pl.\mbox{\hyperlink{class_physical_link_a90cb0e1c2a0d9951899b587d6d2b247a}{tcomm}}=sc\_time(0, SC\_MS); \textcolor{comment}{// LP: (bandwidth / phisycal\_widht = 1/sec=hz (inverto)) ( per 1000)  (non sforare i 5 ms)}}
+\DoxyCodeLine{00868         pl.\mbox{\hyperlink{class_physical_link_a2f2ff97a12a4c37da1892f0fc2e855b2}{tacomm}}=sc\_time(0, SC\_MS); \textcolor{comment}{// LP: tcomm * K (es:K=1)}}
+\DoxyCodeLine{00869         pl.\mbox{\hyperlink{class_physical_link_ac441e379b59ecb00c48ebef53f2d6b75}{bandwidth}}=0; \textcolor{comment}{// bandwidth in bit/s}}
+\DoxyCodeLine{00870         pl.\mbox{\hyperlink{class_physical_link_a2c8e1cba265b4e099ac6b07c7839de0e}{a2}}=0; \textcolor{comment}{// a2 coefficient of energy curve}}
+\DoxyCodeLine{00871         pl.\mbox{\hyperlink{class_physical_link_a46367b48d7ab1d5c06dd2051a6d5a32f}{a1}}=0; \textcolor{comment}{// a1 coefficient of energy curve}}
+\DoxyCodeLine{00872 }
+\DoxyCodeLine{00873         \mbox{\hyperlink{class_system_manager_af28a1744a2d964a7047c31c6a5f1644a}{VPL}}.push\_back(pl);}
+\DoxyCodeLine{00874     \}}
+\DoxyCodeLine{00875 }
+\DoxyCodeLine{00876     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_system_manager_af28a1744a2d964a7047c31c6a5f1644a}{VPL}};}
+\DoxyCodeLine{00877 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{tl_8h_source_l00283}{Physical\+Link\+::a1}}, \mbox{\hyperlink{tl_8h_source_l00282}{Physical\+Link\+::a2}}, \mbox{\hyperlink{tl_8h_source_l00281}{Physical\+Link\+::bandwidth}}, \mbox{\hyperlink{define_8h_source_l00089}{N\+PL}}, \mbox{\hyperlink{tl_8h_source_l00278}{Physical\+Link\+::physical\+\_\+width}}, \mbox{\hyperlink{tl_8cpp_source_l00502}{Physical\+Link\+::set\+Id()}}, \mbox{\hyperlink{tl_8cpp_source_l00507}{Physical\+Link\+::set\+Name()}}, \mbox{\hyperlink{tl_8h_source_l00280}{Physical\+Link\+::tacomm}}, and \mbox{\hyperlink{tl_8h_source_l00279}{Physical\+Link\+::tcomm}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_system_manager_a056fabdd037cf3a1c2e6e20764784159_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_system_manager_a545df7d9bd60c4d42797a7233a1f4d61}\label{class_system_manager_a545df7d9bd60c4d42797a7233a1f4d61}} 
+\index{SystemManager@{SystemManager}!generateProcessInstances@{generateProcessInstances}}
+\index{generateProcessInstances@{generateProcessInstances}!SystemManager@{SystemManager}}
+\doxysubsubsection{\texorpdfstring{generateProcessInstances()}{generateProcessInstances()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_process}{Process}} $>$ System\+Manager\+::generate\+Process\+Instances (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_system_manager_8cpp_source_l00091}{91}} of file \mbox{\hyperlink{_system_manager_8cpp_source}{System\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00091                                                         \{}
+\DoxyCodeLine{00092 }
+\DoxyCodeLine{00093     vector<Process> vps2;}
+\DoxyCodeLine{00094 }
+\DoxyCodeLine{00095     \textcolor{keywordtype}{int} exp\_id = 0;}
+\DoxyCodeLine{00096 }
+\DoxyCodeLine{00097     \textcolor{keywordtype}{int} processId;}
+\DoxyCodeLine{00098 }
+\DoxyCodeLine{00099     pugi::xml\_document doc;}
+\DoxyCodeLine{00100     pugi::xml\_parse\_result result = doc.load\_file(\mbox{\hyperlink{group__firfirgcd__define__group_ga796bd7c6ba2e59281760fb155c6287e8}{APPLICATION}});}
+\DoxyCodeLine{00101 }
+\DoxyCodeLine{00102     xml\_node instancesPS2 = doc.child(\textcolor{stringliteral}{"instancesPS"});}
+\DoxyCodeLine{00103 }
+\DoxyCodeLine{00104     \textcolor{keywordflow}{for} (pugi::xml\_node xn\_process = instancesPS2.first\_child(); !xn\_process.empty(); xn\_process = xn\_process.next\_sibling())\{}
+\DoxyCodeLine{00105 }
+\DoxyCodeLine{00106         \mbox{\hyperlink{class_process}{Process}} pi;}
+\DoxyCodeLine{00107 }
+\DoxyCodeLine{00108         \textcolor{comment}{// Process Name}}
+\DoxyCodeLine{00109         pi.\mbox{\hyperlink{class_process_ad1d3a2fd1af703ff1b986512d675660b}{setName}}(xn\_process.child\_value(\textcolor{stringliteral}{"name"}));}
+\DoxyCodeLine{00110 }
+\DoxyCodeLine{00111         \textcolor{comment}{// Process id}}
+\DoxyCodeLine{00112         processId = atoi((\textcolor{keywordtype}{char}*) xn\_process.child\_value(\textcolor{stringliteral}{"id"}));}
+\DoxyCodeLine{00113         pi.\mbox{\hyperlink{class_process_ac2d4d655dc9fe6317889938783ec2848}{setId}}(processId);}
+\DoxyCodeLine{00114 }
+\DoxyCodeLine{00115         \textcolor{comment}{// Process Priority}}
+\DoxyCodeLine{00116         pi.\mbox{\hyperlink{class_process_a011879a0a11d6bacd3a6d768293ab0d2}{setPriority}}(atoi((\textcolor{keywordtype}{char}*) xn\_process.child\_value(\textcolor{stringliteral}{"priority"})));}
+\DoxyCodeLine{00117 }
+\DoxyCodeLine{00118         \textcolor{comment}{// Process Criticality}}
+\DoxyCodeLine{00119         pi.\mbox{\hyperlink{class_process_a43c73ef0483b869e4231830eeff46d48}{setCriticality}}(atoi((\textcolor{keywordtype}{char}*) xn\_process.child\_value(\textcolor{stringliteral}{"criticality"})));}
+\DoxyCodeLine{00120 }
+\DoxyCodeLine{00121         \textcolor{comment}{// Process eqGate (HW size)}}
+\DoxyCodeLine{00122         xml\_node eqGate = xn\_process.child(\textcolor{stringliteral}{"eqGate"});}
+\DoxyCodeLine{00123         pi.\mbox{\hyperlink{class_process_a74caf223f4391e3145eee5899b30a09b}{setEqGate}}((\textcolor{keywordtype}{float})eqGate.attribute(\textcolor{stringliteral}{"value"}).as\_int());}
+\DoxyCodeLine{00124 }
+\DoxyCodeLine{00125         \textcolor{comment}{// Process dataType}}
+\DoxyCodeLine{00126         pi.\mbox{\hyperlink{class_process_a3aaefcd2768bd481e22228851b161546}{setDataType}}(atoi((\textcolor{keywordtype}{char}*) xn\_process.child\_value(\textcolor{stringliteral}{"dataType"})));}
+\DoxyCodeLine{00127 }
+\DoxyCodeLine{00128         \textcolor{comment}{// Process MemSize (SW Size)}}
+\DoxyCodeLine{00129         xml\_node memSize = xn\_process.child(\textcolor{stringliteral}{"memSize"});}
+\DoxyCodeLine{00130 }
+\DoxyCodeLine{00131         xml\_node codeSize = memSize.child(\textcolor{stringliteral}{"codeSize"});}
+\DoxyCodeLine{00132         \textcolor{keywordflow}{for} (pugi::xml\_node processorModel = codeSize.child(\textcolor{stringliteral}{"processorModel"}); processorModel; processorModel = processorModel.next\_sibling()) \{}
+\DoxyCodeLine{00133             pi.\mbox{\hyperlink{class_process_af55a4774a1519b84988e4e3ec3fcc7a2}{setCodeSize}}( processorModel.attribute(\textcolor{stringliteral}{"name"}).as\_string(), processorModel.attribute(\textcolor{stringliteral}{"value"}).as\_int() );}
+\DoxyCodeLine{00134         \}}
+\DoxyCodeLine{00135 }
+\DoxyCodeLine{00136         xml\_node dataSize = memSize.child(\textcolor{stringliteral}{"dataSize"});}
+\DoxyCodeLine{00137         \textcolor{keywordflow}{for} (pugi::xml\_node processorModel = dataSize.child(\textcolor{stringliteral}{"processorModel"}); processorModel; processorModel = processorModel.next\_sibling()) \{}
+\DoxyCodeLine{00138             pi.\mbox{\hyperlink{class_process_a268bc20c1c875e94e50c5d6d1ad9ec06}{setDataSize}}( processorModel.attribute(\textcolor{stringliteral}{"name"}).as\_string(), processorModel.attribute(\textcolor{stringliteral}{"value"}).as\_int() );}
+\DoxyCodeLine{00139         \}}
+\DoxyCodeLine{00140 }
+\DoxyCodeLine{00141         \textcolor{comment}{// Process Affinity}}
+\DoxyCodeLine{00142 }
+\DoxyCodeLine{00143         xml\_node affinity = xn\_process.child(\textcolor{stringliteral}{"affinity"});}
+\DoxyCodeLine{00144         \textcolor{keywordflow}{for} (pugi::xml\_node processorType = affinity.child(\textcolor{stringliteral}{"processorType"}); processorType; processorType = processorType.next\_sibling()) \{}
+\DoxyCodeLine{00145             \textcolor{keywordtype}{string} processorType\_name = processorType.attribute(\textcolor{stringliteral}{"name"}).as\_string();}
+\DoxyCodeLine{00146             \textcolor{keywordtype}{float} affinity\_value = processorType.attribute(\textcolor{stringliteral}{"value"}).as\_float();}
+\DoxyCodeLine{00147             pi.\mbox{\hyperlink{class_process_a6f1fdb3ef348ebe19f1fd44671edfed8}{setAffinity}}(processorType\_name, affinity\_value);}
+\DoxyCodeLine{00148         \}}
+\DoxyCodeLine{00149 }
+\DoxyCodeLine{00150         \textcolor{comment}{// Process Concurrency}}
+\DoxyCodeLine{00151 }
+\DoxyCodeLine{00152         xml\_node concurrency = xn\_process.child(\textcolor{stringliteral}{"concurrency"});}
+\DoxyCodeLine{00153         \textcolor{keywordflow}{for} (pugi::xml\_node xn\_cprocessId = concurrency.child(\textcolor{stringliteral}{"processId"}); xn\_cprocessId; xn\_cprocessId = xn\_cprocessId.next\_sibling()) \{}
+\DoxyCodeLine{00154             \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} process\_id\_n = xn\_cprocessId.attribute(\textcolor{stringliteral}{"id"}).as\_int();}
+\DoxyCodeLine{00155             \textcolor{keywordtype}{float} process\_concurrency\_value = xn\_cprocessId.attribute(\textcolor{stringliteral}{"value"}).as\_float();}
+\DoxyCodeLine{00156             pi.\mbox{\hyperlink{class_process_a8fb82ba026f5530a9f9724fbf1142aba}{setConcurrency}}(process\_id\_n, process\_concurrency\_value);}
+\DoxyCodeLine{00157         \}}
+\DoxyCodeLine{00158 }
+\DoxyCodeLine{00159         \textcolor{comment}{// Process Load}}
+\DoxyCodeLine{00160 }
+\DoxyCodeLine{00161         xml\_node load = xn\_process.child(\textcolor{stringliteral}{"load"});}
+\DoxyCodeLine{00162         \textcolor{keywordflow}{for} (pugi::xml\_node processorId = load.child(\textcolor{stringliteral}{"processorId"}); processorId; processorId = processorId.next\_sibling()) \{}
+\DoxyCodeLine{00163             \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} processor\_id\_n = processorId.attribute(\textcolor{stringliteral}{"id"}).as\_int();}
+\DoxyCodeLine{00164             \textcolor{keywordtype}{float} process\_load\_value = processorId.attribute(\textcolor{stringliteral}{"value"}).as\_float();}
+\DoxyCodeLine{00165             pi.\mbox{\hyperlink{class_process_a9d9cfc179387b12e2bb1cdc214b6a9d8}{setLoad}}(processor\_id\_n, process\_load\_value);}
+\DoxyCodeLine{00166         \}}
+\DoxyCodeLine{00167 }
+\DoxyCodeLine{00168         \textcolor{comment}{// Process time (init)}}
+\DoxyCodeLine{00169         pi.\mbox{\hyperlink{class_process_a47be8c61a3a5460452753dc98b68389f}{processTime}} = sc\_time(0, SC\_MS);}
+\DoxyCodeLine{00170 }
+\DoxyCodeLine{00171         \textcolor{comment}{// Process energy (init)}}
+\DoxyCodeLine{00172         pi.\mbox{\hyperlink{class_process_a2991ac041e868df69f3f394ee91791cb}{setEnergy}}(0);}
+\DoxyCodeLine{00173 }
+\DoxyCodeLine{00174         \textcolor{comment}{// Process Communication}}
+\DoxyCodeLine{00175         \textcolor{comment}{// TO DO}}
+\DoxyCodeLine{00176 }
+\DoxyCodeLine{00177         \textcolor{keywordflow}{if}(processId == exp\_id)\{}
+\DoxyCodeLine{00178             vps2.push\_back(pi);}
+\DoxyCodeLine{00179             exp\_id++;}
+\DoxyCodeLine{00180         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00181             cout << \textcolor{stringliteral}{"XML for application is corrupted\(\backslash\)n"};}
+\DoxyCodeLine{00182             exit(11);}
+\DoxyCodeLine{00183         \}}
+\DoxyCodeLine{00184 }
+\DoxyCodeLine{00185     \}}
+\DoxyCodeLine{00186     \textcolor{keywordflow}{if}(exp\_id != \mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}})\{}
+\DoxyCodeLine{00187         cout << \textcolor{stringliteral}{"XML for application is corrupted (NPS)\(\backslash\)n"};}
+\DoxyCodeLine{00188         exit(11);}
+\DoxyCodeLine{00189     \}}
+\DoxyCodeLine{00190 }
+\DoxyCodeLine{00191     doc.reset();}
+\DoxyCodeLine{00192 }
+\DoxyCodeLine{00193     \textcolor{keywordflow}{return} vps2;}
+\DoxyCodeLine{00194 }
+\DoxyCodeLine{00195 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{define_8h_source_l00120}{A\+P\+P\+L\+I\+C\+A\+T\+I\+ON}}, \mbox{\hyperlink{define_8h_source_l00077}{N\+PS}}, \mbox{\hyperlink{tl_8h_source_l00177}{Process\+::process\+Time}}, \mbox{\hyperlink{tl_8cpp_source_l00414}{Process\+::set\+Affinity()}}, \mbox{\hyperlink{tl_8cpp_source_l00390}{Process\+::set\+Code\+Size()}}, \mbox{\hyperlink{tl_8cpp_source_l00421}{Process\+::set\+Concurrency()}}, \mbox{\hyperlink{tl_8cpp_source_l00365}{Process\+::set\+Criticality()}}, \mbox{\hyperlink{tl_8cpp_source_l00396}{Process\+::set\+Data\+Size()}}, \mbox{\hyperlink{tl_8cpp_source_l00385}{Process\+::set\+Data\+Type()}}, \mbox{\hyperlink{tl_8cpp_source_l00346}{Process\+::set\+Energy()}}, \mbox{\hyperlink{tl_8cpp_source_l00375}{Process\+::set\+Eq\+Gate()}}, \mbox{\hyperlink{tl_8cpp_source_l00337}{Process\+::set\+Id()}}, \mbox{\hyperlink{tl_8cpp_source_l00428}{Process\+::set\+Load()}}, \mbox{\hyperlink{tl_8cpp_source_l00327}{Process\+::set\+Name()}}, and \mbox{\hyperlink{tl_8cpp_source_l00355}{Process\+::set\+Priority()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_system_manager_a545df7d9bd60c4d42797a7233a1f4d61_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_system_manager_af468620e73667d65dbb7db93b78712a9}\label{class_system_manager_af468620e73667d65dbb7db93b78712a9}} 
+\index{SystemManager@{SystemManager}!getAllocationPS\_BB@{getAllocationPS\_BB}}
+\index{getAllocationPS\_BB@{getAllocationPS\_BB}!SystemManager@{SystemManager}}
+\doxysubsubsection{\texorpdfstring{getAllocationPS\_BB()}{getAllocationPS\_BB()}}
+{\footnotesize\ttfamily vector$<$ int $>$ System\+Manager\+::get\+Allocation\+P\+S\+\_\+\+BB (\begin{DoxyParamCaption}\item[{int}]{bb\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_system_manager_8cpp_source_l00273}{273}} of file \mbox{\hyperlink{_system_manager_8cpp_source}{System\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00274 \{}
+\DoxyCodeLine{00275     vector<int> pu\_alloc;}
+\DoxyCodeLine{00276     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} j = 2; j < \mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}.size(); j++) \textcolor{comment}{// 0 and 1 are the testbench}}
+\DoxyCodeLine{00277     \{}
+\DoxyCodeLine{00278         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[j] == \mbox{\hyperlink{group__firfirgcd__define__group_gaaa53553033df32820178982628a60cae}{bb\_id}}) pu\_alloc.push\_back(j);}
+\DoxyCodeLine{00279     \}}
+\DoxyCodeLine{00280     \textcolor{keywordflow}{return} pu\_alloc;}
+\DoxyCodeLine{00281 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_system_manager_ae7fbae6170e9f5e8aca0c436221dcf41}\label{class_system_manager_ae7fbae6170e9f5e8aca0c436221dcf41}} 
+\index{SystemManager@{SystemManager}!getFRL@{getFRL}}
+\index{getFRL@{getFRL}!SystemManager@{SystemManager}}
+\doxysubsubsection{\texorpdfstring{getFRL()}{getFRL()}}
+{\footnotesize\ttfamily float $\ast$ System\+Manager\+::get\+F\+RL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_system_manager_8cpp_source_l01241}{1241}} of file \mbox{\hyperlink{_system_manager_8cpp_source}{System\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{01241                                  \{}
+\DoxyCodeLine{01242         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_system_manager_a7f06326402d0738cb87a1c03bf57f5c7}{FRL}};}
+\DoxyCodeLine{01243     \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_source_l00177}{sc\+\_\+main()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{class_system_manager_ae7fbae6170e9f5e8aca0c436221dcf41_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_system_manager_ae0465f057cd9ac9f5c6d05befc85ff15}\label{class_system_manager_ae0465f057cd9ac9f5c6d05befc85ff15}} 
+\index{SystemManager@{SystemManager}!getFRT@{getFRT}}
+\index{getFRT@{getFRT}!SystemManager@{SystemManager}}
+\doxysubsubsection{\texorpdfstring{getFRT()}{getFRT()}}
+{\footnotesize\ttfamily sc\+\_\+time System\+Manager\+::get\+F\+RT (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_system_manager_8cpp_source_l01226}{1226}} of file \mbox{\hyperlink{_system_manager_8cpp_source}{System\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{01226                                  \{}
+\DoxyCodeLine{01227         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_system_manager_a69ec2821a8a92a69fbb5cb0f789a64ca}{FRT}};}
+\DoxyCodeLine{01228     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_system_manager_a96ab5341b1af75dfcd59b14b02fa0bc7}\label{class_system_manager_a96ab5341b1af75dfcd59b14b02fa0bc7}} 
+\index{SystemManager@{SystemManager}!increaseEstimatedEnergy@{increaseEstimatedEnergy}}
+\index{increaseEstimatedEnergy@{increaseEstimatedEnergy}!SystemManager@{SystemManager}}
+\doxysubsubsection{\texorpdfstring{increaseEstimatedEnergy()}{increaseEstimatedEnergy()}}
+{\footnotesize\ttfamily void System\+Manager\+::increase\+Estimated\+Energy (\begin{DoxyParamCaption}\item[{int}]{process\+Id }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_system_manager_8cpp_source_l01091}{1091}} of file \mbox{\hyperlink{_system_manager_8cpp_source}{System\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{01092     \{}
+\DoxyCodeLine{01093         \mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[processId].energy += \mbox{\hyperlink{class_system_manager_aa7e8eba2c8c064bc7e7df6ed9e9e1f53}{updateEstimatedEnergy}}(processId); \textcolor{comment}{// Cumulated sum of the statement execution energy}}
+\DoxyCodeLine{01094     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_system_manager_a0d692288dbf1e1a75a331408cd4f2210}\label{class_system_manager_a0d692288dbf1e1a75a331408cd4f2210}} 
+\index{SystemManager@{SystemManager}!increaseSimulatedTime@{increaseSimulatedTime}}
+\index{increaseSimulatedTime@{increaseSimulatedTime}!SystemManager@{SystemManager}}
+\doxysubsubsection{\texorpdfstring{increaseSimulatedTime()}{increaseSimulatedTime()}}
+{\footnotesize\ttfamily void System\+Manager\+::increase\+Simulated\+Time (\begin{DoxyParamCaption}\item[{int}]{process\+Id }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_system_manager_8cpp_source_l01085}{1085}} of file \mbox{\hyperlink{_system_manager_8cpp_source}{System\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{01086     \{}
+\DoxyCodeLine{01087         \mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[processId].processTime += \mbox{\hyperlink{class_system_manager_aeaf3506efda2897408fd8d5273e871aa}{updateSimulatedTime}}(processId); \textcolor{comment}{// Cumulated sum of the statement execution time}}
+\DoxyCodeLine{01088     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_system_manager_a81c4c7415d63b21f9ae15fd5594b7692}\label{class_system_manager_a81c4c7415d63b21f9ae15fd5594b7692}} 
+\index{SystemManager@{SystemManager}!increaseTimer@{increaseTimer}}
+\index{increaseTimer@{increaseTimer}!SystemManager@{SystemManager}}
+\doxysubsubsection{\texorpdfstring{increaseTimer()}{increaseTimer()}}
+{\footnotesize\ttfamily void System\+Manager\+::increase\+Timer (\begin{DoxyParamCaption}\item[{int}]{process\+Id,  }\item[{sc\+\_\+time}]{delta }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_system_manager_8cpp_source_l01097}{1097}} of file \mbox{\hyperlink{_system_manager_8cpp_source}{System\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{01098     \{}
+\DoxyCodeLine{01099         \mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[processId].processTime += delta; \textcolor{comment}{// Cumulated sum of the statement execution time}}
+\DoxyCodeLine{01100     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_system_manager_acf868dd1af35168e9e37a62b1a03780b}\label{class_system_manager_acf868dd1af35168e9e37a62b1a03780b}} 
+\index{SystemManager@{SystemManager}!loadEst@{loadEst}}
+\index{loadEst@{loadEst}!SystemManager@{SystemManager}}
+\doxysubsubsection{\texorpdfstring{loadEst()}{loadEst()}}
+{\footnotesize\ttfamily float $\ast$ System\+Manager\+::load\+Est (\begin{DoxyParamCaption}\item[{sc\+\_\+time}]{F\+R\+T\+\_\+n }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_system_manager_8cpp_source_l01234}{1234}} of file \mbox{\hyperlink{_system_manager_8cpp_source}{System\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{01234                                                \{}
+\DoxyCodeLine{01235     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned} i =2; i<\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}.size(); i++)\{}
+\DoxyCodeLine{01236             \mbox{\hyperlink{class_system_manager_a7f06326402d0738cb87a1c03bf57f5c7}{FRL}}[i] = (float) ((\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[i].processTime/\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[i].profiling)/(FRT\_n/\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[i].profiling)); \textcolor{comment}{//}}
+\DoxyCodeLine{01237     \}}
+\DoxyCodeLine{01238     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_system_manager_a7f06326402d0738cb87a1c03bf57f5c7}{FRL}};}
+\DoxyCodeLine{01239     \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_source_l00177}{sc\+\_\+main()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{class_system_manager_acf868dd1af35168e9e37a62b1a03780b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_system_manager_a027f130077f51033fad36ccaaeda2c57}\label{class_system_manager_a027f130077f51033fad36ccaaeda2c57}} 
+\index{SystemManager@{SystemManager}!mappingCH@{mappingCH}}
+\index{mappingCH@{mappingCH}!SystemManager@{SystemManager}}
+\doxysubsubsection{\texorpdfstring{mappingCH()}{mappingCH()}}
+{\footnotesize\ttfamily void System\+Manager\+::mapping\+CH (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_system_manager_8cpp_source_l00967}{967}} of file \mbox{\hyperlink{_system_manager_8cpp_source}{System\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00967                              \{}
+\DoxyCodeLine{00968     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{group__firfirgcd__define__group_ga967ca22c6c7be038e1092147ce04f258}{NCH}}; j++)\{}
+\DoxyCodeLine{00969         \textcolor{keywordtype}{int} linkId = 0;}
+\DoxyCodeLine{00970         \mbox{\hyperlink{class_system_manager_ab75b55327c942c6950f67c14ba9dea08}{allocationCH\_PL}}.push\_back(linkId);}
+\DoxyCodeLine{00971     \}}
+\DoxyCodeLine{00972 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{define_8h_source_l00079}{N\+CH}}.
+
+\mbox{\Hypertarget{class_system_manager_a03ae9f4865c6ba14f9212ca4711d30a9}\label{class_system_manager_a03ae9f4865c6ba14f9212ca4711d30a9}} 
+\index{SystemManager@{SystemManager}!mappingPS@{mappingPS}}
+\index{mappingPS@{mappingPS}!SystemManager@{SystemManager}}
+\doxysubsubsection{\texorpdfstring{mappingPS()}{mappingPS()}}
+{\footnotesize\ttfamily void System\+Manager\+::mapping\+PS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_system_manager_8cpp_source_l00921}{921}} of file \mbox{\hyperlink{_system_manager_8cpp_source}{System\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00921                              \{}
+\DoxyCodeLine{00922     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j<\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}; j++)\{}
+\DoxyCodeLine{00923         \textcolor{keywordtype}{int} bbId = 0;}
+\DoxyCodeLine{00924         \mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}.push\_back(bbId);}
+\DoxyCodeLine{00925     \}}
+\DoxyCodeLine{00926 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{define_8h_source_l00077}{N\+PS}}.
+
+\mbox{\Hypertarget{class_system_manager_abb13ab99346bb9a9633852a797e03cf7}\label{class_system_manager_abb13ab99346bb9a9633852a797e03cf7}} 
+\index{SystemManager@{SystemManager}!PS\_Profiling@{PS\_Profiling}}
+\index{PS\_Profiling@{PS\_Profiling}!SystemManager@{SystemManager}}
+\doxysubsubsection{\texorpdfstring{PS\_Profiling()}{PS\_Profiling()}}
+{\footnotesize\ttfamily void System\+Manager\+::\+P\+S\+\_\+\+Profiling (\begin{DoxyParamCaption}\item[{int}]{process\+Id }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_system_manager_8cpp_source_l00261}{261}} of file \mbox{\hyperlink{_system_manager_8cpp_source}{System\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00262 \{}
+\DoxyCodeLine{00263     \mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[processId].profiling++;}
+\DoxyCodeLine{00264 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_system_manager_a2babb39c1fc59e1d02782e3e39ea9412}\label{class_system_manager_a2babb39c1fc59e1d02782e3e39ea9412}} 
+\index{SystemManager@{SystemManager}!setFRT@{setFRT}}
+\index{setFRT@{setFRT}!SystemManager@{SystemManager}}
+\doxysubsubsection{\texorpdfstring{setFRT()}{setFRT()}}
+{\footnotesize\ttfamily void System\+Manager\+::set\+F\+RT (\begin{DoxyParamCaption}\item[{sc\+\_\+time}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_system_manager_8cpp_source_l01230}{1230}} of file \mbox{\hyperlink{_system_manager_8cpp_source}{System\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{01230                                        \{}
+\DoxyCodeLine{01231         \mbox{\hyperlink{class_system_manager_a69ec2821a8a92a69fbb5cb0f789a64ca}{FRT}} = x;}
+\DoxyCodeLine{01232     \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_source_l00177}{sc\+\_\+main()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{class_system_manager_a2babb39c1fc59e1d02782e3e39ea9412_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_system_manager_aa7e8eba2c8c064bc7e7df6ed9e9e1f53}\label{class_system_manager_aa7e8eba2c8c064bc7e7df6ed9e9e1f53}} 
+\index{SystemManager@{SystemManager}!updateEstimatedEnergy@{updateEstimatedEnergy}}
+\index{updateEstimatedEnergy@{updateEstimatedEnergy}!SystemManager@{SystemManager}}
+\doxysubsubsection{\texorpdfstring{updateEstimatedEnergy()}{updateEstimatedEnergy()}}
+{\footnotesize\ttfamily float System\+Manager\+::update\+Estimated\+Energy (\begin{DoxyParamCaption}\item[{int}]{process\+Id }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_system_manager_8cpp_source_l01005}{1005}} of file \mbox{\hyperlink{_system_manager_8cpp_source}{System\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{01006     \{}
+\DoxyCodeLine{01007         \textcolor{keywordtype}{float} J4CS;}
+\DoxyCodeLine{01008         \textcolor{keywordtype}{float} P;}
+\DoxyCodeLine{01009         \textcolor{keywordflow}{if}(\mbox{\hyperlink{group__firfirgcd__define__group_gacf471d2e884ab94235db48a5fd3ce252}{energyComputation}} == \textcolor{stringliteral}{"EPC"}) \{}
+\DoxyCodeLine{01010             \textcolor{comment}{// EPC -\/-\/> J4CS = CC4CSaff * EPC = CC4CSaff * (P/f)}}
+\DoxyCodeLine{01011 }
+\DoxyCodeLine{01012             \textcolor{comment}{// Id representing process dominant datatype }}
+\DoxyCodeLine{01013             \textcolor{keywordtype}{int} dataType = \mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[processId].getDataType();}
+\DoxyCodeLine{01014 }
+\DoxyCodeLine{01015 }
+\DoxyCodeLine{01016             \textcolor{comment}{//I HAVE TO ADD A LOOP IN ORDER TO TAKE THE PARAMETERS OF EACH PROCESSOR (?) **********************}}
+\DoxyCodeLine{01017 }
+\DoxyCodeLine{01018             \textcolor{keywordtype}{float} CC4Smin = \mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{VBB}}[\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[processId]].getProcessors()[0].getCC4S()[dataType][0]; \textcolor{comment}{// Average/min number of clock cycles needed by the PU to execute a C statement}}
+\DoxyCodeLine{01019 }
+\DoxyCodeLine{01020             \textcolor{comment}{//float CC4Smin = VBB[allocationPS\_BB[processId]].getCC4S()[dataType][0]; // Average/min number of clock cycles needed by the PU to execute a C statement}}
+\DoxyCodeLine{01021 }
+\DoxyCodeLine{01022             \textcolor{comment}{//float CC4Smax = VBB[allocationPS\_BB[processId]].getCC4S()[dataType][1];}}
+\DoxyCodeLine{01023             \textcolor{keywordtype}{float} CC4Smax = \mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{VBB}}[\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[processId]].getProcessors()[0].getCC4S()[dataType][1];\textcolor{comment}{// Average/max number of clock cycles needed by the PU to execute a C statement}}
+\DoxyCodeLine{01024 }
+\DoxyCodeLine{01025             \textcolor{comment}{// Affinity-\/based interpolation }}
+\DoxyCodeLine{01026             \textcolor{keywordtype}{float} CC4Saff = CC4Smin + ((CC4Smax-\/CC4Smin)*(1-\/\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[processId].getAffinityByName(\mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{VBB}}[\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[processId]].getProcessors()[0].getProcessorType())));}
+\DoxyCodeLine{01027 }
+\DoxyCodeLine{01028             \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{class_system_manager_a21d2bb74e4472f99ec04243168e7964e}{checkSPP}}(processId)) \{}
+\DoxyCodeLine{01029                 \textcolor{comment}{// if the process is on a SPP (HW) -\/-\/> P = Vdd * Idd (V*A = W)}}
+\DoxyCodeLine{01030 }
+\DoxyCodeLine{01031                 P = \mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{VBB}}[\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[processId]].getProcessors()[0].getVdd() * \mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{VBB}}[\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[processId]].getProcessors()[0].getIdd();}
+\DoxyCodeLine{01032 }
+\DoxyCodeLine{01033             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{01034                 \textcolor{comment}{// if the process is on a GPP/DSP (SW) -\/-\/> P (W)}}
+\DoxyCodeLine{01035 }
+\DoxyCodeLine{01036                 P = \mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{VBB}}[\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[processId]].getProcessors()[0].getPower();}
+\DoxyCodeLine{01037 }
+\DoxyCodeLine{01038             \}}
+\DoxyCodeLine{01039             \textcolor{comment}{// EPC = P/f (W/MHz = uJ)}}
+\DoxyCodeLine{01040             \textcolor{keywordtype}{float} EPC = P / \mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{VBB}}[\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[processId]].getProcessors()[0].getFrequency();}
+\DoxyCodeLine{01041 }
+\DoxyCodeLine{01042             J4CS = CC4Saff * EPC; \textcolor{comment}{// uJ}}
+\DoxyCodeLine{01043         \} \textcolor{keywordflow}{else} \{ }
+\DoxyCodeLine{01044             \textcolor{comment}{// EPI }}
+\DoxyCodeLine{01045 }
+\DoxyCodeLine{01046             \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{class_system_manager_a21d2bb74e4472f99ec04243168e7964e}{checkSPP}}(processId)) \{}
+\DoxyCodeLine{01047                 \textcolor{comment}{// if the process is on a SPP (HW) -\/-\/> J4CS = CC4CSaff * P * (1/f)}}
+\DoxyCodeLine{01048 }
+\DoxyCodeLine{01049                 \textcolor{comment}{// Id representing process dominant datatype }}
+\DoxyCodeLine{01050                 \textcolor{keywordtype}{int} dataType = \mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[processId].getDataType(); }
+\DoxyCodeLine{01051 }
+\DoxyCodeLine{01052                 \textcolor{keywordtype}{float} CC4Smin = \mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{VBB}}[\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[processId]].getProcessors()[0].getCC4S()[dataType][0]; \textcolor{comment}{// Average/min number of clock cycles needed by the PU to execute a C statement}}
+\DoxyCodeLine{01053 }
+\DoxyCodeLine{01054                 \textcolor{keywordtype}{float} CC4Smax = \mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{VBB}}[\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[processId]].getProcessors()[0].getCC4S()[dataType][1]; \textcolor{comment}{// Average/max number of clock cycles needed by the PU to execute a C statement}}
+\DoxyCodeLine{01055 }
+\DoxyCodeLine{01056                 \textcolor{comment}{// Affinity-\/based interpolation }}
+\DoxyCodeLine{01057                 \textcolor{keywordtype}{float} CC4Saff = CC4Smin + ((CC4Smax-\/CC4Smin)*(1-\/\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[processId].getAffinityByName(\mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{VBB}}[\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[processId]].getProcessors()[0].getProcessorType())));}
+\DoxyCodeLine{01058 }
+\DoxyCodeLine{01059                 \textcolor{comment}{// P = Vdd * Idd (V*A = W)}}
+\DoxyCodeLine{01060                 P = \mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{VBB}}[\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[processId]].getProcessors()[0].getVdd() * \mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{VBB}}[\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[processId]].getProcessors()[0].getIdd();}
+\DoxyCodeLine{01061 }
+\DoxyCodeLine{01062                 J4CS = CC4Saff * (P / \mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{VBB}}[\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[processId]].getProcessors()[0].getFrequency()); \textcolor{comment}{// uJ}}
+\DoxyCodeLine{01063             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{01064                 \textcolor{comment}{// if the process is on a GPP/DSP (SW) -\/-\/> J4CS = I4CSaff * EPI = I4CSaff * (P/MIPS)}}
+\DoxyCodeLine{01065 }
+\DoxyCodeLine{01066                 \textcolor{keywordtype}{float} I4CSmin = \mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{VBB}}[\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[processId]].getProcessors()[0].getI4CSmin(); \textcolor{comment}{// Average/min number of assembly instructions to execute a C statement}}
+\DoxyCodeLine{01067 }
+\DoxyCodeLine{01068                 \textcolor{keywordtype}{float} I4CSmax = \mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{VBB}}[\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[processId]].getProcessors()[0].getI4CSmax(); \textcolor{comment}{// Average/max number of assembly instructions to execute a C statement}}
+\DoxyCodeLine{01069 }
+\DoxyCodeLine{01070                 \textcolor{comment}{// Affinity-\/based interpolation }}
+\DoxyCodeLine{01071                 \textcolor{keywordtype}{float} I4CSaff = I4CSmin + ((I4CSmax-\/I4CSmin)*(1-\/\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[processId].getAffinityByName(\mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{VBB}}[\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[processId]].getProcessors()[0].getProcessorType())));}
+\DoxyCodeLine{01072 }
+\DoxyCodeLine{01073                 P = \mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{VBB}}[\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[processId]].getProcessors()[0].getPower(); \textcolor{comment}{// Watt}}
+\DoxyCodeLine{01074 }
+\DoxyCodeLine{01075                 \textcolor{comment}{// EPI = P/MIPS (uJ/instr)}}
+\DoxyCodeLine{01076                 \textcolor{keywordtype}{float} EPI = P / \mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{VBB}}[\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[processId]].getProcessors()[0].getMIPS();}
+\DoxyCodeLine{01077 }
+\DoxyCodeLine{01078                 J4CS = I4CSaff * EPI; \textcolor{comment}{// uJ}}
+\DoxyCodeLine{01079             \}}
+\DoxyCodeLine{01080         \} }
+\DoxyCodeLine{01081         \textcolor{keywordflow}{return} J4CS;}
+\DoxyCodeLine{01082     \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{define_8h_source_l00135}{energy\+Computation}}.
+
+\mbox{\Hypertarget{class_system_manager_aeaf3506efda2897408fd8d5273e871aa}\label{class_system_manager_aeaf3506efda2897408fd8d5273e871aa}} 
+\index{SystemManager@{SystemManager}!updateSimulatedTime@{updateSimulatedTime}}
+\index{updateSimulatedTime@{updateSimulatedTime}!SystemManager@{SystemManager}}
+\doxysubsubsection{\texorpdfstring{updateSimulatedTime()}{updateSimulatedTime()}}
+{\footnotesize\ttfamily sc\+\_\+time System\+Manager\+::update\+Simulated\+Time (\begin{DoxyParamCaption}\item[{int}]{process\+Id }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_system_manager_8cpp_source_l00985}{985}} of file \mbox{\hyperlink{_system_manager_8cpp_source}{System\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00986     \{   }
+\DoxyCodeLine{00987         \textcolor{comment}{// Id representing process dominant datatype }}
+\DoxyCodeLine{00988         \textcolor{keywordtype}{int} dataType = \mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[processId].getDataType();}
+\DoxyCodeLine{00989 }
+\DoxyCodeLine{00990 }
+\DoxyCodeLine{00991         \textcolor{comment}{//*********************VPU WAS CHANGED IN VBB**********************}}
+\DoxyCodeLine{00992         \textcolor{keywordtype}{float} CC4Smin = \mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{VBB}}[\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[processId]].getProcessors()[0].getCC4S()[dataType][0]; \textcolor{comment}{// Average/min number of clock cycles needed by the PU to execute a C statement}}
+\DoxyCodeLine{00993         \textcolor{keywordtype}{float} CC4Smax = \mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{VBB}}[\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[processId]].getProcessors()[0].getCC4S()[dataType][1]; \textcolor{comment}{// Average/max number of clock cycles needed by the PU to execute a C statement}}
+\DoxyCodeLine{00994 }
+\DoxyCodeLine{00995         \textcolor{comment}{// Affinity-\/based interpolation and round up of CC4CSaff}}
+\DoxyCodeLine{00996         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} CC4Saff = (\textcolor{keywordtype}{unsigned} int) ceil(CC4Smin + ((CC4Smax-\/CC4Smin)*(1-\/\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[processId].getAffinityByName(\mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{VBB}}[\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[processId]].getProcessors()[0].getProcessorType()))));}
+\DoxyCodeLine{00997 }
+\DoxyCodeLine{00998         \textcolor{keywordtype}{float} frequency = \mbox{\hyperlink{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}{VBB}}[\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[processId]].getProcessors()[0].getFrequency(); \textcolor{comment}{// Frequency of the processor (MHz)}}
+\DoxyCodeLine{00999         sc\_time value((CC4Saff/(frequency*1000)), SC\_MS); \textcolor{comment}{// Average time (ms) needed to execute a C statement}}
+\DoxyCodeLine{01000 }
+\DoxyCodeLine{01001         \textcolor{keywordflow}{return} value;}
+\DoxyCodeLine{01002     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_system_manager_a5f16a17547d2cd543180e06e555304e7}\label{class_system_manager_a5f16a17547d2cd543180e06e555304e7}} 
+\index{SystemManager@{SystemManager}!updateXmlConCom@{updateXmlConCom}}
+\index{updateXmlConCom@{updateXmlConCom}!SystemManager@{SystemManager}}
+\doxysubsubsection{\texorpdfstring{updateXmlConCom()}{updateXmlConCom()}}
+{\footnotesize\ttfamily void System\+Manager\+::update\+Xml\+Con\+Com (\begin{DoxyParamCaption}\item[{float}]{matrix\+C\+O\+N\+C\+\_\+\+P\+S\+\_\+N\mbox{[}10\mbox{]}\mbox{[}10\mbox{]},  }\item[{unsigned int}]{matrix\+C\+OM\mbox{[}10\mbox{]}\mbox{[}10\mbox{]},  }\item[{float}]{matrix\+C\+O\+N\+C\+\_\+\+C\+H\+\_\+N\mbox{[}15\mbox{]}\mbox{[}15\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_system_manager_8cpp_source_l00331}{331}} of file \mbox{\hyperlink{_system_manager_8cpp_source}{System\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00332 \{}
+\DoxyCodeLine{00333     pugi::xml\_document myDoc;}
+\DoxyCodeLine{00334     pugi::xml\_parse\_result myResult = myDoc.load\_file(\textcolor{stringliteral}{"./XML/application.xml"});}
+\DoxyCodeLine{00335     cout << \textcolor{stringliteral}{"XML result: "} << myResult.description() << endl;}
+\DoxyCodeLine{00336 }
+\DoxyCodeLine{00337     \textcolor{comment}{//method 2: use object/node structure}}
+\DoxyCodeLine{00338     pugi::xml\_node instancesPS = myDoc.child(\textcolor{stringliteral}{"instancesPS"});}
+\DoxyCodeLine{00339 }
+\DoxyCodeLine{00340     \textcolor{keywordflow}{for} (xml\_node\_iterator seqProcess\_it = instancesPS.begin(); seqProcess\_it != instancesPS.end(); ++seqProcess\_it)\{}
+\DoxyCodeLine{00341         \textcolor{keywordtype}{int} Id = atoi(seqProcess\_it-\/>child\_value(\textcolor{stringliteral}{"id"}));}
+\DoxyCodeLine{00342 }
+\DoxyCodeLine{00343         \textcolor{keywordflow}{if} (seqProcess\_it-\/>child(\textcolor{stringliteral}{"concurrency"}))\{}
+\DoxyCodeLine{00344             pugi::xml\_node concurrency = seqProcess\_it-\/>child(\textcolor{stringliteral}{"concurrency"});}
+\DoxyCodeLine{00345             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i<\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}; i++)\{}
+\DoxyCodeLine{00346                 \textcolor{keywordflow}{if} (i != Id)\{}
+\DoxyCodeLine{00347                     pugi::xml\_node conc\_it = concurrency.append\_child(\textcolor{stringliteral}{"processId"});}
+\DoxyCodeLine{00348                     conc\_it.append\_attribute(\textcolor{stringliteral}{"id"}).set\_value(i);}
+\DoxyCodeLine{00349                     conc\_it.append\_attribute(\textcolor{stringliteral}{"value"}).set\_value(matrixCONC\_PS\_N[Id][i]);}
+\DoxyCodeLine{00350                 \}}
+\DoxyCodeLine{00351             \}}
+\DoxyCodeLine{00352         \}}
+\DoxyCodeLine{00353         \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00354             pugi::xml\_node concurrency = seqProcess\_it-\/>append\_child(\textcolor{stringliteral}{"concurrency"});}
+\DoxyCodeLine{00355             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i<\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}; i++)\{}
+\DoxyCodeLine{00356                 \textcolor{keywordflow}{if} (i != Id)\{}
+\DoxyCodeLine{00357                     pugi::xml\_node conc\_it = concurrency.append\_child(\textcolor{stringliteral}{"processId"});}
+\DoxyCodeLine{00358                     conc\_it.append\_attribute(\textcolor{stringliteral}{"id"}).set\_value(i);}
+\DoxyCodeLine{00359                     conc\_it.append\_attribute(\textcolor{stringliteral}{"value"}).set\_value(matrixCONC\_PS\_N[Id][i]);}
+\DoxyCodeLine{00360                 \}}
+\DoxyCodeLine{00361             \}}
+\DoxyCodeLine{00362         \}}
+\DoxyCodeLine{00363     \}}
+\DoxyCodeLine{00364 }
+\DoxyCodeLine{00365     \textcolor{comment}{//method 2: use object/node structure}}
+\DoxyCodeLine{00366     pugi::xml\_node instancesCOM = myDoc.child(\textcolor{stringliteral}{"instancesPS"});}
+\DoxyCodeLine{00367 }
+\DoxyCodeLine{00368     \textcolor{keywordflow}{for} (pugi::xml\_node\_iterator seqProcess\_it = instancesCOM.begin(); seqProcess\_it != instancesCOM.end(); ++seqProcess\_it)\{}
+\DoxyCodeLine{00369         \textcolor{keywordtype}{int} Id = atoi(seqProcess\_it-\/>child\_value(\textcolor{stringliteral}{"id"}));}
+\DoxyCodeLine{00370 }
+\DoxyCodeLine{00371         \textcolor{keywordflow}{if} (seqProcess\_it-\/>child(\textcolor{stringliteral}{"comunication"}))\{}
+\DoxyCodeLine{00372             pugi::xml\_node comunication = seqProcess\_it-\/>child(\textcolor{stringliteral}{"comunication"});}
+\DoxyCodeLine{00373             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i<\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}; i++)\{}
+\DoxyCodeLine{00374                 \textcolor{keywordflow}{if} (i != Id)\{}
+\DoxyCodeLine{00375                     pugi::xml\_node com\_it = comunication.append\_child(\textcolor{stringliteral}{"rec"});}
+\DoxyCodeLine{00376                     com\_it.append\_attribute(\textcolor{stringliteral}{"idRec"}).set\_value(i);}
+\DoxyCodeLine{00377                     com\_it.append\_attribute(\textcolor{stringliteral}{"value"}).set\_value(matrixCOM[Id][i]);}
+\DoxyCodeLine{00378                 \}}
+\DoxyCodeLine{00379             \}}
+\DoxyCodeLine{00380         \}}
+\DoxyCodeLine{00381         \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00382             pugi::xml\_node comunication = seqProcess\_it-\/>append\_child(\textcolor{stringliteral}{"comunication"});}
+\DoxyCodeLine{00383             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i<\mbox{\hyperlink{group__firfirgcd__define__group_gad258142492454320138f79a00101f1f8}{NPS}}; i++)\{}
+\DoxyCodeLine{00384                 \textcolor{keywordflow}{if} (i != Id)\{}
+\DoxyCodeLine{00385                     pugi::xml\_node com\_it = comunication.append\_child(\textcolor{stringliteral}{"rec"});}
+\DoxyCodeLine{00386                     com\_it.append\_attribute(\textcolor{stringliteral}{"idRec"}).set\_value(i);}
+\DoxyCodeLine{00387                     com\_it.append\_attribute(\textcolor{stringliteral}{"value"}).set\_value(matrixCOM[Id][i]);}
+\DoxyCodeLine{00388                 \}}
+\DoxyCodeLine{00389             \}}
+\DoxyCodeLine{00390         \}}
+\DoxyCodeLine{00391 }
+\DoxyCodeLine{00392     \}}
+\DoxyCodeLine{00393 }
+\DoxyCodeLine{00394     pugi::xml\_node instancesLL = myDoc.child(\textcolor{stringliteral}{"instancesLL"});}
+\DoxyCodeLine{00395 }
+\DoxyCodeLine{00396     \textcolor{keywordflow}{for} (xml\_node\_iterator seqLink\_it = instancesLL.begin(); seqLink\_it != instancesLL.end(); ++seqLink\_it)\{}
+\DoxyCodeLine{00397         \textcolor{keywordtype}{int} Id = atoi(seqLink\_it-\/>child\_value(\textcolor{stringliteral}{"id"}));}
+\DoxyCodeLine{00398 }
+\DoxyCodeLine{00399         \textcolor{keywordflow}{if} (seqLink\_it-\/>child(\textcolor{stringliteral}{"concurrency"}))\{}
+\DoxyCodeLine{00400             pugi::xml\_node concurrencyL = seqLink\_it-\/>child(\textcolor{stringliteral}{"concurrency"});}
+\DoxyCodeLine{00401             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i<\mbox{\hyperlink{group__firfirgcd__define__group_ga967ca22c6c7be038e1092147ce04f258}{NCH}}; i++)\{}
+\DoxyCodeLine{00402                 \textcolor{keywordflow}{if} (i != Id)\{}
+\DoxyCodeLine{00403                     pugi::xml\_node concL\_it = concurrencyL.append\_child(\textcolor{stringliteral}{"channelId"});}
+\DoxyCodeLine{00404                     concL\_it.append\_attribute(\textcolor{stringliteral}{"id"}).set\_value(i);}
+\DoxyCodeLine{00405                     concL\_it.append\_attribute(\textcolor{stringliteral}{"value"}).set\_value(matrixCONC\_CH\_N[Id][i]);}
+\DoxyCodeLine{00406                 \}}
+\DoxyCodeLine{00407             \}}
+\DoxyCodeLine{00408         \}}
+\DoxyCodeLine{00409         \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00410             pugi::xml\_node concurrencyL = seqLink\_it-\/>append\_child(\textcolor{stringliteral}{"concurrency"});}
+\DoxyCodeLine{00411             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i<\mbox{\hyperlink{group__firfirgcd__define__group_ga967ca22c6c7be038e1092147ce04f258}{NCH}}; i++)\{}
+\DoxyCodeLine{00412                 \textcolor{keywordflow}{if} (i != Id)\{}
+\DoxyCodeLine{00413                     pugi::xml\_node concL\_it = concurrencyL.append\_child(\textcolor{stringliteral}{"channelId"});}
+\DoxyCodeLine{00414                     concL\_it.append\_attribute(\textcolor{stringliteral}{"id"}).set\_value(i);}
+\DoxyCodeLine{00415                     concL\_it.append\_attribute(\textcolor{stringliteral}{"value"}).set\_value(matrixCONC\_CH\_N[Id][i]);}
+\DoxyCodeLine{00416                 \}}
+\DoxyCodeLine{00417             \}}
+\DoxyCodeLine{00418         \}}
+\DoxyCodeLine{00419     \}}
+\DoxyCodeLine{00420 }
+\DoxyCodeLine{00421     cout << \textcolor{stringliteral}{"Saving result: "} << myDoc.save\_file(\textcolor{stringliteral}{"./XML/application.xml"}) << endl;}
+\DoxyCodeLine{00422     myDoc.reset();}
+\DoxyCodeLine{00423     cout << endl;}
+\DoxyCodeLine{00424 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{define_8h_source_l00079}{N\+CH}}, and \mbox{\hyperlink{define_8h_source_l00077}{N\+PS}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_source_l00177}{sc\+\_\+main()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{class_system_manager_a5f16a17547d2cd543180e06e555304e7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_system_manager_a99f32d48ffab81f6c16d86dedbede1e7}\label{class_system_manager_a99f32d48ffab81f6c16d86dedbede1e7}} 
+\index{SystemManager@{SystemManager}!updateXmlEnergy@{updateXmlEnergy}}
+\index{updateXmlEnergy@{updateXmlEnergy}!SystemManager@{SystemManager}}
+\doxysubsubsection{\texorpdfstring{updateXmlEnergy()}{updateXmlEnergy()}}
+{\footnotesize\ttfamily void System\+Manager\+::update\+Xml\+Energy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_system_manager_8cpp_source_l01159}{1159}} of file \mbox{\hyperlink{_system_manager_8cpp_source}{System\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{01160     \{}
+\DoxyCodeLine{01161 }
+\DoxyCodeLine{01162         pugi::xml\_document myDoc;}
+\DoxyCodeLine{01163         pugi::xml\_parse\_result myResult = myDoc.load\_file(\textcolor{stringliteral}{"./XML/application.xml"});}
+\DoxyCodeLine{01164         cout << \textcolor{stringliteral}{"XML result: "} << myResult.description() << endl;}
+\DoxyCodeLine{01165 }
+\DoxyCodeLine{01166         \textcolor{comment}{//method 2: use object/node structure}}
+\DoxyCodeLine{01167         pugi::xml\_node instancesPS = myDoc.child(\textcolor{stringliteral}{"instancesPS"});}
+\DoxyCodeLine{01168 }
+\DoxyCodeLine{01170 }
+\DoxyCodeLine{01171         pugi::xml\_node instancesPS2 = myDoc.child(\textcolor{stringliteral}{"instancesPS"});}
+\DoxyCodeLine{01172         \textcolor{keywordtype}{float} sumEnergyTot=0;}
+\DoxyCodeLine{01173         \textcolor{keywordflow}{for} (xml\_node\_iterator seqProcess\_it2=instancesPS2.begin(); seqProcess\_it2!=instancesPS2.end(); ++seqProcess\_it2)\{}
+\DoxyCodeLine{01174             \textcolor{keywordtype}{int} Id = atoi(seqProcess\_it2-\/>child\_value(\textcolor{stringliteral}{"id"}));}
+\DoxyCodeLine{01175             \textcolor{keywordflow}{if}(seqProcess\_it2-\/>child(\textcolor{stringliteral}{"energy"}))\{}
+\DoxyCodeLine{01176                 pugi::xml\_node energy = seqProcess\_it2-\/>child(\textcolor{stringliteral}{"energy"});}
+\DoxyCodeLine{01177                 pugi::xml\_node energy\_it = energy.append\_child(\textcolor{stringliteral}{"processorId"});}
+\DoxyCodeLine{01178                 energy\_it.append\_attribute(\textcolor{stringliteral}{"id"}).set\_value(\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[Id]);}
+\DoxyCodeLine{01179                 energy\_it.append\_attribute(\textcolor{stringliteral}{"value"}).set\_value(\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[Id].getEnergy());}
+\DoxyCodeLine{01180             \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{01181                 pugi::xml\_node energy = seqProcess\_it2-\/>append\_child(\textcolor{stringliteral}{"energy"});}
+\DoxyCodeLine{01182                 pugi::xml\_node energy\_it = energy.append\_child(\textcolor{stringliteral}{"processorId"});}
+\DoxyCodeLine{01183                 energy\_it.append\_attribute(\textcolor{stringliteral}{"id"}).set\_value(\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[Id]);}
+\DoxyCodeLine{01184                 energy\_it.append\_attribute(\textcolor{stringliteral}{"value"}).set\_value(\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[Id].getEnergy());}
+\DoxyCodeLine{01185             \}}
+\DoxyCodeLine{01186 }
+\DoxyCodeLine{01187             sumEnergyTot+=\mbox{\hyperlink{class_system_manager_adcd8ce799616b977c206401ebdefab86}{VPS}}[Id].getEnergy();}
+\DoxyCodeLine{01188         \}}
+\DoxyCodeLine{01189 }
+\DoxyCodeLine{01190         cout << \textcolor{stringliteral}{"Saving result: "} << myDoc.save\_file(\textcolor{stringliteral}{"./XML/application.xml"}) << endl;}
+\DoxyCodeLine{01191         myDoc.reset();}
+\DoxyCodeLine{01192         cout<<endl;}
+\DoxyCodeLine{01193 }
+\DoxyCodeLine{01194         pugi::xml\_document myDoc2;}
+\DoxyCodeLine{01195         pugi::xml\_parse\_result myResult2 = myDoc2.load\_file(\textcolor{stringliteral}{"./XML/instancesTL.xml"});}
+\DoxyCodeLine{01196         cout << \textcolor{stringliteral}{"XML result: "} << myResult2.description() << endl;}
+\DoxyCodeLine{01197 }
+\DoxyCodeLine{01198         xml\_node instancesBB = myDoc2.child(\textcolor{stringliteral}{"instancesBB"});}
+\DoxyCodeLine{01199 }
+\DoxyCodeLine{01200         \textcolor{keywordflow}{for} (xml\_node\_iterator seqBB\_it=instancesBB.begin(); seqBB\_it!=instancesBB.end(); ++seqBB\_it)\{}
+\DoxyCodeLine{01201             \textcolor{keywordtype}{int} Id = atoi(seqBB\_it-\/>child\_value(\textcolor{stringliteral}{"id"}));}
+\DoxyCodeLine{01203             \textcolor{keywordflow}{if}(Id == \mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[2])\{}
+\DoxyCodeLine{01204                 \textcolor{keywordflow}{if}(seqBB\_it-\/>child(\textcolor{stringliteral}{"energyEstimation"}))\{}
+\DoxyCodeLine{01205                     pugi::xml\_node energyEstimation = seqBB\_it-\/>child(\textcolor{stringliteral}{"energyEstimation"});}
+\DoxyCodeLine{01206                     xml\_node entot\_node = energyEstimation.append\_child(\textcolor{stringliteral}{"energyTOT"});}
+\DoxyCodeLine{01207                     entot\_node.append\_attribute(\textcolor{stringliteral}{"id"}).set\_value(\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[2]);}
+\DoxyCodeLine{01208                     entot\_node.append\_attribute(\textcolor{stringliteral}{"value"}).set\_value(sumEnergyTot);}
+\DoxyCodeLine{01209                 \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{01210                     pugi::xml\_node energyEstimation = seqBB\_it-\/>append\_child(\textcolor{stringliteral}{"energyEstimation"});}
+\DoxyCodeLine{01211                     xml\_node entot\_node = energyEstimation.append\_child(\textcolor{stringliteral}{"energyTOT"});}
+\DoxyCodeLine{01212                     entot\_node.append\_attribute(\textcolor{stringliteral}{"id"}).set\_value(\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[2]);}
+\DoxyCodeLine{01213                     entot\_node.append\_attribute(\textcolor{stringliteral}{"value"}).set\_value(sumEnergyTot);}
+\DoxyCodeLine{01214                 \}}
+\DoxyCodeLine{01215             \}}
+\DoxyCodeLine{01216         \}}
+\DoxyCodeLine{01217         cout << \textcolor{stringliteral}{"Saving result: "} << myDoc2.save\_file(\textcolor{stringliteral}{"./XML/instancesTL.xml"}) << endl;}
+\DoxyCodeLine{01218         myDoc2.reset();}
+\DoxyCodeLine{01219         cout<<endl;}
+\DoxyCodeLine{01220 }
+\DoxyCodeLine{01221     \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_source_l00177}{sc\+\_\+main()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{class_system_manager_a99f32d48ffab81f6c16d86dedbede1e7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_system_manager_afb69c0fedadb6e806e6576ad07c51162}\label{class_system_manager_afb69c0fedadb6e806e6576ad07c51162}} 
+\index{SystemManager@{SystemManager}!updateXmlLoad@{updateXmlLoad}}
+\index{updateXmlLoad@{updateXmlLoad}!SystemManager@{SystemManager}}
+\doxysubsubsection{\texorpdfstring{updateXmlLoad()}{updateXmlLoad()}}
+{\footnotesize\ttfamily void System\+Manager\+::update\+Xml\+Load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_system_manager_8cpp_source_l01316}{1316}} of file \mbox{\hyperlink{_system_manager_8cpp_source}{System\+Manager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{01317     \{}
+\DoxyCodeLine{01318         pugi::xml\_document myDoc;}
+\DoxyCodeLine{01319         pugi::xml\_parse\_result myResult = myDoc.load\_file(\textcolor{stringliteral}{"./XML/application.xml"});}
+\DoxyCodeLine{01320         cout << \textcolor{stringliteral}{"XML result: "} << myResult.description() << endl;}
+\DoxyCodeLine{01321 }
+\DoxyCodeLine{01322         \textcolor{comment}{//method 2: use object/node structure}}
+\DoxyCodeLine{01323         pugi::xml\_node instancesPS = myDoc.child(\textcolor{stringliteral}{"instancesPS"});}
+\DoxyCodeLine{01324 }
+\DoxyCodeLine{01325         \textcolor{keywordflow}{for} (xml\_node\_iterator seqProcess\_it=instancesPS.begin(); seqProcess\_it!=instancesPS.end(); ++seqProcess\_it)\{}
+\DoxyCodeLine{01326             \textcolor{keywordtype}{int} Id = atoi(seqProcess\_it-\/>child\_value(\textcolor{stringliteral}{"id"}));}
+\DoxyCodeLine{01327 }
+\DoxyCodeLine{01329 }
+\DoxyCodeLine{01330             \textcolor{keywordflow}{if}(seqProcess\_it-\/>child(\textcolor{stringliteral}{"load"}))\{}
+\DoxyCodeLine{01331                 pugi::xml\_node load = seqProcess\_it-\/>child(\textcolor{stringliteral}{"load"});}
+\DoxyCodeLine{01332                 pugi::xml\_node load\_it = load.append\_child(\textcolor{stringliteral}{"processorId"});}
+\DoxyCodeLine{01333                 load\_it.append\_attribute(\textcolor{stringliteral}{"id"}).set\_value(\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[Id]);}
+\DoxyCodeLine{01334                 load\_it.append\_attribute(\textcolor{stringliteral}{"value"}).set\_value(\mbox{\hyperlink{class_system_manager_a7f06326402d0738cb87a1c03bf57f5c7}{FRL}}[Id]);}
+\DoxyCodeLine{01335             \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{01336                 pugi::xml\_node load = seqProcess\_it-\/>append\_child(\textcolor{stringliteral}{"load"});}
+\DoxyCodeLine{01337                 pugi::xml\_node load\_it = load.append\_child(\textcolor{stringliteral}{"processorId"});}
+\DoxyCodeLine{01338                 load\_it.append\_attribute(\textcolor{stringliteral}{"id"}).set\_value(\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[Id]);}
+\DoxyCodeLine{01339                 load\_it.append\_attribute(\textcolor{stringliteral}{"value"}).set\_value(\mbox{\hyperlink{class_system_manager_a7f06326402d0738cb87a1c03bf57f5c7}{FRL}}[Id]);}
+\DoxyCodeLine{01340             \}}
+\DoxyCodeLine{01341         \}}
+\DoxyCodeLine{01342 }
+\DoxyCodeLine{01344 }
+\DoxyCodeLine{01346     \textcolor{comment}{//pugi::xml\_node instancesPS2 = myDoc.child("instancesPS");}}
+\DoxyCodeLine{01347 }
+\DoxyCodeLine{01348     \textcolor{comment}{//for (pugi::xml\_node\_iterator seqProcess\_it=instancesPS2.begin(); seqProcess\_it!=instancesPS2.end(); ++seqProcess\_it)\{}}
+\DoxyCodeLine{01349     \textcolor{comment}{//  int Id = atoi(seqProcess\_it-\/>child\_value("id"));}}
+\DoxyCodeLine{01350     \textcolor{comment}{//}}
+\DoxyCodeLine{01351     \textcolor{comment}{//  if(seqProcess\_it-\/>child("WCET"))\{}}
+\DoxyCodeLine{01352     \textcolor{comment}{//      pugi::xml\_node comunication = seqProcess\_it-\/>child("WCET");}}
+\DoxyCodeLine{01353     \textcolor{comment}{//      for (int i=0; i<NPS; i++)\{}}
+\DoxyCodeLine{01354     \textcolor{comment}{//          if(i!=Id)\{}}
+\DoxyCodeLine{01355     \textcolor{comment}{//              pugi::xml\_node wcet\_it = comunication.append\_child("processorId");}}
+\DoxyCodeLine{01356     \textcolor{comment}{//              double wcet\_task = (VPS[Id].processTime.to\_seconds());}}
+\DoxyCodeLine{01357     \textcolor{comment}{//              wcet\_it.append\_attribute("id").set\_value(i);}}
+\DoxyCodeLine{01358     \textcolor{comment}{//              wcet\_it.append\_attribute("value").set\_value((wcet\_task/VPS[Id].profiling)*1000000.0);}}
+\DoxyCodeLine{01359     \textcolor{comment}{//          \}}}
+\DoxyCodeLine{01360     \textcolor{comment}{//      \}}}
+\DoxyCodeLine{01361     \textcolor{comment}{//  \}else\{}}
+\DoxyCodeLine{01362     \textcolor{comment}{//      pugi::xml\_node WCET = seqProcess\_it-\/>append\_child("WCET");}}
+\DoxyCodeLine{01363     \textcolor{comment}{//      for (int i=0; i<VPU.size(); i++)\{}}
+\DoxyCodeLine{01364     \textcolor{comment}{//          if(i!=Id)\{}}
+\DoxyCodeLine{01365     \textcolor{comment}{//              pugi::xml\_node wcet\_it = WCET.append\_child("processorId");}}
+\DoxyCodeLine{01366     \textcolor{comment}{//              double wcet\_task = (VPS[Id].processTime.to\_seconds());}}
+\DoxyCodeLine{01367     \textcolor{comment}{//              wcet\_it.append\_attribute("id").set\_value(i);}}
+\DoxyCodeLine{01368     \textcolor{comment}{//              wcet\_it.append\_attribute("value").set\_value((wcet\_task/VPS[Id].profiling)*1000000.0);}}
+\DoxyCodeLine{01369     \textcolor{comment}{//          \}}}
+\DoxyCodeLine{01370     \textcolor{comment}{//      \}}}
+\DoxyCodeLine{01371     \textcolor{comment}{//  \}}}
+\DoxyCodeLine{01372     \textcolor{comment}{//\}}}
+\DoxyCodeLine{01373 }
+\DoxyCodeLine{01375 }
+\DoxyCodeLine{01376     \textcolor{comment}{//pugi::xml\_node instancesPS3 = myDoc.child("instancesPS");}}
+\DoxyCodeLine{01377 }
+\DoxyCodeLine{01378     \textcolor{comment}{//for (xml\_node\_iterator seqLink\_it=instancesPS3.begin(); seqLink\_it!=instancesPS3.end(); ++seqLink\_it)\{}}
+\DoxyCodeLine{01379     \textcolor{comment}{//  int Id = atoi(seqLink\_it-\/>child\_value("id"));}}
+\DoxyCodeLine{01380     \textcolor{comment}{//}}
+\DoxyCodeLine{01381     \textcolor{comment}{//  if(seqLink\_it-\/>child("Period"))\{}}
+\DoxyCodeLine{01382     \textcolor{comment}{//      pugi::xml\_node Period = seqLink\_it-\/>child("Period");}}
+\DoxyCodeLine{01383     \textcolor{comment}{//      for (int i=0; i<NPS; i++)\{}}
+\DoxyCodeLine{01384     \textcolor{comment}{//          if(i!=Id)\{}}
+\DoxyCodeLine{01385     \textcolor{comment}{//              pugi::xml\_node period\_it = Period.append\_child("processorId");}}
+\DoxyCodeLine{01386     \textcolor{comment}{//              period\_it.append\_attribute("id").set\_value(i);}}
+\DoxyCodeLine{01387     \textcolor{comment}{//              double period\_value = (FRT.to\_seconds());}}
+\DoxyCodeLine{01388     \textcolor{comment}{//              period\_it.append\_attribute("value").set\_value((period\_value/VPS[Id].profiling)*1000000.0);}}
+\DoxyCodeLine{01389     \textcolor{comment}{//          \}}}
+\DoxyCodeLine{01390     \textcolor{comment}{//      \}}}
+\DoxyCodeLine{01391     \textcolor{comment}{//  \}else\{}}
+\DoxyCodeLine{01392     \textcolor{comment}{//      pugi::xml\_node Period = seqLink\_it-\/>append\_child("Period");}}
+\DoxyCodeLine{01393     \textcolor{comment}{//      for (int i=0; i<NPS; i++)\{}}
+\DoxyCodeLine{01394     \textcolor{comment}{//          if(i!=Id)\{}}
+\DoxyCodeLine{01395     \textcolor{comment}{//              pugi::xml\_node period\_it = Period.append\_child("processorId");}}
+\DoxyCodeLine{01396     \textcolor{comment}{//              period\_it.append\_attribute("id").set\_value(i);}}
+\DoxyCodeLine{01397     \textcolor{comment}{//              double period\_value = (FRT.to\_seconds());}}
+\DoxyCodeLine{01398     \textcolor{comment}{//              period\_it.append\_attribute("value").set\_value((period\_value/VPS[Id].profiling)*1000000.0);}}
+\DoxyCodeLine{01399     \textcolor{comment}{//          \}}}
+\DoxyCodeLine{01400     \textcolor{comment}{//      \}}}
+\DoxyCodeLine{01401     \textcolor{comment}{//  \}}}
+\DoxyCodeLine{01402     \textcolor{comment}{//\}}}
+\DoxyCodeLine{01403 }
+\DoxyCodeLine{01405 }
+\DoxyCodeLine{01406     \textcolor{comment}{//  pugi::xml\_node instancesPS4 = myDoc.child("instancesPS");}}
+\DoxyCodeLine{01407 }
+\DoxyCodeLine{01408     \textcolor{comment}{//for (xml\_node\_iterator seqLink\_it=instancesPS4.begin(); seqLink\_it!=instancesPS4.end(); ++seqLink\_it)\{}}
+\DoxyCodeLine{01409     \textcolor{comment}{//  int Id = atoi(seqLink\_it-\/>child\_value("id"));}}
+\DoxyCodeLine{01410 }
+\DoxyCodeLine{01411     \textcolor{comment}{//  if(seqLink\_it-\/>child("Deadline"))\{}}
+\DoxyCodeLine{01412     \textcolor{comment}{//      pugi::xml\_node Deadline = seqLink\_it-\/>child("Deadline");}}
+\DoxyCodeLine{01413     \textcolor{comment}{//      for (int i=0; i<NPS; i++)\{}}
+\DoxyCodeLine{01414     \textcolor{comment}{//          if(i!=Id)\{}}
+\DoxyCodeLine{01415     \textcolor{comment}{//              pugi::xml\_node dead\_it = Deadline.append\_child("processorId");}}
+\DoxyCodeLine{01416     \textcolor{comment}{//              dead\_it.append\_attribute("id").set\_value(i);}}
+\DoxyCodeLine{01417     \textcolor{comment}{//              double deadline\_value = (FRT.to\_seconds());}}
+\DoxyCodeLine{01418     \textcolor{comment}{//              double dead\_tot = (deadline\_value/VPS[Id].profiling)*1000000.0;}}
+\DoxyCodeLine{01419     \textcolor{comment}{//              cout<<"VPS["<<Id<<"].profiling -\/-\/>  "<<VPS[Id].profiling<<endl;}}
+\DoxyCodeLine{01420     \textcolor{comment}{//              dead\_it.append\_attribute("value").set\_value(dead\_tot);}}
+\DoxyCodeLine{01421     \textcolor{comment}{//          \}}}
+\DoxyCodeLine{01422     \textcolor{comment}{//      \}}}
+\DoxyCodeLine{01423     \textcolor{comment}{//  \}else\{}}
+\DoxyCodeLine{01424     \textcolor{comment}{//      pugi::xml\_node Deadline = seqLink\_it-\/>append\_child("Deadline");}}
+\DoxyCodeLine{01425     \textcolor{comment}{//      for (int i=0; i<NPS; i++)\{}}
+\DoxyCodeLine{01426     \textcolor{comment}{//          if(i!=Id)\{}}
+\DoxyCodeLine{01427     \textcolor{comment}{//              pugi::xml\_node dead\_it = Deadline.append\_child("processorId");}}
+\DoxyCodeLine{01428     \textcolor{comment}{//              dead\_it.append\_attribute("id").set\_value(i);}}
+\DoxyCodeLine{01429     \textcolor{comment}{//              double deadline\_value = (FRT.to\_seconds());}}
+\DoxyCodeLine{01430     \textcolor{comment}{//              double dead\_tot = (deadline\_value/VPS[Id].profiling)*1000000.0;}}
+\DoxyCodeLine{01431     \textcolor{comment}{//              dead\_it.append\_attribute("value").set\_value(dead\_tot);}}
+\DoxyCodeLine{01432     \textcolor{comment}{//          \}}}
+\DoxyCodeLine{01433     \textcolor{comment}{//      \}}}
+\DoxyCodeLine{01434     \textcolor{comment}{//  \}}}
+\DoxyCodeLine{01435     \textcolor{comment}{//\}}}
+\DoxyCodeLine{01436 }
+\DoxyCodeLine{01437     cout << \textcolor{stringliteral}{"Saving result: "} << myDoc.save\_file(\textcolor{stringliteral}{"./XML/application.xml"}) << endl;}
+\DoxyCodeLine{01438     myDoc.reset();}
+\DoxyCodeLine{01439     cout<<endl;}
+\DoxyCodeLine{01440 }
+\DoxyCodeLine{01441     \textcolor{comment}{/* pugi::xml\_document myDoc2;}}
+\DoxyCodeLine{01442 \textcolor{comment}{    pugi::xml\_parse\_result myResult2 = myDoc2.load\_file("./XML/instancesTL.xml");}}
+\DoxyCodeLine{01443 \textcolor{comment}{    cout << "XML result: " << myResult2.description() << endl;}}
+\DoxyCodeLine{01444 \textcolor{comment}{}}
+\DoxyCodeLine{01445 \textcolor{comment}{    xml\_node instancesBB = myDoc2.child("instancesBB");}}
+\DoxyCodeLine{01446 \textcolor{comment}{}}
+\DoxyCodeLine{01447 \textcolor{comment}{    for (xml\_node\_iterator seqBB\_it=instancesBB.begin(); seqBB\_it!=instancesBB.end(); ++seqBB\_it)\{}}
+\DoxyCodeLine{01448 \textcolor{comment}{        int Id = atoi(seqBB\_it-\/>child\_value("id"));}}
+\DoxyCodeLine{01449 \textcolor{comment}{}}
+\DoxyCodeLine{01451 \textcolor{comment}{}}
+\DoxyCodeLine{01452 \textcolor{comment}{        if(seqBB\_it-\/>child("loadEstimation"))\{}}
+\DoxyCodeLine{01453 \textcolor{comment}{            pugi::xml\_node loadEstimation = seqBB\_it-\/>child("loadEstimation");}}
+\DoxyCodeLine{01454 \textcolor{comment}{            xml\_node frl\_node = loadEstimation.child("FreeRunningTime");}}
+\DoxyCodeLine{01455 \textcolor{comment}{            if(!(allocationPS\_BB[Id] != Id))}}
+\DoxyCodeLine{01456 \textcolor{comment}{            \{}}
+\DoxyCodeLine{01457 \textcolor{comment}{                sc\_time local\_frt = FRT;}}
+\DoxyCodeLine{01458 \textcolor{comment}{                //frl\_node.attribute("value")=(local\_frt.to\_double()*1000); //another solution for the number conversion}}
+\DoxyCodeLine{01459 \textcolor{comment}{                frl\_node.attribute("value")=(local\_frt.to\_seconds()*1000);}}
+\DoxyCodeLine{01460 \textcolor{comment}{            \}}}
+\DoxyCodeLine{01461 \textcolor{comment}{        \}else\{}}
+\DoxyCodeLine{01462 \textcolor{comment}{                pugi::xml\_node loadEstimation = seqBB\_it-\/>append\_child("loadEstimation");}}
+\DoxyCodeLine{01463 \textcolor{comment}{                xml\_node frl\_node = loadEstimation.append\_child("FreeRunningTime");}}
+\DoxyCodeLine{01464 \textcolor{comment}{                if(allocationPS\_BB[Id] == Id)}}
+\DoxyCodeLine{01465 \textcolor{comment}{                \{}}
+\DoxyCodeLine{01466 \textcolor{comment}{                    sc\_time local\_frt = FRT;}}
+\DoxyCodeLine{01467 \textcolor{comment}{                    //frl\_node.attribute("value")=(local\_frt.to\_double()*1000);  //another solution for the number conversion}}
+\DoxyCodeLine{01468 \textcolor{comment}{                    frl\_node.attribute("value")=(local\_frt.to\_seconds()*1000);}}
+\DoxyCodeLine{01469 \textcolor{comment}{                \}}}
+\DoxyCodeLine{01470 \textcolor{comment}{}}
+\DoxyCodeLine{01471 \textcolor{comment}{            \}}}
+\DoxyCodeLine{01472 \textcolor{comment}{    \}}}
+\DoxyCodeLine{01473 \textcolor{comment}{}}
+\DoxyCodeLine{01474 \textcolor{comment}{    cout << "Saving result: " << myDoc2.save\_file("./XML/instancesTL.xml") << endl;}}
+\DoxyCodeLine{01475 \textcolor{comment}{    myDoc2.reset();}}
+\DoxyCodeLine{01476 \textcolor{comment}{    cout<<endl; */}}
+\DoxyCodeLine{01477 }
+\DoxyCodeLine{01479 }
+\DoxyCodeLine{01480     pugi::xml\_document myDoc2;}
+\DoxyCodeLine{01481     pugi::xml\_parse\_result myResult2 = myDoc2.load\_file(\textcolor{stringliteral}{"./XML/instancesTL.xml"});}
+\DoxyCodeLine{01482     cout << \textcolor{stringliteral}{"XML result: "} << myResult2.description() << endl;}
+\DoxyCodeLine{01483 }
+\DoxyCodeLine{01484     xml\_node instancesBB = myDoc2.child(\textcolor{stringliteral}{"instancesBB"});}
+\DoxyCodeLine{01485 }
+\DoxyCodeLine{01486     \textcolor{keywordflow}{for} (xml\_node\_iterator seqBB\_it=instancesBB.begin(); seqBB\_it!=instancesBB.end(); ++seqBB\_it)\{}
+\DoxyCodeLine{01487         \textcolor{keywordtype}{int} Id = atoi(seqBB\_it-\/>child\_value(\textcolor{stringliteral}{"id"}));}
+\DoxyCodeLine{01489         \textcolor{keywordflow}{if}(Id == \mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[2])\{}
+\DoxyCodeLine{01490             \textcolor{keywordflow}{if}(seqBB\_it-\/>child(\textcolor{stringliteral}{"loadEstimation"}))\{}
+\DoxyCodeLine{01491                 pugi::xml\_node energyEstimation = seqBB\_it-\/>child(\textcolor{stringliteral}{"loadEstimation"});}
+\DoxyCodeLine{01492                 xml\_node entot\_node = energyEstimation.append\_child(\textcolor{stringliteral}{"FreeRunningTime"});}
+\DoxyCodeLine{01493                 entot\_node.append\_attribute(\textcolor{stringliteral}{"id"}).set\_value(\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[2]);}
+\DoxyCodeLine{01494                 sc\_time local\_frt = \mbox{\hyperlink{class_system_manager_a69ec2821a8a92a69fbb5cb0f789a64ca}{FRT}};}
+\DoxyCodeLine{01495                 entot\_node.append\_attribute(\textcolor{stringliteral}{"value"}).set\_value(local\_frt.to\_seconds()*1000);}
+\DoxyCodeLine{01496             \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{01497                 pugi::xml\_node energyEstimation = seqBB\_it-\/>append\_child(\textcolor{stringliteral}{"energyEstimation"});}
+\DoxyCodeLine{01498                 xml\_node entot\_node = energyEstimation.append\_child(\textcolor{stringliteral}{"energyTOT"});}
+\DoxyCodeLine{01499                 entot\_node.append\_attribute(\textcolor{stringliteral}{"id"}).set\_value(\mbox{\hyperlink{class_system_manager_abfd1d205fa299fa757e2b78d15724734}{allocationPS\_BB}}[2]);}
+\DoxyCodeLine{01500                 sc\_time local\_frt = \mbox{\hyperlink{class_system_manager_a69ec2821a8a92a69fbb5cb0f789a64ca}{FRT}};}
+\DoxyCodeLine{01501                 entot\_node.append\_attribute(\textcolor{stringliteral}{"value"}).set\_value(local\_frt.to\_seconds()*1000);}
+\DoxyCodeLine{01502             \}}
+\DoxyCodeLine{01503         \}}
+\DoxyCodeLine{01504     \}}
+\DoxyCodeLine{01505     cout << \textcolor{stringliteral}{"Saving result: "} << myDoc2.save\_file(\textcolor{stringliteral}{"./XML/instancesTL.xml"}) << endl;}
+\DoxyCodeLine{01506     myDoc2.reset();}
+\DoxyCodeLine{01507     cout<<endl;}
+\DoxyCodeLine{01508 }
+\DoxyCodeLine{01509 \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_source_l00177}{sc\+\_\+main()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_system_manager_afb69c0fedadb6e806e6576ad07c51162_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{class_system_manager_ab75b55327c942c6950f67c14ba9dea08}\label{class_system_manager_ab75b55327c942c6950f67c14ba9dea08}} 
+\index{SystemManager@{SystemManager}!allocationCH\_PL@{allocationCH\_PL}}
+\index{allocationCH\_PL@{allocationCH\_PL}!SystemManager@{SystemManager}}
+\doxysubsubsection{\texorpdfstring{allocationCH\_PL}{allocationCH\_PL}}
+{\footnotesize\ttfamily vector$<$int$>$ System\+Manager\+::allocation\+C\+H\+\_\+\+PL}
+
+
+
+Definition at line \mbox{\hyperlink{_system_manager_8h_source_l00110}{110}} of file \mbox{\hyperlink{_system_manager_8h_source}{System\+Manager.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{sc__csp__channel_8h_source_l00442}{sc\+\_\+csp\+\_\+channel$<$ T $>$\+::init()}}, \mbox{\hyperlink{sc__csp__channel_8h_source_l00110}{sc\+\_\+csp\+\_\+channel$<$ T $>$\+::sc\+\_\+csp\+\_\+channel()}}, and \mbox{\hyperlink{main_8cpp_source_l00177}{sc\+\_\+main()}}.
+
+\mbox{\Hypertarget{class_system_manager_abfd1d205fa299fa757e2b78d15724734}\label{class_system_manager_abfd1d205fa299fa757e2b78d15724734}} 
+\index{SystemManager@{SystemManager}!allocationPS\_BB@{allocationPS\_BB}}
+\index{allocationPS\_BB@{allocationPS\_BB}!SystemManager@{SystemManager}}
+\doxysubsubsection{\texorpdfstring{allocationPS\_BB}{allocationPS\_BB}}
+{\footnotesize\ttfamily vector$<$int$>$ System\+Manager\+::allocation\+P\+S\+\_\+\+BB}
+
+
+
+Definition at line \mbox{\hyperlink{_system_manager_8h_source_l00107}{107}} of file \mbox{\hyperlink{_system_manager_8h_source}{System\+Manager.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{sc__csp__channel_8h_source_l00442}{sc\+\_\+csp\+\_\+channel$<$ T $>$\+::init()}}, \mbox{\hyperlink{sc__csp__channel_8h_source_l00232}{sc\+\_\+csp\+\_\+channel$<$ T $>$\+::read()}}, \mbox{\hyperlink{main_8cpp_source_l00177}{sc\+\_\+main()}}, \mbox{\hyperlink{_scheduling_manager_8h_source_l00085}{S\+C\+\_\+\+M\+O\+D\+U\+L\+E()}}, and \mbox{\hyperlink{sc__csp__channel_8h_source_l00322}{sc\+\_\+csp\+\_\+channel$<$ T $>$\+::write()}}.
+
+\mbox{\Hypertarget{class_system_manager_a7f06326402d0738cb87a1c03bf57f5c7}\label{class_system_manager_a7f06326402d0738cb87a1c03bf57f5c7}} 
+\index{SystemManager@{SystemManager}!FRL@{FRL}}
+\index{FRL@{FRL}!SystemManager@{SystemManager}}
+\doxysubsubsection{\texorpdfstring{FRL}{FRL}}
+{\footnotesize\ttfamily float System\+Manager\+::\+F\+RL\mbox{[}10\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{_system_manager_8h_source_l00172}{172}} of file \mbox{\hyperlink{_system_manager_8h_source}{System\+Manager.\+h}}.
+
+\mbox{\Hypertarget{class_system_manager_a69ec2821a8a92a69fbb5cb0f789a64ca}\label{class_system_manager_a69ec2821a8a92a69fbb5cb0f789a64ca}} 
+\index{SystemManager@{SystemManager}!FRT@{FRT}}
+\index{FRT@{FRT}!SystemManager@{SystemManager}}
+\doxysubsubsection{\texorpdfstring{FRT}{FRT}}
+{\footnotesize\ttfamily sc\+\_\+time System\+Manager\+::\+F\+RT}
+
+
+
+Definition at line \mbox{\hyperlink{_system_manager_8h_source_l00175}{175}} of file \mbox{\hyperlink{_system_manager_8h_source}{System\+Manager.\+h}}.
+
+\mbox{\Hypertarget{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}\label{class_system_manager_a7c1edef68a5e44e1812c3401dd0b4e32}} 
+\index{SystemManager@{SystemManager}!VBB@{VBB}}
+\index{VBB@{VBB}!SystemManager@{SystemManager}}
+\doxysubsubsection{\texorpdfstring{VBB}{VBB}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{class_basic_block}{Basic\+Block}}$>$ System\+Manager\+::\+V\+BB}
+
+
+
+Definition at line \mbox{\hyperlink{_system_manager_8h_source_l00100}{100}} of file \mbox{\hyperlink{_system_manager_8h_source}{System\+Manager.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{sc__csp__channel_8h_source_l00442}{sc\+\_\+csp\+\_\+channel$<$ T $>$\+::init()}}, \mbox{\hyperlink{main_8cpp_source_l00177}{sc\+\_\+main()}}, and \mbox{\hyperlink{_scheduling_manager_8h_source_l00085}{S\+C\+\_\+\+M\+O\+D\+U\+L\+E()}}.
+
+\mbox{\Hypertarget{class_system_manager_a7dcc3ae8736a6aad7e27f276706205a3}\label{class_system_manager_a7dcc3ae8736a6aad7e27f276706205a3}} 
+\index{SystemManager@{SystemManager}!VCH@{VCH}}
+\index{VCH@{VCH}!SystemManager@{SystemManager}}
+\doxysubsubsection{\texorpdfstring{VCH}{VCH}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{class_channel}{Channel}}$>$ System\+Manager\+::\+V\+CH}
+
+
+
+Definition at line \mbox{\hyperlink{_system_manager_8h_source_l00097}{97}} of file \mbox{\hyperlink{_system_manager_8h_source}{System\+Manager.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{sc__csp__channel_8h_source_l00110}{sc\+\_\+csp\+\_\+channel$<$ T $>$\+::sc\+\_\+csp\+\_\+channel()}}, \mbox{\hyperlink{main_8cpp_source_l00177}{sc\+\_\+main()}}, and \mbox{\hyperlink{sc__csp__channel_8h_source_l00322}{sc\+\_\+csp\+\_\+channel$<$ T $>$\+::write()}}.
+
+\mbox{\Hypertarget{class_system_manager_af28a1744a2d964a7047c31c6a5f1644a}\label{class_system_manager_af28a1744a2d964a7047c31c6a5f1644a}} 
+\index{SystemManager@{SystemManager}!VPL@{VPL}}
+\index{VPL@{VPL}!SystemManager@{SystemManager}}
+\doxysubsubsection{\texorpdfstring{VPL}{VPL}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{class_physical_link}{Physical\+Link}}$>$ System\+Manager\+::\+V\+PL}
+
+
+
+Definition at line \mbox{\hyperlink{_system_manager_8h_source_l00103}{103}} of file \mbox{\hyperlink{_system_manager_8h_source}{System\+Manager.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{sc__csp__channel_8h_source_l00442}{sc\+\_\+csp\+\_\+channel$<$ T $>$\+::init()}}, \mbox{\hyperlink{sc__csp__channel_8h_source_l00110}{sc\+\_\+csp\+\_\+channel$<$ T $>$\+::sc\+\_\+csp\+\_\+channel()}}, and \mbox{\hyperlink{main_8cpp_source_l00177}{sc\+\_\+main()}}.
+
+\mbox{\Hypertarget{class_system_manager_adcd8ce799616b977c206401ebdefab86}\label{class_system_manager_adcd8ce799616b977c206401ebdefab86}} 
+\index{SystemManager@{SystemManager}!VPS@{VPS}}
+\index{VPS@{VPS}!SystemManager@{SystemManager}}
+\doxysubsubsection{\texorpdfstring{VPS}{VPS}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{class_process}{Process}}$>$ System\+Manager\+::\+V\+PS}
+
+
+
+Definition at line \mbox{\hyperlink{_system_manager_8h_source_l00094}{94}} of file \mbox{\hyperlink{_system_manager_8h_source}{System\+Manager.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_source_l00177}{sc\+\_\+main()}}, and \mbox{\hyperlink{_scheduling_manager_8h_source_l00085}{S\+C\+\_\+\+M\+O\+D\+U\+L\+E()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Hepsycode\+Design/src/\mbox{\hyperlink{_system_manager_8h}{System\+Manager.\+h}}\item 
+Hepsycode\+Design/src/\mbox{\hyperlink{_system_manager_8cpp}{System\+Manager.\+cpp}}\end{DoxyCompactItemize}

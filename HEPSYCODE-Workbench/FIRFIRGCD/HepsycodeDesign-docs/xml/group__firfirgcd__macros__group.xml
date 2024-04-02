@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="group__firfirgcd__macros__group" kind="group">
+    <compoundname>firfirgcd_macros_group</compoundname>
+    <title>FirFirGCD Macros.</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__firfirgcd__macros__group_1ga09b182b87a0936087ba1ff3ce91755e7" prot="public" static="no">
+        <name>HEPSY_S</name>
+        <param><defname>X</defname></param>
+        <initializer>		wait(<ref refid="group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48" kindref="member">pSchedulingManager</ref>-&gt;schedule[X]);					\
+		<ref refid="group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48" kindref="member">pSchedulingManager</ref>-&gt;release[X].notify(SC_ZERO_TIME);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/macros.h" line="84" column="10" bodyfile="HepsycodeDesign/src/macros.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__firfirgcd__macros__group_1ga652f3387e2319f751a6459f9db47cc3a" prot="public" static="no">
+        <name>HEPSY_P</name>
+        <param><defname>X</defname></param>
+        <initializer><ref refid="group__scheduling__manager__group_1gaa604ac51b2579794e702367934dfb8ad" kindref="member">pSystemManager</ref>-&gt;PS_Profiling(X);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/macros.h" line="91" column="9" bodyfile="HepsycodeDesign/src/macros.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__firfirgcd__macros__group_1gab8ed6dfd8e9d61861b9aff28d6b7300f" prot="public" static="no">
+        <name>HEPSY_SCHED_CS</name>
+        <param><defname>X</defname></param>
+        <param><defname>i</defname></param>
+        <initializer>		wait(<ref refid="group__scheduling__manager__group_1gaa604ac51b2579794e702367934dfb8ad" kindref="member">pSystemManager</ref>-&gt;VBB[X].getProcessors()[0].getOverheadCS()*i);   			 \
+		this-&gt;sched_oh[X] += <ref refid="group__scheduling__manager__group_1gaa604ac51b2579794e702367934dfb8ad" kindref="member">pSystemManager</ref>-&gt;VBB[X].getProcessors()[0].getOverheadCS()*i;      \
+		this-&gt;sched_en[X]+= ((<ref refid="group__scheduling__manager__group_1gaa604ac51b2579794e702367934dfb8ad" kindref="member">pSystemManager</ref>-&gt;VBB[X].getProcessors()[0].getOverheadCS().to_seconds() * <ref refid="group__scheduling__manager__group_1gaa604ac51b2579794e702367934dfb8ad" kindref="member">pSystemManager</ref>-&gt;VBB[X].getProcessors()[0].getPower())*1000000);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/macros.h" line="94" column="9" bodyfile="HepsycodeDesign/src/macros.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__firfirgcd__macros__group_1ga64988c094471851711bcbbb5e1298616" prot="public" static="no">
+        <name>PRE_WAIT</name>
+        <param><defname>X</defname></param>
+        <initializer>	<ref refid="group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48" kindref="member">pSchedulingManager</ref>-&gt;process_state[X]=<ref refid="group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a4c97ffbad296d4a6b84b1c508fc5d32a" kindref="member">waiting</ref>;	\
+	<ref refid="group__firfirgcd__macros__group_1gaf1fe2324408cd29c1e2dcd55f2e4a9c1" kindref="member">HEPSY_TRACE_PS_STATE</ref>(X)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/macros.h" line="101" column="9" bodyfile="HepsycodeDesign/src/macros.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__firfirgcd__macros__group_1ga521b4282fb564e25bc56196f1926ce30" prot="public" static="no">
+        <name>POST_WAIT</name>
+        <param><defname>X</defname></param>
+        <initializer>	if (<ref refid="group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48" kindref="member">pSchedulingManager</ref>-&gt;BB_mode[<ref refid="group__scheduling__manager__group_1gaa604ac51b2579794e702367934dfb8ad" kindref="member">pSystemManager</ref>-&gt;allocationPS_BB[X]]==<ref refid="group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a66e84e235b9e03b6fdfc7ffe7e775de8" kindref="member">suspended</ref>)					\
+	{																								\
+		if (<ref refid="group__scheduling__manager__group_1gaa604ac51b2579794e702367934dfb8ad" kindref="member">pSystemManager</ref>-&gt;checkSPP(X)==true)														\
+		{																							\
+			<ref refid="group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48" kindref="member">pSchedulingManager</ref>-&gt;BB_mode[<ref refid="group__scheduling__manager__group_1gaa604ac51b2579794e702367934dfb8ad" kindref="member">pSystemManager</ref>-&gt;allocationPS_BB[X]]=<ref refid="group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a5d178ae2be9d93ea4cbf1a9f0a2d9cbe" kindref="member">active</ref>;					\
+			<ref refid="group__firfirgcd__macros__group_1ga0f83efd33ffbe62c58c798abb824fa94" kindref="member">HEPSY_TRACE_BB_STATE</ref>(X)																				\
+		}																							\
+		else <ref refid="group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48" kindref="member">pSchedulingManager</ref>-&gt;activate[<ref refid="group__scheduling__manager__group_1gaa604ac51b2579794e702367934dfb8ad" kindref="member">pSystemManager</ref>-&gt;allocationPS_BB[X]].notify(SC_ZERO_TIME);	\
+	}																								\
+																									\
+if (<ref refid="group__scheduling__manager__group_1gaa604ac51b2579794e702367934dfb8ad" kindref="member">pSystemManager</ref>-&gt;checkSPP(X)==true) <ref refid="group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48" kindref="member">pSchedulingManager</ref>-&gt;process_state[X]=<ref refid="group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c" kindref="member">running</ref>;				\
+	else <ref refid="group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48" kindref="member">pSchedulingManager</ref>-&gt;process_state[X]=<ref refid="group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473" kindref="member">ready</ref>;												\
+	<ref refid="group__firfirgcd__macros__group_1gaf1fe2324408cd29c1e2dcd55f2e4a9c1" kindref="member">HEPSY_TRACE_PS_STATE</ref>(X)																						\
+																									\
+if (<ref refid="group__scheduling__manager__group_1gaa604ac51b2579794e702367934dfb8ad" kindref="member">pSystemManager</ref>-&gt;checkSPP(X)==false)																\
+	<ref refid="group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48" kindref="member">pSchedulingManager</ref>-&gt;process_status_changed[<ref refid="group__scheduling__manager__group_1gaa604ac51b2579794e702367934dfb8ad" kindref="member">pSystemManager</ref>-&gt;allocationPS_BB[X]]=true;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/macros.h" line="109" column="9" bodyfile="HepsycodeDesign/src/macros.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__firfirgcd__macros__group_1gaa2252b3bddc89494975397ffc18b09f5" prot="public" static="no">
+        <name>HEPSY_S_TIMER</name>
+        <param><defname>X</defname></param>
+        <param><defname>Y</defname></param>
+        <initializer>		<ref refid="group__scheduling__manager__group_1gaa604ac51b2579794e702367934dfb8ad" kindref="member">pSystemManager</ref>-&gt;increaseTimer(X,Y);														\
+		if(!<ref refid="group__scheduling__manager__group_1gaa604ac51b2579794e702367934dfb8ad" kindref="member">pSystemManager</ref>-&gt;checkSPP(X)) wait(<ref refid="group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48" kindref="member">pSchedulingManager</ref>-&gt;schedule[X]);					\
+		<ref refid="group__firfirgcd__macros__group_1ga64988c094471851711bcbbb5e1298616" kindref="member">PRE_WAIT</ref>(X)																				\
+		wait(Y);																				\
+		<ref refid="group__firfirgcd__macros__group_1ga521b4282fb564e25bc56196f1926ce30" kindref="member">POST_WAIT</ref>(X)																			\
+		if(!<ref refid="group__scheduling__manager__group_1gaa604ac51b2579794e702367934dfb8ad" kindref="member">pSystemManager</ref>-&gt;checkSPP(X)) <ref refid="group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48" kindref="member">pSchedulingManager</ref>-&gt;release[X].notify(SC_ZERO_TIME);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/macros.h" line="129" column="9" bodyfile="HepsycodeDesign/src/macros.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__firfirgcd__macros__group_1gaf1fe2324408cd29c1e2dcd55f2e4a9c1" prot="public" static="no">
+        <name>HEPSY_TRACE_PS_STATE</name>
+        <param><defname>X</defname></param>
+        <initializer><ref refid="group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48" kindref="member">pSchedulingManager</ref>-&gt;LOG &lt;&lt; &quot;Execution Time;&quot; &lt;&lt; sc_time_stamp().to_seconds() &lt;&lt; &quot;; Energy;&quot; &lt;&lt; pSystemManager-&gt;VPS[X].getEnergy() &lt;&lt; &quot;; Process;&quot; &lt;&lt; X &lt;&lt; &quot;; State;&quot; &lt;&lt; pSchedulingManager-&gt;process_state[X] &lt;&lt; endl;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/macros.h" line="140" column="9" bodyfile="HepsycodeDesign/src/macros.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__firfirgcd__macros__group_1gadc2d4bfbe106f792246792d01d66d63c" prot="public" static="no">
+        <name>HEPSY_TRACE_PS_STATE_THIS</name>
+        <param><defname>X</defname></param>
+        <initializer>this-&gt;LOG &lt;&lt; &quot;Execution Time;&quot; &lt;&lt; sc_time_stamp().to_seconds() &lt;&lt; &quot;; Energy;&quot; &lt;&lt; pSystemManager-&gt;VPS[X].getEnergy() &lt;&lt; &quot;; Process;&quot; &lt;&lt; X &lt;&lt; &quot;; State;&quot; &lt;&lt; this-&gt;process_state[X] &lt;&lt; endl;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/macros.h" line="144" column="9" bodyfile="HepsycodeDesign/src/macros.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__firfirgcd__macros__group_1ga139185aa9c10392aada97618a69ee2cd" prot="public" static="no">
+        <name>HEPSY_TRACE_CH_STATE</name>
+        <param><defname>X</defname></param>
+        <initializer><ref refid="group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48" kindref="member">pSchedulingManager</ref>-&gt;LOG &lt;&lt; &quot;Execution Time;&quot; &lt;&lt; sc_time_stamp().to_seconds() &lt;&lt; &quot;; Energy;&quot; &lt;&lt; pSystemManager-&gt;VCH[X].working_energy &lt;&lt; &quot;; Channel;&quot; &lt;&lt; X &lt;&lt; &quot;; State;&quot; &lt;&lt; pSchedulingManager-&gt;channel_state[X] &lt;&lt; endl;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/macros.h" line="148" column="9" bodyfile="HepsycodeDesign/src/macros.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__firfirgcd__macros__group_1ga24b6f3a385f702b3a63e0811a0f22e75" prot="public" static="no">
+        <name>HEPSY_TRACE_CH_STATE_THIS</name>
+        <param><defname>X</defname></param>
+        <initializer>this-&gt;LOG &lt;&lt; &quot;Execution Time;&quot; &lt;&lt; sc_time_stamp().to_seconds() &lt;&lt; &quot;; Energy;&quot; &lt;&lt; pSystemManager-&gt;VCH[X].working_energy &lt;&lt; &quot;; Channel;&quot; &lt;&lt; X &lt;&lt; &quot;; State;&quot; &lt;&lt; this-&gt;channel_state[X] &lt;&lt; endl;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/macros.h" line="152" column="9" bodyfile="HepsycodeDesign/src/macros.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__firfirgcd__macros__group_1ga0f83efd33ffbe62c58c798abb824fa94" prot="public" static="no">
+        <name>HEPSY_TRACE_BB_STATE</name>
+        <param><defname>X</defname></param>
+        <initializer><ref refid="group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48" kindref="member">pSchedulingManager</ref>-&gt;LOG &lt;&lt; &quot;Execution Time;&quot; &lt;&lt; sc_time_stamp().to_seconds() &lt;&lt; &quot;; Energy;&quot; &lt;&lt; 0 &lt;&lt; &quot;; BB;&quot; &lt;&lt; X &lt;&lt; &quot;; Mode;&quot; &lt;&lt; pSchedulingManager-&gt;BB_mode[X] &lt;&lt; endl;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/macros.h" line="156" column="9" bodyfile="HepsycodeDesign/src/macros.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__firfirgcd__macros__group_1ga0782cab9383550027672da286d54c931" prot="public" static="no">
+        <name>HEPSY_TRACE_BB_STATE_THIS</name>
+        <param><defname>X</defname></param>
+        <initializer>this-&gt;LOG &lt;&lt; &quot;Execution Time;&quot; &lt;&lt; sc_time_stamp().to_seconds() &lt;&lt; &quot;; Energy;&quot; &lt;&lt; 0 &lt;&lt; &quot;; BB;&quot; &lt;&lt; X &lt;&lt; &quot;; Mode;&quot; &lt;&lt; this-&gt;BB_mode[X] &lt;&lt; endl;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/macros.h" line="160" column="9" bodyfile="HepsycodeDesign/src/macros.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__firfirgcd__macros__group_1ga37921dae893594f3710d892f471de3cb" prot="public" static="no">
+        <name>HEPSY_TRACE_SCHED_STATE</name>
+        <param><defname>X</defname></param>
+        <initializer>this-&gt;LOG &lt;&lt; &quot;Execution Time;&quot; &lt;&lt; sc_time_stamp().to_seconds() &lt;&lt; &quot;; Energy;&quot; &lt;&lt; this-&gt;sched_en[X] &lt;&lt; &quot;; Scheduler;&quot; &lt;&lt; X &lt;&lt; &quot;; State;&quot; &lt;&lt; this-&gt;scheduler_state[X] &lt;&lt; endl;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/macros.h" line="164" column="9" bodyfile="HepsycodeDesign/src/macros.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Macros Implementation. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>V. Muttillo, L. Pomante </para>
+</simplesect>
+<simplesect kind="date"><para>Apr. 2022 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

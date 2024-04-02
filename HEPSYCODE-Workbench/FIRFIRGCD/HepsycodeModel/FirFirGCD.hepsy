@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hml:BehaviorSpecification xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hml="org.univaq.hepsy">
+  <nodes xsi:type="hml:Stimulus" name="Stimulus">
+    <ports name="stim1_channel_port">
+      <pChannels name="stim1_channel" pFrom="//@nodes.0/@ports.0" pTo="//@nodes.1/@ports.0" queueSize="123" timeout="12" rendezVous="true" direction="Bidirectional">
+        <message name="stim1_param">
+          <entry name="ex" type="sc_uint"/>
+        </message>
+      </pChannels>
+    </ports>
+    <ports name="stim2_channel_port">
+      <pChannels name="stim2_channel" pFrom="//@nodes.0/@ports.1" pTo="//@nodes.1/@ports.2" queueSize="12" timeout="1221" rendezVous="true">
+        <message name="stim2_param">
+          <entry name="ex" type="sc_uint"/>
+        </message>
+      </pChannels>
+    </ports>
+  </nodes>
+  <nodes xsi:type="hml:StructuredNode" name="System">
+    <nChannels name="fir8e_parameters_channel" nFrom="//@nodes.1/@processes.0" nTo="//@nodes.1/@processes.1" queueSize="12322" timeout="22222" rendezVous="true">
+      <message name="fir8e_parameters">
+        <entry name="acc" type="sc_uint"/>
+        <entry name="coef[16]" type="sc_uint"/>
+        <entry name="shift[16]" type="sc_uint"/>
+        <entry name="sample_tmp" type="sc_uint"/>
+      </message>
+    </nChannels>
+    <nChannels name="fir8e_results_channel" nFrom="//@nodes.1/@processes.1" nTo="//@nodes.1/@processes.0" queueSize="121312" timeout="12321" rendezVous="true">
+      <message name="fir8e_results">
+        <entry name="ex" type="sc_uint"/>
+      </message>
+    </nChannels>
+    <nChannels name="fir8s_results_channel" nFrom="//@nodes.1/@processes.2" nTo="//@nodes.1/@processes.0" queueSize="1230" timeout="12321" rendezVous="true">
+      <message name="fir8s_results">
+        <entry name="ex" type="sc_uint"/>
+      </message>
+    </nChannels>
+    <nChannels name="fir8s_parameters_channel" nFrom="//@nodes.1/@processes.0" nTo="//@nodes.1/@processes.2" queueSize="1232" timeout="12321" rendezVous="true">
+      <message name="fir8s_parameters">
+        <entry name="ex" type="sc_uint"/>
+      </message>
+    </nChannels>
+    <nChannels name="fir16e_parameters_channel" nFrom="//@nodes.1/@processes.3" nTo="//@nodes.1/@processes.5" queueSize="123" rendezVous="true">
+      <message name="fir16e_parameters">
+        <entry name="ex" type="sc_uint"/>
+      </message>
+    </nChannels>
+    <nChannels name="fir16s_parameters_channel" nFrom="//@nodes.1/@processes.3" nTo="//@nodes.1/@processes.4" queueSize="12312" timeout="122" rendezVous="true">
+      <message name="fir16s_parameters">
+        <entry name="ex" type="sc_uint"/>
+      </message>
+    </nChannels>
+    <nChannels name="fir16s_results_channel" nFrom="//@nodes.1/@processes.4" nTo="//@nodes.1/@processes.3" queueSize="123123" timeout="1232" rendezVous="true">
+      <message name="fir16s_results">
+        <entry name="ex" type="sc_uint"/>
+      </message>
+    </nChannels>
+    <nChannels name="result8_channel" nFrom="//@nodes.1/@processes.0" nTo="//@nodes.1/@processes.6" queueSize="1232" timeout="12321" rendezVous="true">
+      <message name="fir8_res">
+        <entry name="ex" type="sc_uint"/>
+      </message>
+    </nChannels>
+    <nChannels name="result16_channel" nFrom="//@nodes.1/@processes.3" nTo="//@nodes.1/@processes.6" queueSize="12312" timeout="222" rendezVous="true">
+      <message name="fir16_res">
+        <entry name="ex" type="sc_uint"/>
+      </message>
+    </nChannels>
+    <nChannels name="gcde_results_channel" nFrom="//@nodes.1/@processes.7" nTo="//@nodes.1/@processes.6" queueSize="12131" timeout="12312" rendezVous="true" direction="Bidirectional">
+      <message name="gcde_results">
+        <entry name="ex" type="sc_uint"/>
+      </message>
+    </nChannels>
+    <nChannels name="gcde_parameters_channel" nFrom="//@nodes.1/@processes.6" nTo="//@nodes.1/@processes.7" queueSize="12312" timeout="2" rendezVous="true">
+      <message name="gcde_parameters">
+        <entry name="ex" type="sc_uint"/>
+      </message>
+    </nChannels>
+    <nChannels name="fir16e_results_channel" nFrom="//@nodes.1/@processes.5" nTo="//@nodes.1/@processes.3">
+      <message name="fir16e_results">
+        <entry name="ex" type="sc_uint"/>
+      </message>
+    </nChannels>
+    <ports name="stim1_channel_port2" portExtension="//@nodes.1/@processes.0"/>
+    <ports name="result_channel_port"/>
+    <ports name="stim2_channel_port2" portExtension="//@nodes.1/@processes.3"/>
+    <processes name="fir8_main" priority="70" criticality="1"/>
+    <processes name="fir8_evaluation" priority="70" criticality="2"/>
+    <processes name="fir8_shifting" priority="70" criticality="123"/>
+    <processes name="fir16_main" priority="2" criticality="2"/>
+    <processes name="fir16_shifting" priority="70" criticality="12"/>
+    <processes name="fir16_evaluation" priority="70" criticality="123"/>
+    <processes name="gcd_main" processExtension="//@nodes.1/@ports.1" priority="12" criticality="123"/>
+    <processes name="gcd_evaluation"/>
+  </nodes>
+  <nodes xsi:type="hml:Display" name="Display">
+    <ports name="result_channel_port2">
+      <pChannels name="result_channel" pFrom="//@nodes.2/@ports.0" pTo="//@nodes.1/@ports.1" queueSize="123" timeout="21" rendezVous="true">
+        <message name="display_param">
+          <entry name="ex" type="sc_uint"/>
+        </message>
+      </pChannels>
+    </ports>
+  </nodes>
+</hml:BehaviorSpecification>

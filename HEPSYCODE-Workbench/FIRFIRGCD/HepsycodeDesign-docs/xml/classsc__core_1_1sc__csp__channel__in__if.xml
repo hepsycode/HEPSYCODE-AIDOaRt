@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classsc__core_1_1sc__csp__channel__in__if" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>sc_core::sc_csp_channel_in_if</compoundname>
+    <basecompoundref refid="classsc__interface" prot="public" virt="virtual">sc_interface</basecompoundref>
+    <derivedcompoundref refid="classsc__csp__channel" prot="public" virt="non-virtual">sc_csp_channel&lt; T &gt;</derivedcompoundref>
+    <includes refid="sc__csp__channel__ifs_8h" local="no">sc_csp_channel_ifs.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsc__core_1_1sc__csp__channel__in__if_1a2649054eea07eb61937ea38891162e85" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void sc_core::sc_csp_channel_in_if&lt; T &gt;::read</definition>
+        <argsstring>(T &amp;)=0</argsstring>
+        <name>read</name>
+        <reimplementedby refid="group__firfirgcd__csp__channel__group_1ga23046a4820dcf9ef26a75eba9cb7d49b">read</reimplementedby>
+        <param>
+          <type>T &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel_ifs.h" line="96" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classsc__core_1_1sc__csp__channel__in__if_1a5e8076fced231d716900901e5d60f080" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>T</type>
+        <definition>virtual T sc_core::sc_csp_channel_in_if&lt; T &gt;::read</definition>
+        <argsstring>()=0</argsstring>
+        <name>read</name>
+        <reimplementedby refid="group__firfirgcd__csp__channel__group_1gaf3eb60ce6aecbe88c0e72fdb19a1f7af">read</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel_ifs.h" line="97" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classsc__core_1_1sc__csp__channel__in__if_1ad7139da842ceebdc4c64d4cf2b02d371" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool sc_core::sc_csp_channel_in_if&lt; T &gt;::read_test</definition>
+        <argsstring>()=0</argsstring>
+        <name>read_test</name>
+        <reimplementedby refid="group__firfirgcd__csp__channel__group_1gab1a08e5d4129f9647e573af0c4ca4f30">read_test</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel_ifs.h" line="100" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classsc__core_1_1sc__csp__channel__in__if_1a163aae4bbe4ad9f8dcee26b330e929d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void sc_core::sc_csp_channel_in_if&lt; T &gt;::register_alt</definition>
+        <argsstring>()=0</argsstring>
+        <name>register_alt</name>
+        <reimplementedby refid="group__firfirgcd__csp__channel__group_1gaaed132e73280fe2a46b14604240832bc">register_alt</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel_ifs.h" line="101" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classsc__core_1_1sc__csp__channel__in__if_1acf52a1d31829961428e7205a835f8973" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>const sc_event &amp;</type>
+        <definition>virtual const sc_event&amp; sc_core::sc_csp_channel_in_if&lt; T &gt;::get_alt_event</definition>
+        <argsstring>()=0</argsstring>
+        <name>get_alt_event</name>
+        <reimplementedby refid="group__firfirgcd__csp__channel__group_1ga40cb801a3a15df214563c89160c6d19c">get_alt_event</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel_ifs.h" line="102" column="25"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classsc__core_1_1sc__csp__channel__in__if_1a63016ae797a557ea1abffb6a3688ad9e" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sc_core::sc_csp_channel_in_if&lt; T &gt;::sc_csp_channel_in_if</definition>
+        <argsstring>()</argsstring>
+        <name>sc_csp_channel_in_if</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel_ifs.h" line="107" column="1" bodyfile="HepsycodeDesign/src/sc_csp_channel_ifs.h" bodystart="107" bodyend="107"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>sc_interface</label>
+        <link refid="classsc__interface"/>
+      </node>
+      <node id="3">
+        <label>sc_csp_channel&lt; T &gt;</label>
+        <link refid="classsc__csp__channel"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>sc_core::sc_csp_channel_in_if&lt; T &gt;</label>
+        <link refid="classsc__core_1_1sc__csp__channel__in__if"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>sc_interface</label>
+        <link refid="classsc__interface"/>
+      </node>
+      <node id="1">
+        <label>sc_core::sc_csp_channel_in_if&lt; T &gt;</label>
+        <link refid="classsc__core_1_1sc__csp__channel__in__if"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HepsycodeDesign/src/sc_csp_channel_ifs.h" line="88" column="1" bodyfile="HepsycodeDesign/src/sc_csp_channel_ifs.h" bodystart="86" bodyend="105"/>
+    <listofallmembers>
+      <member refid="classsc__core_1_1sc__csp__channel__in__if_1acf52a1d31829961428e7205a835f8973" prot="public" virt="pure-virtual"><scope>sc_core::sc_csp_channel_in_if</scope><name>get_alt_event</name></member>
+      <member refid="classsc__core_1_1sc__csp__channel__in__if_1a2649054eea07eb61937ea38891162e85" prot="public" virt="pure-virtual"><scope>sc_core::sc_csp_channel_in_if</scope><name>read</name></member>
+      <member refid="classsc__core_1_1sc__csp__channel__in__if_1a5e8076fced231d716900901e5d60f080" prot="public" virt="pure-virtual"><scope>sc_core::sc_csp_channel_in_if</scope><name>read</name></member>
+      <member refid="classsc__core_1_1sc__csp__channel__in__if_1ad7139da842ceebdc4c64d4cf2b02d371" prot="public" virt="pure-virtual"><scope>sc_core::sc_csp_channel_in_if</scope><name>read_test</name></member>
+      <member refid="classsc__core_1_1sc__csp__channel__in__if_1a163aae4bbe4ad9f8dcee26b330e929d1" prot="public" virt="pure-virtual"><scope>sc_core::sc_csp_channel_in_if</scope><name>register_alt</name></member>
+      <member refid="classsc__core_1_1sc__csp__channel__in__if_1a63016ae797a557ea1abffb6a3688ad9e" prot="protected" virt="non-virtual"><scope>sc_core::sc_csp_channel_in_if</scope><name>sc_csp_channel_in_if</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

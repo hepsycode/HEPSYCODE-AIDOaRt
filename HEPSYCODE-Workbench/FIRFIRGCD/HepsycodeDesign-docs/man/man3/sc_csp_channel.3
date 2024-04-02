@@ -1,0 +1,294 @@
+.TH "sc_csp_channel< T >" 3 "Mon Mar 20 2023" "FirFirGCD Application" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+sc_csp_channel< T >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <sc_csp_channel\&.h>\fP
+.PP
+Inherits \fBsc_core::sc_csp_channel_in_if< T >\fP, \fBsc_core::sc_csp_channel_out_if< T >\fP, and \fBsc_prim_channel\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBsc_csp_channel\fP (unsigned int channel_id=0)"
+.br
+.ti -1c
+.RI "virtual void \fBregister_port\fP (sc_port_base &, const char *)"
+.br
+.ti -1c
+.RI "virtual void \fBread\fP (T &)"
+.br
+.ti -1c
+.RI "virtual T \fBread\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBwrite\fP (const T &)"
+.br
+.ti -1c
+.RI "virtual bool \fBread_test\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBwrite_test\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBregister_alt\fP ()"
+.br
+.ti -1c
+.RI "virtual const sc_event & \fBget_alt_event\fP ()"
+.br
+.ti -1c
+.RI "\fBoperator T\fP ()"
+.br
+.ti -1c
+.RI "\fBsc_csp_channel\fP< T > & \fBoperator=\fP (const T &a)"
+.br
+.ti -1c
+.RI "void \fBtrace\fP (sc_trace_file *tf) const"
+.br
+.ti -1c
+.RI "virtual const char * \fBkind\fP () const"
+.br
+.in -1c
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "unsigned int \fBid\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBw_id\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBr_id\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBwidth\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBnum\fP"
+.br
+.ti -1c
+.RI "bool \fBIPC\fP"
+.br
+.ti -1c
+.RI "sc_time \fBwaiting_time\fP"
+.br
+.ti -1c
+.RI "sc_time \fBworking_time\fP"
+.br
+.ti -1c
+.RI "double \fBpartial_energy\fP"
+.br
+.ti -1c
+.RI "double \fBworking_energy\fP"
+.br
+.ti -1c
+.RI "sc_time \fBtcomm\fP"
+.br
+.ti -1c
+.RI "sc_time \fBtacomm\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBphysical_width\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinit\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "sc_event \fBready_to_read_event\fP"
+.br
+.ti -1c
+.RI "sc_event \fBready_to_write_event\fP"
+.br
+.ti -1c
+.RI "sc_event \fBready_alt_event\fP"
+.br
+.ti -1c
+.RI "bool \fBready_to_read\fP"
+.br
+.ti -1c
+.RI "bool \fBready_to_write\fP"
+.br
+.ti -1c
+.RI "bool \fBenable_alt_events\fP"
+.br
+.ti -1c
+.RI "T \fBcsp_buf\fP"
+.br
+.ti -1c
+.RI "sc_port_base * \fBm_reader\fP"
+.br
+.ti -1c
+.RI "sc_port_base * \fBm_writer\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<class T>
+.br
+class sc_csp_channel< T >"
+
+.PP
+Definition at line 101 of file sc_csp_channel\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<class T > \fBsc_csp_channel\fP< T >::\fBsc_csp_channel\fP (unsigned int channel_id = \fC0\fP)\fC [inline]\fP, \fC [explicit]\fP"
+
+.PP
+Definition at line 110 of file sc_csp_channel\&.h\&.
+.PP
+.nf
+110                          :sc_prim_channel( sc_gen_unique_name( "csp_channel" ) ),
+111                           ready_to_read_event(sc_gen_unique_name( "read_event" )),
+112                           ready_to_write_event(sc_gen_unique_name("write_event" )),
+113                           ready_alt_event(sc_gen_unique_name("alt_event"))
+114                     {
+115                         id=channel_id;
+116                         w_id= pSystemManager->VCH[id]\&.getW_id();
+117                         r_id= pSystemManager->VCH[id]\&.getR_id();
+118                         width= pSystemManager->VCH[id]\&.getWidth();
+119 
+120                         tcomm= pSystemManager->VPL[pSystemManager->allocationCH_PL[id]]\&.getTcomm();
+121                         tacomm= pSystemManager->VPL[pSystemManager->allocationCH_PL[id]]\&.getTAcomm();
+122                         physical_width= pSystemManager->VPL[pSystemManager->allocationCH_PL[id]]\&.getPhysicalWidth();
+123 
+124                         init();
+125                     }
+126 
+127 
+.fi
+.PP
+References SystemManager::allocationCH_PL, pSystemManager, SystemManager::VCH, and SystemManager::VPL\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "template<class T > virtual const char* \fBsc_csp_channel\fP< T >::kind () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Definition at line 156 of file sc_csp_channel\&.h\&.
+.PP
+.nf
+157              :
+.fi
+.SS "template<class T > \fBsc_csp_channel\fP< T >::operator T ()\fC [inline]\fP"
+
+.PP
+Definition at line 148 of file sc_csp_channel\&.h\&.
+.PP
+.nf
+150         { write( a ); return *this; }
+.fi
+.SS "template<class T > \fBsc_csp_channel\fP<T>& \fBsc_csp_channel\fP< T >::operator= (const T & a)\fC [inline]\fP"
+
+.PP
+Definition at line 151 of file sc_csp_channel\&.h\&.
+.PP
+.nf
+155         { return "sc_csp_channel"; }
+.fi
+.SH "Field Documentation"
+.PP 
+.SS "template<class T > T \fBsc_csp_channel\fP< T >::csp_buf\fC [protected]\fP"
+
+.PP
+Definition at line 171 of file sc_csp_channel\&.h\&.
+.SS "template<class T > bool \fBsc_csp_channel\fP< T >::enable_alt_events\fC [protected]\fP"
+
+.PP
+Definition at line 169 of file sc_csp_channel\&.h\&.
+.SS "template<class T > unsigned int \fBsc_csp_channel\fP< T >::id"
+
+.PP
+Definition at line 174 of file sc_csp_channel\&.h\&.
+.SS "template<class T > bool \fBsc_csp_channel\fP< T >::IPC"
+
+.PP
+Definition at line 179 of file sc_csp_channel\&.h\&.
+.SS "template<class T > sc_port_base* \fBsc_csp_channel\fP< T >::m_reader\fC [protected]\fP"
+
+.PP
+Definition at line 192 of file sc_csp_channel\&.h\&.
+.SS "template<class T > sc_port_base* \fBsc_csp_channel\fP< T >::m_writer\fC [protected]\fP"
+
+.PP
+Definition at line 193 of file sc_csp_channel\&.h\&.
+.SS "template<class T > unsigned int \fBsc_csp_channel\fP< T >::num"
+
+.PP
+Definition at line 178 of file sc_csp_channel\&.h\&.
+.SS "template<class T > double \fBsc_csp_channel\fP< T >::partial_energy"
+
+.PP
+Definition at line 184 of file sc_csp_channel\&.h\&.
+.SS "template<class T > unsigned int \fBsc_csp_channel\fP< T >::physical_width"
+
+.PP
+Definition at line 189 of file sc_csp_channel\&.h\&.
+.SS "template<class T > unsigned int \fBsc_csp_channel\fP< T >::r_id"
+
+.PP
+Definition at line 176 of file sc_csp_channel\&.h\&.
+.SS "template<class T > sc_event \fBsc_csp_channel\fP< T >::ready_alt_event\fC [protected]\fP"
+
+.PP
+Definition at line 165 of file sc_csp_channel\&.h\&.
+.SS "template<class T > bool \fBsc_csp_channel\fP< T >::ready_to_read\fC [protected]\fP"
+
+.PP
+Definition at line 167 of file sc_csp_channel\&.h\&.
+.SS "template<class T > sc_event \fBsc_csp_channel\fP< T >::ready_to_read_event\fC [protected]\fP"
+
+.PP
+Definition at line 163 of file sc_csp_channel\&.h\&.
+.SS "template<class T > bool \fBsc_csp_channel\fP< T >::ready_to_write\fC [protected]\fP"
+
+.PP
+Definition at line 168 of file sc_csp_channel\&.h\&.
+.SS "template<class T > sc_event \fBsc_csp_channel\fP< T >::ready_to_write_event\fC [protected]\fP"
+
+.PP
+Definition at line 164 of file sc_csp_channel\&.h\&.
+.SS "template<class T > sc_time \fBsc_csp_channel\fP< T >::tacomm"
+
+.PP
+Definition at line 188 of file sc_csp_channel\&.h\&.
+.SS "template<class T > sc_time \fBsc_csp_channel\fP< T >::tcomm"
+
+.PP
+Definition at line 187 of file sc_csp_channel\&.h\&.
+.SS "template<class T > unsigned int \fBsc_csp_channel\fP< T >::w_id"
+
+.PP
+Definition at line 175 of file sc_csp_channel\&.h\&.
+.SS "template<class T > sc_time \fBsc_csp_channel\fP< T >::waiting_time"
+
+.PP
+Definition at line 181 of file sc_csp_channel\&.h\&.
+.SS "template<class T > unsigned int \fBsc_csp_channel\fP< T >::width"
+
+.PP
+Definition at line 177 of file sc_csp_channel\&.h\&.
+.SS "template<class T > double \fBsc_csp_channel\fP< T >::working_energy"
+
+.PP
+Definition at line 185 of file sc_csp_channel\&.h\&.
+.SS "template<class T > sc_time \fBsc_csp_channel\fP< T >::working_time"
+
+.PP
+Definition at line 182 of file sc_csp_channel\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FirFirGCD Application from the source code\&.

@@ -1,0 +1,748 @@
+.TH "firfirgcd_main_group" 3 "Mon Mar 20 2023" "FirFirGCD Application" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+firfirgcd_main_group \- MAIN\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBsc_main\fP (int a, char *b[])"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBSystemManager\fP * \fBpSystemManager\fP = new \fBSystemManager\fP()"
+.br
+.ti -1c
+.RI "SchedulingManager * \fBpSchedulingManager\fP = new SchedulingManager('SchedulingManager')"
+.br
+.ti -1c
+.RI "unsigned int \fBsampling_period\fP = 1000"
+.br
+.ti -1c
+.RI "bool \fBstop_concurrency_sampling\fP =false"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+MAIN\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+V\&. Muttillo, L\&. Pomante 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+Apr\&. 2022 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "int sc_main (int a, char * b[])"
+Testbench and System (SBM dependent)
+.PP
+Instantiation and connection of testbench and system
+.PP
+Instantiation and connection of testbench and system
+.PP
+Simulation management (maybe SBM dependent)
+.PP
+Report (SBM independent)
+.PP
+Timing DATA about simulation
+.PP
+Communications
+.PP
+ENERGY DATA
+.PP
+LOAD DATA
+.PP
+Report (concurrency)
+.PP
+Definition at line 177 of file main\&.cpp\&.
+.PP
+.nf
+178 {
+179 
+183     
+185 
+186     sc_csp_channel< sc_uint<8> >   stim1_channel(12);
+187     sc_csp_channel< sc_uint<8> >   stim2_channel(13);
+188     sc_csp_channel< sc_uint<8> >   result_channel(14);
+189 
+191 
+192     stim_gen mystimgen("mystimgen");
+193     mystimgen\&.stim1_channel_port(stim1_channel);
+194     mystimgen\&.stim2_channel_port(stim2_channel);
+195 
+196     mainsystem mysystem("mysystem");
+197     mysystem\&.stim1_channel_port(stim1_channel);
+198     mysystem\&.stim2_channel_port(stim2_channel);
+199     mysystem\&.result_channel_port(result_channel);
+200 
+201     display mydisplay("mydisplay");
+202     mydisplay\&.result_channel_port(result_channel);
+203 
+207 
+208     // Time info
+209     sc_time end_sim, tot=sc_time(0, SC_MS), tot_sched_oh=sc_time(0, SC_MS);
+210 
+211     clock_t start = clock();
+212 
+213     // Start simulation
+214     cout << endl;
+215     sc_start();
+216 
+217     //  Total simulated and simulation times
+218     end_sim=sc_time_stamp();
+219     clock_t end = clock();
+220 
+221     #if _WIN32
+222         system("pause");
+223     #endif
+224 
+228 
+229     //LP: check tutti i save_csv, save_xml e trace
+230 
+231     #if defined(_SAVE_CSV_)
+232         // Initialize csv file for statistics storage
+233         ofstream myStatFile;
+234         myStatFile\&.open ("\&./Results\&.csv",std::ofstream::out | std::ofstream::app);
+235 
+236         string scenario_id;
+237 
+238         cout << "Insert Scenario ID: ";
+239 
+240         // Take input using cin
+241         cin >> scenario_id;
+242 
+243         myStatFile << "Scenario ID,";
+244         myStatFile << scenario_id +","; // @suppress("Function cannot be resolved")
+245     #endif
+246 
+250         
+251     cout << endl << "FINAL SIMULATION TIME: " << (((float)(end - start)) / CLOCKS_PER_SEC) << endl;
+252 
+253     #if defined _SAVE_CSV_
+254         myStatFile << "FINAL SIMULATION TIME,";
+255         myStatFile << to_string((((float)(end - start)) / CLOCKS_PER_SEC)) +","; // @suppress("Function cannot be resolved")
+256     #endif
+257 
+258     cout << endl << "FINAL SIMULATED TIME: " << end_sim\&.to_seconds() << endl;
+259 
+260     #if defined _SAVE_CSV_
+261         myStatFile << "FINAL SIMULATED TIME,";
+262         myStatFile << to_string(end_sim\&.to_seconds()) +",";  // @suppress("Function cannot be resolved")
+263     #endif
+264 
+266     // Processes DATA
+268 
+269     #if defined(_DEBUG_)
+270         // Print process mapping for DEBUG
+271 
+272         cout << endl << "PROCESSES MAPPING" << endl << endl;
+273         for (unsigned int j = 2; j<NPS; j++)
+274         {
+275             cout << "Process " << pSystemManager->VPS[j]\&.name << "[" <<pSystemManager->VPS[j]\&.id << "] is on BB" <<
+276             pSystemManager->VBB[pSystemManager->allocationPS_BB[j]]\&.getName()<< "[" << pSystemManager->allocationPS_BB[j] << "]" << endl;
+277         }
+278         cout << endl;
+279 
+280         #if _WIN32
+281                 system("pause");
+282         #endif
+283     #endif
+284 
+285     // Number of times each process has been executed (i\&.e\&., number of loops)
+286     cout << endl << "PROCESSES PROFILING" << endl;
+287 
+288     #if defined _SAVE_CSV_
+289         myStatFile << "PROCESSES PROFILING,";
+290     #endif
+291 
+292     for( unsigned int j=2; j<NPS; j++)
+293     {
+294         cout << pSystemManager->VPS[j]\&.id << ": " << pSystemManager->VPS[j]\&.profiling << endl;
+295 
+296         #if defined _SAVE_CSV_
+297             myStatFile << to_string(pSystemManager->VPS[j]\&.profiling) +","; // @suppress("Function cannot be resolved")
+298         #endif
+299     }
+300     cout << endl;
+301 
+302     #if _WIN32
+303         system("pause");
+304     #endif
+305 
+306     // Number of bytes exchanged among process
+307     cout << endl << "PROCESSES COMMUNICATIONS MATRIX (#written bits from W to R)" << endl;
+308     cout << "   ";
+309     for (int j = 0; j<NPS; j++)
+310     {
+311         cout << setw(4) << j;
+312     }
+313     cout << endl;
+314 
+315     for (int i = 0; i<NPS; i++)
+316     {
+317         cout << setw(2) << i << " ";
+318         for (int j = 0; j<NPS; j++)
+319         {
+320             pSchedulingManager->matrixCOM[i][j] = 0;
+321             for (int k = 0; k<NCH; k++)
+322             {
+323                 if (pSystemManager->VCH[k]\&.getW_id() == i && pSystemManager->VCH[k]\&.getR_id() == j)
+324                 {
+325                     pSchedulingManager->matrixCOM[i][j] += pSystemManager->VCH[k]\&.getWidth()*pSystemManager->VCH[k]\&.getNum();
+326                 }
+327             }
+328             cout << setw(4) << pSchedulingManager->matrixCOM[i][j];
+329         }
+330         cout << endl;
+331     }
+332 
+333     #if _WIN32
+334         system("pause");
+335     #endif
+336 
+337 
+338     #if defined(_TIMING_ENERGY_)
+339 
+340         cout << endl << "PROCESS TIME PROFILING" << endl;
+341 
+342         cout << endl << "Average NET TIME for each process:" << endl << endl;
+343 
+344         #if defined _SAVE_CSV_
+345             myStatFile << "Average NET TIME,"; // @suppress("Function cannot be resolved")
+346         #endif
+347 
+348         for(unsigned i =2; i<pSystemManager->VPS\&.size(); i++)
+349         {
+350             cout << pSystemManager->VPS[i]\&.id << " - " << pSystemManager->VPS[i]\&.name << "\t\t" << (pSystemManager->VPS[i]\&.processTime/pSystemManager->VPS[i]\&.profiling)\&.to_seconds() << endl;
+351             tot+=pSystemManager->VPS[i]\&.processTime;
+352 
+353             #if defined _SAVE_CSV_
+354                 myStatFile << to_string((pSystemManager->VPS[i]\&.processTime/pSystemManager->VPS[i]\&.profiling)\&.to_seconds()) +","; // @suppress("Function cannot be resolved")
+355             #endif
+356         }
+357         cout << "Total NET TIME for all the processes:" << tot\&.to_seconds() << endl;
+358 
+359         #if defined _SAVE_CSV_
+360             myStatFile << "Total NET TIME,"; // @suppress("Function cannot be resolved")
+361             myStatFile << to_string(tot\&.to_seconds()) +","; // @suppress("Function cannot be resolved")
+362         #endif
+363 
+364             cout << endl << "Schedulers Overhead [time - #loops/#CS]" << endl;
+365 
+366         #if defined _SAVE_CSV_
+367             myStatFile << "Schedulers Overhead,"; // @suppress("Function cannot be resolved")
+368         #endif
+369 
+370         for(int i = 0; i<NBB; i++) // Figures for SPP will be always 0
+371         {
+372             cout << pSchedulingManager->sched_oh[i]\&.to_seconds() << " - " << pSchedulingManager->sched_loops[i] << "/" << pSchedulingManager->sched_CS[i] << endl;
+373             tot_sched_oh += pSchedulingManager->sched_oh[i];
+374 
+375             #if defined _SAVE_CSV_
+376                 myStatFile << to_string(pSchedulingManager->sched_oh[i]\&.to_seconds()) +","; // @suppress("Function cannot be resolved")
+377             #endif
+378         }
+379 
+380         cout << "Total overhead for all the schedulers: " << tot_sched_oh\&.to_seconds() << endl;
+381 
+382         #if defined _SAVE_CSV_
+383             myStatFile << "Tot Schedulers Overhead,"; // @suppress("Function cannot be resolved")
+384             myStatFile << to_string(tot_sched_oh\&.to_seconds()) +","; // @suppress("Function cannot be resolved")
+385         #endif
+386 
+387         cout << endl;
+388 
+389         #if _WIN32
+390                 system("pause");
+391         #endif
+392 
+393     #endif
+394 
+398 
+399     #if defined(_DEBUG_)
+400         cout << endl << "CHANNELS MAPPING" << endl << endl;
+401         for(unsigned int j=0; j<NCH; j++)
+402         {
+403             cout << "Channel " << pSystemManager->VCH[j]\&.name <<"[" <<pSystemManager->VCH[j]\&.id << "] is on Physical Link " << pSystemManager->VPL[pSystemManager->allocationCH_PL[j]]\&.getName()<<"["<< pSystemManager->allocationCH_PL[j]<<"]"<<endl;
+404         }
+405         cout << endl;
+406 
+407         #if _WIN32
+408                 system("pause");
+409         #endif
+410     #endif
+411 
+412     cout << endl << "COMMUNICATION PROFILING" << endl << endl;
+413 
+414     // Info about data transfers on CSP channels
+415     cout << endl << "CHANNELS PROFILING" << endl << endl;
+416 
+417     cout << "ID-W-R\tBIT\tNUM\tBIT*NUM\t[TIME(sec)]" << endl << endl;
+418     for( unsigned int j=0; j<NCH; j++)
+419     {
+420             cout << pSystemManager->VCH[j]\&.id << "-" << pSystemManager->VCH[j]\&.w_id << "-" << pSystemManager->VCH[j]\&.r_id << ": "
+421                 << pSystemManager->VCH[j]\&.width << "\t" << pSystemManager->VCH[j]\&.num << "\t" << pSystemManager->VCH[j]\&.width*pSystemManager->VCH[j]\&.num
+422                 
+423                 #if defined(_TIMING_ENERGY_)
+424                     << "\t" << pSystemManager->VCH[j]\&.working_time\&.to_seconds()
+425                 #endif
+426                 
+427                 << endl;
+428 
+429     }
+430     cout << endl;
+431 
+432     #if _WIN32
+433         system("pause");
+434     #endif
+435 
+439 
+440     #if defined(_TIMING_ENERGY_)
+441         // Energy info
+442         double totEnergyProcesses = 0;
+443         double totEnergyChannels = 0;
+444         double totEnergySchedulers = 0;
+445         double totEnergyPartSchedulers = 0;
+446         double totEnergy = 0;
+447 
+448         cout << endl << "Average ENERGY for each process:" << endl;
+449 
+450         #if defined _SAVE_CSV_
+451             myStatFile << "Energy For Processes,"; // @suppress("Function cannot be resolved")
+452         #endif
+453 
+454         for(unsigned i =2; i<pSystemManager->VPS\&.size(); i++)
+455         {
+456             cout << pSystemManager->VPS[i]\&.id << " - " << pSystemManager->VPS[i]\&.name << "\t\t" << (pSystemManager->VPS[i]\&.energy/pSystemManager->VPS[i]\&.profiling) <<" uJ"<< endl;
+457             totEnergyProcesses+=pSystemManager->VPS[i]\&.getEnergy();
+458 
+459             #if defined _SAVE_CSV_
+460                 myStatFile << to_string(pSystemManager->VPS[i]\&.energy/pSystemManager->VPS[i]\&.profiling) +","; // @suppress("Function cannot be resolved")
+461             #endif
+462 
+463         }
+464         cout<<endl;
+465         cout << "Total ENERGY for all the processes: " << totEnergyProcesses <<" uJ" <<endl;
+466 
+467         #if defined _SAVE_CSV_
+468             myStatFile << "Total Energy Processes,"; // @suppress("Function cannot be resolved")
+469             myStatFile << to_string(totEnergyProcesses) +","; // @suppress("Function cannot be resolved")
+470         #endif
+471 
+472         cout << endl << "CHANNEL ENERGY:" << endl<<endl;
+473         cout<<"ID-W-R\tENERGY (uJ)"<<endl<<endl;
+474         for(unsigned int i = 0; i<NCH; i++)
+475         {
+476             cout << pSystemManager->VCH[i]\&.id <<"-"<<pSystemManager->VCH[i]\&.w_id << "-" << pSystemManager->VCH[i]\&.r_id << "\t"<< pSystemManager->VCH[i]\&.working_energy <<" uJ"<< endl;
+477             totEnergyChannels+=pSystemManager->VCH[i]\&.working_energy;
+478         }
+479         cout<<endl;
+480         cout << "Total ENERGY for all the channels: " << totEnergyChannels <<" uJ" <<endl;
+481 
+482         cout << endl << "SCHEDULERS ENERGY:" << endl;
+483 
+484         #if defined _SAVE_CSV_
+485             myStatFile << "SCHEDULERS ENERGY,"; // @suppress("Function cannot be resolved")
+486         #endif
+487 
+488         for(int i = 0; i<NBB; i++) // Figures for SPP will be always 0
+489         {
+490             cout << pSchedulingManager->sched_en[i] << " uJ"<<endl;
+491             totEnergySchedulers+=pSchedulingManager->sched_en[i];
+492 
+493             #if defined _SAVE_CSV_
+494                 myStatFile << to_string(pSchedulingManager->sched_en[i]) +","; // @suppress("Function cannot be resolved")
+495             #endif
+496         }
+497 
+498         cout<<endl;
+499         cout << "Total ENERGY for all the Schedulers: " << totEnergySchedulers <<" uJ" <<endl;
+500 
+501         #if defined _SAVE_CSV_
+502             myStatFile << "TOT SCHEDULERS ENERGY,"; // @suppress("Function cannot be resolved")
+503             myStatFile << to_string(totEnergySchedulers) +",";
+504         #endif
+505 
+506         cout<<endl;
+507 
+508         totEnergy = totEnergyProcesses + totEnergyChannels + totEnergySchedulers + totEnergyPartSchedulers;
+509 
+510         cout << endl << "Total Energy (processes + channels + schedulers):  " << totEnergy <<" uJ"<<endl;
+511 
+512         #if defined _LOAD_
+513             pSystemManager->deleteConcXmlEnergy();
+514             pSystemManager->updateXmlEnergy();
+515         #endif
+516 
+517         #if defined _SAVE_CSV_
+518             myStatFile << "TOTAL ENERGY,";
+519             myStatFile << to_string(totEnergy) +","; // @suppress("Function cannot be resolved")
+520         #endif
+521 
+522     #endif
+523 
+527 
+528     #if (defined(_TIMING_ENERGY_) && defined(_LOAD_))
+529 
+530         cout << endl << "LOAD ESTIMATION" << endl;
+531 
+532         double tot_proc_load = 0;
+533 
+534         pSystemManager->setFRT(end_sim);
+535         pSystemManager->loadEst(end_sim);
+536 
+537         for(unsigned i =2; i<pSystemManager->VPS\&.size(); i++)
+538         {
+539             cout <<endl<<"FRL:"<<" "<< pSystemManager->VPS[i]\&.id << "-" << pSystemManager->VPS[i]\&.name << " " << pSystemManager->getFRL()[i];
+540             tot_proc_load += pSystemManager->getFRL()[i];
+541         }
+542         cout << endl << endl << "FINAL TOTAL LOAD: " << tot_proc_load << endl << endl;
+543 
+544         pSystemManager->deleteConcXmlLoad();
+545         pSystemManager->updateXmlLoad();
+546 
+547     #endif
+548 
+552 
+553     #if ((!defined(_TIMING_ENERGY_)) || (defined(_TIMING_ENERGY_) && defined(_CONCURRENCY_))) // Printed only if (1) functional analizer or (2) timing concurrency
+554         // Number of times each process has been concurrently working with the others
+555         cout << endl << "POTENTIAL PROCESSES CONCURRENCY" << endl;
+556         cout << "  ";
+557         for (int j=2; j<NPS; j++)
+558         {
+559             cout<< setw(8) << j;
+560         }
+561         cout<< endl;
+562 
+563         for (int i=2; i<NPS; i++)
+564         {
+565             cout << i << " " ;
+566             for (int j=2; j<NPS; j++)
+567             {
+568                 cout<< setw(8) << pSchedulingManager->matrixCONC_PS_RR[i][j];
+569             }
+570             cout<<endl;
+571         }
+572 
+573         #if _WIN32
+574             system("pause");
+575         #endif
+576 #endif
+577 
+578     #if (defined(_TIMING_ENERGY_) && defined(_CONCURRENCY_)) // Printed only if timing concurrency
+579         // Number of times each process has been concurrently working with the others
+580         cout << endl << "ACTUAL PROCESSES CONCURRENCY" << endl;
+581         cout << "  ";
+582         for (int j=2; j<NPS; j++)
+583         {
+584             cout<< setw(8) << j;
+585         }
+586         cout<< endl;
+587 
+588         for (int i=2; i<NPS; i++)
+589         {
+590             cout << i << " " ;
+591             for (int j=2; j<NPS; j++)
+592             {
+593                 cout<< setw(8) << pSchedulingManager->matrixCONC_PS_R[i][j];
+594             }
+595             cout<<endl;
+596         }
+597 
+598         #if _WIN32
+599             system("pause");
+600         #endif
+601 #endif
+602 
+603     #if ((!defined(_TIMING_ENERGY_)) || (defined(_TIMING_ENERGY_) && defined(_CONCURRENCY_))) // Printed only if (1) functional analizer or (2) timing concurrency
+604         // Number of times each process has been concurrent with the others
+605         //with respect to the number of checks
+606         cout << endl << "NORMALIZED POTENTIAL PROCESSES CONCURRENCY (#TEST: " << pSchedulingManager->num_tests_CONC_PS_RR << ")" << endl;
+607         cout<< "   ";
+608         for (int j=2; j<NPS; j++)
+609         {
+610             cout<< setw(8) << j;
+611         }
+612         cout<< endl;
+613 
+614         for (int i=2; i<NPS; i++)
+615         {
+616             cout<< setw(2) << i << " " ;
+617             for (int j=2; j<NPS; j++)
+618             {
+619                 pSchedulingManager->matrixCONC_PS_RR_N[i][j] = pSchedulingManager->matrixCONC_PS_RR[i][j]/(float)pSchedulingManager->num_tests_CONC_PS_RR;
+620                 cout<< setw(8) << setprecision(2) << pSchedulingManager->matrixCONC_PS_RR_N[i][j];
+621             }
+622             cout<<endl;
+623         }
+624 
+625         #if _WIN32
+626             system("pause");
+627         #endif
+628 #endif
+629 
+630     #if (defined(_TIMING_ENERGY_) && defined(_CONCURRENCY_)) // Printed only if timing concurrency
+631         // Number of times each process has been concurrent with the others
+632         //with respect to the number of checks
+633             cout << endl << "NORMALIZED ACTUAL PROCESSES CONCURRENCY (#TEST: " << pSchedulingManager->num_tests_CONC_PS_R << ")" << endl;
+634         cout<< "   ";
+635         for (int j=2; j<NPS; j++)
+636         {
+637             cout<< setw(8) << j;
+638         }
+639         cout<< endl;
+640 
+641         for (int i=2; i<NPS; i++)
+642         {
+643             cout<< setw(2) << i << " " ;
+644             for (int j=2; j<NPS; j++)
+645             {
+646                 pSchedulingManager->matrixCONC_PS_R_N[i][j] = pSchedulingManager->matrixCONC_PS_R[i][j]/(float)pSchedulingManager->num_tests_CONC_PS_R;
+647                 cout<< setw(8) << setprecision(2) << pSchedulingManager->matrixCONC_PS_R_N[i][j];
+648             }
+649             cout<<endl;
+650         }
+651 
+652         #if _WIN32
+653             system("pause");
+654         #endif
+655 #endif
+656 
+657     #if ((!defined(_TIMING_ENERGY_)) || (defined(_TIMING_ENERGY_) && defined(_CONCURRENCY_))) // Printed only if (1) functional analizer or (2) timing concurrency
+658         // Number of times each channels has been concurrently working with the others
+659         cout << endl << "POTENTIAL CHANNELS CONCURRENCY" << endl;
+660         cout<< setw(2) << "   ";
+661         for (int j=0; j<NCH; j++)
+662         {
+663             cout<< setw(8) << j;
+664         }
+665         cout<< endl;
+666 
+667         for (int i=0; i<NCH; i++)
+668         {
+669             cout<< setw(2) << i << " " ;
+670             for (int j=0; j<NCH; j++)
+671             {
+672                 cout<< setw(8) << setprecision(2) << pSchedulingManager->matrixCONC_CH_RR[i][j];
+673             }
+674             cout<<endl;
+675         }
+676 
+677         #if _WIN32
+678             system("pause");
+679         #endif
+680 #endif
+681 
+682     #if (defined(_TIMING_ENERGY_) && defined(_CONCURRENCY_)) // Printed only if timing concurrency
+683         // Number of times each channels has been concurrently working with the others
+684         cout << endl << "ACTUAL CHANNELS CONCURRENCY" << endl;
+685         cout<< setw(2) << "   ";
+686         for (int j=0; j<NCH; j++)
+687         {
+688             cout<< setw(8) << j;
+689         }
+690         cout<< endl;
+691 
+692         for (int i=0; i<NCH; i++)
+693         {
+694             cout<< setw(2) << i << " " ;
+695             for (int j=0; j<NCH; j++)
+696             {
+697                 cout<< setw(8) << setprecision(2) << pSchedulingManager->matrixCONC_CH_R[i][j];
+698             }
+699             cout<<endl;
+700         }
+701 
+702         #if _WIN32
+703             system("pause");
+704         #endif
+705 #endif
+706 
+707     #if ((!defined(_TIMING_ENERGY_)) || (defined(_TIMING_ENERGY_) && defined(_CONCURRENCY_))) // Printed only if (1) functional analizer or (2) timing concurrency
+708         // Number of times each channels has been concurrently working with the others
+709         //with respect to the number of checks
+710         cout << endl << "NORMALIZED POTENTIAL CHANNELS CONCURRENCY (#TEST: " << pSchedulingManager->num_tests_CONC_CH_RR << ")" << endl;
+711         cout<< setw(2) << "   ";
+712         for (int j=0; j<NCH; j++)
+713         {
+714             cout<< setw(8) << j;
+715         }
+716         cout<< endl;
+717 
+718         for (int i=0; i<NCH; i++)
+719         {
+720             cout<< setw(2) << i << " " ;
+721             for (int j=0; j<NCH; j++)
+722             {
+723                 pSchedulingManager->matrixCONC_CH_RR_N[i][j] = pSchedulingManager->matrixCONC_CH_RR[i][j]/(float)pSchedulingManager->num_tests_CONC_CH_RR;
+724                 cout<< setw(8) << setprecision(2) << pSchedulingManager->matrixCONC_CH_RR_N[i][j];
+725             }
+726             cout<<endl;
+727         }
+728 
+729         #if _WIN32
+730             system("pause");
+731         #endif
+732 #endif
+733 
+734     #if (defined(_TIMING_ENERGY_) && defined(_CONCURRENCY_)) // Printed only if timing concurrency
+735         // Number of times each channels has been concurrently working with the others
+736         //with respect to the number of checks
+737         cout << endl << "NORMALIZED ACTUAL CHANNELS CONCURRENCY (#TEST: " << pSchedulingManager->num_tests_CONC_CH_R << ")" << endl;
+738         cout<< setw(2) << "   ";
+739         for (int j=0; j<NCH; j++)
+740         {
+741             cout<< setw(8) << j;
+742         }
+743         cout<< endl;
+744 
+745         for (int i=0; i<NCH; i++)
+746         {
+747             cout<< setw(2) << i << " " ;
+748             for (int j=0; j<NCH; j++)
+749             {
+750                 pSchedulingManager->matrixCONC_CH_R_N[i][j] = pSchedulingManager->matrixCONC_CH_R[i][j]/(float)pSchedulingManager->num_tests_CONC_CH_R;
+751                 cout<< setw(8) << setprecision(2) << pSchedulingManager->matrixCONC_CH_R_N[i][j];
+752             }
+753             cout<<endl;
+754         }
+755 
+756         #if _WIN32
+757             system("pause");
+758         #endif
+759 
+760         // Number of times each BB has been concurrently active with the others
+761         cout << endl << "ACTUAL BB CONCURRENCY" << endl;
+762         cout<< setw(2) << "   ";
+763         for (int j=0; j<NBB; j++)
+764         {
+765             cout<< setw(8) << j;
+766         }
+767         cout<< endl;
+768 
+769         for (int i=0; i<NBB; i++)
+770         {
+771             cout<< setw(2) << i << " " ;
+772             for (int j=0; j<NBB; j++)
+773             {
+774                 cout<< setw(8) << setprecision(2) << pSchedulingManager->matrixCONC_BB[i][j];
+775             }
+776             cout<<endl;
+777         }
+778 
+779         #if _WIN32
+780             system("pause");
+781         #endif
+782 
+783         // Number of times each BB has been concurrently active with the others
+784         //with respect to the number of checks
+785         cout << endl << "NORMALIZED ACTUAL BB CONCURRENCY (#TEST: " << pSchedulingManager->num_tests_CONC_BB << ")" << endl;
+786         cout<< setw(2) << "   ";
+787         for (int j=0; j<NBB; j++)
+788         {
+789             cout<< setw(8) << j;
+790         }
+791         cout<< endl;
+792 
+793         for (int i=0; i<NBB; i++)
+794         {
+795             cout<< setw(2) << i << " " ;
+796             for (int j=0; j<NBB; j++)
+797             {
+798                 pSchedulingManager->matrixCONC_BB_N[i][j] = pSchedulingManager->matrixCONC_BB[i][j]/(float)pSchedulingManager->num_tests_CONC_BB;
+799                 cout<< setw(8) << setprecision(2) << pSchedulingManager->matrixCONC_BB_N[i][j];
+800             }
+801             cout<<endl;
+802         }
+803 
+804         #if _WIN32
+805             system("pause");
+806         #endif
+807 
+808         // Number of times a group of BBs have been concurrently active
+809         cout << endl << "ACTUAL BB GROUP CONCURRENCY" << endl;
+810         for (int j=0; j<NBB+1; j++)
+811         {
+812                 cout << j << " ACTIVE BBs: " << pSchedulingManager->vectorCONC_BB[j] << endl;
+813         }
+814 
+815         // Number of times a group of BBs have been concurrently active
+816         cout << endl << "NORMALIZED ACTUAL BB GROUP CONCURRENCY (#TEST: " << pSchedulingManager->num_tests_CONC_BB << ")" << endl;
+817         for (int j=0; j<NBB+1; j++)
+818         {
+819                 pSchedulingManager->vectorCONC_BB_N[j] = pSchedulingManager->vectorCONC_BB[j]/(float)pSchedulingManager->num_tests_CONC_BB;
+820                 cout << j << " ACTIVE BBs: " << pSchedulingManager->vectorCONC_BB_N[j] << endl;
+821         }
+822 
+823         #if _WIN32
+824             system("pause");
+825         #endif
+826     #endif
+827 
+828     #if ((!defined(_TIMING_ENERGY_))) // || (defined(_TIMING_ENERGY_) && defined(_CONCURRENCY_))) // Printed only if (1) functional analizer or (2) timing concurrency
+829         cout << "Processes and Channels Concurrency, and Channels Communication XML update" << endl;
+830 
+831         // LP: Da controllare
+832         pSystemManager->deleteConcXmlConCom();
+833 
+834         // LP: da controllare
+835         pSystemManager->updateXmlConCom(pSchedulingManager->matrixCONC_PS_RR_N, pSchedulingManager->matrixCOM, pSchedulingManager->matrixCONC_CH_RR_N);
+836     #endif
+837 
+838     #if defined _SAVE_CSV_
+839         myStatFile << "\n";;
+840 
+841         // Save information about final population statistics into csv file
+842         myStatFile\&.close();
+843     #endif
+844 
+845     #if _WIN32
+846         system("pause");
+847     #endif
+848 
+849     return 0;
+850 }
+.fi
+.PP
+References SystemManager::allocationCH_PL, SystemManager::allocationPS_BB, SystemManager::deleteConcXmlConCom(), SystemManager::deleteConcXmlEnergy(), SystemManager::deleteConcXmlLoad(), SystemManager::getFRL(), SystemManager::loadEst(), NBB, NCH, NPS, pSchedulingManager, pSystemManager, SystemManager::setFRT(), SystemManager::updateXmlConCom(), SystemManager::updateXmlEnergy(), SystemManager::updateXmlLoad(), SystemManager::VBB, SystemManager::VCH, SystemManager::VPL, and SystemManager::VPS\&.
+.SH "Variable Documentation"
+.PP 
+.SS "SchedulingManager* pSchedulingManager = new SchedulingManager('SchedulingManager')"
+
+.PP
+Definition at line 166 of file main\&.cpp\&.
+.PP
+Referenced by sc_csp_channel< T >::read(), sc_main(), and sc_csp_channel< T >::write()\&.
+.SS "\fBSystemManager\fP* pSystemManager = new \fBSystemManager\fP()"
+
+.PP
+Definition at line 163 of file main\&.cpp\&.
+.PP
+Referenced by sc_csp_channel< T >::init(), sc_csp_channel< T >::read(), sc_csp_channel< T >::sc_csp_channel(), sc_main(), SC_MODULE(), and sc_csp_channel< T >::write()\&.
+.SS "unsigned int sampling_period = 1000"
+
+.PP
+Definition at line 170 of file main\&.cpp\&.
+.SS "bool stop_concurrency_sampling =false"
+
+.PP
+Definition at line 171 of file main\&.cpp\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FirFirGCD Application from the source code\&.

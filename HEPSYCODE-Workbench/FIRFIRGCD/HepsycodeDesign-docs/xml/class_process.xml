@@ -1,0 +1,741 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="class_process" kind="class" language="C++" prot="public">
+    <compoundname>Process</compoundname>
+    <includes refid="tl_8h" local="no">tl.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_process_1a8458c9ab0528b0f5fccb56968c1eb577" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Process::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="164" column="16" bodyfile="HepsycodeDesign/src/tl.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_process_1af4fcdaeb47e30030e4d4877232b6c135" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Process::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="165" column="22" bodyfile="HepsycodeDesign/src/tl.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_process_1ae03e5ff2b64628843a8436bea9703b70" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Process::priority</definition>
+        <argsstring></argsstring>
+        <name>priority</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="166" column="22" bodyfile="HepsycodeDesign/src/tl.h" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_process_1af97a7745a37113e0d5b4ca9b17aed729" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Process::criticality</definition>
+        <argsstring></argsstring>
+        <name>criticality</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="167" column="22" bodyfile="HepsycodeDesign/src/tl.h" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_process_1a70972fe640d0989f28bd451af196615c" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Process::eqGate</definition>
+        <argsstring></argsstring>
+        <name>eqGate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="168" column="15" bodyfile="HepsycodeDesign/src/tl.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_process_1aa4ff148aceb9f05d1d5a5152e610a322" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Process::dataType</definition>
+        <argsstring></argsstring>
+        <name>dataType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="169" column="14" bodyfile="HepsycodeDesign/src/tl.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_process_1a3fbb956251eecb4b438c640fd8c1a12d" prot="public" static="no" mutable="no">
+        <type>map&lt; string, unsigned int &gt;</type>
+        <definition>map&lt;string, unsigned int&gt; Process::codeSizeMap</definition>
+        <argsstring></argsstring>
+        <name>codeSizeMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="170" column="11" bodyfile="HepsycodeDesign/src/tl.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_process_1a125e902953b35206d7d2979e11b56d86" prot="public" static="no" mutable="no">
+        <type>map&lt; string, unsigned int &gt;</type>
+        <definition>map&lt;string, unsigned int&gt; Process::dataSizeMap</definition>
+        <argsstring></argsstring>
+        <name>dataSizeMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="171" column="11" bodyfile="HepsycodeDesign/src/tl.h" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_process_1a86e0eaba322501bf13bd8138324a1a23" prot="public" static="no" mutable="no">
+        <type>map&lt; string, float &gt;</type>
+        <definition>map&lt;string,float&gt; Process::affinity</definition>
+        <argsstring></argsstring>
+        <name>affinity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="173" column="14" bodyfile="HepsycodeDesign/src/tl.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_process_1a6147d0be2c050cb4669640e7076e1241" prot="public" static="no" mutable="no">
+        <type>map&lt; int, float &gt;</type>
+        <definition>map&lt;int,float&gt; Process::concurrency</definition>
+        <argsstring></argsstring>
+        <name>concurrency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="174" column="14" bodyfile="HepsycodeDesign/src/tl.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_process_1ab18c69089c09584e0d78630fa782ee93" prot="public" static="no" mutable="no">
+        <type>map&lt; int, float &gt;</type>
+        <definition>map&lt;int,float&gt; Process::load</definition>
+        <argsstring></argsstring>
+        <name>load</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="175" column="14" bodyfile="HepsycodeDesign/src/tl.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_process_1ab824045bdc37b05cd9182fda746610b5" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Process::profiling</definition>
+        <argsstring></argsstring>
+        <name>profiling</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="176" column="22" bodyfile="HepsycodeDesign/src/tl.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_process_1a47be8c61a3a5460452753dc98b68389f" prot="public" static="no" mutable="no">
+        <type>sc_time</type>
+        <definition>sc_time Process::processTime</definition>
+        <argsstring></argsstring>
+        <name>processTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="177" column="17" bodyfile="HepsycodeDesign/src/tl.h" bodystart="177" bodyend="-1"/>
+        <referencedby refid="class_system_manager_1a545df7d9bd60c4d42797a7233a1f4d61" compoundref="_system_manager_8cpp" startline="91" endline="195">SystemManager::generateProcessInstances</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_process_1a04c66e1f8802aa8528226df19a5d9516" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Process::energy</definition>
+        <argsstring></argsstring>
+        <name>energy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="178" column="15" bodyfile="HepsycodeDesign/src/tl.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_process_1a9f4553eac74c657bb451f390c17d6bea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Process::Process</definition>
+        <argsstring>()</argsstring>
+        <name>Process</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="181" column="9" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="311" bodyend="320"/>
+      </memberdef>
+      <memberdef kind="function" id="class_process_1aae530d36427cb0c1fe817cb339bd7691" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string Process::getName</definition>
+        <argsstring>()</argsstring>
+        <name>getName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="183" column="16" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="322" bodyend="325"/>
+      </memberdef>
+      <memberdef kind="function" id="class_process_1ad1d3a2fd1af703ff1b986512d675660b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Process::setName</definition>
+        <argsstring>(string x)</argsstring>
+        <name>setName</name>
+        <param>
+          <type>string</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="184" column="14" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="327" bodyend="330"/>
+        <referencedby refid="class_system_manager_1a545df7d9bd60c4d42797a7233a1f4d61" compoundref="_system_manager_8cpp" startline="91" endline="195">SystemManager::generateProcessInstances</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_process_1a4a5b2f6a945300fd6ecd243bc14e8073" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Process::getId</definition>
+        <argsstring>()</argsstring>
+        <name>getId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="186" column="13" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="332" bodyend="335"/>
+      </memberdef>
+      <memberdef kind="function" id="class_process_1ac2d4d655dc9fe6317889938783ec2848" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Process::setId</definition>
+        <argsstring>(int x)</argsstring>
+        <name>setId</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="187" column="14" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="337" bodyend="340"/>
+        <referencedby refid="class_system_manager_1a545df7d9bd60c4d42797a7233a1f4d61" compoundref="_system_manager_8cpp" startline="91" endline="195">SystemManager::generateProcessInstances</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_process_1af5103e08c032d9247110f0a7655bf37c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Process::getPriority</definition>
+        <argsstring>()</argsstring>
+        <name>getPriority</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="189" column="13" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="350" bodyend="353"/>
+      </memberdef>
+      <memberdef kind="function" id="class_process_1a011879a0a11d6bacd3a6d768293ab0d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Process::setPriority</definition>
+        <argsstring>(int x)</argsstring>
+        <name>setPriority</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="190" column="14" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="355" bodyend="358"/>
+        <referencedby refid="class_system_manager_1a545df7d9bd60c4d42797a7233a1f4d61" compoundref="_system_manager_8cpp" startline="91" endline="195">SystemManager::generateProcessInstances</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_process_1a8eaeeedaf35ee19fcadf52b99e957aac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Process::getCriticality</definition>
+        <argsstring>()</argsstring>
+        <name>getCriticality</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="192" column="13" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="360" bodyend="363"/>
+      </memberdef>
+      <memberdef kind="function" id="class_process_1a43c73ef0483b869e4231830eeff46d48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Process::setCriticality</definition>
+        <argsstring>(int x)</argsstring>
+        <name>setCriticality</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="193" column="14" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="365" bodyend="368"/>
+        <referencedby refid="class_system_manager_1a545df7d9bd60c4d42797a7233a1f4d61" compoundref="_system_manager_8cpp" startline="91" endline="195">SystemManager::generateProcessInstances</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_process_1a7653e5156ed113e2a030ba0188350363" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float Process::getEqGate</definition>
+        <argsstring>()</argsstring>
+        <name>getEqGate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="195" column="15" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="370" bodyend="373"/>
+      </memberdef>
+      <memberdef kind="function" id="class_process_1a74caf223f4391e3145eee5899b30a09b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Process::setEqGate</definition>
+        <argsstring>(float g)</argsstring>
+        <name>setEqGate</name>
+        <param>
+          <type>float</type>
+          <declname>g</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="196" column="14" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="375" bodyend="378"/>
+        <referencedby refid="class_system_manager_1a545df7d9bd60c4d42797a7233a1f4d61" compoundref="_system_manager_8cpp" startline="91" endline="195">SystemManager::generateProcessInstances</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_process_1a1a52596c85f381905b97b858cbc8c145" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Process::getDataType</definition>
+        <argsstring>()</argsstring>
+        <name>getDataType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="198" column="5" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="380" bodyend="383"/>
+      </memberdef>
+      <memberdef kind="function" id="class_process_1a3aaefcd2768bd481e22228851b161546" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Process::setDataType</definition>
+        <argsstring>(int x)</argsstring>
+        <name>setDataType</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="199" column="14" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="385" bodyend="388"/>
+        <referencedby refid="class_system_manager_1a545df7d9bd60c4d42797a7233a1f4d61" compoundref="_system_manager_8cpp" startline="91" endline="195">SystemManager::generateProcessInstances</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_process_1af196d2bb3cb88dbf0c517428e7b09538" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Process::setMemSize</definition>
+        <argsstring>(Memory m)</argsstring>
+        <name>setMemSize</name>
+        <param>
+          <type><ref refid="class_memory" kindref="compound">Memory</ref></type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="201" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_process_1af55a4774a1519b84988e4e3ec3fcc7a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Process::setCodeSize</definition>
+        <argsstring>(string procName, unsigned int value)</argsstring>
+        <name>setCodeSize</name>
+        <param>
+          <type>string</type>
+          <declname>procName</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="202" column="14" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="390" bodyend="394"/>
+        <referencedby refid="class_system_manager_1a545df7d9bd60c4d42797a7233a1f4d61" compoundref="_system_manager_8cpp" startline="91" endline="195">SystemManager::generateProcessInstances</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_process_1a268bc20c1c875e94e50c5d6d1ad9ec06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Process::setDataSize</definition>
+        <argsstring>(string procName, unsigned int value)</argsstring>
+        <name>setDataSize</name>
+        <param>
+          <type>string</type>
+          <declname>procName</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="203" column="14" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="396" bodyend="400"/>
+        <referencedby refid="class_system_manager_1a545df7d9bd60c4d42797a7233a1f4d61" compoundref="_system_manager_8cpp" startline="91" endline="195">SystemManager::generateProcessInstances</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_process_1a5dffdfeba3879c5e032db1c168d898be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float Process::getAffinityByName</definition>
+        <argsstring>(string processorName)</argsstring>
+        <name>getAffinityByName</name>
+        <param>
+          <type>string</type>
+          <declname>processorName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="205" column="15" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="406" bodyend="412"/>
+      </memberdef>
+      <memberdef kind="function" id="class_process_1a6f1fdb3ef348ebe19f1fd44671edfed8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Process::setAffinity</definition>
+        <argsstring>(string processorName, float affinity)</argsstring>
+        <name>setAffinity</name>
+        <param>
+          <type>string</type>
+          <declname>processorName</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>affinity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="206" column="14" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="414" bodyend="419"/>
+        <referencedby refid="class_system_manager_1a545df7d9bd60c4d42797a7233a1f4d61" compoundref="_system_manager_8cpp" startline="91" endline="195">SystemManager::generateProcessInstances</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_process_1a8fb82ba026f5530a9f9724fbf1142aba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Process::setConcurrency</definition>
+        <argsstring>(int procId, float conc)</argsstring>
+        <name>setConcurrency</name>
+        <param>
+          <type>int</type>
+          <declname>procId</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>conc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="208" column="14" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="421" bodyend="426"/>
+        <referencedby refid="class_system_manager_1a545df7d9bd60c4d42797a7233a1f4d61" compoundref="_system_manager_8cpp" startline="91" endline="195">SystemManager::generateProcessInstances</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_process_1a9d9cfc179387b12e2bb1cdc214b6a9d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Process::setLoad</definition>
+        <argsstring>(int procId, float value)</argsstring>
+        <name>setLoad</name>
+        <param>
+          <type>int</type>
+          <declname>procId</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="210" column="14" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="428" bodyend="432"/>
+        <referencedby refid="class_system_manager_1a545df7d9bd60c4d42797a7233a1f4d61" compoundref="_system_manager_8cpp" startline="91" endline="195">SystemManager::generateProcessInstances</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_process_1a73a66495ca1da4ba176cf2d04104acef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Process::getPS_Profiling</definition>
+        <argsstring>()</argsstring>
+        <name>getPS_Profiling</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="212" column="13" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="435" bodyend="438"/>
+      </memberdef>
+      <memberdef kind="function" id="class_process_1ad766d35cd91ef755abdc5df596980923" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>sc_time</type>
+        <definition>sc_time Process::getProcessTime</definition>
+        <argsstring>()</argsstring>
+        <name>getProcessTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="213" column="17" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="440" bodyend="443"/>
+      </memberdef>
+      <memberdef kind="function" id="class_process_1a2991ac041e868df69f3f394ee91791cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Process::setEnergy</definition>
+        <argsstring>(float energy)</argsstring>
+        <name>setEnergy</name>
+        <param>
+          <type>float</type>
+          <declname>energy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="215" column="14" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="346" bodyend="348"/>
+        <referencedby refid="class_system_manager_1a545df7d9bd60c4d42797a7233a1f4d61" compoundref="_system_manager_8cpp" startline="91" endline="195">SystemManager::generateProcessInstances</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_process_1ad854bd9c327eff4b2f0a06cf184081b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float Process::getEnergy</definition>
+        <argsstring>()</argsstring>
+        <name>getEnergy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/tl.h" line="216" column="15" bodyfile="HepsycodeDesign/src/tl.cpp" bodystart="342" bodyend="344"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="7">
+        <label>K</label>
+      </node>
+      <node id="8">
+        <label>T</label>
+      </node>
+      <node id="2">
+        <label>std::map&lt; string, unsigned int &gt;</label>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+keys</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; string, unsigned int &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>std::map&lt; K, T &gt;</label>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+keys</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>float</label>
+      </node>
+      <node id="11">
+        <label>std::map&lt; string, float &gt;</label>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+keys</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; string, float &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>std::basic_string&lt; char &gt;</label>
+      </node>
+      <node id="3">
+        <label>int</label>
+      </node>
+      <node id="12">
+        <label>sc_time</label>
+      </node>
+      <node id="1">
+        <label>Process</label>
+        <link refid="class_process"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+dataSizeMap</edgelabel>
+          <edgelabel>+codeSizeMap</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+energy</edgelabel>
+          <edgelabel>+eqGate</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+priority</edgelabel>
+          <edgelabel>+id</edgelabel>
+          <edgelabel>+dataType</edgelabel>
+          <edgelabel>+profiling</edgelabel>
+          <edgelabel>+criticality</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>+concurrency</edgelabel>
+          <edgelabel>+load</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+name</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+affinity</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>+processTime</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>std::map&lt; int, float &gt;</label>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+elements</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+keys</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; int, float &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>std::string</label>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HepsycodeDesign/src/tl.h" line="162" column="1" bodyfile="HepsycodeDesign/src/tl.h" bodystart="161" bodyend="217"/>
+    <listofallmembers>
+      <member refid="class_process_1a86e0eaba322501bf13bd8138324a1a23" prot="public" virt="non-virtual"><scope>Process</scope><name>affinity</name></member>
+      <member refid="class_process_1a3fbb956251eecb4b438c640fd8c1a12d" prot="public" virt="non-virtual"><scope>Process</scope><name>codeSizeMap</name></member>
+      <member refid="class_process_1a6147d0be2c050cb4669640e7076e1241" prot="public" virt="non-virtual"><scope>Process</scope><name>concurrency</name></member>
+      <member refid="class_process_1af97a7745a37113e0d5b4ca9b17aed729" prot="public" virt="non-virtual"><scope>Process</scope><name>criticality</name></member>
+      <member refid="class_process_1a125e902953b35206d7d2979e11b56d86" prot="public" virt="non-virtual"><scope>Process</scope><name>dataSizeMap</name></member>
+      <member refid="class_process_1aa4ff148aceb9f05d1d5a5152e610a322" prot="public" virt="non-virtual"><scope>Process</scope><name>dataType</name></member>
+      <member refid="class_process_1a04c66e1f8802aa8528226df19a5d9516" prot="public" virt="non-virtual"><scope>Process</scope><name>energy</name></member>
+      <member refid="class_process_1a70972fe640d0989f28bd451af196615c" prot="public" virt="non-virtual"><scope>Process</scope><name>eqGate</name></member>
+      <member refid="class_process_1a5dffdfeba3879c5e032db1c168d898be" prot="public" virt="non-virtual"><scope>Process</scope><name>getAffinityByName</name></member>
+      <member refid="class_process_1a8eaeeedaf35ee19fcadf52b99e957aac" prot="public" virt="non-virtual"><scope>Process</scope><name>getCriticality</name></member>
+      <member refid="class_process_1a1a52596c85f381905b97b858cbc8c145" prot="public" virt="non-virtual"><scope>Process</scope><name>getDataType</name></member>
+      <member refid="class_process_1ad854bd9c327eff4b2f0a06cf184081b5" prot="public" virt="non-virtual"><scope>Process</scope><name>getEnergy</name></member>
+      <member refid="class_process_1a7653e5156ed113e2a030ba0188350363" prot="public" virt="non-virtual"><scope>Process</scope><name>getEqGate</name></member>
+      <member refid="class_process_1a4a5b2f6a945300fd6ecd243bc14e8073" prot="public" virt="non-virtual"><scope>Process</scope><name>getId</name></member>
+      <member refid="class_process_1aae530d36427cb0c1fe817cb339bd7691" prot="public" virt="non-virtual"><scope>Process</scope><name>getName</name></member>
+      <member refid="class_process_1af5103e08c032d9247110f0a7655bf37c" prot="public" virt="non-virtual"><scope>Process</scope><name>getPriority</name></member>
+      <member refid="class_process_1ad766d35cd91ef755abdc5df596980923" prot="public" virt="non-virtual"><scope>Process</scope><name>getProcessTime</name></member>
+      <member refid="class_process_1a73a66495ca1da4ba176cf2d04104acef" prot="public" virt="non-virtual"><scope>Process</scope><name>getPS_Profiling</name></member>
+      <member refid="class_process_1af4fcdaeb47e30030e4d4877232b6c135" prot="public" virt="non-virtual"><scope>Process</scope><name>id</name></member>
+      <member refid="class_process_1ab18c69089c09584e0d78630fa782ee93" prot="public" virt="non-virtual"><scope>Process</scope><name>load</name></member>
+      <member refid="class_process_1a8458c9ab0528b0f5fccb56968c1eb577" prot="public" virt="non-virtual"><scope>Process</scope><name>name</name></member>
+      <member refid="class_process_1ae03e5ff2b64628843a8436bea9703b70" prot="public" virt="non-virtual"><scope>Process</scope><name>priority</name></member>
+      <member refid="class_process_1a9f4553eac74c657bb451f390c17d6bea" prot="public" virt="non-virtual"><scope>Process</scope><name>Process</name></member>
+      <member refid="class_process_1a47be8c61a3a5460452753dc98b68389f" prot="public" virt="non-virtual"><scope>Process</scope><name>processTime</name></member>
+      <member refid="class_process_1ab824045bdc37b05cd9182fda746610b5" prot="public" virt="non-virtual"><scope>Process</scope><name>profiling</name></member>
+      <member refid="class_process_1a6f1fdb3ef348ebe19f1fd44671edfed8" prot="public" virt="non-virtual"><scope>Process</scope><name>setAffinity</name></member>
+      <member refid="class_process_1af55a4774a1519b84988e4e3ec3fcc7a2" prot="public" virt="non-virtual"><scope>Process</scope><name>setCodeSize</name></member>
+      <member refid="class_process_1a8fb82ba026f5530a9f9724fbf1142aba" prot="public" virt="non-virtual"><scope>Process</scope><name>setConcurrency</name></member>
+      <member refid="class_process_1a43c73ef0483b869e4231830eeff46d48" prot="public" virt="non-virtual"><scope>Process</scope><name>setCriticality</name></member>
+      <member refid="class_process_1a268bc20c1c875e94e50c5d6d1ad9ec06" prot="public" virt="non-virtual"><scope>Process</scope><name>setDataSize</name></member>
+      <member refid="class_process_1a3aaefcd2768bd481e22228851b161546" prot="public" virt="non-virtual"><scope>Process</scope><name>setDataType</name></member>
+      <member refid="class_process_1a2991ac041e868df69f3f394ee91791cb" prot="public" virt="non-virtual"><scope>Process</scope><name>setEnergy</name></member>
+      <member refid="class_process_1a74caf223f4391e3145eee5899b30a09b" prot="public" virt="non-virtual"><scope>Process</scope><name>setEqGate</name></member>
+      <member refid="class_process_1ac2d4d655dc9fe6317889938783ec2848" prot="public" virt="non-virtual"><scope>Process</scope><name>setId</name></member>
+      <member refid="class_process_1a9d9cfc179387b12e2bb1cdc214b6a9d8" prot="public" virt="non-virtual"><scope>Process</scope><name>setLoad</name></member>
+      <member refid="class_process_1af196d2bb3cb88dbf0c517428e7b09538" prot="public" virt="non-virtual"><scope>Process</scope><name>setMemSize</name></member>
+      <member refid="class_process_1ad1d3a2fd1af703ff1b986512d675660b" prot="public" virt="non-virtual"><scope>Process</scope><name>setName</name></member>
+      <member refid="class_process_1a011879a0a11d6bacd3a6d768293ab0d2" prot="public" virt="non-virtual"><scope>Process</scope><name>setPriority</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

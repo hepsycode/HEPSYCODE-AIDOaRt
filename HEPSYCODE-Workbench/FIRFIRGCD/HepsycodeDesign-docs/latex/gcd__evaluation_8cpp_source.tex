@@ -1,0 +1,111 @@
+\hypertarget{gcd__evaluation_8cpp_source}{}\doxysection{gcd\+\_\+evaluation.\+cpp}
+\label{gcd__evaluation_8cpp_source}\index{HepsycodeDesign/src/processesInstr/gcd\_evaluation.cpp@{HepsycodeDesign/src/processesInstr/gcd\_evaluation.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * University of L'Aquila -\/ HEPSYCODE Source Code License                       *}}
+\DoxyCodeLine{00003 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00004 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00005 \textcolor{comment}{ * (c) 2018-\/2019 Centre of Excellence DEWS All rights reserved                  *}}
+\DoxyCodeLine{00006 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00007 \textcolor{comment}{ * <one line to give the program's name and a brief idea of what it does.>      *}}
+\DoxyCodeLine{00008 \textcolor{comment}{ * Copyright (C) 2022  Vittoriano Muttillo, Luigi Pomante                       *                                    *}}
+\DoxyCodeLine{00009 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00010 \textcolor{comment}{ * This program is free software: you can redistribute it and/or modify         *}}
+\DoxyCodeLine{00011 \textcolor{comment}{ * it under the terms of the GNU General Public License as published by         *}}
+\DoxyCodeLine{00012 \textcolor{comment}{ * the Free Software Foundation, either version 3 of the License, or            *}}
+\DoxyCodeLine{00013 \textcolor{comment}{ * (at your option) any later version.                                          *}}
+\DoxyCodeLine{00014 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00015 \textcolor{comment}{ * This program is distributed in the hope that it will be useful,              *}}
+\DoxyCodeLine{00016 \textcolor{comment}{ * but WITHOUT ANY WARRANTY; without even the implied warranty of               *}}
+\DoxyCodeLine{00017 \textcolor{comment}{ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the                *}}
+\DoxyCodeLine{00018 \textcolor{comment}{ * GNU General Public License for more details.                                 *}}
+\DoxyCodeLine{00019 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00020 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00021 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00022 \textcolor{comment}{ * Created on: 09/May/2022                                                      *}}
+\DoxyCodeLine{00023 \textcolor{comment}{ * Authors: Vittoriano Muttillo, Luigi Pomante                                  *}}
+\DoxyCodeLine{00024 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00025 \textcolor{comment}{ * email: vittoriano.muttillo@guest.univaq.it                                   *}}
+\DoxyCodeLine{00026 \textcolor{comment}{ *        luigi.pomante@univaq.it                                               *}}
+\DoxyCodeLine{00027 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00028 \textcolor{comment}{ ********************************************************************************}}
+\DoxyCodeLine{00029 \textcolor{comment}{ * This code has been developed from an HEPSYCODE model used as demonstrator by *}}
+\DoxyCodeLine{00030 \textcolor{comment}{ * University of L'Aquila.                                                      *}}
+\DoxyCodeLine{00031 \textcolor{comment}{ *                                                                              *}}
+\DoxyCodeLine{00032 \textcolor{comment}{ * The code is used as a working example in the 'Embedded Systems' course of    *}}
+\DoxyCodeLine{00033 \textcolor{comment}{ * the Master in Conputer Science Engineering offered by the                    *}}
+\DoxyCodeLine{00034 \textcolor{comment}{ * University of L'Aquila                                                       *}}
+\DoxyCodeLine{00035 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{00037 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00038 \textcolor{comment}{ * gcd\_evaluatin : FirFirGCD GCD Evaluation process.}}
+\DoxyCodeLine{00039 \textcolor{comment}{ *}}
+\DoxyCodeLine{00040 \textcolor{comment}{ * GCD Evaluation process: CSP Process specifying the functionality of}}
+\DoxyCodeLine{00041 \textcolor{comment}{ * the GCD Evaluation component}}
+\DoxyCodeLine{00042 \textcolor{comment}{ *}}
+\DoxyCodeLine{00043 \textcolor{comment}{********************************************************************************/}}
+\DoxyCodeLine{00044 }
+\DoxyCodeLine{00052 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00053 \textcolor{comment}{ ***                                Includes                                  ***}}
+\DoxyCodeLine{00054 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00055 }
+\DoxyCodeLine{00056 \textcolor{preprocessor}{\#include "../mainsystem.h"}}
+\DoxyCodeLine{00057 }
+\DoxyCodeLine{00058 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00059 \textcolor{comment}{ ***                                Functions                                 ***}}
+\DoxyCodeLine{00060 \textcolor{comment}{ *******************************************************************************/}}
+\DoxyCodeLine{00061 }
+\DoxyCodeLine{00063 \textcolor{comment}{// SBM DEPENDENT}}
+\DoxyCodeLine{00065 \textcolor{comment}{}}
+\DoxyCodeLine{00066 \textcolor{comment}{//gcde}}
+\DoxyCodeLine{00067 \textcolor{keywordtype}{void} mainsystem::gcd\_evaluation()}
+\DoxyCodeLine{00068 \{}
+\DoxyCodeLine{00069     \textcolor{comment}{// datatype for channels}}
+\DoxyCodeLine{00070     \mbox{\hyperlink{structgcde__parameters}{gcde\_parameters}} gcde\_p;}
+\DoxyCodeLine{00071     \mbox{\hyperlink{structgcde__results}{gcde\_results}} gcde\_r;}
+\DoxyCodeLine{00072 }
+\DoxyCodeLine{00073     \textcolor{comment}{// local variables}}
+\DoxyCodeLine{00074     sc\_uint<8>  sample1;}
+\DoxyCodeLine{00075     sc\_uint<8>  sample2;}
+\DoxyCodeLine{00076 }
+\DoxyCodeLine{00077     \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8dadf90e6465f134074619ec58b5467394d}{gcde\_id}}) \textcolor{keywordflow}{while}(1)}
+\DoxyCodeLine{00078     \{\mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8dadf90e6465f134074619ec58b5467394d}{gcde\_id}})}
+\DoxyCodeLine{00079 }
+\DoxyCodeLine{00080         \textcolor{comment}{// read parameters from channel}}
+\DoxyCodeLine{00081         \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8dadf90e6465f134074619ec58b5467394d}{gcde\_id}}) gcde\_p=gcde\_parameters\_channel-\/>read();}
+\DoxyCodeLine{00082 }
+\DoxyCodeLine{00083         \textcolor{comment}{// fill local variables}}
+\DoxyCodeLine{00084         \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8dadf90e6465f134074619ec58b5467394d}{gcde\_id}}) sample1=gcde\_p.\mbox{\hyperlink{structgcde__parameters_a6a87f3b51d21aa5c2d23625fa8e02216}{sample1}};}
+\DoxyCodeLine{00085         \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8dadf90e6465f134074619ec58b5467394d}{gcde\_id}}) sample2=gcde\_p.\mbox{\hyperlink{structgcde__parameters_aca29a1b102b8cfb96f79e8254ef3477e}{sample2}};}
+\DoxyCodeLine{00086 }
+\DoxyCodeLine{00087         \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8dadf90e6465f134074619ec58b5467394d}{gcde\_id}}) \textcolor{keywordflow}{while}(sample1!=sample2)}
+\DoxyCodeLine{00088         \{\mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8dadf90e6465f134074619ec58b5467394d}{gcde\_id}})}
+\DoxyCodeLine{00089 }
+\DoxyCodeLine{00090             \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8dadf90e6465f134074619ec58b5467394d}{gcde\_id}}) \textcolor{keywordflow}{if} (sample1>sample2) \textcolor{comment}{//HEPSY\_S rules: IF like WHILE}}
+\DoxyCodeLine{00091             \{\mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8dadf90e6465f134074619ec58b5467394d}{gcde\_id}})}
+\DoxyCodeLine{00092                 \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8dadf90e6465f134074619ec58b5467394d}{gcde\_id}}) sample1=sample1-\/sample2;}
+\DoxyCodeLine{00093             \}}
+\DoxyCodeLine{00094             \textcolor{keywordflow}{else} \textcolor{comment}{//HEPSY\_S rules: ELSE like WHILE}}
+\DoxyCodeLine{00095             \{\mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8dadf90e6465f134074619ec58b5467394d}{gcde\_id}})}
+\DoxyCodeLine{00096                 \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8dadf90e6465f134074619ec58b5467394d}{gcde\_id}}) sample2= sample2-\/sample1;}
+\DoxyCodeLine{00097             \}}
+\DoxyCodeLine{00098 }
+\DoxyCodeLine{00099         \}}
+\DoxyCodeLine{00100 }
+\DoxyCodeLine{00101         \textcolor{comment}{// fill datatype}}
+\DoxyCodeLine{00102         \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8dadf90e6465f134074619ec58b5467394d}{gcde\_id}}) gcde\_r.\mbox{\hyperlink{structgcde__results_adc9a829b13114c46522b001c376af7ec}{result}}=sample1;}
+\DoxyCodeLine{00103 }
+\DoxyCodeLine{00104         \textcolor{comment}{// send results to channel}}
+\DoxyCodeLine{00105         \mbox{\hyperlink{group__firfirgcd__macros__group_ga09b182b87a0936087ba1ff3ce91755e7}{HEPSY\_S}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8dadf90e6465f134074619ec58b5467394d}{gcde\_id}}) gcde\_results\_channel-\/>write(gcde\_r);}
+\DoxyCodeLine{00106 }
+\DoxyCodeLine{00107         \textcolor{comment}{// Profiling}}
+\DoxyCodeLine{00108         \mbox{\hyperlink{group__firfirgcd__macros__group_ga652f3387e2319f751a6459f9db47cc3a}{HEPSY\_P}}(\mbox{\hyperlink{group__firfirgcd__define__group_gga8cfe71cc954d3c9e38dec20b50392b8dadf90e6465f134074619ec58b5467394d}{gcde\_id}})}
+\DoxyCodeLine{00109     \}}
+\DoxyCodeLine{00110 \}}
+\DoxyCodeLine{00111 }
+\DoxyCodeLine{00112 \textcolor{comment}{/********************************************************************************}}
+\DoxyCodeLine{00113 \textcolor{comment}{ ***                                  EOF                                     ***}}
+\DoxyCodeLine{00114 \textcolor{comment}{ ********************************************************************************/}}
+
+\end{DoxyCode}

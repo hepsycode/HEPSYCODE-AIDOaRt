@@ -1,0 +1,244 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="group__firfirgcd__csp__channel__group" kind="group">
+    <compoundname>firfirgcd_csp_channel_group</compoundname>
+    <title>FirFirGCD CSP Channel.</title>
+    <innerclass refid="classsc__csp__channel" prot="public">sc_csp_channel</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad" prot="public" static="no" mutable="no">
+        <type><ref refid="class_system_manager" kindref="compound">SystemManager</ref> *</type>
+        <definition>SystemManager* pSystemManager</definition>
+        <argsstring></argsstring>
+        <name>pSystemManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="80" column="22" bodyfile="HepsycodeDesign/src/main.cpp" bodystart="163" bodyend="-1" declfile="HepsycodeDesign/src/sc_csp_channel.h" declline="80" declcolumn="22"/>
+        <referencedby refid="group__firfirgcd__csp__channel__group_1ga8be7bf7ee4f0c35e684b3de9a5163705" compoundref="sc__csp__channel_8h" startline="442" endline="505">sc_csp_channel&lt; T &gt;::init</referencedby>
+        <referencedby refid="group__firfirgcd__csp__channel__group_1ga23046a4820dcf9ef26a75eba9cb7d49b" compoundref="sc__csp__channel_8h" startline="232" endline="305">sc_csp_channel&lt; T &gt;::read</referencedby>
+        <referencedby refid="classsc__csp__channel_1a18caf07ac6dda7298155bf5bee992f81" compoundref="sc__csp__channel_8h" startline="110" endline="127">sc_csp_channel&lt; T &gt;::sc_csp_channel</referencedby>
+        <referencedby refid="group__firfirgcd__csp__channel__group_1gaf8a9ace576ff2e0462c8db276f9f388d" compoundref="sc__csp__channel_8h" startline="322" endline="428">sc_csp_channel&lt; T &gt;::write</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48" prot="public" static="no" mutable="no">
+        <type>SchedulingManager *</type>
+        <definition>SchedulingManager* pSchedulingManager</definition>
+        <argsstring></argsstring>
+        <name>pSchedulingManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="81" column="26" bodyfile="HepsycodeDesign/src/main.cpp" bodystart="166" bodyend="-1" declfile="HepsycodeDesign/src/sc_csp_channel.h" declline="81" declcolumn="26"/>
+        <referencedby refid="group__firfirgcd__csp__channel__group_1ga23046a4820dcf9ef26a75eba9cb7d49b" compoundref="sc__csp__channel_8h" startline="232" endline="305">sc_csp_channel&lt; T &gt;::read</referencedby>
+        <referencedby refid="group__firfirgcd__main__group_1ga865e3def6cd1a641230218579d0a958f" compoundref="main_8cpp" startline="177" endline="850">sc_main</referencedby>
+        <referencedby refid="group__firfirgcd__csp__channel__group_1gaf8a9ace576ff2e0462c8db276f9f388d" compoundref="sc__csp__channel_8h" startline="322" endline="428">sc_csp_channel&lt; T &gt;::write</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__firfirgcd__csp__channel__group_1ga5bbbddcd88383d3ed9ee425ad87ee58c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void sc_csp_channel&lt; T &gt;::register_port</definition>
+        <argsstring>(sc_port_base &amp;, const char *)</argsstring>
+        <name>register_port</name>
+        <param>
+          <type>sc_port_base &amp;</type>
+          <defname>port_</defname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <defname>if_typename_</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="131" column="18" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="202" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="function" id="group__firfirgcd__csp__channel__group_1ga23046a4820dcf9ef26a75eba9cb7d49b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void sc_csp_channel&lt; T &gt;::read</definition>
+        <argsstring>(T &amp;)</argsstring>
+        <name>read</name>
+        <reimplements refid="classsc__core_1_1sc__csp__channel__in__if_1a2649054eea07eb61937ea38891162e85">read</reimplements>
+        <param>
+          <type>T &amp;</type>
+          <defname>val_</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="134" column="14" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="232" bodyend="305"/>
+        <references refid="group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a5d178ae2be9d93ea4cbf1a9f0a2d9cbe" compoundref="define_8h" startline="127">active</references>
+        <references refid="class_system_manager_1abfd1d205fa299fa757e2b78d15724734" compoundref="_system_manager_8h" startline="107">SystemManager::allocationPS_BB</references>
+        <references refid="class_system_manager_1a21d2bb74e4472f99ec04243168e7964e" compoundref="_system_manager_8cpp" startline="267" endline="270">SystemManager::checkSPP</references>
+        <references refid="group__firfirgcd__macros__group_1ga0f83efd33ffbe62c58c798abb824fa94" compoundref="macros_8h" startline="156">HEPSY_TRACE_BB_STATE</references>
+        <references refid="group__firfirgcd__macros__group_1ga139185aa9c10392aada97618a69ee2cd" compoundref="macros_8h" startline="148">HEPSY_TRACE_CH_STATE</references>
+        <references refid="group__firfirgcd__macros__group_1gaf1fe2324408cd29c1e2dcd55f2e4a9c1" compoundref="macros_8h" startline="140">HEPSY_TRACE_PS_STATE</references>
+        <references refid="group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48" compoundref="main_8cpp" startline="166">pSchedulingManager</references>
+        <references refid="group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad" compoundref="main_8cpp" startline="163">pSystemManager</references>
+        <references refid="group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473" compoundref="define_8h" startline="126">ready</references>
+        <references refid="group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c" compoundref="define_8h" startline="126">running</references>
+        <references refid="group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a66e84e235b9e03b6fdfc7ffe7e775de8" compoundref="define_8h" startline="127">suspended</references>
+        <references refid="group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a4c97ffbad296d4a6b84b1c508fc5d32a" compoundref="define_8h" startline="126">waiting</references>
+      </memberdef>
+      <memberdef kind="function" id="group__firfirgcd__csp__channel__group_1gaf3eb60ce6aecbe88c0e72fdb19a1f7af" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>T</type>
+        <definition>T sc_csp_channel&lt; T &gt;::read</definition>
+        <argsstring>()</argsstring>
+        <name>read</name>
+        <reimplements refid="classsc__core_1_1sc__csp__channel__in__if_1a5e8076fced231d716900901e5d60f080">read</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="135" column="11" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="310" bodyend="315"/>
+      </memberdef>
+      <memberdef kind="function" id="group__firfirgcd__csp__channel__group_1gaf8a9ace576ff2e0462c8db276f9f388d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void sc_csp_channel&lt; T &gt;::write</definition>
+        <argsstring>(const T &amp;)</argsstring>
+        <name>write</name>
+        <reimplements refid="classsc__core_1_1sc__csp__channel__out__if_1ae0da34a87857ef8c638455cb6484004b">write</reimplements>
+        <param>
+          <type>const T &amp;</type>
+          <defname>val_</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="138" column="14" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="322" bodyend="428"/>
+        <references refid="group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a5d178ae2be9d93ea4cbf1a9f0a2d9cbe" compoundref="define_8h" startline="127">active</references>
+        <references refid="class_system_manager_1abfd1d205fa299fa757e2b78d15724734" compoundref="_system_manager_8h" startline="107">SystemManager::allocationPS_BB</references>
+        <references refid="class_system_manager_1a21d2bb74e4472f99ec04243168e7964e" compoundref="_system_manager_8cpp" startline="267" endline="270">SystemManager::checkSPP</references>
+        <references refid="group__firfirgcd__macros__group_1ga0f83efd33ffbe62c58c798abb824fa94" compoundref="macros_8h" startline="156">HEPSY_TRACE_BB_STATE</references>
+        <references refid="group__firfirgcd__macros__group_1ga139185aa9c10392aada97618a69ee2cd" compoundref="macros_8h" startline="148">HEPSY_TRACE_CH_STATE</references>
+        <references refid="group__firfirgcd__macros__group_1gaf1fe2324408cd29c1e2dcd55f2e4a9c1" compoundref="macros_8h" startline="140">HEPSY_TRACE_PS_STATE</references>
+        <references refid="group__firfirgcd__csp__channel__group_1gad142acf1b36eb3c83c6e67364d257d48" compoundref="main_8cpp" startline="166">pSchedulingManager</references>
+        <references refid="group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad" compoundref="main_8cpp" startline="163">pSystemManager</references>
+        <references refid="group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a620a31d3a677faaa9e000fb23967a473" compoundref="define_8h" startline="126">ready</references>
+        <references refid="group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90ab514bba77fe136c3a3b6f56b818f7b0c" compoundref="define_8h" startline="126">running</references>
+        <references refid="group__firfirgcd__define__group_1gga1a6b6fb557d8d37d59700faf4e4c9167a66e84e235b9e03b6fdfc7ffe7e775de8" compoundref="define_8h" startline="127">suspended</references>
+        <references refid="class_system_manager_1a7dcc3ae8736a6aad7e27f276706205a3" compoundref="_system_manager_8h" startline="97">SystemManager::VCH</references>
+        <references refid="group__firfirgcd__define__group_1ggadc6e5733fc3c22f0a7b2914188c49c90a4c97ffbad296d4a6b84b1c508fc5d32a" compoundref="define_8h" startline="126">waiting</references>
+      </memberdef>
+      <memberdef kind="function" id="group__firfirgcd__csp__channel__group_1ga216706630fbd1f222b428cc4e6aa523d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void sc_csp_channel&lt; T &gt;::trace</definition>
+        <argsstring>(sc_trace_file *tf) const</argsstring>
+        <name>trace</name>
+        <param>
+          <type>sc_trace_file *</type>
+          <declname>tf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="154" column="6" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="433" bodyend="436"/>
+      </memberdef>
+      <memberdef kind="function" id="group__firfirgcd__csp__channel__group_1ga8be7bf7ee4f0c35e684b3de9a5163705" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void sc_csp_channel&lt; T &gt;::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="161" column="6" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="442" bodyend="505"/>
+        <references refid="class_system_manager_1ab75b55327c942c6950f67c14ba9dea08" compoundref="_system_manager_8h" startline="110">SystemManager::allocationCH_PL</references>
+        <references refid="class_system_manager_1abfd1d205fa299fa757e2b78d15724734" compoundref="_system_manager_8h" startline="107">SystemManager::allocationPS_BB</references>
+        <references refid="group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8dab8bd51b016c7432eb1d0071f9677defe" compoundref="define_8h" startline="78">display_id</references>
+        <references refid="group__firfirgcd__csp__channel__group_1gaa604ac51b2579794e702367934dfb8ad" compoundref="main_8cpp" startline="163">pSystemManager</references>
+        <references refid="group__firfirgcd__define__group_1gga8cfe71cc954d3c9e38dec20b50392b8da6a6acb823daa9d2547901e1e253f1a92" compoundref="define_8h" startline="78">stimulus_id</references>
+        <references refid="class_system_manager_1a7c1edef68a5e44e1812c3401dd0b4e32" compoundref="_system_manager_8h" startline="100">SystemManager::VBB</references>
+        <references refid="class_system_manager_1af28a1744a2d964a7047c31c6a5f1644a" compoundref="_system_manager_8h" startline="103">SystemManager::VPL</references>
+      </memberdef>
+      <memberdef kind="function" id="group__firfirgcd__csp__channel__group_1gab1a08e5d4129f9647e573af0c4ca4f30" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool sc_csp_channel&lt; T &gt;::read_test</definition>
+        <argsstring>()</argsstring>
+        <name>read_test</name>
+        <reimplements refid="classsc__core_1_1sc__csp__channel__in__if_1ad7139da842ceebdc4c64d4cf2b02d371">read_test</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="141" column="14" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="513" bodyend="516"/>
+      </memberdef>
+      <memberdef kind="function" id="group__firfirgcd__csp__channel__group_1ga3566fb8ed3dc3ba7ab7d6dbe17787153" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>bool sc_csp_channel&lt; T &gt;::write_test</definition>
+        <argsstring>()</argsstring>
+        <name>write_test</name>
+        <reimplements refid="classsc__core_1_1sc__csp__channel__out__if_1af4f0e8a520cdb556754743a056fa4e37">write_test</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="142" column="14" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="522" bodyend="525"/>
+      </memberdef>
+      <memberdef kind="function" id="group__firfirgcd__csp__channel__group_1gaaed132e73280fe2a46b14604240832bc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void sc_csp_channel&lt; T &gt;::register_alt</definition>
+        <argsstring>()</argsstring>
+        <name>register_alt</name>
+        <reimplements refid="classsc__core_1_1sc__csp__channel__in__if_1a163aae4bbe4ad9f8dcee26b330e929d1">register_alt</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="143" column="14" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="531" bodyend="534"/>
+      </memberdef>
+      <memberdef kind="function" id="group__firfirgcd__csp__channel__group_1ga40cb801a3a15df214563c89160c6d19c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>const sc_event &amp;</type>
+        <definition>const sc_event &amp; sc_csp_channel&lt; T &gt;::get_alt_event</definition>
+        <argsstring>()</argsstring>
+        <name>get_alt_event</name>
+        <reimplements refid="classsc__core_1_1sc__csp__channel__in__if_1acf52a1d31829961428e7205a835f8973">get_alt_event</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HepsycodeDesign/src/sc_csp_channel.h" line="144" column="25" bodyfile="HepsycodeDesign/src/sc_csp_channel.h" bodystart="540" bodyend="543"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>CSP <ref refid="class_channel" kindref="compound">Channel</ref> Implementation. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>V. Muttillo, L. Pomante </para>
+</simplesect>
+<simplesect kind="date"><para>Apr. 2022 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

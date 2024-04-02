@@ -1,0 +1,707 @@
+./pareto
+Choose the first objective function to consider 
+Choose the second objective function to consider 
+Creating dataset 1...
+
+Creation dataset 1: 0.053762
+
+front size: 1
+Individual added to the Pareto front
+Front size: 2
+Individual added to the Pareto front
+Front size: 3
+Individual added to the Pareto front
+Front size: 4
+Individual added to the Pareto front
+Front size: 5
+Individual added to the Pareto front
+Front size: 6
+Individual added to the Pareto front
+Front size: 7
+Individual added to the Pareto front
+Front size: 8
+
+Pareto Front computation: 0.000882
+
+###GENERATION 0###
+######INFO PARETO FRONT INDIVIDUALS######
+
+Number of Pareto front individuals: 8
+INDIVIDUAL n°: 6884
+cost: 0.190306
+energyTC: 0.25025
+Cost function: 0.417737
+Processors: 0
+
+
+INDIVIDUAL n°: 1236
+cost: 0.190306
+energyTC: 0.25025
+Cost function: 0.387771
+Processors: 1
+
+
+INDIVIDUAL n°: 706
+cost: 0.210384
+energyTC: 0.2255
+Cost function: 0.379317
+Processors: 2
+
+
+INDIVIDUAL n°: 3528
+cost: 0.239199
+energyTC: 0.22525
+Cost function: 0.334838
+Processors: 3
+
+
+INDIVIDUAL n°: 3
+cost: 0.294059
+energyTC: 0.025
+Cost function: 0.18882
+Processors: 2
+
+
+INDIVIDUAL n°: 4
+cost: 0.294059
+energyTC: 0.025
+Cost function: 0.18882
+Processors: 3
+
+
+INDIVIDUAL n°: 2
+cost: 1
+energyTC: 0.00025
+Cost function: 0.5001
+Processors: 1
+
+
+INDIVIDUAL n°: 1
+cost: 1
+energyTC: 0.00025
+Cost function: 0.5001
+Processors: 0
+
+
+Creating dataset 2...
+
+Creation dataset 2: 0.123929
+
+front size: 1
+Individual added to the Pareto front
+Front size: 2
+Individual added to the Pareto front
+Front size: 3
+Individual added to the Pareto front
+Front size: 4
+Individual added to the Pareto front
+Front size: 5
+Individual added to the Pareto front
+Front size: 6
+Individual added to the Pareto front
+Front size: 7
+Individual added to the Pareto front
+Front size: 8
+Individual added to the Pareto front
+Front size: 9
+Individual added to the Pareto front
+Front size: 10
+Individual added to the Pareto front
+Front size: 11
+Individual added to the Pareto front
+Front size: 12
+Individual added to the Pareto front
+Front size: 13
+Individual added to the Pareto front
+Front size: 14
+Individual added to the Pareto front
+Front size: 15
+Individual added to the Pareto front
+Front size: 16
+Individual added to the Pareto front
+Front size: 17
+Individual added to the Pareto front
+Front size: 18
+Individual added to the Pareto front
+Front size: 19
+Individual added to the Pareto front
+Front size: 20
+Individual added to the Pareto front
+Front size: 21
+Individual added to the Pareto front
+Front size: 22
+Individual added to the Pareto front
+Front size: 23
+Individual added to the Pareto front
+Front size: 24
+Individual added to the Pareto front
+Front size: 25
+Individual added to the Pareto front
+Front size: 26
+Individual added to the Pareto front
+Front size: 27
+Individual added to the Pareto front
+Front size: 28
+Individual added to the Pareto front
+Front size: 29
+Individual added to the Pareto front
+Front size: 30
+Individual added to the Pareto front
+Front size: 31
+Individual added to the Pareto front
+Front size: 32
+Individual added to the Pareto front
+Front size: 33
+Individual added to the Pareto front
+Front size: 34
+Individual added to the Pareto front
+Front size: 35
+Individual added to the Pareto front
+Front size: 36
+Individual added to the Pareto front
+Front size: 37
+Individual added to the Pareto front
+Front size: 38
+Individual added to the Pareto front
+Front size: 39
+Individual added to the Pareto front
+Front size: 40
+Individual added to the Pareto front
+Front size: 41
+Individual added to the Pareto front
+Front size: 42
+Individual added to the Pareto front
+Front size: 43
+Individual added to the Pareto front
+Front size: 44
+Individual added to the Pareto front
+Front size: 45
+Individual added to the Pareto front
+Front size: 46
+Individual added to the Pareto front
+Front size: 47
+Individual added to the Pareto front
+Front size: 48
+Individual added to the Pareto front
+Front size: 49
+Individual added to the Pareto front
+Front size: 50
+Individual added to the Pareto front
+Front size: 51
+Individual added to the Pareto front
+Front size: 52
+Individual added to the Pareto front
+Front size: 53
+Individual added to the Pareto front
+Front size: 54
+Individual added to the Pareto front
+Front size: 55
+Individual added to the Pareto front
+Front size: 56
+Individual added to the Pareto front
+Front size: 57
+Individual added to the Pareto front
+Front size: 58
+Individual added to the Pareto front
+Front size: 59
+Individual added to the Pareto front
+Front size: 60
+Individual added to the Pareto front
+Front size: 61
+Individual added to the Pareto front
+Front size: 62
+Individual added to the Pareto front
+Front size: 63
+Individual added to the Pareto front
+Front size: 64
+Individual added to the Pareto front
+Front size: 65
+Individual added to the Pareto front
+Front size: 66
+Individual added to the Pareto front
+Front size: 67
+Individual added to the Pareto front
+Front size: 68
+
+Pareto Front computation: 0.005606
+
+###GENERATION 50###
+######INFO PARETO FRONT INDIVIDUALS######
+
+Number of Pareto front individuals: 68
+INDIVIDUAL n°: 48776
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 996
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 17118
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 13791
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 5823
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 5821
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 44867
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 30249
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 49396
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 42608
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 9469
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 49381
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 23264
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 3096
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 48731
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 34761
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 48580
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 35510
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 10195
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 33444
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 3892
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 36602
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 22987
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 36778
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 32991
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 41607
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 26197
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 14695
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 28130
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 31161
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 38943
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 43000
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 31519
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 43146
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 31038
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 23794
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 18667
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 5292
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 1957
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 29487
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 13462
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 28801
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 25615
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 9820
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 40708
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 46535
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 19422
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 43325
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 43296
+cost: 0.18916
+energyTC: 0.22525
+Cost function: 0.326167
+Processors: 1
+
+
+INDIVIDUAL n°: 754
+cost: 0.310804
+energyTC: 0.05025
+Cost function: 0.276684
+Processors: 2
+
+
+INDIVIDUAL n°: 34499
+cost: 0.423357
+energyTC: 0.0255
+Cost function: 0.317939
+Processors: 0
+
+
+INDIVIDUAL n°: 46452
+cost: 0.423357
+energyTC: 0.0255
+Cost function: 0.317939
+Processors: 0
+
+
+INDIVIDUAL n°: 20601
+cost: 0.423357
+energyTC: 0.0255
+Cost function: 0.317939
+Processors: 0
+
+
+INDIVIDUAL n°: 40460
+cost: 0.423357
+energyTC: 0.0255
+Cost function: 0.317939
+Processors: 0
+
+
+INDIVIDUAL n°: 42290
+cost: 0.423357
+energyTC: 0.0255
+Cost function: 0.317939
+Processors: 0
+
+
+INDIVIDUAL n°: 6208
+cost: 0.423357
+energyTC: 0.0255
+Cost function: 0.317939
+Processors: 0
+
+
+INDIVIDUAL n°: 46812
+cost: 0.423357
+energyTC: 0.0255
+Cost function: 0.317939
+Processors: 0
+
+
+INDIVIDUAL n°: 13157
+cost: 0.423357
+energyTC: 0.0255
+Cost function: 0.317939
+Processors: 0
+
+
+INDIVIDUAL n°: 29806
+cost: 0.423357
+energyTC: 0.0255
+Cost function: 0.317939
+Processors: 0
+
+
+INDIVIDUAL n°: 39251
+cost: 0.423357
+energyTC: 0.0255
+Cost function: 0.317939
+Processors: 0
+
+
+INDIVIDUAL n°: 24973
+cost: 0.423357
+energyTC: 0.0255
+Cost function: 0.317939
+Processors: 0
+
+
+INDIVIDUAL n°: 7518
+cost: 0.423357
+energyTC: 0.0255
+Cost function: 0.317939
+Processors: 0
+
+
+INDIVIDUAL n°: 30974
+cost: 0.423357
+energyTC: 0.0255
+Cost function: 0.317939
+Processors: 0
+
+
+INDIVIDUAL n°: 25731
+cost: 0.423357
+energyTC: 0.0255
+Cost function: 0.317939
+Processors: 0
+
+
+INDIVIDUAL n°: 37354
+cost: 0.536678
+energyTC: 0.02525
+Cost function: 0.214145
+Processors: 3
+
+
+INDIVIDUAL n°: 42507
+cost: 0.536678
+energyTC: 0.02525
+Cost function: 0.214145
+Processors: 3
+
+
+INDIVIDUAL n°: 42505
+cost: 1
+energyTC: 0.0005
+Cost function: 0.484827
+Processors: 0
+
+
+INDIVIDUAL n°: 9213
+cost: 1
+energyTC: 0.0005
+Cost function: 0.484827
+Processors: 0
+
+

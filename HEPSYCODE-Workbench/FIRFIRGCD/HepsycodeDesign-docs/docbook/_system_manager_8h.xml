@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__system_manager_8h">
+<title>HepsycodeDesign/src/SystemManager.h File Reference</title>
+<indexterm><primary>HepsycodeDesign/src/SystemManager.h</primary></indexterm>
+<para>
+
+<para>HEPSIM System Manager Documented file. </para>
+ 
+</para>
+<programlisting>#include &lt;systemc.h&gt;
+#include &lt;iostream&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;vector&gt;
+#include &quot;tl.h&quot;
+#include &quot;define.h&quot;
+</programlisting>Include dependency graph for SystemManager.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_system_manager_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_system_manager_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_system_manager">SystemManager</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>HEPSIM System Manager Documented file. </para>
+
+<para>System Manager: System Manager file </para>
+</section>
+</section>

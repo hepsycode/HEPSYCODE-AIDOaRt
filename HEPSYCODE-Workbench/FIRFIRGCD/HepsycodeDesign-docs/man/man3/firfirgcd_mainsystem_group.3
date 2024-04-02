@@ -1,0 +1,117 @@
+.TH "firfirgcd_mainsystem_group" 3 "Mon Mar 20 2023" "FirFirGCD Application" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+firfirgcd_mainsystem_group \- Mainsystem Implementation\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSC_MODULE\fP (mainsystem)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Mainsystem Implementation\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+V\&. Muttillo, L\&. Pomante 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+Apr\&. 2022 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "SC_MODULE (mainsystem)"
+
+.PP
+Definition at line 80 of file mainsystem\&.h\&.
+.PP
+.nf
+81 {
+82     // Ports for testbench connections
+83     sc_port< sc_csp_channel_in_if< sc_uint<8> > > stim1_channel_port;
+84     sc_port< sc_csp_channel_in_if< sc_uint<8> > > stim2_channel_port;
+85     sc_port< sc_csp_channel_out_if< sc_uint<8> > > result_channel_port;
+86 
+87     // PROCESSES
+88 
+89     void fir8_main();
+90     void fir8_evaluation();
+91     void fir8_shifting();
+92 
+93     void fir16_main();
+94     void fir16_evaluation();
+95     void fir16_shifting();
+96 
+97     // Process
+98     void gcd_main();
+99     void gcd_evaluation();
+100 
+101     // CHANNELS
+102 
+103     // fir8
+104     sc_csp_channel< fir8e_parameters > *fir8e_parameters_channel;
+105     sc_csp_channel< fir8e_results > *fir8e_results_channel;
+106     sc_csp_channel< fir8s_parameters > *fir8s_parameters_channel;
+107     sc_csp_channel< fir8s_results > *fir8s_results_channel;
+108 
+109     // fir16
+110     sc_csp_channel< fir16e_parameters > *fir16e_parameters_channel;
+111     sc_csp_channel< fir16e_results > *fir16e_results_channel;
+112     sc_csp_channel< fir16s_parameters > *fir16s_parameters_channel;
+113     sc_csp_channel< fir16s_results > *fir16s_results_channel;
+114 
+115     // gcd
+116     sc_csp_channel< gcde_parameters > *gcde_parameters_channel;
+117     sc_csp_channel< gcde_results > *gcde_results_channel;
+118 
+119     // Inter-process connections
+120     sc_csp_channel< sc_uint<8> > *results8_channel;
+121     sc_csp_channel< sc_uint<8> >   *results16_channel;
+122 
+123     SC_CTOR(mainsystem)
+124     {
+125         fir8e_parameters_channel= new sc_csp_channel< fir8e_parameters > (0);
+126         fir8e_results_channel= new sc_csp_channel< fir8e_results > (1);
+127         fir8s_parameters_channel= new sc_csp_channel< fir8s_parameters > (2);
+128         fir8s_results_channel= new sc_csp_channel< fir8s_results > (3);
+129 
+130         fir16e_parameters_channel= new sc_csp_channel< fir16e_parameters > (4);
+131         fir16e_results_channel= new sc_csp_channel< fir16e_results > (5);
+132         fir16s_parameters_channel= new sc_csp_channel< fir16s_parameters > (6);
+133         fir16s_results_channel= new sc_csp_channel< fir16s_results > (7);
+134 
+135         gcde_parameters_channel = new sc_csp_channel< gcde_parameters > (10);
+136         gcde_results_channel = new sc_csp_channel< gcde_results > (11);
+137 
+138         results8_channel= new sc_csp_channel< sc_uint<8> > (8);
+139         results16_channel= new sc_csp_channel< sc_uint<8> > (9);
+140 
+141         SC_THREAD(fir8_main);
+142         SC_THREAD(fir8_evaluation);
+143         SC_THREAD(fir8_shifting);
+144 
+145         SC_THREAD(fir16_main);
+146         SC_THREAD(fir16_evaluation);
+147         SC_THREAD(fir16_shifting);
+148 
+149         SC_THREAD(gcd_main);
+150         SC_THREAD(gcd_evaluation);
+151     }
+152 };
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FirFirGCD Application from the source code\&.

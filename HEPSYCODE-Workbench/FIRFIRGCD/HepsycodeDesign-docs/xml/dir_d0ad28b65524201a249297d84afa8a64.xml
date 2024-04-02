@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_d0ad28b65524201a249297d84afa8a64" kind="dir">
+    <compoundname>HepsycodeDesign/src</compoundname>
+    <innerdir refid="dir_252a37b1f9b2b9bfd1d0c56a538601c6">HepsycodeDesign/src/processesInstr</innerdir>
+    <innerfile refid="datatype_8h">datatype.h</innerfile>
+    <innerfile refid="define_8h">define.h</innerfile>
+    <innerfile refid="display_8cpp">display.cpp</innerfile>
+    <innerfile refid="display_8h">display.h</innerfile>
+    <innerfile refid="macros_8h">macros.h</innerfile>
+    <innerfile refid="main_8cpp">main.cpp</innerfile>
+    <innerfile refid="mainsystem_8h">mainsystem.h</innerfile>
+    <innerfile refid="sc__csp__channel_8h">sc_csp_channel.h</innerfile>
+    <innerfile refid="sc__csp__channel__ifs_8h">sc_csp_channel_ifs.h</innerfile>
+    <innerfile refid="_scheduling_manager_8cpp">SchedulingManager.cpp</innerfile>
+    <innerfile refid="_scheduling_manager_8h">SchedulingManager.h</innerfile>
+    <innerfile refid="stim__gen_8cpp">stim_gen.cpp</innerfile>
+    <innerfile refid="stim__gen_8h">stim_gen.h</innerfile>
+    <innerfile refid="_system_manager_8cpp">SystemManager.cpp</innerfile>
+    <innerfile refid="_system_manager_8h">SystemManager.h</innerfile>
+    <innerfile refid="tl_8cpp">tl.cpp</innerfile>
+    <innerfile refid="tl_8h">tl.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HepsycodeDesign/src/"/>
+  </compounddef>
+</doxygen>

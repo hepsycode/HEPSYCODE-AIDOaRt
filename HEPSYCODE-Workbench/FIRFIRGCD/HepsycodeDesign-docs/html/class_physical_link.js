@@ -1,0 +1,27 @@
+var class_physical_link =
+[
+    [ "geta1", "class_physical_link.html#aa7897d3d8c11c58b493388604fc4a07b", null ],
+    [ "geta2", "class_physical_link.html#a162bd0bc2daadc05c98bf10844be6b36", null ],
+    [ "getBandwidth", "class_physical_link.html#add09ffe313fb274e4ab886d87f5bef9d", null ],
+    [ "getId", "class_physical_link.html#a6b1247a6652918c90b4ae99b9f2f5b88", null ],
+    [ "getName", "class_physical_link.html#a38870d04d7877b9ebe3a3a9252745fa4", null ],
+    [ "getPhysicalWidth", "class_physical_link.html#a5bd500fa155893a361f0884a3edefec7", null ],
+    [ "getTAcomm", "class_physical_link.html#acf0976c043aeef0e82b8482abf3bf4ec", null ],
+    [ "getTcomm", "class_physical_link.html#ae83d2eca88f0999b1ea7c6ee72a788a8", null ],
+    [ "seta1", "class_physical_link.html#a3a4bc3e300cf94a0105798d28ff7b8f2", null ],
+    [ "seta2", "class_physical_link.html#ab4e2b4917f65eb53ae125b6adf0f30b9", null ],
+    [ "setBandwidth", "class_physical_link.html#a8fcfa235def47bf09f6d3ae892dbb2c3", null ],
+    [ "setId", "class_physical_link.html#a4c1ca22f348862858653c4f02496218f", null ],
+    [ "setName", "class_physical_link.html#a720451548bfac94a60eca8c8f47d343b", null ],
+    [ "setPhysicalWidth", "class_physical_link.html#aaed942eff035eb7f0a45e5cadc0200ab", null ],
+    [ "setTAcomm", "class_physical_link.html#a9f72f16b0f7fa6b4976ab10c4988721c", null ],
+    [ "setTcomm", "class_physical_link.html#a5b75831c5c40358e35dac40e95abdd71", null ],
+    [ "a1", "class_physical_link.html#a46367b48d7ab1d5c06dd2051a6d5a32f", null ],
+    [ "a2", "class_physical_link.html#a2c8e1cba265b4e099ac6b07c7839de0e", null ],
+    [ "bandwidth", "class_physical_link.html#ac441e379b59ecb00c48ebef53f2d6b75", null ],
+    [ "id", "class_physical_link.html#a428c21ce3a75e45ac4e1da6967382f77", null ],
+    [ "name", "class_physical_link.html#ab7d8e236c3a63063c48a572753f92455", null ],
+    [ "physical_width", "class_physical_link.html#a38f205a4a97e9869b93944e0f820f11b", null ],
+    [ "tacomm", "class_physical_link.html#a2f2ff97a12a4c37da1892f0fc2e855b2", null ],
+    [ "tcomm", "class_physical_link.html#a90cb0e1c2a0d9951899b587d6d2b247a", null ]
+];

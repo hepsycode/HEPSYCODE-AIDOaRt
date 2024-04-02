@@ -1,0 +1,400 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_basic_block">
+<title>BasicBlock Class Reference</title>
+<indexterm><primary>BasicBlock</primary></indexterm>
+<para>
+<computeroutput>#include &lt;tl.h&gt;</computeroutput>
+</para>
+Collaboration diagram for BasicBlock:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_basic_block__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_class_basic_block_1ae1dead3b6fbfaaf11aa596013d9c3615">getName</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_basic_block_1a2be928b15c8a74a0f171f97c285791f2">setName</link> (string x)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_basic_block_1af7b05902e57ffd9e21fd582b3e49f29c">getId</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_basic_block_1a1abdc5c467f903b3bb6f51fb68283b21">setId</link> (int x)</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_basic_block_1a42cf1d9e35e3f2ded6510a2f3f9d2c74">getType</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_basic_block_1ae33921bd8c15b268aba6f5b1526f893b">setType</link> (string x)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_basic_block_1a23d2e5aa36d0b173d7e662493dee7db0">getIdPU</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_basic_block_1aae5e45d56ddfdd6c791f14fed105b544">setIdPU</link> (int x)</para>
+</listitem>
+            <listitem><para>vector&lt; <link linkend="_class_processing_unit">ProcessingUnit</link> &gt; <link linkend="_class_basic_block_1a5c247400a7e86e54f98bc5ea3a8b34d1">getProcessors</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_basic_block_1a4cbb966d0ce3b7364877cf6e46e33672">setProcessor</link> (vector&lt; <link linkend="_class_processing_unit">ProcessingUnit</link> &gt; pu)</para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_class_basic_block_1a201f977359d366099f7e63708fc1db80">getCodeSize</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_basic_block_1a14bbb26476609a17b226400d2fd8ec05">setCodeSize</link> (unsigned int c)</para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_class_basic_block_1a2e49d14597098dee219b8b628ec332e2">getDataSize</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_basic_block_1a9f71209e93288e8eb82311fe5961e2ff">setDataSize</link> (unsigned int c)</para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_class_basic_block_1ab4ae1a868abfaeb6a4003a9332b357cc">getEqG</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_basic_block_1aa3a9be4f5f76e76b91e5a3a009f95f44">setEqG</link> (unsigned int c)</para>
+</listitem>
+            <listitem><para>float <link linkend="_class_basic_block_1aa7ce9d2bdf5d92bf86b3e1290134af93">getFRT</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_basic_block_1aee9fb07de76f430ec78e48e85c3d5fd9">setFRT</link> (float x)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_class_basic_block_1a4cad9fc9592145fea0335e694df17ebf">name</link></para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_class_basic_block_1a306c90076760a7ccd52ffab5cba5a2f5">id</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_class_basic_block_1a730e1383a3247e3a456b6cea00575aed">type</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_basic_block_1ae5d66a26435ab7c34ac15de59eafe7b3">idPU</link></para>
+</listitem>
+            <listitem><para>vector&lt; <link linkend="_class_processing_unit">ProcessingUnit</link> &gt; <link linkend="_class_basic_block_1aaf3c4ccda26ba23923e66f1e77228f2c">vpu</link></para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_class_basic_block_1a298dcdfcc1736778a7262329d9204edd">codeSize</link></para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_class_basic_block_1ab89eed26cc943dd972c686391d7bbc69">dataSize</link></para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_class_basic_block_1a4c5622c7d3329c93c0bc39705bb19ff3">eqG</link></para>
+</listitem>
+            <listitem><para>float <link linkend="_class_basic_block_1a0cac9b02f5e385651a80c4469301a586">FRT</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line 219 of file tl.h.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_basic_block_1a201f977359d366099f7e63708fc1db80"/>    <section>
+    <title>getCodeSize()</title>
+<indexterm><primary>getCodeSize</primary><secondary>BasicBlock</secondary></indexterm>
+<indexterm><primary>BasicBlock</primary><secondary>getCodeSize</secondary></indexterm>
+<para><computeroutput>unsigned int BasicBlock::getCodeSize ( )</computeroutput></para><para>
+Definition at line 277 of file tl.cpp.</para>
+<programlisting>277 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+278 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_basic_block_1a298dcdfcc1736778a7262329d9204edd">codeSize</link>;
+279 }
+</programlisting>    </section><anchor xml:id="_class_basic_block_1a2e49d14597098dee219b8b628ec332e2"/>    <section>
+    <title>getDataSize()</title>
+<indexterm><primary>getDataSize</primary><secondary>BasicBlock</secondary></indexterm>
+<indexterm><primary>BasicBlock</primary><secondary>getDataSize</secondary></indexterm>
+<para><computeroutput>unsigned int BasicBlock::getDataSize ( )</computeroutput></para><para>
+Definition at line 285 of file tl.cpp.</para>
+<programlisting>285 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+286 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_basic_block_1ab89eed26cc943dd972c686391d7bbc69">dataSize</link>;
+287 }
+</programlisting>    </section><anchor xml:id="_class_basic_block_1ab4ae1a868abfaeb6a4003a9332b357cc"/>    <section>
+    <title>getEqG()</title>
+<indexterm><primary>getEqG</primary><secondary>BasicBlock</secondary></indexterm>
+<indexterm><primary>BasicBlock</primary><secondary>getEqG</secondary></indexterm>
+<para><computeroutput>unsigned int BasicBlock::getEqG ( )</computeroutput></para><para>
+Definition at line 293 of file tl.cpp.</para>
+<programlisting>293 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+294 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_basic_block_1a4c5622c7d3329c93c0bc39705bb19ff3">eqG</link>;
+295 }
+</programlisting>    </section><anchor xml:id="_class_basic_block_1aa7ce9d2bdf5d92bf86b3e1290134af93"/>    <section>
+    <title>getFRT()</title>
+<indexterm><primary>getFRT</primary><secondary>BasicBlock</secondary></indexterm>
+<indexterm><primary>BasicBlock</primary><secondary>getFRT</secondary></indexterm>
+<para><computeroutput>float BasicBlock::getFRT ( )</computeroutput></para><para>
+Definition at line 305 of file tl.cpp.</para>
+<programlisting>305 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+306 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_basic_block_1a0cac9b02f5e385651a80c4469301a586">FRT</link>;
+307 }
+</programlisting>    </section><anchor xml:id="_class_basic_block_1af7b05902e57ffd9e21fd582b3e49f29c"/>    <section>
+    <title>getId()</title>
+<indexterm><primary>getId</primary><secondary>BasicBlock</secondary></indexterm>
+<indexterm><primary>BasicBlock</primary><secondary>getId</secondary></indexterm>
+<para><computeroutput>int BasicBlock::getId ( )</computeroutput></para><para>
+Definition at line 229 of file tl.cpp.</para>
+<programlisting>230 {
+231 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_basic_block_1a306c90076760a7ccd52ffab5cba5a2f5">id</link>;
+232 }
+</programlisting>    </section><anchor xml:id="_class_basic_block_1a23d2e5aa36d0b173d7e662493dee7db0"/>    <section>
+    <title>getIdPU()</title>
+<indexterm><primary>getIdPU</primary><secondary>BasicBlock</secondary></indexterm>
+<indexterm><primary>BasicBlock</primary><secondary>getIdPU</secondary></indexterm>
+<para><computeroutput>int BasicBlock::getIdPU ( )</computeroutput></para><para>
+Definition at line 250 of file tl.cpp.</para>
+<programlisting>251 {
+252 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_basic_block_1ae5d66a26435ab7c34ac15de59eafe7b3">idPU</link>;
+253 }
+</programlisting>    </section><anchor xml:id="_class_basic_block_1ae1dead3b6fbfaaf11aa596013d9c3615"/>    <section>
+    <title>getName()</title>
+<indexterm><primary>getName</primary><secondary>BasicBlock</secondary></indexterm>
+<indexterm><primary>BasicBlock</primary><secondary>getName</secondary></indexterm>
+<para><computeroutput>string BasicBlock::getName ( )</computeroutput></para><para>
+Definition at line 219 of file tl.cpp.</para>
+<programlisting>220 {
+221 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;this-&gt;<link linkend="_class_basic_block_1a4cad9fc9592145fea0335e694df17ebf">name</link>;
+222 }
+</programlisting>    </section><anchor xml:id="_class_basic_block_1a5c247400a7e86e54f98bc5ea3a8b34d1"/>    <section>
+    <title>getProcessors()</title>
+<indexterm><primary>getProcessors</primary><secondary>BasicBlock</secondary></indexterm>
+<indexterm><primary>BasicBlock</primary><secondary>getProcessors</secondary></indexterm>
+<para><computeroutput>vector&lt; <link linkend="_class_processing_unit">ProcessingUnit</link> &gt; BasicBlock::getProcessors ( )</computeroutput></para><para>
+Definition at line 271 of file tl.cpp.</para>
+<programlisting>272 {
+273 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_basic_block_1aaf3c4ccda26ba23923e66f1e77228f2c">vpu</link>;
+274 }
+</programlisting>    </section><anchor xml:id="_class_basic_block_1a42cf1d9e35e3f2ded6510a2f3f9d2c74"/>    <section>
+    <title>getType()</title>
+<indexterm><primary>getType</primary><secondary>BasicBlock</secondary></indexterm>
+<indexterm><primary>BasicBlock</primary><secondary>getType</secondary></indexterm>
+<para><computeroutput>string BasicBlock::getType ( )</computeroutput></para><para>
+Definition at line 239 of file tl.cpp.</para>
+<programlisting>240 {
+241 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_basic_block_1a730e1383a3247e3a456b6cea00575aed">type</link>;
+242 }
+</programlisting>    </section><anchor xml:id="_class_basic_block_1a14bbb26476609a17b226400d2fd8ec05"/>    <section>
+    <title>setCodeSize()</title>
+<indexterm><primary>setCodeSize</primary><secondary>BasicBlock</secondary></indexterm>
+<indexterm><primary>BasicBlock</primary><secondary>setCodeSize</secondary></indexterm>
+<para><computeroutput>void BasicBlock::setCodeSize (unsigned int c)</computeroutput></para><para>
+Definition at line 281 of file tl.cpp.</para>
+<programlisting>281 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+282 &#32;&#32;&#32;&#32;this-&gt;<link linkend="_class_basic_block_1a298dcdfcc1736778a7262329d9204edd">codeSize</link>&#32;=&#32;c;
+283 }
+</programlisting><para>
+Referenced by SystemManager::generateBBInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_basic_block_a14bbb26476609a17b226400d2fd8ec05_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_basic_block_1a9f71209e93288e8eb82311fe5961e2ff"/>    <section>
+    <title>setDataSize()</title>
+<indexterm><primary>setDataSize</primary><secondary>BasicBlock</secondary></indexterm>
+<indexterm><primary>BasicBlock</primary><secondary>setDataSize</secondary></indexterm>
+<para><computeroutput>void BasicBlock::setDataSize (unsigned int c)</computeroutput></para><para>
+Definition at line 289 of file tl.cpp.</para>
+<programlisting>289 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+290 &#32;&#32;&#32;&#32;this-&gt;<link linkend="_class_basic_block_1ab89eed26cc943dd972c686391d7bbc69">dataSize</link>&#32;=&#32;d;
+291 }
+</programlisting><para>
+Referenced by SystemManager::generateBBInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_basic_block_a9f71209e93288e8eb82311fe5961e2ff_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_basic_block_1aa3a9be4f5f76e76b91e5a3a009f95f44"/>    <section>
+    <title>setEqG()</title>
+<indexterm><primary>setEqG</primary><secondary>BasicBlock</secondary></indexterm>
+<indexterm><primary>BasicBlock</primary><secondary>setEqG</secondary></indexterm>
+<para><computeroutput>void BasicBlock::setEqG (unsigned int c)</computeroutput></para><para>
+Definition at line 297 of file tl.cpp.</para>
+<programlisting>297 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+298 &#32;&#32;&#32;&#32;this-&gt;<link linkend="_class_basic_block_1a4c5622c7d3329c93c0bc39705bb19ff3">eqG</link>&#32;=&#32;e;
+299 }
+</programlisting><para>
+Referenced by SystemManager::generateBBInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_basic_block_aa3a9be4f5f76e76b91e5a3a009f95f44_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_basic_block_1aee9fb07de76f430ec78e48e85c3d5fd9"/>    <section>
+    <title>setFRT()</title>
+<indexterm><primary>setFRT</primary><secondary>BasicBlock</secondary></indexterm>
+<indexterm><primary>BasicBlock</primary><secondary>setFRT</secondary></indexterm>
+<para><computeroutput>void BasicBlock::setFRT (float x)</computeroutput></para><para>
+Definition at line 301 of file tl.cpp.</para>
+<programlisting>301 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+302 &#32;&#32;&#32;&#32;<link linkend="_class_basic_block_1a0cac9b02f5e385651a80c4469301a586">FRT</link>&#32;=&#32;x;
+303 }
+</programlisting><para>
+Referenced by SystemManager::generateBBInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_basic_block_aee9fb07de76f430ec78e48e85c3d5fd9_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_basic_block_1a1abdc5c467f903b3bb6f51fb68283b21"/>    <section>
+    <title>setId()</title>
+<indexterm><primary>setId</primary><secondary>BasicBlock</secondary></indexterm>
+<indexterm><primary>BasicBlock</primary><secondary>setId</secondary></indexterm>
+<para><computeroutput>void BasicBlock::setId (int x)</computeroutput></para><para>
+Definition at line 234 of file tl.cpp.</para>
+<programlisting>235 {
+236 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">id</emphasis>&#32;=&#32;x;
+237 }
+</programlisting><para>
+Referenced by SystemManager::generateBBInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_basic_block_a1abdc5c467f903b3bb6f51fb68283b21_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_basic_block_1aae5e45d56ddfdd6c791f14fed105b544"/>    <section>
+    <title>setIdPU()</title>
+<indexterm><primary>setIdPU</primary><secondary>BasicBlock</secondary></indexterm>
+<indexterm><primary>BasicBlock</primary><secondary>setIdPU</secondary></indexterm>
+<para><computeroutput>void BasicBlock::setIdPU (int x)</computeroutput></para><para>
+Definition at line 255 of file tl.cpp.</para>
+<programlisting>256 {
+257 &#32;&#32;&#32;&#32;<link linkend="_class_basic_block_1ae5d66a26435ab7c34ac15de59eafe7b3">idPU</link>&#32;=&#32;x;
+258 }
+</programlisting>    </section><anchor xml:id="_class_basic_block_1a2be928b15c8a74a0f171f97c285791f2"/>    <section>
+    <title>setName()</title>
+<indexterm><primary>setName</primary><secondary>BasicBlock</secondary></indexterm>
+<indexterm><primary>BasicBlock</primary><secondary>setName</secondary></indexterm>
+<para><computeroutput>void BasicBlock::setName (string x)</computeroutput></para><para>
+Definition at line 224 of file tl.cpp.</para>
+<programlisting>225 {
+226 &#32;&#32;&#32;&#32;<link linkend="_class_basic_block_1a4cad9fc9592145fea0335e694df17ebf">name</link>&#32;=&#32;x;
+227 }
+</programlisting><para>
+Referenced by SystemManager::generateBBInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_basic_block_a2be928b15c8a74a0f171f97c285791f2_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_basic_block_1a4cbb966d0ce3b7364877cf6e46e33672"/>    <section>
+    <title>setProcessor()</title>
+<indexterm><primary>setProcessor</primary><secondary>BasicBlock</secondary></indexterm>
+<indexterm><primary>BasicBlock</primary><secondary>setProcessor</secondary></indexterm>
+<para><computeroutput>void BasicBlock::setProcessor (vector&lt; <link linkend="_class_processing_unit">ProcessingUnit</link> &gt; pu)</computeroutput></para><para>
+Definition at line 260 of file tl.cpp.</para>
+<programlisting>261 {
+262 &#32;&#32;&#32;&#32;<link linkend="_class_basic_block_1aaf3c4ccda26ba23923e66f1e77228f2c">vpu</link>=&#32;p;
+263 }
+</programlisting><para>
+Referenced by SystemManager::generateBBInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_basic_block_a4cbb966d0ce3b7364877cf6e46e33672_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+    </section><anchor xml:id="_class_basic_block_1ae33921bd8c15b268aba6f5b1526f893b"/>    <section>
+    <title>setType()</title>
+<indexterm><primary>setType</primary><secondary>BasicBlock</secondary></indexterm>
+<indexterm><primary>BasicBlock</primary><secondary>setType</secondary></indexterm>
+<para><computeroutput>void BasicBlock::setType (string x)</computeroutput></para><para>
+Definition at line 245 of file tl.cpp.</para>
+<programlisting>246 {
+247 &#32;&#32;&#32;&#32;<link linkend="_class_basic_block_1a730e1383a3247e3a456b6cea00575aed">type</link>&#32;=&#32;x;
+248 }
+</programlisting><para>
+Referenced by SystemManager::generateBBInstances().</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_basic_block_ae33921bd8c15b268aba6f5b1526f893b_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_class_basic_block_1a298dcdfcc1736778a7262329d9204edd"/>    <section>
+    <title>codeSize</title>
+<indexterm><primary>codeSize</primary><secondary>BasicBlock</secondary></indexterm>
+<indexterm><primary>BasicBlock</primary><secondary>codeSize</secondary></indexterm>
+<para><computeroutput>unsigned int BasicBlock::codeSize<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 229 of file tl.h.</para>
+    </section><anchor xml:id="_class_basic_block_1ab89eed26cc943dd972c686391d7bbc69"/>    <section>
+    <title>dataSize</title>
+<indexterm><primary>dataSize</primary><secondary>BasicBlock</secondary></indexterm>
+<indexterm><primary>BasicBlock</primary><secondary>dataSize</secondary></indexterm>
+<para><computeroutput>unsigned int BasicBlock::dataSize<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 230 of file tl.h.</para>
+    </section><anchor xml:id="_class_basic_block_1a4c5622c7d3329c93c0bc39705bb19ff3"/>    <section>
+    <title>eqG</title>
+<indexterm><primary>eqG</primary><secondary>BasicBlock</secondary></indexterm>
+<indexterm><primary>BasicBlock</primary><secondary>eqG</secondary></indexterm>
+<para><computeroutput>unsigned int BasicBlock::eqG<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 231 of file tl.h.</para>
+    </section><anchor xml:id="_class_basic_block_1a0cac9b02f5e385651a80c4469301a586"/>    <section>
+    <title>FRT</title>
+<indexterm><primary>FRT</primary><secondary>BasicBlock</secondary></indexterm>
+<indexterm><primary>BasicBlock</primary><secondary>FRT</secondary></indexterm>
+<para><computeroutput>float BasicBlock::FRT<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 232 of file tl.h.</para>
+    </section><anchor xml:id="_class_basic_block_1a306c90076760a7ccd52ffab5cba5a2f5"/>    <section>
+    <title>id</title>
+<indexterm><primary>id</primary><secondary>BasicBlock</secondary></indexterm>
+<indexterm><primary>BasicBlock</primary><secondary>id</secondary></indexterm>
+<para><computeroutput>unsigned int BasicBlock::id<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 223 of file tl.h.</para>
+    </section><anchor xml:id="_class_basic_block_1ae5d66a26435ab7c34ac15de59eafe7b3"/>    <section>
+    <title>idPU</title>
+<indexterm><primary>idPU</primary><secondary>BasicBlock</secondary></indexterm>
+<indexterm><primary>BasicBlock</primary><secondary>idPU</secondary></indexterm>
+<para><computeroutput>int BasicBlock::idPU<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 225 of file tl.h.</para>
+    </section><anchor xml:id="_class_basic_block_1a4cad9fc9592145fea0335e694df17ebf"/>    <section>
+    <title>name</title>
+<indexterm><primary>name</primary><secondary>BasicBlock</secondary></indexterm>
+<indexterm><primary>BasicBlock</primary><secondary>name</secondary></indexterm>
+<para><computeroutput>string BasicBlock::name<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 222 of file tl.h.</para>
+    </section><anchor xml:id="_class_basic_block_1a730e1383a3247e3a456b6cea00575aed"/>    <section>
+    <title>type</title>
+<indexterm><primary>type</primary><secondary>BasicBlock</secondary></indexterm>
+<indexterm><primary>BasicBlock</primary><secondary>type</secondary></indexterm>
+<para><computeroutput>string BasicBlock::type<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 224 of file tl.h.</para>
+    </section><anchor xml:id="_class_basic_block_1aaf3c4ccda26ba23923e66f1e77228f2c"/>    <section>
+    <title>vpu</title>
+<indexterm><primary>vpu</primary><secondary>BasicBlock</secondary></indexterm>
+<indexterm><primary>BasicBlock</primary><secondary>vpu</secondary></indexterm>
+<para><computeroutput>vector&lt;<link linkend="_class_processing_unit">ProcessingUnit</link>&gt; BasicBlock::vpu<computeroutput>[private]</computeroutput></computeroutput></para><para>
+Definition at line 226 of file tl.h.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+HepsycodeDesign/src/<link linkend="_tl_8h">tl.h</link>HepsycodeDesign/src/<link linkend="_tl_8cpp">tl.cpp</link></section>
+</section>

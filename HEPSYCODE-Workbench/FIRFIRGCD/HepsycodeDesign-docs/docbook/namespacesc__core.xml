@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacesc__core">
+<title>sc_core Namespace Reference</title>
+<indexterm><primary>sc_core</primary></indexterm>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classsc__core_1_1sc__csp__channel__in__if">sc_csp_channel_in_if</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classsc__core_1_1sc__csp__channel__out__if">sc_csp_channel_out_if</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>
