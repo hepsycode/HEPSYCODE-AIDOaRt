@@ -1,7 +1,9 @@
 # HEPSYCODE-AIDOaRt
 HEPSYCODE Modeling Methodology, Framework and tools for AIDOaRt European Project
 
+<p align="center">
 <img src="img/logo.png" width="400" height="236">
+</p>
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
